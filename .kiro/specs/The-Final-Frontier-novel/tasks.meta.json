@@ -1,0 +1,684 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Record the title decision **[AUTHOR]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889978682
+      }
+    ],
+    "1.2 Resolve the Nia source/casualty braid **[AUTHOR] [HARD GATE]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889978724
+      }
+    ],
+    "1.3 Confirm Safiya Mir’s maternal language and review dependency **[AUTHOR] [HARD GATE]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889978765
+      }
+    ],
+    "1.4 Fix the first casualty’s operational consequence **[AUTHOR]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889978806
+      }
+    ],
+    "1.5 Fix institutional/geographic names and post-null public visibility **[AUTHOR]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889978841
+      }
+    ],
+    "1.6 Choose record-frame visibility **[AUTHOR]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889978876
+      }
+    ],
+    "1.7 Fix character belief strength about handshake causation **[AUTHOR]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889978913
+      }
+    ],
+    "2.1 Create the visible manuscript directory layout": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889978943
+      }
+    ],
+    "2.2 Write `Mindwars Novel/front-matter.md`": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889978984
+      }
+    ],
+    "3.1 Add explicit manuscript exclusion to `.tools/build_site.py`": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979021
+      }
+    ],
+    "3.2 Write and pass the site-isolation fixture test": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979063
+      }
+    ],
+    "4.1 Define machine-readable planning schemas in `planning/record-schemas.md`": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979096
+      }
+    ],
+    "4.2 Write `planning/canon-bible.md`": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979126
+      }
+    ],
+    "4.3 Write `planning/pov-roster.md`": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979159
+      }
+    ],
+    "4.4 Write `planning/voice-briefs.md`": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979192
+      }
+    ],
+    "4.5 Write `planning/motif-ledger.md` with the resolved event mapping": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979231
+      }
+    ],
+    "4.6 Create `planning/editorial-log.md` and `planning/arc-changes.md`": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979267
+      }
+    ],
+    "5.1 Create `planning/arc-outline.md` structure and global invariants": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979316
+      }
+    ],
+    "5.2 Write Discovery_Part entries, chapters 1–29": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979350
+      }
+    ],
+    "5.3 Write Private_Defense_Part entries, chapters 30–61": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979384
+      }
+    ],
+    "5.4 Write Mindwars_Part entries, chapters 62–112": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979421
+      }
+    ],
+    "5.5 Write Aftermath_Coda entries, chapters 113–128": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979457
+      }
+    ],
+    "5.6 Audit Cross_Cut reciprocity, reveal links, record horizons, and chronology": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979498
+      }
+    ],
+    "5.7 Mark the eight-chapter Calibration_Batch": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979533
+      }
+    ],
+    "5.8 Verify the complete provisional plan": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979567
+      }
+    ],
+    "6. Checkpoint — planning and site isolation complete **[HARD GATE]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979602
+      }
+    ],
+    "7.1 Set up Python test dependencies and calibration test layout": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979640
+      }
+    ],
+    "7.2 Implement Chapter_File parsing, word counting, and Length_Class validation": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979675
+      }
+    ],
+    "7.3 Implement direct-reference parsing and calibration-scope integrity": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979715
+      }
+    ],
+    "7.4 Implement calibration-scope motif and literal checks": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979750
+      }
+    ],
+    "7.5 Implement chapter and batch modes with changed-reference consistency": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979786
+      }
+    ],
+    "7.6 Implement deterministic diagnostics, output, and exit behavior": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979828
+      }
+    ],
+    "7.7 Write the focused minimal-checker tests": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979861
+      }
+    ],
+    "7.8 Pass the minimal calibration-readiness gate **[HARD GATE]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979905
+      }
+    ],
+    "8.1 Draft calibration chapters 1–3 **[EXPLORATORY]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979949
+      }
+    ],
+    "8.2 Draft calibration chapters 4–5 **[EXPLORATORY]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889979987
+      }
+    ],
+    "8.3 Draft calibration chapter 73 **[EXPLORATORY]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980029
+      }
+    ],
+    "8.4 Draft calibration chapter 118 **[EXPLORATORY] [HARD GATE]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980065
+      }
+    ],
+    "8.5 Draft calibration chapter 124 **[EXPLORATORY]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980098
+      }
+    ],
+    "8.6 Run the minimal checker over all eight calibration chapters": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980137
+      }
+    ],
+    "8.7 Record the Calibration_Batch Editorial_Review **[EDITORIAL]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980171
+      }
+    ],
+    "8.8 Expand `.tools/check_novel.py` to the complete objective checker": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980209
+      }
+    ],
+    "8.9 Build shared generated fixtures for the complete suite": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980249
+      }
+    ],
+    "8.10 Write the principal property test for chapter plan/file bijection": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980289
+      }
+    ],
+    "8.11 Write the principal property test for identifier/metadata integrity": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980341
+      }
+    ],
+    "8.12 Write the principal property test for Cross_Cut symmetry": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980388
+      }
+    ],
+    "8.13 Write the principal property test for prose word-count round trips": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980424
+      }
+    ],
+    "8.14 Write the principal property test for length classes and limits": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980459
+      }
+    ],
+    "8.15 Write the principal property test for movement order and scale": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980498
+      }
+    ],
+    "8.16 Write the principal property test for human POV/Anchor architecture": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980538
+      }
+    ],
+    "8.17 Write the principal property test for the POV run cap": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980572
+      }
+    ],
+    "8.18 Write the principal property test for motif synchronization": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980608
+      }
+    ],
+    "8.19 Write the principal property test for ledger-driven literal constraints": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980642
+      }
+    ],
+    "8.20 Write the principal property test for ArcChange/status atomicity": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980675
+      }
+    ],
+    "8.21 Write the principal property test for local/global gate separation": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980709
+      }
+    ],
+    "8.22 Write the principal property test for fail-closed inputs and exits": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980745
+      }
+    ],
+    "8.23 Write the principal property test for manuscript source exclusion": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980792
+      }
+    ],
+    "8.24 Write the principal property test for independent final gates": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980831
+      }
+    ],
+    "8.25 Complete the required focused unit and edge-case suite": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980867
+      }
+    ],
+    "8.26 Complete the required integration and process-smoke suite": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980903
+      }
+    ],
+    "8.27 Run and record the complete objective checker suite": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980941
+      }
+    ],
+    "9. Checkpoint — calibration reviewed and full objective suite green **[HARD GATE]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889980981
+      }
+    ],
+    "10.1 Perform the single Baseline_Revision_Pass": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981017
+      }
+    ],
+    "10.2 Record Approved_Baseline and Final_Targets **[AUTHOR] [HARD GATE]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981065
+      }
+    ],
+    "11. Checkpoint — Approved_Baseline established **[HARD GATE]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981101
+      }
+    ],
+    "12.1 Draft chapters 6–10 — verification and institutional appetite": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981137
+      }
+    ],
+    "12.2 Record Julian’s first-appearance Editorial_Gate **[EDITORIAL] [HARD GATE]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981174
+      }
+    ],
+    "12.3 Draft chapters 11–15 — the field": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981209
+      }
+    ],
+    "12.4 Draft chapters 16–20 — open invitation and separate arrival": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981250
+      }
+    ],
+    "12.5 Draft chapters 21–25 — the casualty refuses reduction": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981287
+      }
+    ],
+    "12.6 Draft chapters 26–29 — the door runs inward": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981322
+      }
+    ],
+    "12.7 Record the Discovery_Part movement Editorial_Gate **[EDITORIAL]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981360
+      }
+    ],
+    "13.1 Draft chapters 30–35 — copper and quiet": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981400
+      }
+    ],
+    "13.2 Draft chapters 36–42 — the benevolent offer": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981438
+      }
+    ],
+    "13.3 Draft chapters 43–49 — April, page nine": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981476
+      }
+    ],
+    "13.4 Draft chapters 50–55 — put it in the record": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981512
+      }
+    ],
+    "13.5 Draft chapters 56–61 — the handle inside": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981550
+      }
+    ],
+    "13.6 Record the Private_Defense_Part movement Editorial_Gate **[EDITORIAL]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981584
+      }
+    ],
+    "14. Checkpoint — Discovery and Private Defense approved **[HARD GATE]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981633
+      }
+    ],
+    "15.1 Draft chapters 62–69 — no first shot": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981668
+      }
+    ],
+    "15.2 Draft chapters 70–77 — mirror of the signal": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981702
+      }
+    ],
+    "15.3 Draft chapters 78–85 — a shield can enter": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981736
+      }
+    ],
+    "15.4 Draft chapters 86–93 — territory": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981771
+      }
+    ],
+    "15.5 Draft chapters 94–101 — the affected area in the model": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981809
+      }
+    ],
+    "15.6 Draft chapters 102–108 — null night": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981849
+      }
+    ],
+    "15.7 Draft chapters 109–112 — the history of quiet": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981888
+      }
+    ],
+    "15.8 Record the Mindwars_Part movement Editorial_Gate **[EDITORIAL]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981924
+      }
+    ],
+    "16. Checkpoint — war-level action settled **[HARD GATE]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981959
+      }
+    ],
+    "17.1 Draft chapters 113–117 — public bill to threshold": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889981996
+      }
+    ],
+    "17.2 Draft chapters 118–123 — accounting and valid consent **[HARD GATE]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889982035
+      }
+    ],
+    "17.3 Draft chapters 124–128 — truthful refusal, staying, and outward duty": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889982076
+      }
+    ],
+    "17.4 Record the Aftermath_Coda movement Editorial_Gate **[EDITORIAL]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889982114
+      }
+    ],
+    "18.1 Verify Final_Prerequisites": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889982150
+      }
+    ],
+    "18.2 Run the Manuscript_Global_Gate and site-exclusion audit": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889982185
+      }
+    ],
+    "18.3 Record the final Editorial_Gate **[EDITORIAL]**": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889982217
+      }
+    ],
+    "18.4 Mark the Manuscript `final`": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889982255
+      }
+    ],
+    "19. Final checkpoint": [
+      {
+        "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
+        "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
+        "timestamp": 1788889982291
+      }
+    ]
+  }
+}
