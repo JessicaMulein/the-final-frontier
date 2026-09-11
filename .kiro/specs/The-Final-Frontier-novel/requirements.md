@@ -2,17 +2,20 @@
 
 ## Introduction
 
-This specification governs a creative-writing project built on the world established by four song documents in this workspace: *The Synaptic Frontier*, *Faraday*, *The Final Frontier*, and *The Radius*. The deliverable is a complete chapter arc and actual novel chapters, supported by lightweight planning, continuity, review, and checking documents. The intended form is an original short-chapter, cross-cut thriller architecture: first-person testimony, rapid viewpoint alternation, withheld disclosures, and chapter-ending narrative pulls. The project does not imitate another author’s prose voice.
+This specification governs a creative-writing project built on the world established by five song documents in this workspace: *The Synaptic Frontier*, *Faraday*, *The Final Frontier*, *The Radius*, and *Case Zero*. The deliverable is a complete chapter arc and actual novel chapters, supported by lightweight planning, continuity, review, and checking documents. The intended form is an original short-chapter, cross-cut thriller architecture: first-person testimony, rapid viewpoint alternation, withheld disclosures, and chapter-ending narrative pulls. The project does not imitate another author’s prose voice.
 
-The trilogy forms the novel’s three Main Parts: discovery in *The Synaptic Frontier*, private refusal and defense in *Faraday*, and the Mindwars in *The Final Frontier*. *The Radius* supplies a shorter Aftermath/Coda within the same manuscript. The Aftermath/Coda opens a second cycle through consequence and accounting; the Aftermath/Coda does not extend or restart the settled war.
+The trilogy forms the novel’s three Main Parts: discovery in *The Synaptic Frontier*, private refusal and defense in *Faraday*, and the Mindwars in *The Final Frontier*. *The Radius* supplies a shorter Aftermath/Coda within the same manuscript. The Aftermath/Coda opens a second cycle through consequence and accounting; the Aftermath/Coda does not extend or restart the settled war. *Case Zero* is a binding counter-deposition that adds canon without creating a fifth Story_Movement or changing that architecture.
 
 Names are allowed. Characters, places, institutions, and products may receive stable names selected during design and arc work. This requirements phase does not choose those final names. “The Mindwars” remains an established canonical term rather than the only name available to the novel.
 
-The source songs and production notes provide binding canon, carried motifs, tonal direction, and the consent rule. Objective checks verify file structure, metadata, counts, identifiers, continuity references, and explicitly protected wording. Human editorial review owns judgments about prose voice, tone, pacing, hook effectiveness, POV distinctness, and emotional truth.
+The lyric text in the five Canon_Sources and explicit author decisions provide binding story canon. Canon_Lyric remains subject to ordinary metaphor, compression, first-person limitation, and attributed testimony rather than being treated as automatic omniscient fact. Production notes and other non-lyric song metadata are advisory evidence for motif, tone, structure, and interpretation unless an approved requirement or later author decision expressly adopts a particular proposition. The title’s governing premise is binding in both the lyric and the author’s direction: the final frontier was not outer space but our own minds; humanity expected to cross the frontier and instead became the territory crossed. The Mindwars are an event within that argument, not another title for the novel. Objective checks verify file structure, metadata, counts, identifiers, continuity references, and explicitly protected wording. Human editorial review owns judgments about prose voice, tone, pacing, hook effectiveness, POV distinctness, and emotional truth.
 
 ## Glossary
 
-- **Canon_Source**: The four song documents and their production notes at `songs/The Synaptic Frontier.md`, `songs/Faraday.md`, `songs/The Final Frontier.md`, and `songs/The Radius.md`. These are reference copies held in this workspace for the Manuscript_Project; the lyrics-site tooling and its canonical song sources live in a separate repository.
+- **Canon_Source**: One of exactly five reference song documents: `songs/The Synaptic Frontier.md`, `songs/Faraday.md`, `songs/The Final Frontier.md`, `songs/The Radius.md`, and `songs/Case Zero.md`. `DEC-014` authorizes *Case Zero* publication in progress and promotes it to this set. The *One-Time Pad* draft is preserved in git history and removed from the working tree; it is unpublished, noncanonical for book purposes, is not a Canon_Source, and supplies no novel continuity. Each Canon_Source contains Canon_Lyric plus non-story rights/credit metadata and Production_Notes. The lyrics-site tooling and canonical release sources live in a separate repository.
+- **Canon_Lyric**: The lyric text of a Canon_Source. It is inherently binding story canon, subject only to higher-authority explicit author decisions and approved requirements; ordinary metaphor, compression, first-person limitation, and attributed testimony do not require every image or speaker inference to be literal or omniscient fact.
+- **Production_Notes**: Style prompts, exclude-style lists, generation workflow, trilogy/cycle commentary, carried-motif analysis, credits, rights metadata, and other non-lyric material associated with a song. Production_Notes and non-lyric metadata are non-story/advisory unless a specific proposition is expressly ratified by an approved requirement or author decision. Unratified material cannot independently establish a Binding_Canon_Fact, Literal_Phrase_Constraint, identity, name rule, chronology, continuity obligation, or literal diegetic production event.
+- **Canon_Authority**: The precedence defined by `DEC-011` and updated source inventory in `DEC-014`: explicit author decisions; approved requirements/design decisions; Canon_Lyric from the five Canon_Sources; expressly ratified note material whose authority comes from its identified adopter; then approved compatible Novel_Extensions. Unratified Production_Notes and other non-lyric metadata sit outside this precedence order, remain advisory/non-story, and cannot defeat a Novel_Extension. Rights, performance, recording, and credit metadata are not story canon.
 - **Manuscript_Project**: The complete creative-writing process governed by this specification, including planning, calibration, drafting, review, and acceptance.
 - **Manuscript**: The complete novel deliverable: Front_Matter, Arc_Outline, Canon_Bible, POV_Roster, Voice_Briefs, Motif_Ledger, and every Chapter_File.
 - **Chapter_File**: One markdown file containing exactly one chapter, composed of a Chapter_Header followed by a Prose_Body.
@@ -45,6 +48,7 @@ The source songs and production notes provide binding canon, carried motifs, ton
 - **Character_Name**: A stable narrative name or alias selected during design or arc work and associated with one Character_ID.
 - **POV**: One human viewpoint used by a Chapter_File.
 - **POV_ID**: A stable identifier assigned to one POV in the POV_Roster and Chapter_Header.
+- **Same_POV_Run**: A maximal uninterrupted sequence of Chapter_Files assigned to one POV_ID, counted on the global chapter sequence so that Story_Movement boundaries are counted like any other adjacency. A Same_POV_Run is limited to three Chapter_Files and 3,600 Prose_Words. The word limit is evaluated from estimated values during planning and from declared `words` values in the completed Manuscript.
 - **Anchor_POV**: The finder/defender who discovers the field, leads the private refusal and defense, participates in the Mindwars, and faces the accounting in the Aftermath_Coda.
 - **POV_Roster**: The document defining the selected POVs, Character_ID and POV_ID mappings, selected names and aliases, distinctive narrative contributions, and Story_Movement coverage.
 - **Material_Narrative_Value**: New or materially reframed knowledge, moral pressure, consequence, or interpretive position contributed by a POV transition.
@@ -53,15 +57,29 @@ The source songs and production notes provide binding canon, carried motifs, ton
 - **Reverb_Profile**: A qualitative Voice_Brief device that translates the Canon_Source’s spatial production language into narrative distance and interiority without numerical prose metrics.
 - **Coda_Turn**: The identified Aftermath_Coda beat after which the Anchor_POV’s voice becomes markedly drier and narrower.
 - **Foreign_Signal**: The intruding transmission whose origin and sender the Canon_Source leaves unestablished.
+- **Neural_Communication_Mode**: Exactly one of `RECEIVE`, `INTRUDE`, `CANCEL`, or `PAIR`; the modes share an addressable field but differ in direction, semantic capacity, addressing, consent, calibration, and evidentiary meaning. `RECEIVE`, `INTRUDE`, and `PAIR` are insertive or observational; `CANCEL` is the only subtractive mode.
+- **RECEIVE**: Passive observation of high-dimensional structure already present in one living person's field. `RECEIVE` performs no write and requires no transmit stage.
+- **INTRUDE**: An active person-specific addressed write performed without the complete conditions for `PAIR`. `INTRUDE` may affect only nonsemantic salience, valence, urgency, certainty, preference, or wanting; `INTRUDE` cannot carry language, propositions, commands, a voice, or arbitrary memories.
+- **CANCEL**: An active unaddressed counterphase cancellation field whose only effect is subtraction. `CANCEL` carries no person-specific address, transports no language, proposition, order, voice, or memory in either direction, and inserts nothing. Its effect is the removal or degradation of access to mental content and faculties. `CANCEL` covers both a bounded local field volume containing one deliberately exposed consenting individual and an area-scale field volume; these are one mode at two scopes.
+- **Subtraction_Effect**: The removal or degradation of a person's access to mental content or faculties produced by `CANCEL`. A Subtraction_Effect has no additive inverse and is distinct in kind from the insertion produced by `INTRUDE`.
+- **Pair_Calibration**: A jointly established semantic encode/decode mapping unique to exactly two living participants. Pair_Calibration may mature over repeated consensual sessions and cannot transfer to another person, a dead or absent person, a simulation, an archive, a model, or a reconstruction.
+- **Deliberate_Send_Act**: A participant's conscious act of offering one contribution for transport during `PAIR`; unoffered thought, imagery, memory, emotion, and background mentation are excluded.
+- **PAIR**: A Neural_Communication_Mode providing near-natural internal speech between exactly two living participants who hold current, specific, revocable mutual consent and matching Pair_Calibration. Every contribution requires a Deliberate_Send_Act.
+- **Pairing_Session**: One bounded `PAIR` interaction with identifiable participants, consent state, start, pause, revocation, timing, channel volume, and integrity or error events.
+- **Fluent_Pairing**: A mature `PAIR` interaction in which repeated Pair_Calibration permits near-natural conversational exchange while preserving Deliberate_Send_Acts, immediate pause or revocation, and private unoffered mentation.
+- **Consent_State_Metadata**: A nonsemantic record of Pairing_Session authorization, participant and pair addresses, consent state, pause, and revocation.
+- **Transport_Metadata**: A nonsemantic record of Pairing_Session operation, including timing, channel volume, acknowledgments, latency, integrity, and error events.
+- **Content_Recording**: A separate, explicit, mutual, default-off authorization to preserve protocol-carried semantic content from one Pairing_Session.
+- **Pairing_Transcript**: The content record produced only when Content_Recording is authorized. A Pairing_Transcript represents only contributions transported by the protocol during the recorded Pairing_Session and does not establish truth, intent, memory provenance, unoffered thought, or a complete mental state.
 - **Provenance_Question**: The unresolved question of the Foreign_Signal’s origin and sender, including the question opened by “Whose was that?”.
 - **The_Mindwars**: The established canonical term “the Mindwars,” used for the undeclared war over mindspace.
-- **Binding_Canon_Fact**: A fact from the Canon_Source that affects plot, chronology, characterization, motif function, or the ethical logic of the novel.
+- **Binding_Canon_Fact**: A fact that affects plot, chronology, characterization, motif function, or ethical logic and derives from an explicit author decision, an approved requirement, Canon_Lyric, or expressly ratified Production_Notes. Its Canon_Bible record identifies that authority basis; unratified Production_Notes cannot supply one.
 - **Novel_Extension**: A fact added by the novel that affects later continuity, including selected names, relationships, chronology details, locations, institutions, or products.
-- **Canon_Dialogue**: Dialogue inherited or closely adapted from the Canon_Source and attributed to its canonical speaker.
-- **Canon_Bible**: The reference document recording Binding_Canon_Facts, Novel_Extensions, Timeline_IDs, selected names that affect continuity, unresolved questions, and other context useful for continuity.
+- **Canon_Dialogue**: Dialogue inherited or closely adapted from Canon_Lyric and attributed to its canonical speaker.
+- **Canon_Bible**: The reference document recording Binding_Canon_Facts with authority basis, Novel_Extensions, Timeline_IDs, selected names that affect continuity, unresolved questions, and other context useful for continuity.
 - **Motif_Event**: A planned dramatic beat in which a carried phrase, object, image, sound, or action performs a specified narrative function.
 - **Incidental_Mention**: A repeated token or object reference that adds no new dramatic function and is not counted as a separate Motif_Event.
-- **Literal_Phrase_Constraint**: A ledgered constraint on exact wording, count, or placement that is explicitly established by this specification or the Canon_Source notes.
+- **Literal_Phrase_Constraint**: A ledgered constraint on exact wording, count, or placement that is explicitly established by this specification or an author decision, normally protecting wording drawn from Canon_Lyric. Unratified Production_Notes cannot establish one.
 - **Record_Progression**: The three-event movement of the “put this on the record” motif from private insistence, to historical deposition, to an entry against the Anchor_POV.
 - **Motif_Ledger**: The document recording each Motif_Event’s stable ID, dramatic function, Story_Movement, planned Chapter_File, representation mode, and any Literal_Phrase_Constraint.
 - **Final_Passage**: The closing prose span of the final Aftermath_Coda Chapter_File identified for the terminal Provenance_Question event in the Motif_Ledger.
@@ -123,7 +141,7 @@ The source songs and production notes provide binding canon, carried motifs, ton
 4. THE Prose_Body of each Chapter_File SHALL use exactly one labeled POV.
 5. THE Narration of each Chapter_File SHALL use first-person past tense as testimony placed on the record.
 6. WHERE a Prose_Body contains direct dialogue or explicitly quoted matter, THE Manuscript SHALL permit the grammatical person and tense required by the speaker or quoted source.
-7. THE Arc_Outline SHALL place no more than three consecutive Chapter_Files under the same POV_ID.
+7. THE Arc_Outline SHALL place no more than three consecutive Chapter_Files under the same POV_ID, which is the Chapter_File-count limit on a Same_POV_Run.
 8. WHEN every final Chapter_File is present, THE Manuscript_Global_Gate SHALL verify that at least 80 percent of final Chapter_Files fall within the Normal_Chapter_Range, using all final Chapter_Files as the denominator.
 9. THE Prose_Body of each Chapter_File SHALL contain no more than the Hard_Chapter_Maximum.
 10. WHERE a planned chapter is a Length_Outlier, THE Arc_Outline SHALL label the Length_Class and record the chapter’s narrative purpose.
@@ -131,6 +149,8 @@ The source songs and production notes provide binding canon, carried motifs, ton
 12. THE Chapter_Header of each Chapter_File SHALL contain a nonblank single-line Hook description.
 13. WHEN a Chapter_File reaches Editorial_Review, THE Editorial_Review SHALL record whether the final beat performs the Hook described in the Chapter_Header.
 14. WHEN the complete Manuscript reaches final Editorial_Review, THE Editorial_Review SHALL assess POV voice originality and distinctness qualitatively, including whether the prose avoids deliberate imitation of another author, without numeric style scoring.
+15. THE Arc_Outline SHALL place no more than 3,600 estimated Prose_Words in any Same_POV_Run.
+16. WHERE an Arc_Outline entry belongs to a Same_POV_Run containing two or more Chapter_Files, THE Arc_Outline SHALL record an estimated Prose_Word value for that entry.
 
 ### Requirement 3: Three Main Parts and an Aftermath/Coda
 
@@ -210,9 +230,12 @@ The source songs and production notes provide binding canon, carried motifs, ton
 11. THE Manuscript SHALL preserve the visitor’s loss as the maternal language she alone shared with her dead mother and as harm caused by the null rather than by foreign intrusion.
 12. THE Manuscript SHALL portray the visitor’s affirmative consent as freely and genuinely given.
 13. THE Manuscript SHALL portray the Anchor_POV’s refusal as a limit of physics and truth because a fabricated replacement would be a counterfeit capable of feeling like the visitor’s own memory.
-14. WHEN the Manuscript establishes a continuity-changing fact absent from the Canon_Source, THE Canon_Bible SHALL record the fact as a Novel_Extension before an approved later chapter depends on the fact.
+14. WHEN the Manuscript establishes a continuity-changing fact absent from binding canon under Canon_Authority, THE Canon_Bible SHALL record the fact as a Novel_Extension before an approved later chapter depends on the fact.
 15. WHEN Canon_Dialogue appears in a chapter narrated by a different POV, THE Chapter_File SHALL attribute the dialogue to the canonical speaker and preserve the dialogue’s established meaning.
 16. WHEN a selected name affects continuity, THE Canon_Bible SHALL record the Character_Name, place name, institution name, or product name as a Novel_Extension.
+17. THE Canon_Bible SHALL record an `authority_basis` for every Binding_Canon_Fact; SHALL recognize Canon_Lyric only from the exact five-file Canon_Source set defined by `DEC-014`; SHALL preserve speaker attribution and first-person limitation rather than silently converting testimony into omniscient fact; SHALL exclude `songs/One-Time Pad.md` from binding novel authority; and SHALL NOT promote a proposition from unratified Production_Notes, style prompts, exclude lists, generation workflow, credits, or rights metadata into binding continuity; WHERE the basis is a ratified note, THE Canon_Bible SHALL identify the approved requirement or author decision that ratified it.
+18. THE Canon_Bible SHALL record as a Binding_Canon_Fact that “the final frontier” means human minds rather than outer space: people expected to cross it as explorers, but the inward frontier crossed them and made their minds the contested territory.
+19. THE Manuscript SHALL treat The_Mindwars as an event that dramatizes the inward-frontier revelation rather than as the title or whole meaning of the novel.
 
 ### Requirement 7: Motif Events and Literal Phrase Discipline
 
@@ -273,7 +296,7 @@ The source songs and production notes provide binding canon, carried motifs, ton
 9. WHERE Voice_Briefs are stored outside the POV_Roster, THE POV_Roster SHALL link to the Voice_Briefs document.
 10. THE Front_Matter SHALL identify the author and copyright holder for the novel prose.
 11. THE Front_Matter SHALL state rights in the prose independently and exclude sound-recording or performance ownership claims from the novel copyright notice.
-12. WHERE the author includes a source-song acknowledgment, THE Front_Matter SHALL identify the source-song titles and their relationship to the novel without importing performance or sound-recording ownership language.
+12. WHERE the author includes a source-song acknowledgment, THE Front_Matter SHALL identify all five source-song titles—*The Synaptic Frontier*, *Faraday*, *The Final Frontier*, *The Radius*, and *Case Zero*—and their relationship to the novel without importing performance or sound-recording ownership language; THE acknowledgment SHALL NOT include *One-Time Pad* as a Canon_Source.
 
 ### Requirement 10: Chapter-Local Definition of Done
 
@@ -308,6 +331,7 @@ The source songs and production notes provide binding canon, carried motifs, ton
 9. THE Manuscript_Global_Gate SHALL verify that the Site_Build produces zero Manuscript entries in the song index.
 10. WHEN the complete Manuscript reaches final Editorial_Review, THE Editorial_Gate SHALL record a `pass` or `revision` finding for POV distinctness, Cross_Cut clarity, Hook effectiveness, tonal coherence, emotional truth, and the ending’s unmet obligation.
 11. WHEN the Manuscript_Global_Gate and final Editorial_Gate both pass, THE Manuscript_Project SHALL permit the Manuscript to be marked `final`.
+12. WHEN every final Chapter_File is present, THE Manuscript_Global_Gate SHALL verify that no Same_POV_Run exceeds three Chapter_Files or 3,600 Prose_Words, using each Chapter_File's declared `words` value.
 
 ### Requirement 12: Lightweight Objective Manuscript Checker
 
@@ -330,6 +354,7 @@ The source songs and production notes provide binding canon, carried motifs, ton
 13. THE Editorial_Review SHALL own every subjective craft judgment excluded from the Manuscript_Checker.
 14. IF the Manuscript_Checker finds one or more Objective_Check violations, THEN THE Manuscript_Checker SHALL exit with a nonzero status.
 15. IF the Manuscript_Checker finds zero Objective_Check violations and every required input for the requested scope is readable and complete, THEN THE Manuscript_Checker SHALL exit with a zero status.
+16. WHEN invoked, THE Manuscript_Checker SHALL report each Same_POV_Run whose Chapter_File count exceeds three or whose combined Prose_Word count exceeds 3,600, identifying the run's chapters, the observed total, and the expected limit.
 
 ### Requirement 13: Incremental Delivery and Review
 
@@ -348,6 +373,44 @@ The source songs and production notes provide binding canon, carried motifs, ton
 9. WHEN author feedback changes a delivered chapter or planned arc beat, THE Drafting_Process SHALL set the affected work and batch records to `revised`.
 10. WHEN author feedback sets affected work to `revised`, THE Drafting_Process SHALL apply the feedback and rerun every objective and editorial gate affected by the feedback before marking the affected work `final`.
 
+### Requirement 14: Four-Mode Neural Communication, Consent, and Evidence
+
+**User Story:** As a reader, I want observation, coercive influence, defensive cancellation, and consensual speech to remain technically and ethically distinct, so that neural communication creates dramatic possibility without erasing consent, privacy, evidence limits, or unresolved loss.
+
+#### Acceptance Criteria
+
+1. THE Canon_Bible SHALL classify every neural communication event as exactly one Neural_Communication_Mode.
+2. WHEN the December discovery is represented, THE Manuscript SHALL present the event as live passive `RECEIVE` with an eight-second receiver-side offset and no transmit stage.
+3. WHERE an active write carries a person-specific address and lacks current specific revocable mutual consent or matching Pair_Calibration, THE Canon_Bible SHALL classify the event as `INTRUDE`.
+4. WHILE a neural communication event is classified as `INTRUDE`, THE Manuscript SHALL limit the represented effect to nonsemantic salience, valence, urgency, certainty, preference, or wanting.
+5. WHERE an active transmission carries no person-specific address AND is counterphase/subtractive, THE Canon_Bible SHALL classify the event as `CANCEL` and THE Arc_Outline SHALL place the event within the Mindwars_Part.
+6. WHILE a neural communication event is classified as `CANCEL`, THE Manuscript SHALL limit the represented effect to a Subtraction_Effect and SHALL represent no inserted language, proposition, order, voice, or memory.
+7. WHERE a `CANCEL` event occurs, THE Canon_Bible SHALL record the affected faculties, memories, and persons as unpredictable before the event, unenumerable during the event, and incompletely mapped after the event.
+8. THE Canon_Bible SHALL record every Subtraction_Effect as having no additive inverse and as unrecoverable by a further `CANCEL`, by `PAIR`, or by any combination of Neural_Communication_Modes.
+9. WHERE a `CANCEL` event operates within a bounded local field volume containing one deliberately exposed consenting individual, THE Canon_Bible SHALL record that individual's current specific revocable consent; WHERE a `CANCEL` event operates at area scale, THE Canon_Bible SHALL record the authorization as institutional rather than as individual consent obtained from every affected person.
+10. WHERE a Pairing_Session is authorized, THE Manuscript SHALL restrict `PAIR` to exactly two living participants with current specific revocable mutual consent and matching Pair_Calibration, SHALL associate every transported semantic contribution with a Deliberate_Send_Act, SHALL preserve unoffered thought, imagery, memory, emotion, and background mentation as private, SHALL stop semantic transport immediately when either participant pauses or revokes consent, and SHALL require confirmation, retry, or ordinary-speech fallback after clipping, latency, or integrity failure.
+11. THE Pair_Calibration SHALL remain unique to one pair of living participants and unavailable for transfer to another person, a dead or absent person, a simulation, an archive, a model, or a reconstruction.
+12. WHEN an authorized Pairing_Session occurs, THE Manuscript_Project SHALL preserve semantically opaque Consent_State_Metadata and Transport_Metadata that cannot reconstruct unrecorded content, SHALL initialize Content_Recording as disabled, SHALL require explicit mutual recording consent separate from consent to `PAIR` before enabling Content_Recording, and SHALL limit any resulting Pairing_Transcript to contributions transported by the protocol during that recorded Pairing_Session.
+13. THE Manuscript SHALL preserve Safiya's corpus-less private maternal language as unavailable to `CANCEL` reversal, `PAIR`, Content_Recording, simulation, archive, model, and reconstruction.
+14. THE Manuscript SHALL preserve the causal origin of Nia's wanting and the Provenance_Question as unconfirmed despite `CANCEL` of the Foreign_Signal, Pairing_Session metadata, Pairing_Transcripts, traffic analysis, or endpoint compromise.
+
+### Requirement 15: Mandatory Fluent Pairing and Original Thriller Architecture
+
+**User Story:** As a reader, I want fluent pairing to matter repeatedly inside an original, accelerating thriller with three active information threads through Chapters 1–112, followed by Safiya as a fourth Coda viewpoint that changes the moral scale, so that the mechanism drives action and ethical consequence before the story contracts to ordinary voice and obligation.
+
+The structural obligations below are objectively checkable from Arc_Outline and Canon_Bible records. The craft obligations they used to duplicate — how a scene dramatizes benefit, whether exposition is staged as experiment and consequence, whether the Coda decelerates — are assigned to Editorial_Review by criterion 6 and by the movement Editorial_Gates, because Requirement 12.12 excludes them from automated evaluation.
+
+#### Acceptance Criteria
+
+1. THE Arc_Outline SHALL assign one or more mandatory Fluent_Pairing beats within each chapter range: 36–42, 56–61, 70–77, 78–93, and 94–108.
+2. THE Arc_Outline SHALL assign every Pairing_Session to an existing POV chapter without creating a sender, operative, adversary, archive, simulation, or group-mind POV.
+3. THE Arc_Outline SHALL preserve the four selected POVs and the provisional 56/32/33/7 chapter loads when assigning Pairing_Sessions and supporting participants.
+4. WHILE Chapters 78–93 are represented, THE Manuscript SHALL limit traffic-analysis discoveries to Consent_State_Metadata and Transport_Metadata patterns rather than unrecorded semantic content.
+5. WHERE compressed-clock sequencing is used, THE Arc_Outline SHALL limit compression to chronology-supported clusters without placing the complete Manuscript inside one global twenty-four-hour frame.
+6. WHEN Editorial_Review evaluates a Drafting_Batch or Story_Movement containing a Fluent_Pairing beat, a technical capability introduction, or a technical capability escalation, THE Editorial_Review SHALL record representative prose evidence and a `pass` or `revision` finding for the freely chosen benefit and beginning Pair_Calibration of Chapters 36–42, the sustained on-page Fluent_Pairing conversation and consent-protocol failure and repair of Chapters 56–61, the counterphase consent challenge of Chapters 70–77, operational Fluent_Pairing as a principal engine in Chapters 78–93, ethical and infrastructural escalation in Chapters 94–108, Nia's movement toward usable self-trust in Chapters 109–112, the receding neural channel of Chapters 113–128, experiment-action-result-consequence staging of technical explanation, immediate human or institutional consequence for each capability escalation, the Mindwars_Part's fastest chapter turnover and tightest converging-thread pattern, the Aftermath_Coda's deceleration through disclosure, arrival, refusal, emotional choice, and moral remainder, and evidentiary claims no broader than the records supporting them.
+7. IF Editorial_Review finds recognizable imitation of Dan Brown's or Douglas E. Richards's sentence-level prose, distinctive voice, phrasing, scenes, or characters, THEN THE Editorial_Review SHALL record a `revision` finding.
+8. IF Editorial_Review finds repetitive artificial cliffhangers, exposition set pieces, a culprit reveal, renewed Coda spectacle, or neural communication presented as group mind, THEN THE Editorial_Review SHALL record a `revision` finding.
+
 ## Approved Decisions and Deferred Design Choices
 
 1. **Creative deliverable**: The project produces a chapter arc and finished novel chapters. Automation remains a lightweight support tool rather than the product.
@@ -362,6 +425,10 @@ The source songs and production notes provide binding canon, carried motifs, ton
 10. **Motif method**: The Motif_Ledger tracks dramatic events and functions rather than incidental token mentions. Automated literal checking is limited to ledgered Literal_Phrase_Constraints.
 11. **Ending**: The Aftermath/Coda moves toward a quiet, unresolved threshold action and an outward obligation without renewed combat, restoration, triumph, or anthemic swell.
 12. **Manuscript location**: Design selects a visible dedicated manuscript directory and an explicit Site_Build exclusion mechanism.
-13. **Rights**: Front_Matter uses novel-specific authorship and prose copyright language. A concise acknowledgment of the source songs is optional, and sound-recording or performance ownership claims do not govern the prose.
+13. **Rights**: Front_Matter uses novel-specific authorship and prose copyright language. A concise acknowledgment of the five source songs is optional, and sound-recording or performance ownership claims do not govern the prose. *Case Zero* publication/canon status does not resolve its contradictory nonlegal rights metadata.
 14. **Craft acceptance**: Tone, POV distinctness, Hook effectiveness, pacing, restraint, and emotional truth are Editorial_Gates. The Manuscript_Checker evaluates only objective manuscript facts.
 15. **Delivery**: The Calibration_Batch is the first checkpoint; later batches contain 4–8 chapters, and approval synchronizes chapter and reference-document status.
+16. **Canon authority**: Explicit author decisions and approved requirements outrank Canon_Lyric; Canon_Lyric in the exact five Canon_Sources is inherently binding while retaining metaphor, compression, first-person limitation, and attributed-testimony boundaries; Production_Notes and non-lyric metadata are advisory unless expressly ratified; rights and recording metadata are not story canon. `DEC-014` promotes *Case Zero* and supersedes `DEC-013`; the *One-Time Pad* draft is preserved in git history, removed from the working tree, and outside canon. Every Binding_Canon_Fact records its authority basis.
+17. **Title premise**: *The Final Frontier* means the frontier was not outer space but humanity’s own minds. The trilogy moves from looking outward to recognizing people as the territory crossed. The Mindwars dramatize that revelation but do not name or exhaust the novel.
+18. **Neural communication and evidence**: `DEC-012` names Electronic Speech Pairings, while `DEC-015`, as amended on 2026-09-11, fixes four non-overlapping modes: passive live `RECEIVE`; nonsemantic unconsented or uncalibrated person-specific `INTRUDE`; unaddressed subtractive `CANCEL`; and deliberately sent near-natural `PAIR` between exactly two living, currently consenting, pair-specifically calibrated participants. `CANCEL` was added because the null is an unaddressed transmission whose canonical effect is subtraction rather than the crude insertion `INTRUDE` permits; it is confined to the Mindwars_Part, has no additive inverse, cannot be aimed, and supplies no provenance. Mandatory consent/transport metadata remains semantically opaque; Content_Recording is separately mutual and disabled by default; Pairing_Transcripts prove only recorded protocol-carried content. Pair_Calibration cannot transfer, connect to the dead or absent, or reconstruct Safiya's corpus-less maternal layer, and no mode can reverse what `CANCEL` removed. Neural evidence cannot close Nia's causation or the Provenance_Question.
+19. **Original thriller architecture**: `DEC-016` fixes mandatory Fluent_Pairing beats from Private Defense through late Mindwars inside the existing four POVs and 56/32/33/7 loads. The original craft architecture uses short rotating information threads, experiment/action/result/consequence exposition, immediate human stakes for capability escalation, the fastest Mindwars threading, and post-112 deceleration. Dan Brown and Douglas E. Richards are structural references only; imitation of either author's prose, voice, phrasing, scenes, or characters is rejected. Requirement 15 states the structurally checkable half of that architecture; the craft half is assigned to Editorial_Review rather than duplicated as automated acceptance criteria. As amended on 2026-09-13, `DEC-016` also caps continuous same-POV exposure by word count as well as chapter count: a Same_POV_Run may contain at most three Chapter_Files and at most 3,600 Prose_Words, because a chapter break otherwise disguises an overlong stay in one viewpoint.

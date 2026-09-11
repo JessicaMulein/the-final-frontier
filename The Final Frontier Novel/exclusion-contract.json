@@ -1,0 +1,211 @@
+{
+  "schema": "manuscript-exclusion-contract/v1",
+  "contract": "Manuscript_Exclusion_Contract",
+  "declared_at": "The Final Frontier Novel/exclusion-contract.json",
+  "updated": "2026-09-09",
+  "purpose": "Declare the novel manuscript root as an excluded source root so that no manuscript markdown can be mistaken for a song source, collected as a Song, or emitted into lyrics, search, or song-index artifacts. This file is the portable declaration; the consuming build is the external lyrics repository.",
+  "authority": {
+    "spec": ".kiro/specs/The-Final-Frontier-novel",
+    "requirements": [
+      "9.2",
+      "9.3",
+      "11.9",
+      "12.8"
+    ],
+    "decisions": [
+      "DEC-008",
+      "DEC-010"
+    ],
+    "design_section": "Manuscript Organization and Site Isolation",
+    "property": "Property 14: Manuscript source exclusion",
+    "decision_state": {
+      "DEC-008": "binding, confirmed 2026-09-09",
+      "note": "Option B confirmed by the author. Options A (drop the isolation requirements) and C (defer as blocked-external) are retired. This contract is no longer provisional."
+    }
+  },
+  "path_semantics": {
+    "declared_paths": "workspace-relative",
+    "separator": "/",
+    "workspace_root": "The directory the consuming build scans for source roots. A fixture or synthetic workspace substitutes its own root; the rule below is unchanged.",
+    "case_sensitive": true,
+    "unicode_normalization": "NFC",
+    "trailing_separator": "ignored",
+    "symlinks": "Resolve the declared root and each candidate to a real path before comparing, so a differently named link into the manuscript is still excluded."
+  },
+  "exclusions": [
+    {
+      "id": "EXCL-MANUSCRIPT-ROOT",
+      "path": "The Final Frontier Novel",
+      "kind": "source-root",
+      "resolution": "direct-workspace-child",
+      "scope": "The declared root and every path at or below it, at any depth, regardless of file extension.",
+      "must_exist": true,
+      "root_evidence": {
+        "required_children": [
+          "planning",
+          "chapters"
+        ],
+        "note": "A consumer verifies these children to confirm the declaration still names the real manuscript root rather than an unrelated directory that happens to share the name. Absent children mean the contract has drifted from the directory it protects."
+      },
+      "excluded_from": [
+        "song-source-discovery",
+        "lyrics-page-generation",
+        "search-index-generation",
+        "generated-song-index"
+      ],
+      "reason": "The manuscript is prose, not a song source. Its root markdown (front-matter.md), its planning documents, and its 128 chapter files must never enter the lyrics catalog."
+    }
+  ],
+  "matching_rule": {
+    "id": "resolved-direct-child-exclusion-first",
+    "summary": "Compare resolved direct workspace children and skip declared exclusions before any markdown glob or visibility-plan fallback. Never infer exclusion from name text or from a missing record.",
+    "steps": [
+      {
+        "order": 1,
+        "id": "resolve-workspace-root",
+        "rule": "Resolve the workspace root being scanned to a real path."
+      },
+      {
+        "order": 2,
+        "id": "enumerate-direct-children",
+        "rule": "Enumerate the direct children of that root and resolve each one. Candidates are compared at this level, not by walking full file paths first."
+      },
+      {
+        "order": 3,
+        "id": "resolve-declared-exclusions",
+        "rule": "Resolve every declared exclusion path against the same root. A declared root that does not resolve, or that fails its root_evidence, is a stale contract: fail closed rather than continuing with a partial exclusion set."
+      },
+      {
+        "order": 4,
+        "id": "skip-exclusions-first",
+        "rule": "Drop every candidate whose resolved path equals a resolved exclusion or lies beneath one. This step runs BEFORE any markdown glob and BEFORE any visibility-plan fallback."
+      },
+      {
+        "order": 5,
+        "id": "glob-markdown",
+        "rule": "Only after step 4 may the collector glob markdown, and only inside surviving candidates."
+      },
+      {
+        "order": 6,
+        "id": "visibility-plan-fallback",
+        "rule": "Any fallback that infers sources from a visibility plan, default-visible rule, or wildcard runs only over surviving candidates. A fallback may never re-admit an excluded path."
+      },
+      {
+        "order": 7,
+        "id": "verify-empty-intersection",
+        "rule": "Before emitting lyrics, search, or index artifacts, assert that no collected path resolves under a declared exclusion. A nonempty intersection is a fail-closed error, not a warning."
+      }
+    ],
+    "ordering_constraint": {
+      "exclusion_check_precedes": [
+        "glob-markdown",
+        "visibility-plan-fallback"
+      ],
+      "rationale": "Excluding after collection leaves the manuscript reachable by any code path that reads the collected set before the filter, and it makes a forgotten filter silent instead of loud."
+    },
+    "forbidden_heuristics": [
+      {
+        "id": "substring-match",
+        "description": "Testing whether a path contains the manuscript name as a substring or regex fragment.",
+        "why_rejected": "It over-matches and under-matches at once. 'The Final Frontier' as a substring also matches the legitimate source song songs/The Final Frontier.md, while a moved or nested manuscript path can evade it."
+      },
+      {
+        "id": "slug-match",
+        "description": "Comparing slugified or normalized display names instead of resolved paths.",
+        "why_rejected": "Slugging collapses distinct paths onto one key and makes exclusion depend on a presentation transform that neither repository controls."
+      },
+      {
+        "id": "front-matter-flag",
+        "description": "Trusting an in-file marker, such as an exclude or draft key in a document's front matter, to keep a file out of discovery.",
+        "why_rejected": "Every new chapter file would have to remember the flag, and one omission leaks. Exclusion belongs to the directory, not to each file's contents."
+      },
+      {
+        "id": "missing-visibility-row",
+        "description": "Treating the absence of a row in the site's visibility plan as exclusion.",
+        "why_rejected": "Absence is not a declaration. The manuscript would leak the moment the plan gained a wildcard, a default-visible rule, or an auto-generated row."
+      }
+    ],
+    "must_remain_collectible": [
+      {
+        "path": "songs/The Final Frontier.md",
+        "note": "The source song shares the novel's title. Name similarity is not exclusion: this file must still be collected. Any rule that drops it is over-broad and non-conforming."
+      }
+    ],
+    "fail_closed": {
+      "behavior": "Abort with a nonzero status and emit no partial lyrics, search, or index artifact.",
+      "conditions": [
+        {
+          "id": "contract-missing",
+          "detail": "This file is absent where the consumer expects it."
+        },
+        {
+          "id": "contract-malformed",
+          "detail": "Invalid JSON, or a required field missing, empty, or of the wrong type."
+        },
+        {
+          "id": "schema-unsupported",
+          "detail": "The schema value is not the version the consumer pins."
+        },
+        {
+          "id": "declared-root-absent",
+          "detail": "An exclusion with must_exist true does not resolve in the scanned workspace. The contract is stale."
+        },
+        {
+          "id": "root-evidence-missing",
+          "detail": "The declared root resolves but lacks its required_children, so it is no longer demonstrably the manuscript root."
+        },
+        {
+          "id": "exclusion-reached-discovery",
+          "detail": "Any collected source, lyrics page, search entry, or song-index entry resolves under a declared exclusion."
+        },
+        {
+          "id": "exclusion-check-not-run",
+          "detail": "The check could not be exercised. Absence of site output is not proof of isolation."
+        }
+      ]
+    }
+  },
+  "conformance": {
+    "reference_collector": {
+      "command": ".tools/check_novel.py --site-exclusion",
+      "status": "in this repository, as the contract's reference implementation of the matching rule",
+      "note": "The reference collector demonstrates the rule and guards the contract against drift. It is not the production lyrics build."
+    },
+    "required_assertions": [
+      "The contract loads, matches the pinned schema, and every declared exclusion resolves with its root_evidence intact.",
+      "Discovery over a workspace containing manuscript-root markdown, nested planning and chapter markdown, and at least one valid control song collects the control song and nothing under a declared exclusion.",
+      "No manuscript-derived path appears in generated lyrics, search, or song-index artifacts.",
+      "Every fail_closed condition produces a nonzero status rather than a degraded run."
+    ]
+  },
+  "honest_limit": {
+    "proves": [
+      "This contract is present, well-formed, and names a manuscript root that exists in this workspace with its expected structure.",
+      "A collector implementing the matching rule returns zero manuscript paths while still collecting eligible song sources."
+    ],
+    "does_not_prove": [
+      "That the external Site_Build in the lyrics repository has adopted this contract.",
+      "That any published lyrics site output was produced by a conforming collector."
+    ],
+    "not_evidence": "There is no Site_Build in this workspace. The absence of site output here is not evidence of isolation.",
+    "external_follow_up": {
+      "owner": "lyrics repository (external to this project)",
+      "action": "Adopt this contract in Site_Build source discovery and keep a standing regression test against it.",
+      "status": "not-adopted",
+      "inside_this_project_acceptance": false
+    }
+  },
+  "synchronization": {
+    "root_string_and_contract_change_together": true,
+    "stale_contract_is_a_failure": true,
+    "on_root_rename_update": [
+      "The Final Frontier Novel/exclusion-contract.json (this file)",
+      "The Final Frontier Novel/planning/file-conventions.md",
+      "The Final Frontier Novel/planning/decisions.md (a new dated decision)",
+      ".kiro/specs/The-Final-Frontier-novel/requirements.md",
+      ".kiro/specs/The-Final-Frontier-novel/design.md",
+      ".kiro/specs/The-Final-Frontier-novel/tasks.md"
+    ],
+    "record_as": "An ArcChange in The Final Frontier Novel/planning/arc-changes.md once that document exists; the rename is not valid until every listed reference is synchronized."
+  }
+}

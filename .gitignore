@@ -1,0 +1,6 @@
+# Python byte cache produced by running the checker test suite under `.tools/`.
+__pycache__/
+*.py[cod]
+
+# `.pytest_cache/` needs no entry: pytest writes its own `.gitignore` containing
+# `*` inside that directory, so it already excludes itself.
