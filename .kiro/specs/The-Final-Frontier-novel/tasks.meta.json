@@ -55,9 +55,19 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889978943
+      },
+      {
+        "executionId": "c97a0fe9-6ff9-46b7-a182-b8ecd4a7f764",
+        "chatSessionId": "sess_7c6b2e85-4bcd-4e55-9cdf-70e06025512d",
+        "timestamp": 1788904929916
+      },
+      {
+        "executionId": "c97a0fe9-6ff9-46b7-a182-b8ecd4a7f764",
+        "chatSessionId": "sess_7c6b2e85-4bcd-4e55-9cdf-70e06025512d",
+        "timestamp": 1788905153167
       }
     ],
-    "2.2 Write `Mindwars Novel/front-matter.md`": [
+    "2.2 Write `The Final Frontier Novel/front-matter.md`": [
       {
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
@@ -90,6 +100,21 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979126
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986467333
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986497469
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788988488081
       }
     ],
     "4.3 Write `planning/pov-roster.md`": [
@@ -97,6 +122,21 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979159
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986467405
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986500626
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788989341896
       }
     ],
     "4.4 Write `planning/voice-briefs.md`": [
@@ -104,6 +144,21 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979192
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986467468
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986503788
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788989346122
       }
     ],
     "4.5 Write `planning/motif-ledger.md` with the resolved event mapping": [
@@ -111,6 +166,21 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979231
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986467533
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986506993
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788989349883
       }
     ],
     "4.6 Create `planning/editorial-log.md` and `planning/arc-changes.md`": [
@@ -118,6 +188,21 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979267
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986467592
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986510408
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788989353253
       }
     ],
     "5.1 Create `planning/arc-outline.md` structure and global invariants": [
@@ -125,6 +210,21 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979316
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986467667
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788989361729
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788990619783
       }
     ],
     "5.2 Write Discovery_Part entries, chapters 1–29": [
@@ -132,6 +232,21 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979350
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986467732
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788990624566
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788992246061
       }
     ],
     "5.3 Write Private_Defense_Part entries, chapters 30–61": [
@@ -139,6 +254,21 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979384
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986467801
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788992249568
+      },
+      {
+        "executionId": "b2c6479b-f614-4673-856b-1fb7ed3ad111",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789014241458
       }
     ],
     "5.4 Write Mindwars_Part entries, chapters 62–112": [
@@ -146,6 +276,16 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979421
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986467860
+      },
+      {
+        "executionId": "b2c6479b-f614-4673-856b-1fb7ed3ad111",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789014245216
       }
     ],
     "5.5 Write Aftermath_Coda entries, chapters 113–128": [
@@ -153,6 +293,21 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979457
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986467932
+      },
+      {
+        "executionId": "3c4b1fbe-5c76-465a-9851-eb72c994cdc8",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789084197802
+      },
+      {
+        "executionId": "3c4b1fbe-5c76-465a-9851-eb72c994cdc8",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789088465864
       }
     ],
     "5.6 Audit Cross_Cut reciprocity, reveal links, record horizons, and chronology": [
@@ -160,6 +315,21 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979498
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986467989
+      },
+      {
+        "executionId": "3c4b1fbe-5c76-465a-9851-eb72c994cdc8",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789088477180
+      },
+      {
+        "executionId": "3c4b1fbe-5c76-465a-9851-eb72c994cdc8",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789090324742
       }
     ],
     "5.7 Mark the eight-chapter Calibration_Batch": [
@@ -167,6 +337,21 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979533
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468047
+      },
+      {
+        "executionId": "3c4b1fbe-5c76-465a-9851-eb72c994cdc8",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789090328704
+      },
+      {
+        "executionId": "3c4b1fbe-5c76-465a-9851-eb72c994cdc8",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789090909211
       }
     ],
     "5.8 Verify the complete provisional plan": [
@@ -174,6 +359,21 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979567
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468109
+      },
+      {
+        "executionId": "3c4b1fbe-5c76-465a-9851-eb72c994cdc8",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789090912807
+      },
+      {
+        "executionId": "3c4b1fbe-5c76-465a-9851-eb72c994cdc8",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789093700008
       }
     ],
     "6. Checkpoint — planning and site isolation complete **[HARD GATE]**": [
@@ -181,6 +381,21 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979602
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468176
+      },
+      {
+        "executionId": "3c4b1fbe-5c76-465a-9851-eb72c994cdc8",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789093705597
+      },
+      {
+        "executionId": "3c4b1fbe-5c76-465a-9851-eb72c994cdc8",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789094742956
       }
     ],
     "7.1 Set up Python test dependencies and calibration test layout": [
@@ -188,6 +403,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979640
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468240
       }
     ],
     "7.2 Implement Chapter_File parsing, word counting, and Length_Class validation": [
@@ -195,6 +415,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979675
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468304
       }
     ],
     "7.3 Implement direct-reference parsing and calibration-scope integrity": [
@@ -202,6 +427,16 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979715
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468363
+      },
+      {
+        "executionId": "b9570d46-9863-4c97-97a0-3a547edeb3d7",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789102921012
       }
     ],
     "7.4 Implement calibration-scope motif and literal checks": [
@@ -209,6 +444,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979750
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468432
       }
     ],
     "7.5 Implement chapter and batch modes with changed-reference consistency": [
@@ -216,6 +456,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979786
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468490
       }
     ],
     "7.6 Implement deterministic diagnostics, output, and exit behavior": [
@@ -223,6 +468,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979828
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468556
       }
     ],
     "7.7 Write the focused minimal-checker tests": [
@@ -230,6 +480,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979861
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468647
       }
     ],
     "7.8 Pass the minimal calibration-readiness gate **[HARD GATE]**": [
@@ -237,6 +492,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979905
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468715
       }
     ],
     "8.1 Draft calibration chapters 1–3 **[EXPLORATORY]**": [
@@ -244,6 +504,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979949
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468780
       }
     ],
     "8.2 Draft calibration chapters 4–5 **[EXPLORATORY]**": [
@@ -251,6 +516,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889979987
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468848
       }
     ],
     "8.3 Draft calibration chapter 73 **[EXPLORATORY]**": [
@@ -258,6 +528,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980029
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468915
       }
     ],
     "8.4 Draft calibration chapter 118 **[EXPLORATORY] [HARD GATE]**": [
@@ -265,6 +540,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980065
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986468990
       }
     ],
     "8.5 Draft calibration chapter 124 **[EXPLORATORY]**": [
@@ -272,6 +552,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980098
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469055
       }
     ],
     "8.6 Run the minimal checker over all eight calibration chapters": [
@@ -279,6 +564,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980137
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469114
       }
     ],
     "8.7 Record the Calibration_Batch Editorial_Review **[EDITORIAL]**": [
@@ -286,6 +576,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980171
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469183
       }
     ],
     "8.8 Expand `.tools/check_novel.py` to the complete objective checker": [
@@ -293,6 +588,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980209
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469246
       }
     ],
     "8.9 Build shared generated fixtures for the complete suite": [
@@ -300,6 +600,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980249
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469307
       }
     ],
     "8.10 Write the principal property test for chapter plan/file bijection": [
@@ -307,6 +612,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980289
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469367
       }
     ],
     "8.11 Write the principal property test for identifier/metadata integrity": [
@@ -314,6 +624,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980341
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469429
       }
     ],
     "8.12 Write the principal property test for Cross_Cut symmetry": [
@@ -321,6 +636,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980388
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469491
       }
     ],
     "8.13 Write the principal property test for prose word-count round trips": [
@@ -328,6 +648,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980424
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469556
       }
     ],
     "8.14 Write the principal property test for length classes and limits": [
@@ -335,6 +660,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980459
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469621
       }
     ],
     "8.15 Write the principal property test for movement order and scale": [
@@ -342,6 +672,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980498
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469690
       }
     ],
     "8.16 Write the principal property test for human POV/Anchor architecture": [
@@ -349,6 +684,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980538
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469753
       }
     ],
     "8.17 Write the principal property test for the POV run cap": [
@@ -356,6 +696,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980572
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469813
       }
     ],
     "8.18 Write the principal property test for motif synchronization": [
@@ -363,6 +708,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980608
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469871
       }
     ],
     "8.19 Write the principal property test for ledger-driven literal constraints": [
@@ -370,6 +720,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980642
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986469931
       }
     ],
     "8.20 Write the principal property test for ArcChange/status atomicity": [
@@ -377,6 +732,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980675
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470000
       }
     ],
     "8.21 Write the principal property test for local/global gate separation": [
@@ -384,6 +744,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980709
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470063
       }
     ],
     "8.22 Write the principal property test for fail-closed inputs and exits": [
@@ -391,6 +756,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980745
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470123
       }
     ],
     "8.23 Write the principal property test for manuscript source exclusion": [
@@ -398,6 +768,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980792
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470191
       }
     ],
     "8.24 Write the principal property test for independent final gates": [
@@ -405,6 +780,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980831
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470252
       }
     ],
     "8.25 Complete the required focused unit and edge-case suite": [
@@ -412,6 +792,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980867
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470316
       }
     ],
     "8.26 Complete the required integration and process-smoke suite": [
@@ -419,6 +804,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980903
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470376
       }
     ],
     "8.27 Run and record the complete objective checker suite": [
@@ -426,6 +816,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980941
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470439
       }
     ],
     "9. Checkpoint — calibration reviewed and full objective suite green **[HARD GATE]**": [
@@ -433,6 +828,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889980981
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470507
       }
     ],
     "10.1 Perform the single Baseline_Revision_Pass": [
@@ -440,6 +840,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981017
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470567
       }
     ],
     "10.2 Record Approved_Baseline and Final_Targets **[AUTHOR] [HARD GATE]**": [
@@ -447,6 +852,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981065
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470642
       }
     ],
     "11. Checkpoint — Approved_Baseline established **[HARD GATE]**": [
@@ -454,6 +864,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981101
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470705
       }
     ],
     "12.1 Draft chapters 6–10 — verification and institutional appetite": [
@@ -461,6 +876,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981137
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470760
       }
     ],
     "12.2 Record Julian’s first-appearance Editorial_Gate **[EDITORIAL] [HARD GATE]**": [
@@ -468,6 +888,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981174
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470824
       }
     ],
     "12.3 Draft chapters 11–15 — the field": [
@@ -475,6 +900,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981209
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470885
       }
     ],
     "12.4 Draft chapters 16–20 — open invitation and separate arrival": [
@@ -482,6 +912,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981250
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986470944
       }
     ],
     "12.5 Draft chapters 21–25 — the casualty refuses reduction": [
@@ -489,6 +924,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981287
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471015
       }
     ],
     "12.6 Draft chapters 26–29 — the door runs inward": [
@@ -496,6 +936,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981322
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471074
       }
     ],
     "12.7 Record the Discovery_Part movement Editorial_Gate **[EDITORIAL]**": [
@@ -503,6 +948,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981360
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471140
       }
     ],
     "13.1 Draft chapters 30–35 — copper and quiet": [
@@ -510,6 +960,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981400
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471200
       }
     ],
     "13.2 Draft chapters 36–42 — the benevolent offer": [
@@ -517,6 +972,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981438
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471258
       }
     ],
     "13.3 Draft chapters 43–49 — April, page nine": [
@@ -524,6 +984,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981476
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471325
       }
     ],
     "13.4 Draft chapters 50–55 — put it in the record": [
@@ -531,6 +996,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981512
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471388
       }
     ],
     "13.5 Draft chapters 56–61 — the handle inside": [
@@ -538,6 +1008,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981550
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471448
       }
     ],
     "13.6 Record the Private_Defense_Part movement Editorial_Gate **[EDITORIAL]**": [
@@ -545,6 +1020,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981584
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471520
       }
     ],
     "14. Checkpoint — Discovery and Private Defense approved **[HARD GATE]**": [
@@ -552,6 +1032,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981633
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471581
       }
     ],
     "15.1 Draft chapters 62–69 — no first shot": [
@@ -559,6 +1044,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981668
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471647
       }
     ],
     "15.2 Draft chapters 70–77 — mirror of the signal": [
@@ -566,6 +1056,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981702
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471702
       }
     ],
     "15.3 Draft chapters 78–85 — a shield can enter": [
@@ -573,6 +1068,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981736
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471765
       }
     ],
     "15.4 Draft chapters 86–93 — territory": [
@@ -580,6 +1080,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981771
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471825
       }
     ],
     "15.5 Draft chapters 94–101 — the affected area in the model": [
@@ -587,6 +1092,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981809
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471892
       }
     ],
     "15.6 Draft chapters 102–108 — null night": [
@@ -594,6 +1104,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981849
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986471955
       }
     ],
     "15.7 Draft chapters 109–112 — the history of quiet": [
@@ -601,6 +1116,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981888
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986472014
       }
     ],
     "15.8 Record the Mindwars_Part movement Editorial_Gate **[EDITORIAL]**": [
@@ -608,6 +1128,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981924
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986472072
       }
     ],
     "16. Checkpoint — war-level action settled **[HARD GATE]**": [
@@ -615,6 +1140,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981959
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986472129
       }
     ],
     "17.1 Draft chapters 113–117 — public bill to threshold": [
@@ -622,6 +1152,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889981996
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986472192
       }
     ],
     "17.2 Draft chapters 118–123 — accounting and valid consent **[HARD GATE]**": [
@@ -629,6 +1164,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889982035
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986472254
       }
     ],
     "17.3 Draft chapters 124–128 — truthful refusal, staying, and outward duty": [
@@ -636,6 +1176,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889982076
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986472310
       }
     ],
     "17.4 Record the Aftermath_Coda movement Editorial_Gate **[EDITORIAL]**": [
@@ -643,6 +1188,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889982114
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986472375
       }
     ],
     "18.1 Verify Final_Prerequisites": [
@@ -650,6 +1200,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889982150
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986472452
       }
     ],
     "18.2 Run the Manuscript_Global_Gate and site-exclusion audit": [
@@ -657,6 +1212,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889982185
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986472518
       }
     ],
     "18.3 Record the final Editorial_Gate **[EDITORIAL]**": [
@@ -664,6 +1224,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889982217
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986472584
       }
     ],
     "18.4 Mark the Manuscript `final`": [
@@ -671,6 +1236,11 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889982255
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986472649
       }
     ],
     "19. Final checkpoint": [
@@ -678,6 +1248,44 @@
         "executionId": "b38cef45-8e8c-4aef-8d48-ee27025ef0c6",
         "chatSessionId": "sess_6d685de2-93fb-45a6-8df1-f9574d33ffac",
         "timestamp": 1788889982291
+      },
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788986472708
+      }
+    ],
+    "3.1 Write the Manuscript_Exclusion_Contract": [
+      {
+        "executionId": "c97a0fe9-6ff9-46b7-a182-b8ecd4a7f764",
+        "chatSessionId": "sess_7c6b2e85-4bcd-4e55-9cdf-70e06025512d",
+        "timestamp": 1788904933346
+      },
+      {
+        "executionId": "c97a0fe9-6ff9-46b7-a182-b8ecd4a7f764",
+        "chatSessionId": "sess_7c6b2e85-4bcd-4e55-9cdf-70e06025512d",
+        "timestamp": 1788905436411
+      }
+    ],
+    "3.2 Write and pass the exclusion fixture test": [
+      {
+        "executionId": "c97a0fe9-6ff9-46b7-a182-b8ecd4a7f764",
+        "chatSessionId": "sess_7c6b2e85-4bcd-4e55-9cdf-70e06025512d",
+        "timestamp": 1788905447284
+      }
+    ],
+    "4. Write the planning reference documents": [
+      {
+        "executionId": "94da6fd1-2c29-4322-b02d-2efc85d7b71e",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1788989353311
+      }
+    ],
+    "5. Write the complete 128-entry Provisional Arc Outline": [
+      {
+        "executionId": "3c4b1fbe-5c76-465a-9851-eb72c994cdc8",
+        "chatSessionId": "sess_e81b8621-57e3-4a7a-bc1b-802018a739ce",
+        "timestamp": 1789093700091
       }
     ]
   }
