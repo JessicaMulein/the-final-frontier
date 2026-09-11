@@ -16,5 +16,5 @@
 # Transitive dependencies are intentionally left unpinned. This is a local dev
 # manifest, not a reproducible lock file, and no lock file is claimed or
 # provided.
-pytest==8.4.2
+pytest==9.0.3
 hypothesis==6.141.1
