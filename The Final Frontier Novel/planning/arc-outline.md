@@ -1913,7 +1913,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1937,7 +1937,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1959,7 +1959,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": 1050,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1983,7 +1983,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "microchapter",
     "estimated_words": 520,
     "outlier_purpose": "Compression to the discovery of a single altered paragraph, so the alteration is the whole chapter and nothing dilutes it.",
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2009,7 +2009,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2033,7 +2033,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2059,7 +2059,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2085,7 +2085,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": 1100,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2107,7 +2107,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": 1050,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {

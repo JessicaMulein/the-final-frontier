@@ -1213,7 +1213,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       lock is possible.
     - _Requirements: 3.3, 4.6, 4.12, 6.8, 14.10, 15.2, 15.3, 15.6_
 
-  - [ ] 13.3 Draft chapters 43–49 — April, page nine
+  - [x] 13.3 Draft chapters 43–49 — April, page nine
     - Give negotiation, specification reading, `transmit enable`, and consequence distinct scenes.
       Julian learns write capability is architectural; the casualty learns her experience was used
       without permission. Page nine confirms the broader danger and is never treated as evidence that
@@ -1221,7 +1221,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
     - Preserve April arrival and page-nine line as canon.
     - _Requirements: 3.3, 6.3, 6.8_
 
-  - [ ] 13.4 Draft chapters 50–55 — put it in the record
+  - [x] 13.4 Draft chapters 50–55 — put it in the record
     - Mara refuses and demands preservation (`MOT-RECORD-01`). Julian first sees the April record
       altered, then forms the Civic Record Trust and opens post-formation rolling witness deposits.
     - Deposit Discovery-era logs/voice memoranda later as pre-Trust contemporaneous sources with

@@ -94,7 +94,7 @@ Execute the existing Chapter 2 narration workflow without changing code or prose
 
   - [ ] 4.3 Create the final proof report from validated evidence
     - Create `.audiobook/build/narration/chapter-002-tiffany/chapter-002-tiffany-proof-report.md` only after Tasks 4.1 and 4.2 pass.
-    - Include source/spoken hashes, fixed execution identity, timestamps, manifest/fidelity result, exact/partial-turn counts, duration, segments, billed calls, reuse, both four-modality token scopes, official rates/provenance, formulas/subtotals, both computed pre-tax costs, separate billing-confirmation status, and matching assembled/proof hashes.
+    - Include source/spoken hashes, fixed profile label, identity-resolution result, timestamps, manifest/fidelity result, exact/partial-turn counts, duration, segments, billed calls, reuse, both four-modality token scopes, official rates/provenance, formulas/subtotals, both computed pre-tax costs, separate billing-confirmation status, and matching assembled/proof hashes.
     - Omit account IDs, ARNs, role identifiers, access keys, credential values, every other returned identity detail, and transcript bodies. Persist only the fixed profile label, identity-resolution pass/fail value, and timestamp from the non-model identity call. State explicitly that prose, dependencies, narration code, Chapter 1 artifacts, and `.kiro/specs/The-Final-Frontier-novel/` were unchanged.
     - _Requirements: 7.1, 7.2, 7.3, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 7.10_
 

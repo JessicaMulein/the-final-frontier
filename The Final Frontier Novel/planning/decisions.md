@@ -2053,6 +2053,57 @@ value for them. Clauses 5 through 8 are objective and are checkable.
    objective and both of which every delivered chapter satisfies. Where the band and the prose disagree
    by a margin that does not move the manuscript total, the prose wins.
 
+11. **The `normal`-class per-chapter band widens; the mean is held.** `DEC-018` clause 10 is amended.
+    The per-chapter drafting target for `normal` chapters becomes **900–1,400 Prose_Words**, and the
+    **mean across `normal` chapters must stay inside 1,006–1,187**, which is the range clause 10's own
+    arithmetic already derives from the approved Final_Targets. The Normal_Chapter_Range of 700–1,600
+    and the Hard_Chapter_Maximum of 2,500 are unchanged, as is the `DEC-016` same-POV run limit of
+    3,600 combined Prose_Words.
+
+    The reason is forward-looking rather than corrective. The narrow band did its job: it recovered a
+    13,000-word shortfall and the projection now sits near 143,700 against a 130,000–150,000 range.
+    But it also produced a manuscript in which nearly every delivered `normal` chapter lands inside a
+    150-word window, and 79 chapters remain unwritten. Drafting those to the narrow target would write
+    the evenness 79 more times and convert a 49-chapter repair into a 128-chapter one. Widening the
+    per-chapter band while holding the mean costs nothing against the total and buys rhythm for the
+    largest movement in the book. Chapters at the edges of the band must earn the edge: a 900-word
+    chapter is a compression and a 1,400-word chapter is a scene that needed the room.
+
+12. **Withdrawn. Do not act on this clause.** It originally asserted that the isolated one-sentence
+    paragraph had become the default unit of narration, that this was the manuscript's strongest
+    machine-prose signal, and that Julian Adebayo was the worst case. That finding did not survive
+    verification and is withdrawn rather than softened, because a withdrawn finding is safer in a
+    planning record than a weakened one.
+
+    It rested on counting what share of *paragraphs* were single-sentence, which reached 25 to 37
+    percent by viewpoint. Measured against what share of narration *words* a reader actually
+    encounters inside such paragraphs, the delivered manuscript sits at 9.4 percent for Nia Calder,
+    10.0 for Mara Venn, 15.2 for Julian Adebayo and 6.9 for Safiya Mir. That is ordinary literary
+    usage. The paragraph-count ratio is an artifact of uneven paragraph length and is not a measure of
+    reading experience.
+
+    The same review also withdrew a companion assertion that the trailing `, which is` appositive was
+    a machine-prose tic. Read in context, all 83 instances are 2.4 percent of sentences and the large
+    majority carry genuine retrospective judgment, which is the conceit of the whole book. Deleting
+    them would have damaged the prose. The one defensible part of that finding was distribution, and it
+    was acted on: four instances were removed from Chapters 2 and 4 so Nia's voice arrives already
+    sounding like the narrator she becomes, since her last four chapters use none unprompted.
+
+    What survives from the exercise is narrow and local. In Chapter 20, nineteen isolated beats fell
+    together and cancelled one another, and six were folded into their neighbours so that *It did not.*
+    could land. That was found by reading the chapter, not by scoring it.
+
+    The general lesson is recorded here because it is more useful than the clause was: in this project,
+    craft findings produced by counting have a poor record and craft findings produced by reading have a
+    good one. `DEC-018`, Requirement 12.12 and global invariant 25 already say craft is a human
+    Editorial_Gate matter that no checker may score. This clause is the case study in why.
+
+13. **Dalby is drafted, not merely recorded.** Clause 10 names the counterforce; this clause places
+    her. She appears across the term-sheet-to-signature stretch of Chapters 47–61 and wherever the
+    Consortium acts inside the Mindwars, opposite Julian in negotiation and opposite Mara in refusal.
+    A recurring adversary who exists only in `canon-bible.md` does not close the craft risk that
+    authorized her.
+
 ### What this decision does not touch
 
 Every item preserved by `DEC-018` remains preserved, unweakened and unreopened: the receive-only
@@ -2084,6 +2135,10 @@ reader feels the record, not what the record can do.
 | Record | Change | State |
 |---|---|---|
 | `planning/decisions.md` — `DEC-006` clauses 2 and 6 | Amended by clause 1 from *rare* to *intermittent*, with apparatus still prohibited | done, recorded here rather than by editing `DEC-006` in place |
+| `planning/decisions.md` — `DEC-018` clause 10 | Amended by clause 11: per-chapter `normal` band widens to 900–1,400, mean held inside 1,006–1,187 | done, recorded here rather than by editing `DEC-018` in place |
+| `planning/arc-outline.md` — `DEC-018` clause 10 band reference | Record the widened per-chapter band and the held mean beside the length-class budget | pending, next planning pass |
+| `planning/decisions.md` — `DEC-019` clause 12 | Withdrawn after failing verification; no drafting obligation arises from it, and Chapter 49 is not to be revised against it | done |
+| Chapters 47–61 and Mindwars Consortium scenes | Draft Dalby in under clause 13 | in progress from Chapter 48 |
 | `planning/arc-outline.md` — decision authority line | Extend binding, nonsuperseded decisions through `DEC-019` | done |
 | `planning/arc-outline.md` — `ArcEntry.status` for Chapters 1–8, 11–19, 21–29 and 43–46 | Synchronize to the Chapter Header values under clause 7 | done |
 | Chapters 9, 10, 20 | Revise to clauses 1, 2, and 10 of `DEC-018`; demote status to `revised` in header and outline | done |

@@ -285,7 +285,7 @@ No property-based test suite or narration-code change is introduced: this is a o
 
 ## Security, Cost, and Isolation
 
-- Use only the exact named profile `AWS_PROFILE=frontier-audiobook`, which is user-approved as a valid static-credential profile and is not SSO. Require only that the profile resolve successfully through a non-model identity call and that the same exact profile be used for the paid command; credential type, age, expiration, and lifetime are not acceptance criteria. Persist only the profile label, identity-resolution pass/fail value, and timestamp from the identity call—never an account ID, ARN, role identifier, access key, credential value, or other returned identity detail.
+- Use only the exact named profile `AWS_PROFILE=frontier-audiobook`, which is user-approved as a valid static-credential profile and is not SSO. Require only that the profile resolve successfully through a non-model identity call and that the same exact profile be used for the paid command; credential type, age, expiration, and lifetime are not acceptance criteria. In every evidence artifact, persist only the profile label, identity-resolution pass/fail value, and timestamp from the identity call—never an account ID, ARN, role identifier, access key, credential value, or other returned identity detail.
 - The paid command is singular and explicit. A failed or uncertain invocation is inspected before any possible retry.
 - Build artifacts remain under ignored `.audiobook/build/`; only the requested proof WAV is copied to `voice-samples/`.
 - Do not modify `The Final Frontier Novel/`, `.kiro/specs/The-Final-Frontier-novel/`, `.audiobook/src/`, dependency files, `voice-samples/chapter-1-*`, or `.audiobook/build/narration/chapter-001-*`.
