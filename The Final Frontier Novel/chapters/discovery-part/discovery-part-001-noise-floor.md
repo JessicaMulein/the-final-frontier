@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []
 hook: "The feature she has spent years calling noise repeats on a schedule, and the schedule is not the array's."
-words: 1168
+words: 1199
 length_class: normal
 status: revised
 ---
@@ -43,11 +43,11 @@ The apparatus acquires the raw field continuously and timestamps it before any r
 
 There was a beat in it. Steady, a shade under two per second, holding for the whole hundred and nine seconds and then stopping. Not fading. Stopping, the way a thing stops when the thing making it stops. For a few seconds after the last pulse a reduced structure stayed behind. I wrote *decay* beside it and did not look again, because *decay* is a word you use about equipment.
 
-Ravi wanted the control I had already planned. Terminate the front end into a matched load, run the same acquisition at the same duration and gain, put the blank through the identical chain. If the structure came up in the blank, the processing was manufacturing it. I left the brass slug on the bench where I would meet it first thing.
+Ravi wanted the control I had already planned: terminate the front end into a matched load and put the blank through the identical chain. If the structure came up in the blank, my processing was manufacturing it. I left the brass slug in the cold cabinet where I would meet it first thing.
 
 The evening log was plain. I wrote it standing up, which is what I do when I want an entry short.
 
-*The apparatus receives. It has no transmit stage: no exciter, no driver, no output path. The feature recurs on a schedule that is not the array's and not the sky's. Within each occurrence is a periodic component inconsistent with every cycling machine on site. The component terminates rather than decaying.*
+*The apparatus receives. It has no transmit stage: no exciter, no driver, no output path. Within each occurrence is a periodic component inconsistent with every cycling machine on site. The component terminates rather than decaying.*
 
 Underneath, in a smaller hand: *fourteen events. All before seven. None at a weekend.*
 
@@ -55,6 +55,10 @@ Ravi had his bag over his shoulder by then. "Do you want me to write down what w
 
 "We don't think anything yet."
 
-He held that a moment longer than the answer deserved, said goodnight, and went. There was nothing at the far end I could have asked. Whatever the aperture had taken in could not be prompted, queried, or thanked; I had raw samples, their timestamps, and a chain that had started to make a weekday visible.
+He held that a moment longer than the answer deserved, said goodnight, and went. Whatever the aperture had taken in could not be prompted, queried, or thanked. I had raw samples, their timestamps, and a chain that had started to make a weekday visible.
 
-So I stood over the page with the cap off the pen and composed the clause twice. Agreements are kept by people, at hours those people have agreed to keep. That is all it needed to say, and both times I put the cap back on. Rigour justified the omission and I let it, because the other reason was that a sentence with somebody in it turns an equipment log into a duty, and I was not ready to owe anything to a person I could not name. The fear did not go in the log either.
+So I stood over the page with the cap off the pen and composed the clause twice. Agreements are kept by people, at hours those people have agreed to keep. That is all it needed to say, and both times I put the cap back on. Rigour justified the omission and I let it, because the other reason was that a sentence with somebody in it turns an equipment log into a duty, and I was not ready to owe anything to a person I could not name.
+
+The fear did not go in the log either. Being wrong is cheap: you write it down and the next person saves a week. What I could not write was the clean result — my chain exonerated, and fourteen entries left keeping somebody's hours, with no instrument in that building capable of asking whose.
+
+The clause is still not on that page. Everything that came after came with it exactly as I left it.

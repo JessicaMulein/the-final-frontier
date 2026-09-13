@@ -5,9 +5,9 @@ pov_id: POV-NIA
 timeline_id: TL-DISCOVERY-HANDSHAKE
 motif_events: []
 hook: "She retraces the whole shift twice and cannot find the place the certainty entered it."
-words: 887
+words: 1203
 length_class: normal
-status: approved
+status: revised
 ---
 The exception notice was printed, which meant somebody had walked to the machine on the third floor for it, and she had it squared against the edge of the table when I came in.
 

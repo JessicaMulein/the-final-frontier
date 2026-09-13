@@ -5,15 +5,15 @@ pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "The institute's appetite arrives before the result does and already knows what it is worth."
-words: 818
+words: 1053
 length_class: normal
-status: approved
+status: revised
 ---
-The institute did not need to know what Mara had found in order to decide that it should own the finding.
+The request for an invention notice arrived at nine forty and asked me to describe a result I had not seen.
 
-It needed three lesser facts. The result had repeated. It arose from work performed at Northline Array. Someone outside the scientific group might hear about it before the institute had classified the intellectual property.
+It needed three lesser facts, and the institute held all three. The result had repeated. It arose from work performed at Northline Array. Someone outside the scientific group might hear about it before the intellectual property had been classified.
 
-Those facts reached me in a request for an invention notice.
+Nothing in the request required anybody to know what Mara had actually found.
 
 An invention notice is not a patent application and does not require an invention. It is a door held open by paperwork while an institution decides whether there is a room behind it. I explained that distinction to the director's office. They agreed and asked me to draft the notice that afternoon.
 
@@ -39,6 +39,8 @@ A pause is not an answer, except in negotiations where everyone records it as on
 
 I revised the phrase to *structured signals under investigation* and returned it. The director's office restored *human-associated* and added *identity-bearing* in tracked changes.
 
+The comment carried initials I did not recognise, which meant the phrase had come from outside the scientific group and outside my review, and had been typed by somebody who had read no data because there was none to read. I asked who had drafted it. I was told the wording had been *discussed*. A phrase that has been discussed has no author and cannot be questioned, which is the entire reason people say it.
+
 That addition was unsupported by any file I possessed. I rejected it for the stated reason. Within nine minutes I received a meeting invitation from technology transfer, a request for an accelerated publication hold, and a question from finance about whether restricted funds could pay for dedicated compute before the end of the quarter.
 
 Institutional appetite rarely announces itself as appetite. It appears as readiness. A room reserved before a meeting is approved. A confidentiality agreement sent to people no one has yet agreed to consult. A budget code created for money no one has offered. Each act is defensible because each act merely preserves an option. The options accumulate until declining them begins to look like the decision that requires justification.
@@ -59,7 +61,7 @@ The shorter answer was that absence of a name did not produce absence of a perso
 
 By four o'clock, the institute had opened a restricted project folder. Its title was *Signal Reconstruction Opportunity*. Mara had not approved the title. She had not supplied a result for the invention notice. The funding disclosure's material question remained blank.
 
-Technology transfer nevertheless sent me a proposed recipient list for a confidential briefing. It included the institute director, finance, research security, two patent lawyers, and an outside adviser whose organization was identified only as a prospective funding participant. No Open Channel Consortium existed in the file before me. There was only the practiced outline of one: money, counsel, technical promise, and an unnamed public benefit waiting to be written into the first paragraph.
+Technology transfer nevertheless sent me a proposed recipient list for a confidential briefing. It included the institute director, finance, research security, two patent lawyers, and an outside adviser whose organization was identified only as a prospective funding participant. I asked twice for that organization's name and was twice assured it would be supplied in due course, which is a sentence with a shelf life. No Open Channel Consortium existed in the file before me. There was only the practiced outline of one: money, counsel, technical promise, and an unnamed public benefit waiting to be written into the first paragraph.
 
 I reduced the list. I added a statement that attendance conveyed no right to data. I required Mara's written approval before any briefing. These were real constraints, and I was good at making them legible.
 
@@ -69,6 +71,10 @@ A badly drafted request might have failed from its own imprecision. Mine could m
 
 At six seventeen the director's office accepted every restriction and asked for the earliest possible meeting.
 
-There was still no signed result. There was no source in the file, no data attached, and no claim Mara would certify. The appetite had arrived before all three.
+There was still no signed result. There was no source in the file, no data attached, and no claim Mara would certify.
 
-It already knew what the empty space was worth.
+I have been asked since why a man whose entire function is to slow things down built the fastest route in that building. At the time I would have said that an imprecise process fails unpredictably and a precise one fails where somebody can see it. I believed that. It is even true.
+
+It is not why I did it. I did it because I am good at it, and because nobody in that institute had ever asked me for the thing I am good at and then thanked me for it, and the director's office thanked me twice before six o'clock.
+
+Every restriction I wrote was real and I meant all of them. They are also the reason the meeting could happen at all, and I have never found a way to write that sentence down in an order that exonerates me.

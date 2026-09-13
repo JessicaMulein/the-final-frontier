@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "She writes the hypothesis in her log and leaves the space beside it deliberately empty."
-words: 1213
+words: 1200
 length_class: normal
 status: revised
 ---
@@ -17,7 +17,7 @@ On the afternoon of the second live reception I opened the book, uncapped the pe
 
 What I had to write about was a map correcting itself, though I did not know that then. At the time there were three structures in the resolved field and nothing to call them. A sustained visual error. A human voice carrying a location. Then the sharp redistribution of attention that followed when the voice was trusted over the display.
 
-The raw field had already been acquired and timestamped. Under the same early reconstruction settings—same context window, fidelity, information load, hardware, and confidence threshold—the coherent output resolved eight seconds later on my side. The source did not pause for those eight seconds. The field continued while my apparatus worked.
+The raw field had already been acquired and timestamped. The source did not pause for the eight seconds my side took. The field continued while my apparatus worked.
 
 Ravi logged the acquisition and output times in his notebook as well as mine. I disabled the resolved display after ninety-four seconds and kept the raw acquisition running, which is a compromise I made about eleven more times that winter.
 
@@ -35,7 +35,7 @@ A dispatcher asked a unit to confirm the west service road. The unit confirmed a
 
 I listened to it once. Then I stopped, because listening is not a method and I could feel myself wanting to do it again.
 
-The spoken correction did not explain the field. It gave me an external marker. At the moment the unit confirmed its location, the field's high-dimensional structure reorganised across intervals too brief to belong to a mechanical duty cycle and too coordinated to be incidental modulation. A visual expectation failed. Auditory evidence replaced it. Attention selected one account of the world and acted.
+The spoken correction did not explain the field. It gave me an external marker. At the moment the unit confirmed its location, the field's high-dimensional structure reorganised across intervals too brief to belong to a mechanical duty cycle and too coordinated to be incidental modulation. Attention selected one account of the world and acted.
 
 I moved the marker twenty seconds in either direction. The alignment vanished, which is what a real coincidence in time does and a wishful one does not.
 
@@ -43,11 +43,13 @@ I inverted the audio, and nothing changed in the field, as nothing should have. 
 
 Then I ran the same tests against the archived December sample, where the crossing bell supplied repeated acoustic edges. Each edge produced a small phase-coherent response. When the bell stopped, the periodic response stopped and the sustained attention released more slowly. The geometry differed from the route correction. The timing family did not. Brief capture, sustained selection, release.
 
+Which told me why my fourteen were all mornings. The field had been there the whole time; the bell was the only thing periodic enough to lift it over my noise floor. I had been finding her on the days a freight held her at a crossing, and missing her on every other day of her life.
+
 *Neural timing* was the dangerous phrase available to me. I used it provisionally and wrote the word *provisional* beside it, which is a habit rather than a defence.
 
 I was not reading neurons. The apparatus had no electrode, image, anatomical model, or permission to claim one. What I could say was narrower: the field changed on the timescales and in the sequence expected of perception and attention, remained coherent across unrelated sensory events, and did not behave like a machine sending frames to a receiver.
 
-I repeated the live reconstruction from the stored raw interval. Same settings, same eight seconds from acquisition timestamp to resolved output, same map error and correction. Less context produced the broad attentional turn earlier and lost the lived sequence. Lower fidelity preserved the urgency and destroyed the distinction between the screen and the voice, which is to say it kept the part that felt like a discovery and threw away the part that made it one. Eight seconds belonged to the reconstruction we had asked this early apparatus to perform. Reproducible under those conditions. Not a law of the channel, and not a delay inside the person.
+I repeated the live reconstruction from the stored raw interval and got the same eight seconds. Lower fidelity preserved the urgency and destroyed the distinction between the screen and the voice, which is to say it kept the part that felt like a discovery and threw away the part that made it one. Not a law of the channel, and not a delay inside the person.
 
 The radio archive gave me a workplace class and a bounded set of carriers. It did not give me a person. Shift rosters are not public, voices are shared across channels, and nothing in the field supplied a name.
 

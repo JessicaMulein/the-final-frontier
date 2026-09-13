@@ -1,0 +1,47 @@
+---
+description: Hard invariants for the objective manuscript checker and its test suite
+globs: .tools/**/*.py
+alwaysApply: false
+---
+
+# Objective checker invariants
+
+`.tools/check_novel.py` is a read-only, fail-closed audit utility. It never
+rewrites a count, repairs metadata, renumbers a chapter, normalizes a name, or
+updates a status. It never infers a record value from prose commentary.
+
+## Never automate a craft judgment
+
+The checker must emit no diagnostic for prose voice, sentence rhythm, hook
+quality, POV distinctness, originality, pacing, tenderness, restraint,
+rhetorical force, emotional truth, or name choice and capitalization. Those
+belong to human `EditorialFinding` records. If a check would need to read prose
+for meaning, it does not belong here.
+
+## Exit behavior
+
+`0` only when every required input for the requested scope is readable and
+complete and there are zero violations; `1` for objective violations; `2` for
+missing, unreadable, malformed, or scope-incomplete input. `2` outranks `1`
+outranks `0` — build results through `classify_result` and
+`exit_status_for_result` rather than returning literals. Warnings may describe
+provisional data but never mask a required failure.
+
+## Diagnostics
+
+Every violation carries a stable `CODE_LIKE_THIS`, scope, affected path or ID,
+observed condition, and expected condition, and is deterministic for the same
+normalized inputs. Add codes through `_diagnostic`, never by formatting strings
+at the call site.
+
+## Environment
+
+- The checker runs on the **standard library alone**. Only the test suite may
+  import `pytest`/`hypothesis` from `.tools/requirements-novel-dev.txt`.
+- Target **CPython 3.9**: no `match`, no `X | Y` annotations at runtime, no
+  `dict`/`list` generics without `from __future__ import annotations`.
+- Prose comparison normalizes to Unicode NFC and LF and preserves exact case,
+  order, and punctuation. Literal phrase scans read Chapter_File Prose_Bodies
+  only — never songs, planning documents, or metadata.
+
+Run the suite with `python3 -m pytest .tools/tests/ -q` from the repo root.

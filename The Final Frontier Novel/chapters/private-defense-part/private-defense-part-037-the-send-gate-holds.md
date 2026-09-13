@@ -7,7 +7,7 @@ motif_events: []
 hook: "Everything she can measure says the pairing is honest, and she catches herself wanting that to settle a question it cannot reach."
 words: 1159
 length_class: normal
-status: draft
+status: revised
 ---
 I unbolted the content recorder out of the rack, carried it to the bench, and set it down where both women could see the open connector and the two capped ends of the cable that no longer went anywhere.
 

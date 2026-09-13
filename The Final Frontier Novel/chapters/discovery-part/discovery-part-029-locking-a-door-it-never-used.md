@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DOOR-INWARD
 motif_events: []
 hook: "She locks a door the channel has never needed, and the thing she wanted to explore has already come the other way."
-words: 1130
+words: 1197
 length_class: normal
 status: revised
 ---

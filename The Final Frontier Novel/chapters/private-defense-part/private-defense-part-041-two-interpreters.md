@@ -5,9 +5,9 @@ pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []
 hook: "He records what the pairing genuinely does in one line, and then records the four larger claims the brochure builds on top of it."
-words: 840
+words: 1054
 length_class: normal
-status: draft
+status: revised
 ---
 Ada and Lena Ferris charged for the first hour.
 
@@ -20,6 +20,8 @@ Lena had a voice and no professional right to improvise her mother's interpretat
 Together, after repeated calibration unique to them, they could perform the assignment without pretending either woman possessed the other's skill.
 
 They consented to the session in the waiting room. Ada selected the named engagement and the named partner on her pad. Lena confirmed. Either could pause or revoke. Content recording remained off. The service kept the mandatory operational metadata and no semantic record.
+
+While we waited, Lena told me her mother had interpreted for nineteen years and had never once been late, and Ada wrote *she has been late twice this month* on the pad and turned it toward me rather than toward her daughter. Lena read it upside down anyway and said that was different, because she has a child. Ada wrote *so did I*. They had plainly done this in front of strangers before and had stopped minding.
 
 The benefits officer began with the notice's shortest paragraph and made it longer by explaining it.
 
@@ -85,10 +87,12 @@ The product director accepted my one-line description as legally safer. He kept 
 
 He smiled as if I had made a useful negotiating point.
 
-Ada and Lena packed their contact bands into separate cases. Lena handed the invoice to the office manager. Ada checked that the claimant had the missing page and the appeal date written clearly.
+I have used that line in other rooms since and it has never once stopped anything. It is a good line. That is a different property from being an effective one.
+
+Ada and Lena packed their contact bands into separate cases. Lena handed the invoice to the office manager. Ada checked that the claimant had the missing page and the appeal date written clearly. She wrote the date out twice.
 
 They had chosen the technology because it let them do honest paid work together without making Lena a substitute for her mother or Ada a demonstration of cure.
 
-I recorded that benefit in one line.
+I recorded that in one line, recorded the four claims the brochure had built above it, and sent both into market review knowing perfectly well which of the two would travel.
 
-Then I recorded the four claims the brochure built above it.
+The invoice is the part I have gone back to. Ada Ferris billed a benefits office at the going rate for one hour of skilled interpretation and did not appear to think she had done anything remarkable. Every document I read for the next two years called her a participant. I had her invoice in my own file, in her own hand, and I never once put it in front of the people writing the brochure, because it would have complicated a sentence they had already agreed.

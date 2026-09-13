@@ -5,9 +5,9 @@ pov_id: POV-JULIAN
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: []
 hook: "The protection he negotiated turns out to be a careful sentence about a thing that cannot be switched off."
-words: 0
+words: 1054
 length_class: normal
-status: draft
+status: revised
 ---
 The answer was not in the interface control. It was in the hardware description the control referenced.
 
@@ -35,7 +35,7 @@ I asked the product director which component would be omitted from a reception-o
 
 "That is not an answer to the question."
 
-Consortium counsel answered for him. "No component is omitted. The service state governs use."
+Dalby answered for him. "No component is omitted. The service state governs use."
 
 The write path was not an optional module. It was part of the proposed receiver network at every deployed address. The interface control did not create transmission capability. It made existing capability available to software.
 
@@ -67,9 +67,11 @@ The product director shook his head. "That would defeat the unified platform."
 
 There it was. Not impossibility. Product identity.
 
+I asked him to put that in writing. He said he would take it back to engineering. I have the message in which engineering agreed to consider a reception-only variant, dated eleven days later, by which time the first production run had a serial-number range.
+
 The Consortium could build a reception-only device. Mara had done so in December. Her original apparatus had no transmit stage at all. It had acquired a living field, resolved it on her side, and identified an address. Nothing in this April binder changed that machine or supplied an event it had been physically unable to perform.
 
-The binder described a different machine.
+The binder described a different machine. Both were called receivers. Only one of them was one.
 
 It also said nothing about the later temporary path Mara had added, beyond proving that her bench work belonged to a class of capability other people now intended to standardize. It did not identify the source of Nia's certainty. It did not make one origin account more enterable than the other.
 
@@ -81,11 +83,11 @@ I returned to my initialed paragraph.
 
 The language remained clear. That made it worse.
 
-I had asked Consortium counsel to promise that active transmission would be disabled by default. She had promised. I had asked whether a participant would control enablement. She had said yes, subject to an unresolved exception. None of those answers disclosed that the proposed receivers were transmitters held in a software state.
+I had asked Dalby to promise that active transmission would be disabled by default. She had promised. I had asked whether a participant would control enablement. She had said yes, subject to an unresolved exception. None of those answers disclosed that the proposed receivers were transmitters held in a software state.
 
 "Your assurance was incomplete," I said.
 
-Counsel folded her hands. "The term sheet governs permitted operation. The specification governs technical capability. We have not represented that the system lacks capability."
+Dalby folded her hands. "The term sheet governs permitted operation. The specification governs technical capability. We have not represented that the system lacks capability."
 
 "You let me describe the capability as a function that could be left out."
 
@@ -101,4 +103,8 @@ I wrote a new issue in the margin: **Architecture incompatible with represented 
 
 There was no clause in the term sheet I could strike to produce any of those things.
 
-The protection I had negotiated was a careful sentence about a thing that could not be switched off.
+I asked for the room. Dalby took the product director out and left the binder open at the component schedule, and Mara asked me one question, which was whether I had known. I said no. She said she believed me, and I have never settled whether that was generosity or simply accuracy. Then she said the thing I have not been able to put down since: that she had built her December apparatus without a transmit stage because she did not trust herself with one, that she had turned out to be right about herself, and that these people had read her bench work and drawn the opposite conclusion from it.
+
+She asked what I intended to do. I said I would write the issue up.
+
+That was the answer of a man who believed a well-drafted issue was an action. I did write it up. It went into a column, and the column went into a definitive agreement still held in the future tense, and somewhere outside that room the nodes were already being manufactured while the four of us sat and agreed about permission.

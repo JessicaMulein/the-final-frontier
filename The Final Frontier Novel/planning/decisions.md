@@ -1925,3 +1925,177 @@ caught.
 | Safiya arriving as a moral instrument | She enters at 115 and structurally exists to present Mara with the bill. She needs work, obligations, irritation, and relationships that are not about Mara, and the request must be one thing she is doing rather than her whole identity. Civilian subtraction should also be established earlier through other people. | tasks 8.7, 17.4 gates |
 | Doctrine voice bleeding across all four POVs | The planning documents necessarily speak in *consent, provenance, authorization, inference, mechanism*. In prose that vocabulary belongs mostly to Mara and Julian. Nia carries operational specifics and corrections; Safiya must not sound like she has read the Canon Bible. | task 8.7 calibration review |
 | Professional authenticity | Three domains carry real credibility risk and are not covered by the community-portrayal review already required by `DEC-003`: emergency dispatch and EMS for the Chapter 17 routing and the exonerating timestamps; neuroscience or signal processing for receive, write, and calibration language; technology-transactions and archival governance for the term sheet, record alteration, and the speed of Trust formation. The dispatch evidence in particular must clear Nia without feeling conveniently miraculous. | before Approved_Baseline, task 10.2 |
+
+---
+
+## DEC-019 — Frame presence, rhythm variance, and completion of the DEC-018 frontier
+
+- **Task:** Author-directed craft continuation after the review of delivered Chapters 1–10, 23, and 24;
+  input to the remaining DEC-018 revision work, tasks 8 and 12–17, and every later drafting task
+- **Date:** 2026-09-18
+- **State:** `binding`; craft and disclosure authority. It amends `DEC-006` clauses 2 and 6 and
+  supersedes nothing else.
+- **Selected:** Keep the prohibition on withholding intact, and buy forward pressure instead from the
+  testimony frame, from chapter-length variance, from irregular viewpoint rotation, and from one
+  compressed-clock cluster inside Discovery. Finish the `DEC-018` pass everywhere it stopped.
+
+### Why this decision exists
+
+The review that produced `DEC-018` fixed the closed-loop chapter. A follow-up review of Chapters 1–10,
+23, and 24 confirms the fix held wherever it was applied and found three further things.
+
+First, the fix is incomplete. Chapters 9, 10, and 20 still carry `status: approved` inside the revised
+block and still exhibit the exact defects `DEC-018` names: Chapter 9 opens on a thesis sentence and
+closes on its `hook`, Chapter 10 closes on its `hook` verbatim, and all three sit below the clause 10
+band at 818, 959, and 963 Prose_Words. Chapters 41–46 are in the same condition at 833–910 words.
+
+Second, the author asked whether Requirements 2.13 and 2.14 should be relaxed to permit withheld facts.
+They should not. The manuscript's distinguishing tension is that narrators are exact with the reader
+while being evasive with institutions, and that tension produces its strongest existing material:
+Chapter 8's *which is the property of a good withholding*, Chapter 10 closing the compliance form
+without submitting it, and Chapter 24's *Stop before you write why*. The design already rejects
+withheld nouns and fake cliffhangers as craft targets. The constraint is not what limits the book;
+`DEC-018` clause 4's authorized retrospection is simply unspent, appearing about twice in 49 delivered
+chapters.
+
+Third, the legitimate sources of pull are being left on the table. The Civic Record Trust makes every
+chapter a compelled, conditioned, contested witness statement, and `DEC-006` currently renders that
+invisible. Delivered rhythm is metrically even: 44 `normal` chapters average 1,100 Prose_Words with 31
+of them inside a 150-word band, against only 3 `microchapter` and 2 `long-outlier` entries out of a
+20-outlier budget. Discovery alternates viewpoint almost strictly, with two same-POV pairs in 29
+chapters. And the pacing architecture defers every compressed-clock cluster to Mindwars, leaving the 29
+chapters that must earn the reader without one.
+
+### Binding clauses
+
+Clauses 1 through 4 are human Editorial_Gate criteria and carry no automated score, under global
+invariant 25 of [`arc-outline.md`](arc-outline.md) and Requirement 12.12. No checker may score, rank,
+threshold, or pass/fail any of them, and no `ArcEntry` or `ChapterHeader` field may be added to carry a
+value for them. Clauses 5 through 8 are objective and are checkable.
+
+1. **The frame is felt, not annotated.** `DEC-006` clause 2 is amended from *rare* to **intermittent**:
+   in-story presence of the record may recur at intervals across each movement rather than only where a
+   scene turns on the archive. Presence means a narrator's awareness of being compelled, conditioned,
+   answered, or read. It does not mean apparatus. `DEC-006` clauses 1, 3, 4, and 5 are unchanged and
+   still bind: one concise Front_Matter note, restrained chapter labels, no routine source notes, no
+   transcript conventions, no docket labels, no evidence citations, and no chain-of-custody detail in
+   prose. `DEC-006` clause 6 is amended so that calibration tests whether frame presence is earned and
+   correctly spaced, not whether the manuscript adopts apparatus. The authorized model is Chapter 4's
+   *I have had to account for that Wednesday since, to the minute*: it discloses no fact, adds no
+   apparatus, and tells the reader the account was compelled.
+2. **Retrospection is spent, not rationed.** `DEC-018` clause 4 remains authorized and is now a
+   drafting obligation rather than a permission. Reluctant retrospection should appear where a chapter
+   has a cost to promise, on the order of tens of instances across the manuscript rather than a
+   handful. Requirements 2.13 and 2.14 are expressly retained: no narrator may withhold a fact they
+   hold at the time of composition, and no chapter may manufacture suspense by concealing a noun.
+3. **Rhythm varies deliberately.** `normal`-class chapters keep the `DEC-018` clause 10 band of
+   1,050–1,200 Prose_Words, and the outlier budget is to be spent rather than banked. Outliers belong
+   at crisis, compression, and aftermath, and each still carries a non-null `outlier_purpose`.
+   Chapter 24 at 592 words is the standing target for what compression buys. The 20-outlier ceiling,
+   the 108-entry `normal` floor, the 700–1,600 Normal_Chapter_Range, and the 2,500-word
+   Hard_Chapter_Maximum are unchanged.
+4. **Rotation is irregular within the existing limits.** Viewpoint rotation must not settle into strict
+   alternation for long stretches. The `DEC-016` limits are unchanged and still bind: no run longer
+   than three chapters and no same-POV run above 3,600 combined Prose_Words. Within them, at least one
+   three-chapter Anchor run belongs at the Discovery bench-path sequence, and at least one expected cut
+   should be withheld where the reader has learned to predict it.
+5. **Discovery's compressed-clock cluster already exists and is the standing model.** This clause was
+   drafted to require a new cluster inside Chapters 1–29 converging three viewpoints on a few hours.
+   Inspection of the outline retires that requirement as mistaken on both counts, and the clause is
+   restated as a finding plus a forward obligation.
+
+   Chapters 16–20 already form the cluster. All five sit on `TL-DISCOVERY-HANDSHAKE`, and two
+   reciprocal `CrossCut` records already declare the convergence: `CUT-HANDSHAKE-AND-TRIAGE` binds 16
+   and 17 as a `temporal-braid`, and `CUT-UNANSWERED-SILENCE` binds 18 and 19 as a `sensory-match`. The
+   chronology is timestamped to the second across the cut, from the relay closing at 18:31:14 in
+   Chapter 16 to the two calls, the access at 18:42:09, the arrival at 18:44:03, the death at 19:10,
+   the routing note filed at 19:36, and handover at 20:00 in Chapter 17. The pair also already spends
+   the outlier budget the way clause 3 asks: a 635-word `microchapter` cutting at the irreversible act,
+   answered immediately by a 1,759-word `long-outlier` that runs the consequence as continuous scene.
+   Chapter 17 is the strongest chapter in the delivered manuscript and it is built out of exactly the
+   two techniques clauses 3 and 9 exist to spread.
+
+   The three-viewpoint version is also canonically unavailable at that site. Julian Adebayo does not
+   know the temporary bench path exists until Chapter 46, and placing him inside the 18:31 to 20:00
+   window would require either breaking that reveal or inventing a reason for him to be at Northline
+   that evening. Both are worse than leaving the cluster as built, and neither is authorized.
+
+   The forward obligation is therefore the reverse of the original clause: the Mindwars null-night
+   cluster and any later convergence must match the Chapter 16–17 standard rather than Discovery being
+   retrofitted toward them. Nothing is re-sequenced, no `ArcEntry` changes, and no `ArcChange` arises
+   under this clause.
+6. **The frontier is finished.** Chapters 9, 10, and 20 and Chapters 41–46 are brought to `DEC-018`
+   clauses 1, 2, and 10. Chapters 30–40 move to `status: revised` once confirmed compliant.
+9. **Scenes are dramatized, not summarized.** The delivered manuscript's dominant unit is narrated
+   compression followed by two or three lines of dialogue offered as evidence for it. Chapter 33 is the
+   standing counter-example and the reason it outperforms its neighbours: counsel is allowed an
+   uninterrupted argument and Julian loses in real time. Where a chapter contains a decision, a
+   negotiation, a refusal, or a confrontation, that event is written as continuous scene with the
+   narrator's summary removed rather than compressed and then quoted. This clause is the intended
+   remedy for readability and pulse, and it is the reason clause 3's outlier budget exists to be spent.
+10. **One recurring institutional counterforce.** The Open Channel Consortium's lead counsel is named
+    and recurs. This closes the standing recorded craft risk *no recurring human counterforce* by the
+    remedy that risk itself names: a recurring negotiator inside the existing POV architecture. She is
+    competent, frequently right, and never unmasked. She is not the sender, not the Foreign Signal, not
+    an adversary inside the mechanism, and she receives no POV. This decision authorizes exactly that
+    one supporting-canon addition, recorded in [`canon-bible.md`](canon-bible.md) under
+    `source_location: DEC-019` as `CHAR-017` with `EXT-CHAR-COUNSEL-NAME` and
+    `EXT-ROLE-COUNSEL-RECURRING`, and it authorizes nothing else.
+7. **Chapter_Status is synchronized.** Every `ArcEntry.status` agrees with its Chapter Header, under the
+   `record-schemas.md` rule that substantive edits demote `approved` to `revised`. This is bookkeeping
+   that executes an existing rule and is not an `ArcChange`.
+8. **Clause 10 is a budgeting target, not a craft rule, and small overages are exempt.** The
+   1,050–1,200 band exists to keep the manuscript inside approved Final_Targets, and it carries no
+   automated score under `DEC-018` and Requirement 12.12. Chapters 19 and 35, at 1,203 and 1,210
+   Prose_Words, are **author-exempted** and are not findings. Neither is to be re-flagged in a later
+   review pass, and neither is to be trimmed to satisfy arithmetic. The operative constraints remain
+   the Normal_Chapter_Range of 700–1,600 and the Hard_Chapter_Maximum of 2,500, both of which are
+   objective and both of which every delivered chapter satisfies. Where the band and the prose disagree
+   by a margin that does not move the manuscript total, the prose wins.
+
+### What this decision does not touch
+
+Every item preserved by `DEC-018` remains preserved, unweakened and unreopened: the receive-only
+December apparatus with no transmit stage and the distinct later temporary bench path; the
+receiver-owned, configuration-and-information-load-dependent reconstruction latency, which is not a
+constant, a transit time, or a source-side delay; the content-free handshake and Nia's self-experienced
+wanting; unresolved causation and the `DEC-007` asymmetry, with no confirmation, appropriation, or
+absolution available to anyone; the three never-revealed Reveal IDs; Mara's Chapter 23 first reader
+release with Nia owning the Chapter 24 refusal; page nine as architectural capability only; the closed
+motif families; the four-POV limit and the 56/32/33/7 loads; the 29/32/51/16 movement allocation; and
+the prohibition on any POV for a sender, adversary, archive, simulation, model, or group mind.
+
+`DEC-005` is untouched: the contested-archive model, the absence of a unified adjudicating inquiry, and
+the rule that provenance warrants custody rather than truth all stand. Clause 1 raises how often the
+reader feels the record, not what the record can do.
+
+### Retired alternatives
+
+| Retired option | Why it was rejected |
+|---|---|
+| Relax Requirements 2.13 and 2.14 to allow withheld facts | The withholding ban produces the book's central tension rather than limiting it, and the design already rejects withheld nouns and fake cliffhangers. Clause 2 spends the authorized alternative instead. |
+| Leave `DEC-006` at *rare* and buy pressure with plot events | The frame is already built, already contested, and already costs nothing under 2.13 and 2.14. Ignoring it while inventing new jeopardy is the more expensive route and risks the faceless-signal discipline. |
+| Add apparatus: source notes, deposit stamps, docket labels, transcript joins | This is the model `DEC-006` correctly retired, and clause 1 does not reopen it. Presence is a narrator's awareness, not a reading surface. |
+| Widen the clause 10 band to recover rhythm | The band fixed a real 13,000-word shortfall and now projects about 140,400 words. Variance belongs in the outlier budget, which is 15 entries underspent, not in loosening the normal class. |
+| Defer the compressed-clock cluster to Mindwars as originally planned | Discovery is where a reader decides whether to continue. The architecture's own convergence device should appear once before Chapter 29. |
+
+### Affected records and required synchronization
+
+| Record | Change | State |
+|---|---|---|
+| `planning/decisions.md` — `DEC-006` clauses 2 and 6 | Amended by clause 1 from *rare* to *intermittent*, with apparatus still prohibited | done, recorded here rather than by editing `DEC-006` in place |
+| `planning/arc-outline.md` — decision authority line | Extend binding, nonsuperseded decisions through `DEC-019` | done |
+| `planning/arc-outline.md` — `ArcEntry.status` for Chapters 1–8, 11–19, 21–29 and 43–46 | Synchronize to the Chapter Header values under clause 7 | done |
+| Chapters 9, 10, 20 | Revise to clauses 1, 2, and 10 of `DEC-018`; demote status to `revised` in header and outline | done |
+| Chapters 41–46 | Revise to clauses 1, 2, and 10 of `DEC-018` | pending, next wave |
+| Chapters 30–40 | Confirm compliance, then move header and outline to `revised` | pending, next wave |
+| Chapters 19 and 35 | Bring inside the 1,200 Prose_Word ceiling under clause 8 | pending, next wave |
+| `planning/arc-outline.md` — length-class allocation | Chapter 43 moved to `long-outlier` with a non-null `outlier_purpose`; dated note records Private_Defense_Part at its ceiling of 5, the global total at 19 of 20, and `normal` at 109 against the floor of 108 | done |
+| `planning/arc-outline.md` — clause 3 arithmetic correction | Dated note records that the delivered outlier shortfall is about 2, not 15, and that the remaining rhythm variance must come from widening the `DEC-018` clause 10 target inside the 700–1,600 `normal` class | done; the widening itself is open |
+| Chapter 43 | Rewritten as continuous scene under clause 9, 1,065 to 1,620 Prose_Words | done |
+| `planning/arc-outline.md` — Discovery cross-cuts | No change. Clause 5 records that `CUT-HANDSHAKE-AND-TRIAGE` and `CUT-UNANSWERED-SILENCE` already carry the cluster across Chapters 16–20 | done, as a finding |
+| `planning/canon-bible.md` — `CHAR-017` | `EXT-CHAR-COUNSEL-NAME` and `EXT-ROLE-COUNSEL-RECURRING` under `source_location: DEC-019`; supporting-character count 12 to 13 | done |
+| Chapters 33, 43, 44, 46 | Counsel named as Imogen Dalby throughout; 18 designator replacements | done |
+| Remaining chapters with Consortium scenes | Dalby recurs under clause 10 as those chapters are drafted or revised | pending, later waves |
+| `design.md` — Testimony Frame and Original Thriller Pacing Architecture | Record intermittent frame presence, deliberate rhythm variance, irregular rotation, and one Discovery cluster | pending, later wave |
+| `planning/editorial-log.md` | Record the Chapters 1–10, 23–24 review and the clause 1–5 obligations as Editorial_Gate criteria | pending, later wave |

@@ -2195,6 +2195,7 @@ Ten supporting participants hold Character IDs and no viewpoint in this fence, a
 | `CHAR-014` | Halloran | approved; non-viewpoint; transcribes Nia's conditions and receives spoken consent; no given name selected |
 | `CHAR-015` | Joss Calder | approved; non-viewpoint; Nia's older brother; `DEC-018` clause 9 warmth; no professional role |
 | `CHAR-016` | Ruth Venn | approved; non-viewpoint; Mara's aunt; `DEC-018` clause 9 warmth; no institutional role |
+| `CHAR-017` | Imogen Dalby | approved; non-viewpoint; lead counsel for the Open Channel Consortium; `DEC-019` clause 9 recurring institutional counterforce; never a sender, adversary-in-the-signal, or POV |
 | technical institution | Northline Array | exact approved name |
 | commercial institution | Open Channel Consortium | exact approved name |
 | custodial institution | Civic Record Trust | exact approved name |
@@ -5983,3 +5984,73 @@ Twelve supporting participants now hold Character IDs and no viewpoint. `CHAR-00
 - A chapter's `hook` is planning metadata. It never appears as prose, and no chapter closes on a restatement of it. Where a `CrossCut` declares `contradiction-cut`, the contradiction is assembled by the reader and stated by no narrator.
 - The `exposed persons` list is Mara's private pre-Trust working record and never an institutional finding, a casualty roll, or evidence about causation. Ravi Anand's single uncharacterized report stays one unverified private report: it is not the first reported pattern of arrivals in strangers, which remains Chapter 62, and it resolves no provenance. His departure from the project is Mara's personal cost and not an injury.
 - A private two-person language layer is a recognized class of thing that can be lost, established through Ada and Lena Ferris, whose layer is intact. No record connects the Ferris pair to Safiya Mir, and nothing about the class supplies a corpus, a template, or a route to restoring what the null removed.
+
+## `DEC-019` supporting canon
+
+`DEC-019` clause 9 authorizes exactly one supporting-canon addition: a name and a recurring role for the
+Open Channel Consortium's lead counsel, who already appears unnamed in Chapters 33, 43, 44, and 46 and
+who is the strongest institutional counterforce the delivered manuscript contains. This closes the
+standing recorded craft risk *no recurring human counterforce*, which named a recurring negotiator
+inside the existing POV architecture as the remedy.
+
+The authorization is narrow. It creates no POV, no `VoiceBrief`, no chapter, no `Motif_Event`, no
+`Literal_Phrase_Constraint`, and no `Reveal`. It changes no `POVProfile`, no roster load, and no
+movement allocation. Counsel is not the sender, is not the Foreign Signal, is not an adversary in the
+signal, and is never narrated from inside. The supporting-character count is now thirteen.
+
+```json record=NovelExtension schema=1
+[
+  {
+    "extension_id": "EXT-CHAR-COUNSEL-NAME",
+    "extension_kind": "character-name",
+    "fact": "CHAR-017 identifies Imogen Dalby, lead external counsel for the Open Channel Consortium, who negotiates participation, access, and consent instruments opposite Julian Adebayo and Mara Venn; she is a non-viewpoint supporting character with no POV and no alias.",
+    "rationale": "The delivered manuscript's opposition is institutional and mostly faceless, which the recorded craft risks flagged as leaving scenes without a specific adversary to play against. Counsel already carries the two best arguments in the delivered set, in Chapter 33, and losing to the same named person repeatedly gives the middle book a counterforce without creating a POV or personifying the Foreign Signal.",
+    "authority_ref": "DEC-019",
+    "first_dependency": {
+      "record_type": "ArcEntry",
+      "record_id": "33"
+    },
+    "affected_records": [
+      {
+        "record_type": "NovelExtension",
+        "record_id": "EXT-ROLE-COUNSEL-RECURRING"
+      }
+    ],
+    "consistency_implications": [
+      "Dalby holds a Character ID and no POV, no VoiceBrief, no movement_coverage, and no chapter load; nothing is narrated from inside her and no chapter is added for her.",
+      "She is not the sender, not the Foreign Signal, not an operative, and not an adversary inside the mechanism; her power is contractual, procedural, and commercial only.",
+      "She is competent and often right. She is never given a concealed villainous motive, a reveal, or a secret identity, and she never becomes the explanation for causation.",
+      "She is not a Northline employee, a dispatcher, an archivist, a pairing participant, or a Civic Record Trust custodian.",
+      "She is never injured, cancelled, addressed, paired, or made a casualty, and she supplies no evidence about causation or provenance.",
+      "Her selected name licenses no inferred nationality, ethnicity, religion, language, geography, or other real-world cultural detail."
+    ],
+    "state": "approved",
+    "superseding_arc_change_id": null
+  },
+  {
+    "extension_id": "EXT-ROLE-COUNSEL-RECURRING",
+    "extension_kind": "profession",
+    "fact": "Imogen Dalby recurs as the Open Channel Consortium's negotiating counsel across the movements in which the Consortium is active, arguing from participant-facing operability rather than from profit, and repeatedly obtaining outcomes by conceding the principle and keeping the mechanism.",
+    "rationale": "DEC-019 clause 9 requires someone the leads can lose arguments to on the page. Her Chapter 33 position, that a rule which cannot be performed by a tired person in a bad chair protects nobody, is a real objection to Julian's taxonomy and must stay unanswerable rather than becoming a disguised villain speech.",
+    "authority_ref": "DEC-019",
+    "first_dependency": {
+      "record_type": "ArcEntry",
+      "record_id": "33"
+    },
+    "affected_records": [
+      {
+        "record_type": "NovelExtension",
+        "record_id": "EXT-CHAR-COUNSEL-NAME"
+      }
+    ],
+    "consistency_implications": [
+      "Her recurrence changes no chapter count, POV load, or movement allocation; she appears inside chapters that already exist or are already planned.",
+      "She never speaks for the Foreign Signal and never asserts a causal account of Nia Calder's wanting.",
+      "Her arguments may defeat Julian's and Mara's without the narrative endorsing the Consortium, and no scene resolves by her being unmasked.",
+      "Exact scene placement inside each movement belongs to the revision and drafting waves; this record fixes the role, not the chapter list."
+    ],
+    "state": "approved",
+    "superseding_arc_change_id": null
+  }
+]
+```

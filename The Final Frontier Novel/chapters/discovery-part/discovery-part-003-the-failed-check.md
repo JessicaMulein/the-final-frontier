@@ -5,11 +5,11 @@ pov_id: POV-MARA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []
 hook: "The check she built to kill the result kills the wrong thing, and the eight seconds survive it as hers."
-words: 1169
+words: 1192
 length_class: normal
 status: revised
 ---
-The matched load was a brass slug the size of my thumb with a fifty-ohm resistor buried in it, and it had spent the night in a cold cabinet, so the first thing I did on the eleventh of December was close my hand around it until it came up to room temperature.
+The matched load was a brass slug the size of my thumb with a fifty-ohm resistor buried in it, and it had spent two nights in a cold cabinet, so the first thing I did on the eleventh of December was close my hand around it until it came up to room temperature. The tenth had gone to a failed chiller and two hours of somebody else's calibration, and I spent it being useful to other people.
 
 Then I terminated the front end into it, logged the temperature, and ran the same acquisition for the same duration and gain as the ninth. The result went through the identical reconstruction chain, envelope removal included. That was the entire point of the control: if any stage was inventing the structure, the blank had no choice but to carry it.
 
@@ -17,7 +17,7 @@ Six hours. It stayed blank.
 
 I was pleased for about ninety seconds. Then I worked out that a clean control tells you only what you no longer get to blame.
 
-The acquisition clock had to hold as well, because a clock is where I would have hidden the fault. Ravi Anand injected a timestamped pulse ahead of the digitiser while I watched the clock distribution and the archive writer. The sample landed where the pulse said it should. We repeated it with the reconstruction disabled and then with it restored, and acquisition never moved. The apparatus was taking the field continuously and dating what it took, so all of the time I was about to find belonged after that point.
+The acquisition clock had to hold as well, because a clock is where I would have hidden the fault. Ravi injected a timestamped pulse ahead of the digitiser while I watched the clock distribution and the archive writer. The sample landed where the pulse said it should. We repeated it with the reconstruction disabled and then with it restored, and acquisition never moved. The apparatus was taking the field continuously and dating what it took, so all of the time I was about to find belonged after that point.
 
 Ravi had cycled in, eleven miles in the dark, and still had his trouser leg tucked into his sock two hours later. He is the only person at Northline who reruns my checks without being asked, because he does not believe a number produced by one pair of hands, including his own. He also writes everything down. Paper notebook, one page a day, the time in the margin and the initials of whoever was standing there.
 

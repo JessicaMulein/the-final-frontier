@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []
 hook: "Her clock, her road call, and her console at ten to seven agree with one another, and the twenty minutes between them hold nothing she would ever have thought to report."
-words: 1161
+words: 1181
 length_class: normal
 status: revised
 ---
@@ -13,7 +13,7 @@ The car clock runs two minutes fast, and I have never reset it, because two minu
 
 That is the clock the drive belongs to. Everything after it belongs to somebody else's: the depot's, the console's, and the one inside the crossing that decides when the arm comes down.
 
-Quarter past six: alarm. Shower, and the hot water took long enough that I was rinsing my hair while the radio reader was halfway through the weather, and she said the word *freezing* twice in one sentence, which is the sort of thing you notice and cannot use. No breakfast, because I meant to buy milk. Out at twenty-five past, give or take the clock's usual two minutes.
+I have had to account for that Wednesday since, to the minute, and what I can tell you is that it accounts for itself. Quarter past six on a bedside clock I have never had cause to doubt. A shower long enough that I was rinsing my hair while the radio reader was halfway through the weather, and she said the word *freezing* twice in one sentence, which is the sort of thing you notice and cannot use. No breakfast again, because the milk was still the plan. Out at twenty-five past, give or take the clock's usual two.
 
 I had not dried my hair properly, so there was a wet crescent down the back of my collar, and I felt it every time I turned my head.
 
@@ -23,17 +23,17 @@ His clipped address cost me the roundabout at the retail park. I was watching hi
 
 Then Ridge Road, and the barrier, and the bell, and a freight going through in its own time with a man and a wet dog on the far pavement. Barrier up. The rest of Ridge Road. The depot turn, the second row, and somebody's cage trolley left half over the line, so I reversed in on the second attempt rather than get out in that cold to move it. By the time I reached the side door the wet at my collar had gone cold, which is a clock nobody designed.
 
-Kev repeated the fence story in person, the way people do twelve minutes from the end of a night shift, and then corrected himself: not three calls, but two completed and one hang-up. I said a hang-up still enters the queue. He said *fair enough* and wrote it down, which is why the handover note carries both counts with a time against each.
+Kev repeated the fence story in person, the way people do twelve minutes from the end of a night shift, and then corrected himself: not three calls, but two completed and one hang-up. I said a hang-up still enters the queue. He said *fair enough* and wrote it down. That is why the handover note carries both counts with a time against each.
 
 I signed on at ten to seven, which gave me four minutes to hang up a coat, sit down, and become the person the county rings. The first item under my initials is the neighbour's alarm at six fifty-four.
 
-A collapse in a shop doorway came in at seven twenty. The caller gave me a street and a number, and the system put the number on the wrong side of a junction, which happens where a terrace was demolished and the numbering changed and the map never caught up.
+A collapse in a shop doorway came in at seven twenty. The caller gave me a street and a number, and the system put the number on the wrong side of a junction. That happens where a terrace was demolished and the numbering changed and the map never caught up.
 
 So I stopped asking her for the address. "Tell me what you can read from where you're standing."
 
 She read me the name over the shutter, and then, when I asked for something with a number on it, the code stencilled on a bin. Two seconds each. I re-sent on the corrected location, and the forty seconds that correction cost belong in the log against my initials, and so does the fact that the route after it was right.
 
-The school run gave me two shunts on the ring road inside a quarter of an hour, neither serious. The screen wanted the near approach for the second one. That approach had been single file since the Monday for resurfacing, which is not on the layer, and a vehicle that size does not thread it, so I sent them the long way and they were on scene before the screen's own estimate for the short one.
+The school run gave me two shunts on the ring road inside a quarter of an hour, neither serious. The screen wanted the near approach for the second one. That approach had been single file since the Monday for resurfacing. It is not on the layer, and a vehicle that size does not thread it, so I sent them the long way and they were on scene before the screen's own estimate for the short one.
 
 Then the thing I would think about later.
 
@@ -55,4 +55,4 @@ None of it was worth reporting, and nobody asked. It was cold. I wore the wrong 
 
 What has stayed with me is the four seconds against the board. I was right, and I was right on nothing except my own certainty that a crew who sound unfinished are unfinished, and there is no line on any form for that. Support closed Dev's ticket on the Friday and I opened it again on the Monday, and I could do that because a paper strip existed and two of us had read it.
 
-The four seconds have no strip and no second reader. So what does a dispatcher do the first time her own certainty and her own screen disagree and there is somebody standing in a road while she decides which of them to believe?
+The four seconds have no strip and no second reader. They are the part of that day I would most want somebody to have kept, and they are the part nobody kept.

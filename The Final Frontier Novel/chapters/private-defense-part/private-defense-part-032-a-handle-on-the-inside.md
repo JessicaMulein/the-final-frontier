@@ -7,7 +7,7 @@ motif_events: []
 hook: "She specifies a handle instead of a wall, and puts it on the inside where she cannot reach it."
 words: 1170
 length_class: normal
-status: draft
+status: revised
 ---
 We stretched the mesh over a timber frame inside the old calibration room, overlapped each run by the width the screening handbooks specify, bonded the overlaps with conductive tape, and for two days I believed the tape.
 

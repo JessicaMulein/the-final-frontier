@@ -7,7 +7,7 @@ motif_events: [MOT-COPPER-01]
 hook: "The relief is the best thing she has felt in months, and it is also a measurement of how open every other room has always been."
 words: 1148
 length_class: normal
-status: draft
+status: revised
 ---
 The copper fingers along the edge of the door met the frame one row at a time, a soft ascending sequence that ended at the latch. Then the ventilation baffle above me wound down, because the first measurement needed the room on its own, and I could hear the fabric of my own sleeve.
 

@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []
 hook: "Her morning closes into an ordinary shift, and the only thing out of place is a sound she cannot say why she remembers."
-words: 1138
+words: 1137
 length_class: normal
 status: revised
 ---
@@ -23,7 +23,7 @@ A minute and a half, and it sits in a log somewhere for seven years.
 
 Then Ridge Road. The barrier came down while I was four cars back, which is the worst position, because you can see the arm and not the train. I put both hands on top of the wheel. A man in a high-visibility coat walked the far pavement with a dog that did not want to be out, and the dog sat down halfway along, in the wet, to make its point. The bell kept going. Freight, in the end, the long slow kind with container cars. I counted for a while, lost the count, and let the bell take up the space.
 
-The barrier rose. I drove the rest of Ridge Road, turned at the depot, and parked in the second row, because the first row is for vehicles. Side door, hands in my sleeves. Kev repeated the fence story in person, which is what people do at the end of nights.
+The barrier rose. I drove the rest of Ridge Road, turned at the depot, and parked in the second row, because the first row is for vehicles. Side door, hands in my sleeves. Kev told me the fence story again in person, the way people do at the end of nights.
 
 I signed on at ten to seven, pressed the headset cup against my ear with two fingers, and took the neighbour's alarm at six fifty-four.
 
@@ -37,7 +37,7 @@ The ordinary explanation is a good one. Four cars back behind a freight is sever
 
 Wednesday is my brother's night, and Joss does not accept cancellations by text.
 
-He had somebody else's toaster in pieces on the kitchen table when I got there, elements laid out on newspaper in the order they had come off, which is how he works and how he was as a child. He fixes small machines for people who bring them round in carrier bags. He moved the whole arrangement onto a chair, wiped the table with his forearm, and put a plate down in front of me: two eggs, beans, and the ends of a loaf fried in the pan. That is what he makes when he suspects I have not eaten properly since the weekend.
+He had somebody else's toaster in pieces on the kitchen table when I got there, elements laid out on newspaper in the order they had come off, the way he has done since he was a child. He fixes small machines for people who bring them round in carrier bags. He moved the whole arrangement onto a chair, wiped the table with his forearm, and put a plate down in front of me: two eggs, beans, and the ends of a loaf fried in the pan. That is what he makes when he suspects I have not eaten properly since the weekend.
 
 I said I was not hungry. Then I ate all of it.
 

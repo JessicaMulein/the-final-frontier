@@ -814,6 +814,11 @@ _SEQUENCE_MAX_TURN_BYTES = 16 * 1_048_576
 _SEQUENCE_MAX_AUDIO_LATENESS_SECONDS = 0.5
 _SEQUENCE_AUDIO_PREROLL_SECONDS = 0.1
 _SEQUENCE_SEND_TIMEOUT_SECONDS = 2.0
+_SEQUENCE_ESTABLISH_TIMEOUT_SECONDS = 10.0
+_SEQUENCE_OUTPUT_READY_TIMEOUT_SECONDS = 10.0
+_SEQUENCE_FIRST_OUTPUT_TIMEOUT_SECONDS = 30.0
+_SEQUENCE_INTER_EVENT_TIMEOUT_SECONDS = 30.0
+_SEQUENCE_MAX_SESSION_SECONDS = 120.0
 
 
 class NovaSequenceIncomplete(InputError):
@@ -842,7 +847,16 @@ async def _queue_sequence_output_events(
     """Read one persistent output stream and preserve its event ordering."""
 
     try:
-        _, output_stream = await stream.await_output()
+        try:
+            _, output_stream = await asyncio.wait_for(
+                stream.await_output(),
+                timeout=_SEQUENCE_OUTPUT_READY_TIMEOUT_SECONDS,
+            )
+        except TimeoutError as exc:
+            raise InputError(
+                "Nova output stream was not ready within "
+                f"{_SEQUENCE_OUTPUT_READY_TIMEOUT_SECONDS:g} seconds"
+            ) from exc
         if output_stream is None:
             raise InputError("Nova returned no output stream")
 
@@ -984,6 +998,9 @@ async def _receive_sequence_turn(
     output_queue: asyncio.Queue[Any],
     expected_prompt_name: str,
     identity_state: dict[str, Any],
+    turn_index: int,
+    output_reader: asyncio.Task[Any],
+    audio_pump: asyncio.Task[Any],
 ) -> NovaRenderResult:
     """Freeze one completion lifecycle before another input turn is sent."""
 
@@ -993,7 +1010,27 @@ async def _receive_sequence_turn(
     event_bytes = 0
 
     while True:
-        item = await output_queue.get()
+        timeout_seconds = (
+            _SEQUENCE_FIRST_OUTPUT_TIMEOUT_SECONDS
+            if not events
+            else _SEQUENCE_INTER_EVENT_TIMEOUT_SECONDS
+        )
+        try:
+            item = await asyncio.wait_for(
+                output_queue.get(),
+                timeout=timeout_seconds,
+            )
+        except TimeoutError as exc:
+            _require_sequence_task_running(output_reader, "output reader")
+            _require_sequence_task_running(audio_pump, "audio pump")
+            phase = "first output event" if not events else "next output event"
+            last_event = next(iter(events[-1])) if events else "none"
+            raise InputError(
+                f"Nova sequence turn {turn_index} received no {phase} for "
+                f"{timeout_seconds:g} seconds "
+                f"(last event: {last_event}; output reader: running; "
+                "audio pump: running)"
+            ) from exc
         if isinstance(item, _SequenceOutputFailure):
             raise item.error.with_traceback(item.error.__traceback__)
         if item is _SEQUENCE_OUTPUT_EOF:
@@ -1122,11 +1159,6 @@ async def _invoke_sequence(
 ) -> tuple[NovaRenderResult, ...]:
     """Render ordered cross-modal turns in one prompt with continuous audio input."""
 
-    config = await sdk["config"].resolve(
-        region=settings.region,
-        transport=sdk["transport"](),
-    )
-    client: Any = sdk["client"](config=config)
     stream: Any = None
     output_reader: asyncio.Task[None] | None = None
     audio_pump: asyncio.Task[None] | None = None
@@ -1137,10 +1169,42 @@ async def _invoke_sequence(
     rendered: list[NovaRenderResult] = []
 
     try:
-        stream = await client.invoke_model_with_bidirectional_stream(
-            sdk["operation_input"](model_id=settings.model_id)
-        )
-        await stream.__aenter__()
+        try:
+            config = await asyncio.wait_for(
+                sdk["config"].resolve(
+                    region=settings.region,
+                    transport=sdk["transport"](),
+                ),
+                timeout=_SEQUENCE_ESTABLISH_TIMEOUT_SECONDS,
+            )
+        except TimeoutError as exc:
+            raise InputError(
+                "Nova sequence configuration resolution exceeded "
+                f"{_SEQUENCE_ESTABLISH_TIMEOUT_SECONDS:g} seconds"
+            ) from exc
+        client: Any = sdk["client"](config=config)
+        try:
+            stream = await asyncio.wait_for(
+                client.invoke_model_with_bidirectional_stream(
+                    sdk["operation_input"](model_id=settings.model_id)
+                ),
+                timeout=_SEQUENCE_ESTABLISH_TIMEOUT_SECONDS,
+            )
+        except TimeoutError as exc:
+            raise InputError(
+                "Nova sequence stream invocation exceeded "
+                f"{_SEQUENCE_ESTABLISH_TIMEOUT_SECONDS:g} seconds"
+            ) from exc
+        try:
+            await asyncio.wait_for(
+                stream.__aenter__(),
+                timeout=_SEQUENCE_ESTABLISH_TIMEOUT_SECONDS,
+            )
+        except TimeoutError as exc:
+            raise InputError(
+                "Nova sequence stream entry exceeded "
+                f"{_SEQUENCE_ESTABLISH_TIMEOUT_SECONDS:g} seconds"
+            ) from exc
         stream_entered = True
 
         send_lock = asyncio.Lock()
@@ -1297,6 +1361,9 @@ async def _invoke_sequence(
                 output_queue,
                 prompt_name,
                 identity_state,
+                turn_index,
+                output_reader,
+                audio_pump,
             )
             rendered.append(result)
             if normalized_tokens(result.final_transcript) != normalized_tokens(text):
@@ -1431,14 +1498,19 @@ async def _render_sequence_async(
         ),
         "unknown": InvokeModelWithBidirectionalStreamOutputUnknown,
     }
+    sequence_timeout = min(
+        settings.stream_timeout_seconds,
+        _SEQUENCE_MAX_SESSION_SECONDS,
+    )
     try:
         return await asyncio.wait_for(
             _invoke_sequence(texts, voice_id, settings, prompt_name, sdk, model_types),
-            timeout=settings.stream_timeout_seconds,
+            timeout=sequence_timeout,
         )
     except TimeoutError as exc:
         raise InputError(
-            f"Nova sequence did not complete within {settings.stream_timeout_seconds} seconds"
+            f"Nova sequence did not complete within the {sequence_timeout:g}-second "
+            "persistent-session safety limit"
         ) from exc
 
 
@@ -1500,13 +1572,17 @@ def render_text_sequence(
     except (ValueError, AttributeError) as exc:
         raise InputError("Nova prompt_name must be a canonical UUID") from exc
 
-    hard_timeout = settings.stream_timeout_seconds + _PROCESS_CLEANUP_GRACE_SECONDS
+    sequence_timeout = min(
+        settings.stream_timeout_seconds,
+        _SEQUENCE_MAX_SESSION_SECONDS,
+    )
+    hard_timeout = sequence_timeout + _PROCESS_CLEANUP_GRACE_SECONDS
     outcome = _run_worker_process(
         _render_sequence_process_worker,
         (selected_texts, voice_id, settings, selected_prompt_name),
         hard_timeout,
-        f"Nova worker exceeded the {settings.stream_timeout_seconds}-second sequence timeout "
-        "and bounded cleanup grace",
+        f"Nova worker exceeded the {sequence_timeout:g}-second persistent-session "
+        "safety limit and bounded cleanup grace",
     )
     if not isinstance(outcome, _SequenceWorkerOutcome):
         raise InputError("Nova worker returned an invalid sequence outcome")

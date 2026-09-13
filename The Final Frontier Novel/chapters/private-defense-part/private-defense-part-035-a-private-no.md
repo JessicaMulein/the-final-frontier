@@ -5,9 +5,9 @@ pov_id: POV-MARA
 timeline_id: TL-PRIVATE-COPPER
 motif_events: []
 hook: "A car she does not recognize is at the Northline Array gate before she has finished admitting the room is not an answer."
-words: 901
+words: 1210
 length_class: normal
-status: draft
+status: revised
 ---
 Nia left the pad on the chair inside the enclosure with two times on it in pencil, 11:02 and 2:06, and a note under them: see the openings, not only the hours.
 

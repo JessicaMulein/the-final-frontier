@@ -5,9 +5,9 @@ pov_id: POV-NIA
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []
 hook: "She can now describe precisely what a consented sentence feels like, which is how she knows the thing that took her judgment was not one."
-words: 910
+words: 1057
 length_class: normal
-status: draft
+status: revised
 ---
 By the sixth session I could send Mara a correction without first turning it into a test.
 
@@ -87,7 +87,7 @@ People could choose pairing because it let them work, speak, coordinate, or be h
 
 I crossed out the recording default. I crossed out active support functions. I crossed out the license in interaction material.
 
-The representative watched the page lose most of its shaded clauses.
+The representative watched the page lose most of its shaded clauses and did not try to stop me, which told me the form was not the negotiation. The form was the record of what I had refused, and somebody would read it later and count.
 
 "Without those provisions," she said, "the network cannot improve at scale."
 
@@ -99,10 +99,8 @@ I declined the term, the broad enrollment, and the claim that one signature coul
 
 On my way out, I passed the calibration room. The two contact bands lay on opposite sides of the table. Nothing moved between them because nobody had consented to open the channel and nobody had deliberately sent anything.
 
-That was not a failed conversation.
+That was not a failed conversation. It was privacy.
 
-It was privacy.
+Six sessions had given me a vocabulary, and I tried it out that evening on Joss, who listened to the whole of it with a kettle in his hand and then asked whether the machine could tell that I was tired. I said no. He said that was the first thing anybody had told him about it that sounded like a limit, and then he made me eat something, because that is the shape of every conversation we have ever had.
 
-I could now describe precisely what a consented sentence felt like.
-
-That was how I knew the thing that took my judgment was not one.
+What the vocabulary cannot do is reach backward. I know exactly what it is to offer a sentence now. I cannot run that knowledge over the morning I sent the wrong unit, and I have started to notice that every single person who asks me about it is hoping the vocabulary will turn out to be evidence.

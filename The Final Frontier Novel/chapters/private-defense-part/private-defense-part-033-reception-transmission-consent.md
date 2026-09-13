@@ -5,11 +5,11 @@ pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-COPPER
 motif_events: []
 hook: "His distinction is sound, and the enrollment form he is handed has already answered it on everyone's behalf."
-words: 1169
+words: 1171
 length_class: normal
-status: draft
+status: revised
 ---
-Counsel for the Open Channel Consortium arrived eleven minutes early with a policy director and two identical folders, set the one marked *Participant Access Framework* face down on the table, and did not open it for fifty minutes.
+Imogen Dalby, counsel for the Open Channel Consortium, arrived eleven minutes early with a policy director and two identical folders, set the one marked *Participant Access Framework* face down on the table, and did not open it for fifty minutes.
 
 I had a whiteboard and three nouns, and I wrote them out in the order in which a person is actually reached.
 
@@ -25,7 +25,7 @@ Three nouns. Three questions. Three records.
 
 "The operator performs more than one act."
 
-Counsel asked whether reception required consent where the acquired structure could not be linked to a civil identity. The first Northline source was a person before Northline knew her name, I said, and our ignorance had not made her field unoccupied. I was pleased with the sentence, which is the reliable indication that a proceeding will one day read it aloud.
+Dalby asked whether reception required consent where the acquired structure could not be linked to a civil identity. The first Northline source was a person before Northline knew her name, I said, and our ignorance had not made her field unoccupied. I was pleased with the sentence, which is the reliable indication that a proceeding will one day read it aloud.
 
 Their position on transmission was that active functions could stay disabled unless required for calibration, safety verification, service integrity, or emergency operation, which sounds narrow until one asks who determines necessity. I asked whether a participant could refuse an active function and keep the passive service, and was told the system could not guarantee quality in a partially enabled state.
 
@@ -33,7 +33,7 @@ Their position on transmission was that active functions could stay disabled unl
 
 "It is a condition of reliable access."
 
-The qualification altered the sentence and not the choice. I wrote beneath the three nouns that consent to one is not consent to the next, and when counsel said that people authorize complex services daily without approving each packet, I said packets do not become permission because they are small.
+The qualification altered the sentence and not the choice. I wrote beneath the three nouns that consent to one is not consent to the next, and when Dalby said that people authorize complex services daily without approving each packet, I said packets do not become permission because they are small.
 
 I was enjoying myself, which I mention because it bears on what followed.
 
@@ -49,7 +49,7 @@ I said that a burden placed on the operator is not the same as a burden placed o
 
 That was the first argument of the morning I could not answer with a distinction. The honest reply — that I did not know what a workable authorization looked like for a person who could not speak it — was one I would not make in front of a policy director, so I conceded a structure instead: advance authorization for a bounded class of operations, every operation in the class separately named, the class unextendable without a new authorization, and revocation stopping the operation rather than recording a preference.
 
-Counsel wrote it down at once, in her own hand, in her own margin, and thanked me. I had supplied the hinge and it would be leaned on.
+Dalby wrote it down at once, in her own hand, in her own margin, and thanked me. I had supplied the hinge and it would be leaned on.
 
 Then she slid the folder across.
 
@@ -75,7 +75,7 @@ The box did not say transmission, or write, and drew no line between an outgoing
 
 The policy director said the architecture was still in development and the language needed to remain flexible, which was the only answer of the morning carrying no qualification I could use. The form had not failed to separate reception, transmission, and consent; separation would have prevented one signature covering all three.
 
-Counsel had one more question at the door, coat over her arm, in the tone people keep for what they have been saving.
+Dalby had one more question at the door, coat over her arm, in the tone people keep for what they have been saving.
 
 "Does the institute hold any record naming individuals it believes may have been affected by the December work?"
 

@@ -5,9 +5,9 @@ pov_id: POV-MARA
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: [MOT-CHAIN-02]
 hook: "One printed line makes the assurance on the table worthless, and she has not put the page down yet."
-words: 0
+words: 431
 length_class: microchapter
-status: draft
+status: revised
 ---
 The interface specification was not written to be read in order.
 
@@ -51,6 +51,8 @@ He looked at the page before he answered.
 
 It was the first precise answer he had given me.
 
-I held page nine open. The assurance on the table had become worthless in the time it took to read one line.
+I held the page open with two fingers and asked him to say *authorized active support* again, slowly, so that Julian could hear which of the three words was carrying the weight.
 
-I had not put the page down yet.
+He said it.
+
+Julian stopped writing.

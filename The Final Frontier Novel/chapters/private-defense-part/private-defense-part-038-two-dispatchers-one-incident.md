@@ -7,7 +7,7 @@ motif_events: []
 hook: "The demonstration is the best argument anyone has made to her, and it is printed on the same page as the box she would have to un-tick."
 words: 1172
 length_class: normal
-status: draft
+status: revised
 ---
 The card Tomas Reyner read out at 14:04 was four sentences long, and I timed him, because I wanted the log to show he had read all four.
 

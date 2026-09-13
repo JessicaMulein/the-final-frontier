@@ -7,7 +7,7 @@ motif_events: []
 hook: "She turns back to the notebook that found the field and begins drawing a cage in it, a few pages after the door."
 words: 1169
 length_class: normal
-status: draft
+status: revised
 ---
 The tap over the laboratory sink ran too hot all winter. Steam had clouded the window and turned the yard floodlights into two white smears, and I had one hand inside a cup when my hand stopped moving and the water kept running.
 

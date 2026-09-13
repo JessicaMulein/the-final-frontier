@@ -1,0 +1,44 @@
+---
+description: Spec locations, task-state protocol, and gate discipline for The Final Frontier novel project
+alwaysApply: true
+---
+
+# The Final Frontier — spec and task protocol
+
+## Authoritative documents
+
+The spec was authored in Kiro and is now maintained directly. The three documents
+are tool-agnostic Markdown and remain the source of truth:
+
+- `.kiro/specs/The-Final-Frontier-novel/requirements.md` — numbered acceptance criteria, cited as `_Requirements: 12.3_`.
+- `.kiro/specs/The-Final-Frontier-novel/design.md` — architecture, 15 correctness properties, error-handling table, testing strategy.
+- `.kiro/specs/The-Final-Frontier-novel/tasks.md` — the implementation plan **and** the live task state.
+
+`tasks.meta.json` and `.config.kiro` are Kiro-only telemetry. Do not read or
+update them; they are frozen at the point the project left that tool.
+
+## Task state
+
+State lives in the `tasks.md` checkboxes. Update the marker as work moves:
+
+- `- [ ]` not started, `- [-]` in progress, `- [x]` complete.
+
+Never mark a task complete while its stated tests fail. Never widen a task's
+scope: each subtask names the requirements it satisfies and later tasks own the
+rest. When a task says a check belongs to a later task, leave it out.
+
+## Task markers
+
+- **[AUTHOR]** — only the author decides; ask rather than inventing an answer.
+- **[EDITORIAL]** — human judgment; never automate, never infer from prose.
+- **[HARD GATE]** — dependent work is blocked until the stated condition holds.
+- **[EXPLORATORY]** — informs calibration but is not approved continuity.
+
+## Gate discipline
+
+Objective gates and editorial gates are independent and neither substitutes for
+the other. Objective `GateResult` records go in
+`The Final Frontier Novel/planning/gate-results.md`; editorial ones go in
+`editorial-log.md`. Use the `GateResult` schema in `planning/record-schemas.md`
+exactly, and record a real timestamp. A staged gate (`calibration-objective`)
+never claims global acceptance.

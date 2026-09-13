@@ -7,7 +7,7 @@ motif_events: []
 hook: "She can be safe or she can take the call, and the room is very clear that she cannot do both."
 words: 1124
 length_class: normal
-status: draft
+status: revised
 ---
 An apple, a sandwich in greaseproof paper, two sharpened pencils, the county procedure binder, my paper shift notes, and the book I have been failing to finish since December. Nothing that connected to the county was coming in with me. I put it all on the floor beside the chair, pulled the handle, and wrote 9:06 on the pad by the door.
 

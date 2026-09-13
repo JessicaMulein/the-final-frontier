@@ -5,9 +5,9 @@ pov_id: POV-MARA
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []
 hook: "The first thing that crosses between them is a sentence Nia decides to hand over, and Mara has to sit still with how different that is."
-words: 0
+words: 1187
 length_class: normal
-status: draft
+status: revised
 ---
 "Do you consent to calibrating with me now?"
 

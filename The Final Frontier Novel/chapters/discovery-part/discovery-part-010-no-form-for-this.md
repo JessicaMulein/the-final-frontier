@@ -5,9 +5,9 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "There is no form for what she is doing, and the absence of a form is not permission."
-words: 959
+words: 1066
 length_class: normal
-status: approved
+status: revised
 ---
 I tried to turn the person back into a place.
 
@@ -73,6 +73,8 @@ That decision did not protect her. Acquisition still ran. Raw samples still ente
 
 I returned to the log and wrote the narrowest statement the evidence allowed: *Location model rejected. Recurrence is consistent with one living source and a person-specific address, not yet demonstrated. No transmission path exists. No contact or consent exists.*
 
-Below it I added a line for the next control.
+Below it I added a line for the next control, which is how I have always ended a bad day: by making tomorrow technical.
 
-There was no form for what I was doing. The absence of a form was not permission.
+The compliance system had logged the session and recorded that a form was started and abandoned. I learned that much later, from a page somebody else filed, by which time the timestamp was being read as the moment I first understood what I was doing. It was not. I understood it on the ninth of December, standing over a log with the cap off the pen, and everything between that evening and this one is mine. There is no category for that either.
+
+Ravi had gone home. At night the plant noise becomes the only argument in the building, and I sat in it for a while and drafted nothing.

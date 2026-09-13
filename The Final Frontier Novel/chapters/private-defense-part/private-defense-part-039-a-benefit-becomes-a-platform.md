@@ -7,7 +7,7 @@ motif_events: []
 hook: "He agrees to carry a term sheet, and what persuades him is not the money but the sentence he believes he can write into it."
 words: 1171
 length_class: normal
-status: draft
+status: revised
 ---
 Somebody had tabbed page four of the proposal before the copy reached me, with a green flag, pressed flat, and the crease of an earlier reader's thumb along the outer margin of that page and no other.
 

@@ -4,7 +4,7 @@ Schema version: **1**
 Normative schema: [`record-schemas.md`](record-schemas.md), especially `ArcEntry`, `CrossCut`, and `Baseline`  
 Structural authority: Requirements 1.2–1.5, 1.7–1.9, 2.1, 2.7, 2.10–2.12, 3.1, 3.6, and 15.5–15.8  
 Narrative authority: the design's *Detailed Sequence and Beat Architecture*, *POV Rotation, Cross-Cut Grammar, and Reveal Ownership*, and *Original Thriller Pacing Architecture*  
-Decision authority: binding, nonsuperseded decisions through `DEC-018`; `DEC-016` governs pacing architecture, `DEC-011` the title reversal, `DEC-017` the delayed consent parallel, `DEC-018` chapter shape, forward pressure, voice separation, human cost, warmth, and the normal-class word target  
+Decision authority: binding, nonsuperseded decisions through `DEC-019`; `DEC-016` governs pacing architecture, `DEC-011` the title reversal, `DEC-017` the delayed consent parallel, `DEC-018` chapter shape, forward pressure, voice separation, human cost, warmth, and the normal-class word target, and `DEC-019` intermittent frame presence, spent outlier budget, irregular rotation, one Discovery compressed-clock cluster, and completion of the `DEC-018` frontier  
 Created by: task 5.1  
 Amended: **2026-09-18** — `DEC-018` planning obligations. The Mindwars and Coda movement sections carry the new drafting obligation to make the class of uncounted private civilian loss vivid inside Chapters 109–114, and `DEC-018` clause 10's 1,050–1,200 `normal`-class target is recorded beside the length-class budget. No `ArcEntry`, `CrossCut`, or `Baseline` record value changed in this pass: still 128 entries, 65 cross-cuts, the same length classes, `estimated_words`, motifs, reveals, statuses, and calibration selections. Re-budgeting `estimated_words` to the clause 10 band is an open obligation of `ARC-CHANGE-REVISION-001` and belongs to a later wave.
 Amended: **2026-09-13** — every `ArcEntry` gains the required `estimated_words` key under the amended `record-schemas.md`, and global invariant 6 gains the `DEC-016` same-POV run word limit of 3,600 Prose_Words.
@@ -112,6 +112,10 @@ Per-movement outlier ceilings, allocated roughly by chapter count:
 | **Total** | **20** | **108** |
 
 These are ceilings, not quotas; a movement may use fewer. Before baseline approval, reallocating outliers between movements requires only a dated note in this section and must keep the global total at or under 20; task 5.6 audits the global figure. After baseline approval it requires an `ArcChange`.
+
+**Dated note, 2026-09-18, `DEC-019` clause 3.** Chapter 43 moves from `normal` to `long-outlier` and receives a non-null `outlier_purpose`. Private_Defense_Part goes from 4 outliers to 5, which is exactly its ceiling; the global total goes from 18 to 19 against the ceiling of 20, and the `normal` count goes from 110 to 109 against the floor of 108. No outlier moves between movements and no other entry changes.
+
+This note also records a correction to the arithmetic that motivated `DEC-019` clause 3. The delivered manuscript's 5 outliers in 49 chapters were compared against the global 20-outlier ceiling rather than against the 18 the plan already allocates, which made the budget look roughly 15 entries underspent when the true delivered shortfall is about 2. The plan is close to fully allocated, so clause 3 cannot be satisfied by adding many more outliers. The remaining rhythm variance has to come from inside the `normal` class, whose Normal_Chapter_Range is 700–1,600 and whose `DEC-018` clause 10 drafting target of 1,050–1,200 is the actual cause of the observed metric evenness: 41 of 44 delivered normals now sit inside a 150-word band. With the projection at roughly 143,700 Prose_Words against approved Final_Targets of 130,000–150,000, widening the clause 10 target while holding the same mean would restore variance at no cost to the total. That widening is an open obligation and is not made by this note.
 
 Every outlier — either class — carries a non-null `outlier_purpose` naming the specific compression, interruption, revelation, aftermath, or expansion function it performs (Requirements 2.10 and 2.11). A `normal` entry carries `outlier_purpose: null`. "It felt long" and "it felt short" are not purposes.
 
@@ -772,7 +776,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": true,
     "representative_purpose": null,
     "record_horizon": {
@@ -796,7 +800,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": true,
     "representative_purpose": null,
     "record_horizon": {
@@ -820,7 +824,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": true,
     "representative_purpose": null,
     "record_horizon": {
@@ -844,7 +848,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": true,
     "representative_purpose": null,
     "record_horizon": {
@@ -866,7 +870,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": true,
     "representative_purpose": null,
     "record_horizon": {
@@ -888,7 +892,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -912,7 +916,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -936,7 +940,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -958,7 +962,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -980,7 +984,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": 1050,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1004,7 +1008,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": 1100,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1028,7 +1032,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1054,7 +1058,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "long-outlier",
     "estimated_words": null,
     "outlier_purpose": "Expansion: the person-specific proof needs experiment, failed control, result, and the immediate recognition that a person has become an address to land in one unbroken sequence.",
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1078,7 +1082,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": 1000,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1100,7 +1104,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": 1050,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1126,7 +1130,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "microchapter",
     "estimated_words": null,
     "outlier_purpose": "Compression: the send is one irreversible act, and cutting at the act denies the chapter room to argue itself into justification.",
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1150,7 +1154,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "long-outlier",
     "estimated_words": null,
     "outlier_purpose": "Expansion: two simultaneous calls, one available advanced unit, the arriving certainty, the routing, and the single documented outcome must land inside one continuous shift.",
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1174,7 +1178,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1198,7 +1202,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1220,7 +1224,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1244,7 +1248,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1268,7 +1272,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1293,7 +1297,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1319,7 +1323,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "microchapter",
     "estimated_words": null,
     "outlier_purpose": "Compression: the refusal is one sustained act of speech, and ending on it denies the scene an explanatory aftermath or a softening exchange.",
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1343,7 +1347,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1367,7 +1371,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1391,7 +1395,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1415,7 +1419,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1439,7 +1443,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": 1100,
     "outlier_purpose": null,
-    "status": "approved",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1496,7 +1500,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1522,7 +1526,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1546,7 +1550,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1570,7 +1574,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1594,7 +1598,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1618,7 +1622,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1642,7 +1646,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1664,7 +1668,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1688,7 +1692,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1710,7 +1714,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1734,7 +1738,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1756,7 +1760,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1780,7 +1784,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1801,10 +1805,10 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
       "CUT-PROMISE-AND-THE-CASE"
     ],
     "motif_events": [],
-    "estimated_length_class": "normal",
+    "estimated_length_class": "long-outlier",
     "estimated_words": null,
-    "outlier_purpose": null,
-    "status": "planned",
+    "outlier_purpose": "Expansion: the April offer is the movement's central temptation and has to be dramatized as one continuous negotiation, so that the clinical case, the funding pressure, and counsel's operability trap land in real time on Mara rather than inside narrated summary.",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1828,7 +1832,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1857,7 +1861,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "microchapter",
     "estimated_words": null,
     "outlier_purpose": "Compression to the single act of reading one line, so the reversal lands in about the time it takes to read it.",
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1883,7 +1887,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {

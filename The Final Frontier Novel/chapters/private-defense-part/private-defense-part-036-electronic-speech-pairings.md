@@ -7,7 +7,7 @@ motif_events: []
 hook: "The benefit in front of him is real, and the phrase they have chosen for it is already doing work the mechanism does not support."
 words: 1186
 length_class: normal
-status: draft
+status: revised
 ---
 The visitor book at the Northline gate was still the hardbound kind, ruled for name, organization, host group and time, and the guard turned it toward me before my window was down.
 
