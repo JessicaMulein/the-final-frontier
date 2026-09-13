@@ -3,7 +3,9 @@
 Schema version: **1**  
 Project: ***The Final Frontier***  
 Status: **provisional planning reference; not an Approved Baseline**  
-Authority through: **DEC-017**  
+Authority through: **DEC-018**  
+Amended: **2026-09-18** — `DEC-018` clause 9 adds two approved non-viewpoint warmth relationships in the Canon Bible: `CHAR-015` Joss Calder, Nia Calder's older brother outside the county emergency service, and `CHAR-016` Ruth Venn, Mara Venn's aunt with no institutional role. `CHAR-011` gains the surname **Anand** without changing the Character ID. The supporting-character count is now twelve. Julian Adebayo receives no new relationship; his isolation is characterization. No `POVProfile` record was added or edited, and the four profiles, the one-to-one `POVProfile` Character/POV mapping, the single Anchor, and the 56/32/33/7 loads are unchanged. See [non-viewpoint supporting participants and witnesses](#non-viewpoint-supporting-participants-and-witnesses).  
+Amended: **2026-09-16** — corrective calibration adds four approved non-viewpoint continuity witnesses in the Canon Bible: `CHAR-011` Ravi, `CHAR-012` Kev, `CHAR-013` Dev, and `CHAR-014` Halloran. Together with the six operational-pairing participants, the supporting-character count is now ten. They create no POV, Voice Brief obligation, pairing identity unless separately recorded, or roster load; the four profiles and 56/32/33/7 loads remain unchanged.  
 Amended: **2026-09-15** — six non-viewpoint supporting participants now hold Character IDs `CHAR-005` through `CHAR-010` in the Canon Bible so that PAIR sessions can name two living participants. They create no POV, no Voice Brief obligation, and no roster load; the four profiles, the one-to-one `POVProfile` Character/POV mapping, the single Anchor, and the 56/32/33/7 loads are unchanged. No `POVProfile` record was added or edited. See [non-viewpoint supporting participants](#non-viewpoint-supporting-participants).  
 Amended: **2026-09-12** — Mara's `selected_name` aligned to the Canon Bible value **Dr. Mara Venn**; `DEC-012`/`DEC-015` fluent-pairing capability, four-mode experience, and privacy/evidence boundaries carried into all four profiles; `DEC-017`'s single Chapter 128 self-indictment carried into Mara's profile. The four profiles, the one-to-one Character/POV mapping, and the provisional 56/32/33/7 loads are unchanged.  
 Voice briefs: [`planning/voice-briefs.md`](voice-briefs.md) (Task 4.4 records)
@@ -31,7 +33,7 @@ The fenced `POVProfile` records below are the machine-readable roster and are go
 | Safiya Mir | `CHAR-004` | `POV-SAFIYA` | no | 0 | 0 | 0 | 7 | 7 | [`VOICE-SAFIYA`](voice-briefs.md) |
 | **Movement total** | | | | **29** | **32** | **51** | **16** | **128** | |
 
-The loads are provisional planning values owned by the Arc Outline. Task 5 may not change them while assigning Pairing_Sessions, supporting participants, or cross-cuts. The table is the complete roster: the six non-viewpoint Character IDs described under [non-viewpoint supporting participants](#non-viewpoint-supporting-participants) add no row, no POV ID, and no chapter to it.
+The loads are provisional planning values owned by the Arc Outline. Task 5 may not change them while assigning Pairing_Sessions, supporting participants, or cross-cuts. The table is the complete roster: the twelve non-viewpoint Character IDs described under [non-viewpoint supporting participants and witnesses](#non-viewpoint-supporting-participants-and-witnesses) add no row, no POV ID, and no chapter to it.
 
 ## Material distinction
 
@@ -72,9 +74,13 @@ Session ownership under `DEC-012`, `DEC-015`, and Requirements 15.2–15.3:
 - Content recording starts disabled and needs explicit mutual recording consent separate from consent to pair.
 - Task 5 may select living pair identities and supporting participants. It adds no sender, operative, adversary, archive, simulation, or group-mind POV, and it preserves the 56/32/33/7 loads.
 
-## Non-viewpoint supporting participants
+## Non-viewpoint supporting participants and witnesses
 
-`PAIR` needs two named living participants per session, so the pairing sessions that belong to supporting characters need Character IDs for those characters. As of the 2026-09-15 amendment they have them. [`canon-bible.md`](canon-bible.md) declares six approved `character-name` Novel Extensions — `CHAR-005` Ada Ferris, `CHAR-006` Lena Ferris, `CHAR-007` Tomas Reyner, `CHAR-008` Cora Baird, `CHAR-009` Idris Vane, and `CHAR-010` Rhea Osei — and the Canon Bible's PAIR chronology names them as pair participants.
+The Canon Bible declares twelve approved non-viewpoint `character-name` extensions. Six support operational `PAIR` sessions: `CHAR-005` Ada Ferris, `CHAR-006` Lena Ferris, `CHAR-007` Tomas Reyner, `CHAR-008` Cora Baird, `CHAR-009` Idris Vane, and `CHAR-010` Rhea Osei. Four are calibration continuity witnesses with no pairing role implied: `CHAR-011` Ravi Anand independently repeats Mara's December timing and control checks and works the copper-room programme with her; `CHAR-012` Kev anchors Nia's 6:31 road call and handover; `CHAR-013` Dev is the incidental depot/routing-screen colleague; and `CHAR-014` Halloran transcribes Nia's four conditions, receives her spoken consent, and records her spoken phrase-loss report while Nia originates the ethics.
+
+Two are `DEC-018` clause 9 warmth relationships, added 2026-09-18 and carrying no professional, technical, institutional, or archival function at all: `CHAR-015` **Joss Calder** is Nia's older brother, repairs small machines well outside the county emergency service, and keeps a standing shared meal with her; `CHAR-016` **Ruth Venn** is Mara's aunt, lives about an hour from the Northline Array, and feeds and houses Mara without asking what she is working on. Neither is told about the mechanism, and neither may become an exposition audience, a confession chamber, or a route to absolution — Mara's guilt stays unrelieved from every direction under `DEC-007`. Julian Adebayo is deliberately given no equivalent: his isolation is characterization, and the clause 9 warmth obligation reaches him inside scenes he shares rather than through a relationship of his own.
+
+`CHAR-011`'s surname was added by `DEC-018` because he recurs across at least seventeen delivered chapters, is entered on Mara's exposed-persons list over his objection, and now carries a named consequence of that entry. The Character ID is unchanged: `CHAR-011` is the same person named Ravi in every delivered chapter.
 
 **None of them is a viewpoint, and none of them changes this roster.** Under the [Character ID registry](record-schemas.md#character-id-registry) the authoritative Character ID set is the union of `POVProfile.character_id` values and approved `character-name` extensions, and the `character_id`/`pov_id` bijection is a rule about `POVProfile` records only. A Character ID with no profile is a non-viewpoint character:
 
@@ -84,7 +90,9 @@ Session ownership under `DEC-012`, `DEC-015`, and Requirements 15.2–15.3:
 - it is **never narrated from inside**, quoted as interior experience, or given a knowledge position, moral pressure, or plot function of its own in this document;
 - it is **never** the Foreign Signal or any actual, alleged, or hypothesized sender, operative, adversary, archive, simulation, model, or group mind, and no later work may promote one to a viewpoint without a documented `ArcChange` and a complete profile and brief.
 
-The roster still contains exactly four human POVs, one Anchor, and the four Character IDs `CHAR-001` through `CHAR-004` in `POVProfile` records. Julian's position is unchanged by the six additions: he holds other people's session records and never pairs. Safiya's is unchanged too — she never pairs, holds no calibration, and appears in no `pair_state`.
+The roster still contains exactly four human POVs, one Anchor, and the four Character IDs `CHAR-001` through `CHAR-004` in `POVProfile` records. The twelve non-viewpoint IDs `CHAR-005` through `CHAR-016` add no profile. Julian's position is unchanged by the additions: he holds other people's session records, never pairs, and receives no new relationship. Safiya's is unchanged too — she never pairs, holds no calibration, appears in no `pair_state`, and is connected to none of the twelve; in particular no record links Ada or Lena Ferris to her, and `heritage_base: unspecified_by_author` remains exact.
+
+The `POVProfile.relationships` arrays are also unchanged. Following the precedent set for `CHAR-005` through `CHAR-014`, non-viewpoint supporting characters are recorded as `NovelExtension` relationship records in the Canon Bible rather than inside the four profiles, so `CHAR-015` and `CHAR-016` appear in `EXT-REL-NIA-JOSS` and `EXT-REL-MARA-RUTH` and in no profile field.
 
 ## Delayed disclosure carried in Mara's profile
 

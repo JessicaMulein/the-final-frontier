@@ -86,6 +86,15 @@ CHAPTER_STATUSES = (
 )
 HARD_CHAPTER_MAXIMUM = 2500
 RECORD_SCHEMA_VERSION = 1
+LITERAL_SCOPE_EXCLUSIONS: Tuple[str, ...] = (
+    "canon-source-songs",
+    "other-song-files",
+    "planning-documents",
+    "chapter-headers",
+    "front-matter",
+    "editorial-records",
+    "checker-output",
+)
 
 
 class FixtureError(AssertionError):
@@ -701,6 +710,52 @@ def motif_event(
     return _finish_record(record, overrides, drop_keys)
 
 
+def literal_phrase_constraint(
+    *,
+    constraint_id: str = "LPC-FIXTURE-001",
+    motif_event_id: str = "MOT-FIXTURE-01",
+    exact_phrase: str = "Fixture phrase?",
+    allowed_movements: Sequence[str] = ("discovery_part",),
+    allowed_chapters: Sequence[int] = (),
+    allowed_files: Sequence[str] = (),
+    allowed_span: Optional[Mapping[str, Any]] = None,
+    minimum_in_scope: Optional[int] = None,
+    maximum_in_scope: Optional[int] = None,
+    exact_in_scope: Optional[int] = None,
+    maximum_outside_scope: int = 0,
+    diagnostic_code: str = "LITERAL_FIXTURE_SCOPE",
+    overrides: Optional[Mapping[str, Any]] = None,
+    drop_keys: Sequence[str] = (),
+) -> Dict[str, Any]:
+    """Build one conforming `LiteralPhraseConstraint` record."""
+
+    record: Dict[str, Any] = {
+        "constraint_id": constraint_id,
+        "motif_event_id": motif_event_id,
+        "exact_phrase": exact_phrase,
+        "scan_scope": "chapter-prose-body-only",
+        "allowed_movements": list(allowed_movements),
+        "allowed_chapters": list(allowed_chapters),
+        "allowed_files": list(allowed_files),
+        "allowed_span": copy.deepcopy(allowed_span),
+        "minimum_in_scope": minimum_in_scope,
+        "maximum_in_scope": maximum_in_scope,
+        "exact_in_scope": exact_in_scope,
+        "maximum_outside_scope": maximum_outside_scope,
+        "normalization": {
+            "unicode": "NFC",
+            "line_endings": "LF",
+            "case_sensitive": True,
+            "punctuation_sensitive": True,
+            "word_order_sensitive": True,
+            "match_mode": "non-overlapping-literal",
+        },
+        "scope_exclusions": list(LITERAL_SCOPE_EXCLUSIONS),
+        "diagnostic_code": diagnostic_code,
+    }
+    return _finish_record(record, overrides, drop_keys)
+
+
 def voice_brief(
     *,
     voice_brief_id: str = "VOICE-FIXTURE-ONE",
@@ -1247,6 +1302,7 @@ def reference_planning_documents(
     pov_profiles: Optional[Sequence[Mapping[str, Any]]] = None,
     voice_briefs: Optional[Sequence[Mapping[str, Any]]] = None,
     motif_events: Optional[Sequence[Mapping[str, Any]]] = None,
+    literal_phrase_constraints: Optional[Sequence[Mapping[str, Any]]] = None,
     cross_cuts: Optional[Sequence[Mapping[str, Any]]] = None,
     novel_extensions: Optional[Sequence[Mapping[str, Any]]] = None,
     extra_blocks: Optional[Mapping[str, Sequence[Tuple[str, Any]]]] = None,
@@ -1301,6 +1357,11 @@ def reference_planning_documents(
     _add("planning/pov-roster.md", "POVProfile", pov_profiles)
     _add("planning/voice-briefs.md", "VoiceBrief", voice_briefs)
     _add("planning/motif-ledger.md", "MotifEvent", motif_events)
+    _add(
+        "planning/motif-ledger.md",
+        "LiteralPhraseConstraint",
+        literal_phrase_constraints or (),
+    )
 
     for relative_path, blocks in (extra_blocks or {}).items():
         grouped.setdefault(relative_path, []).extend(blocks)
@@ -1313,3 +1374,1371 @@ def reference_planning_documents(
         )
         for relative_path in RECORD_SOURCE_TITLES
     )
+
+
+# ---------------------------------------------------------------------------
+# The eight-chapter Calibration_Batch
+# ---------------------------------------------------------------------------
+
+# The design fixes the Calibration_Batch as chapters 1–5 plus three
+# nonconsecutive representative chapters, and fixes which Motif_Events three of
+# them carry.
+CALIBRATION_CHAPTERS: Tuple[int, ...] = (1, 2, 3, 4, 5, 73, 118, 124)
+CALIBRATION_MOVEMENTS: Mapping[int, str] = {
+    1: "discovery_part",
+    2: "discovery_part",
+    3: "discovery_part",
+    4: "discovery_part",
+    5: "discovery_part",
+    73: "mindwars_part",
+    118: "aftermath_coda",
+    124: "aftermath_coda",
+}
+CALIBRATION_MOTIFS: Mapping[int, Tuple[str, ...]] = {
+    73: ("MOT-YES-01",),
+    118: ("MOT-KETTLE-01",),
+    124: ("MOT-COME-04", "MOT-KETTLE-02"),
+}
+DID_I_SAY_YES = "Did I say yes?"
+DID_I_SAY_YES_CONSTRAINT_ID = "LPC-DID-I-SAY-YES"
+DID_I_SAY_YES_DIAGNOSTIC = "LITERAL_DID_I_SAY_YES_SCOPE"
+
+# `RESOLVED_MOTIF_MAPPINGS` in the checker fixes each calibration Motif_Event's
+# family, movement, chapter, and representation mode, so the fixture must match
+# it exactly rather than reusing one generic default.
+_CALIBRATION_MOTIF_RECORDS: Mapping[str, Mapping[str, Any]] = {
+    "MOT-YES-01": {
+        "family": "authorization question",
+        "movement": "mindwars_part",
+        "planned_chapter": 73,
+        "representation_mode": "literal",
+        "literal_constraint_id": DID_I_SAY_YES_CONSTRAINT_ID,
+    },
+    "MOT-KETTLE-01": {
+        "family": "kettle",
+        "movement": "aftermath_coda",
+        "planned_chapter": 118,
+        "representation_mode": "image",
+    },
+    "MOT-COME-04": {
+        "family": "come in",
+        "movement": "aftermath_coda",
+        "planned_chapter": 124,
+        "representation_mode": "action",
+    },
+    "MOT-KETTLE-02": {
+        "family": "kettle",
+        "movement": "aftermath_coda",
+        "planned_chapter": 124,
+        "representation_mode": "action",
+    },
+}
+
+
+def calibration_motif_events(
+    chapters: Sequence[int] = CALIBRATION_CHAPTERS,
+) -> Tuple[Dict[str, Any], ...]:
+    """The `MotifEvent` records the requested calibration chapters require."""
+
+    wanted: List[str] = []
+    for chapter in chapters:
+        for motif_event_id in CALIBRATION_MOTIFS.get(chapter, ()):
+            if motif_event_id not in wanted:
+                wanted.append(motif_event_id)
+    return tuple(
+        motif_event(
+            motif_event_id=motif_event_id,
+            **_CALIBRATION_MOTIF_RECORDS[motif_event_id]
+        )
+        for motif_event_id in wanted
+    )
+
+
+def did_i_say_yes_constraint(**options: Any) -> Dict[str, Any]:
+    """The ledgered `Did I say yes?` Literal_Phrase_Constraint."""
+
+    values: Dict[str, Any] = {
+        "constraint_id": DID_I_SAY_YES_CONSTRAINT_ID,
+        "motif_event_id": "MOT-YES-01",
+        "exact_phrase": DID_I_SAY_YES,
+        "allowed_movements": ["mindwars_part"],
+        "diagnostic_code": DID_I_SAY_YES_DIAGNOSTIC,
+    }
+    values.update(options)
+    return literal_phrase_constraint(**values)
+
+
+def calibration_workspace(
+    base: Path,
+    *,
+    chapters: Sequence[int] = CALIBRATION_CHAPTERS,
+    prose_words: int = 880,
+    chapter_overrides: Optional[Mapping[int, Mapping[str, Any]]] = None,
+    entry_overrides: Optional[Mapping[int, Mapping[str, Any]]] = None,
+    extra_planning: Optional[Mapping[str, Sequence[Tuple[str, Any]]]] = None,
+    **workspace_options: Any,
+) -> SyntheticWorkspace:
+    """Build the complete pre-baseline Calibration_Batch workspace.
+
+    Every requested chapter gets a conforming Chapter_File, a matching ArcEntry,
+    and its own TimelineEntry, and chapters 73, 118, and 124 carry the fixed
+    Motif_Events the design assigns them. Chapter 73's Prose_Body contains the
+    ledgered `Did I say yes?` phrase, which is legal inside the Mindwars movement.
+
+    `chapter_overrides` and `entry_overrides` pass keyword options through to
+    `chapter_fixture` and `arc_entry` for one chapter, so a test can inject
+    exactly one violation into an otherwise clean batch.
+    """
+
+    chapter_overrides = chapter_overrides or {}
+    entry_overrides = entry_overrides or {}
+
+    fixtures: List[ChapterFixture] = []
+    entries: List[Dict[str, Any]] = []
+    timelines: List[Dict[str, Any]] = []
+
+    for chapter in chapters:
+        movement = CALIBRATION_MOVEMENTS[chapter]
+        slug = "calibration-{0:03d}".format(chapter)
+        motifs = CALIBRATION_MOTIFS.get(chapter, ())
+        prefix = DID_I_SAY_YES + "\n" if chapter == 73 else ""
+        prose = prefix + prose_of_length(prose_words)
+        timeline_id = "TL-CALIBRATION-{0:03d}".format(chapter)
+
+        fixtures.append(
+            chapter_fixture(
+                chapter=chapter,
+                movement=movement,
+                slug=slug,
+                prose=prose,
+                timeline_id=timeline_id,
+                motif_events=motifs,
+                **dict(chapter_overrides.get(chapter, {}))
+            )
+        )
+        entries.append(
+            arc_entry(
+                chapter=chapter,
+                movement=movement,
+                slug=slug,
+                timeline_id=timeline_id,
+                motif_events=motifs,
+                estimated_words=count_prose_words(prose),
+                calibration_selected=True,
+                representative_purpose=(
+                    "Synthetic representative calibration purpose."
+                    if chapter > 5
+                    else None
+                ),
+                **dict(entry_overrides.get(chapter, {}))
+            )
+        )
+        timelines.append(
+            timeline_entry(timeline_id=timeline_id, chapter_numbers=[chapter])
+        )
+
+    planning = reference_planning_documents(
+        arc_entries=entries,
+        timeline_entries=timelines,
+        motif_events=list(calibration_motif_events(chapters)),
+        literal_phrase_constraints=(
+            [did_i_say_yes_constraint()] if 73 in tuple(chapters) else []
+        ),
+        extra_blocks=extra_planning,
+    )
+    return build_workspace(
+        base, planning=planning, chapters=fixtures, **workspace_options
+    )
+
+
+# ---------------------------------------------------------------------------
+# Whole-book record builders (task 8.9)
+# ---------------------------------------------------------------------------
+
+CANON_SOURCE_PATHS: Tuple[str, ...] = (
+    "songs/Case Zero.md",
+    "songs/Faraday.md",
+    "songs/The Final Frontier.md",
+    "songs/The Radius.md",
+    "songs/The Synaptic Frontier.md",
+)
+EXCLUDED_CANON_SOURCE_PATH = "songs/One-Time Pad.md"
+
+
+def canon_fact(
+    *,
+    canon_id: str = "CF-FIXTURE-001",
+    authority_basis: str = "author-decision",
+    source_path: str = "planning/decisions.md",
+    source_location: str = "DEC-FIXTURE",
+    source_material_class: Optional[str] = None,
+    adopted_by: Optional[Mapping[str, Any]] = None,
+    statement: str = "A synthetic fixture canon proposition.",
+    first_person_testimony: bool = False,
+    speaker: Optional[str] = None,
+    attribution: Optional[str] = None,
+    epistemic_limitation: Optional[str] = None,
+    truth_scope: Optional[str] = None,
+    binding_implications: Optional[Sequence[str]] = None,
+    protected_ambiguities: Optional[Sequence[str]] = None,
+    protected_wording: Optional[str] = None,
+    affected_timeline_ids: Optional[Sequence[str]] = None,
+    affected_chapters: Optional[Sequence[int]] = None,
+    supporting_advisory_citations: Optional[Sequence[Mapping[str, Any]]] = None,
+    overrides: Optional[Mapping[str, Any]] = None,
+    drop_keys: Sequence[str] = (),
+) -> Dict[str, Any]:
+    """Build one conforming `CanonFact` record.
+
+    `source_material_class` and `truth_scope` default to the values the declared
+    authority basis and testimony flag require, so a conforming record needs no
+    bookkeeping from the caller. A test that wants an authority-matrix violation
+    sets them explicitly, which keeps the violation visible at the call site.
+    """
+
+    if source_material_class is None:
+        source_material_class = (
+            authority_basis if authority_basis != "ratified-note" else "production-note"
+        )
+    if truth_scope is None:
+        if first_person_testimony:
+            truth_scope = "attributed-testimony"
+        elif authority_basis == "ratified-note":
+            truth_scope = "ratified-proposition"
+        else:
+            truth_scope = "authoritative-proposition"
+    if first_person_testimony:
+        speaker = speaker if speaker is not None else "CHAR-002"
+        attribution = (
+            attribution
+            if attribution is not None
+            else "Binding as the speaker's own first-person account."
+        )
+        epistemic_limitation = (
+            epistemic_limitation
+            if epistemic_limitation is not None
+            else "The account does not prove causation and is not omniscient."
+        )
+    if authority_basis == "ratified-note" and adopted_by is None:
+        adopted_by = {
+            "authority_type": "author-decision",
+            "authority_id": "DEC-FIXTURE",
+            "source_path": "planning/decisions.md",
+            "source_location": "DEC-FIXTURE adoption clause",
+        }
+
+    record: Dict[str, Any] = {
+        "canon_id": canon_id,
+        "authority_basis": authority_basis,
+        "source_path": source_path,
+        "source_location": source_location,
+        "source_material_class": source_material_class,
+        "adopted_by": dict(adopted_by) if adopted_by is not None else None,
+        "statement": statement,
+        "first_person_testimony": first_person_testimony,
+        "speaker": speaker,
+        "attribution": attribution,
+        "epistemic_limitation": epistemic_limitation,
+        "truth_scope": truth_scope,
+        "binding_implications": list(
+            binding_implications or ["A synthetic fixture binding implication."]
+        ),
+        "protected_ambiguities": list(protected_ambiguities or []),
+        "protected_wording": protected_wording,
+        "affected_timeline_ids": list(affected_timeline_ids or []),
+        "affected_chapters": list(affected_chapters or []),
+        "supporting_advisory_citations": [
+            dict(item) for item in (supporting_advisory_citations or [])
+        ],
+    }
+    return _finish_record(record, overrides, drop_keys)
+
+
+def advisory_citation(
+    *,
+    source_path: str = "songs/Case Zero.md",
+    source_location: str = "Production Notes: carried-motif analysis",
+    material_class: str = "production-note",
+    classification: str = "advisory-non-story",
+    note: str = "Advisory only; contributes no binding implication.",
+) -> Dict[str, Any]:
+    """One conforming `supporting_advisory_citations` member."""
+
+    return {
+        "source_path": source_path,
+        "source_location": source_location,
+        "material_class": material_class,
+        "classification": classification,
+        "note": note,
+    }
+
+
+def reveal(
+    *,
+    reveal_id: str = "REV-FIXTURE-001",
+    fact_id: str = "FACT-FIXTURE-001",
+    truth_status: str = "unresolved",
+    knowers: Optional[Sequence[str]] = None,
+    reveal_owner: Optional[str] = None,
+    reader_release_chapter: Optional[int] = None,
+    withholding_basis: str = "A synthetic fixture withholding basis.",
+    payoff_window: Optional[Sequence[int]] = None,
+    overrides: Optional[Mapping[str, Any]] = None,
+    drop_keys: Sequence[str] = (),
+) -> Dict[str, Any]:
+    """Build one `Reveal` record, defaulting to the unresolved provenance shape."""
+
+    record: Dict[str, Any] = {
+        "reveal_id": reveal_id,
+        "fact_id": fact_id,
+        "truth_status": truth_status,
+        "knowers": list(knowers or []),
+        "reveal_owner": reveal_owner,
+        "reader_release_chapter": reader_release_chapter,
+        "withholding_basis": withholding_basis,
+        "payoff_window": list(payoff_window) if payoff_window is not None else None,
+    }
+    return _finish_record(record, overrides, drop_keys)
+
+
+def gate_result(
+    *,
+    gate_result_id: str = "GATE-FIXTURE-001",
+    gate_type: str = "chapter-local",
+    chapter_numbers: Optional[Sequence[int]] = None,
+    documents: Optional[Sequence[str]] = None,
+    description: str = "A synthetic fixture gate scope.",
+    prerequisite_state: str = "complete",
+    objective_diagnostic_ids: Optional[Sequence[str]] = None,
+    editorial_finding_ids: Optional[Sequence[str]] = None,
+    result: str = "pass",
+    checker_exit_status: Optional[int] = 0,
+    timestamp: str = "2026-09-12T00:00:00Z",
+    overrides: Optional[Mapping[str, Any]] = None,
+    drop_keys: Sequence[str] = (),
+) -> Dict[str, Any]:
+    """Build one conforming `GateResult` record.
+
+    `checker_exit_status` is passed through exactly as given, including `None`,
+    so a test can build both the editorial null and a disagreeing objective
+    status. It is not derived from `result`, because the disagreement between the
+    two is itself one of the things the checker reports.
+    """
+
+    record: Dict[str, Any] = {
+        "gate_result_id": gate_result_id,
+        "gate_type": gate_type,
+        "scope": {
+            "chapter_numbers": list(chapter_numbers or []),
+            "documents": list(documents or []),
+            "description": description,
+        },
+        "prerequisite_state": prerequisite_state,
+        "objective_diagnostic_ids": list(objective_diagnostic_ids or []),
+        "editorial_finding_ids": list(editorial_finding_ids or []),
+        "result": result,
+        "checker_exit_status": checker_exit_status,
+        "timestamp": timestamp,
+    }
+    return _finish_record(record, overrides, drop_keys)
+
+
+def editorial_gate_result(**options: Any) -> Dict[str, Any]:
+    """A passing final editorial `GateResult`, whose exit status is null."""
+
+    options.setdefault("gate_result_id", "GATE-FIXTURE-EDITORIAL")
+    options.setdefault("gate_type", "editorial")
+    options.setdefault("checker_exit_status", None)
+    return gate_result(**options)
+
+
+def editorial_finding(
+    *,
+    editorial_finding_id: str = "FIND-FIXTURE-001",
+    scope: str = "chapter",
+    chapter_numbers: Optional[Sequence[int]] = None,
+    batch_id: Optional[str] = None,
+    criterion: str = "Voice_Brief fidelity",
+    prose_locations: Optional[Sequence[Mapping[str, Any]]] = None,
+    finding: str = "pass",
+    rationale: str = "A synthetic fixture human rationale.",
+    requested_action: Optional[str] = None,
+    reviewer: str = "Fixture Reviewer",
+    reviewed_at: str = "2026-09-12T00:00:00Z",
+    resolution: Optional[Mapping[str, Any]] = None,
+    overrides: Optional[Mapping[str, Any]] = None,
+    drop_keys: Sequence[str] = (),
+) -> Dict[str, Any]:
+    """Build one conforming `EditorialFinding` record.
+
+    Human craft judgment lives only here. No checker check consumes `finding`,
+    `rationale`, or `criterion` as a craft verdict; the record exists so gate
+    references resolve and so the two independent final gates can be exercised.
+    """
+
+    record: Dict[str, Any] = {
+        "editorial_finding_id": editorial_finding_id,
+        "scope": scope,
+        "chapter_numbers": list(chapter_numbers or [1]),
+        "batch_id": batch_id,
+        "criterion": criterion,
+        "prose_locations": [dict(item) for item in (prose_locations or [])]
+        or [
+            {
+                "path": chapter_relative_path("discovery_part", 1, "synthetic-fixture"),
+                "start_line": 1,
+                "end_line": 2,
+                "note": "Representative synthetic location.",
+            }
+        ],
+        "finding": finding,
+        "rationale": rationale,
+        "requested_action": requested_action,
+        "reviewer": reviewer,
+        "reviewed_at": reviewed_at,
+        "resolution": dict(resolution) if resolution is not None else None,
+    }
+    return _finish_record(record, overrides, drop_keys)
+
+
+def baseline(
+    *,
+    baseline_id: str = "BASELINE-FIXTURE-001",
+    state: str = "provisional",
+    provisional_arc_complete: bool = True,
+    resolved_decision_refs: Optional[Sequence[str]] = None,
+    calibration_chapters: Optional[Sequence[int]] = None,
+    minimal_checker_gate_result_id: Optional[str] = None,
+    calibration_finding_ids: Optional[Sequence[str]] = None,
+    baseline_revision_pass: Optional[Mapping[str, Any]] = None,
+    full_suite_gate_result_id: Optional[str] = None,
+    author_approval: Optional[Mapping[str, Any]] = None,
+    final_targets: Optional[Mapping[str, int]] = None,
+    out_of_range_rationale: Optional[str] = None,
+    overrides: Optional[Mapping[str, Any]] = None,
+    drop_keys: Sequence[str] = (),
+) -> Dict[str, Any]:
+    """Build one `Baseline` record, provisional by default."""
+
+    record: Dict[str, Any] = {
+        "baseline_id": baseline_id,
+        "state": state,
+        "provisional_arc_complete": provisional_arc_complete,
+        "resolved_decision_refs": list(resolved_decision_refs or ["DEC-FIXTURE"]),
+        "calibration_chapters": list(
+            calibration_chapters if calibration_chapters is not None
+            else CALIBRATION_CHAPTERS
+        ),
+        "minimal_checker_gate_result_id": minimal_checker_gate_result_id,
+        "calibration_finding_ids": list(calibration_finding_ids or []),
+        "baseline_revision_pass": copy.deepcopy(baseline_revision_pass),
+        "full_suite_gate_result_id": full_suite_gate_result_id,
+        "author_approval": dict(author_approval)
+        if author_approval is not None
+        else None,
+        "final_targets": dict(final_targets) if final_targets is not None else None,
+        "out_of_range_rationale": out_of_range_rationale,
+    }
+    return _finish_record(record, overrides, drop_keys)
+
+
+def author_approval(
+    *,
+    approved_by: str = "Fixture Author",
+    approved_at: str = "2026-09-12T00:00:00Z",
+    approval_record: str = "planning/arc-outline.md#baseline-approval",
+) -> Dict[str, Any]:
+    """One conforming `author_approval` / `approval` object."""
+
+    return {
+        "approved_by": approved_by,
+        "approved_at": approved_at,
+        "approval_record": approval_record,
+    }
+
+
+def revision_disposition(
+    *,
+    editorial_finding_id: str = "FIND-FIXTURE-001",
+    outcome: str = "no-change-rationale",
+    arc_change_id: Optional[str] = None,
+    rationale: str = "A synthetic fixture no-change rationale.",
+) -> Dict[str, Any]:
+    """One `baseline_revision_pass.dispositions` member."""
+
+    return {
+        "editorial_finding_id": editorial_finding_id,
+        "outcome": outcome,
+        "arc_change_id": arc_change_id,
+        "rationale": rationale,
+    }
+
+
+def baseline_revision_pass(
+    *,
+    performed_at: str = "2026-09-12T00:00:00Z",
+    dispositions: Optional[Sequence[Mapping[str, Any]]] = None,
+) -> Dict[str, Any]:
+    """One conforming `baseline_revision_pass` object."""
+
+    return {
+        "performed_at": performed_at,
+        "dispositions": [dict(item) for item in (dispositions or [])],
+    }
+
+
+def synchronization_obligation(
+    *,
+    document: str = "planning/arc-outline.md",
+    required_change: str = "A synthetic fixture required change.",
+    status: str = "pending",
+    evidence_ref: Optional[str] = None,
+) -> Dict[str, Any]:
+    """One `synchronization_obligations` member."""
+
+    return {
+        "document": document,
+        "required_change": required_change,
+        "status": status,
+        "evidence_ref": evidence_ref,
+    }
+
+
+def arc_change(
+    *,
+    arc_change_id: str = "ARC-CHANGE-FIXTURE-001",
+    date: str = "2026-09-12",
+    prior_state: Optional[Mapping[str, Any]] = None,
+    revised_state: Optional[Mapping[str, Any]] = None,
+    rationale: str = "A synthetic fixture change rationale.",
+    affected_chapters: Optional[Sequence[int]] = None,
+    affected_documents: Optional[Sequence[str]] = None,
+    synchronization_obligations: Optional[Sequence[Mapping[str, Any]]] = None,
+    approval: Optional[Mapping[str, Any]] = None,
+    status: str = "proposed",
+    completed_at: Optional[str] = None,
+    overrides: Optional[Mapping[str, Any]] = None,
+    drop_keys: Sequence[str] = (),
+) -> Dict[str, Any]:
+    """Build one `ArcChange` record.
+
+    Defaults to a `proposed` change with one pending obligation covering its one
+    affected document, which is the atomic shape a complete change must reach.
+    A caller building a `complete` change supplies completed obligations with
+    evidence, an approval, and a completion time.
+    """
+
+    documents = list(affected_documents or ["planning/arc-outline.md"])
+    if synchronization_obligations is None:
+        synchronization_obligations = [
+            synchronization_obligation(document=document) for document in documents
+        ]
+    record: Dict[str, Any] = {
+        "arc_change_id": arc_change_id,
+        "date": date,
+        "prior_state": dict(prior_state) if prior_state is not None
+        else {"chapter": 1, "status": "approved"},
+        "revised_state": dict(revised_state) if revised_state is not None
+        else {"chapter": 1, "status": "revised"},
+        "rationale": rationale,
+        "affected_chapters": list(affected_chapters if affected_chapters is not None
+                                  else [1]),
+        "affected_documents": documents,
+        "synchronization_obligations": [
+            dict(item) for item in synchronization_obligations
+        ],
+        "approval": dict(approval) if approval is not None else None,
+        "status": status,
+        "completed_at": completed_at,
+    }
+    return _finish_record(record, overrides, drop_keys)
+
+
+def completed_arc_change(**options: Any) -> Dict[str, Any]:
+    """An atomic `complete` ArcChange: every obligation done, with evidence."""
+
+    documents = list(options.pop("affected_documents", ["planning/arc-outline.md"]))
+    options.setdefault(
+        "synchronization_obligations",
+        [
+            synchronization_obligation(
+                document=document,
+                status="complete",
+                evidence_ref="{0}#synchronized".format(document),
+            )
+            for document in documents
+        ],
+    )
+    options.setdefault("approval", author_approval())
+    options.setdefault("status", "complete")
+    options.setdefault("completed_at", "2026-09-12T00:00:00Z")
+    return arc_change(affected_documents=documents, **options)
+
+
+# ---------------------------------------------------------------------------
+# The complete 128-chapter manuscript fixture (task 8.9)
+# ---------------------------------------------------------------------------
+
+# The design's provisional allocation: 29/32/51/16 chapters, and the per-POV
+# per-movement load matrix summing to the 56/32/33/7 vector.
+MANUSCRIPT_MOVEMENT_CHAPTERS: Mapping[str, int] = {
+    "discovery_part": 29,
+    "private_defense_part": 32,
+    "mindwars_part": 51,
+    "aftermath_coda": 16,
+}
+MANUSCRIPT_POV_LOAD: Mapping[str, Mapping[str, int]] = {
+    "POV-MARA": {
+        "discovery_part": 14,
+        "private_defense_part": 14,
+        "mindwars_part": 21,
+        "aftermath_coda": 7,
+        "total": 56,
+    },
+    "POV-NIA": {
+        "discovery_part": 9,
+        "private_defense_part": 8,
+        "mindwars_part": 14,
+        "aftermath_coda": 1,
+        "total": 32,
+    },
+    "POV-JULIAN": {
+        "discovery_part": 6,
+        "private_defense_part": 10,
+        "mindwars_part": 16,
+        "aftermath_coda": 1,
+        "total": 33,
+    },
+    "POV-SAFIYA": {
+        "discovery_part": 0,
+        "private_defense_part": 0,
+        "mindwars_part": 0,
+        "aftermath_coda": 7,
+        "total": 7,
+    },
+}
+MANUSCRIPT_POV_CHARACTERS: Mapping[str, str] = {
+    "POV-MARA": "CHAR-001",
+    "POV-NIA": "CHAR-002",
+    "POV-JULIAN": "CHAR-003",
+    "POV-SAFIYA": "CHAR-004",
+}
+MANUSCRIPT_ANCHOR_POV = "POV-MARA"
+
+# Requirement 15.1's mandatory Fluent_Pairing ranges, and the chapter each
+# synthetic beat is assigned to.
+FLUENT_PAIRING_RANGES: Tuple[Tuple[int, int], ...] = (
+    (36, 42),
+    (56, 61),
+    (70, 77),
+    (78, 93),
+    (94, 108),
+)
+
+WHOSE_WAS_THAT = "Whose was that?"
+FINAL_PASSAGE_MARKER = "<!-- final-passage:start -->"
+WHOSE_WAS_THAT_CONSTRAINT_ID = "LPC-WHOSE-WAS-THAT"
+WHOSE_WAS_THAT_DIAGNOSTIC = "LITERAL_WHOSE_WAS_THAT_PLACEMENT"
+
+CONFORMING_FRONT_MATTER = """# Synthetic Manuscript
+
+A novel by Fixture Author
+
+Novel prose copyright 2026 Fixture Author. All rights reserved.
+
+## Source acknowledgment
+
+This novel grows from five source songs: *The Synaptic Frontier*, *Faraday*,
+*The Final Frontier*, *The Radius*, and *Case Zero*.
+"""
+
+
+def manuscript_movement_for_chapter(
+    chapter: int, *, allocation: Optional[Mapping[str, int]] = None
+) -> str:
+    """The movement a chapter belongs to under a contiguous block allocation."""
+
+    counts = allocation or MANUSCRIPT_MOVEMENT_CHAPTERS
+    upper = 0
+    for movement in MOVEMENTS:
+        upper += int(counts.get(movement, 0))
+        if chapter <= upper:
+            return movement
+    raise FixtureError(
+        "chapter {0} is past the {1}-chapter allocation".format(chapter, upper)
+    )
+
+
+def manuscript_pov_sequence(
+    *,
+    allocation: Optional[Mapping[str, int]] = None,
+    load: Optional[Mapping[str, Mapping[str, int]]] = None,
+) -> Tuple[str, ...]:
+    """Assign a POV_ID to every chapter, honoring the load matrix and run caps.
+
+    Greedy anti-clustering: at each position take the POV with the most chapters
+    still owed in this movement that is not the previous chapter's POV. That
+    yields runs of length one wherever the counts allow, which keeps the fixture
+    inside both Same_POV_Run bounds without the fixture having to know them.
+    Property 8 generates its own run sequences; this only needs to be valid.
+    """
+
+    counts = allocation or MANUSCRIPT_MOVEMENT_CHAPTERS
+    matrix = load or MANUSCRIPT_POV_LOAD
+    sequence: List[str] = []
+    previous: Optional[str] = None
+
+    for movement in MOVEMENTS:
+        remaining = {
+            pov_id: int(values.get(movement, 0))
+            for pov_id, values in matrix.items()
+            if int(values.get(movement, 0)) > 0
+        }
+        planned = int(counts.get(movement, 0))
+        if sum(remaining.values()) != planned:
+            raise FixtureError(
+                "{0} load sums to {1}, not the planned {2}".format(
+                    movement, sum(remaining.values()), planned
+                )
+            )
+        for _ in range(planned):
+            candidates = sorted(
+                (owed, pov_id)
+                for pov_id, owed in remaining.items()
+                if owed > 0 and pov_id != previous
+            )
+            if not candidates:
+                # Only reachable when one POV owns every remaining chapter in the
+                # movement. Taking it is still correct; the run cap is asserted by
+                # the checker, not assumed by the fixture.
+                candidates = sorted(
+                    (owed, pov_id) for pov_id, owed in remaining.items() if owed > 0
+                )
+            _owed, chosen = candidates[-1]
+            remaining[chosen] -= 1
+            sequence.append(chosen)
+            previous = chosen
+
+    return tuple(sequence)
+
+
+def manuscript_motif_events() -> Tuple[Dict[str, Any], ...]:
+    """The design's whole-book Motif_Ledger, transcribed record by record.
+
+    Seven closed families, each landing where the design places it: the two
+    kettle events in the Coda (Requirement 7.12), the three Record_Progression
+    events across Private Defense, Mindwars, and the Coda (Requirement 7.17),
+    the three-part chain and copper progressions, and the two literal questions
+    carrying their Literal_Phrase_Constraints. Transcribed from
+    `planning/motif-ledger.md` rather than imported from the checker, so a
+    property test measures the checker against the design and not against
+    itself.
+    """
+
+    return (
+        motif_event(
+            motif_event_id="MOT-CHAIN-01",
+            family="spectrum / wire / voice",
+            movement="discovery_part",
+            planned_chapter=13,
+            representation_mode="image",
+        ),
+        motif_event(
+            motif_event_id="MOT-CHAIN-02",
+            family="spectrum / wire / voice",
+            movement="private_defense_part",
+            planned_chapter=45,
+            representation_mode="image",
+        ),
+        motif_event(
+            motif_event_id="MOT-CHAIN-03",
+            family="spectrum / wire / voice",
+            movement="aftermath_coda",
+            planned_chapter=127,
+            representation_mode="action",
+        ),
+        motif_event(
+            motif_event_id="MOT-COPPER-01",
+            family="copper / quiet",
+            movement="private_defense_part",
+            planned_chapter=31,
+            representation_mode="image",
+        ),
+        motif_event(
+            motif_event_id="MOT-COPPER-02",
+            family="copper / quiet",
+            movement="mindwars_part",
+            planned_chapter=70,
+            representation_mode="image",
+        ),
+        motif_event(
+            motif_event_id="MOT-COPPER-03",
+            family="copper / quiet",
+            movement="aftermath_coda",
+            planned_chapter=124,
+            representation_mode="image",
+        ),
+        motif_event(
+            motif_event_id="MOT-COME-01",
+            family="come in",
+            movement="discovery_part",
+            planned_chapter=16,
+            representation_mode="adapted",
+        ),
+        motif_event(
+            motif_event_id="MOT-COME-02",
+            family="come in",
+            movement="private_defense_part",
+            planned_chapter=61,
+            representation_mode="scene-structure",
+        ),
+        motif_event(
+            motif_event_id="MOT-COME-03",
+            family="come in",
+            movement="mindwars_part",
+            planned_chapter=74,
+            representation_mode="action",
+        ),
+        motif_event(
+            motif_event_id="MOT-COME-04",
+            family="come in",
+            movement="aftermath_coda",
+            planned_chapter=124,
+            representation_mode="action",
+        ),
+        motif_event(
+            motif_event_id="MOT-KNOCK-01",
+            family="knock / wait",
+            movement="mindwars_part",
+            planned_chapter=73,
+            representation_mode="action",
+        ),
+        motif_event(
+            motif_event_id="MOT-KNOCK-02",
+            family="knock / wait",
+            movement="aftermath_coda",
+            planned_chapter=116,
+            representation_mode="action",
+        ),
+        motif_event(
+            motif_event_id="MOT-KNOCK-03",
+            family="knock / wait",
+            movement="aftermath_coda",
+            planned_chapter=128,
+            representation_mode="action",
+        ),
+        motif_event(
+            motif_event_id="MOT-KETTLE-01",
+            family="kettle",
+            movement="aftermath_coda",
+            planned_chapter=118,
+            representation_mode="image",
+        ),
+        motif_event(
+            motif_event_id="MOT-KETTLE-02",
+            family="kettle",
+            movement="aftermath_coda",
+            planned_chapter=124,
+            representation_mode="action",
+        ),
+        motif_event(
+            motif_event_id="MOT-RADIUS-01",
+            family="silence has a radius",
+            movement="mindwars_part",
+            planned_chapter=101,
+            representation_mode="adapted",
+        ),
+        motif_event(
+            motif_event_id="MOT-RADIUS-02",
+            family="silence has a radius",
+            movement="aftermath_coda",
+            planned_chapter=120,
+            representation_mode="adapted",
+        ),
+        motif_event(
+            motif_event_id="MOT-RECORD-01",
+            family="record progression",
+            movement="private_defense_part",
+            planned_chapter=51,
+            representation_mode="literal",
+        ),
+        motif_event(
+            motif_event_id="MOT-RECORD-02",
+            family="record progression",
+            movement="mindwars_part",
+            planned_chapter=109,
+            representation_mode="adapted",
+        ),
+        motif_event(
+            motif_event_id="MOT-RECORD-03",
+            family="record progression",
+            movement="aftermath_coda",
+            planned_chapter=128,
+            representation_mode="adapted",
+        ),
+        motif_event(
+            motif_event_id="MOT-YES-01",
+            family="authorization question",
+            movement="mindwars_part",
+            planned_chapter=73,
+            representation_mode="literal",
+            literal_constraint_id=DID_I_SAY_YES_CONSTRAINT_ID,
+        ),
+        motif_event(
+            motif_event_id="MOT-WHOSE-01",
+            family="provenance question",
+            movement="aftermath_coda",
+            planned_chapter=128,
+            representation_mode="literal",
+            literal_constraint_id=WHOSE_WAS_THAT_CONSTRAINT_ID,
+        ),
+    )
+
+
+MANUSCRIPT_MOTIF_ASSIGNMENTS: Mapping[int, Tuple[str, ...]] = {
+    13: ("MOT-CHAIN-01",),
+    16: ("MOT-COME-01",),
+    31: ("MOT-COPPER-01",),
+    45: ("MOT-CHAIN-02",),
+    51: ("MOT-RECORD-01",),
+    61: ("MOT-COME-02",),
+    70: ("MOT-COPPER-02",),
+    73: ("MOT-KNOCK-01", "MOT-YES-01"),
+    74: ("MOT-COME-03",),
+    101: ("MOT-RADIUS-01",),
+    109: ("MOT-RECORD-02",),
+    116: ("MOT-KNOCK-02",),
+    118: ("MOT-KETTLE-01",),
+    120: ("MOT-RADIUS-02",),
+    124: ("MOT-COPPER-03", "MOT-COME-04", "MOT-KETTLE-02"),
+    127: ("MOT-CHAIN-03",),
+    128: ("MOT-KNOCK-03", "MOT-RECORD-03", "MOT-WHOSE-01"),
+}
+
+def whose_was_that_constraint(
+    *, final_chapter: int = 128, filename: Optional[str] = None, **options: Any
+) -> Dict[str, Any]:
+    """The terminal `Whose was that?` rule: exactly twice inside the span."""
+
+    path = (
+        filename
+        if filename is not None
+        else chapter_relative_path(
+            "aftermath_coda", final_chapter, "chapter-{0:03d}".format(final_chapter)
+        )
+    )
+    options.setdefault("constraint_id", WHOSE_WAS_THAT_CONSTRAINT_ID)
+    options.setdefault("motif_event_id", "MOT-WHOSE-01")
+    options.setdefault("exact_phrase", WHOSE_WAS_THAT)
+    options.setdefault("allowed_movements", ("aftermath_coda",))
+    options.setdefault("allowed_chapters", (final_chapter,))
+    options.setdefault("allowed_files", (path,))
+    options.setdefault("exact_in_scope", 2)
+    options.setdefault("maximum_outside_scope", 0)
+    options.setdefault("diagnostic_code", WHOSE_WAS_THAT_DIAGNOSTIC)
+    options.setdefault(
+        "allowed_span",
+        {
+            "span_id": "SPAN-FINAL-PASSAGE",
+            "chapter": final_chapter,
+            "start_boundary": {"kind": "literal-marker", "value": FINAL_PASSAGE_MARKER},
+            "end_boundary": {"kind": "end-of-prose", "value": None},
+        },
+    )
+    return literal_phrase_constraint(**options)
+
+
+def final_passage_prose(
+    *, words: int = 700, occurrences: int = 2, marker: str = FINAL_PASSAGE_MARKER
+) -> str:
+    """A final-chapter Prose_Body whose declared Final_Passage holds the phrase.
+
+    The marker is emitted once, then `occurrences` copies of the protected phrase
+    follow it. The leading filler stays outside the span, which is what lets a
+    test move an occurrence out of scope by changing only `occurrences`.
+    """
+
+    lead = max(words - occurrences * len(WHOSE_WAS_THAT.split()), 1)
+    tail = " ".join([WHOSE_WAS_THAT] * occurrences)
+    return prose_of_length(lead) + marker + "\n" + tail + "\n"
+
+
+def fluent_pairing_timeline_entries(
+    *, ranges: Sequence[Tuple[int, int]] = FLUENT_PAIRING_RANGES
+) -> Tuple[Dict[str, Any], ...]:
+    """One `PAIR` TimelineEntry per mandatory Fluent_Pairing range."""
+
+    entries: List[Dict[str, Any]] = []
+    for start, end in ranges:
+        entries.append(
+            timeline_entry(
+                timeline_id="TL-PAIR-RANGE-{0:03d}".format(start),
+                chapter_numbers=[start],
+                state=technical_state(
+                    mode="PAIR",
+                    # `bench-transmit` and `locked` are the design's vocabulary for
+                    # a deliberate paired send to a person-specific address.
+                    # Inventing readable-looking values would make the fixture
+                    # describe a mechanism the checker does not recognize.
+                    apparatus_mode="bench-transmit",
+                    transmit_stage_present=True,
+                    person_specific_address_state="locked",
+                    pair_state=pair_state(),
+                    pairing_evidence=pairing_evidence(),
+                ),
+            )
+        )
+    return tuple(entries)
+
+
+def manuscript_workspace(
+    base: Path,
+    *,
+    prose_words: int = 700,
+    allocation: Optional[Mapping[str, int]] = None,
+    load: Optional[Mapping[str, Mapping[str, int]]] = None,
+    status: str = "final",
+    approve_baseline: bool = True,
+    final_targets: Optional[Mapping[str, int]] = None,
+    chapter_overrides: Optional[Mapping[int, Mapping[str, Any]]] = None,
+    entry_overrides: Optional[Mapping[int, Mapping[str, Any]]] = None,
+    arc_changes: Optional[Sequence[Mapping[str, Any]]] = None,
+    gate_results: Optional[Sequence[Mapping[str, Any]]] = None,
+    editorial_findings: Optional[Sequence[Mapping[str, Any]]] = None,
+    extra_planning: Optional[Mapping[str, Sequence[Tuple[str, Any]]]] = None,
+    **workspace_options: Any,
+) -> SyntheticWorkspace:
+    """Build a complete manuscript that passes the Manuscript_Global_Gate.
+
+    Every planned chapter gets a Chapter_File and a matching ArcEntry, the four
+    movements form contiguous blocks in order, the POV loads and run caps hold,
+    every chapter is `normal` so the normal share is 100 percent, the final
+    chapter carries the declared Final_Passage with exactly two protected
+    occurrences, and the Baseline plus both independent final gates are recorded.
+
+    Final_Targets default to the totals this fixture actually produces, with an
+    out-of-range rationale supplied automatically when those totals fall outside
+    the provisional planning bands. That keeps the fixture self-consistent at any
+    `prose_words`, so a test can build a fast small manuscript or the real
+    provisional allocation from the same builder.
+
+    `chapter_overrides` and `entry_overrides` inject exactly one violation into
+    an otherwise clean whole book, which is how the global invariants are
+    exercised one at a time.
+    """
+
+    chapter_overrides = dict(chapter_overrides or {})
+    entry_overrides = dict(entry_overrides or {})
+    counts = allocation or MANUSCRIPT_MOVEMENT_CHAPTERS
+    total_chapters = sum(int(counts.get(movement, 0)) for movement in MOVEMENTS)
+    povs = manuscript_pov_sequence(allocation=counts, load=load)
+    final_chapter = total_chapters
+
+    fixtures: List[ChapterFixture] = []
+    entries: List[Dict[str, Any]] = []
+    timelines: List[Dict[str, Any]] = list(fluent_pairing_timeline_entries())
+    observed_total = 0
+
+    for chapter in range(1, total_chapters + 1):
+        movement = manuscript_movement_for_chapter(chapter, allocation=counts)
+        slug = "chapter-{0:03d}".format(chapter)
+        pov_id = povs[chapter - 1]
+        motifs = MANUSCRIPT_MOTIF_ASSIGNMENTS.get(chapter, ())
+        timeline_id = "TL-CHAPTER-{0:03d}".format(chapter)
+        if chapter == final_chapter:
+            prose = final_passage_prose(words=prose_words)
+        elif chapter == 73:
+            prose = DID_I_SAY_YES + "\n" + prose_of_length(prose_words)
+        else:
+            prose = prose_of_length(prose_words)
+        observed = count_prose_words(prose)
+        observed_total += observed
+
+        # Overrides are merged rather than splatted so a test can replace a
+        # keyword the builder already supplies, which is the usual way to inject
+        # one violation: a wrong movement, POV_ID, or status on one chapter.
+        chapter_options: Dict[str, Any] = {
+            "chapter": chapter,
+            "movement": movement,
+            "slug": slug,
+            "prose": prose,
+            "pov_id": pov_id,
+            "timeline_id": timeline_id,
+            "motif_events": motifs,
+            "status": status,
+        }
+        chapter_options.update(chapter_overrides.get(chapter, {}))
+        fixtures.append(chapter_fixture(**chapter_options))
+
+        entry_options: Dict[str, Any] = {
+            "chapter": chapter,
+            "movement": movement,
+            "slug": slug,
+            "pov_id": pov_id,
+            "timeline_id": timeline_id,
+            "motif_events": motifs,
+            "estimated_words": observed,
+            "status": status,
+            "calibration_selected": chapter in CALIBRATION_CHAPTERS,
+            "representative_purpose": (
+                "Synthetic representative calibration purpose."
+                if chapter in CALIBRATION_CHAPTERS and chapter > 5
+                else None
+            ),
+        }
+        entry_options.update(entry_overrides.get(chapter, {}))
+        entries.append(arc_entry(**entry_options))
+        timelines.append(
+            timeline_entry(timeline_id=timeline_id, chapter_numbers=[chapter])
+        )
+
+    profiles = [
+        pov_profile(
+            character_id=MANUSCRIPT_POV_CHARACTERS[pov_id],
+            pov_id=pov_id,
+            selected_name="Fixture {0}".format(pov_id.split("-")[-1].title()),
+            anchor=pov_id == MANUSCRIPT_ANCHOR_POV,
+            voice_brief_id="VOICE-{0}".format(pov_id.split("-")[-1]),
+            movement_coverage=[
+                movement
+                for movement in MOVEMENTS
+                if int(MANUSCRIPT_POV_LOAD[pov_id].get(movement, 0)) > 0
+            ],
+            provisional_load=MANUSCRIPT_POV_LOAD[pov_id],
+        )
+        for pov_id in MANUSCRIPT_POV_LOAD
+    ]
+    briefs = [
+        voice_brief(
+            voice_brief_id="VOICE-{0}".format(pov_id.split("-")[-1]),
+            pov_id=pov_id,
+            movements=[
+                movement
+                for movement in MOVEMENTS
+                if int(MANUSCRIPT_POV_LOAD[pov_id].get(movement, 0)) > 0
+            ],
+        )
+        for pov_id in MANUSCRIPT_POV_LOAD
+    ]
+
+    if final_targets is None:
+        final_targets = {
+            "chapter_count": total_chapters,
+            "minimum_words": observed_total,
+            "maximum_words": observed_total,
+        }
+    outside_provisional = not (
+        120 <= int(final_targets["chapter_count"]) <= 135
+        and 130000 <= int(final_targets["minimum_words"]) <= 150000
+        and 130000 <= int(final_targets["maximum_words"]) <= 150000
+    )
+
+    if gate_results is None:
+        gate_results = [
+            gate_result(
+                gate_result_id="GATE-FIXTURE-CALIBRATION",
+                gate_type="calibration-objective",
+            ),
+            gate_result(
+                gate_result_id="GATE-FIXTURE-BASELINE",
+                gate_type="baseline-objective",
+            ),
+            gate_result(
+                gate_result_id="GATE-FIXTURE-GLOBAL",
+                gate_type="manuscript-global",
+            ),
+            editorial_gate_result(
+                editorial_finding_ids=["FIND-FIXTURE-001"],
+            ),
+        ]
+    if editorial_findings is None:
+        editorial_findings = [editorial_finding(scope="manuscript")]
+
+    baseline_record = baseline(
+        state="approved" if approve_baseline else "provisional",
+        minimal_checker_gate_result_id="GATE-FIXTURE-CALIBRATION"
+        if approve_baseline
+        else None,
+        full_suite_gate_result_id="GATE-FIXTURE-BASELINE"
+        if approve_baseline
+        else None,
+        calibration_finding_ids=["FIND-FIXTURE-001"] if approve_baseline else [],
+        baseline_revision_pass=baseline_revision_pass(
+            dispositions=[revision_disposition()]
+        )
+        if approve_baseline
+        else None,
+        author_approval=author_approval() if approve_baseline else None,
+        final_targets=dict(final_targets) if approve_baseline else None,
+        out_of_range_rationale=(
+            "Synthetic fixture scale differs from the provisional planning bands."
+            if approve_baseline and outside_provisional
+            else None
+        ),
+    )
+
+    blocks: Dict[str, List[Tuple[str, Any]]] = {
+        "planning/arc-outline.md": [("Baseline", baseline_record)],
+        "planning/gate-results.md": [
+            ("GateResult", dict(record)) for record in gate_results
+        ],
+        "planning/editorial-log.md": [
+            ("EditorialFinding", dict(record)) for record in editorial_findings
+        ],
+        "planning/arc-changes.md": [
+            ("ArcChange", dict(record)) for record in (arc_changes or ())
+        ],
+    }
+    for relative_path, extra in (extra_planning or {}).items():
+        blocks.setdefault(relative_path, []).extend(extra)
+
+    planning = list(
+        reference_planning_documents(
+            arc_entries=entries,
+            timeline_entries=timelines,
+            pov_profiles=profiles,
+            voice_briefs=briefs,
+            motif_events=list(manuscript_motif_events()),
+            literal_phrase_constraints=[
+                did_i_say_yes_constraint(),
+                whose_was_that_constraint(
+                    final_chapter=final_chapter,
+                    filename=chapter_relative_path(
+                        manuscript_movement_for_chapter(
+                            final_chapter, allocation=counts
+                        ),
+                        final_chapter,
+                        "chapter-{0:03d}".format(final_chapter),
+                    ),
+                ),
+            ],
+            extra_blocks={
+                path: tuple(items)
+                for path, items in blocks.items()
+                if path in RECORD_SOURCE_TITLES
+            },
+        )
+    )
+    for relative_path, items in blocks.items():
+        if relative_path in RECORD_SOURCE_TITLES:
+            continue
+        planning.append(
+            planning_document(
+                relative_path,
+                title=relative_path.rsplit("/", 1)[-1][:-3].replace("-", " ").title(),
+                blocks=tuple(items),
+            )
+        )
+
+    workspace_options.setdefault("front_matter", CONFORMING_FRONT_MATTER)
+    return build_workspace(
+        base, planning=planning, chapters=fixtures, **workspace_options
+    )
+
+
+# ---------------------------------------------------------------------------
+# In-memory record indexes (task 8.9)
+# ---------------------------------------------------------------------------
+
+# Records a reference in a probe is allowed to point at. Without these, a
+# single-record probe reports every outbound reference as dangling and the
+# property under test is drowned by the probe's own missing context.
+SUPPORTING_RECORD_TYPES: Tuple[str, ...] = (
+    "POVProfile",
+    "VoiceBrief",
+    "TimelineEntry",
+    "ArcChange",
+)
+
+
+def supporting_records() -> Dict[str, List[Dict[str, Any]]]:
+    """The minimal record set that makes an ordinary reference resolvable."""
+
+    return {
+        "POVProfile": [pov_profile()],
+        "VoiceBrief": [voice_brief()],
+        "TimelineEntry": [timeline_entry()],
+        "ArcChange": [arc_change()],
+    }
+
+
+def record_index(
+    *,
+    supporting: bool = True,
+    arc_entries: Optional[Sequence[Mapping[str, Any]]] = None,
+    source: str = "planning/probe.md",
+    **records: Sequence[Mapping[str, Any]]
+) -> Any:
+    """Build a checker `ReferenceIndex` from record payloads, without touching disk.
+
+    Records are rendered into one synthetic planning document and read back
+    through the checker's own fence parser, so a probe exercises the same parse
+    path a real run does rather than a shortcut around it.
+
+    `supporting` seeds the resolvable records an ordinary outbound reference
+    points at. Pass `supporting=False` when the property under test *is* a
+    dangling reference and the probe must not accidentally satisfy it.
+
+    Returns the index only. A caller that needs the parse and index diagnostics
+    should use `record_index_with_diagnostics`.
+    """
+
+    index, _diagnostics = record_index_with_diagnostics(
+        supporting=supporting, arc_entries=arc_entries, source=source, **records
+    )
+    return index
+
+
+def record_index_with_diagnostics(
+    *,
+    supporting: bool = True,
+    arc_entries: Optional[Sequence[Mapping[str, Any]]] = None,
+    source: str = "planning/probe.md",
+    **records: Sequence[Mapping[str, Any]]
+) -> Tuple[Any, Tuple[Any, ...]]:
+    """`record_index`, plus the diagnostics parsing and indexing produced."""
+
+    checker = load_checker()
+    collected: Dict[str, List[Mapping[str, Any]]] = {}
+    if supporting:
+        for record_type, defaults in supporting_records().items():
+            collected[record_type] = list(defaults)
+    for record_type, payloads in records.items():
+        collected.setdefault(record_type, [])
+        collected[record_type].extend(payloads)
+
+    blocks: List[Tuple[str, Any]] = []
+    for record_type in sorted(collected):
+        for payload in collected[record_type]:
+            blocks.append((record_type, payload))
+    document = planning_document(source, title="Probe", blocks=tuple(blocks))
+
+    parsed, parse_diagnostics = checker.parse_planning_records(
+        document.text(), source=source
+    )
+    grouped: Dict[str, List[Any]] = {}
+    for record_type, items in parsed.items():
+        grouped.setdefault(record_type, []).extend(items)
+
+    entry_records: Tuple[Any, ...] = ()
+    if arc_entries is not None:
+        entry_document = planning_document(
+            "planning/probe-arc.md",
+            title="Probe Arc",
+            blocks=tuple(("ArcEntry", entry) for entry in arc_entries),
+        )
+        entry_records, entry_diagnostics = checker.parse_arc_entries(
+            entry_document.text(), source="planning/probe-arc.md"
+        )
+        parse_diagnostics = tuple(parse_diagnostics) + tuple(entry_diagnostics)
+        entry_parsed, _ = checker.parse_planning_records(
+            entry_document.text(),
+            source="planning/probe-arc.md",
+            record_types=("ArcEntry",),
+        )
+        grouped.setdefault("ArcEntry", []).extend(entry_parsed.get("ArcEntry", ()))
+
+    index, index_diagnostics = checker.build_reference_index(
+        grouped, sources=(source,), arc_entries=entry_records
+    )
+    return index, tuple(parse_diagnostics) + tuple(index_diagnostics)

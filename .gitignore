@@ -4,3 +4,19 @@ __pycache__/
 
 # `.pytest_cache/` needs no entry: pytest writes its own `.gitignore` containing
 # `*` inside that directory, so it already excludes itself.
+
+# Hypothesis's example database and Unicode tables, written by the principal
+# property tests. The database is a local cache of falsifying examples; committing
+# it would make one machine's shrink history part of the project.
+.hypothesis/
+
+# Local audiobook environments, generated manifests/audio, transcripts, and
+# deployment command outputs. Source, configuration, tests, and IaC stay tracked.
+.audiobook/.venv/
+.audiobook/.pytest_cache/
+.audiobook/.env
+.audiobook/build/
+.audiobook/dist/
+.audiobook/src/*.egg-info/
+.audiobook/infrastructure/packaged.*
+.audiobook/infrastructure/*-outputs.json

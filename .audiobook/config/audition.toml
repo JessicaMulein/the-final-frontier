@@ -1,0 +1,48 @@
+schema_version = 1
+manuscript_root = "The Final Frontier Novel"
+output_root = ".audiobook/build/auditions"
+package_root = ".audiobook/dist/auditions"
+voices = ["tiffany", "amy", "olivia", "kiara"]
+
+[nova]
+model_id = "amazon.nova-2-sonic-v1:0"
+region = "us-east-1"
+sample_rate_hz = 24000
+sample_size_bits = 16
+channels = 1
+max_tokens = 4096
+top_p = 1.0
+temperature = 0.0
+stream_timeout_seconds = 420
+system_prompt = """You are performing a blind audiobook narration audition. Read the complete USER message exactly once and verbatim. Use a grounded, intimate, restrained literary delivery. Preserve every word and its order. Do not summarize, paraphrase, correct, explain, add framing, or speak formatting marks. Return only the narration of the USER message."""
+
+[verification]
+normalization = "frontier-word-sequence-v1"
+
+[[excerpts]]
+id = "technical-authority"
+chapter = 5
+start_anchor = "Anything built to send information carries concessions to a receiver."
+end_anchor = "My apparatus was the only thing in the arrangement behaving as a receiver."
+purpose = "Scientific authority, technical pronunciation, and analytical cadence."
+
+[[excerpts]]
+id = "consent-and-dialogue"
+chapter = 73
+start_anchor = "My conditions were four."
+end_anchor = "That was the consent. Not my badge, not the three signatures, not the channel."
+purpose = "Firmness, procedural precision, list rhythm, and dialogue."
+
+[[excerpts]]
+id = "private-grief"
+chapter = 118
+start_anchor = "Forgetting has friction."
+end_anchor = "What I cannot access in this head has no surviving copy elsewhere."
+purpose = "Intimacy and grief without sentimentality or theatrical excess."
+
+[[excerpts]]
+id = "quiet-refusal"
+chapter = 124
+start_anchor = "The relay stood on the bench under the window, lit and on standby."
+end_anchor = "It was not absolution and it was not repair."
+purpose = "Quiet action and restrained narration, short enough for one reliable verbatim narration turn."

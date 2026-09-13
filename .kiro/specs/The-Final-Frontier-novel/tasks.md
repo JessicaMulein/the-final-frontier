@@ -646,7 +646,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
     `DEC-007`). Do not begin any Prose_Body until tasks 4–5 are complete and mirror each resolved
     decision.
 
-- [ ] 7. Implement and test the minimal calibration checker
+- [x] 7. Implement and test the minimal calibration checker
   - The minimal checker is `.tools/check_novel.py`, read-only and fail-closed. It enables safe
     exploratory calibration; it does not need global totals or the full property suite yet.
 
@@ -668,7 +668,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       reject above 2,500 and require planned purpose for outliers.
     - _Requirements: 2.8–2.11, 9.5–9.7, 12.1–12.3_
 
-  - [-] 7.3 Implement direct-reference parsing and calibration-scope integrity
+  - [x] 7.3 Implement direct-reference parsing and calibration-scope integrity
     - Parse fenced ArcEntry, Timeline_ID, POV_ID/Character_ID, VoiceBrief, and MotifEvent records
       needed by each calibration chapter, including each Timeline_ID's `technical_state` object with
       its `mode`, `cancel_state`, `pair_state`, and `pairing_evidence` fields. Mechanism and pairing
@@ -681,7 +681,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       requested batch scope contains the participating changed records.
     - _Requirements: 10.1–10.5, 12.4, 12.5, 14.1, 14.3–14.12_
 
-  - [ ] 7.4 Implement calibration-scope motif and literal checks
+  - [x] 7.4 Implement calibration-scope motif and literal checks
     - Enforce ledger/header assignment for the selected chapter/batch scope, including
       `MOT-YES-01` in 73, `MOT-KETTLE-01` in 118, and `MOT-COME-04`/`MOT-KETTLE-02` in 124.
     - Scan Prose_Bodies only. Normalize Unicode NFC and line endings while preserving exact case,
@@ -690,7 +690,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
     - Enforce the resolved chain/copper mappings for any direct records encountered.
     - _Requirements: 7.2, 7.3, 7.7, 7.12, 7.14, 7.15, 12.6_
 
-  - [ ] 7.5 Implement chapter and batch modes with changed-reference consistency
+  - [x] 7.5 Implement chapter and batch modes with changed-reference consistency
     - Add `--scope chapter --chapter <path>` and `--scope batch --chapters <paths...>` plus changed
       reference inputs. Chapter mode reads only Direct_Planning_References; batch mode reports both
       chapter violations and stale changed references.
@@ -698,7 +698,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       4–8 size rule for post-baseline Drafting_Batches.
     - _Requirements: 10.1–10.5, 10.9, 13.3_
 
-  - [ ] 7.6 Implement deterministic diagnostics, output, and exit behavior
+  - [x] 7.6 Implement deterministic diagnostics, output, and exit behavior
     - Emit stable diagnostics with severity, code, scope, path/ID, observed, and expected fields;
       support text and JSON; exit `0` only for complete readable zero-violation scope, `1` for
       objective violations, and `2` for missing/malformed/incomplete input.
@@ -706,7 +706,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       restraint, rhetorical force, and emotional-truth judgments.
     - _Requirements: 12.9–12.15_
 
-  - [ ] 7.7 Write the focused minimal-checker tests
+  - [x] 7.7 Write the focused minimal-checker tests
     - Test required/duplicate/malformed headers; filename/header agreement; empty/Unicode/CRLF word
       counting; 699/700/1,600/1,601/2,500/2,501 boundaries; direct valid/dangling IDs; selected
       motif/literal rules; changed-reference drift; deterministic text/JSON diagnostics; and exits
@@ -725,7 +725,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       archive, model, and reconstruction participants as rejected cases. Use synthetic records only.
     - _Requirements: 6.2, 9.6, 9.7, 10.1–10.5, 12.1–12.6, 12.9–12.15, 14.1–14.14_
 
-  - [ ] 7.8 Pass the minimal calibration-readiness gate **[HARD GATE]**
+  - [x] 7.8 Pass the minimal calibration-readiness gate **[HARD GATE]**
     - Run the minimal focused suite and a synthetic chapter/batch smoke test. Record a
       `calibration-objective` GateResult proving site isolation, complete provisional planning,
       headers, filenames, counts/classes, direct IDs, calibration motif/literal rules,
@@ -737,7 +737,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
   - After task 7.8, the prose track (8.1–8.7) and full-checker track (8.8–8.27) proceed in parallel.
     Exploratory prose is not blocked on global mode or all property tests. Baseline approval is.
 
-  - [ ] 8.1 Draft calibration chapters 1–3 **[EXPLORATORY]**
+  - [x] 8.1 Draft calibration chapters 1–3 **[EXPLORATORY]**
     - Chapter 1 `POV-MARA`: December noise-floor structure. Chapter 2 `POV-NIA`: she lives the fully
       continuous ordinary morning with no experienced timing anomaly, and is the source per
       `DEC-002`. Chapter 3 `POV-MARA`: verification fails once, then she receives experience rather
@@ -747,7 +747,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       only after Mara deliberately adds the later bench transmit path in Chapters 16–20.
     - _Requirements: 2.4–2.6, 2.12, 3.2, 6.3, 9.6, 9.7_
 
-  - [ ] 8.2 Draft calibration chapters 4–5 **[EXPLORATORY]**
+  - [x] 8.2 Draft calibration chapters 4–5 **[EXPLORATORY]**
     - Chapter 4 `POV-NIA` returns to her continuous morning and adds lived ordinary detail without
       retroactively inserting a gap. Chapter 5 returns to Mara as she confirms the reception timing,
       fails one alternative explanation, and recognizes that the structure tracks living attention.
@@ -755,7 +755,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       Nia identity conclusion until the `DEC-002` reveal horizon earns it.
     - _Requirements: 2.4–2.6, 3.2, 6.2, 6.9_
 
-  - [ ] 8.3 Draft calibration chapter 73 **[EXPLORATORY]**
+  - [x] 8.3 Draft calibration chapter 73 **[EXPLORATORY]**
     - `POV-NIA`, in the first counterphase-consent sequence. Use the exact protected question
       `Did I say yes?` and force consent to be specific, current, revocable, and local; Nia answers
       aloud in the room and never gives consent over a channel. Stage the chapter’s own Fluent_Pairing
@@ -783,7 +783,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       the consent lecture this task already forbids.
     - _Requirements: 1.9, 3.4, 5.10, 7.14, 7.15, 14.5, 14.6, 14.9, 14.10, 14.12, 15.6_
 
-  - [ ] 8.4 Draft calibration chapter 118 **[EXPLORATORY] [HARD GATE]**
+  - [x] 8.4 Draft calibration chapter 118 **[EXPLORATORY] [HARD GATE]**
     - `POV-SAFIYA`. Give Safiya ownership of her Tuesday account: kettle on, eleven miles from the
       array, no foreign arrival, and the concrete maternal-language access she lost during the null.
       Assign `MOT-KETTLE-01`.
@@ -802,7 +802,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       register is recognizable without being underlined.
     - _Requirements: 1.9, 5.10, 6.4, 6.11, 7.12, 8.1_
 
-  - [ ] 8.5 Draft calibration chapter 124 **[EXPLORATORY]**
+  - [x] 8.5 Draft calibration chapter 124 **[EXPLORATORY]**
     - `POV-MARA`. Affirm Safiya’s consent as genuine, then have Mara refuse because she lacks the
       living second participant, mother/source truth, and corpus required for truthful transport or
       reconstruction; Pair_Calibration cannot connect Safiya to the dead, an archive, simulation,
@@ -812,13 +812,13 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       explanation to dry human presence. Do not turn the refusal into a lecture on consent.
     - _Requirements: 1.9, 5.9, 6.11–6.13, 7.8, 7.12, 8.6, 14.8, 14.11, 14.13_
 
-  - [ ] 8.6 Run the minimal checker over all eight calibration chapters
+  - [x] 8.6 Run the minimal checker over all eight calibration chapters
     - Run chapter scope for 1–5, 73, 118, and 124, then batch scope with every changed direct
       reference. Resolve all objective violations before editorial review while keeping
       representative chapters `exploratory`.
     - _Requirements: 10.1–10.5, 13.3_
 
-  - [ ] 8.7 Record the Calibration_Batch Editorial_Review **[EDITORIAL]**
+  - [x] 8.7 Record the Calibration_Batch Editorial_Review **[EDITORIAL]**
     - Cite representative prose and record `pass`/`revision` for Mara, Nia, and Safiya Voice_Brief
       fidelity/separation; opening momentum; the clear fact that the source morning is continuous,
       the offset belongs only to Mara’s receive-only December apparatus, and that apparatus has no
@@ -841,7 +841,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       later Discovery batch containing him.
     - _Requirements: 1.11, 2.13, 5.10, 5.11, 8.9, 13.4, 14.10, 14.12, 15.6, 15.7_
 
-  - [ ] 8.8 Expand `.tools/check_novel.py` to the complete objective checker
+  - [x] 8.8 Expand `.tools/check_novel.py` to the complete objective checker
     - Add full planning parsing/referential integrity, Cross_Cut symmetry, POV run cap in both chapters
       and combined run words, roster/Anchor
       checks, Chapter_Local/Batch/Global scope separation, outline/file bijection, four ordered
@@ -893,7 +893,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       name wording and capitalization outside automated pass/fail under Requirement 12.11.
     - _Requirements: 1.6–1.18, 2.7–2.11, 4.1–4.10, 6.1–6.19, 7.1–7.18, 10.1–10.9, 11.1–11.11, 12.1–12.15, 14.1–14.14, 15.1–15.5_
 
-  - [ ] 8.9 Build shared generated fixtures for the complete suite
+  - [x] 8.9 Build shared generated fixtures for the complete suite
     - Create reusable Hypothesis strategies and synthetic workspace builders for headers, bodies,
       ArcEntries, identifiers, Cross_Cuts, role-decision states, chronology, motif ledgers,
       movement allocations, status changes, gates, and source trees.
@@ -932,12 +932,12 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       treated as omniscient causal proof, or Canon_Source song text scanned as Chapter_File prose.
     - _Requirements: 1.1, 6.1–6.19, 12.1–12.10, 14.1–14.4, 14.10–14.14, 15.1–15.5_
 
-  - [ ] 8.10 Write the principal property test for chapter plan/file bijection
+  - [x] 8.10 Write the principal property test for chapter plan/file bijection
     - **Property 1: Chapter plan and file bijection** — one principal Hypothesis test, at least 100
       generated examples.
     - **Validates: Requirements 11.3**; related 1.2, 1.3, 9.4, 12.2.
 
-  - [ ] 8.11 Write the principal property test for identifier/metadata integrity
+  - [x] 8.11 Write the principal property test for identifier/metadata integrity
     - **Property 2: Stable identifier, mechanism-state, and evidence referential integrity** — one
       principal test, at least 100 examples. Include every allowed CanonFact authority basis,
       valid/invalid ratified-note adoption, exact-five `DEC-014` inventories, omitted *Case Zero*,
@@ -955,31 +955,31 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       related 1.4, 1.5, 4.2–4.4, 6.2, 6.17, 7.1–7.3, 9.5, 9.6, 10.3, 12.1, 12.4, 12.5,
       14.2, 14.13, 15.5.
 
-  - [ ] 8.12 Write the principal property test for Cross_Cut symmetry
+  - [x] 8.12 Write the principal property test for Cross_Cut symmetry
     - **Property 3: Cross-cut graph symmetry** — one principal test, at least 100 examples.
     - **Validates: Requirements 1.6**; related 1.7.
 
-  - [ ] 8.13 Write the principal property test for prose word-count round trips
+  - [x] 8.13 Write the principal property test for prose word-count round trips
     - **Property 4: Prose word-count round trip** — one principal test, at least 100 examples,
       including empty, Unicode, punctuation, mixed line endings, and whitespace runs.
     - **Validates: Requirements 9.7**; related 10.3, 12.3.
 
-  - [ ] 8.14 Write the principal property test for length classes and limits
+  - [x] 8.14 Write the principal property test for length classes and limits
     - **Property 5: Length classification and limits** — one principal test, at least 100 examples.
     - **Validates: Requirements 2.8**; related 2.9–2.11, 12.3.
 
-  - [ ] 8.15 Write the principal property test for movement order and scale
+  - [x] 8.15 Write the principal property test for movement order and scale
     - **Property 6: Ordered movement architecture and scale** — one principal test, at least 100
       examples, including 29/32/51/16 and boundary variants.
     - **Validates: Requirements 11.4**; related 2.1–2.3, 3.1, 3.6–3.8, 11.5, 11.6, 12.7,
       15.5.
 
-  - [ ] 8.16 Write the principal property test for human POV/Anchor architecture
+  - [x] 8.16 Write the principal property test for human POV/Anchor architecture
     - **Property 7: Human POV roster and Anchor coverage** — one principal test, at least 100
       examples.
     - **Validates: Requirements 11.7**; related 4.1, 4.2, 4.8–4.10, 8.8, 15.2, 15.3.
 
-  - [ ] 8.17 Write the principal property test for the POV run cap and run word limit
+  - [x] 8.17 Write the principal property test for the POV run cap and run word limit
     - **Property 8: POV run cap and run word limit** — one principal test, at least 100 examples.
       Generate POV_ID and Prose_Word sequences together and exercise both bounds independently,
       including a three-chapter run totalling 3,601 words and a legal-length two-chapter run
@@ -987,46 +987,46 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
     - **Validates: Requirements 2.7, 2.15, 11.12**; related 11.4, 12.16. The Mindwars turnover
       cadence formerly cited here is now Editorial_Review criterion 15.6, which no checker evaluates.
 
-  - [ ] 8.18 Write the principal property test for motif synchronization
+  - [x] 8.18 Write the principal property test for motif synchronization
     - **Property 9: Motif event synchronization** — one principal test, at least 100 examples.
     - Enforce chain events only in Discovery/Private Defense/Coda; counterphase as context absent an
       ArcChange; copper events only in Private Defense/Mindwars/Coda; Discovery copper as unledgered
       foreshadowing; two kettle events; and three Record_Progression events.
     - **Validates: Requirements 7.3**; related 7.1, 7.2, 7.12, 7.17, 7.18, 11.8.
 
-  - [ ] 8.19 Write the principal property test for ledger-driven literal constraints
+  - [x] 8.19 Write the principal property test for ledger-driven literal constraints
     - **Property 10: Ledger-driven literal scope, count, and placement** — one principal test, at
       least 100 examples.
     - **Validates: Requirements 7.16**; related 7.7, 7.14, 7.15, 11.8, 12.6.
 
-  - [ ] 8.20 Write the principal property test for ArcChange/status atomicity
+  - [x] 8.20 Write the principal property test for ArcChange/status atomicity
     - **Property 11: Post-baseline change and status atomicity** — one principal test, at least 100
       examples.
     - **Validates: Requirements 1.16**; related 1.17, 1.18, 7.3, 10.7, 10.8, 13.7–13.10.
 
-  - [ ] 8.21 Write the principal property test for local/global gate separation
+  - [x] 8.21 Write the principal property test for local/global gate separation
     - **Property 12: Chapter-local and manuscript-global gate separation** — one principal test, at
       least 100 examples.
     - **Validates: Requirements 10.9**; related 10.1–10.5.
 
-  - [ ] 8.22 Write the principal property test for fail-closed inputs and exits
+  - [x] 8.22 Write the principal property test for fail-closed inputs and exits
     - **Property 13: Fail-closed incomplete inputs and exit status** — one principal test, at least
       100 examples.
     - **Validates: Requirements 12.9**; related 11.1, 11.2, 12.10, 12.14, 12.15.
 
-  - [ ] 8.23 Write the principal property test for manuscript source exclusion
+  - [x] 8.23 Write the principal property test for manuscript source exclusion
     - **Property 14: Manuscript source exclusion** — one principal test, at least 100 generated
       workspace trees with manuscript markdown and eligible control songs.
     - Assert against the Manuscript_Exclusion_Contract's reference collector, since Site_Build is
       external to this workspace.
     - **Validates: Requirements 9.3**; related 9.2, 11.9, 12.8.
 
-  - [ ] 8.24 Write the principal property test for independent final gates
+  - [x] 8.24 Write the principal property test for independent final gates
     - **Property 15: Finalization requires both independent gates** — one principal test, at least
       100 examples.
     - **Validates: Requirements 11.11**; related 11.10.
 
-  - [ ] 8.25 Complete the required focused unit and edge-case suite
+  - [x] 8.25 Complete the required focused unit and edge-case suite
     - Cover all header, count, length, normal-share, orphan/duplicate/order, filename, Cross_Cut,
       roster, Anchor, POV-run, literal phrase, kettle, Record_Progression, status, incomplete-input,
       diagnostic exclusion, and local/global separation cases from the design.
@@ -1068,7 +1068,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
     - Add exact accepted/rejected cases for `MOT-CHAIN-01..03` and `MOT-COPPER-01..03`.
     - _Requirements: 1.1, 2.7–2.11, 4.1–4.10, 6.2–6.19, 7.1–7.18, 9.5–9.7, 12.1–12.15, 14.1–14.4, 14.10–14.14, 15.1–15.5_
 
-  - [ ] 8.26 Complete the required integration and process-smoke suite
+  - [x] 8.26 Complete the required integration and process-smoke suite
     - Test site isolation; minimal calibration gate on 1–5, 73, 118, 124; chapter-local scope;
       changed-reference batch scope; complete 128-entry global scope; and process flow from planning
       through exploratory calibration, full-suite evidence, one Baseline_Revision_Pass, approval,
@@ -1087,7 +1087,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       transferred calibration, prohibited POV ownership, changed loads, and provenance closure.
     - _Requirements: 9.3, 9.11, 10.1, 11.1–11.9, 13.3, 14.1–14.14, 15.1–15.4_
 
-  - [ ] 8.27 Run and record the complete objective checker suite
+  - [x] 8.27 Run and record the complete objective checker suite
     - Run every principal property test (at least 100 generated examples each), all focused tests,
       all integration/smoke tests, and the site-exclusion check. Resolve failures.
     - Record a `baseline-objective` GateResult showing complete global mode, deterministic exits, and
@@ -1095,22 +1095,22 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       Drafting_Batch.
     - _Requirements: 1.14, 11.1–11.9, 12.14, 12.15_
 
-- [ ] 9. Checkpoint — calibration reviewed and full objective suite green **[HARD GATE]**
+- [x] 9. Checkpoint — calibration reviewed and full objective suite green **[HARD GATE]**
   - Ensure the eight exploratory chapters have clean local/batch results and recorded calibration
     Editorial_Review, and ensure the complete checker, all fifteen principal property tests, focused
     suite, integration suite, and site isolation pass.
   - Do not request Approved_Baseline approval or begin any post-calibration prose batch until this
     checkpoint passes.
 
-- [ ] 10. Revise the baseline and obtain author approval
-  - [ ] 10.1 Perform the single Baseline_Revision_Pass
+- [x] 10. Revise the baseline and obtain author approval
+  - [x] 10.1 Perform the single Baseline_Revision_Pass
     - For every calibration finding, write either an Arc_Outline change or a rationale for no change
       in `planning/arc-changes.md`; synchronize affected outline, Canon_Bible, Motif_Ledger,
       POV_Roster, Voice_Brief, and exploratory chapter references in the same change.
     - Keep representative chapters exploratory until their later movement batches reconcile them.
     - _Requirements: 1.12, 1.13, 1.17_
 
-  - [ ] 10.2 Record Approved_Baseline and Final_Targets **[AUTHOR] [HARD GATE]**
+  - [x] 10.2 Record Approved_Baseline and Final_Targets **[AUTHOR] [HARD GATE]**
     - Only after task 9 and task 10.1, record author approval, exact planned chapter count, and one
       inclusive total Prose_Word range. Record rationale if outside provisional ranges.
     - Carry forward the binding title and record-frame selections from `DEC-001` and `DEC-006`.
@@ -1119,17 +1119,17 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       an ArcChange; changing the author decision itself requires author adjudication.
     - _Requirements: 1.14, 1.15, 1.18, 2.2, 2.3_
 
-- [ ] 11. Checkpoint — Approved_Baseline established **[HARD GATE]**
+- [x] 11. Checkpoint — Approved_Baseline established **[HARD GATE]**
   - Ensure Final_Targets and approval are readable by global mode; rerun the full suite after any
     baseline-related checker/reference change.
   - No remaining movement batch may begin before this checkpoint.
 
-- [ ] 12. Draft the remaining Discovery_Part chapters, 6–29
+- [x] 12. Draft the remaining Discovery_Part chapters, 6–29
   - Every 4–8 chapter batch requires: clean chapter/batch objective checks; recorded chapter and
     batch Editorial_Review; and synchronized statuses plus affected Canon_Bible, Motif_Ledger,
     POV_Roster, Voice_Brief, ArcEntry, and ArcChange records before approval.
 
-  - [ ] 12.1 Draft chapters 6–10 — verification and institutional appetite
+  - [x] 12.1 Draft chapters 6–10 — verification and institutional appetite
     - Follow the planned sequence: Julian audits funding disclosure and confirms the December
       receiver is receive-only and lacks any transmit stage; continuous source-side detail appears
       through the assigned selected POV or an attributed supporting-witness record without adding a
@@ -1140,21 +1140,21 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
     - This is Julian’s first appearance after calibration; leave this batch unapproved until 12.2.
     - _Requirements: 2.4–2.7, 3.2, 4.12, 5.11, 6.2_
 
-  - [ ] 12.2 Record Julian’s first-appearance Editorial_Gate **[EDITORIAL] [HARD GATE]**
+  - [x] 12.2 Record Julian’s first-appearance Editorial_Gate **[EDITORIAL] [HARD GATE]**
     - Cite representative chapter-6 prose and record `pass` or `revision` against Julian’s
       Voice_Brief: balanced review-facing clauses, documentary sensory field, institutional distance,
       complicity/evasion, and hearing-chamber Reverb_Profile.
     - Resolve any revision before approving the 6–10 batch.
     - _Requirements: 5.11, 5.13, 13.4_
 
-  - [ ] 12.3 Draft chapters 11–15 — the field
+  - [x] 12.3 Draft chapters 11–15 — the field
     - Show attention-linked frequencies, mind-as-field hypothesis, a repeatable person-specific
       channel/address the receive-only apparatus can identify and lock, an ordinary call echoing a
       recorded pattern, rights pressure, and early institute–Consortium contact. End on the reversal
       that a person is inferred more precisely than a location.
     - _Requirements: 3.2, 4.6, 6.16_
 
-  - [ ] 12.4 Draft chapters 16–20 — open invitation and separate arrival
+  - [x] 12.4 Draft chapters 16–20 — open invitation and separate arrival
     - Mara deliberately adds a temporary bench transmit path to the receive-only setup and sends the
       content-free handshake through the person-specific channel/address identified in December
       (`MOT-COME-01`). Nia later experiences a **wanting** during a two-call triage decision and routes
@@ -1166,7 +1166,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       neither origin account and no narrator or instrument confirms either.
     - _Requirements: 3.13, 6.6, 6.7, 6.9, 7.8_
 
-  - [ ] 12.5 Draft chapters 21–25 — the casualty refuses reduction
+  - [x] 12.5 Draft chapters 21–25 — the casualty refuses reduction
     - Release the source/casualty identities per `DEC-002`: Nia owns both events, and this cluster is
       where the shared identity lands. Mara’s possible causation stays unresolved; give the reader
       every reason to connect the later handshake and wanting and no instrument that can prove it.
@@ -1179,13 +1179,13 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       withholding, determine the release point in chapters 50–55.
     - _Requirements: 1.4, 4.12, 6.8, 6.9_
 
-  - [ ] 12.6 Draft chapters 26–29 — the door runs inward
+  - [x] 12.6 Draft chapters 26–29 — the door runs inward
     - Show external interest, Mara’s confirmation that the apparatus can address as well as receive,
       controlled testing, and recognition of an arrival only after action. End Discovery on an
       uninvited crossing while sender and handshake causation remain unresolved.
     - _Requirements: 3.2, 3.13, 6.6, 6.7_
 
-  - [ ] 12.7 Record the Discovery_Part movement Editorial_Gate **[EDITORIAL]**
+  - [x] 12.7 Record the Discovery_Part movement Editorial_Gate **[EDITORIAL]**
     - Record `pass`/`revision` for canon beats, movement turn, motif progression, POV distinction,
       cross-cut legibility, reveal fairness, hook variety, receive-only source continuity/offset
       clarity, later bench-transmission separation, page-nine chronology, technical scale attached to
@@ -1196,14 +1196,14 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
 - [ ] 13. Draft the Private_Defense_Part chapters, 30–61
   - Apply the same per-batch completion rule as task 12.
 
-  - [ ] 13.1 Draft chapters 30–35 — copper and quiet
+  - [x] 13.1 Draft chapters 30–35 — copper and quiet
     - Build the copper room on the page: mesh, seams, door, first measured silence. Nia experiences
       relief and the cost of permanent enclosure; Julian separates reception, transmission, and
       consent while the Consortium defaults assent.
     - Assign `MOT-COPPER-01` and `MOT-CHAIN-02` only to their ledgered functions.
     - _Requirements: 3.3, 6.8, 7.9, 7.10_
 
-  - [ ] 13.2 Draft chapters 36–42 — the benevolent offer
+  - [x] 13.2 Draft chapters 36–42 — the benevolent offer
     - Dramatize real medical, linguistic, and emergency benefits rather than merely naming them as
       temptation. Select living participants inside the four established POV chapters, begin
       pair-specific calibration through voluntary repeated sessions, show why participants freely
@@ -1658,6 +1658,18 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
   carries the planning value and is required for every entry in a multi-chapter run; the finished
   manuscript is checked against `ChapterHeader.words`. The 2,500-word Hard_Chapter_Maximum is
   unchanged and applies independently.
+- Two `DEC-015`/Trust invariants are only partly automatable at this schema version, and task 7.7
+  implements exactly the decidable part rather than guessing the rest. First, the `PairState` rule
+  that a `paused`, `revoked`, or `integrity-failed` session carries no transported semantic content
+  "in the same or a later event without an explicit recorded confirmation, retry, or ordinary-speech
+  fallback": a transcript is the only transported content the schema represents, so the checker
+  enforces the single-entry rule (`PAIR_STOPPED_SESSION_TRANSPORT`) and treats a later entry
+  returning to `required` as the recovery. Ordering a recovery marker across an event stream would
+  need fields `record-schemas.md` does not define; until an ArcChange adds them, that part stays a
+  human continuity reading. Second, `record_chronology` proves composition, deposit, and release are
+  separate resolvable entries, but not which is earlier — order lives in the prose
+  `relative_chronology` field, and reading it would mean inferring continuity from commentary. Both
+  limits are stated in the affected test docstrings rather than left implicit.
 
 ## Task Dependency Graph
 

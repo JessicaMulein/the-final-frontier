@@ -4,6 +4,7 @@ Schema version: **1**
 Applies to: `POV-MARA`, `POV-NIA`, `POV-JULIAN`, and `POV-SAFIYA`
 Authority through: **DEC-017**
 Governing requirements: 5.1–5.9, 5.11, 5.13, 9.9, 14.1–14.4, 14.10, and 15.5–15.8, plus the design Voice System
+Amended: **2026-09-16** — corrective calibration reread. Dated pass evidence now records the revised Mara, Nia, and Safiya chapters; Julian remains unrepresented and retains no invented calibration evidence. Mara's December mode language is aligned to configuration-dependent acquisition-to-resolved-output reconstruction latency.
 Amended: **2026-09-12** — the superseded fixed-token register instructions are removed; each brief now carries distinct experiential language for `RECEIVE`, `INTRUDE`, `CANCEL`, and deliberate fluent `PAIR` under `DEC-012`/`DEC-015`; `DEC-016` architecture and the `DEC-017` disclosure rule are carried as voice behavior; and the dated review-evidence contract is stated explicitly.
 Amended: **2026-09-14** — task 5.8 verification. The calibration representation table is corrected to the per-chapter `pov_id` values recorded in [`arc-outline.md`](arc-outline.md). It previously credited `POV-MARA` with the whole 1–5 opening sequence and with chapter 73, and `POV-NIA` with 1–5 only; 1–5 is split Mara 1/3/5 and Nia 2/4, and chapter 73 is a `POV-NIA` chapter, so its Requirement 5.10 finding is evidence against `VOICE-NIA`. No brief, obligation, or record value changed.
 
@@ -69,7 +70,7 @@ Two dated fields carry human review evidence into each record. Both are required
 - `calibration_evidence` is an array. Each entry contains exactly `date` as an ISO `YYYY-MM-DD` calendar date, `editorial_finding_ids` referencing real `EditorialFinding` records in [`editorial-log.md`](editorial-log.md), and `result` of exactly `pass` or `revision`. An empty array means no dated calibration finding exists yet.
 - `first_appearance_review` is an object or `null`, and carries the Requirement 5.11 review. When present it contains exactly `chapter`, `date`, `editorial_finding_ids`, and `result`. `null` means no such review has occurred yet.
 
-`editorial-log.md` currently records zero active `EditorialFinding` records, so no dated entry can be written here without inventing evidence. Each entry is appended on the date its human review actually occurs, and Requirement 5.10 requires one for every POV represented in the Calibration Batch.
+`editorial-log.md` records the dated corrective calibration reread. Mara, Nia, and Safiya therefore carry current pass evidence below. Julian remains unrepresented in the Calibration Batch, so his array stays empty rather than inventing evidence; Requirement 5.11 is still owed to the first later Discovery batch that contains him.
 
 | POV | Calibration representation | `calibration_evidence` obligation | `first_appearance_review` obligation |
 |---|---|---|---|
@@ -93,7 +94,7 @@ A later arc change that removes a POV from the Calibration Batch makes Requireme
     "image_sensory_families": [
       "Fields, harmonics, phase, pressure, and the shape of missing frequencies; thresholds, geometry, copper mesh, bone conduction, and rooms inside rooms.",
       "Instruments noticed before faces, with hands, thirst, fatigue, and domestic objects arriving late.",
-      "RECEIVE as legible weather: a living attentional field resolving into structure on her side of the glass, continuous where Nia stands and eight seconds behind only where Mara sits, with no transmit stage and nothing sent. What unsettles her is how readable another person's ordinary morning becomes.",
+      "RECEIVE as legible weather: a living attentional field continuously acquired and timestamped as raw structure on her side of the glass, continuous where Nia stands and reconstructed as legible experience eight seconds later only under the early configuration, context, fidelity, information load, noise, and confidence conditions Mara is using. Same-sample/same-settings processing reproduces the eight seconds; inadequate context degrades coherence; other hardware or algorithms may change the latency. There is no transmit stage and nothing is sent.",
       "INTRUDE from the emitter's side as a content-free push: no words leave her, nothing can be quoted afterward, and the channel is too narrow to carry an explanation and wide enough to shove certainty, preference, or wanting she cannot read back.",
       "CANCEL as an unaddressed field she switches on: subtractive quiet with no target, no reply, and no readback, consented inside one room and then propagating where nobody can be asked, with no reverse operation anywhere in the mechanism.",
       "PAIR as deliberate speech behind a closed door: every contribution passes a send act she feels as a hand laid on a switch, her partner's pauses stay opaque, background mentation stays private, and fluency never becomes access."
@@ -134,7 +135,18 @@ A later arc change that removes a POV from the Calibration Batch makes Requireme
       "trigger": "Mara affirms Safiya's valid consent, refuses a counterfeit because she has neither the mother nor the source truth and the mechanism has no reverse operation, and switches the relay off before putting the kettle on.",
       "after": "Her attention dries and narrows to water, chairs, breath, truthful spoken presence, and the other person's authority over what staying means. The narrowing is qualitative and is never measured by sentence length or any numeric prose metric."
     },
-    "calibration_evidence": [],
+    "calibration_evidence": [
+      {
+        "date": "2026-09-16",
+        "editorial_finding_ids": [
+          "EDITORIAL-CAL-013",
+          "EDITORIAL-CAL-015",
+          "EDITORIAL-CAL-017",
+          "EDITORIAL-CAL-018"
+        ],
+        "result": "pass"
+      }
+    ],
     "first_appearance_review": null
   },
   {
@@ -181,7 +193,18 @@ A later arc change that removes a POV from the Calibration Batch makes Requireme
       }
     ],
     "coda_turn": null,
-    "calibration_evidence": [],
+    "calibration_evidence": [
+      {
+        "date": "2026-09-16",
+        "editorial_finding_ids": [
+          "EDITORIAL-CAL-013",
+          "EDITORIAL-CAL-015",
+          "EDITORIAL-CAL-016",
+          "EDITORIAL-CAL-018"
+        ],
+        "result": "pass"
+      }
+    ],
     "first_appearance_review": null
   },
   {
@@ -229,7 +252,14 @@ A later arc change that removes a POV from the Calibration Batch makes Requireme
     ],
     "coda_turn": null,
     "calibration_evidence": [],
-    "first_appearance_review": null
+    "first_appearance_review": {
+      "chapter": 6,
+      "date": "2026-09-17",
+      "editorial_finding_ids": [
+        "EDITORIAL-DISCOVERY-006-010-001"
+      ],
+      "result": "pass"
+    }
   },
   {
     "voice_brief_id": "VOICE-SAFIYA",
@@ -263,7 +293,18 @@ A later arc change that removes a POV from the Calibration Batch makes Requireme
       }
     ],
     "coda_turn": null,
-    "calibration_evidence": [],
+    "calibration_evidence": [
+      {
+        "date": "2026-09-16",
+        "editorial_finding_ids": [
+          "EDITORIAL-CAL-013",
+          "EDITORIAL-CAL-014",
+          "EDITORIAL-CAL-017",
+          "EDITORIAL-CAL-018"
+        ],
+        "result": "pass"
+      }
+    ],
     "first_appearance_review": null
   }
 ]

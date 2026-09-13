@@ -3,7 +3,9 @@
 Schema version: **1**
 Project: ***The Final Frontier***
 Status: **provisional planning reference; not an Approved Baseline**
-Authority through: **DEC-017**
+Authority through: **DEC-018**
+Amended: **2026-09-18** — `DEC-018` supporting canon for the author-directed revision pass on delivered Chapters 1–46. Five `CanonFact` records under `source_location: DEC-018` record Mara's Northline-internal exposed-persons list, one unverified private report by the Northline technician, his reassignment request and Mara's resulting personal cost inside Private_Defense, the identity of the vehicle at the Northline Array gate at the end of Chapter 35, and the recognized class of private two-person language layer established through Ada and Lena Ferris. `EXT-CHAR-RAVI-NAME` gains the surname **Anand** without changing `CHAR-011`; two new non-viewpoint Character IDs, `CHAR-015` Joss Calder and `CHAR-016` Ruth Venn, carry one recurring non-professional relationship each for Nia Calder and Mara Venn; `CHAR-011` joins `TL-PRIVATE-COPPER.participants`. The supporting-character count is now twelve. Nothing here creates a POV, Voice Brief, chapter, motif, literal phrase constraint, or Reveal, and the four `POVProfile` records and the 56/32/33/7 loads are unchanged. See [`DEC-018` supporting canon](#dec-018-supporting-canon).
+Amended: **2026-09-16** — corrective calibration synchronization. The December eight seconds are recorded as reproducible acquisition-to-resolved-output reconstruction latency under the early apparatus configuration, requested fidelity, context, information load, noise, and confidence conditions used in Chapters 1–5, never as a permanent physical constant or source-side delay; the receiver remains receive-only. Four non-viewpoint continuity witnesses are added as approved `character-name` Novel Extensions, `CHAR-011` through `CHAR-014`: Ravi, Kev, Dev, and Halloran. The supporting-character summary now contains ten names and still creates no POV, Voice Brief, roster load, or inferred real-world cultural detail.
 Amended: **2026-09-12** — the four-mode neural communication mechanism, `CANCEL` properties, and pairing evidence boundary of `DEC-012`/`DEC-015` are recorded as one Novel Extension family; every mechanism-bearing `TimelineEntry` now declares exactly one `mode`; `DEC-016` and `DEC-017` are recorded as craft/architecture direction that creates no Canon Fact and no Literal Phrase Constraint.
 Amended: **2026-09-15** — author-approved amendment pass closing the pairing-chronology gap referred upward by tasks 5.6 and 5.8. Six non-viewpoint supporting participants are declared as approved `character-name` Novel Extensions, `CHAR-005` through `CHAR-010`, under `DEC-012`'s operational-pairing clause, `DEC-015`, and Requirement 15.3; they create no POV, no Voice Brief obligation, and no change to the 56/32/33/7 loads. Thirteen `mode: PAIR` `TimelineEntry` records now classify every declared Fluent_Pairing beat in 36–42, 70–77, 78–93, and 94–108, so Requirement 14.1 holds for each of them and Requirements 14.10 through 14.12 are machine-recorded rather than only narrated. Chapter 83 is deliberately cancellation-only and carries no paired channel, so the apparent gap between 82 and 88 is an author-approved craft decision and must not be closed by adding a PAIR entry for it. Chapter 88 remains the single recorded session. Four sentences that sent readers to the Arc Outline for pairing chronology now name these entries instead — the `evidence_scope` of `TL-MINDWARS-COUNTERPHASE` and `TL-MINDWARS-SHIELD` and an `uncertainty_notes` line on `TL-PRIVATE-OFFER` and `TL-MINDWARS-TERRITORY` — because the Arc Outline creates no `TimelineEntry` and never could. No Canon Fact, POV, mode enum, `CANCEL` record, load, or motif changed.
 Amended: **2026-09-14** — task 5.6 audit synchronization. Every `TimelineEntry.cross_cut_ids` array is now populated from the Arc Outline's `CrossCut` records, discharging the obligation the Arc Outline assigned to task 5.6; 21 chronology entries carry 58 back-references and the remaining 10 keep `[]` because no cross-cut names them. Two `Reveal` records had a `reader_release_chapter` narrated by a POV other than their `reveal_owner_pov`, which `record-schemas.md` forbids: `REVEAL-NIA-SOURCE-CASUALTY` moved from 23 to 24 and `REVEAL-CASUALTY-CONSEQUENCE` from 53 to 52, each onto the owning `POV-NIA` chapter already inside its unchanged payoff window. No owner, window, truth status, withholding basis, Canon Fact, or Novel Extension changed.
@@ -31,6 +33,7 @@ Three later decisions sit at tier 1 without becoming Canon Lyric, and each is re
 | `DEC-012` / `DEC-015` | mechanism authority for the four neural communication modes, consent, and evidence limits | approved `NovelExtension` family plus `TimelineEntry.technical_state` |
 | `DEC-016` | craft and architecture direction | readable direction only; **no** Canon Fact, Novel Extension, or Literal Phrase Constraint |
 | `DEC-017` | disclosure direction for the Chapter 73 / null-night consent parallel | readable direction only; **no** Canon Fact, Reveal, Motif Event, or Literal Phrase Constraint |
+| `DEC-018` | chapter shape, forward pressure, voice separation, human cost, warmth, and the normal-class word target, plus one narrow canon authorization | ten craft clauses are readable direction only and create no record; the narrow authorization creates five `CanonFact` and four `NovelExtension` records in [`DEC-018` supporting canon](#dec-018-supporting-canon) and **no** Reveal, Motif Event, or Literal Phrase Constraint |
 
 ### Closed Canon Source inventory
 
@@ -191,7 +194,7 @@ The *Case Zero* footer's conflicting performance-copyright and public-domain cla
     "source_location": "Lyric: Verse 1, from 'I found it in December' through 'a channel running inward is still a door'",
     "source_material_class": "lyric",
     "adopted_by": null,
-    "statement": "Mara reports finding the signal in December at the bottom of the noise and receiving a stranger's ordinary morning eight seconds late, without siren, announcement, or public date.",
+    "statement": "Mara reports finding the signal in December at the bottom of the noise and receiving a stranger's ordinary morning in resolved form eight seconds after her receive-only apparatus acquired it, without siren, announcement, or public date.",
     "first_person_testimony": true,
     "speaker": "CHAR-001",
     "attribution": "Binding as Mara's first-person account of the discovery reception.",
@@ -199,7 +202,7 @@ The *Case Zero* footer's conflicting performance-copyright and public-domain cla
     "truth_scope": "attributed-testimony",
     "binding_implications": [
       "The discovery occurs in December.",
-      "The received material is an ordinary continuous morning and Mara observes an eight-second reception or transport offset.",
+      "The received material is an ordinary continuous morning; under the early apparatus configuration, requested fidelity, context, information load, noise, and confidence requirements used in these scenes, Mara reproducibly observes eight seconds from raw acquisition timestamp to legible resolved output.",
       "The inward channel immediately carries threshold and consent implications."
     ],
     "protected_ambiguities": [
@@ -219,7 +222,7 @@ The *Case Zero* footer's conflicting performance-copyright and public-domain cla
     "source_location": "DEC-002, Corrected mechanism and chronology",
     "source_material_class": "author-decision",
     "adopted_by": null,
-    "statement": "The December apparatus is receive-only with no transmit stage; it receives Nia's continuous morning with Mara's eight-second transport offset and identifies or locks onto Nia's person-specific channel or address.",
+    "statement": "The December apparatus is receive-only with no transmit stage; it continuously acquires and timestamps Nia's raw continuous field, reconstructs it as legible experience with reproducible eight-second latency under the early configuration and information load used in Chapters 1–5, and identifies or locks onto Nia's person-specific channel or address.",
     "first_person_testimony": false,
     "speaker": null,
     "attribution": null,
@@ -227,7 +230,9 @@ The *Case Zero* footer's conflicting performance-copyright and public-domain cla
     "truth_scope": "authoritative-proposition",
     "binding_implications": [
       "No December transmission event may appear in chronology, prose, or planning.",
-      "Nia experiences no source-side discontinuity and is never late to her own morning.",
+      "Nia experiences no source-side discontinuity or delay and is never late to her own morning.",
+      "Reprocessing the same raw sample with the same early settings reproduces eight seconds; insufficient context or processing degrades or destroys coherence.",
+      "Eight seconds is not a permanent physical constant or necessarily irreducible: later hardware, algorithms, information volume, complexity, fidelity, noise, confidence requirements, and other conditions may change reconstruction latency.",
       "The person-specific lock is distinct from later use of that address for transmission."
     ],
     "protected_ambiguities": [
@@ -905,7 +910,7 @@ The *Case Zero* footer's conflicting performance-copyright and public-domain cla
     "epistemic_limitation": "Her report establishes source-side continuity in her experience and does not prove the cause of any later wanting.",
     "truth_scope": "attributed-testimony",
     "binding_implications": [
-      "Encode the eight seconds only as Mara's reception or transport offset.",
+      "Encode the eight seconds only as Mara's configuration-dependent acquisition-to-resolved-output reconstruction latency.",
       "Never introduce a source-side discontinuity or December transmission."
     ],
     "protected_ambiguities": [
@@ -2046,11 +2051,129 @@ These records add continuity beneath higher authority. The Nia name/mechanism ma
     ],
     "state": "approved",
     "superseding_arc_change_id": null
+  },
+  {
+    "extension_id": "EXT-CHAR-RAVI-NAME",
+    "extension_kind": "character-name",
+    "fact": "CHAR-011 identifies Ravi Anand, a Northline Array technician who independently reruns Mara Venn's December timing and control checks and who continues on the shielded-room programme through the copper-room window; he is a non-viewpoint supporting character with no POV and no alias.",
+    "rationale": "The December reconstruction-latency claim needs an independent witness who can repeat the same-sample/same-settings control without turning Mara's interpretation into self-certifying evidence. DEC-018 adds the surname because he recurs across at least seventeen delivered chapters, is entered on Mara's exposed-persons list over his objection, and now carries a named consequence of that entry, so a first name alone can no longer identify him in dialogue, records, or a reassignment request.",
+    "authority_ref": "REQUIREMENTS-4-5-AND-6-16-AUTHOR-CALIBRATION-DIRECTIVE-AND-DEC-018",
+    "first_dependency": {
+      "record_type": "ArcEntry",
+      "record_id": "3"
+    },
+    "affected_records": [
+      {
+        "record_type": "TimelineEntry",
+        "record_id": "TL-DECEMBER-RECEIVE"
+      },
+      {
+        "record_type": "TimelineEntry",
+        "record_id": "TL-PRIVATE-COPPER"
+      },
+      {
+        "record_type": "CanonFact",
+        "record_id": "CF-PRIVATE-EXPOSED-PERSONS-LIST"
+      },
+      {
+        "record_type": "CanonFact",
+        "record_id": "CF-PRIVATE-TECHNICIAN-REPORT"
+      },
+      {
+        "record_type": "CanonFact",
+        "record_id": "CF-PRIVATE-TECHNICIAN-REASSIGNMENT"
+      }
+    ],
+    "consistency_implications": [
+      "Ravi independently repeats timing and control work but does not originate Mara's interpretation, receive a POV, or become evidence of a transmit stage.",
+      "His selected name licenses no inferred nationality, ethnicity, religion, language, geography, or other real-world cultural detail.",
+      "He is not a sender, adversary, or source of the received field.",
+      "The surname changes no Character ID: CHAR-011 is the same person named Ravi in every delivered chapter, and the added surname is a naming synchronization rather than a new character.",
+      "He holds no POV even where his report and his departure are the material events, so both reach the reader only through a viewpoint lead's account of them."
+    ],
+    "state": "approved",
+    "superseding_arc_change_id": null
+  },
+  {
+    "extension_id": "EXT-CHAR-KEV-NAME",
+    "extension_kind": "character-name",
+    "fact": "CHAR-012 identifies Kev, the county dispatch colleague finishing the night shift who answers Nia Calder's 6:31 road call and repeats the fence-call handover in person; he is a non-viewpoint supporting character with no POV, surname, or alias selected.",
+    "rationale": "A stable continuity witness anchors the canonical road-call-to-console sequence without converting Nia's own dispatch chronology into omniscient narration.",
+    "authority_ref": "REQUIREMENTS-4-5-AND-6-16-AUTHOR-CALIBRATION-DIRECTIVE",
+    "first_dependency": {
+      "record_type": "ArcEntry",
+      "record_id": "2"
+    },
+    "affected_records": [
+      {
+        "record_type": "TimelineEntry",
+        "record_id": "TL-DECEMBER-RECEIVE"
+      }
+    ],
+    "consistency_implications": [
+      "Kev witnesses the 6:31 road-call and handover continuity only; he knows nothing about Mara's receiver or its latency.",
+      "He creates no POV, VoiceBrief, pairing identity, or chapter load.",
+      "His selected name licenses no inferred real-world cultural detail."
+    ],
+    "state": "approved",
+    "superseding_arc_change_id": null
+  },
+  {
+    "extension_id": "EXT-CHAR-DEV-NAME",
+    "extension_kind": "character-name",
+    "fact": "CHAR-013 identifies Dev, an incidental depot colleague who shows Nia Calder the freezing routing screen during the December shift; Dev is a non-viewpoint supporting character with no POV, surname, alias, or wider plot function selected.",
+    "rationale": "The Chapter 2 routing-screen detail uses one stable incidental name rather than an untracked one-off colleague and remains subordinate to Nia's sequence-and-correction register.",
+    "authority_ref": "REQUIREMENTS-4-5-AND-6-16-AUTHOR-CALIBRATION-DIRECTIVE",
+    "first_dependency": {
+      "record_type": "ArcEntry",
+      "record_id": "2"
+    },
+    "affected_records": [
+      {
+        "record_type": "TimelineEntry",
+        "record_id": "TL-DECEMBER-RECEIVE"
+      }
+    ],
+    "consistency_implications": [
+      "Dev remains incidental to the depot and routing-screen continuity and receives no expanded technical authority or later role by implication.",
+      "Dev creates no POV, VoiceBrief, pairing identity, or chapter load.",
+      "The selected name licenses no inferred gender, nationality, ethnicity, religion, language, geography, or other real-world cultural detail."
+    ],
+    "state": "approved",
+    "superseding_arc_change_id": null
+  },
+  {
+    "extension_id": "EXT-CHAR-HALLORAN-NAME",
+    "extension_kind": "character-name",
+    "fact": "CHAR-014 identifies Halloran, the test-floor recorder who transcribes Nia Calder's four conditions, receives her spoken time-bound consent, records her spoken phrase-loss report, and reads corrections back; Halloran is a non-viewpoint supporting character with no POV, given name, or alias selected.",
+    "rationale": "The bounded cancellation scene needs one stable procedural witness while preserving that Nia, not the recorder or institution, originates the consent ethics and controls every correction.",
+    "authority_ref": "REQUIREMENTS-4-5-AND-6-16-AUTHOR-CALIBRATION-DIRECTIVE",
+    "first_dependency": {
+      "record_type": "ArcEntry",
+      "record_id": "73"
+    },
+    "affected_records": [
+      {
+        "record_type": "TimelineEntry",
+        "record_id": "TL-MINDWARS-COUNTERPHASE"
+      },
+      {
+        "record_type": "MotifEvent",
+        "record_id": "MOT-YES-01"
+      }
+    ],
+    "consistency_implications": [
+      "Nia originates the four conditions, the badge-versus-person correction, and the ethical distinction; Halloran transcribes and receives consent but does not invent the doctrine.",
+      "Her yes is spoken aloud to Halloran in the room and never supplied over PAIR.",
+      "Halloran creates no POV, VoiceBrief, pairing identity, chapter load, or implied real-world cultural detail."
+    ],
+    "state": "approved",
+    "superseding_arc_change_id": null
   }
 ]
 ```
 
-Six supporting participants hold Character IDs and no viewpoint. Under the [Character ID registry](record-schemas.md#character-id-registry) an approved `character-name` extension declares a Character ID whether or not a `POVProfile` exists for it, so `CHAR-005` through `CHAR-010` resolve in `TimelineEntry.participants` and `PairState.participants` while creating no POV, no Voice Brief obligation, and no change to the 56/32/33/7 loads. `DEC-012`'s operational-pairing clause permits exactly this — supporting participants inside existing POV chapters — and Requirement 15.3 requires the loads to survive their addition. None of the six is a sender, operative, adversary, archive, simulation, model, or group mind, and none may be narrated from inside.
+Ten supporting participants hold Character IDs and no viewpoint in this fence, and `DEC-018` adds two more in [`DEC-018` supporting canon](#dec-018-supporting-canon) for a current total of twelve. Under the [Character ID registry](record-schemas.md#character-id-registry) an approved `character-name` extension declares a Character ID whether or not a `POVProfile` exists for it, so `CHAR-005` through `CHAR-016` resolve in `TimelineEntry.participants`, `PairState.participants`, and other Character ID references while creating no POV, no Voice Brief obligation, and no change to the 56/32/33/7 loads. Six support operational pairing; Ravi Anand, Kev, Dev, and Halloran witness only the bounded continuity functions recorded above. None is a sender, adversary, archive, simulation, model, or group mind, and none may be narrated from inside.
 
 ### Names and entities quick reference
 
@@ -2066,6 +2189,12 @@ Six supporting participants hold Character IDs and no viewpoint. Under the [Char
 | `CHAR-008` | Cora Baird | approved; non-viewpoint; county dispatcher; paired with `CHAR-007` |
 | `CHAR-009` | Idris Vane | approved; non-viewpoint; network operator; paired with `CHAR-001`, separately with `CHAR-010` |
 | `CHAR-010` | Rhea Osei | approved; non-viewpoint; network operator; paired with `CHAR-001`, separately with `CHAR-009` |
+| `CHAR-011` | Ravi Anand | approved; non-viewpoint; independent December timing/control witness and copper-room technician; surname added by `DEC-018`; no alias selected |
+| `CHAR-012` | Kev | approved; non-viewpoint; 6:31 road-call and handover continuity witness; no surname selected |
+| `CHAR-013` | Dev | approved; non-viewpoint; incidental depot/routing-screen colleague; no surname selected |
+| `CHAR-014` | Halloran | approved; non-viewpoint; transcribes Nia's conditions and receives spoken consent; no given name selected |
+| `CHAR-015` | Joss Calder | approved; non-viewpoint; Nia's older brother; `DEC-018` clause 9 warmth; no professional role |
+| `CHAR-016` | Ruth Venn | approved; non-viewpoint; Mara's aunt; `DEC-018` clause 9 warmth; no institutional role |
 | technical institution | Northline Array | exact approved name |
 | commercial institution | Open Channel Consortium | exact approved name |
 | custodial institution | Civic Record Trust | exact approved name |
@@ -2073,7 +2202,7 @@ Six supporting participants hold Character IDs and no viewpoint. Under the [Char
 | country and counties | deliberately unnamed | selected state, not a blank |
 | Safiya heritage base | `unspecified_by_author` | exact protected state everywhere |
 
-No absolute calendar year, fictional country name, county proper name, or real heritage language is selected here. The six supporting names carry no nation, county, ethnicity, religion, or politics either: like `Safiya Mir`, each is a plain selected name and licenses no real-world inference under `DEC-003` and `DEC-005`. The four POV rows are the complete viewpoint roster; the six `CHAR-005` through `CHAR-010` rows are non-viewpoint participants and hold no `POV-` identity at all.
+No absolute calendar year, fictional country name, county proper name, or real heritage language is selected here. The twelve supporting names carry no nation, county, ethnicity, religion, politics, language, or other inferred real-world cultural detail: like `Safiya Mir`, each is a plain selected name and licenses no such inference under `DEC-003` and `DEC-005`. The four POV rows are the complete viewpoint roster; the twelve `CHAR-005` through `CHAR-016` rows are non-viewpoint participants, continuity witnesses, or `DEC-018` warmth relationships and hold no `POV-` identity at all.
 
 ## Neural communication mechanism
 
@@ -2489,7 +2618,7 @@ Chronology uses global provisional chapter windows from the approved design but 
 
 Mechanism-bearing entries declare exactly one `mode`. `mode: not-applicable` means the entry records no neural communication event, which is the correct state for the April specification reading, the null decision sequence, and the Coda refusal where the retained relay is switched off. A narrative range whose mechanism events are not yet fixed keeps `technical_state: null` and says so in `uncertainty_notes`; that absence is not a claim that nothing happens in those chapters. Individual Pairing_Sessions are **placed in chapters** by the Arc Outline under `DEC-015` and **classified here**, each in its own `mode: PAIR` entry overlapping the scene window it belongs to; see [PAIR-mode session chronology](#pair-mode-session-chronology). Mode-specific facts to preserve:
 
-- the December source-side interval is **continuous** and the apparatus is **receive-only** with no transmit stage; the eight seconds are stored only as Mara's receive/transport offset, together with the person-specific address identified in that receive event;
+- the December source-side interval is **continuous** and the apparatus is **receive-only** with no transmit stage; under the early apparatus configuration, requested fidelity, context, information load, noise, and confidence requirements used in Chapters 1–5, the continuously acquired and timestamped raw field reproducibly takes eight seconds to become legible resolved output. Reprocessing the same sample with the same settings reproduces eight seconds, while inadequate context or processing degrades or destroys coherence. The number belongs only to Mara's configured receiver and is neither a permanent physical constant nor necessarily irreducible;
 - a **distinct later entry** carries the temporary bench transmit path and the content-free handshake through that same address;
 - page-nine `transmit enable` is recorded as evidence of broader architectural capability and never as evidence that the December rig transmitted;
 - the bounded counterphase test and null night both carry `mode: CANCEL`, differing only in `cancel_state.scope`;
@@ -2509,7 +2638,10 @@ Mechanism-bearing entries declare exactly one `mode`. `mode: not-applicable` mea
     "location": "Northline Array and Nia's unnamed county",
     "participants": [
       "CHAR-001",
-      "CHAR-002"
+      "CHAR-002",
+      "CHAR-011",
+      "CHAR-012",
+      "CHAR-013"
     ],
     "chapter_numbers": [
       1,
@@ -2549,7 +2681,8 @@ Mechanism-bearing entries declare exactly one `mode`. `mode: not-applicable` mea
       }
     ],
     "uncertainty_notes": [
-      "Nia experiences no gap; the eight seconds are solely Mara's reception or transport offset.",
+      "Nia experiences no gap or delay; the eight seconds are solely Mara's acquisition-to-resolved-output reconstruction latency under the tested early configuration.",
+      "Reprocessing the same raw sample with the same settings reproduces eight seconds, while insufficient context or processing degrades or destroys coherence; later hardware, algorithms, information volume, complexity, fidelity, noise, confidence requirements, and other conditions may produce different latency.",
       "This interval contains no transmit stage, no handshake, and no evidence about the later wanting's origin."
     ],
     "record_chronology": {
@@ -2569,11 +2702,11 @@ Mechanism-bearing entries declare exactly one `mode`. `mode: not-applicable` mea
       "cancel_state": null,
       "pair_state": null,
       "pairing_evidence": null,
-      "evidence_scope": "The apparatus receives and locks a person-specific address; it does not transmit, create a source-side discontinuity, or prove later causation."
+      "evidence_scope": "The apparatus continuously acquires and timestamps the raw field, locks a person-specific address, and under the tested early context, fidelity, information load, noise, confidence requirements, hardware, and algorithms reconstructs legible experience eight seconds later. Same-sample/same-setting reprocessing reproduces eight seconds; inadequate context or processing degrades coherence. The apparatus does not transmit, create a source-side discontinuity, establish a universal latency constant, or prove later causation."
     },
     "cross_cut_ids": [
       "CUT-NOISE-FLOOR-HANDOFF",
-      "CUT-OFFSET-ASYMMETRY"
+      "CUT-RECONSTRUCTION-LATENCY"
     ]
   },
   {
@@ -2838,14 +2971,15 @@ Mechanism-bearing entries declare exactly one `mode`. `mode: not-applicable` mea
     "timeline_id": "TL-PRIVATE-COPPER",
     "chronology_kind": "interval",
     "canon_status": "mixed",
-    "relative_chronology": "Mara designs and tests a copper room as a private boundary; Nia experiences both relief and the proof that ordinary space is permeable.",
+    "relative_chronology": "Mara designs and tests a copper room as a private boundary; Nia experiences both relief and the proof that ordinary space is permeable; the technician who built and probed it with Mara is entered on her exposed-persons list over his objection, reports one experience he will not characterize, and asks to leave the project.",
     "exact_time": null,
     "duration": null,
     "location": "Northline Array copper room",
     "participants": [
       "CHAR-001",
       "CHAR-002",
-      "CHAR-003"
+      "CHAR-003",
+      "CHAR-011"
     ],
     "chapter_numbers": [
       30,
@@ -2863,10 +2997,27 @@ Mechanism-bearing entries declare exactly one `mode`. `mode: not-applicable` mea
       {
         "record_type": "CanonFact",
         "record_id": "CF-CONSENT-SOVEREIGNTY"
+      },
+      {
+        "record_type": "CanonFact",
+        "record_id": "CF-PRIVATE-EXPOSED-PERSONS-LIST"
+      },
+      {
+        "record_type": "CanonFact",
+        "record_id": "CF-PRIVATE-TECHNICIAN-REPORT"
+      },
+      {
+        "record_type": "CanonFact",
+        "record_id": "CF-PRIVATE-TECHNICIAN-REASSIGNMENT"
+      },
+      {
+        "record_type": "CanonFact",
+        "record_id": "CF-PRIVATE-CONSORTIUM-ADVANCE-PARTY"
       }
     ],
     "uncertainty_notes": [
-      "A private shield buys quiet but cannot restore public life or settle provenance."
+      "A private shield buys quiet but cannot restore public life or settle provenance.",
+      "The technician's single report is unverified, records nothing on Northline instrumentation, and is not classified as an arrival by him or by anyone else; it is not the first reported pattern of arrivals in strangers, which remains Chapter 62."
     ],
     "record_chronology": null,
     "technical_state": null,
@@ -3266,7 +3417,8 @@ Mechanism-bearing entries declare exactly one `mode`. `mode: not-applicable` mea
     "participants": [
       "CHAR-001",
       "CHAR-002",
-      "CHAR-003"
+      "CHAR-003",
+      "CHAR-014"
     ],
     "chapter_numbers": [
       70,
@@ -3297,7 +3449,8 @@ Mechanism-bearing entries declare exactly one `mode`. `mode: not-applicable` mea
       }
     ],
     "uncertainty_notes": [
-      "A successful consenting test does not make counterphase noninvasive or authorize automatic scaling."
+      "A successful consenting test does not make counterphase noninvasive or authorize automatic scaling.",
+      "At Chapter 73's contemporaneous horizon, Nia and the room know only the bounded run's conditions and consequence; they do not know whether the operation can be aimed, widened, or undone, and no future deployment is generalized from this scene."
     ],
     "record_chronology": null,
     "technical_state": {
@@ -3326,7 +3479,7 @@ Mechanism-bearing entries declare exactly one `mode`. `mode: not-applicable` mea
       },
       "pair_state": null,
       "pairing_evidence": null,
-      "evidence_scope": "Counterphase cancellation necessarily transmits through minds while carrying no person-specific address, which is why it is CANCEL rather than INTRUDE. It is the same operation later run at area scale. It neither enables arbitrary memory access nor identifies the Foreign Signal sender, and nothing it subtracts can be restored. The pairing sessions coordinating the test inside this range carry their own PAIR chronology in this Timeline as TL-PAIR-MARA-NIA-COUNTERPHASE and TL-PAIR-MARA-NIA-FLUENCY-LIMIT."
+      "evidence_scope": "This bounded event is classified as unaddressed subtractive CANCEL rather than INTRUDE and supplies no provenance. The contemporaneous Chapter 73 account establishes one four-metre run, Nia's current spoken consent, nineteen seconds of exposure, cancellation of the incoming pattern, and her reported phrase-access loss; it does not establish whether the operation can be aimed, widened, undone, or generalized to any future deployment. Separate PAIR records TL-PAIR-MARA-NIA-COUNTERPHASE and TL-PAIR-MARA-NIA-FLUENCY-LIMIT govern only coordination."
     },
     "cross_cut_ids": [
       "CUT-COLLECTIVE-COPPER-AND-THE-COUNTERWAVE",
@@ -5223,13 +5376,13 @@ The schema has no separate `UnresolvedQuestion` record type. The authoritative m
       "CHAR-001"
     ],
     "belief_holders": [],
-    "reveal_owner_pov": "POV-NIA",
-    "reader_release_chapter": 24,
+    "reveal_owner_pov": "POV-MARA",
+    "reader_release_chapter": 23,
     "withheld_from": [
       "CHAR-002",
       "CHAR-003"
     ],
-    "withholding_basis": "Mara must verify the person-specific source match, and Nia must reconstruct the later wanting before the two roles can be joined without false coyness.",
+    "withholding_basis": "Mara must verify the person-specific source match before she can honestly join the December source and later casualty. Chapter 23 releases that verified identity because Mara plainly knows it there; Nia's Chapter 24 then owns the refusal of both unsupported origin accounts and the meaning of that identity without artificial withholding.",
     "payoff_window": {
       "earliest_chapter": 21,
       "latest_chapter": 25
@@ -5451,7 +5604,7 @@ Protected wording in a `CanonFact` does **not** create an automated prose scan. 
 
 ## Craft and architecture direction
 
-`DEC-016` and `DEC-017` are binding craft authority and are recorded here for reference only. Neither creates a Canon Fact, Novel Extension, Reveal, Motif Event, or Literal Phrase Constraint, and no checker evaluates them. They are enforced by human Editorial Review.
+`DEC-016`, `DEC-017`, and `DEC-018` are binding craft authority and are recorded here for reference only. None of their craft clauses creates a Canon Fact, Novel Extension, Reveal, Motif Event, or Literal Phrase Constraint, and no checker evaluates any of them. They are enforced by human Editorial Review. `DEC-018` additionally carries a narrow canon authorization, which is spent separately in [`DEC-018` supporting canon](#dec-018-supporting-canon) and is not part of its craft clauses.
 
 ### `DEC-016` — original rotating-perspective architecture
 
@@ -5476,6 +5629,341 @@ Because the bounded Chapter 73 test and null night are the same `CANCEL` operati
 3. Mara names it exactly once, in the Chapter 128 entry she writes against herself: the protocol she was held to was one room wide, and she then ran the same mechanism across an area canonically described as `three counties wide` with no one to ask;
 4. that naming resolves no provenance, absolves nobody, validates no archive, and neither invalidates nor reinterprets Safiya's consent.
 
+### `DEC-018` — chapter shape, forward pressure, voice, cost, and warmth
+
+Ten craft clauses govern how chapters open, close, and sound, and what the people inside them owe and receive. Every one is a human Editorial_Gate criterion carrying no automated score, under global invariant 25 of [`arc-outline.md`](arc-outline.md) and Requirement 12.12:
+
+1. no chapter opens with a sentence stating its own thesis, conclusion, or summary judgment; openings begin inside action, sensation, object, or speech whose significance is not yet named;
+2. no chapter closes with a restatement, paraphrase, or near-verbatim echo of its `ArcEntry` `hook`; the `hook` is planning metadata and never appears as prose;
+3. every chapter leaves at least one question live at its boundary, generated by consequence, obligation, dread, or a fixed-time event, with artificial withholding still prohibited and the `DEC-016` question-gap limit unchanged;
+4. reluctant retrospection is authorized: a first-person narrator may signal foreknowledge of cost without disclosing the later fact, on the Chapter 1 model;
+5. where a `CrossCut` declares `handoff_mode: "contradiction-cut"`, no participating narrator states the contradiction in explicit terms;
+6. the enumerated-absence construction appears at most once per chapter, and only where that absence is the chapter's subject;
+7. voice separation is carried by syntax, rhythm, paragraph shape, and what each narrator notices rather than by domain vocabulary, and terminal aphorism is rationed;
+8. each POV lead incurs at least one personal, non-abstract cost in each movement in which they hold chapters;
+9. every movement contains non-professional warmth between named characters, food, rest, or physical comfort offered and accepted, and humor that is not a professional riposte, and no POV lead is lonelier or flatter than the supporting cast; and
+10. `normal`-class chapters target 1,050–1,200 Prose_Words while outliers keep their declared `outlier_purpose` compression or expansion, inside the unchanged 700–1,600 range, 2,500-word maximum, and 3,600-word same-POV run limit.
+
+`DEC-018` supersedes nothing and weakens nothing. `DEC-002`'s receive-only December apparatus and separate later bench path, the receiver-owned configuration-dependent reconstruction latency, the content-free handshake, Nia's self-experienced wanting, unresolved causation, the `DEC-007` asymmetry with no confirmation or absolution, the three never-revealed Reveal IDs, Mara's Chapter 23 release of `REVEAL-NIA-SOURCE-CASUALTY` with Nia owning the Chapter 24 refusal, page nine as architecture only, the closed motif families, the four POVs and 56/32/33/7 loads, the 29/32/51/16 allocation, and the ban on any sender, adversary, archive, simulation, model, or group-mind POV all stand exactly as they did.
+
+## `DEC-018` supporting canon
+
+`DEC-018` is craft and disclosure authority in the same way `DEC-016` and `DEC-017` are: its ten craft clauses create no record and are enforced only by human Editorial_Review. It also carries one **narrow canon authorization** for the supporting facts three of those clauses require, and this section is where that authorization is spent. Nothing here is Canon Lyric, and no lyric supplies any of it.
+
+Six things are recorded, and the boundaries on each are load-bearing.
+
+- **The exposed-persons list is a private working record.** Chapter 30 has Mara write three names under *exposed persons* — her own, Nia's, and the technician's over his objection, which produces his line that then everyone at Northline belongs there. That list is pre-Trust, internal to Northline, and carries no authority whatever about causation. It is not a deposit, not evidence, not an institutional classification, and not a casualty roll.
+- **The technician reports one experience he cannot characterize.** Northline instrumentation records nothing corresponding to it, and he himself refuses to call it an arrival. This is a single unverified private report and nothing more. It is emphatically **not** the first reported pattern of arrivals in strangers, which remains Chapter 62, and it resolves nothing about provenance, the Provenance Question, or the origin of Nia's wanting.
+- **He asks to leave, and Mara continues without him.** He requests reassignment off the project because Mara entered his name on the exposed-persons list over his objection. That loss is Mara's personal cost inside Private_Defense under `DEC-018` clause 8. It is deliberately small and deliberately hers, and it does not collide with or anticipate the Chapter 55 loss of instruments or the Chapter 112 shutdown.
+- **The car at the gate has an owner.** The vehicle at the Northline Array gate at the end of Chapter 35 is the Open Channel Consortium advance party arriving to set up the demonstration Chapter 36 dramatizes. It was booked through the institute's development group rather than through Mara's group, which is why nothing appears on her calendar and why security can say only that they have an appointment with development. The personnel stay consistent with Chapters 36 and 43, where Mara already recognizes a clinical director she has met before.
+- **A private two-person language layer is a recognized class of thing that can be lost.** It is established in Private_Defense through Ada and Lena Ferris, who already pair and already hold private idiom. The Ferris layer is intact and stays intact; establishing the class prepares the ground for Chapter 118 without weakening `DEC-003`, without touching `heritage_base: unspecified_by_author`, and without any connection between the Ferris pair and Safiya Mir.
+- **Two viewpoint leads acquire one recurring non-professional relationship each.** `CHAR-015` Joss Calder for Nia and `CHAR-016` Ruth Venn for Mara, each satisfying the `DEC-018` clause 9 warmth obligation without creating a POV, a Voice Brief, or a chapter. Julian Adebayo receives none: his isolation is characterization.
+
+```json record=CanonFact schema=1
+[
+  {
+    "canon_id": "CF-PRIVATE-EXPOSED-PERSONS-LIST",
+    "authority_basis": "author-decision",
+    "source_path": "The Final Frontier Novel/planning/decisions.md",
+    "source_location": "DEC-018, Narrow canon authorization",
+    "source_material_class": "author-decision",
+    "adopted_by": null,
+    "statement": "During the copper-room window Mara keeps a private Northline-internal working list headed exposed persons, containing her own name, Nia Calder's, and Ravi Anand's, the last added over his stated objection; the list is a pre-Trust private research record and carries no authority about causation, classification, or casualty status.",
+    "first_person_testimony": false,
+    "speaker": null,
+    "attribution": null,
+    "truth_scope": "authoritative-proposition",
+    "epistemic_limitation": null,
+    "binding_implications": [
+      "The list is Mara's own notebook practice, not a Northline register, an institutional finding, a Civic Record Trust deposit, or evidence of anything.",
+      "Being named on it establishes only that Mara could not yet exclude exposure for that person; it establishes no injury, no arrival, and no cause.",
+      "Ravi Anand's objection and his observation that on that logic everyone at Northline belongs on the list are his and remain unanswered by the record.",
+      "If the list is later deposited it keeps its original pre-Trust composition time and its non-authoritative character, and no deposit converts it into a finding."
+    ],
+    "protected_ambiguities": [
+      "Whether anyone on the list was in fact exposed remains unresolved, and the list itself can never settle it.",
+      "The list neither supports nor weakens either origin account for Nia's wanting."
+    ],
+    "protected_wording": null,
+    "affected_timeline_ids": [
+      "TL-PRIVATE-COPPER",
+      "TL-RECORD-PRETRUST-COMPOSITION"
+    ],
+    "affected_chapters": [
+      30,
+      32,
+      35
+    ],
+    "supporting_advisory_citations": []
+  },
+  {
+    "canon_id": "CF-PRIVATE-TECHNICIAN-REPORT",
+    "authority_basis": "author-decision",
+    "source_path": "The Final Frontier Novel/planning/decisions.md",
+    "source_location": "DEC-018, Narrow canon authorization",
+    "source_material_class": "author-decision",
+    "adopted_by": null,
+    "statement": "During the Private_Defense period Ravi Anand reports one experience he cannot characterize; Northline instrumentation records nothing corresponding to it; and he refuses to call it an arrival.",
+    "first_person_testimony": false,
+    "speaker": null,
+    "attribution": "The report is Ravi Anand's own, made once and in private to Mara Venn. Canon binds that he made it and that he declined to name it, never what it was.",
+    "truth_scope": "authoritative-proposition",
+    "epistemic_limitation": null,
+    "binding_implications": [
+      "Exactly one such report exists in the manuscript, and it stays a single private report rather than a series, a pattern, a data point, or a second case.",
+      "It is not the first reported pattern of arrivals in strangers. That remains Chapter 62 and is unaffected.",
+      "It resolves nothing about provenance, the Provenance Question, the Foreign_Signal, or the origin of Nia's wanting, and no character or instrument may treat it as evidence for any account.",
+      "His refusal to call it an arrival is his own epistemic position and is neither corrected nor confirmed by the narrative, by Mara, or by any record.",
+      "The instrumentation silence is symmetrical with Chapter 30: Northline recording nothing is not evidence that nothing happened and not evidence that something did."
+    ],
+    "protected_ambiguities": [
+      "What he experienced is never established, by him or by anyone else.",
+      "Whether the field, fatigue, expectation, or ordinary human error produced it remains permanently unresolved.",
+      "The report creates no new Reveal, no reveal owner, and no release window."
+    ],
+    "protected_wording": null,
+    "affected_timeline_ids": [
+      "TL-PRIVATE-COPPER"
+    ],
+    "affected_chapters": [],
+    "supporting_advisory_citations": []
+  },
+  {
+    "canon_id": "CF-PRIVATE-TECHNICIAN-REASSIGNMENT",
+    "authority_basis": "author-decision",
+    "source_path": "The Final Frontier Novel/planning/decisions.md",
+    "source_location": "DEC-018, Narrow canon authorization and clause 8",
+    "source_material_class": "author-decision",
+    "adopted_by": null,
+    "statement": "Ravi Anand requests reassignment off the project because Mara entered his name on the exposed-persons list over his objection, and Mara continues the shielded-room programme without him.",
+    "first_person_testimony": false,
+    "speaker": null,
+    "attribution": null,
+    "truth_scope": "authoritative-proposition",
+    "epistemic_limitation": null,
+    "binding_implications": [
+      "This is Mara Venn's personal, non-abstract cost inside Private_Defense under DEC-018 clause 8: she loses the one colleague who could independently repeat her work, and she loses him because of something she chose to write down.",
+      "The stated cause is the list entry over his objection, not fear of the field, not disloyalty, and not a dispute about the science.",
+      "The programme continues, so the cost is borne rather than resolved; nobody replaces him, and no later chapter restores him to it.",
+      "It must not collide with or pre-empt Mara's Chapter 55 loss of instruments or the Chapter 112 shutdown, which remain separate, later, and larger costs of different kinds.",
+      "He remains alive, employed, and uninjured. Departing the project is not an injury, a casualty, or a consequence of the Foreign_Signal."
+    ],
+    "protected_ambiguities": [
+      "Whether Mara was right to enter his name is never adjudicated by any record or character.",
+      "His departure supplies no evidence about exposure, causation, or provenance."
+    ],
+    "protected_wording": null,
+    "affected_timeline_ids": [
+      "TL-PRIVATE-COPPER",
+      "TL-PRIVATE-OFFER"
+    ],
+    "affected_chapters": [],
+    "supporting_advisory_citations": []
+  },
+  {
+    "canon_id": "CF-PRIVATE-CONSORTIUM-ADVANCE-PARTY",
+    "authority_basis": "author-decision",
+    "source_path": "The Final Frontier Novel/planning/decisions.md",
+    "source_location": "DEC-018, Narrow canon authorization",
+    "source_material_class": "author-decision",
+    "adopted_by": null,
+    "statement": "The unrecognized vehicle at the Northline Array gate at the end of Chapter 35 carries the Open Channel Consortium advance party, arriving to set up the pairing demonstration that Chapter 36 dramatizes; the visit was scheduled through the institute's development group rather than through Mara Venn's group, which is why no entry appears on her calendar.",
+    "first_person_testimony": false,
+    "speaker": null,
+    "attribution": null,
+    "truth_scope": "authoritative-proposition",
+    "epistemic_limitation": null,
+    "binding_implications": [
+      "The car is answered rather than left dangling: the Chapter 35 arrival and the Chapter 36 demonstration room are one continuous event booked by one institution.",
+      "The routing through the development group is the point. Mara's group is not consulted, so the absence from her calendar is an institutional fact about who may schedule access to Northline, not a mystery, a concealment, or a security incident.",
+      "Personnel stay consistent with Chapters 36 and 43: the clinical director Mara says in Chapter 43 she has already met is a member of this party, met at the Chapter 36 demonstration.",
+      "The advance party is Open Channel Consortium staff and contractors. None of them is the Foreign_Signal, a sender, an operative, or an adversary agent, and none receives a POV."
+    ],
+    "protected_ambiguities": [
+      "What the institute's development group was told before booking the visit is not established here."
+    ],
+    "protected_wording": null,
+    "affected_timeline_ids": [
+      "TL-PRIVATE-COPPER",
+      "TL-PRIVATE-OFFER"
+    ],
+    "affected_chapters": [
+      35,
+      36,
+      43
+    ],
+    "supporting_advisory_citations": []
+  },
+  {
+    "canon_id": "CF-PRIVATE-TWO-PERSON-LAYER-CLASS",
+    "authority_basis": "author-decision",
+    "source_path": "The Final Frontier Novel/planning/decisions.md",
+    "source_location": "DEC-018, Narrow canon authorization",
+    "source_material_class": "author-decision",
+    "adopted_by": null,
+    "statement": "A private two-person language layer built between named intimates over years — invented words, private grammar, and shared reference hardened into usable vocabulary — is a recognized class of thing in this world, and a thing of that class can be lost; the class is established during the Private_Defense period through Ada Ferris and Lena Ferris, whose own layer is intact.",
+    "first_person_testimony": false,
+    "speaker": null,
+    "attribution": null,
+    "truth_scope": "authoritative-proposition",
+    "epistemic_limitation": null,
+    "binding_implications": [
+      "The Ferris pair carries the class because they already pair and already hold private idiom; their layer is undocumented, has no surviving corpus, and predates their calibration, which does not create, contain, or record it.",
+      "The Ferris layer is not lost, is never lost, and is not threatened. Only the class is established.",
+      "No record, character, motif, or narration connects Ada or Lena Ferris to Safiya Mir. They never meet, are never compared, and never appear in the same scene, and the Coda draws no line back to them.",
+      "Establishing the class prepares the reader for Chapter 118 without pre-empting REVEAL-SAFIYA-TUESDAY-LOSS, which still releases at 118 inside its unchanged 118-119 window, owned by POV-SAFIYA.",
+      "Pair_Calibration is not a layer and cannot substitute for one: a calibrated channel transports what one living person deliberately offers and holds no lexicon, so nothing about pairing suggests a route to restoring a lost layer."
+    ],
+    "protected_ambiguities": [
+      "The content of the Ferris layer is described at most through what it does, never quoted into a glossary.",
+      "Nothing about the class touches Safiya's heritage base, which remains exactly heritage_base: unspecified_by_author."
+    ],
+    "protected_wording": null,
+    "affected_timeline_ids": [
+      "TL-PAIR-CLINICAL-BENEFIT",
+      "TL-PRIVATE-OFFER",
+      "TL-CODA-ACCOUNT"
+    ],
+    "affected_chapters": [
+      36,
+      41
+    ],
+    "supporting_advisory_citations": []
+  }
+]
+```
+
+### `DEC-003` is unweakened by the two-person-layer class
+
+Worth stating plainly, because this is the one addition that touches the Coda's engine. `DEC-003` holds that Mara's Chapter 124 refusal must be physics rather than principle: she cannot rebuild Safiya's layer because no corpus exists anywhere and one of the two people who held it is dead. Establishing the class earlier does not supply a corpus, a template, a comparison case, or a method. It supplies only the reader's prior familiarity with what kind of thing is being described, so that Chapter 118 does not have to teach the concept and grieve it in the same breath. The Ferris layer is intact and stays intact, which is precisely why it cannot be read as a precedent for recovery — nothing has been recovered, because nothing was taken.
+
+### New non-viewpoint Character IDs and relationships
+
+```json record=NovelExtension schema=1
+[
+  {
+    "extension_id": "EXT-CHAR-JOSS-NAME",
+    "extension_kind": "character-name",
+    "fact": "CHAR-015 identifies Joss Calder, Nia Calder's older brother, who repairs small machines for a living well outside the county emergency service and holds a standing shared meal with her; he is a non-viewpoint supporting character with no POV and no alias.",
+    "rationale": "DEC-018 clause 9 requires non-professional warmth, offered and accepted comfort, and humor that is not a professional riposte in every movement, and the review found that across 46 chapters no viewpoint lead has a family on the page. Nia's warmth has to come from outside the dispatch floor, because every colleague she has is also a professional obligation.",
+    "authority_ref": "DEC-018",
+    "first_dependency": {
+      "record_type": "ArcEntry",
+      "record_id": "7"
+    },
+    "affected_records": [
+      {
+        "record_type": "NovelExtension",
+        "record_id": "EXT-REL-NIA-JOSS"
+      },
+      {
+        "record_type": "POVProfile",
+        "record_id": "POV-NIA"
+      }
+    ],
+    "consistency_implications": [
+      "Joss holds a Character ID and no POV, no VoiceBrief, no movement_coverage, and no chapter load; nothing is narrated from inside him and no chapter is added for him.",
+      "He is not a dispatcher, a Northline employee, a Consortium employee, a lawyer, an archivist, or a pairing participant, and he never becomes a professional counterpart to Nia.",
+      "He knows Nia is unwell in a way she has not explained. He is not told about the wanting, the receiver, the address, or the exposed-persons list, and he never becomes a confidant for mechanism exposition.",
+      "He is never injured, cancelled, addressed, paired, or made a casualty, and he supplies no evidence about causation or provenance.",
+      "Exact scene placement inside each movement belongs to the revision waves; this record fixes who he is, not which chapter he appears in.",
+      "His selected name licenses no inferred nationality, ethnicity, religion, language, geography, or other real-world cultural detail."
+    ],
+    "state": "approved",
+    "superseding_arc_change_id": null
+  },
+  {
+    "extension_id": "EXT-CHAR-RUTH-NAME",
+    "extension_kind": "character-name",
+    "fact": "CHAR-016 identifies Ruth Venn, Mara Venn's aunt, who lives roughly an hour from the Northline Array, has no scientific or institutional connection to the work, and feeds and houses Mara when Mara turns up; she is a non-viewpoint supporting character with no POV and no alias.",
+    "rationale": "DEC-018 clause 9 requires the same warmth obligations for the Anchor POV, and Mara is the lead the review found most completely without a private life. Her Voice_Brief blind spot is that she names a system before naming a feeling and notices instruments before hands, thirst, fatigue, or domestic objects, so the person who makes her sit down and eat does structural work rather than decorative work.",
+    "authority_ref": "DEC-018",
+    "first_dependency": {
+      "record_type": "ArcEntry",
+      "record_id": "10"
+    },
+    "affected_records": [
+      {
+        "record_type": "NovelExtension",
+        "record_id": "EXT-REL-MARA-RUTH"
+      },
+      {
+        "record_type": "POVProfile",
+        "record_id": "POV-MARA"
+      }
+    ],
+    "consistency_implications": [
+      "Ruth holds a Character ID and no POV, no VoiceBrief, no movement_coverage, and no chapter load; nothing is narrated from inside her and no chapter is added for her.",
+      "She has no technical, legal, institutional, or archival role, and she never becomes an audience for exposition about the field, the modes, the term sheet, or the null.",
+      "She is not a moral authority and does not absolve, forgive, accuse, or adjudicate. Absolution remains unavailable to Mara from every direction under DEC-007.",
+      "She is never injured, cancelled, addressed, paired, or made a casualty, and she is not inside the affected area canonically described as three counties wide.",
+      "Exact scene placement inside each movement belongs to the revision waves; this record fixes who she is, not which chapter she appears in.",
+      "Her selected name licenses no inferred nationality, ethnicity, religion, language, geography, or other real-world cultural detail."
+    ],
+    "state": "approved",
+    "superseding_arc_change_id": null
+  },
+  {
+    "extension_id": "EXT-REL-NIA-JOSS",
+    "extension_kind": "relationship",
+    "fact": "Nia Calder and her brother Joss Calder keep a standing shared meal and an ordinary sibling register of teasing, small favours, and unexplained tiredness accepted without interrogation; the relationship recurs across Discovery, Private_Defense, and the Mindwars and is never professional.",
+    "rationale": "It gives Nia somewhere to be a person rather than a witness, an account, or a case, which is what DEC-018 clause 9 requires and what the delivered manuscript does not contain. It also makes her refusal of the label case zero cost something, because there is somebody who has never used it.",
+    "authority_ref": "DEC-018",
+    "first_dependency": {
+      "record_type": "ArcEntry",
+      "record_id": "7"
+    },
+    "affected_records": [
+      {
+        "record_type": "NovelExtension",
+        "record_id": "EXT-CHAR-JOSS-NAME"
+      },
+      {
+        "record_type": "TimelineEntry",
+        "record_id": "TL-DISCOVERY-DUE-DILIGENCE"
+      }
+    ],
+    "consistency_implications": [
+      "The relationship carries food, rest, physical comfort, and humor that is not a professional riposte, and it may not be converted into a second consent problem, a second injury, or a source of mechanism exposition.",
+      "Joss never learns enough to hold an opinion about causation, and Nia's refusal to explain is characterization rather than withheld information from the reader.",
+      "It creates no POV, no VoiceBrief, no chapter, and no change to Nia's 9/8/14/1 load."
+    ],
+    "state": "approved",
+    "superseding_arc_change_id": null
+  },
+  {
+    "extension_id": "EXT-REL-MARA-RUTH",
+    "extension_kind": "relationship",
+    "fact": "Mara Venn and her aunt Ruth Venn keep an unscheduled, one-sided, durable arrangement in which Mara arrives without warning and is fed, watered, and put in a chair without being asked what she is working on; the relationship recurs across the movements in which Mara holds chapters and is never professional.",
+    "rationale": "DEC-018 clause 9 forbids rendering a POV lead lonelier or flatter than the supporting cast, and Mara is currently the flattest. A relationship built entirely on comfort offered and accepted, with the work explicitly out of scope, gives her a place where mechanism is not the available language.",
+    "authority_ref": "DEC-018",
+    "first_dependency": {
+      "record_type": "ArcEntry",
+      "record_id": "10"
+    },
+    "affected_records": [
+      {
+        "record_type": "NovelExtension",
+        "record_id": "EXT-CHAR-RUTH-NAME"
+      },
+      {
+        "record_type": "TimelineEntry",
+        "record_id": "TL-DISCOVERY-DUE-DILIGENCE"
+      }
+    ],
+    "consistency_implications": [
+      "The relationship carries food, rest, physical comfort, and non-professional humor, and it may not become a confession chamber, an absolution route, or a device for explaining the mechanism to the reader.",
+      "Mara's guilt stays non-authoritative and unrelieved: being cared for is not being forgiven, and Ruth is given no standing to forgive.",
+      "It creates no POV, no VoiceBrief, no chapter, and no change to Mara's 14/14/21/7 load or her sole Anchor status."
+    ],
+    "state": "approved",
+    "superseding_arc_change_id": null
+  }
+]
+```
+
+Twelve supporting participants now hold Character IDs and no viewpoint. `CHAR-005` through `CHAR-016` all resolve in `TimelineEntry.participants`, `PairState.participants`, and other Character ID references under the [Character ID registry](record-schemas.md#character-id-registry), and none of them creates a POV, a Voice Brief obligation, a chapter, or a change to the 56/32/33/7 loads. Six support operational pairing; Ravi Anand, Kev, Dev, and Halloran witness bounded continuity functions; Joss Calder and Ruth Venn carry the `DEC-018` clause 9 warmth obligation for Nia and Mara. None is a sender, adversary, archive, simulation, model, or group mind, and none may be narrated from inside.
+
 ## Continuity guardrails
 
 - The exact authority layers must stay separate: *Case Zero* confirms binding same-speaker testimony; `DEC-002` supplies the Nia name and person-specific-address/bench-path mechanism; neither proves handshake causation.
@@ -5491,4 +5979,7 @@ Because the bounded Chapter 73 test and null night are the same `CANCEL` operati
 - Pairing needs two living, currently consenting, pair-calibrated people and a deliberate send act for every contribution. Calibration never transfers to a replacement, a dead or absent person, a simulation, an archive, a model, or a reconstruction.
 - Consent-state and transport metadata are mandatory and semantically opaque. Content recording is separately mutual and off by default, a transcript covers only that recorded session, and no metadata, transcript, traffic analysis, or endpoint compromise closes Nia's causation or the Provenance Question.
 - The title premise is inward-frontier reversal. The Mindwars are the event that dramatizes it, not the novel's alternate title or complete meaning.
-- `DEC-016` and `DEC-017` are craft direction enforced by Editorial Review. They add no Canon Fact, Reveal, Motif Event, or Literal Phrase Constraint, and no checker scores voice, pacing, hook force, originality, or resemblance to a named author.
+- `DEC-016`, `DEC-017`, and `DEC-018` are craft direction enforced by Editorial Review. Their craft clauses add no Canon Fact, Reveal, Motif Event, or Literal Phrase Constraint, and no checker scores voice, pacing, hook force, chapter shape, warmth, originality, or resemblance to a named author. `DEC-018`'s narrow canon authorization is the one exception and is spent only on the five Canon Facts and four Novel Extensions recorded in [`DEC-018` supporting canon](#dec-018-supporting-canon).
+- A chapter's `hook` is planning metadata. It never appears as prose, and no chapter closes on a restatement of it. Where a `CrossCut` declares `contradiction-cut`, the contradiction is assembled by the reader and stated by no narrator.
+- The `exposed persons` list is Mara's private pre-Trust working record and never an institutional finding, a casualty roll, or evidence about causation. Ravi Anand's single uncharacterized report stays one unverified private report: it is not the first reported pattern of arrivals in strangers, which remains Chapter 62, and it resolves no provenance. His departure from the project is Mara's personal cost and not an injury.
+- A private two-person language layer is a recognized class of thing that can be lost, established through Ada and Lena Ferris, whose layer is intact. No record connects the Ferris pair to Safiya Mir, and nothing about the class supplies a corpus, a template, or a route to restoring what the null removed.

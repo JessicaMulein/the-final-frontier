@@ -4,8 +4,9 @@ Schema version: **1**
 Normative schema: [`record-schemas.md`](record-schemas.md), especially `ArcEntry`, `CrossCut`, and `Baseline`  
 Structural authority: Requirements 1.2–1.5, 1.7–1.9, 2.1, 2.7, 2.10–2.12, 3.1, 3.6, and 15.5–15.8  
 Narrative authority: the design's *Detailed Sequence and Beat Architecture*, *POV Rotation, Cross-Cut Grammar, and Reveal Ownership*, and *Original Thriller Pacing Architecture*  
-Decision authority: binding, nonsuperseded decisions through `DEC-017`; `DEC-016` governs pacing architecture, `DEC-011` the title reversal, `DEC-017` the delayed consent parallel  
+Decision authority: binding, nonsuperseded decisions through `DEC-018`; `DEC-016` governs pacing architecture, `DEC-011` the title reversal, `DEC-017` the delayed consent parallel, `DEC-018` chapter shape, forward pressure, voice separation, human cost, warmth, and the normal-class word target  
 Created by: task 5.1  
+Amended: **2026-09-18** — `DEC-018` planning obligations. The Mindwars and Coda movement sections carry the new drafting obligation to make the class of uncounted private civilian loss vivid inside Chapters 109–114, and `DEC-018` clause 10's 1,050–1,200 `normal`-class target is recorded beside the length-class budget. No `ArcEntry`, `CrossCut`, or `Baseline` record value changed in this pass: still 128 entries, 65 cross-cuts, the same length classes, `estimated_words`, motifs, reveals, statuses, and calibration selections. Re-budgeting `estimated_words` to the clause 10 band is an open obligation of `ARC-CHANGE-REVISION-001` and belongs to a later wave.
 Amended: **2026-09-13** — every `ArcEntry` gains the required `estimated_words` key under the amended `record-schemas.md`, and global invariant 6 gains the `DEC-016` same-POV run word limit of 3,600 Prose_Words.
 Amended: **2026-09-14** — task 5.6 audit. The reveal reference rules state the `reader_release_chapter`/`reveal_owner_pov` agreement rule explicitly, and the reveal table's release chapters for `REVEAL-NIA-SOURCE-CASUALTY` and `REVEAL-CASUALTY-CONSEQUENCE` are corrected to 24 and 52. The [task 5.6 audit result](#task-56-audit-result) records the complete pass, the repairs, and the one finding referred upward.
 Amended: **2026-09-14** — task 5.7 Calibration Batch. Chapters 1–5, 73, 118, and 124 now carry `calibration_selected: true`; 73, 118, and 124 carry a non-null `representative_purpose` and `status: "exploratory"`. The `status` and calibration rows of the field contract and global invariants 19 and 20 record the post-5.7 state, and the [task 5.7 Calibration Batch](#task-57-calibration-batch) section records the selection, the exploratory scope, and Julian's unresolved Requirement 5.11 first-appearance gate.
@@ -113,6 +114,16 @@ Per-movement outlier ceilings, allocated roughly by chapter count:
 These are ceilings, not quotas; a movement may use fewer. Before baseline approval, reallocating outliers between movements requires only a dated note in this section and must keep the global total at or under 20; task 5.6 audits the global figure. After baseline approval it requires an `ArcChange`.
 
 Every outlier — either class — carries a non-null `outlier_purpose` naming the specific compression, interruption, revelation, aftermath, or expansion function it performs (Requirements 2.10 and 2.11). A `normal` entry carries `outlier_purpose: null`. "It felt long" and "it felt short" are not purposes.
+
+#### `DEC-018` clause 10 — the normal-class target inside the band
+
+The Normal_Chapter_Range of 700–1,600 is the permitted class band and is unchanged. `DEC-018` clause 10 adds a **drafting target of 1,050–1,200 Prose_Words for `normal` chapters**, with 1,125 as the planning mean, because the delivered manuscript was tracking a mean of 912 and projecting roughly 117,000 words against approved Final_Targets of 130,000–150,000.
+
+The outline's actual distribution is 110 `normal`, 10 `microchapter`, and 8 `long-outlier`. Outliers keep their declared `outlier_purpose` compression or expansion and are never inflated to reach a total, so their contribution is computed from selected and delivered values rather than from class-band width: the ten microchapters average 500 across the seven whose values are known, for 5,000, and the eight long-outliers average 1,798.5 across the four whose values are known, for about 14,400 — roughly **19,400 Prose_Words from the 18 outliers**. The 110 normals then carry the remainder: 115,500 at the target floor for a total near 134,900, 123,750 at the midpoint for a total near 143,150, and 132,000 at the target ceiling for a total near 151,400. The operative rule is therefore that the normal-class **mean** must land between about 1,006 and 1,187 Prose_Words; 1,200 is a per-chapter ceiling for the class and not a target for the mean.
+
+Clause 10 does not disturb the [same-POV run budget](#same-pov-run-budget). The longest run in the outline is two chapters, so the worst two-chapter normal run reaches 2,400 against the 3,600 limit; the two runs pairing a `normal` with a `long-outlier` reach 3,500 at 100–101 and 2,850 at 127–128; and a hypothetical three-chapter normal run at the target ceiling lands on 3,600 exactly rather than above it.
+
+Clause 10 is a drafting target enforced by human Editorial_Review, not a new objective check. The objectively checkable facts remain the ones already encoded: the 700–1,600 class band, the 2,500-word Hard_Chapter_Maximum, the 108-entry normal floor, the 20-outlier cap, the 3,600-word run limit, and the 130,000–150,000 Final_Targets total. Re-budgeting the `estimated_words` values of `normal` entries into the target band is an open synchronization obligation of `ARC-CHANGE-REVISION-001`; until that is applied, the planning estimates in this document still carry their pre-`DEC-018` values.
 
 ### Same-POV run budget
 
@@ -392,6 +403,27 @@ This is deliberately not an `ArcEntry` field. Classifying a hook requires readin
 
 ---
 
+## `DEC-018` chapter-shape controls
+
+`DEC-018` is binding craft and disclosure authority added after the review of delivered Chapters 1–46. Like the `DEC-016` controls above, **every criterion here is a human Editorial_Gate** under global invariant 25 and Requirement 12.12. No checker may score, rank, or threshold any of it, no `ArcEntry` or `ChapterHeader` field may be added to carry a value for it, and findings are recorded as `EditorialFinding` and editorial `GateResult` records in [`editorial-log.md`](editorial-log.md) with representative prose evidence and a `pass` or `revision` result.
+
+| Gate criterion | Scope | What the human reviewer decides |
+|---|---|---|
+| Opening does not state the thesis | Chapter, batch | Whether the first sentence begins inside action, sensation, object, or speech whose significance is not yet named, rather than stating the chapter's conclusion or summary judgment. |
+| Ending does not echo the `hook` | Chapter, batch | Whether the final line is a restatement, paraphrase, or near-verbatim echo of the entry's `hook`. The `hook` is planning metadata and never appears as prose; a final line reconstructible from the header is a `revision`. |
+| One live question per boundary | Chapter, batch, movement | Whether at least one question survives the chapter boundary, generated by consequence, obligation, dread, or a fixed-time event — and whether it does so without artificial withholding and inside the question-gap limit above. |
+| Reluctant retrospection | Chapter, batch | Whether the retrospective frame is used to promise cost without disclosing a later fact, on the Chapter 1 model, rather than being left inert. |
+| Contradiction-cuts stay unspoken | Batch, movement | Whether any narrator in a `contradiction-cut` relationship states the contradiction explicitly instead of leaving the reader to assemble it. |
+| Enumerated absence rationed | Chapter, batch | Whether the construction appears more than once in a chapter, or anywhere the absence is not the chapter's subject. |
+| Voice separation and rationed aphorism | Batch, movement, manuscript | Whether syntax, rhythm, paragraph shape, and what each narrator notices distinguish the viewpoints, rather than domain vocabulary alone; and whether terminal aphorism and the isolated one-sentence paragraph have become the default unit. |
+| Personal cost per lead per movement | Movement | Whether each POV lead incurs at least one personal, non-abstract cost in each movement in which they hold chapters. Institutional strain and abstract guilt do not satisfy it. |
+| Warmth, comfort, and humor per movement | Movement | Whether the movement contains non-professional warmth between named characters, food, rest, or physical comfort offered and accepted, and humor that is not a professional riposte — and whether any POV lead is lonelier or flatter than the supporting cast. |
+| Normal-class word target | Batch, movement, manuscript | Whether `normal` chapters land in the 1,050–1,200 target band with a mean near 1,125, and whether any outlier has been inflated away from its declared `outlier_purpose`. See [clause 10 arithmetic](#dec-018-clause-10--the-normal-class-target-inside-the-band). |
+
+The `contradiction-cut` relationships this document declares are the scope of the fifth criterion. In the delivered range they are `CUT-CONFESSION-REFUSED` at 23 and 24, `CUT-CONTAINMENT-ALREADY-LOST` at 26 and 29, `CUT-SEALED-ROOM-AND-A-LIFE` at 32 and 34, `CUT-CALIBRATION-AND-THE-UNCALIBRATED` at 40 and 42, and `CUT-CONSTRAINABLE-CLAUSE` at 44 and 45. Sixteen such relationships exist across the whole outline, and the criterion applies to every one.
+
+---
+
 ## Motif placement obligations
 
 [`motif-ledger.md`](motif-ledger.md) is authoritative for motif placement. `ArcEntry.motif_events` copies the ledger's assignment for that chapter; it never invents, moves, or adds an event. Every chapter not listed below carries `"motif_events": []`.
@@ -429,22 +461,34 @@ Under `DEC-017`, the Chapter 73 / null-night consent parallel receives **no** Mo
 
 ---
 
-## Baseline and Final Targets placeholder
+## Approved Baseline and Final Targets
 
-**Final_Targets are not approved and do not exist.** No Approved Baseline exists. The record below is the honest `provisional` state: the arc is now complete, but no calibration prose has been drafted, no gate has run, no revision pass has occurred, and `final_targets` is `null`.
+**The author approved the recommended revised baseline in the explicit task 10.2 response, “Approve recommended baseline.”** The `Baseline` record below is therefore `approved`. Its Final_Targets are exactly **128 planned chapters** and an inclusive total range of **130,000–150,000 Prose_Words**. Both targets are within the provisional bounds, so `out_of_range_rationale` is correctly `null`.
 
-`provisional_arc_complete` is `true` as of the [task 5.8 verification pass](#task-58-verification-pass). It records exactly one thing: all 128 entries and every direct reference they make exist and resolve. It is not approval, not a gate result, and not a claim that any Chapter File exists.
+`provisional_arc_complete` is `true` as of the [task 5.8 verification pass](#task-58-verification-pass). That field records exactly one thing: all 128 entries and every direct reference they make exist and resolve. Approval is recorded separately in `author_approval`; neither field claims that the complete Manuscript already exists.
 
-Requirement 1.15 and 2.2 targets — one exact planned chapter count and one inclusive minimum-to-maximum Prose_Word range — are recorded only when the author approves the revised outline. Until then the 128-chapter / 140,000-word figures in this document are provisional planning targets and carry no approval authority. If approved targets later fall outside 120–135 chapters or 130,000–150,000 words, `out_of_range_rationale` must record the narrative or calibration reason (Requirement 2.3).
+The approval carries forward `DEC-001`: the binding novel title remains ***The Final Frontier***, while “the Mindwars” remains an in-world event rather than the cover title. It also carries forward `DEC-006`: one concise Front_Matter framing note plus rare, dramatically necessary in-story references, restrained reader-facing chapter labels, and no routine source notes, transcript apparatus, docket labels, evidence citations, or heavy archival labeling. Calibration may still justify removing or retaining an individual rare reference; it does not reopen that visibility model. Any later structural change requires a documented `ArcChange`, and changing either author decision requires author adjudication.
 
-`calibration_chapters` records the batch fixed by the design and task 5.7: chapters 1–5 for opening momentum, voice separation, and Cross Cut clarity; 73 for counterphase consent, Mindwars tone, and Nia's authority without resolved provenance; 118 for Safiya's own voice, concrete loss, the first kettle event, describe-never-quote handling, and the `unspecified_by_author` guardrail; 124 for Mara's response, truth-based refusal, the Coda_Turn, and the Refused_Swell. Task 5.7 has set `calibration_selected: true` on exactly these eight entries, so the flag set and this array now agree; see [task 5.7 Calibration Batch](#task-57-calibration-batch). This array is unchanged by task 5.7 — it already held the eight — and no other `Baseline` field changed: `calibration_finding_ids` stays `[]` because no calibration prose has been drafted and no editorial finding exists.
+`calibration_chapters` records the batch fixed by the design and task 5.7: chapters 1–5 for opening momentum, voice separation, and Cross Cut clarity; 73 for counterphase consent, Mindwars tone, and Nia's authority without resolved provenance; 118 for Safiya's own voice, concrete loss, the first kettle event, describe-never-quote handling, and the `unspecified_by_author` guardrail; 124 for Mara's response, truth-based refusal, the Coda_Turn, and the Refused_Swell. Exactly these eight entries and Chapter Headers remain `exploratory` after baseline approval and cannot become approved continuity until their later movement batches reconcile and gate them. `calibration_finding_ids` records the complete task-8.7 audit trail: the original revision findings, their resolution links, and the corrective follow-up passes. `baseline_revision_pass` dispositions every listed finding exactly once. The pass found no genuine Arc_Outline implication: the two original revision findings were resolved in exploratory prose and re-reviewed by `EDITORIAL-CAL-013` and `EDITORIAL-CAL-014`, while the other findings affirm the current architecture. The same no-change disposition ledger is readable in [`arc-changes.md`](arc-changes.md). `full_suite_gate_result_id` records the task-8.27 objective evidence; together these fields satisfy the prerequisites on which the author approval below relies.
+
+The pass preserves the corrected December rule already synchronized across the current plan and evidence: raw field acquisition is continuous, Nia experiences no gap, the apparatus has no transmit stage, and eight seconds is the receiver-owned acquisition-to-resolved-output reconstruction latency reproduced only under the same early configuration and information conditions—not a permanent physical constant, source-side delay, or hidden transmission. It also preserves every corrected prose and planning decision from the task-8.7 reread without turning those exploratory chapters into approved continuity.
 
 `resolved_decision_refs` lists the sixteen binding, nonsuperseded author decisions the plan depends on. `DEC-013` is absent because `DEC-014` supersedes it.
+
+### Author approval — task 10.2
+
+- **Approved by:** Jessica Mulein
+- **Approved at:** `2026-09-16T22:00:00Z`
+- **Approval record:** this section and the typed `Baseline.author_approval` below
+- **Explicit response:** `Approve recommended baseline`
+- **Final_Targets:** exactly 128 planned chapters; inclusive total Prose_Word range 130,000–150,000
+- **Out-of-range rationale:** none required; the chapter count and both word bounds are within the provisional ranges
+- **Status effect:** the Baseline becomes approved, but Chapters 1–5, 73, 118, and 124 remain `exploratory` until their movement batches reconcile them
 
 ```json record=Baseline schema=1
 {
   "baseline_id": "BASELINE-FINAL-FRONTIER-PROVISIONAL",
-  "state": "provisional",
+  "state": "approved",
   "provisional_arc_complete": true,
   "resolved_decision_refs": [
     "DEC-001",
@@ -464,27 +508,157 @@ Requirement 1.15 and 2.2 targets — one exact planned chapter count and one inc
     "DEC-016",
     "DEC-017"
   ],
-  "calibration_chapters": [
-    1,
-    2,
-    3,
-    4,
-    5,
-    73,
-    118,
-    124
+  "calibration_chapters": [1, 2, 3, 4, 5, 73, 118, 124],
+  "minimal_checker_gate_result_id": "GATE-CALIBRATION-OBJECTIVE-001",
+  "calibration_finding_ids": [
+    "EDITORIAL-CAL-001",
+    "EDITORIAL-CAL-002",
+    "EDITORIAL-CAL-003",
+    "EDITORIAL-CAL-004",
+    "EDITORIAL-CAL-005",
+    "EDITORIAL-CAL-006",
+    "EDITORIAL-CAL-007",
+    "EDITORIAL-CAL-008",
+    "EDITORIAL-CAL-009",
+    "EDITORIAL-CAL-010",
+    "EDITORIAL-CAL-011",
+    "EDITORIAL-CAL-012",
+    "EDITORIAL-CAL-013",
+    "EDITORIAL-CAL-014",
+    "EDITORIAL-CAL-015",
+    "EDITORIAL-CAL-016",
+    "EDITORIAL-CAL-017",
+    "EDITORIAL-CAL-018"
   ],
-  "minimal_checker_gate_result_id": null,
-  "calibration_finding_ids": [],
-  "baseline_revision_pass": null,
-  "full_suite_gate_result_id": null,
-  "author_approval": null,
-  "final_targets": null,
+  "baseline_revision_pass": {
+    "performed_at": "2026-09-16T21:00:00Z",
+    "dispositions": [
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-001",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "Mara's represented voice already performs the planned Discovery experiment-to-consequence movement and Chapter 124 Coda_Turn, so no ArcEntry, voice guidance, or chapter assignment changes."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-002",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "Nia's represented chapters already match the planned dispatch logic, evidence restraint, consent authority, and usable-self-trust trajectory, so the arc remains unchanged."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-003",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "Chapter 118 validates Safiya's planned voice, agency, describe-never-quote handling, and unspecified heritage base; no planning reference requires revision."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-004",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "The shared reader-instruction tic was a prose-level calibration defect, resolved across the exploratory chapters and passed by EDITORIAL-CAL-013; it changes no chapter purpose, POV assignment, Voice Brief, or arc beat."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-005",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "Opening momentum and receive-only facts validate the Chapters 1-5 sequence, including continuous source time and receiver-owned reconstruction latency, so no arc change is warranted."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-006",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "The opening Cross_Cuts are clear and materially nonredundant under their existing reciprocal assignments, so participants, chronology, and replay boundaries stay fixed."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-007",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "Current hooks and pacing serve the planned information, decision, absence, and moral-remainder turns; no purpose, hook, or length plan changes."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-008",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "Chapter 73 realizes its existing bounded-consent, fluent-pairing, and unresolved-provenance purpose without changing Nia's authority or the planned mechanism."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-009",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "The copied cancellation-field phrasing was a prose-level defect, resolved in Chapter 118 and passed by EDITORIAL-CAL-014; DEC-017's sensory-family echo and delayed naming remain unchanged."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-010",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "Safiya owns the loss and request while Mara's Chapter 124 refusal remains grounded in physics and truth, validating the existing Coda sequence and Coda_Turn."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-011",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "Tenderness, restraint, human cost, emotional truth, and originality pass under the current architecture, so no structural or tonal planning revision is indicated."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-012",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "Julian's deliberate calibration absence is correct; his Requirement 5.11 review remains due at planned Chapter 6, with no change to the batch or POV load."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-013",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "The corrective follow-up confirms that Mara, Nia, and Safiya separate at sentence-making level; existing POV assignments and current Voice Briefs remain fit."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-014",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "The corrected Chapter 73/118 echo carries only the planned sensory family and leaves the link unnamed, exactly preserving DEC-017."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-015",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "The chronology review validates the synchronized processing-latency canon: continuous raw acquisition, configuration-dependent eight-second reconstruction, no source gap, and no transmit stage."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-016",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "Chapter 73 preserves its contemporaneous horizon, bounded authorization, local consequence, and usable self-trust without scalable doctrine, so its ArcEntry remains correct."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-017",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "The Coda review validates Safiya's maternal-language continuity, Mara's truthful refusal, and the distinct kettle assignments at Chapters 118 and 124; no motif or arc changes."
+      },
+      {
+        "editorial_finding_id": "EDITORIAL-CAL-018",
+        "outcome": "no-change-rationale",
+        "arc_change_id": null,
+        "rationale": "The final corrective reread validates opening momentum, Cross_Cut clarity, hook variety, restraint, human cost, and emotional truth across the provisional plan."
+      }
+    ]
+  },
+  "full_suite_gate_result_id": "GATE-BASELINE-OBJECTIVE-001",
+  "author_approval": {
+    "approved_by": "Jessica Mulein",
+    "approved_at": "2026-09-16T22:00:00Z",
+    "approval_record": "planning/arc-outline.md#author-approval--task-102"
+  },
+  "final_targets": {
+    "chapter_count": 128,
+    "minimum_words": 130000,
+    "maximum_words": 150000
+  },
   "out_of_range_rationale": null
 }
 ```
 
-`provisional_arc_complete` flips to `true` only when all 128 entries and every direct reference they make exist and resolve. Tasks 5.2 through 5.6 are its prerequisites, and task 5.8 verified the condition and set the flag. The path to `approved` then runs: complete provisional arc → minimal checker gate → calibration prose and editorial findings → exactly one Baseline_Revision_Pass dispositioning every finding → passing full-suite gate → author approval and Final_Targets. After approval, changes come only through a documented `ArcChange` in [`arc-changes.md`](arc-changes.md).
+`provisional_arc_complete` flipped to `true` only when all 128 entries and every direct reference they make existed and resolved. Tasks 5.2 through 5.6 were its prerequisites, and task 5.8 verified the condition. The single Baseline_Revision_Pass is complete and remains the only such pass for this Baseline. Task 10.2 records the author's approval and Final_Targets without changing any ArcEntry, continuity fact, motif placement, POV assignment, Voice Brief, or exploratory Chapter_File. From this approval forward, changes come only through a documented `ArcChange` in [`arc-changes.md`](arc-changes.md).
 
 ---
 
@@ -570,16 +744,16 @@ Owner: **task 5.2.** Allocation: 29 chapters, 30,000 provisional Prose_Words, Ma
 
 Movement invariants beyond the global set:
 
-- The December source-side morning is continuous. The eight-second reception/transport offset belongs only to Mara's receive-only observation; Nia experiences no gap.
+- The December source-side morning is continuous. Under the early apparatus configuration, requested fidelity, context window, and information load used in chapters 1–5, acquisition-to-resolved-output reconstruction latency is reproducibly eight seconds on Mara's receive-only side; Nia experiences no gap. Reprocessing the same raw sample with the same settings reproduces the result, while reduced context or processing degrades or destroys coherence. Eight seconds is not a universal physical constant, and later hardware, algorithms, fidelity choices, noise, confidence requirements, complexity, or information volume may change it.
 - The December apparatus has **no transmit stage**. It identifies and locks Nia's person-specific channel/address. The temporary bench transmit path and the later handshake/wanting event belong to 16–20 and carry their own chronology entry, `TL-DISCOVERY-HANDSHAKE`.
 - `DEC-002`: Nia holds both roles and the shared identity may be fixed. No entry may resolve whether Mara's later handshake caused the wanting.
 - `DEC-012`/`DEC-015`: no Discovery entry uses `ESP` or `Electronic Speech Pairings` as an established term, and no later back-label implies December transmitted.
-- Motifs due: `MOT-CHAIN-01` at 13, `MOT-COME-01` at 16. Reveal release: `REVEAL-NIA-SOURCE-CASUALTY` at 24, window 21–25.
+- Motifs due: `MOT-CHAIN-01` at 13, `MOT-COME-01` at 16. Reveal release: `REVEAL-NIA-SOURCE-CASUALTY` is advanced at 21 and released by Mara's necessarily explicit verification in 23; Nia owns the Chapter 24 refusal and interpretation. `ARC-CHANGE-DISCOVERY-001` corrects the prior Chapter 24 release record because delaying Mara's already verified knowledge would be artificial withholding.
 - Composition sits inside `TL-RECORD-PRETRUST-COMPOSITION` for 1–5 and 16–29; the Civic Record Trust does not exist yet.
 
 #### Entries — chapters 1–29
 
-**Active `ArcEntry` records for chapters 1–29: 29.** Written by task 5.2. POV load Mara 14 / Nia 9 / Julian 6, longest POV run 2, four outliers (13, 16, 17, 24) against a 25-entry normal floor, `MOT-CHAIN-01` at 13 and `MOT-COME-01` at 16, and `REVEAL-NIA-SOURCE-CASUALTY` advanced at 21 and 23 and released at 24, its owning POV's chapter, inside its 21–25 window. Eight entries record `"none"`: 5, 6, 9, 10, 15, 20, 22, and 25.
+**Active `ArcEntry` records for chapters 1–29: 29.** Written by task 5.2 and approved through the task 12.7 Discovery movement gate. POV load Mara 14 / Nia 9 / Julian 6, longest POV run 2, four outliers (13, 16, 17, 24) against a 25-entry normal floor, `MOT-CHAIN-01` at 13 and `MOT-COME-01` at 16, and `REVEAL-NIA-SOURCE-CASUALTY` advanced at 21, released in Mara's Chapter 23 verification, and answered by Nia's refusal at 24 inside its 21–25 window. Eight entries record `"none"`: 5, 6, 9, 10, 15, 20, 22, and 25.
 
 ```json record=ArcEntry schema=1
 [
@@ -598,7 +772,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": true,
     "representative_purpose": null,
     "record_horizon": {
@@ -622,7 +796,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": true,
     "representative_purpose": null,
     "record_horizon": {
@@ -637,21 +811,21 @@ Movement invariants beyond the global set:
     "movement": "discovery_part",
     "timeline_id": "TL-DECEMBER-RECEIVE",
     "pov_id": "POV-MARA",
-    "purpose": "Mara's first verification fails, and the failure forces her to locate the eight-second offset in her own reception rather than in whatever she is receiving.",
+    "purpose": "Mara's first verification fails, and the failure locates the reproducible eight-second acquisition-to-resolved-output latency in her configured reconstruction rather than in whatever she is receiving.",
     "hook": "The check she built to kill the result kills the wrong thing, and the eight seconds survive it as hers.",
     "cross_cuts": [
-      "CUT-OFFSET-ASYMMETRY"
+      "CUT-RECONSTRUCTION-LATENCY"
     ],
     "motif_events": [],
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": true,
     "representative_purpose": null,
     "record_horizon": {
       "through_timeline_id": "TL-DECEMBER-RECEIVE",
-      "knowledge_limit": "Mara knows the offset belongs to her reception and transport path and that the apparatus cannot transmit; she cannot yet name a person, a place, or a mechanism."
+      "knowledge_limit": "Mara knows the eight-second latency belongs to acquisition-to-resolved-output reconstruction under the tested configuration, that the same raw sample and settings reproduce it, that inadequate context or processing degrades coherence, and that the apparatus cannot transmit; she cannot yet name a person, a place, or a mechanism, and she does not know what later hardware or algorithms may do."
     },
     "reveal_ids": []
   },
@@ -664,13 +838,13 @@ Movement invariants beyond the global set:
     "purpose": "Nia's morning runs continuous through the same interval, fixing that the source side has no discontinuity at all.",
     "hook": "Her clock, her road call, and her console at ten to seven agree with one another, and the twenty minutes between them hold nothing she would ever have thought to report.",
     "cross_cuts": [
-      "CUT-OFFSET-ASYMMETRY"
+      "CUT-RECONSTRUCTION-LATENCY"
     ],
     "motif_events": [],
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": true,
     "representative_purpose": null,
     "record_horizon": {
@@ -692,7 +866,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": true,
     "representative_purpose": null,
     "record_horizon": {
@@ -714,7 +888,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -738,7 +912,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -762,7 +936,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -784,7 +958,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -806,7 +980,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": 1050,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -830,7 +1004,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": 1100,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -854,7 +1028,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -880,7 +1054,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "long-outlier",
     "estimated_words": null,
     "outlier_purpose": "Expansion: the person-specific proof needs experiment, failed control, result, and the immediate recognition that a person has become an address to land in one unbroken sequence.",
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -904,7 +1078,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": 1000,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -926,7 +1100,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": 1050,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -952,7 +1126,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "microchapter",
     "estimated_words": null,
     "outlier_purpose": "Compression: the send is one irreversible act, and cutting at the act denies the chapter room to argue itself into justification.",
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -976,7 +1150,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "long-outlier",
     "estimated_words": null,
     "outlier_purpose": "Expansion: two simultaneous calls, one available advanced unit, the arriving certainty, the routing, and the single documented outcome must land inside one continuous shift.",
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1000,7 +1174,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1024,7 +1198,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1046,7 +1220,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1070,7 +1244,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1094,7 +1268,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1119,7 +1293,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1145,7 +1319,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "microchapter",
     "estimated_words": null,
     "outlier_purpose": "Compression: the refusal is one sustained act of speech, and ending on it denies the scene an explanatory aftermath or a softening exchange.",
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1169,7 +1343,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1193,7 +1367,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1217,7 +1391,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1241,7 +1415,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1265,7 +1439,7 @@ Movement invariants beyond the global set:
     "estimated_length_class": "normal",
     "estimated_words": 1100,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "approved",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1322,7 +1496,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1348,7 +1522,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1372,7 +1546,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1396,7 +1570,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1420,7 +1594,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1444,7 +1618,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1468,7 +1642,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1490,7 +1664,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1514,7 +1688,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1536,7 +1710,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1560,7 +1734,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1582,7 +1756,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -1606,7 +1780,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2110,6 +2284,7 @@ Movement invariants beyond the global set:
 - Null extent uses the canonical wording **an affected area canonically described as three counties wide**. No geometric radius is derived, no county is named, and the country stays unnamed.
 - Active defender counterphase transmission and rhetorical collective declaration are confined to this movement.
 - 109–112 completes `DEC-007`: Nia stops needing the wanting's origin and regains usable self-trust without deciding causation, forgiving Mara, or validating Julian's archive. Both origin accounts stay `unverified`. Under `DEC-005`, conditioned provenance-preserving Trust releases begin contesting official summaries with no unified inquiry, no complete-holdings disclosure, and no correction of the first-casualty attribution.
+- **`DEC-018` planning obligation — uncounted private civilian loss, 109–112.** The class of loss the null produced in ordinary private life must be made vivid inside Chapters 109–114 **before** Safiya's Chapter 118 account. The Mindwars half of that obligation falls on 109–112, where Julian holds 109 and 111 and Nia holds 110: the history of quiet is also the first place where losses that no instrument recorded and no institution counted arrive as specific people rather than as a category. Strict boundaries: this is done **without Safiya's POV**, which still begins at 115; without entering Safiya's home, which global invariant 24 already forbids; without naming, describing, or foreshadowing her particular loss; and without pre-empting `REVEAL-SAFIYA-TUESDAY-LOSS`, which still releases at 118 inside its unchanged 118–119 window and stays owned by `POV-SAFIYA`. The people whose losses appear here are other civilians, none of whom is Safiya, connected to her by nothing but the same field. Under the `DEC-018` supporting canon in [`canon-bible.md`](canon-bible.md) a private two-person language layer is already an established class of thing that can be lost, so these chapters may draw on the class without inventing it and without connecting Ada and Lena Ferris to anyone in the Coda. This is a drafting obligation carried by this section, not an `ArcEntry` field, and it creates no `Reveal`, `Motif_Event`, `CrossCut`, or `Literal_Phrase_Constraint`.
 - Motifs due: `MOT-COPPER-02` at 70, `MOT-KNOCK-01` and `MOT-YES-01` at 73, `MOT-COME-03` at 74, `MOT-RADIUS-01` at 101, `MOT-RECORD-02` at 109. Counterphase is chain context only — no `MOT-CHAIN-04`.
 - Reveal releases: `REVEAL-COUNTERPHASE-TRANSMITS` at 72, window 70–77; `REVEAL-AFFECTED-AREA-EXTENT` at 96, window 94–101.
 
@@ -2410,15 +2585,15 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
       "MOT-KNOCK-01",
       "MOT-YES-01"
     ],
-    "estimated_length_class": "long-outlier",
+    "estimated_length_class": "normal",
     "estimated_words": null,
-    "outlier_purpose": "Expansion to hold the whole authorization question asked and answered in one room, including the conditions Nia sets, the knock-and-wait challenge, and the concrete bodily register of a cancellation field experienced from inside.",
+    "outlier_purpose": null,
     "status": "exploratory",
     "calibration_selected": true,
     "representative_purpose": "Tests counterphase consent, the Mindwars tonal expansion, and Nia's ability to exercise authorization authority without a resolved provenance (`DEC-007`).",
     "record_horizon": {
-      "through_timeline_id": "TL-TRUST-ROLLING-DEPOSITS",
-      "knowledge_limit": "Nia knows what she was asked, what she required, what she answered, and what the field felt like in her own body, and she knows the paired channel carried only what she and Mara each deliberately sent, that either of them could pause or revoke it at any second, and that its consent-state and transport metadata hold timing and permission and no thought at all; she does not know whether the same operation can be aimed, widened, or undone, and neither the test nor the session records speak to where her earlier certainty came from."
+      "through_timeline_id": "TL-MINDWARS-COUNTERPHASE",
+      "knowledge_limit": "Nia knows what she was asked, the four conditions she originated, the spoken time-bound yes Halloran transcribed and received, what the bounded field felt like in her body, the familiar phrase she could not access afterward, and that the paired channel carried only deliberate sends while its metadata held timing and permission rather than thought; she does not know whether the cancellation operation can be aimed, widened, or undone, and neither this local run nor its records speak to future deployments or to where her earlier certainty came from."
     },
     "reveal_ids": [
       "REVEAL-COUNTERPHASE-TRANSMITS"
@@ -3413,6 +3588,7 @@ Movement invariants beyond the global set:
 - Under `DEC-017`, Chapter 118 reuses the Chapter 73 cancellation-field vocabulary with no authorization question anywhere near it — the absence of the question is the echo, Safiya does not know about Chapter 73, and no narrator supplies the link. The parallel stays unnamed through 123 and is named exactly once in Chapter 128, inside the existing `MOT-RECORD-03` entry against herself: the protocol she was held to was one room wide, and she then ran the same mechanism across an area canonically described as three counties wide with no one to ask. It stays dry self-indictment, resolves no provenance, absolves nothing, validates no archive, and does not reinterpret Safiya's consent.
 - Motifs due: `MOT-KNOCK-02` at 116 and 117; `MOT-KETTLE-01` at 118; `MOT-RADIUS-02` at 120; `MOT-COME-04`, `MOT-COPPER-03`, and `MOT-KETTLE-02` at 124; `MOT-CHAIN-03` at 127; `MOT-RECORD-03`, `MOT-KNOCK-03`, and `MOT-WHOSE-01` at 128.
 - Reveal release: `REVEAL-SAFIYA-TUESDAY-LOSS` at 118, window 118–119. `REVEAL-CODA-PROVENANCE` is never revealed and appears in no entry.
+- **`DEC-018` planning obligation — uncounted private civilian loss, 113–114.** These two chapters carry the Coda half of the obligation that begins at 109. Chapter 113 is Nia at the civilian-loss intake desk and Chapter 114 is Julian issuing a conditioned release, which makes them the last and best places to establish, in specific people, that the null took things from private life that no instrument recorded and no institution counted. The class must be vivid here **before** Chapter 118, so that Safiya's account lands on prepared ground instead of introducing the category and the grief together. Boundaries, all strict: no Safiya POV before 115; no chapter enters her home; her particular loss is not named, described, paraphrased, or foreshadowed; `REVEAL-SAFIYA-TUESDAY-LOSS` still releases at 118 inside its unchanged 118–119 window with `POV-SAFIYA` as owner; and the civilians whose losses appear at 113 and 114 are other people, unconnected to Safiya and to each other except by the same field. Her documented request is found at 114 as an intake record; finding a request is not learning what she lost. Under the `DEC-018` supporting canon in [`canon-bible.md`](canon-bible.md) the private two-person language layer is already an established class, and neither Ada nor Lena Ferris may be connected to the Coda. This is a drafting obligation carried by this section, not an `ArcEntry` field, and it creates no `Reveal`, `Motif_Event`, `CrossCut`, or `Literal_Phrase_Constraint`.
 - Chapters 118 and 124 are Calibration Batch members; task 5.7 supplies their representative purposes.
 
 #### Entries — chapters 113–128
@@ -3555,7 +3731,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "movement": "aftermath_coda",
     "timeline_id": "TL-CODA-ACCOUNT",
     "pov_id": "POV-SAFIYA",
-    "purpose": "Safiya puts her own account on the record in her own words: a Tuesday, the kettle on, eleven miles from the array, nothing foreign arriving, and the private layer she had only with her mother no longer where she left it.",
+    "purpose": "Safiya addresses Mara directly and gives her own account in her own words: a Tuesday, the kettle on, eleven miles from the array, nothing foreign arriving, and the private layer she had only with her mother no longer where she left it.",
     "hook": "She describes what the quiet did inside her own head while the kettle went on heating, and she reaches the end of it without being interrupted or corrected.",
     "cross_cuts": [
       "CUT-TUESDAY-AND-THE-SHAPE"
@@ -3848,7 +4024,7 @@ Tasks 5.2 through 5.5 add `CrossCut` records here as typed `json record=CrossCut
 
 Eleven records, ordered by first participating chapter. Each rests on a shared moment, a shared consequence, or a shared missing fact rather than on co-membership in a chronology interval; chapters 5, 6, 9, 10, 15, 20, 22, and 25 record `"none"` because no such relationship exists for them.
 
-Two of these carry a standing continuity load and are worth naming here. `CUT-OFFSET-ASYMMETRY` is where the eight-second offset is pinned to Mara's receiving side and the source-side morning is pinned as continuous, so neither can drift later. `CUT-HANDSHAKE-AND-TRIAGE` braids the content-free send against the triage decision and is deliberately a `temporal-braid` rather than a `causal-cut`: the declaration fixes order and address and asserts no causation, because `REVEAL-HANDSHAKE-WANTING-ORIGIN` has no owner and no release window.
+Two of these carry a standing continuity load and are worth naming here. `CUT-RECONSTRUCTION-LATENCY` is where the reproducible eight-second acquisition-to-resolved-output latency is pinned to Mara's configured receiving apparatus and the source-side morning is pinned as continuous, so neither can drift later or become a universal physical constant. `CUT-HANDSHAKE-AND-TRIAGE` braids the content-free send against the triage decision and is deliberately a `temporal-braid` rather than a `causal-cut`: the declaration fixes order and address and asserts no causation, because `REVEAL-HANDSHAKE-WANTING-ORIGIN` has no owner and no release window.
 
 ```json record=CrossCut schema=1
 [
@@ -3879,23 +4055,23 @@ Two of these carry a standing continuity load and are worth naming here. `CUT-OF
     ]
   },
   {
-    "cross_cut_id": "CUT-OFFSET-ASYMMETRY",
+    "cross_cut_id": "CUT-RECONSTRUCTION-LATENCY",
     "chapters": [
       3,
       4
     ],
     "shared_timeline_id": "TL-DECEMBER-RECEIVE",
     "shared_reveal_id": null,
-    "shared_consequence": "The eight-second offset is fixed as a property of the receiving side alone, and the source side is fixed as continuous.",
+    "shared_consequence": "Under the tested early configuration, the raw field is acquired and timestamped continuously and resolves into legible experience eight seconds later on Mara's side, while Nia's source-side morning remains continuous.",
     "handoff_mode": "temporal-braid",
     "material_narrative_value": [
       {
         "chapter": 3,
-        "value": "Mara's failed control and its repair locate the offset in her own reception and transport path rather than in the source."
+        "value": "Mara's controls and repeat processing locate the reproducible latency between raw acquisition and resolved output under a particular context, fidelity, information load, and processing configuration rather than in the source."
       },
       {
         "chapter": 4,
-        "value": "Nia's alarm, road call, and console at ten to seven run unbroken through the same interval, so she has no gap to notice or report."
+        "value": "Nia's alarm, shower, 6:31 road call, and console at ten to seven run unbroken through the same interval, so she has no gap or delay to notice or report."
       }
     ],
     "replay_boundary": "Chapter 4 resumes Nia's morning forward from her own clock and depicts no receiver, no offset, and no measurement.",

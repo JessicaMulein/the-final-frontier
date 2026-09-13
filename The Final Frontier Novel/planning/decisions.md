@@ -124,10 +124,15 @@ observers' frames. The conclusion that the evidence is thin stands; the stated r
 
 ### Corrected mechanism and chronology
 
-The December apparatus is **receive-only** and has no transmit stage. Its discovery function is to
-receive Nia’s continuous ordinary morning with Mara’s eight-second transport offset and identify or
-lock onto Nia’s person-specific channel/address. No part of the approved braid depends on hidden
-December transmission.
+The December apparatus is **receive-only** and has no transmit stage. It continuously acquires and
+timestamps Nia’s raw field, then reconstructs that field as legible experience. Under the early
+apparatus configuration, requested fidelity, context, information load, noise, and confidence
+conditions used in these scenes, acquisition-to-resolved-output latency is reproducibly eight seconds
+on Mara’s side. Same-sample/same-settings reprocessing reproduces the result; inadequate context or
+processing degrades or destroys coherence. Nia has no source-side delay or gap. Eight seconds is not a
+permanent physical constant or necessarily irreducible, and no part of the approved braid depends on
+hidden December transmission. The receive event also identifies or locks onto Nia’s person-specific
+channel/address.
 
 Later, in Chapters 16–20, Mara deliberately adds a temporary bench transmit path and sends the
 content-free handshake through that same person-specific address. The protected causal claim is that
@@ -1651,12 +1656,210 @@ This is craft direction enforced by the existing human Editorial Gates, exactly 
 
 ---
 
+## DEC-018 — Chapter shape, forward pressure, voice separation, and human cost
+
+- **Task:** Author-directed revision pass on delivered Chapters 1–46 after the craft review of
+  Chapters 1–46 plus calibration Chapters 73, 118, and 124; input to tasks 8, 12–17, and every later
+  drafting and editorial task
+- **Date:** 2026-09-18
+- **State:** `binding`; craft and disclosure authority, plus a narrow authorization for the supporting
+  canon this decision requires. It is not Canon Lyric. It supersedes nothing.
+- **Selected:** Open chapters inside unnamed significance, close them on a live question, and carry
+  voice separation, human cost, and warmth as first-class craft obligations. The `hook` field returns
+  to being planning metadata and stops being the last line of the prose.
+
+### Why this decision exists
+
+A commissioned craft review of the delivered manuscript found nine defects. One dominates: the chapters
+have become closed loops. A chapter states its thesis in its first sentence, performs that thesis, and
+then restates its `ArcEntry` `hook` almost word for word as its final line. Every one of the thirteen
+delivered Private_Defense chapters from 30 to 42 does this, and so do 43 through 46. The effect is a
+manuscript of self-summarizing units in which no question survives a chapter boundary.
+
+That is a failure of `DEC-016` clause 3 rather than a new requirement. Clause 3 already says endings
+must turn on information, a decision lock, reversal, arrival, danger, absence, or moral remainder. A
+paraphrase of the planning `hook` is none of those; it is a label for the chapter that just ended. The
+review also found that the correct prohibition on artificial withholding had been over-applied until it
+removed legitimate dread as well, that declared `contradiction-cut` relationships were being dissolved
+by narrators who state the contradiction themselves, that three of the four viewpoints share one
+syntax, that no viewpoint lead has a family, a shared meal, a joke, or a touch on the page, and that
+the highest-page-count viewpoint incurs no personal cost before Chapter 55.
+
+The author has directed that all nine findings be fixed and has authorized canon additions where the
+fix needs them.
+
+### Binding craft clauses
+
+Each clause is separately checkable by a human reader and is numbered so an `EditorialFinding` can cite
+it. **Every clause below is a human Editorial_Gate criterion and carries no automated score.** Under
+global invariant 25 of [`arc-outline.md`](arc-outline.md) and Requirement 12.12, no checker may score,
+rank, threshold, or pass/fail any of them, no `ArcEntry` or `ChapterHeader` field may be added to carry
+a value for them, and no numeric craft score, style score, sentence-length target, suspense rating, or
+hook-force value exists anywhere in this project. Findings live in
+[`editorial-log.md`](editorial-log.md) with representative prose evidence and a `pass` or `revision`
+result.
+
+1. **No thesis opening.** No chapter may open with a sentence that states that chapter's thesis,
+   conclusion, or summary judgment. Openings begin inside action, sensation, an object, or speech whose
+   significance is not yet named. The reader may arrive at the chapter's meaning; the first sentence may
+   not hand it over.
+2. **No hook echo.** No chapter may close with a restatement, paraphrase, or near-verbatim echo of its
+   `ArcEntry` `hook`. The `hook` field is planning-only metadata describing the intended final-beat
+   pull, and it never appears as prose. A final line that could be deleted and reconstructed from the
+   header is a `revision` finding.
+3. **One live question per boundary.** Every chapter must leave at least one question live at its
+   boundary, generated by consequence, obligation, dread, or a fixed-time event. This clause does not
+   relax anything: artificial withholding of a fact the narrator already possesses remains prohibited,
+   and Requirements 2.13 and 2.14 and the `DEC-016` question-gap limit of at most two adjacent
+   question-gap endings are unchanged. A live question is something the narrator also does not know,
+   or knows and cannot yet act on.
+4. **Reluctant retrospection is authorized.** A first-person narrator may signal foreknowledge of cost
+   without disclosing the later fact. Chapter 1's *That is the sentence I would take back if I were
+   allowed one* is the authorized model: it conceals no fact the narrator holds, and it promises a cost.
+   This is the one legitimate source of dread the retrospective frame supplies, and it had been left
+   almost unused after Chapter 1.
+5. **Contradiction-cuts stay unspoken.** Where a `CrossCut` declares `handoff_mode:
+   "contradiction-cut"`, no participating narrator may state the contradiction in explicit terms. The
+   reader assembles it from the two positions. A narrator who names the contradiction has spent the
+   architecture that the cross-cut exists to create, and the `replay_boundary` on those records is not
+   a licence to substitute statement for structure.
+6. **Enumerated absence is rationed.** The enumerated-absence construction — a run of short negative
+   sentences such as *No voice. No sentence. No proposition.* — is limited to at most one instance per
+   chapter, and only where that absence is the chapter's subject. It is currently a house tic shared by
+   all three Main-Part viewpoints and is doing the work of a shrug.
+7. **Voice separation is structural.** Voice separation must be carried by syntax, rhythm, paragraph
+   shape, and what each narrator notices — not by domain vocabulary alone. Terminal aphorism is
+   rationed, not default. Safiya's Chapter 118 register is the standing target for distinctness, and
+   the isolated one-sentence paragraph is not the default unit of any viewpoint.
+8. **Every lead pays.** Each POV lead must incur at least one personal, non-abstract cost in each
+   movement in which they hold chapters. Institutional strain, budget pressure, and abstract guilt do
+   not satisfy this. The cost must be something the narrator loses, gives up, or cannot get back.
+9. **Warmth is a movement obligation.** Every movement must contain at least one scene of
+   non-professional warmth between named characters, one instance of food, rest, or physical comfort
+   offered and accepted, and one instance of humor that is not a professional riposte. No POV lead may
+   be rendered lonelier or flatter than the supporting cast. Ada and Lena Ferris and Tomas Reyner and
+   Cora Baird currently hold the warmest and funniest material in the delivered manuscript while the
+   four leads narrate themselves as case files, and that ordering is wrong.
+10. **Normal-class word target.** `normal`-class chapters target **1,050–1,200 Prose_Words**.
+    `microchapter` and `long-outlier` entries keep the compression or expansion named in their
+    `outlier_purpose` and are not inflated to reach a total. The Normal_Chapter_Range stays 700–1,600,
+    the Hard_Chapter_Maximum stays 2,500, and the `DEC-016` same-POV run limit of 3,600 combined
+    Prose_Words is unchanged and still binds.
+
+### Clause 10 arithmetic, against the approved Final_Targets
+
+The approved `Final_Targets` in `BASELINE-FINAL-FRONTIER-PROVISIONAL` are 128 chapters and an inclusive
+total of 130,000–150,000 Prose_Words. The delivered manuscript was tracking well below that: 45
+delivered chapters declare 41,020 Prose_Words for a mean of 912, which extended across 128 chapters
+projects roughly 117,000 — about 13,000 words short of the floor.
+
+The outline's actual length-class distribution is **110 `normal`, 10 `microchapter`, and 8
+`long-outlier`**, totalling 128. The outliers are held at their declared purposes rather than inflated,
+so their contribution is treated as fixed and is computed from the values the project has actually
+selected or delivered rather than from the width of their class bands:
+
+| Class | Count | Known values | Mean of known | Class contribution |
+|---|---:|---|---:|---:|
+| `microchapter` | 10 | 550, 487, 423 delivered at Chapters 16, 24, 45; 520, 480, 480, 560 planned at 50, 72, 116, 125 | 500 | **5,000** |
+| `long-outlier` | 8 | 1,618 and 1,626 delivered at Chapters 13 and 17; 2,300 and 1,650 planned at 101 and 128 | 1,798.5 | **≈14,400** |
+| **18 outliers** | | | | **≈19,400** |
+
+The 110 `normal` chapters then carry the remainder:
+
+| Normal-class mean | 110 normals | plus ≈19,400 outlier words | Inside 130,000–150,000 |
+|---:|---:|---:|---|
+| 1,050 (band floor) | 115,500 | **≈134,900** | yes |
+| 1,125 (band midpoint) | 123,750 | **≈143,150** | yes |
+| 1,200 (band ceiling) | 132,000 | **≈151,400** | no, over by ≈1,400 |
+
+So the band lands inside the approved range, and its **midpoint is the planning target**. The operative
+statement is that the 110 normal chapters must average between about **1,006 and 1,187** Prose_Words for
+the manuscript to finish inside 130,000–150,000: 130,000 − 19,400 = 110,600 over 110 chapters, and
+150,000 − 19,400 = 130,600 over 110 chapters. The 1,050–1,200 band brackets that range, and 1,125 sits
+comfortably inside it at about 143,000 words. The 1,200 figure is a per-chapter ceiling for the class,
+not a target for the mean. Drafting at the band midpoint recovers the entire shortfall.
+
+Clause 10 is also compatible with the run cap. The outline's longest same-POV run is two chapters, so
+the worst two-chapter normal run is 2,400 Prose_Words against a 3,600 limit. The two runs that pair a
+`normal` with a `long-outlier` stay inside it as well: Chapters 100–101 reach 3,500 at the band ceiling
+against a 3,450 planning value, and Chapters 127–128 reach 2,850. Even a hypothetical three-chapter
+normal run at the band ceiling lands on 3,600 exactly rather than above it.
+
+### Narrow canon authorization
+
+This decision authorizes the supporting canon that clauses 5, 8, and 9 require and that the review's
+dropped-thread finding exposes. Those additions are recorded in [`canon-bible.md`](canon-bible.md)
+under `source_location: DEC-018` and are limited to: a surname for the existing Northline technician
+`CHAR-011`; the status of Mara's Northline-internal exposed-persons list; one unverified private report
+by that technician; his request for reassignment and Mara's resulting personal cost; the identity of the
+vehicle at the Northline Array gate at the end of Chapter 35; the recognized class of private
+two-person language layer, established through Ada and Lena Ferris; and one recurring non-professional
+relationship each for Nia Calder and Mara Venn.
+
+The authorization is deliberately narrow. It creates no POV, no `VoiceBrief`, no chapter, no
+`Motif_Event`, no `Literal_Phrase_Constraint`, and no `Reveal`, and it changes no `POVProfile` record,
+no roster load, and no movement allocation. Julian Adebayo receives no new relationship: his isolation
+is characterization and stays that way, and clause 9 is satisfied for him inside scenes he shares.
+
+### What this decision does not touch
+
+Every item below is preserved unchanged, and the revision pass may not weaken or reopen any of them:
+
+- `DEC-002`'s receive-only December apparatus with no transmit stage, and the distinct later temporary
+  bench path;
+- the receiver-owned, configuration-and-information-load-dependent reconstruction latency, which is not
+  a permanent constant, a transit time, or a source-side delay;
+- the content-free handshake, and Nia's self-experienced wanting;
+- unresolved causation and the `DEC-007` asymmetry, with no confirmation, appropriation, or absolution
+  available to anyone;
+- the three never-revealed Reveal IDs;
+- Mara's Chapter 23 first reader release of `REVEAL-NIA-SOURCE-CASUALTY`, with Nia owning the Chapter 24
+  refusal;
+- page nine as architectural capability only;
+- the closed motif families, with no new `Motif_Event` and no new `Literal_Phrase_Constraint`;
+- the four-POV limit and the 56/32/33/7 loads;
+- the 29/32/51/16 movement allocation; and
+- the prohibition on any POV for a sender, adversary, archive, simulation, model, or group mind.
+
+`DEC-003` is likewise unweakened by the two-person-language-layer canon: `heritage_base:
+unspecified_by_author` remains exact, the Ferris layer is not lost and is never connected to Safiya, and
+Mara's Chapter 124 refusal stays physics rather than principle because no corpus of Safiya's layer
+survives anywhere.
+
+### Retired alternatives
+
+| Retired option | Why it was rejected |
+|---|---|
+| Treat the hook echo as acceptable emphasis, as `EDITORIAL-DISCOVERY-MOVEMENT-007` did | That finding read the repetition as testimony emphasis. Across 46 chapters it is not emphasis, it is a template, and it removes the reader's reason to turn the page. |
+| Restore forward pressure by withholding facts the narrator holds | Forbidden by Requirements 2.13 and 2.14 and by the design's ban on coy concealment, and it would undo `ARC-CHANGE-DISCOVERY-001`. Clause 4 supplies the legitimate route instead. |
+| Differentiate the three Main-Part voices by giving each a wider domain vocabulary | This is what already happened and is exactly the defect. Vocabulary is not voice; clause 7 moves the work to syntax, rhythm, paragraph shape, and attention. |
+| Add a warmth requirement to `requirements.md` as an acceptance criterion | Requirements 14 and 15 were deliberately trimmed on 2026-09-11 because prose-judgeable criteria belong to Editorial_Review under Requirement 12.12. Clause 9 is an Editorial_Gate criterion for the same reason. |
+| Fix the word shortfall by inflating microchapters and long-outliers | Destroys the declared `outlier_purpose` of eighteen entries to buy words that clause 10 recovers from the normal class instead. |
+| Move Safiya earlier to fix her late arrival | Rejected: `DEC-016` establishes that her absence is what lets Chapter 118 land. The fix is to make uncounted civilian loss vivid before 118 through other people, which is recorded as a planning obligation on Chapters 109–114 rather than as a new Safiya chapter. |
+
+### Affected records and required synchronization
+
+| Record | Required change | State |
+|---|---|---|
+| `planning/canon-bible.md` | Record the narrow canon authorization above as `CanonFact` and `NovelExtension` records; add the `CHAR-011` surname and the two new non-viewpoint Character IDs; add the Chapters 109–114 civilian-loss obligation to the Mindwars and Coda sections' readers | done in this pass |
+| `planning/pov-roster.md` | Restate the new non-viewpoint Character IDs and confirm four profiles, one Anchor, and 56/32/33/7 unchanged | done in this pass |
+| `planning/arc-outline.md` | Carry the Chapters 109–114 obligation in the Mindwars and Coda movement sections; re-budget `estimated_words` for `normal` entries to the clause 10 band | obligation done in this pass; `estimated_words` re-budget pending a later wave under `ARC-CHANGE-REVISION-001` |
+| `planning/editorial-log.md` | Record the nine review findings with prose evidence and one editorial gate for the pass | done in this pass |
+| `planning/arc-changes.md` | Record `ARC-CHANGE-REVISION-001` and `ARC-CHANGE-REVISION-002` | done in this pass |
+| `chapters/**` | Revise delivered prose against clauses 1–10 | pending later waves; no chapter file is touched by this pass |
+| `requirements.md`, `design.md`, `tasks.md` | No new requirement, acceptance criterion, or correctness property; exactly fifteen properties remain | unchanged by design |
+| `planning/motif-ledger.md` | No new `Motif_Event` and no new `Literal_Phrase_Constraint`; closed families stay closed | unchanged by design |
+| `songs/*.md` | No source lyric or song-file change | unchanged |
+
+---
+
 ## Pending decisions
 
 No pending blocking author decisions remain. `DEC-015`, as amended on 2026-09-11, completes the
 four-mode mechanism and evidence boundary; `DEC-016`, as amended on 2026-09-13, closes the original
-thriller architecture and the same-POV run limit; and `DEC-017` closes when the Chapter 73 / null-night
-consent parallel may be named.
+thriller architecture and the same-POV run limit; `DEC-017` closes when the Chapter 73 / null-night
+consent parallel may be named; and `DEC-018` closes chapter shape, forward pressure, voice separation,
+human cost, warmth, and the normal-class word target for the revision pass on delivered prose.
 
 Fluent pair identities and session ownership were deferred to Task 5 within those binding decisions,
 and tasks 5.3 and 5.4 have now made those selections: Mara and Nia are the carried fluent pair, with

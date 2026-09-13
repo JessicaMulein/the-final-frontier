@@ -1415,8 +1415,11 @@ def test_committed_records_load_and_index_without_diagnostics(checker, committed
     assert len(index.of_type("VoiceBrief")) == 4
     assert len(index.of_type("MotifEvent")) == 22
     assert len(index.of_type("CrossCut")) == 65
-    # Four viewpoints plus six approved non-viewpoint character-name extensions.
-    assert len(index.character_ids) == 10
+    # Four viewpoints plus twelve approved non-viewpoint character-name
+    # extensions. DEC-018 added CHAR-015 Joss Calder and CHAR-016 Ruth Venn as
+    # the clause 9 warmth relationships for Nia and Mara; neither creates a
+    # POVProfile, so the profile count above is unchanged.
+    assert len(index.character_ids) == 16
 
 
 def test_committed_records_report_no_objective_violations(checker, committed):

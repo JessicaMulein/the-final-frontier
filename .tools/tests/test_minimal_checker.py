@@ -335,11 +335,11 @@ def test_no_songs_still_yields_empty_search_and_index_artifacts(checker, tmp_pat
 # ---------------------------------------------------------------------------
 
 
-def test_cli_refuses_an_unimplemented_scope_instead_of_passing_silently(
+def test_cli_refuses_an_unrequested_gate_instead_of_passing_silently(
     checker, capsys
 ):
     with pytest.raises(SystemExit) as raised:
         checker.main([])
 
     assert raised.value.code == 2
-    assert "only --site-exclusion is implemented" in capsys.readouterr().err
+    assert "choose a gate" in capsys.readouterr().err

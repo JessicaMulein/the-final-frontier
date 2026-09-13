@@ -13,13 +13,29 @@ Implemented so far:
   resolution, Timeline_ID/POV_ID/Character_ID/VoiceBrief/Motif_Event resolution,
   the closed four-mode `technical_state` invariant table with `CancelState`,
   `PairState`, and `PairingEvidence`, the Requirement 12.5 local agreements, and
-  Cross_Cut integrity gated on the requested batch scope.
+  Cross_Cut integrity gated on the requested batch scope;
+* task 7.4 — scoped Motif_Ledger/Header/ArcEntry assignment checks, the fixed
+  chain/copper and calibration mappings, reciprocal literal-constraint links,
+  and exact NFC/LF Prose_Body-only rejection of ledgered phrases outside their
+  allowed scope without inferring an in-scope count or Final_Passage;
+* task 7.5 — the `--scope chapter` and `--scope batch` modes, the delivered
+  Calibration_Batch and Drafting_Batch size rules, and the changed
+  cross-document reference audit;
+* task 7.6 — one total order over diagnostics, the text and JSON report
+  surfaces, and the `0`/`1`/`2` exit contract;
+* task 8.8 — `--scope global` and the Manuscript_Global_Gate: whole-outline
+  sequence, four ordered contiguous movement blocks, outline/file bijection,
+  both Same_POV_Run bounds, roster size/Anchor coverage/load vector, normal
+  share, movement word relationships, Final_Targets, whole-book literal totals
+  read from the declared Final_Passage span, fixed motif family totals,
+  CanonFact authority under `DEC-011`/`DEC-014`, NovelExtension and Reveal
+  reference integrity, ArcChange atomicity, GateResult consistency, the two
+  independent finalization gates, mandatory Fluent_Pairing coverage, and
+  Front_Matter rights.
 
-Motif-ledger rules and literal-phrase scanning (task 7.4), the `--scope
-chapter`/`--scope batch` CLI (task 7.5), the text/JSON diagnostic surface (task
-7.6), and every whole-manuscript total belong to later specification tasks. The
-checker is read-only: it never rewrites counts, metadata, IDs, statuses, or
-prose, and it never infers a record value from prose commentary.
+The checker is read-only: it never rewrites counts, metadata, IDs, statuses, or
+prose, and it never infers a record value from prose commentary. No diagnostic
+code may name a craft judgment; see `CRAFT_JUDGMENT_TERMS`.
 """
 
 from __future__ import annotations
@@ -987,8 +1003,57 @@ RESULT_EXIT_STATUS: Mapping[str, int] = {
 SCOPE_CHAPTER = "chapter"
 SCOPE_BATCH = "batch"
 SCOPE_PLANNING = "planning"
+SCOPE_GLOBAL = "global"
 
 DIAGNOSTIC_CODE_PATTERN = re.compile(r"^[A-Z][A-Z0-9_]*$")
+
+# Requirements 12.11 and 12.12 remove a fixed list of craft judgments from every
+# automated pass/fail evaluation, so the checker's diagnostic vocabulary must not
+# be able to name one. These are the forbidden fragments of a diagnostic code.
+#
+# The terms are deliberately specific rather than single broad words, because
+# several objective codes legitimately mention the same subject. `HOOK` and
+# `VOICE` appear alone in `CHAPTER_HOOK_DISAGREEMENT` and
+# `VOICE_BRIEF_POV_DISAGREEMENT`, which compare declared Hook metadata and
+# resolve a Voice_Brief ID; Requirement 12.5 requires both. What may never
+# appear is a code that scores the hook or the prose voice itself.
+CRAFT_JUDGMENT_TERMS: Tuple[str, ...] = (
+    "ARTISTRY",
+    "BEAUTY",
+    "DISTINCTNESS",
+    "ELEGANCE",
+    "EMOTIONAL",
+    "HOOK_EFFECTIVENESS",
+    "HOOK_QUALITY",
+    "MOOD",
+    "ORIGINALITY",
+    "PACING",
+    "PROSE_VOICE",
+    "QUALITY",
+    "RATING",
+    "RESTRAINT",
+    "RHETORICAL",
+    "SCORE",
+    "SENTENCE_RHYTHM",
+    "TENDERNESS",
+    "TONAL",
+    "VOICE_FIDELITY",
+)
+
+
+def craft_judgment_term(code: str) -> Optional[str]:
+    """The forbidden craft-judgment term in `code`, or `None` when it is clean.
+
+    Returns the term rather than a boolean so both the programming-error backstop
+    in `CheckerDiagnostic` and the author-facing ledger diagnostic can name what
+    they rejected.
+    """
+
+    upper = code.upper()
+    for term in CRAFT_JUDGMENT_TERMS:
+        if term in upper:
+            return term
+    return None
 
 MOVEMENTS: Tuple[str, ...] = (
     "discovery_part",
@@ -1067,23 +1132,231 @@ DEFAULT_RECORD_SOURCES: Tuple[str, ...] = (
     "planning/motif-ledger.md",
 )
 
-# The stable-ID field of each record type this task resolves references against.
-# `CanonFact`, `Reveal`, `Baseline`, and `LiteralPhraseConstraint` are parsed but
-# deliberately unindexed: their reference rules belong to later tasks.
+# The record sources the Manuscript_Global_Gate additionally requires. Kept
+# separate from `DEFAULT_RECORD_SOURCES` on purpose: Requirement 10.9 excludes
+# Final_Targets, baseline approval, and final-ending acceptance from the
+# Chapter_Local_Gate, so a chapter gate must not be able to fail because a
+# whole-book document is absent.
+GLOBAL_RECORD_SOURCES: Tuple[str, ...] = DEFAULT_RECORD_SOURCES + (
+    "planning/arc-changes.md",
+    "planning/gate-results.md",
+    "planning/editorial-log.md",
+)
+
+# The Front_Matter document, which is a Final_Prerequisite but holds no records.
+DEFAULT_FRONT_MATTER_PATH = "front-matter.md"
+
+# The stable-ID field of each record type this checker resolves references
+# against. Task 7.4 adds `LiteralPhraseConstraint` because motif records and
+# their only authorized prose-scan rules must resolve in both directions; task
+# 8.8 adds the whole-book authority, change, and gate records.
 RECORD_ID_FIELDS: Mapping[str, str] = {
     "TimelineEntry": "timeline_id",
     "POVProfile": "pov_id",
     "VoiceBrief": "voice_brief_id",
     "MotifEvent": "motif_event_id",
+    "LiteralPhraseConstraint": "constraint_id",
     "CrossCut": "cross_cut_id",
     "NovelExtension": "extension_id",
+    "CanonFact": "canon_id",
+    "Reveal": "reveal_id",
+    "Baseline": "baseline_id",
+    "ArcChange": "arc_change_id",
+    "EditorialFinding": "editorial_finding_id",
+    "GateResult": "gate_result_id",
 }
 REFERENCE_DANGLING_CODES: Mapping[str, str] = {
     "TimelineEntry": "TIMELINE_REFERENCE_DANGLING",
     "POVProfile": "POV_REFERENCE_DANGLING",
     "VoiceBrief": "VOICE_BRIEF_REFERENCE_DANGLING",
     "MotifEvent": "MOTIF_EVENT_REFERENCE_DANGLING",
+    "LiteralPhraseConstraint": "LITERAL_CONSTRAINT_REFERENCE_DANGLING",
     "CrossCut": "CROSS_CUT_REFERENCE_DANGLING",
+}
+
+MOTIF_EVENT_KEYS: Tuple[str, ...] = (
+    "motif_event_id",
+    "family",
+    "dramatic_function",
+    "movement",
+    "planned_chapter",
+    "participating_chapters",
+    "representation_mode",
+    "literal_constraint_id",
+    "scene_scope",
+    "arc_change_history",
+)
+MOTIF_REPRESENTATION_MODES: Tuple[str, ...] = (
+    "literal",
+    "adapted",
+    "image",
+    "action",
+    "scene-structure",
+)
+LITERAL_CONSTRAINT_KEYS: Tuple[str, ...] = (
+    "constraint_id",
+    "motif_event_id",
+    "exact_phrase",
+    "scan_scope",
+    "allowed_movements",
+    "allowed_chapters",
+    "allowed_files",
+    "allowed_span",
+    "minimum_in_scope",
+    "maximum_in_scope",
+    "exact_in_scope",
+    "maximum_outside_scope",
+    "normalization",
+    "scope_exclusions",
+    "diagnostic_code",
+)
+LITERAL_NORMALIZATION: Mapping[str, Any] = {
+    "unicode": "NFC",
+    "line_endings": "LF",
+    "case_sensitive": True,
+    "punctuation_sensitive": True,
+    "word_order_sensitive": True,
+    "match_mode": "non-overlapping-literal",
+}
+LITERAL_SCOPE_EXCLUSIONS: Tuple[str, ...] = (
+    "canon-source-songs",
+    "other-song-files",
+    "planning-documents",
+    "chapter-headers",
+    "front-matter",
+    "editorial-records",
+    "checker-output",
+)
+LITERAL_SPAN_KEYS: Tuple[str, ...] = (
+    "span_id",
+    "chapter",
+    "start_boundary",
+    "end_boundary",
+)
+LITERAL_BOUNDARY_KINDS: Tuple[str, ...] = (
+    "literal-marker",
+    "line-number",
+    "start-of-prose",
+    "end-of-prose",
+)
+
+# These are objective identity/movement/chapter/representation mappings fixed by
+# the approved design. The checker does not compare the prose-like
+# `dramatic_function` or `scene_scope` text semantically; it only requires those
+# fields to be nonblank. A later completed ArcChange validator may supersede a
+# mapping, but no such post-baseline state exists in the calibration scope.
+RESOLVED_MOTIF_MAPPINGS: Mapping[str, Mapping[str, Any]] = {
+    "MOT-CHAIN-01": {
+        "family": "spectrum / wire / voice",
+        "movement": "discovery_part",
+        "planned_chapter": 13,
+        "participating_chapters": (13,),
+        "representation_mode": "image",
+        "literal_constraint_id": None,
+    },
+    "MOT-CHAIN-02": {
+        "family": "spectrum / wire / voice",
+        "movement": "private_defense_part",
+        "planned_chapter": 45,
+        "participating_chapters": (45,),
+        "representation_mode": "image",
+        "literal_constraint_id": None,
+    },
+    "MOT-CHAIN-03": {
+        "family": "spectrum / wire / voice",
+        "movement": "aftermath_coda",
+        "planned_chapter": 127,
+        "participating_chapters": (127,),
+        "representation_mode": "action",
+        "literal_constraint_id": None,
+    },
+    "MOT-COPPER-01": {
+        "family": "copper / quiet",
+        "movement": "private_defense_part",
+        "planned_chapter": 31,
+        "participating_chapters": (31,),
+        "representation_mode": "image",
+        "literal_constraint_id": None,
+    },
+    "MOT-COPPER-02": {
+        "family": "copper / quiet",
+        "movement": "mindwars_part",
+        "planned_chapter": 70,
+        "participating_chapters": (70,),
+        "representation_mode": "image",
+        "literal_constraint_id": None,
+    },
+    "MOT-COPPER-03": {
+        "family": "copper / quiet",
+        "movement": "aftermath_coda",
+        "planned_chapter": 124,
+        "participating_chapters": (124,),
+        "representation_mode": "image",
+        "literal_constraint_id": None,
+    },
+    "MOT-YES-01": {
+        "family": "authorization question",
+        "movement": "mindwars_part",
+        "planned_chapter": 73,
+        "participating_chapters": (73,),
+        "representation_mode": "literal",
+        "literal_constraint_id": "LPC-DID-I-SAY-YES",
+    },
+    "MOT-KETTLE-01": {
+        "family": "kettle",
+        "movement": "aftermath_coda",
+        "planned_chapter": 118,
+        "participating_chapters": (118,),
+        "representation_mode": "image",
+        "literal_constraint_id": None,
+    },
+    "MOT-COME-04": {
+        "family": "come in",
+        "movement": "aftermath_coda",
+        "planned_chapter": 124,
+        "participating_chapters": (124,),
+        "representation_mode": "action",
+        "literal_constraint_id": None,
+    },
+    "MOT-KETTLE-02": {
+        "family": "kettle",
+        "movement": "aftermath_coda",
+        "planned_chapter": 124,
+        "participating_chapters": (124,),
+        "representation_mode": "action",
+        "literal_constraint_id": None,
+    },
+}
+CLOSED_MOTIF_FAMILY_IDS: Mapping[str, Tuple[str, ...]] = {
+    "spectrum / wire / voice": (
+        "MOT-CHAIN-01",
+        "MOT-CHAIN-02",
+        "MOT-CHAIN-03",
+    ),
+    "copper / quiet": (
+        "MOT-COPPER-01",
+        "MOT-COPPER-02",
+        "MOT-COPPER-03",
+    ),
+}
+CALIBRATION_REQUIRED_MOTIFS: Mapping[int, Tuple[str, ...]] = {
+    73: ("MOT-YES-01",),
+    118: ("MOT-KETTLE-01",),
+    124: ("MOT-COME-04", "MOT-KETTLE-02"),
+}
+RESOLVED_DID_I_SAY_YES_CONSTRAINT: Mapping[str, Any] = {
+    "motif_event_id": "MOT-YES-01",
+    "exact_phrase": "Did I say yes?",
+    "scan_scope": "chapter-prose-body-only",
+    "allowed_movements": ("mindwars_part",),
+    "allowed_chapters": (),
+    "allowed_files": (),
+    "allowed_span": None,
+    "minimum_in_scope": None,
+    "maximum_in_scope": None,
+    "exact_in_scope": None,
+    "maximum_outside_scope": 0,
+    "diagnostic_code": "LITERAL_DID_I_SAY_YES_SCOPE",
 }
 
 # `technical_state` and its three mode-specific objects. Each key set is closed:
@@ -1217,6 +1490,196 @@ CROSS_CUT_HANDOFF_MODES: Tuple[str, ...] = (
 )
 ARC_ENTRY_NO_CROSS_CUT = "none"
 
+# The two independent Same_POV_Run bounds. Requirement 2.7 and 11.12 cap the
+# Chapter_File count; Requirement 2.15 and 11.12 cap the combined Prose_Words.
+# Neither implies the other: a legal three-chapter run can still be too long,
+# and a two-chapter run can break the word bound while its length is legal.
+POV_RUN_CHAPTER_LIMIT = 3
+POV_RUN_WORD_LIMIT = 3600
+
+# Requirement 4.1 and 11.7: the final roster holds 3–5 human POVs, exactly one
+# of which is the Anchor_POV.
+POV_ROSTER_SIZE_RANGE: Tuple[int, int] = (3, 5)
+POV_ENTITY_TYPE_HUMAN = "human"
+
+# Requirement 2.8: at least 80 percent of *all* final Chapter_Files are
+# `normal`. Held as a numerator/denominator pair so the comparison stays exact
+# integer arithmetic and 79/100 versus 80/100 cannot drift on a float.
+NORMAL_SHARE_MINIMUM: Tuple[int, int] = (80, 100)
+
+# Requirement 2.1: provisional planning targets. They are replaced by
+# Final_Targets at approval, so exceeding them is a warning about provisional
+# data rather than an objective violation.
+PROVISIONAL_CHAPTER_RANGE: Tuple[int, int] = (120, 135)
+PROVISIONAL_WORD_RANGE: Tuple[int, int] = (130000, 150000)
+
+# Requirement 15.1: every mandatory Fluent_Pairing range must resolve to at
+# least one assigned beat in the complete Arc_Outline.
+FLUENT_PAIRING_RANGES: Tuple[Tuple[int, int], ...] = (
+    (36, 42),
+    (56, 61),
+    (70, 77),
+    (78, 93),
+    (94, 108),
+)
+
+# Requirement 15.3 and `DEC-016`: the provisional per-POV Chapter_File loads.
+# Held as a sorted multiset of totals rather than a POV_ID-keyed mapping, because
+# Requirement 12.11 keeps selected names outside pass/fail evaluation and the
+# obligation is that the load vector is unchanged, not that a particular name
+# owns a particular number.
+PROVISIONAL_POV_LOAD_TOTALS: Tuple[int, ...] = (7, 32, 33, 56)
+
+# The exact five Canon_Sources `DEC-014` fixes, and the one path it excludes.
+# A `lyric` CanonFact resolves to exactly one of the five; *One-Time Pad* is
+# unpublished, noncanonical, and absent from the working tree.
+CANON_SOURCE_PATHS: Tuple[str, ...] = (
+    "songs/Case Zero.md",
+    "songs/Faraday.md",
+    "songs/The Final Frontier.md",
+    "songs/The Radius.md",
+    "songs/The Synaptic Frontier.md",
+)
+EXCLUDED_CANON_SOURCE_PATH = "songs/One-Time Pad.md"
+
+# `DEC-011` authority precedence, as the closed `CanonFact` enums of
+# `record-schemas.md` section 7.
+CANON_AUTHORITY_BASES: Tuple[str, ...] = (
+    "author-decision",
+    "requirement",
+    "lyric",
+    "ratified-note",
+)
+CANON_SOURCE_MATERIAL_CLASSES: Tuple[str, ...] = (
+    "author-decision",
+    "requirement",
+    "lyric",
+    "production-note",
+    "style-prompt",
+    "exclude-prompt",
+    "generation-workflow",
+    "credits",
+    "rights-metadata",
+)
+# The note and metadata classes that carry no authority of their own. A fact on
+# one of these is binding only through a resolvable `adopted_by` adoption.
+ADVISORY_SOURCE_MATERIAL_CLASSES: Tuple[str, ...] = (
+    "production-note",
+    "style-prompt",
+    "exclude-prompt",
+    "generation-workflow",
+    "credits",
+    "rights-metadata",
+)
+# The required source class for each self-authorizing basis. `ratified-note` is
+# absent because it accepts any advisory class plus an adoption.
+CANON_BASIS_SOURCE_CLASS: Mapping[str, str] = {
+    "author-decision": "author-decision",
+    "requirement": "requirement",
+    "lyric": "lyric",
+}
+CANON_TRUTH_SCOPES: Tuple[str, ...] = (
+    "authoritative-proposition",
+    "attributed-testimony",
+    "ratified-proposition",
+)
+# There is deliberately no `omniscient` truth scope. First-person testimony is
+# binding as an account and never as omniscient causal proof.
+TESTIMONY_TRUTH_SCOPE = "attributed-testimony"
+TESTIMONY_ATTRIBUTION_KEYS: Tuple[str, ...] = (
+    "speaker",
+    "attribution",
+    "epistemic_limitation",
+)
+CANON_ADOPTION_KEYS: Tuple[str, ...] = (
+    "authority_type",
+    "authority_id",
+    "source_path",
+    "source_location",
+)
+CANON_ADOPTION_AUTHORITY_TYPES: Tuple[str, ...] = ("author-decision", "requirement")
+ADVISORY_CITATION_KEYS: Tuple[str, ...] = (
+    "source_path",
+    "source_location",
+    "material_class",
+    "classification",
+    "note",
+)
+ADVISORY_CITATION_CLASSIFICATION = "advisory-non-story"
+
+# `Baseline`, `ArcChange`, and `GateResult` enums, from `record-schemas.md`
+# sections 12, 13, and 15.
+BASELINE_STATES: Tuple[str, ...] = (
+    "provisional",
+    "pending-author-approval",
+    "approved",
+    "superseded",
+)
+BASELINE_STATE_APPROVED = "approved"
+BASELINE_APPROVAL_KEYS: Tuple[str, ...] = (
+    "approved_by",
+    "approved_at",
+    "approval_record",
+)
+FINAL_TARGET_KEYS: Tuple[str, ...] = (
+    "chapter_count",
+    "minimum_words",
+    "maximum_words",
+)
+BASELINE_REVISION_PASS_KEYS: Tuple[str, ...] = ("performed_at", "dispositions")
+BASELINE_DISPOSITION_KEYS: Tuple[str, ...] = (
+    "editorial_finding_id",
+    "outcome",
+    "arc_change_id",
+    "rationale",
+)
+BASELINE_DISPOSITION_OUTCOMES: Tuple[str, ...] = (
+    "arc-change",
+    "no-change-rationale",
+)
+
+ARC_CHANGE_STATUSES: Tuple[str, ...] = (
+    "proposed",
+    "approved",
+    "in-progress",
+    "complete",
+    "rejected",
+)
+ARC_CHANGE_STATUS_COMPLETE = "complete"
+ARC_CHANGE_OBLIGATION_KEYS: Tuple[str, ...] = (
+    "document",
+    "required_change",
+    "status",
+    "evidence_ref",
+)
+SYNCHRONIZATION_STATUSES: Tuple[str, ...] = ("pending", "complete")
+SYNCHRONIZATION_STATUS_COMPLETE = "complete"
+
+GATE_TYPES: Tuple[str, ...] = (
+    "site-isolation",
+    "calibration-objective",
+    "chapter-local",
+    "batch",
+    "baseline-objective",
+    "manuscript-global",
+    "editorial",
+)
+GATE_TYPE_EDITORIAL = "editorial"
+GATE_TYPE_MANUSCRIPT_GLOBAL = "manuscript-global"
+GATE_SCOPE_KEYS: Tuple[str, ...] = ("chapter_numbers", "documents", "description")
+GATE_PREREQUISITE_STATES: Tuple[str, ...] = ("complete", "incomplete")
+GATE_PREREQUISITE_COMPLETE = "complete"
+GATE_RESULTS: Tuple[str, ...] = (RESULT_PASS, RESULT_REVISION, RESULT_INCOMPLETE)
+
+# Chapter statuses that assert a passed gate, and the one status a substantive
+# Prose_Body change demotes them to.
+APPROVED_CHAPTER_STATUSES: Tuple[str, ...] = ("approved", "final")
+REVISED_CHAPTER_STATUS = "revised"
+# Exploratory work can never satisfy a Final_Prerequisite; the Calibration_Batch
+# stays exploratory until its surrounding movement batches reconcile it.
+EXPLORATORY_CHAPTER_STATUS = "exploratory"
+FINAL_CHAPTER_STATUS = "final"
+
 STABLE_ID_PATTERN = re.compile(r"^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+$")
 NON_NEGATIVE_INTEGER_PATTERN = re.compile(r"^(?:0|[1-9][0-9]*)$")
 CHAPTER_SLUG_PATTERN = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
@@ -1280,6 +1743,16 @@ class CheckerDiagnostic:
                 "diagnostic code {0!r} must match {1}".format(
                     self.code, DIAGNOSTIC_CODE_PATTERN.pattern
                 )
+            )
+        forbidden = craft_judgment_term(self.code)
+        if forbidden is not None:
+            # A programming-error backstop, not a data path. A ledgered
+            # `diagnostic_code` is screened while its constraint is parsed, so an
+            # author document produces a violation instead of reaching this.
+            raise ValueError(
+                "diagnostic code {0!r} names the craft judgment {1!r}, which "
+                "Requirements 12.11 and 12.12 exclude from automated "
+                "evaluation".format(self.code, forbidden)
             )
         if self.severity not in (SEVERITY_ERROR, SEVERITY_WARNING):
             raise ValueError("unknown severity {0!r}".format(self.severity))
@@ -3256,6 +3729,7 @@ def check_character_references(
             continue
         for value in participants:
             _resolve(record, value, "participants[]")
+        diagnostics.extend(_check_record_chronology(record, index))
         state = record.payload.get("technical_state")
         if not isinstance(state, dict):
             continue
@@ -3986,7 +4460,170 @@ def check_technical_state(
                 expected="an object or null",
             )
         )
+    if isinstance(pair_state, dict) and isinstance(evidence, dict):
+        diagnostics.extend(_check_stopped_session(entry, pair_state, evidence))
     return tuple(diagnostics)
+
+
+RECORD_CHRONOLOGY_KEYS: Tuple[str, ...] = (
+    "composition_timeline_id",
+    "deposit_timeline_id",
+    "release_timeline_ids",
+)
+
+
+def _check_record_chronology(
+    entry: PlanningRecord, index: ReferenceIndex
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Resolve a record's composition, deposit, and release chronology.
+
+    The Civic Record Trust chronology keeps a record's composition, its later
+    deposit, and each release as separate entries, which is what lets Trust
+    formation follow alteration of the April record without collapsing the two
+    timestamps. Objectively that means the three references resolve, the release
+    list holds no duplicate, and composition and deposit are not the same entry.
+
+    Which entry is *earlier* is not decided here. Order lives in the prose
+    `relative_chronology` field, and reading it would mean inferring continuity
+    from commentary.
+    """
+
+    chronology = entry.payload.get("record_chronology")
+    if chronology is None:
+        return ()
+    if not isinstance(chronology, dict):
+        return (
+            entry.malformed(
+                "RECORD_CHRONOLOGY_MALFORMED",
+                observed="record_chronology has type {0}".format(
+                    type(chronology).__name__
+                ),
+                expected="an object or null",
+            ),
+        )
+
+    diagnostics: List[CheckerDiagnostic] = []
+    report = _key_set_report(chronology, RECORD_CHRONOLOGY_KEYS)
+    if report:
+        return (
+            entry.malformed(
+                "RECORD_CHRONOLOGY_MALFORMED",
+                observed=report,
+                expected="exactly " + ", ".join(RECORD_CHRONOLOGY_KEYS),
+            ),
+        )
+
+    def _resolve_entry(value: Any, field_name: str) -> Optional[str]:
+        if value is None:
+            return None
+        timeline_id = _stable_id(value)
+        if timeline_id is None:
+            diagnostics.append(
+                entry.malformed(
+                    "RECORD_CHRONOLOGY_MALFORMED",
+                    observed="{0}={1!r}".format(field_name, value),
+                    expected="a Timeline StableID or null",
+                )
+            )
+            return None
+        if index.is_duplicated("TimelineEntry", timeline_id):
+            return timeline_id
+        if not index.lookup("TimelineEntry", timeline_id):
+            diagnostics.append(
+                entry.violation(
+                    "RECORD_CHRONOLOGY_REFERENCE_DANGLING",
+                    observed="{0}={1} resolves to no TimelineEntry".format(
+                        field_name, timeline_id
+                    ),
+                    expected="one existing TimelineEntry",
+                )
+            )
+        return timeline_id
+
+    composition = _resolve_entry(
+        chronology.get("composition_timeline_id"), "composition_timeline_id"
+    )
+    deposit = _resolve_entry(
+        chronology.get("deposit_timeline_id"), "deposit_timeline_id"
+    )
+    if composition is not None and composition == deposit:
+        diagnostics.append(
+            entry.violation(
+                "RECORD_CHRONOLOGY_COLLAPSED",
+                observed="composition and deposit are both {0}".format(composition),
+                expected="composition and later deposit as separate entries",
+            )
+        )
+
+    releases = chronology.get("release_timeline_ids")
+    if not isinstance(releases, list):
+        diagnostics.append(
+            entry.malformed(
+                "RECORD_CHRONOLOGY_MALFORMED",
+                observed="release_timeline_ids={0!r}".format(releases),
+                expected="an array of unique Timeline StableIDs",
+            )
+        )
+        return tuple(diagnostics)
+
+    seen: List[str] = []
+    for position, value in enumerate(releases):
+        timeline_id = _resolve_entry(
+            value, "release_timeline_ids[{0}]".format(position)
+        )
+        if timeline_id is None:
+            continue
+        if timeline_id in seen:
+            diagnostics.append(
+                entry.violation(
+                    "RECORD_CHRONOLOGY_RELEASE_DUPLICATE",
+                    observed="{0} appears more than once".format(timeline_id),
+                    expected="unique release references",
+                )
+            )
+        else:
+            seen.append(timeline_id)
+
+    return tuple(diagnostics)
+
+
+def _check_stopped_session(
+    entry: PlanningRecord,
+    pair_state: Mapping[str, Any],
+    evidence: Mapping[str, Any],
+) -> Tuple[CheckerDiagnostic, ...]:
+    """A paused, revoked, or integrity-failed session transports no content.
+
+    The `PairState` invariant stops semantic transport the moment a participant
+    pauses or revokes, and after clipping, latency, or an integrity failure until
+    an explicit confirmation, retry, or ordinary-speech fallback. A transcript is
+    the only transported content this schema represents, so within one entry the
+    objective rule is exact: a stopped send state carries no transcript.
+
+    Recovery is expressed by a later entry returning `deliberate_send_state` to
+    `required`. Ordering a recovery marker across an event stream would need
+    fields this schema version does not define, so that part of the invariant
+    stays a human continuity reading rather than a guessed automated one.
+    """
+
+    send_state = pair_state.get("deliberate_send_state")
+    if send_state not in ("paused", "revoked", "integrity-failed"):
+        return ()
+    if evidence.get("transcript") is None:
+        return ()
+    return (
+        entry.violation(
+            "PAIR_STOPPED_SESSION_TRANSPORT",
+            observed="deliberate_send_state={0!r} with a transcript".format(
+                send_state
+            ),
+            expected=(
+                "no transported content while a session is paused, revoked, or "
+                "integrity-failed; recovery needs an explicit confirmation, "
+                "retry, or ordinary-speech fallback first"
+            ),
+        ),
+    )
 
 
 def check_pair_calibration_uniqueness(
@@ -4275,6 +4912,933 @@ def check_direct_references(
                 )
             )
 
+    return tuple(diagnostics)
+
+
+# ---------------------------------------------------------------------------
+# Calibration-scope Motif_Event and Literal_Phrase_Constraint checks
+# ---------------------------------------------------------------------------
+
+
+@dataclass(frozen=True)
+class _MotifEventRule:
+    record: PlanningRecord
+    motif_event_id: str
+    family: str
+    movement: str
+    planned_chapter: int
+    participating_chapters: Tuple[int, ...]
+    representation_mode: str
+    literal_constraint_id: Optional[str]
+
+
+@dataclass(frozen=True)
+class _LiteralConstraintRule:
+    record: PlanningRecord
+    constraint_id: str
+    motif_event_id: str
+    exact_phrase: str
+    allowed_movements: Tuple[str, ...]
+    allowed_chapters: Tuple[int, ...]
+    allowed_files: Tuple[str, ...]
+    allowed_span: Optional[Mapping[str, Any]]
+    maximum_outside_scope: int
+    diagnostic_code: str
+    # In-scope totals are only decidable when the scope actually contains every
+    # file the rule allows, so they are carried here and consumed by the
+    # whole-book check rather than by the chapter-local one.
+    minimum_in_scope: Optional[int] = None
+    maximum_in_scope: Optional[int] = None
+    exact_in_scope: Optional[int] = None
+
+    @property
+    def has_in_scope_total(self) -> bool:
+        return (
+            self.minimum_in_scope is not None
+            or self.maximum_in_scope is not None
+            or self.exact_in_scope is not None
+        )
+
+
+def _is_nonnegative_integer(value: Any) -> bool:
+    return not isinstance(value, bool) and isinstance(value, int) and value >= 0
+
+
+def _is_workspace_relative_path(value: Any) -> bool:
+    if not isinstance(value, str) or not value.strip() or "\\" in value:
+        return False
+    normalized = _normalized_text(value.strip())
+    path = PurePosixPath(normalized)
+    return (
+        not path.is_absolute()
+        and all(part not in ("", ".", "..") for part in path.parts)
+        and path.as_posix() == normalized
+    )
+
+
+def _stable_id_sequence(value: Any) -> Optional[Tuple[str, ...]]:
+    if not isinstance(value, list):
+        return None
+    values: List[str] = []
+    for member in value:
+        stable_id = _stable_id(member)
+        if stable_id is None or stable_id in values:
+            return None
+        values.append(stable_id)
+    return tuple(values)
+
+
+def _chapter_number_sequence(
+    value: Any, *, nonempty: bool = False
+) -> Optional[Tuple[int, ...]]:
+    if not isinstance(value, list) or (nonempty and not value):
+        return None
+    if any(not _is_chapter_number(member) for member in value):
+        return None
+    if len(set(value)) != len(value):
+        return None
+    return tuple(value)
+
+
+def _parse_motif_event_rule(
+    record: PlanningRecord,
+) -> Tuple[Optional[_MotifEventRule], Tuple[CheckerDiagnostic, ...]]:
+    """Validate one MotifEvent record without inferring from commentary."""
+
+    payload = record.payload
+    if set(payload) != set(MOTIF_EVENT_KEYS):
+        return None, (
+            record.malformed(
+                "MOTIF_EVENT_MALFORMED",
+                observed=_key_set_report(payload, MOTIF_EVENT_KEYS),
+                expected="exactly the MotifEvent schema keys",
+            ),
+        )
+
+    diagnostics: List[CheckerDiagnostic] = []
+    motif_event_id = _stable_id(payload.get("motif_event_id"))
+    if motif_event_id is None:
+        diagnostics.append(
+            record.malformed(
+                "MOTIF_EVENT_MALFORMED",
+                observed="motif_event_id={0!r}".format(
+                    payload.get("motif_event_id")
+                ),
+                expected="a StableID matching " + STABLE_ID_PATTERN.pattern,
+            )
+        )
+
+    family = payload.get("family")
+    if not _is_nonblank_string(family):
+        diagnostics.append(
+            record.malformed(
+                "MOTIF_EVENT_MALFORMED",
+                observed="family={0!r}".format(family),
+                expected="a nonblank family",
+            )
+        )
+    dramatic_function = payload.get("dramatic_function")
+    if not _is_nonblank_string(dramatic_function):
+        diagnostics.append(
+            record.malformed(
+                "MOTIF_EVENT_MALFORMED",
+                observed="dramatic_function={0!r}".format(dramatic_function),
+                expected="a nonblank dramatic function",
+            )
+        )
+    scene_scope = payload.get("scene_scope")
+    if not _is_nonblank_string(scene_scope):
+        diagnostics.append(
+            record.malformed(
+                "MOTIF_EVENT_MALFORMED",
+                observed="scene_scope={0!r}".format(scene_scope),
+                expected="a nonblank sustained scene/function boundary",
+            )
+        )
+
+    movement = payload.get("movement")
+    if movement not in MOVEMENT_ORDER:
+        diagnostics.append(
+            record.malformed(
+                "MOTIF_EVENT_MALFORMED",
+                observed="movement={0!r}".format(movement),
+                expected="one of " + ", ".join(MOVEMENTS),
+            )
+        )
+    planned_chapter = payload.get("planned_chapter")
+    if not _is_chapter_number(planned_chapter):
+        diagnostics.append(
+            record.malformed(
+                "MOTIF_EVENT_MALFORMED",
+                observed="planned_chapter={0!r}".format(planned_chapter),
+                expected="an integer of at least 1",
+            )
+        )
+    participating = _chapter_number_sequence(
+        payload.get("participating_chapters"), nonempty=True
+    )
+    if participating is None:
+        diagnostics.append(
+            record.malformed(
+                "MOTIF_EVENT_MALFORMED",
+                observed="participating_chapters={0!r}".format(
+                    payload.get("participating_chapters")
+                ),
+                expected="a nonempty duplicate-free array of chapter numbers",
+            )
+        )
+    elif _is_chapter_number(planned_chapter) and planned_chapter not in participating:
+        diagnostics.append(
+            record.malformed(
+                "MOTIF_EVENT_MALFORMED",
+                observed="planned_chapter {0} is absent from {1}".format(
+                    planned_chapter, list(participating)
+                ),
+                expected="participating_chapters to include the primary owner",
+            )
+        )
+
+    representation_mode = payload.get("representation_mode")
+    if representation_mode not in MOTIF_REPRESENTATION_MODES:
+        diagnostics.append(
+            record.malformed(
+                "MOTIF_EVENT_MALFORMED",
+                observed="representation_mode={0!r}".format(representation_mode),
+                expected="one of " + ", ".join(MOTIF_REPRESENTATION_MODES),
+            )
+        )
+    raw_constraint_id = payload.get("literal_constraint_id")
+    literal_constraint_id = (
+        None if raw_constraint_id is None else _stable_id(raw_constraint_id)
+    )
+    if raw_constraint_id is not None and literal_constraint_id is None:
+        diagnostics.append(
+            record.malformed(
+                "MOTIF_EVENT_MALFORMED",
+                observed="literal_constraint_id={0!r}".format(raw_constraint_id),
+                expected="null or a StableID",
+            )
+        )
+    history = _stable_id_sequence(payload.get("arc_change_history"))
+    if history is None:
+        diagnostics.append(
+            record.malformed(
+                "MOTIF_EVENT_MALFORMED",
+                observed="arc_change_history={0!r}".format(
+                    payload.get("arc_change_history")
+                ),
+                expected="a duplicate-free array of ArcChange StableIDs",
+            )
+        )
+
+    if diagnostics:
+        return None, tuple(diagnostics)
+    assert motif_event_id is not None
+    assert isinstance(family, str)
+    assert isinstance(movement, str)
+    assert isinstance(planned_chapter, int)
+    assert participating is not None
+    assert isinstance(representation_mode, str)
+    return (
+        _MotifEventRule(
+            record=record,
+            motif_event_id=motif_event_id,
+            family=_normalized_text(family).strip(),
+            movement=movement,
+            planned_chapter=planned_chapter,
+            participating_chapters=participating,
+            representation_mode=representation_mode,
+            literal_constraint_id=literal_constraint_id,
+        ),
+        (),
+    )
+
+
+def _literal_boundary_is_valid(value: Any) -> bool:
+    if not isinstance(value, dict) or set(value) != {"kind", "value"}:
+        return False
+    kind = value.get("kind")
+    boundary_value = value.get("value")
+    if kind not in LITERAL_BOUNDARY_KINDS:
+        return False
+    if kind in ("start-of-prose", "end-of-prose"):
+        return boundary_value is None
+    if kind == "line-number":
+        return _is_chapter_number(boundary_value)
+    return _is_nonblank_string(boundary_value)
+
+
+def _literal_span_is_valid(value: Any) -> bool:
+    if value is None:
+        return True
+    if not isinstance(value, dict) or set(value) != set(LITERAL_SPAN_KEYS):
+        return False
+    return (
+        _stable_id(value.get("span_id")) is not None
+        and _is_chapter_number(value.get("chapter"))
+        and _literal_boundary_is_valid(value.get("start_boundary"))
+        and _literal_boundary_is_valid(value.get("end_boundary"))
+    )
+
+
+def _parse_literal_constraint_rule(
+    record: PlanningRecord,
+) -> Tuple[Optional[_LiteralConstraintRule], Tuple[CheckerDiagnostic, ...]]:
+    """Validate one ledgered literal rule; prose is never consulted here."""
+
+    payload = record.payload
+    if set(payload) != set(LITERAL_CONSTRAINT_KEYS):
+        return None, (
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed=_key_set_report(payload, LITERAL_CONSTRAINT_KEYS),
+                expected="exactly the LiteralPhraseConstraint schema keys",
+            ),
+        )
+
+    diagnostics: List[CheckerDiagnostic] = []
+    constraint_id = _stable_id(payload.get("constraint_id"))
+    motif_event_id = _stable_id(payload.get("motif_event_id"))
+    if constraint_id is None:
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="constraint_id={0!r}".format(payload.get("constraint_id")),
+                expected="a StableID matching " + STABLE_ID_PATTERN.pattern,
+            )
+        )
+    if motif_event_id is None:
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="motif_event_id={0!r}".format(
+                    payload.get("motif_event_id")
+                ),
+                expected="a MotifEvent StableID",
+            )
+        )
+
+    exact_phrase = payload.get("exact_phrase")
+    if (
+        not _is_nonblank_string(exact_phrase)
+        or "\r" in str(exact_phrase)
+        or "\n" in str(exact_phrase)
+    ):
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="exact_phrase={0!r}".format(exact_phrase),
+                expected="a nonblank single-line exact phrase",
+            )
+        )
+    if payload.get("scan_scope") != "chapter-prose-body-only":
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="scan_scope={0!r}".format(payload.get("scan_scope")),
+                expected="chapter-prose-body-only",
+            )
+        )
+
+    allowed_movements_value = payload.get("allowed_movements")
+    allowed_movements: Optional[Tuple[str, ...]] = None
+    if (
+        isinstance(allowed_movements_value, list)
+        and allowed_movements_value
+        and all(member in MOVEMENT_ORDER for member in allowed_movements_value)
+        and len(set(allowed_movements_value)) == len(allowed_movements_value)
+    ):
+        allowed_movements = tuple(allowed_movements_value)
+    else:
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="allowed_movements={0!r}".format(allowed_movements_value),
+                expected="a nonempty duplicate-free array of Movement values",
+            )
+        )
+
+    allowed_chapters = _chapter_number_sequence(payload.get("allowed_chapters"))
+    if allowed_chapters is None:
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="allowed_chapters={0!r}".format(
+                    payload.get("allowed_chapters")
+                ),
+                expected="a duplicate-free array of chapter numbers",
+            )
+        )
+    allowed_files_value = payload.get("allowed_files")
+    allowed_files: Optional[Tuple[str, ...]] = None
+    if (
+        isinstance(allowed_files_value, list)
+        and all(_is_workspace_relative_path(member) for member in allowed_files_value)
+        and len(set(allowed_files_value)) == len(allowed_files_value)
+    ):
+        allowed_files = tuple(
+            _normalized_text(member.strip()) for member in allowed_files_value
+        )
+    else:
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="allowed_files={0!r}".format(allowed_files_value),
+                expected="a duplicate-free array of workspace-relative paths",
+            )
+        )
+
+    allowed_span = payload.get("allowed_span")
+    if not _literal_span_is_valid(allowed_span):
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="allowed_span={0!r}".format(allowed_span),
+                expected="null or one closed, machine-readable span object",
+            )
+        )
+
+    count_fields = (
+        "minimum_in_scope",
+        "maximum_in_scope",
+        "exact_in_scope",
+    )
+    counts: Dict[str, Optional[int]] = {}
+    for field_name in count_fields:
+        value = payload.get(field_name)
+        if value is not None and not _is_nonnegative_integer(value):
+            diagnostics.append(
+                record.malformed(
+                    "LITERAL_CONSTRAINT_MALFORMED",
+                    observed="{0}={1!r}".format(field_name, value),
+                    expected="null or a nonnegative integer",
+                )
+            )
+        counts[field_name] = value if isinstance(value, int) else None
+    if counts["exact_in_scope"] is not None and (
+        counts["minimum_in_scope"] is not None
+        or counts["maximum_in_scope"] is not None
+    ):
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="exact_in_scope is combined with a minimum or maximum",
+                expected="exact count alone, or minimum/maximum without exact",
+            )
+        )
+    if (
+        counts["minimum_in_scope"] is not None
+        and counts["maximum_in_scope"] is not None
+        and int(counts["minimum_in_scope"] or 0)
+        > int(counts["maximum_in_scope"] or 0)
+    ):
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="minimum_in_scope exceeds maximum_in_scope",
+                expected="minimum_in_scope <= maximum_in_scope",
+            )
+        )
+
+    maximum_outside_scope = payload.get("maximum_outside_scope")
+    if not _is_nonnegative_integer(maximum_outside_scope):
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="maximum_outside_scope={0!r}".format(
+                    maximum_outside_scope
+                ),
+                expected="a nonnegative integer",
+            )
+        )
+    normalization = payload.get("normalization")
+    if normalization != dict(LITERAL_NORMALIZATION):
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="normalization={0!r}".format(normalization),
+                expected="the fixed NFC/LF exact-case/order/punctuation policy",
+            )
+        )
+    exclusions = payload.get("scope_exclusions")
+    if not (
+        isinstance(exclusions, list)
+        and len(exclusions) == len(LITERAL_SCOPE_EXCLUSIONS)
+        and set(exclusions) == set(LITERAL_SCOPE_EXCLUSIONS)
+    ):
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="scope_exclusions={0!r}".format(exclusions),
+                expected="exactly the seven non-Prose_Body exclusions",
+            )
+        )
+    diagnostic_code = payload.get("diagnostic_code")
+    if not isinstance(diagnostic_code, str) or DIAGNOSTIC_CODE_PATTERN.match(
+        diagnostic_code
+    ) is None:
+        diagnostics.append(
+            record.malformed(
+                "LITERAL_CONSTRAINT_MALFORMED",
+                observed="diagnostic_code={0!r}".format(diagnostic_code),
+                expected="a stable uppercase underscore diagnostic code",
+            )
+        )
+    else:
+        # The ledger supplies this code, so it is the one place a craft judgment
+        # could enter the diagnostic vocabulary from a document. Reject it here.
+        forbidden = craft_judgment_term(diagnostic_code)
+        if forbidden is not None:
+            diagnostics.append(
+                record.violation(
+                    "LITERAL_CONSTRAINT_CRAFT_JUDGMENT_CODE",
+                    observed="diagnostic_code={0!r} names {1!r}".format(
+                        diagnostic_code, forbidden
+                    ),
+                    expected=(
+                        "an objective code; Requirements 12.11 and 12.12 keep "
+                        "craft judgment out of automated evaluation"
+                    ),
+                )
+            )
+
+    if diagnostics:
+        return None, tuple(diagnostics)
+    assert constraint_id is not None
+    assert motif_event_id is not None
+    assert isinstance(exact_phrase, str)
+    assert allowed_movements is not None
+    assert allowed_chapters is not None
+    assert allowed_files is not None
+    assert isinstance(maximum_outside_scope, int)
+    assert isinstance(diagnostic_code, str)
+    return (
+        _LiteralConstraintRule(
+            record=record,
+            constraint_id=constraint_id,
+            motif_event_id=motif_event_id,
+            exact_phrase=normalize_prose(exact_phrase),
+            allowed_movements=allowed_movements,
+            allowed_chapters=allowed_chapters,
+            allowed_files=allowed_files,
+            allowed_span=allowed_span,
+            maximum_outside_scope=maximum_outside_scope,
+            diagnostic_code=diagnostic_code,
+            minimum_in_scope=counts["minimum_in_scope"],
+            maximum_in_scope=counts["maximum_in_scope"],
+            exact_in_scope=counts["exact_in_scope"],
+        ),
+        (),
+    )
+
+
+def _resolved_mapping_diagnostics(
+    rule: _MotifEventRule,
+) -> Tuple[CheckerDiagnostic, ...]:
+    expected = RESOLVED_MOTIF_MAPPINGS.get(rule.motif_event_id)
+    if expected is None:
+        closed_ids: Optional[Tuple[str, ...]] = None
+        if rule.motif_event_id.startswith("MOT-CHAIN-"):
+            closed_ids = CLOSED_MOTIF_FAMILY_IDS["spectrum / wire / voice"]
+        elif rule.motif_event_id.startswith("MOT-COPPER-"):
+            closed_ids = CLOSED_MOTIF_FAMILY_IDS["copper / quiet"]
+        elif rule.family in CLOSED_MOTIF_FAMILY_IDS:
+            closed_ids = CLOSED_MOTIF_FAMILY_IDS[rule.family]
+        if closed_ids is None or rule.motif_event_id in closed_ids:
+            return ()
+        return (
+            rule.record.violation(
+                "MOTIF_CLOSED_FAMILY_EXTENSION",
+                observed="{0} extends a closed chain/copper family".format(
+                    rule.motif_event_id
+                ),
+                expected="only " + ", ".join(closed_ids),
+            ),
+        )
+
+    actual: Mapping[str, Any] = {
+        "family": rule.family,
+        "movement": rule.movement,
+        "planned_chapter": rule.planned_chapter,
+        "participating_chapters": rule.participating_chapters,
+        "representation_mode": rule.representation_mode,
+        "literal_constraint_id": rule.literal_constraint_id,
+    }
+    differing = [field_name for field_name in expected if actual[field_name] != expected[field_name]]
+    if not differing:
+        return ()
+    return (
+        rule.record.violation(
+            "MOTIF_RESOLVED_MAPPING_DISAGREEMENT",
+            observed=", ".join(
+                "{0}={1!r}".format(field_name, actual[field_name])
+                for field_name in differing
+            ),
+            expected=", ".join(
+                "{0}={1!r}".format(field_name, expected[field_name])
+                for field_name in differing
+            ),
+        ),
+    )
+
+
+def _resolved_literal_diagnostics(
+    rule: _LiteralConstraintRule,
+) -> Tuple[CheckerDiagnostic, ...]:
+    if rule.constraint_id != "LPC-DID-I-SAY-YES":
+        return ()
+    actual: Mapping[str, Any] = {
+        "motif_event_id": rule.motif_event_id,
+        "exact_phrase": rule.exact_phrase,
+        "scan_scope": rule.record.payload.get("scan_scope"),
+        "allowed_movements": rule.allowed_movements,
+        "allowed_chapters": rule.allowed_chapters,
+        "allowed_files": rule.allowed_files,
+        "allowed_span": rule.allowed_span,
+        "minimum_in_scope": rule.record.payload.get("minimum_in_scope"),
+        "maximum_in_scope": rule.record.payload.get("maximum_in_scope"),
+        "exact_in_scope": rule.record.payload.get("exact_in_scope"),
+        "maximum_outside_scope": rule.maximum_outside_scope,
+        "diagnostic_code": rule.diagnostic_code,
+    }
+    expected = RESOLVED_DID_I_SAY_YES_CONSTRAINT
+    differing = [field_name for field_name in expected if actual[field_name] != expected[field_name]]
+    if not differing:
+        return ()
+    return (
+        rule.record.violation(
+            "LITERAL_CONSTRAINT_RESOLVED_MAPPING_DISAGREEMENT",
+            observed=", ".join(
+                "{0}={1!r}".format(field_name, actual[field_name])
+                for field_name in differing
+            ),
+            expected=", ".join(
+                "{0}={1!r}".format(field_name, expected[field_name])
+                for field_name in differing
+            ),
+        ),
+    )
+
+
+def check_motif_planning(
+    index: ReferenceIndex, *, chapter_scope: Optional[Iterable[int]] = None
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Validate task-7.4 planning records and ledger/Arc assignments.
+
+    With an explicit chapter scope, only MotifEvents assigned to, referenced by,
+    or fixed as required for those chapters are direct records. With no scope,
+    every existing MotifEvent and LiteralPhraseConstraint is audited. This pure
+    planning seam is also usable before any Chapter_File exists.
+    """
+
+    scope = (
+        None
+        if chapter_scope is None
+        else frozenset(
+            chapter for chapter in chapter_scope if _is_chapter_number(chapter)
+        )
+    )
+    arc_references: set = set()
+    for entry in index.arc_entries:
+        if entry.chapter is None or (scope is not None and entry.chapter not in scope):
+            continue
+        values = _stable_id_sequence(entry.payload.get("motif_events"))
+        if values is not None:
+            arc_references.update(values)
+    required_ids = set()
+    if scope is not None:
+        for chapter in scope:
+            required_ids.update(CALIBRATION_REQUIRED_MOTIFS.get(chapter, ()))
+
+    selected_records: List[PlanningRecord] = []
+    for record in index.of_type("MotifEvent"):
+        record_id = _stable_id(record.payload.get("motif_event_id"))
+        participating = _chapter_number_sequence(
+            record.payload.get("participating_chapters"), nonempty=True
+        )
+        if scope is None or record_id in arc_references or record_id in required_ids:
+            selected_records.append(record)
+        elif participating is not None and any(chapter in scope for chapter in participating):
+            selected_records.append(record)
+
+    diagnostics: List[CheckerDiagnostic] = []
+    rules: Dict[str, _MotifEventRule] = {}
+    for record in selected_records:
+        record_id = _stable_id(record.payload.get("motif_event_id"))
+        if record_id is not None and index.is_duplicated("MotifEvent", record_id):
+            continue
+        rule, record_diagnostics = _parse_motif_event_rule(record)
+        diagnostics.extend(record_diagnostics)
+        if rule is None:
+            continue
+        rules[rule.motif_event_id] = rule
+        diagnostics.extend(_resolved_mapping_diagnostics(rule))
+
+    selected_ids = set(rules) | arc_references | required_ids
+    linked_constraint_ids = {
+        rule.literal_constraint_id
+        for rule in rules.values()
+        if rule.literal_constraint_id is not None
+    }
+    constraint_rules: Dict[str, _LiteralConstraintRule] = {}
+    for record in index.of_type("LiteralPhraseConstraint"):
+        constraint_id = _stable_id(record.payload.get("constraint_id"))
+        motif_event_id = _stable_id(record.payload.get("motif_event_id"))
+        if scope is not None and (
+            constraint_id not in linked_constraint_ids
+            and motif_event_id not in selected_ids
+        ):
+            continue
+        if constraint_id is not None and index.is_duplicated(
+            "LiteralPhraseConstraint", constraint_id
+        ):
+            continue
+        rule, record_diagnostics = _parse_literal_constraint_rule(record)
+        diagnostics.extend(record_diagnostics)
+        if rule is None:
+            continue
+        constraint_rules[rule.constraint_id] = rule
+        diagnostics.extend(_resolved_literal_diagnostics(rule))
+
+    for rule in rules.values():
+        if rule.literal_constraint_id is None:
+            continue
+        target, reference_diagnostics = _resolve_reference(
+            index,
+            "LiteralPhraseConstraint",
+            rule.literal_constraint_id,
+            scope=SCOPE_PLANNING,
+            item=rule.motif_event_id,
+            field_name="literal_constraint_id",
+            related=(rule.record.identity,),
+        )
+        diagnostics.extend(reference_diagnostics)
+        if target is not None and _stable_id(
+            target.payload.get("motif_event_id")
+        ) != rule.motif_event_id:
+            diagnostics.append(
+                rule.record.violation(
+                    "MOTIF_LITERAL_CONSTRAINT_DISAGREEMENT",
+                    observed="{0} points back to {1!r}".format(
+                        rule.literal_constraint_id,
+                        target.payload.get("motif_event_id"),
+                    ),
+                    expected="a reciprocal constraint for " + rule.motif_event_id,
+                    related=(target.identity,),
+                )
+            )
+
+    for rule in constraint_rules.values():
+        target, reference_diagnostics = _resolve_reference(
+            index,
+            "MotifEvent",
+            rule.motif_event_id,
+            scope=SCOPE_PLANNING,
+            item=rule.constraint_id,
+            field_name="motif_event_id",
+            related=(rule.record.identity,),
+        )
+        diagnostics.extend(reference_diagnostics)
+        if target is not None and _stable_id(
+            target.payload.get("literal_constraint_id")
+        ) != rule.constraint_id:
+            diagnostics.append(
+                rule.record.violation(
+                    "LITERAL_CONSTRAINT_MOTIF_DISAGREEMENT",
+                    observed="{0} carries literal_constraint_id={1!r}".format(
+                        rule.motif_event_id,
+                        target.payload.get("literal_constraint_id"),
+                    ),
+                    expected="a reciprocal link to " + rule.constraint_id,
+                    related=(target.identity,),
+                )
+            )
+
+    ledger_by_chapter: Dict[int, set] = {}
+    for rule in rules.values():
+        for chapter in rule.participating_chapters:
+            ledger_by_chapter.setdefault(chapter, set()).add(rule.motif_event_id)
+    chapters = (
+        sorted(scope)
+        if scope is not None
+        else sorted(
+            set(ledger_by_chapter)
+            | {
+                entry.chapter
+                for entry in index.arc_entries
+                if entry.chapter is not None
+            }
+        )
+    )
+    for chapter in chapters:
+        entry = index.arc_entry_for_chapter(chapter)
+        if entry is None:
+            continue
+        arc_ids = _stable_id_sequence(entry.payload.get("motif_events"))
+        if arc_ids is None:
+            diagnostics.append(
+                _diagnostic(
+                    "MOTIF_ARC_ASSIGNMENT_MALFORMED",
+                    scope=SCOPE_PLANNING,
+                    item=entry.filename or entry.identity,
+                    observed="motif_events={0!r}".format(
+                        entry.payload.get("motif_events")
+                    ),
+                    expected="a duplicate-free array of MotifEvent StableIDs",
+                    disposition=DISPOSITION_INCOMPLETE,
+                    related=(entry.identity,),
+                )
+            )
+            continue
+        expected_ids = set(ledger_by_chapter.get(chapter, set()))
+        if set(arc_ids) != expected_ids:
+            diagnostics.append(
+                _diagnostic(
+                    "MOTIF_LEDGER_ARC_DISAGREEMENT",
+                    scope=SCOPE_PLANNING,
+                    item=entry.filename or entry.identity,
+                    observed="arc_entry={0}, ledger={1}".format(
+                        sorted(arc_ids), sorted(expected_ids)
+                    ),
+                    expected="one Motif_Event assignment set",
+                    related=(entry.identity,),
+                )
+            )
+
+    if scope is not None:
+        for chapter in sorted(scope):
+            for motif_event_id in CALIBRATION_REQUIRED_MOTIFS.get(chapter, ()):
+                if index.lookup("MotifEvent", motif_event_id):
+                    continue
+                diagnostics.append(
+                    _diagnostic(
+                        "MOTIF_CALIBRATION_ASSIGNMENT_MISSING",
+                        scope=SCOPE_PLANNING,
+                        item="chapter {0}".format(chapter),
+                        observed="no MotifEvent record for " + motif_event_id,
+                        expected="{0} assigned to chapter {1}".format(
+                            motif_event_id, chapter
+                        ),
+                    )
+                )
+
+    return tuple(diagnostics)
+
+
+def check_chapter_motif_assignments(
+    document: ChapterDocument, index: ReferenceIndex
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Compare one parsed header with the ledger's assignment for its chapter."""
+
+    chapter = document.header.get("chapter")
+    header_ids = document.header.get("motif_events")
+    if not _is_chapter_number(chapter) or not isinstance(header_ids, list):
+        return ()
+
+    expected_ids = set()
+    for record in index.of_type("MotifEvent"):
+        record_id = _stable_id(record.payload.get("motif_event_id"))
+        if record_id is None or index.is_duplicated("MotifEvent", record_id):
+            continue
+        rule, _diagnostics = _parse_motif_event_rule(record)
+        if rule is not None and chapter in rule.participating_chapters:
+            expected_ids.add(rule.motif_event_id)
+    observed_ids = {
+        stable_id
+        for stable_id in (_stable_id(value) for value in header_ids)
+        if stable_id is not None
+    }
+    if observed_ids == expected_ids:
+        return ()
+    return (
+        _diagnostic(
+            "MOTIF_LEDGER_HEADER_DISAGREEMENT",
+            scope=SCOPE_CHAPTER,
+            item=document.relative_path,
+            observed="header={0}, ledger={1}".format(
+                sorted(observed_ids), sorted(expected_ids)
+            ),
+            expected="one Motif_Event assignment set",
+        ),
+    )
+
+
+def _non_overlapping_occurrence_offsets(text: str, phrase: str) -> Tuple[int, ...]:
+    offsets: List[int] = []
+    cursor = 0
+    while phrase:
+        offset = text.find(phrase, cursor)
+        if offset < 0:
+            break
+        offsets.append(offset)
+        cursor = offset + len(phrase)
+    return tuple(offsets)
+
+
+def check_literal_phrase_constraints(
+    document: ChapterDocument, index: ReferenceIndex
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Apply ledgered outside-scope literal rules to one Prose_Body only.
+
+    Both phrase and prose are NFC/LF normalized, then compared literally. Case,
+    punctuation, and word order are therefore preserved. In-scope totals are not
+    inferred from a chapter subset: `Did I say yes?` has no such total, and the
+    declared Final_Passage/count owned by Chapter 128 is deliberately left for a
+    scope that actually contains that machine-declared span.
+    """
+
+    if not document.boundary_resolved or document.prose_body is None:
+        return ()
+    movement = document.header.get("movement")
+    chapter = document.header.get("chapter")
+    if movement not in MOVEMENT_ORDER or not _is_chapter_number(chapter):
+        return ()
+
+    prose = normalize_prose(document.prose_body)
+    diagnostics: List[CheckerDiagnostic] = []
+    for record in index.of_type("LiteralPhraseConstraint"):
+        constraint_id = _stable_id(record.payload.get("constraint_id"))
+        if constraint_id is None or index.is_duplicated(
+            "LiteralPhraseConstraint", constraint_id
+        ):
+            continue
+        rule, _record_diagnostics = _parse_literal_constraint_rule(record)
+        if rule is None:
+            continue
+        offsets = _non_overlapping_occurrence_offsets(prose, rule.exact_phrase)
+        if not offsets:
+            continue
+        in_allowed_scope = movement in rule.allowed_movements
+        if rule.allowed_chapters:
+            in_allowed_scope = in_allowed_scope and chapter in rule.allowed_chapters
+        if rule.allowed_files:
+            in_allowed_scope = (
+                in_allowed_scope and document.relative_path in rule.allowed_files
+            )
+        if in_allowed_scope:
+            # Task 7.4 never turns a partial chapter/batch into a whole-book
+            # count, and it never guesses the Chapter-128 Final_Passage.
+            continue
+        for occurrence_number, offset in enumerate(
+            offsets[rule.maximum_outside_scope :],
+            start=rule.maximum_outside_scope + 1,
+        ):
+            diagnostics.append(
+                _diagnostic(
+                    rule.diagnostic_code,
+                    scope=SCOPE_CHAPTER,
+                    item=document.relative_path,
+                    observed="occurrence {0} at normalized Prose_Body offset {1}".format(
+                        occurrence_number, offset
+                    ),
+                    expected=(
+                        "no more than {0} exact occurrences outside the ledgered "
+                        "movement/chapter/file scope"
+                    ).format(rule.maximum_outside_scope),
+                    details=(("protected_phrase", rule.exact_phrase),),
+                    related=(rule.record.identity,),
+                )
+            )
     return tuple(diagnostics)
 
 
@@ -4604,8 +6168,9 @@ def check_chapter_file(
 
     `reference_index` is optional and defaults to `None`, in which case only the
     task 7.2 filename, header, length, and agreement checks run. Supplying one
-    adds the task 7.3 direct-reference resolution and the Requirement 12.5
-    Timeline_ID, POV_ID, Motif_Event, Hook, and Chapter_Status agreements.
+    adds task 7.3 direct-reference resolution plus task 7.4 ledger/header and
+    Prose_Body-only literal checks. Requirement 12.5 Timeline_ID, POV_ID,
+    Motif_Event, Hook, and Chapter_Status agreements remain part of that seam.
     """
 
     relative_path = manuscript_relative_path(path, manuscript_root)
@@ -4639,6 +6204,12 @@ def check_chapter_file(
     if reference_index is not None:
         diagnostics.extend(
             check_direct_references(document, arc_entry, reference_index)
+        )
+        diagnostics.extend(
+            check_chapter_motif_assignments(document, reference_index)
+        )
+        diagnostics.extend(
+            check_literal_phrase_constraints(document, reference_index)
         )
 
     return ChapterCheckResult(
@@ -4732,10 +6303,11 @@ def check_chapter_files(
 ) -> ChapterScopeResult:
     """Run the chapter-local checks over one or more Chapter_Files.
 
-    When `reference_index` is supplied, the batch scope for the Cross_Cut rules
-    is exactly the set of chapters these files claim: a relationship whose other
-    participant is outside the requested batch is left unevaluated rather than
-    reported as one-sided.
+    When `reference_index` is supplied, the batch scope is exactly the set of
+    chapters these files claim. Cross_Cut reciprocity is evaluated only when all
+    participants are present; task-7.4 motif planning checks likewise inspect
+    only records directly assigned/referenced in that set, while each parsed
+    Prose_Body is scanned against the ledgered outside-scope literal rules.
     """
 
     results = tuple(
@@ -4757,6 +6329,9 @@ def check_chapter_files(
         )
         diagnostics.extend(
             check_cross_cut_references(reference_index, batch_scope=batch_scope)
+        )
+        diagnostics.extend(
+            check_motif_planning(reference_index, chapter_scope=batch_scope)
         )
     return ChapterScopeResult(chapters=results, diagnostics=tuple(diagnostics))
 
@@ -4798,6 +6373,3653 @@ def check_chapter_scope(
     )
 
 
+# ---------------------------------------------------------------------------
+# Batch composition and changed cross-document references
+# ---------------------------------------------------------------------------
+
+
+# The design fixes the Calibration_Batch as chapters 1–5 plus the three
+# nonconsecutive representative chapters. It is a pre-baseline delivery, so it is
+# never required to be one contiguous sequence row.
+CALIBRATION_BATCH_CHAPTERS: Tuple[int, ...] = (1, 2, 3, 4, 5, 73, 118, 124)
+# Requirement 13.1 sizes the Calibration_Batch at 6–8 Chapter_Files; Requirement
+# 13.2 sizes each post-baseline Drafting_Batch at 4–8. The ranges differ, which
+# is why the two kinds are distinguished rather than sharing one rule.
+CALIBRATION_BATCH_SIZE_RANGE: Tuple[int, int] = (6, 8)
+DRAFTING_BATCH_SIZE_RANGE: Tuple[int, int] = (4, 8)
+
+BATCH_KIND_CALIBRATION = "calibration"
+BATCH_KIND_DRAFTING = "drafting"
+BATCH_KINDS: Tuple[str, ...] = (BATCH_KIND_CALIBRATION, BATCH_KIND_DRAFTING)
+
+BATCH_SIZE_RANGES: Mapping[str, Tuple[int, int]] = {
+    BATCH_KIND_CALIBRATION: CALIBRATION_BATCH_SIZE_RANGE,
+    BATCH_KIND_DRAFTING: DRAFTING_BATCH_SIZE_RANGE,
+}
+
+# Which record types a chapter can reach directly, and the one field that makes
+# each reachable. `LiteralPhraseConstraint` is absent because a chapter never
+# names one: it is reached through the Motif_Event it protects.
+_SCOPE_PARTICIPATION_TYPES: Tuple[str, ...] = (
+    "ArcEntry",
+    "TimelineEntry",
+    "POVProfile",
+    "VoiceBrief",
+    "MotifEvent",
+    "LiteralPhraseConstraint",
+    "CrossCut",
+)
+
+
+def classify_batch_kind(chapters: Iterable[int]) -> str:
+    """Infer whether a chapter set is the Calibration_Batch or a Drafting_Batch.
+
+    A set is the Calibration_Batch when it is drawn entirely from the eight fixed
+    calibration chapters *and* is already large enough to be one. Requiring the
+    Requirement 13.1 minimum keeps a small delivery like chapters 1–4 from being
+    reported against the calibration range it never claimed; that reads as an
+    ordinary Drafting_Batch, which its size satisfies.
+
+    An explicit `--batch-kind` overrides this, so the inference only has to be
+    right for the common case. Declaring the kind stays available whenever a
+    delivery is ambiguous — including a deliberately undersized calibration
+    delivery, which then correctly reports its size.
+    """
+
+    requested = frozenset(chapters)
+    if len(requested) >= CALIBRATION_BATCH_SIZE_RANGE[0] and requested <= frozenset(
+        CALIBRATION_BATCH_CHAPTERS
+    ):
+        return BATCH_KIND_CALIBRATION
+    return BATCH_KIND_DRAFTING
+
+
+def check_batch_composition(
+    chapters: Sequence[int], *, batch_kind: str
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Enforce the delivered batch size rule for the declared batch kind.
+
+    Reports size against the range Requirement 13.1 or 13.2 sets for that kind,
+    and reports any chapter a Calibration_Batch claims that the design's fixed
+    eight-chapter set does not contain. Contiguity is deliberately not checked:
+    the Calibration_Batch is nonconsecutive by design, and a Drafting_Batch is
+    only *normally* one sequence row or cross-cut cluster.
+    """
+
+    if batch_kind not in BATCH_SIZE_RANGES:
+        raise ValueError("unknown batch kind {0!r}".format(batch_kind))
+
+    diagnostics: List[CheckerDiagnostic] = []
+    unique = sorted(set(chapters))
+    minimum, maximum = BATCH_SIZE_RANGES[batch_kind]
+
+    if unique and not minimum <= len(unique) <= maximum:
+        diagnostics.append(
+            _diagnostic(
+                "BATCH_SIZE_OUT_OF_RANGE",
+                scope=SCOPE_BATCH,
+                item="{0} batch".format(batch_kind),
+                observed="{0} Chapter_Files ({1})".format(
+                    len(unique), ", ".join(str(number) for number in unique)
+                ),
+                expected="{0}–{1} Chapter_Files".format(minimum, maximum),
+            )
+        )
+
+    if batch_kind == BATCH_KIND_CALIBRATION:
+        allowed = frozenset(CALIBRATION_BATCH_CHAPTERS)
+        outside = [number for number in unique if number not in allowed]
+        if outside:
+            diagnostics.append(
+                _diagnostic(
+                    "BATCH_CALIBRATION_CHAPTER_UNEXPECTED",
+                    scope=SCOPE_BATCH,
+                    item="calibration batch",
+                    observed="chapters outside the Calibration_Batch: {0}".format(
+                        ", ".join(str(number) for number in outside)
+                    ),
+                    expected="chapters drawn from {0}".format(
+                        ", ".join(
+                            str(number) for number in CALIBRATION_BATCH_CHAPTERS
+                        )
+                    ),
+                )
+            )
+
+    return tuple(diagnostics)
+
+
+def scope_participating_records(
+    index: ReferenceIndex,
+    *,
+    chapter_scope: Iterable[int],
+    chapter_results: Sequence["ChapterCheckResult"] = (),
+) -> Mapping[str, Tuple[str, ...]]:
+    """Map each record source to the stable IDs it holds inside a scope.
+
+    A record participates when the requested chapters reach it directly: an
+    ArcEntry for a scope chapter, that entry's or header's Timeline_ID and
+    POV_ID, the profile's Voice_Brief, an assigned or participating Motif_Event,
+    a Literal_Phrase_Constraint protecting one of those events, and a Cross_Cut
+    a scope chapter declares. This is the same Direct_Planning_Reference notion
+    the chapter checks resolve, collected by source document so a declared
+    changed reference can be compared against it.
+    """
+
+    scope = frozenset(chapter_scope)
+    wanted: Dict[str, set] = {
+        record_type: set() for record_type in _SCOPE_PARTICIPATION_TYPES
+    }
+
+    for entry in index.arc_entries:
+        if entry.chapter is None or entry.chapter not in scope:
+            continue
+        for record_type, field_name in (
+            ("TimelineEntry", "timeline_id"),
+            ("POVProfile", "pov_id"),
+        ):
+            value = _stable_id(entry.payload.get(field_name))
+            if value is not None:
+                wanted[record_type].add(value)
+        for key in ("motif_events", "cross_cuts"):
+            values = entry.payload.get(key)
+            if not isinstance(values, list):
+                continue
+            record_type = "MotifEvent" if key == "motif_events" else "CrossCut"
+            for item in values:
+                value = _stable_id(item)
+                if value is not None:
+                    wanted[record_type].add(value)
+
+    # A Chapter_Header can name a Timeline_ID, POV_ID, or Motif_Event that its
+    # ArcEntry does not. That disagreement is reported elsewhere; here both sides
+    # count as reached, so a changed reference is never called stale merely
+    # because the two records disagree about which ID the chapter uses.
+    for result in chapter_results:
+        if result.chapter is None or result.chapter not in scope:
+            continue
+        header = result.document.header
+        for record_type, field_name in (
+            ("TimelineEntry", "timeline_id"),
+            ("POVProfile", "pov_id"),
+        ):
+            value = _stable_id(header.get(field_name))
+            if value is not None:
+                wanted[record_type].add(value)
+        header_motifs = header.get("motif_events")
+        if isinstance(header_motifs, list):
+            for item in header_motifs:
+                value = _stable_id(item)
+                if value is not None:
+                    wanted["MotifEvent"].add(value)
+
+    for pov_id in sorted(wanted["POVProfile"]):
+        for record in index.lookup("POVProfile", pov_id):
+            value = _stable_id(record.payload.get("voice_brief_id"))
+            if value is not None:
+                wanted["VoiceBrief"].add(value)
+
+    for motif_event_id in sorted(wanted["MotifEvent"]):
+        for record in index.of_type("LiteralPhraseConstraint"):
+            if _stable_id(record.payload.get("motif_event_id")) == motif_event_id:
+                value = _stable_id(record.payload.get("constraint_id"))
+                if value is not None:
+                    wanted["LiteralPhraseConstraint"].add(value)
+
+    participating: Dict[str, set] = {}
+    for entry in index.arc_entries:
+        if entry.chapter is not None and entry.chapter in scope:
+            participating.setdefault(entry.source, set()).add(
+                "chapter {0}".format(entry.chapter)
+            )
+
+    for record_type in _SCOPE_PARTICIPATION_TYPES:
+        if record_type == "ArcEntry":
+            continue
+        for record_id in wanted[record_type]:
+            for record in index.lookup(record_type, record_id):
+                participating.setdefault(record.source, set()).add(record_id)
+
+    return {
+        source: tuple(sorted(ids)) for source, ids in sorted(participating.items())
+    }
+
+
+def check_changed_references(
+    declared: Sequence[str],
+    *,
+    index: ReferenceIndex,
+    chapter_scope: Iterable[int],
+    chapter_results: Sequence["ChapterCheckResult"] = (),
+    known_sources: Sequence[str] = DEFAULT_RECORD_SOURCES,
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Audit the changed cross-document references a batch delivers.
+
+    Requirement 13.3 makes a delivered batch audit its files *and* every changed
+    cross-document reference the batch affects. The batch declares those
+    documents; this reports the ones the declaration cannot support:
+
+    * a path that is not an allowlisted record source, or that the index could
+      not load, leaves the requested scope incomplete rather than merely
+      violated, because the audit the batch claims never ran;
+    * the same document declared twice is a malformed declaration; and
+    * a document holding no record the batch's chapters reach is stale — the
+      batch cannot audit a change it does not touch, and a partially
+      synchronized delivery must not read as an approved one.
+
+    A record source the scope *does* reach but that the batch does not declare is
+    not reported. Most references are unchanged by a given batch, and this
+    checker reads one snapshot: it cannot see that a document changed, only that
+    a declaration does or does not agree with the requested scope.
+    """
+
+    diagnostics: List[CheckerDiagnostic] = []
+    allowlist = frozenset(known_sources)
+    loaded = frozenset(index.sources)
+    scope = sorted(set(chapter_scope))
+    participating = scope_participating_records(
+        index, chapter_scope=scope, chapter_results=chapter_results
+    )
+
+    seen: Dict[str, int] = {}
+    for raw in declared:
+        relative = _normalized_text(str(raw)).replace("\\", "/").strip("/")
+        seen[relative] = seen.get(relative, 0) + 1
+        if seen[relative] > 1:
+            diagnostics.append(
+                _diagnostic(
+                    "CHANGED_REFERENCE_DUPLICATE",
+                    scope=SCOPE_BATCH,
+                    item=relative,
+                    observed="declared {0} times".format(seen[relative]),
+                    expected="each changed reference declared once",
+                    disposition=DISPOSITION_INCOMPLETE,
+                )
+            )
+            continue
+
+        if relative not in allowlist:
+            diagnostics.append(
+                _diagnostic(
+                    "CHANGED_REFERENCE_UNKNOWN",
+                    scope=SCOPE_BATCH,
+                    item=relative,
+                    observed="not an allowlisted record source",
+                    expected="one of {0}".format(", ".join(sorted(allowlist))),
+                    disposition=DISPOSITION_INCOMPLETE,
+                )
+            )
+            continue
+
+        if relative not in loaded:
+            diagnostics.append(
+                _diagnostic(
+                    "CHANGED_REFERENCE_UNREADABLE",
+                    scope=SCOPE_BATCH,
+                    item=relative,
+                    observed="the record source did not load for this scope",
+                    expected="a readable record source to audit the change against",
+                    disposition=DISPOSITION_INCOMPLETE,
+                )
+            )
+            continue
+
+        reached = participating.get(relative, ())
+        if not reached:
+            diagnostics.append(
+                _diagnostic(
+                    "CHANGED_REFERENCE_STALE",
+                    scope=SCOPE_BATCH,
+                    item=relative,
+                    observed="no record in this document is reached by chapters "
+                    "{0}".format(
+                        ", ".join(str(number) for number in scope) or "(none)"
+                    ),
+                    expected=(
+                        "a changed reference the delivered batch actually "
+                        "reaches, or a batch scope containing the changed records"
+                    ),
+                )
+            )
+
+    return tuple(diagnostics)
+
+
+# ---------------------------------------------------------------------------
+# Same_POV_Run: two independent bounds
+#
+# A Same_POV_Run is a maximal uninterrupted sequence of chapters sharing one
+# POV_ID on the *global* sequence, so a Story_Movement boundary counts like any
+# other adjacency. Planning evaluates the word bound from `estimated_words` and
+# the completed Manuscript from each declared `words`; the run grammar is the
+# same either way, so it is computed once here and fed from either source.
+# ---------------------------------------------------------------------------
+
+
+@dataclass(frozen=True)
+class POVRun:
+    """One maximal same-POV run and the word values available for it."""
+
+    pov_id: str
+    chapters: Tuple[int, ...]
+    words: Tuple[Optional[int], ...]
+
+    @property
+    def chapter_count(self) -> int:
+        return len(self.chapters)
+
+    @property
+    def total_words(self) -> Optional[int]:
+        """The combined Prose_Words, or `None` when any member is unknown.
+
+        `None` is not zero and not a pass. A run whose total cannot be computed
+        is reported as incomplete input rather than silently treated as short
+        enough, which is the whole reason `estimated_words` is required for a run
+        of two or more chapters.
+        """
+
+        if any(value is None for value in self.words):
+            return None
+        return sum(int(value) for value in self.words if value is not None)
+
+    @property
+    def label(self) -> str:
+        return "{0} chapters {1}".format(
+            self.pov_id, ",".join(str(number) for number in self.chapters)
+        )
+
+
+def pov_runs(
+    assignments: Sequence[Tuple[int, str, Optional[int]]],
+) -> Tuple[POVRun, ...]:
+    """Group `(chapter, pov_id, words)` triples into maximal same-POV runs.
+
+    Input is sorted by chapter first, so a caller may pass entries in document
+    order. Adjacency is decided by consecutive position in the sorted sequence
+    rather than by consecutive chapter numbers: a partial scope has gaps, and
+    inventing a break at a gap would silently split a run that the complete
+    outline holds together. Whole-book contiguity is checked separately.
+    """
+
+    ordered = sorted(assignments, key=lambda item: item[0])
+    runs: List[POVRun] = []
+    current_pov: Optional[str] = None
+    chapters: List[int] = []
+    words: List[Optional[int]] = []
+
+    for chapter, pov_id, word_count in ordered:
+        if pov_id != current_pov:
+            if current_pov is not None:
+                runs.append(
+                    POVRun(
+                        pov_id=current_pov,
+                        chapters=tuple(chapters),
+                        words=tuple(words),
+                    )
+                )
+            current_pov = pov_id
+            chapters = []
+            words = []
+        chapters.append(chapter)
+        words.append(word_count)
+
+    if current_pov is not None:
+        runs.append(
+            POVRun(pov_id=current_pov, chapters=tuple(chapters), words=tuple(words))
+        )
+    return tuple(runs)
+
+
+def check_pov_runs(
+    runs: Sequence[POVRun], *, scope: str, source: str
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Report every run over the chapter cap or the combined word limit.
+
+    Both bounds are evaluated for every run, so one run can report both. Per
+    Requirement 12.16 each diagnostic names the run's chapters, the observed
+    total, and the expected limit. `source` names where the word values came from
+    so the reader knows whether an estimate or a declared count was measured.
+    """
+
+    diagnostics: List[CheckerDiagnostic] = []
+    for run in runs:
+        if run.chapter_count > POV_RUN_CHAPTER_LIMIT:
+            diagnostics.append(
+                _diagnostic(
+                    "POV_RUN_CHAPTER_LIMIT",
+                    scope=scope,
+                    item=run.label,
+                    observed="{0} consecutive Chapter_Files".format(run.chapter_count),
+                    expected="at most {0} consecutive Chapter_Files under one "
+                    "POV_ID".format(POV_RUN_CHAPTER_LIMIT),
+                    details=(("source", source),),
+                )
+            )
+        total = run.total_words
+        if total is None:
+            if run.chapter_count < 2:
+                # A single-chapter run needs no estimate: the Hard_Chapter_Maximum
+                # already bounds it, and `estimated_words` may be null there.
+                continue
+            unknown = [
+                str(chapter)
+                for chapter, value in zip(run.chapters, run.words)
+                if value is None
+            ]
+            diagnostics.append(
+                _diagnostic(
+                    "POV_RUN_WORDS_UNKNOWN",
+                    scope=scope,
+                    item=run.label,
+                    observed="no word value for chapter {0}".format(
+                        ",".join(unknown)
+                    ),
+                    expected="a word value for every chapter in a run of two or "
+                    "more, so the {0}-word run limit can be "
+                    "evaluated".format(POV_RUN_WORD_LIMIT),
+                    disposition=DISPOSITION_INCOMPLETE,
+                    details=(("source", source),),
+                )
+            )
+            continue
+        if total > POV_RUN_WORD_LIMIT:
+            diagnostics.append(
+                _diagnostic(
+                    "POV_RUN_WORD_LIMIT",
+                    scope=scope,
+                    item=run.label,
+                    observed="{0} combined Prose_Words".format(total),
+                    expected="at most {0} combined Prose_Words in one "
+                    "Same_POV_Run".format(POV_RUN_WORD_LIMIT),
+                    details=(("source", source),),
+                )
+            )
+    return tuple(diagnostics)
+
+
+def arc_entry_pov_assignments(
+    entries: Sequence[ArcEntryRecord],
+) -> Tuple[Tuple[int, str, Optional[int]], ...]:
+    """Planning-side `(chapter, pov_id, estimated_words)` triples.
+
+    Entries whose chapter or `pov_id` will not parse are skipped: their own
+    structural diagnostics already fired, and guessing a POV would invent a run
+    boundary. `estimated_words` stays `None` when absent or malformed so the run
+    check reports it as unknown rather than as zero.
+    """
+
+    assignments: List[Tuple[int, str, Optional[int]]] = []
+    for entry in entries:
+        if entry.chapter is None:
+            continue
+        pov_id = _stable_id(entry.payload.get("pov_id"))
+        if pov_id is None:
+            continue
+        estimated = entry.payload.get("estimated_words")
+        words = (
+            estimated
+            if isinstance(estimated, int) and not isinstance(estimated, bool)
+            else None
+        )
+        assignments.append((entry.chapter, pov_id, words))
+    return tuple(assignments)
+
+
+# ---------------------------------------------------------------------------
+# POV_Roster size, one-to-one identity, entity type, and Anchor coverage
+# ---------------------------------------------------------------------------
+
+
+def check_pov_roster(
+    index: ReferenceIndex,
+    *,
+    chapter_movements: Optional[Mapping[str, frozenset]] = None,
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Roster size, human entity type, single Anchor, and Anchor coverage.
+
+    `chapter_movements` maps POV_ID to the set of movements that POV actually
+    holds a chapter in. It is supplied only at global scope, because Requirement
+    4.9's coverage obligation is a whole-book fact: a batch legitimately contains
+    one movement. When it is `None` the coverage checks are skipped and the
+    declared `movement_coverage` is left alone rather than compared against a
+    partial view.
+
+    The Character_ID/POV_ID bijection itself is checked in
+    `check_pov_voice_brief_pairing`, which owns the one-to-one mapping. This adds
+    only the roster-wide obligations of Requirements 4.1, 4.8, 4.10, and 11.7.
+    """
+
+    profiles = index.of_type("POVProfile")
+    diagnostics: List[CheckerDiagnostic] = []
+
+    minimum, maximum = POV_ROSTER_SIZE_RANGE
+    if profiles and not minimum <= len(profiles) <= maximum:
+        diagnostics.append(
+            _diagnostic(
+                "POV_ROSTER_SIZE",
+                scope=SCOPE_PLANNING,
+                item="planning/pov-roster.md",
+                observed="{0} POVProfile records".format(len(profiles)),
+                expected="{0}\u2013{1} human POVs".format(minimum, maximum),
+            )
+        )
+
+    anchors: List[str] = []
+    for profile in profiles:
+        pov_id = _stable_id(profile.payload.get("pov_id"))
+        label = pov_id or profile.identity
+
+        entity_type = profile.payload.get("entity_type")
+        if entity_type != POV_ENTITY_TYPE_HUMAN:
+            # Requirement 4.10: no POV is reserved for the Foreign_Signal or for
+            # any actual, alleged, or hypothesized adversary behind it. The
+            # schema expresses that as a closed single-value enum, so anything
+            # other than `human` is the prohibited case.
+            diagnostics.append(
+                profile.violation(
+                    "POV_ENTITY_TYPE",
+                    item=label,
+                    observed="entity_type={0!r}".format(entity_type),
+                    expected="exactly {0!r}; a Foreign_Signal or adversary POV is "
+                    "prohibited".format(POV_ENTITY_TYPE_HUMAN),
+                )
+            )
+
+        anchor = profile.payload.get("anchor")
+        if not _is_bool(anchor):
+            diagnostics.append(
+                profile.malformed(
+                    "POV_ANCHOR_MALFORMED",
+                    observed="anchor={0!r}".format(anchor),
+                    expected="a boolean",
+                )
+            )
+        elif anchor and pov_id is not None:
+            anchors.append(pov_id)
+
+        declared = profile.payload.get("movement_coverage")
+        coverage = _movement_sequence(declared)
+        if coverage is None:
+            diagnostics.append(
+                profile.malformed(
+                    "POV_MOVEMENT_COVERAGE_MALFORMED",
+                    observed="movement_coverage={0!r}".format(declared),
+                    expected="a unique nonempty list of movement names",
+                )
+            )
+        elif chapter_movements is not None and pov_id is not None:
+            observed = chapter_movements.get(pov_id, frozenset())
+            if frozenset(coverage) != observed:
+                diagnostics.append(
+                    profile.violation(
+                        "POV_MOVEMENT_COVERAGE_DISAGREEMENT",
+                        item=label,
+                        observed="declared={0} assigned={1}".format(
+                            ",".join(coverage) or "(none)",
+                            ",".join(sorted(observed)) or "(none)",
+                        ),
+                        expected="declared movement_coverage equal to the "
+                        "movements the Arc_Outline assigns this POV",
+                    )
+                )
+
+    if profiles and len(anchors) != 1:
+        diagnostics.append(
+            _diagnostic(
+                "POV_ANCHOR_COUNT",
+                scope=SCOPE_PLANNING,
+                item="planning/pov-roster.md",
+                observed="{0} anchor profiles: {1}".format(
+                    len(anchors), ",".join(sorted(anchors)) or "(none)"
+                ),
+                expected="exactly one Anchor_POV",
+            )
+        )
+    elif anchors and chapter_movements is not None:
+        anchor_id = anchors[0]
+        held = chapter_movements.get(anchor_id, frozenset())
+        missing = [movement for movement in MOVEMENTS if movement not in held]
+        if missing:
+            diagnostics.append(
+                _diagnostic(
+                    "ANCHOR_MOVEMENT_COVERAGE",
+                    scope=SCOPE_GLOBAL,
+                    item=anchor_id,
+                    observed="no Chapter_File in {0}".format(",".join(missing)),
+                    expected="at least one Anchor_POV Chapter_File in every "
+                    "Story_Movement",
+                )
+            )
+
+    diagnostics.extend(_check_provisional_pov_loads(profiles))
+    return tuple(diagnostics)
+
+
+def _movement_sequence(value: Any) -> Optional[Tuple[str, ...]]:
+    if not isinstance(value, list) or not value:
+        return None
+    names: List[str] = []
+    for member in value:
+        if not isinstance(member, str):
+            return None
+        name = _normalized_text(member).strip()
+        if name not in MOVEMENTS or name in names:
+            return None
+        names.append(name)
+    return tuple(names)
+
+
+def _check_provisional_pov_loads(
+    profiles: Sequence[PlanningRecord],
+) -> Tuple[CheckerDiagnostic, ...]:
+    """The `provisional_load` object's own arithmetic, then the 56/32/33/7 vector.
+
+    Requirement 15.3 fixes the load vector, so a changed vector is a violation
+    even when each individual object is internally consistent. The comparison is
+    over the sorted multiset of totals, because Requirement 12.11 keeps which
+    selected name owns which number outside automated pass/fail.
+    """
+
+    diagnostics: List[CheckerDiagnostic] = []
+    totals: List[int] = []
+    for profile in profiles:
+        label = _stable_id(profile.payload.get("pov_id")) or profile.identity
+        load = profile.payload.get("provisional_load")
+        expected_keys = MOVEMENTS + ("total",)
+        if not isinstance(load, dict) or set(load) != set(expected_keys):
+            diagnostics.append(
+                profile.malformed(
+                    "POV_PROVISIONAL_LOAD_MALFORMED",
+                    observed="provisional_load {0}".format(
+                        _key_set_report(load, expected_keys)
+                        if isinstance(load, dict)
+                        else "is not an object"
+                    ),
+                    expected="exactly {0}".format(", ".join(expected_keys)),
+                )
+            )
+            continue
+        if any(
+            not isinstance(load[key], int)
+            or isinstance(load[key], bool)
+            or load[key] < 0
+            for key in expected_keys
+        ):
+            diagnostics.append(
+                profile.malformed(
+                    "POV_PROVISIONAL_LOAD_MALFORMED",
+                    observed="provisional_load={0!r}".format(load),
+                    expected="nonnegative integers for every movement and total",
+                )
+            )
+            continue
+        movement_sum = sum(int(load[movement]) for movement in MOVEMENTS)
+        if movement_sum != int(load["total"]):
+            diagnostics.append(
+                profile.violation(
+                    "POV_PROVISIONAL_LOAD_TOTAL",
+                    item=label,
+                    observed="movements sum to {0}, total={1}".format(
+                        movement_sum, load["total"]
+                    ),
+                    expected="the four movement counts to sum to total",
+                )
+            )
+            continue
+        totals.append(int(load["total"]))
+
+    if totals and tuple(sorted(totals)) != PROVISIONAL_POV_LOAD_TOTALS:
+        diagnostics.append(
+            _diagnostic(
+                "POV_PROVISIONAL_LOAD_VECTOR",
+                scope=SCOPE_PLANNING,
+                item="planning/pov-roster.md",
+                observed="totals {0}".format(
+                    "/".join(str(value) for value in sorted(totals, reverse=True))
+                ),
+                expected="the unchanged {0} load vector".format(
+                    "/".join(
+                        str(value)
+                        for value in sorted(PROVISIONAL_POV_LOAD_TOTALS, reverse=True)
+                    )
+                ),
+            )
+        )
+    return tuple(diagnostics)
+
+
+# ---------------------------------------------------------------------------
+# Whole-outline sequence, movement blocks, and outline/file bijection
+# ---------------------------------------------------------------------------
+
+
+def check_outline_sequence(
+    entries: Sequence[ArcEntryRecord],
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirement 1.3: the complete outline is exactly `1..N`, once each.
+
+    Duplicates and gaps are reported separately because they are different
+    authoring mistakes with different repairs, and both are structural: a plan
+    with either is incomplete input rather than a continuity violation.
+    """
+
+    diagnostics: List[CheckerDiagnostic] = []
+    by_chapter: Dict[int, List[str]] = {}
+    for entry in entries:
+        if entry.chapter is None:
+            continue
+        by_chapter.setdefault(entry.chapter, []).append(entry.identity)
+
+    for chapter in sorted(by_chapter):
+        claimants = sorted(by_chapter[chapter])
+        if len(claimants) > 1:
+            diagnostics.append(
+                _diagnostic(
+                    "OUTLINE_CHAPTER_DUPLICATE",
+                    scope=SCOPE_GLOBAL,
+                    item="chapter {0}".format(chapter),
+                    observed=", ".join(claimants),
+                    expected="exactly one ArcEntry per planned Chapter_File",
+                    disposition=DISPOSITION_INCOMPLETE,
+                )
+            )
+
+    if not by_chapter:
+        return tuple(diagnostics)
+
+    numbers = sorted(by_chapter)
+    expected_range = list(range(1, len(numbers) + 1))
+    if numbers != expected_range:
+        missing = sorted(set(expected_range) - set(numbers))
+        unexpected = sorted(set(numbers) - set(expected_range))
+        observed = []
+        if missing:
+            observed.append("missing={0}".format(_compact_numbers(missing)))
+        if unexpected:
+            observed.append("outside 1..{0}={1}".format(
+                len(numbers), _compact_numbers(unexpected)
+            ))
+        diagnostics.append(
+            _diagnostic(
+                "OUTLINE_SEQUENCE_RANGE",
+                scope=SCOPE_GLOBAL,
+                item="planning/arc-outline.md",
+                observed="; ".join(observed),
+                expected="the uninterrupted integers 1..{0}".format(len(numbers)),
+                disposition=DISPOSITION_INCOMPLETE,
+            )
+        )
+
+    duplicate_filenames: Dict[str, List[int]] = {}
+    for entry in entries:
+        if entry.chapter is None or entry.filename is None:
+            continue
+        duplicate_filenames.setdefault(entry.filename, []).append(entry.chapter)
+    for filename in sorted(duplicate_filenames):
+        chapters = sorted(duplicate_filenames[filename])
+        if len(chapters) > 1:
+            diagnostics.append(
+                _diagnostic(
+                    "OUTLINE_FILENAME_DUPLICATE",
+                    scope=SCOPE_GLOBAL,
+                    item=filename,
+                    observed="claimed by chapters {0}".format(
+                        ",".join(str(number) for number in chapters)
+                    ),
+                    expected="one filename per planned Chapter_File",
+                    disposition=DISPOSITION_INCOMPLETE,
+                )
+            )
+    return tuple(diagnostics)
+
+
+def _compact_numbers(numbers: Sequence[int]) -> str:
+    """Render a sorted integer list as compact ranges: `1,4-7,12`."""
+
+    ordered = sorted(set(numbers))
+    if not ordered:
+        return "(none)"
+    spans: List[str] = []
+    start = previous = ordered[0]
+    for number in ordered[1:]:
+        if number == previous + 1:
+            previous = number
+            continue
+        spans.append(str(start) if start == previous else "{0}-{1}".format(start, previous))
+        start = previous = number
+    spans.append(str(start) if start == previous else "{0}-{1}".format(start, previous))
+    return ",".join(spans)
+
+
+def check_movement_blocks(
+    entries: Sequence[ArcEntryRecord],
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirement 11.4 and 3.1: four contiguous blocks in the required order.
+
+    Contiguity and order are one fact read two ways, so both come from the same
+    walk: the movement of each chapter in sequence must change at most three
+    times, and each change must move forward through `MOVEMENTS`. A movement that
+    reappears after a different one has begun is a discontiguous block, reported
+    at the chapter where it reappears.
+    """
+
+    ordered = [
+        entry
+        for entry in sorted(
+            (entry for entry in entries if entry.chapter is not None),
+            key=lambda item: int(item.chapter or 0),
+        )
+        if entry.movement in MOVEMENT_ORDER
+    ]
+    if not ordered:
+        return ()
+
+    diagnostics: List[CheckerDiagnostic] = []
+    seen: List[str] = []
+    previous: Optional[ArcEntryRecord] = None
+    for entry in ordered:
+        movement = str(entry.movement)
+        if previous is not None and movement == str(previous.movement):
+            previous = entry
+            continue
+        if movement in seen:
+            diagnostics.append(
+                _diagnostic(
+                    "MOVEMENT_BLOCK_DISCONTIGUOUS",
+                    scope=SCOPE_GLOBAL,
+                    item="chapter {0}".format(entry.chapter),
+                    observed="{0} resumes after {1}".format(
+                        movement, str(previous.movement) if previous else "(none)"
+                    ),
+                    expected="one contiguous block of chapters per "
+                    "Story_Movement",
+                )
+            )
+        else:
+            if previous is not None and MOVEMENT_ORDER[movement] <= MOVEMENT_ORDER[
+                str(previous.movement)
+            ]:
+                diagnostics.append(
+                    _diagnostic(
+                        "MOVEMENT_BLOCK_ORDER",
+                        scope=SCOPE_GLOBAL,
+                        item="chapter {0}".format(entry.chapter),
+                        observed="{0} begins after {1}".format(
+                            movement, str(previous.movement)
+                        ),
+                        expected="movement blocks in the order {0}".format(
+                            ", ".join(MOVEMENTS)
+                        ),
+                    )
+                )
+            seen.append(movement)
+        previous = entry
+
+    absent = [movement for movement in MOVEMENTS if movement not in seen]
+    if absent:
+        diagnostics.append(
+            _diagnostic(
+                "MOVEMENT_BLOCK_MISSING",
+                scope=SCOPE_GLOBAL,
+                item="planning/arc-outline.md",
+                observed="no chapter in {0}".format(",".join(absent)),
+                expected="exactly four Story_Movements: {0}".format(
+                    ", ".join(MOVEMENTS)
+                ),
+                disposition=DISPOSITION_INCOMPLETE,
+            )
+        )
+    return tuple(diagnostics)
+
+
+def check_outline_file_bijection(
+    entries: Sequence[ArcEntryRecord],
+    results: Sequence["ChapterCheckResult"],
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirement 11.3: one Chapter_File per ArcEntry and one entry per file.
+
+    Matched on the manuscript-relative filename the ArcEntry records, which is
+    the only identity both sides independently declare. A chapter-number
+    disagreement between a file and its entry is already reported by the
+    chapter-local agreement checks; repeating it here as a bijection failure
+    would double-report one mistake.
+    """
+
+    planned = {
+        entry.filename: entry
+        for entry in entries
+        if entry.filename is not None and entry.chapter is not None
+    }
+    present = {result.relative_path: result for result in results}
+
+    diagnostics: List[CheckerDiagnostic] = []
+    for filename in sorted(set(planned) - set(present)):
+        entry = planned[filename]
+        diagnostics.append(
+            _diagnostic(
+                "OUTLINE_ENTRY_WITHOUT_FILE",
+                scope=SCOPE_GLOBAL,
+                item=filename,
+                observed="planned by chapter {0} with no Chapter_File".format(
+                    entry.chapter
+                ),
+                expected="exactly one Chapter_File for every ArcEntry",
+                disposition=DISPOSITION_INCOMPLETE,
+                related=(entry.identity,),
+            )
+        )
+    for filename in sorted(set(present) - set(planned)):
+        diagnostics.append(
+            _diagnostic(
+                "CHAPTER_FILE_WITHOUT_OUTLINE_ENTRY",
+                scope=SCOPE_GLOBAL,
+                item=filename,
+                observed="present with no ArcEntry claiming this filename",
+                expected="exactly one ArcEntry for every Chapter_File",
+                disposition=DISPOSITION_INCOMPLETE,
+            )
+        )
+    return tuple(diagnostics)
+
+
+# ---------------------------------------------------------------------------
+# Whole-book length facts: normal share, movement scale, Final_Targets
+# ---------------------------------------------------------------------------
+
+
+def check_normal_share(
+    results: Sequence["ChapterCheckResult"],
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirement 2.8: at least 80 percent of all final chapters are `normal`.
+
+    The denominator is every final Chapter_File, including outliers, and the
+    comparison is exact integer arithmetic so the 79/100 and 80/100 boundary
+    cannot move on a floating-point rounding. Observed classes are derived from
+    observed word counts rather than declared `length_class`, because a declared
+    class that disagrees with its count is a separate diagnostic and must not be
+    able to buy a passing share.
+    """
+
+    classes = [
+        result.length_report.observed_length_class
+        for result in results
+        if result.length_report is not None
+    ]
+    denominator = len(classes)
+    if denominator == 0:
+        return ()
+    normal = sum(1 for value in classes if value == "normal")
+    minimum_numerator, minimum_denominator = NORMAL_SHARE_MINIMUM
+    if normal * minimum_denominator >= minimum_numerator * denominator:
+        return ()
+    return (
+        _diagnostic(
+            "NORMAL_SHARE",
+            scope=SCOPE_GLOBAL,
+            item="manuscript",
+            observed="{0} of {1} final Chapter_Files are normal".format(
+                normal, denominator
+            ),
+            expected="at least {0} percent of all final Chapter_Files within "
+            "{1}\u2013{2} Prose_Words".format(
+                minimum_numerator, *NORMAL_CHAPTER_RANGE
+            ),
+        ),
+    )
+
+
+def movement_word_totals(
+    results: Sequence["ChapterCheckResult"],
+) -> Mapping[str, int]:
+    """Observed Prose_Words per Story_Movement, from observed counts only."""
+
+    totals: Dict[str, int] = {}
+    for result in results:
+        movement = result.movement
+        if movement not in MOVEMENT_ORDER or result.length_report is None:
+            continue
+        totals[str(movement)] = totals.get(str(movement), 0) + int(
+            result.length_report.observed_words
+        )
+    return totals
+
+
+def check_movement_scale(
+    totals: Mapping[str, int],
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirements 3.7, 3.8, and 11.6: Mindwars longest, Coda shortest.
+
+    Both relationships are strict, and both are evaluated only when all four
+    movements have a total. A partially drafted manuscript cannot answer the
+    question, so a missing movement is reported as incomplete rather than
+    letting three totals decide a four-way comparison.
+    """
+
+    absent = [movement for movement in MOVEMENTS if movement not in totals]
+    if absent:
+        return (
+            _diagnostic(
+                "MOVEMENT_SCALE_INCOMPLETE",
+                scope=SCOPE_GLOBAL,
+                item="manuscript",
+                observed="no Prose_Words counted for {0}".format(",".join(absent)),
+                expected="a Prose_Word total for every Story_Movement before "
+                "the length relationships are evaluated",
+                disposition=DISPOSITION_INCOMPLETE,
+            ),
+        )
+
+    diagnostics: List[CheckerDiagnostic] = []
+    mindwars = totals[MINDWARS_MOVEMENT]
+    others = {
+        movement: total
+        for movement, total in totals.items()
+        if movement != MINDWARS_MOVEMENT
+    }
+    not_shorter = sorted(
+        movement for movement, total in others.items() if total >= mindwars
+    )
+    if not_shorter:
+        diagnostics.append(
+            _diagnostic(
+                "MOVEMENT_SCALE_MINDWARS_NOT_LONGEST",
+                scope=SCOPE_GLOBAL,
+                item=MINDWARS_MOVEMENT,
+                observed="{0} Prose_Words, not more than {1}".format(
+                    mindwars,
+                    ", ".join(
+                        "{0}={1}".format(name, others[name]) for name in not_shorter
+                    ),
+                ),
+                expected="the Mindwars_Part strictly longest by Prose_Words",
+            )
+        )
+
+    coda = totals["aftermath_coda"]
+    main_parts = {
+        movement: total
+        for movement, total in totals.items()
+        if movement != "aftermath_coda"
+    }
+    not_longer = sorted(
+        movement for movement, total in main_parts.items() if total <= coda
+    )
+    if not_longer:
+        diagnostics.append(
+            _diagnostic(
+                "MOVEMENT_SCALE_CODA_NOT_SHORTEST",
+                scope=SCOPE_GLOBAL,
+                item="aftermath_coda",
+                observed="{0} Prose_Words, not fewer than {1}".format(
+                    coda,
+                    ", ".join(
+                        "{0}={1}".format(name, main_parts[name])
+                        for name in not_longer
+                    ),
+                ),
+                expected="the Aftermath_Coda strictly shortest by Prose_Words",
+            )
+        )
+    return tuple(diagnostics)
+
+
+@dataclass(frozen=True)
+class FinalTargets:
+    """The approved exact chapter count and inclusive total Prose_Word range."""
+
+    chapter_count: int
+    minimum_words: int
+    maximum_words: int
+
+
+def check_final_targets(
+    targets: Optional[FinalTargets],
+    *,
+    chapter_count: int,
+    total_words: int,
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirements 11.5 and 12.7: observed totals against the Final_Targets.
+
+    Reports the observed facts against the approved targets. A `None` target set
+    is a missing Final_Prerequisite reported by the Baseline check, not here, so
+    this stays a pure comparison with nothing to infer.
+    """
+
+    if targets is None:
+        return ()
+
+    diagnostics: List[CheckerDiagnostic] = []
+    if chapter_count != targets.chapter_count:
+        diagnostics.append(
+            _diagnostic(
+                "FINAL_TARGET_CHAPTER_COUNT",
+                scope=SCOPE_GLOBAL,
+                item="manuscript",
+                observed="{0} Chapter_Files".format(chapter_count),
+                expected="exactly {0} planned Chapter_Files".format(
+                    targets.chapter_count
+                ),
+            )
+        )
+    if not targets.minimum_words <= total_words <= targets.maximum_words:
+        diagnostics.append(
+            _diagnostic(
+                "FINAL_TARGET_TOTAL_WORDS",
+                scope=SCOPE_GLOBAL,
+                item="manuscript",
+                observed="{0} total Prose_Words".format(total_words),
+                expected="within the inclusive range {0}\u2013{1}".format(
+                    targets.minimum_words, targets.maximum_words
+                ),
+            )
+        )
+    return tuple(diagnostics)
+
+
+# ---------------------------------------------------------------------------
+# Whole-book literal totals and the declared Final_Passage span
+#
+# The chapter-local check deliberately refuses to turn a subset into a total.
+# This is the scope that may: it holds every Chapter_File, so an in-scope total
+# is decidable. The Final_Passage is still never guessed from typography — it is
+# read from the machine-declared span the ledger maintains, and a missing or
+# unlocatable span makes the gate incomplete instead.
+# ---------------------------------------------------------------------------
+
+
+def locate_literal_span(
+    span: Mapping[str, Any], prose: str
+) -> Tuple[Optional[Tuple[int, int]], Optional[str]]:
+    """Resolve a declared span to `(start, end)` offsets in normalized prose.
+
+    Returns the offsets, or a reason the span could not be located. Only the four
+    boundary kinds the schema defines are honored, and a literal marker must occur
+    exactly once: two markers would make the span ambiguous, and choosing one
+    would be a guess.
+    """
+
+    bounds: Dict[str, int] = {}
+    for key, default in (("start_boundary", 0), ("end_boundary", len(prose))):
+        boundary = span.get(key)
+        if not isinstance(boundary, dict):
+            return None, "{0} is not a boundary object".format(key)
+        kind = boundary.get("kind")
+        value = boundary.get("value")
+        if kind in ("start-of-prose", "end-of-prose"):
+            bounds[key] = default
+            continue
+        if kind == "line-number":
+            if not _is_chapter_number(value):
+                return None, "{0} line-number is not a positive integer".format(key)
+            lines = prose.split("\n")
+            if int(value) > len(lines):
+                return None, "{0} line {1} is past the Prose_Body's {2} lines".format(
+                    key, value, len(lines)
+                )
+            offset = sum(len(line) + 1 for line in lines[: int(value) - 1])
+            bounds[key] = offset if key == "start_boundary" else min(
+                offset + len(lines[int(value) - 1]), len(prose)
+            )
+            continue
+        if kind == "literal-marker":
+            if not isinstance(value, str):
+                return None, "{0} literal-marker has no marker text".format(key)
+            marker = normalize_prose(value)
+            offsets = _non_overlapping_occurrence_offsets(prose, marker)
+            if len(offsets) != 1:
+                return None, "{0} marker {1!r} occurs {2} times".format(
+                    key, value, len(offsets)
+                )
+            bounds[key] = (
+                offsets[0] + len(marker) if key == "start_boundary" else offsets[0]
+            )
+            continue
+        return None, "{0} kind={1!r} is not a declared boundary kind".format(key, kind)
+
+    start, end = bounds["start_boundary"], bounds["end_boundary"]
+    if start > end:
+        return None, "start boundary at {0} is after end boundary at {1}".format(
+            start, end
+        )
+    return (start, end), None
+
+
+def check_whole_book_literal_constraints(
+    results: Sequence["ChapterCheckResult"], index: ReferenceIndex
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirements 7.16 and 11.8: in-scope totals and declared span placement.
+
+    Only rules that declare an in-scope total are evaluated here, because a rule
+    without one — `Did I say yes?` — deliberately fixes no count and is fully
+    handled by the chapter-local outside-scope check.
+    """
+
+    prose_by_path: Dict[str, str] = {}
+    chapter_by_path: Dict[str, Optional[int]] = {}
+    for result in results:
+        if not result.document.boundary_resolved or result.document.prose_body is None:
+            continue
+        prose_by_path[result.relative_path] = normalize_prose(
+            result.document.prose_body
+        )
+        chapter_by_path[result.relative_path] = result.chapter
+
+    diagnostics: List[CheckerDiagnostic] = []
+    for record in index.of_type("LiteralPhraseConstraint"):
+        constraint_id = _stable_id(record.payload.get("constraint_id"))
+        if constraint_id is None or index.is_duplicated(
+            "LiteralPhraseConstraint", constraint_id
+        ):
+            continue
+        rule, _record_diagnostics = _parse_literal_constraint_rule(record)
+        if rule is None or not rule.has_in_scope_total:
+            continue
+
+        if rule.allowed_span is None:
+            # A total with no declared span would have to be counted over a
+            # guessed region. Refuse instead.
+            diagnostics.append(
+                record.malformed(
+                    "LITERAL_CONSTRAINT_SPAN_MISSING",
+                    observed="an in-scope total with allowed_span=null",
+                    expected="a declared machine-readable span for any rule "
+                    "fixing an in-scope count",
+                )
+            )
+            continue
+
+        missing = [path for path in rule.allowed_files if path not in prose_by_path]
+        if missing or not rule.allowed_files:
+            diagnostics.append(
+                _diagnostic(
+                    "LITERAL_CONSTRAINT_SCOPE_INCOMPLETE",
+                    scope=SCOPE_GLOBAL,
+                    item=constraint_id,
+                    observed="no readable Prose_Body for {0}".format(
+                        ", ".join(missing) if missing else "(no allowed_files)"
+                    ),
+                    expected="every allowed file present before an in-scope total "
+                    "is counted",
+                    disposition=DISPOSITION_INCOMPLETE,
+                    related=(record.identity,),
+                )
+            )
+            continue
+
+        span_chapter = rule.allowed_span.get("chapter")
+        span_paths = [
+            path
+            for path in rule.allowed_files
+            if chapter_by_path.get(path) == span_chapter
+        ]
+        if len(span_paths) != 1:
+            diagnostics.append(
+                _diagnostic(
+                    "LITERAL_CONSTRAINT_SPAN_UNRESOLVED",
+                    scope=SCOPE_GLOBAL,
+                    item=constraint_id,
+                    observed="{0} allowed files claim chapter {1}".format(
+                        len(span_paths), span_chapter
+                    ),
+                    expected="exactly one allowed Chapter_File for the declared "
+                    "span chapter",
+                    disposition=DISPOSITION_INCOMPLETE,
+                    related=(record.identity,),
+                )
+            )
+            continue
+
+        span_path = span_paths[0]
+        bounds, reason = locate_literal_span(
+            rule.allowed_span, prose_by_path[span_path]
+        )
+        if bounds is None:
+            diagnostics.append(
+                _diagnostic(
+                    "LITERAL_CONSTRAINT_SPAN_UNRESOLVED",
+                    scope=SCOPE_GLOBAL,
+                    item=constraint_id,
+                    observed=str(reason),
+                    expected="a locatable declared span; the checker does not "
+                    "guess a literary passage from typography",
+                    disposition=DISPOSITION_INCOMPLETE,
+                    details=(("file", span_path),),
+                    related=(record.identity,),
+                )
+            )
+            continue
+
+        start, end = bounds
+        inside = 0
+        for offset in _non_overlapping_occurrence_offsets(
+            prose_by_path[span_path], rule.exact_phrase
+        ):
+            if start <= offset and offset + len(rule.exact_phrase) <= end:
+                inside += 1
+            else:
+                diagnostics.append(
+                    _diagnostic(
+                        rule.diagnostic_code,
+                        scope=SCOPE_GLOBAL,
+                        item=span_path,
+                        observed="occurrence at normalized offset {0}, outside the "
+                        "declared span {1}-{2}".format(offset, start, end),
+                        expected="every in-scope occurrence inside the declared "
+                        "span",
+                        details=(("protected_phrase", rule.exact_phrase),),
+                        related=(record.identity,),
+                    )
+                )
+
+        diagnostics.extend(
+            _check_in_scope_total(rule, observed=inside, item=span_path)
+        )
+    return tuple(diagnostics)
+
+
+def _check_in_scope_total(
+    rule: _LiteralConstraintRule, *, observed: int, item: str
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Compare an observed in-scope count against the ledgered bound."""
+
+    if rule.exact_in_scope is not None and observed != rule.exact_in_scope:
+        return (
+            _diagnostic(
+                rule.diagnostic_code,
+                scope=SCOPE_GLOBAL,
+                item=item,
+                observed="{0} in-scope occurrences".format(observed),
+                expected="exactly {0} inside the declared span".format(
+                    rule.exact_in_scope
+                ),
+                details=(("protected_phrase", rule.exact_phrase),),
+                related=(rule.record.identity,),
+            ),
+        )
+    diagnostics: List[CheckerDiagnostic] = []
+    if rule.minimum_in_scope is not None and observed < rule.minimum_in_scope:
+        diagnostics.append(
+            _diagnostic(
+                rule.diagnostic_code,
+                scope=SCOPE_GLOBAL,
+                item=item,
+                observed="{0} in-scope occurrences".format(observed),
+                expected="at least {0} inside the declared span".format(
+                    rule.minimum_in_scope
+                ),
+                details=(("protected_phrase", rule.exact_phrase),),
+                related=(rule.record.identity,),
+            )
+        )
+    if rule.maximum_in_scope is not None and observed > rule.maximum_in_scope:
+        diagnostics.append(
+            _diagnostic(
+                rule.diagnostic_code,
+                scope=SCOPE_GLOBAL,
+                item=item,
+                observed="{0} in-scope occurrences".format(observed),
+                expected="at most {0} inside the declared span".format(
+                    rule.maximum_in_scope
+                ),
+                details=(("protected_phrase", rule.exact_phrase),),
+                related=(rule.record.identity,),
+            )
+        )
+    return tuple(diagnostics)
+
+
+# ---------------------------------------------------------------------------
+# Whole-book Motif_Event family totals
+# ---------------------------------------------------------------------------
+
+# The motif families whose whole-book event count and movement placement the
+# requirements fix exactly. Each entry is the family name, the required number of
+# events, and the movements those events must occupy, in order.
+CLOSED_MOTIF_FAMILY_TOTALS: Mapping[str, Mapping[str, Any]] = {
+    # Requirement 7.12: exactly two kettle events, both in the Aftermath_Coda.
+    "kettle": {
+        "count": 2,
+        "movements": ("aftermath_coda", "aftermath_coda"),
+        "requirement": "7.12",
+    },
+    # Requirement 7.17: the Record_Progression is exactly three events, one per
+    # movement from Private Defense onward.
+    "record progression": {
+        "count": 3,
+        "movements": (
+            "private_defense_part",
+            MINDWARS_MOVEMENT,
+            "aftermath_coda",
+        ),
+        "requirement": "7.17",
+    },
+}
+
+
+def check_motif_family_totals(
+    index: ReferenceIndex,
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirements 7.12 and 7.17: the fixed whole-book family event counts.
+
+    Counted from ledger records only. An Incidental_Mention is by definition not
+    a ledgered event, so nothing here reads prose looking for the noun "record" or
+    a kettle: an unledgered mention adds no dramatic function and is excluded from
+    Motif_Event counts by Requirement 7.5.
+    """
+
+    by_family: Dict[str, List[Tuple[int, str, str]]] = {}
+    for record in index.of_type("MotifEvent"):
+        family = record.payload.get("family")
+        if not isinstance(family, str):
+            continue
+        name = _normalized_text(family).strip()
+        if name not in CLOSED_MOTIF_FAMILY_TOTALS:
+            continue
+        chapter = record.payload.get("planned_chapter")
+        movement = record.payload.get("movement")
+        motif_id = _stable_id(record.payload.get("motif_event_id")) or record.identity
+        by_family.setdefault(name, []).append(
+            (
+                int(chapter) if _is_chapter_number(chapter) else 0,
+                str(movement),
+                motif_id,
+            )
+        )
+
+    diagnostics: List[CheckerDiagnostic] = []
+    # Every closed family is walked, not only the families the ledger happens to
+    # mention. A family with no records at all is the strongest form of the same
+    # violation, and iterating over what was found would let it pass silently.
+    # This is a whole-book check, so a complete ledger is a precondition here and
+    # an absent family cannot be an as-yet-unwritten one.
+    for family in sorted(CLOSED_MOTIF_FAMILY_TOTALS):
+        rule = CLOSED_MOTIF_FAMILY_TOTALS[family]
+        events = sorted(by_family.get(family, ()))
+        expected_count = int(rule["count"])
+        expected_movements = tuple(rule["movements"])
+        if len(events) != expected_count:
+            diagnostics.append(
+                _diagnostic(
+                    "MOTIF_FAMILY_EVENT_COUNT",
+                    scope=SCOPE_PLANNING,
+                    item=family,
+                    observed="{0} ledgered events: {1}".format(
+                        len(events),
+                        ",".join(motif_id for _, _, motif_id in events),
+                    ),
+                    expected="exactly {0} Motif_Events in the {1} family "
+                    "(Requirement {2})".format(
+                        expected_count, family, rule["requirement"]
+                    ),
+                )
+            )
+            continue
+        observed_movements = tuple(movement for _, movement, _ in events)
+        if observed_movements != expected_movements:
+            diagnostics.append(
+                _diagnostic(
+                    "MOTIF_FAMILY_MOVEMENT_PLACEMENT",
+                    scope=SCOPE_PLANNING,
+                    item=family,
+                    observed=", ".join(
+                        "{0}={1}".format(motif_id, movement)
+                        for _, movement, motif_id in events
+                    ),
+                    expected="the {0} family in {1} by ascending chapter "
+                    "(Requirement {2})".format(
+                        family,
+                        " then ".join(expected_movements),
+                        rule["requirement"],
+                    ),
+                )
+            )
+    return tuple(diagnostics)
+
+
+# ---------------------------------------------------------------------------
+# CanonFact authority under `DEC-011` and `DEC-014`
+#
+# Authority is decided from the record's own declared basis, source class, and
+# adoption reference. Nothing here reads a song file, and nothing infers that a
+# statement "sounds like" lyric canon: the point of the authority basis is that
+# the author names it and the checker holds them to what they named.
+# ---------------------------------------------------------------------------
+
+
+def check_canon_facts(index: ReferenceIndex) -> Tuple[CheckerDiagnostic, ...]:
+    """Every `CanonFact` authority, testimony, and advisory-citation rule."""
+
+    diagnostics: List[CheckerDiagnostic] = []
+    for record in index.of_type("CanonFact"):
+        label = _stable_id(record.payload.get("canon_id")) or record.identity
+        basis = record.payload.get("authority_basis")
+        if basis not in CANON_AUTHORITY_BASES:
+            diagnostics.append(
+                record.violation(
+                    "CANON_AUTHORITY_BASIS_UNKNOWN",
+                    item=label,
+                    observed="authority_basis={0!r}".format(basis),
+                    expected="one of {0}".format(", ".join(CANON_AUTHORITY_BASES)),
+                )
+            )
+            continue
+
+        material_class = record.payload.get("source_material_class")
+        if material_class not in CANON_SOURCE_MATERIAL_CLASSES:
+            diagnostics.append(
+                record.violation(
+                    "CANON_SOURCE_MATERIAL_CLASS_UNKNOWN",
+                    item=label,
+                    observed="source_material_class={0!r}".format(material_class),
+                    expected="one of {0}".format(
+                        ", ".join(CANON_SOURCE_MATERIAL_CLASSES)
+                    ),
+                )
+            )
+            continue
+
+        diagnostics.extend(
+            _check_canon_basis_agreement(
+                record, label=label, basis=str(basis), material_class=str(material_class)
+            )
+        )
+        diagnostics.extend(_check_canon_testimony(record, label=label))
+        diagnostics.extend(_check_canon_advisory_citations(record, label=label))
+
+    return tuple(diagnostics)
+
+
+def _check_canon_basis_agreement(
+    record: PlanningRecord, *, label: str, basis: str, material_class: str
+) -> Tuple[CheckerDiagnostic, ...]:
+    """The authority matrix: basis, required source class, path, and adoption."""
+
+    diagnostics: List[CheckerDiagnostic] = []
+    source_path = record.payload.get("source_path")
+
+    required_class = CANON_BASIS_SOURCE_CLASS.get(basis)
+    if required_class is not None and material_class != required_class:
+        diagnostics.append(
+            record.violation(
+                "CANON_SOURCE_MATERIAL_CLASS_MISMATCH",
+                item=label,
+                observed="authority_basis={0} source_material_class={1}".format(
+                    basis, material_class
+                ),
+                expected="source_material_class {0!r} for authority_basis "
+                "{1!r}".format(required_class, basis),
+            )
+        )
+
+    if basis == "lyric":
+        normalized = (
+            _normalized_text(source_path).strip()
+            if isinstance(source_path, str)
+            else None
+        )
+        if normalized == EXCLUDED_CANON_SOURCE_PATH:
+            diagnostics.append(
+                record.violation(
+                    "CANON_SOURCE_EXCLUDED",
+                    item=label,
+                    observed="source_path={0!r}".format(source_path),
+                    expected="a Canon_Source; {0} is unpublished, noncanonical, "
+                    "and supplies no novel continuity".format(
+                        EXCLUDED_CANON_SOURCE_PATH
+                    ),
+                )
+            )
+        elif normalized not in CANON_SOURCE_PATHS:
+            diagnostics.append(
+                record.violation(
+                    "CANON_SOURCE_PATH_UNKNOWN",
+                    item=label,
+                    observed="source_path={0!r}".format(source_path),
+                    expected="exactly one of the five DEC-014 Canon_Sources: "
+                    "{0}".format(", ".join(CANON_SOURCE_PATHS)),
+                )
+            )
+
+    adoption = record.payload.get("adopted_by")
+    if basis == "ratified-note":
+        if material_class not in ADVISORY_SOURCE_MATERIAL_CLASSES:
+            diagnostics.append(
+                record.violation(
+                    "CANON_SOURCE_MATERIAL_CLASS_MISMATCH",
+                    item=label,
+                    observed="ratified-note over source_material_class={0}".format(
+                        material_class
+                    ),
+                    expected="one of the note or metadata classes: {0}".format(
+                        ", ".join(ADVISORY_SOURCE_MATERIAL_CLASSES)
+                    ),
+                )
+            )
+        if record.payload.get("truth_scope") == "authoritative-proposition":
+            # Requirement 6.17: a ratified note's authority is borrowed from its
+            # identified adopter, which is why the vocabulary carries a separate
+            # `ratified-proposition` scope. Letting a note claim the
+            # `authoritative-proposition` tier would promote advisory metadata into
+            # binding continuity by relabelling rather than by ratification, which
+            # is the promotion the requirement forbids.
+            diagnostics.append(
+                record.violation(
+                    "CANON_RATIFIED_NOTE_TRUTH_SCOPE",
+                    item=label,
+                    observed="ratified-note recorded as authoritative-proposition",
+                    expected="truth_scope 'ratified-proposition'; a ratified note "
+                    "binds on its adopter's authority, not on its own",
+                )
+            )
+        diagnostics.extend(_check_canon_adoption(record, label=label, adoption=adoption))
+    elif adoption is not None:
+        diagnostics.append(
+            record.violation(
+                "CANON_ADOPTION_UNEXPECTED",
+                item=label,
+                observed="authority_basis={0} with adopted_by present".format(basis),
+                expected="adopted_by of null unless the basis is ratified-note",
+            )
+        )
+
+    if (
+        basis != "ratified-note"
+        and material_class in ADVISORY_SOURCE_MATERIAL_CLASSES
+    ):
+        # Requirement 6.17: unratified Production_Notes, style prompts, exclude
+        # lists, generation workflow, credits, and rights metadata cannot be
+        # promoted into binding continuity.
+        diagnostics.append(
+            record.violation(
+                "CANON_ADVISORY_MATERIAL_BINDING",
+                item=label,
+                observed="{0} material bound as {1}".format(material_class, basis),
+                expected="advisory non-story material recorded as a supporting "
+                "citation, or ratified by a resolvable author decision or "
+                "approved requirement",
+            )
+        )
+    return tuple(diagnostics)
+
+
+def _check_canon_adoption(
+    record: PlanningRecord, *, label: str, adoption: Any
+) -> Tuple[CheckerDiagnostic, ...]:
+    """A `ratified-note` fact needs an adoption naming who adopted it."""
+
+    if not isinstance(adoption, dict) or set(adoption) != set(CANON_ADOPTION_KEYS):
+        return (
+            record.malformed(
+                "CANON_ADOPTION_MALFORMED",
+                observed="adopted_by {0}".format(
+                    _key_set_report(adoption, CANON_ADOPTION_KEYS)
+                    if isinstance(adoption, dict)
+                    else "is {0!r}".format(adoption)
+                ),
+                expected="exactly {0}".format(", ".join(CANON_ADOPTION_KEYS)),
+            ),
+        )
+
+    diagnostics: List[CheckerDiagnostic] = []
+    authority_type = adoption.get("authority_type")
+    if authority_type not in CANON_ADOPTION_AUTHORITY_TYPES:
+        diagnostics.append(
+            record.violation(
+                "CANON_ADOPTION_AUTHORITY_TYPE",
+                item=label,
+                observed="authority_type={0!r}".format(authority_type),
+                expected="one of {0}".format(
+                    ", ".join(CANON_ADOPTION_AUTHORITY_TYPES)
+                ),
+            )
+        )
+    for key in ("authority_id", "source_path", "source_location"):
+        if not _is_nonblank_string(adoption.get(key)):
+            diagnostics.append(
+                record.violation(
+                    "CANON_ADOPTION_REFERENCE_MISSING",
+                    item=label,
+                    observed="adopted_by.{0}={1!r}".format(key, adoption.get(key)),
+                    expected="a nonblank reference identifying the adopting "
+                    "author decision or approved requirement",
+                )
+            )
+    return tuple(diagnostics)
+
+
+def _check_canon_testimony(
+    record: PlanningRecord, *, label: str
+) -> Tuple[CheckerDiagnostic, ...]:
+    """First-person testimony keeps its speaker, attribution, and limitation.
+
+    The schema has no `omniscient` truth scope, so the only way to overclaim is
+    to record first-person testimony under a proposition scope. That is exactly
+    the *Case Zero* failure mode `DEC-014` and the error-handling table name:
+    binding what Nia reports is legitimate; converting it into causal proof is
+    not.
+    """
+
+    testimony = record.payload.get("first_person_testimony")
+    truth_scope = record.payload.get("truth_scope")
+
+    diagnostics: List[CheckerDiagnostic] = []
+    if truth_scope not in CANON_TRUTH_SCOPES:
+        diagnostics.append(
+            record.violation(
+                "CANON_TRUTH_SCOPE_UNKNOWN",
+                item=label,
+                observed="truth_scope={0!r}".format(truth_scope),
+                expected="one of {0}".format(", ".join(CANON_TRUTH_SCOPES)),
+            )
+        )
+    if not _is_bool(testimony):
+        diagnostics.append(
+            record.malformed(
+                "CANON_TESTIMONY_MALFORMED",
+                observed="first_person_testimony={0!r}".format(testimony),
+                expected="a boolean",
+            )
+        )
+        return tuple(diagnostics)
+
+    if not testimony:
+        return tuple(diagnostics)
+
+    for key in TESTIMONY_ATTRIBUTION_KEYS:
+        if not _is_nonblank_string(record.payload.get(key)):
+            diagnostics.append(
+                record.violation(
+                    "CANON_TESTIMONY_ATTRIBUTION_MISSING",
+                    item=label,
+                    observed="{0}={1!r}".format(key, record.payload.get(key)),
+                    expected="a nonblank {0} for first-person testimony".format(key),
+                )
+            )
+    if truth_scope in CANON_TRUTH_SCOPES and truth_scope != TESTIMONY_TRUTH_SCOPE:
+        diagnostics.append(
+            record.violation(
+                "CANON_TESTIMONY_TRUTH_SCOPE",
+                item=label,
+                observed="first-person testimony recorded as {0}".format(truth_scope),
+                expected="truth_scope {0!r}; a first-person account binds what "
+                "the speaker reports and is not omniscient causal "
+                "proof".format(TESTIMONY_TRUTH_SCOPE),
+            )
+        )
+    return tuple(diagnostics)
+
+
+def _check_canon_advisory_citations(
+    record: PlanningRecord, *, label: str
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Supporting advisory citations stay classified `advisory-non-story`."""
+
+    citations = record.payload.get("supporting_advisory_citations")
+    if not isinstance(citations, list):
+        return (
+            record.malformed(
+                "CANON_ADVISORY_CITATIONS_MALFORMED",
+                observed="supporting_advisory_citations={0!r}".format(citations),
+                expected="an array of advisory citation objects, possibly empty",
+            ),
+        )
+
+    diagnostics: List[CheckerDiagnostic] = []
+    for position, citation in enumerate(citations):
+        if not isinstance(citation, dict) or set(citation) != set(
+            ADVISORY_CITATION_KEYS
+        ):
+            diagnostics.append(
+                record.malformed(
+                    "CANON_ADVISORY_CITATIONS_MALFORMED",
+                    observed="supporting_advisory_citations[{0}] {1}".format(
+                        position,
+                        _key_set_report(citation, ADVISORY_CITATION_KEYS)
+                        if isinstance(citation, dict)
+                        else "is not an object",
+                    ),
+                    expected="exactly {0}".format(", ".join(ADVISORY_CITATION_KEYS)),
+                )
+            )
+            continue
+        if citation.get("classification") != ADVISORY_CITATION_CLASSIFICATION:
+            diagnostics.append(
+                record.violation(
+                    "CANON_ADVISORY_CITATION_CLASSIFICATION",
+                    item=label,
+                    observed="supporting_advisory_citations[{0}]."
+                    "classification={1!r}".format(
+                        position, citation.get("classification")
+                    ),
+                    expected="exactly {0!r}".format(ADVISORY_CITATION_CLASSIFICATION),
+                )
+            )
+    return tuple(diagnostics)
+
+
+def check_canon_source_inventory(
+    index: ReferenceIndex,
+) -> Tuple[CheckerDiagnostic, ...]:
+    """`DEC-014`: the lyric-cited Canon_Sources are a subset of the exact five.
+
+    This reports which of the five the Canon_Bible actually cites, as an
+    informational warning, and never demands that all five be cited: an early
+    Canon_Bible legitimately has facts from three songs. What it does enforce is
+    that no path outside the five appears, which the per-record check already
+    covers, so the only additional objective failure here is the *One-Time Pad*
+    inventory error surfaced once for the whole document.
+    """
+
+    cited: Dict[str, int] = {}
+    for record in index.of_type("CanonFact"):
+        if record.payload.get("authority_basis") != "lyric":
+            continue
+        source_path = record.payload.get("source_path")
+        if not isinstance(source_path, str):
+            continue
+        normalized = _normalized_text(source_path).strip()
+        cited[normalized] = cited.get(normalized, 0) + 1
+
+    if not cited:
+        return ()
+    unknown = sorted(set(cited) - set(CANON_SOURCE_PATHS))
+    if not unknown:
+        return ()
+    return (
+        _diagnostic(
+            "CANON_SOURCE_INVENTORY",
+            scope=SCOPE_PLANNING,
+            item="planning/canon-bible.md",
+            observed="lyric authority cited from {0}".format(", ".join(unknown)),
+            expected="lyric authority only from the exact five DEC-014 "
+            "Canon_Sources",
+        ),
+    )
+
+
+# ---------------------------------------------------------------------------
+# `NovelExtension` and `Reveal` reference integrity
+#
+# These carry the structured `DEC-005` and provenance obligations. A missing or
+# dangling decision or entity reference is a metadata error; the *wording* of a
+# selected institution, country, or county name is not, because Requirement 12.11
+# keeps name choice and capitalization out of automated pass/fail.
+# ---------------------------------------------------------------------------
+
+NOVEL_EXTENSION_STATES: Tuple[str, ...] = ("provisional", "approved", "retired")
+NOVEL_EXTENSION_KINDS: Tuple[str, ...] = (
+    "character-name",
+    "alias",
+    "relationship",
+    "place",
+    "institution",
+    "product",
+    "mechanism",
+    "chronology",
+    "profession",
+    "document",
+    "other-continuity",
+)
+RECORD_REF_KEYS: Tuple[str, ...] = ("record_type", "record_id")
+# `Reveal.truth_status`; every Foreign_Signal provenance record is fixed here.
+REVEAL_TRUTH_STATUSES: Tuple[str, ...] = (
+    "confirmed",
+    "character-belief",
+    "unresolved",
+)
+REVEAL_UNRESOLVED = "unresolved"
+
+
+def _resolve_record_ref(
+    index: ReferenceIndex, value: Any
+) -> Tuple[bool, Optional[str]]:
+    """Whether a `RecordRef` is well-formed and resolves, plus why it did not.
+
+    A reference into a record type this checker does not index resolves
+    vacuously: the reference is structurally valid and there is no index to
+    contradict it. Reporting it as dangling would invent a failure from the
+    checker's own coverage rather than from the data.
+    """
+
+    if not isinstance(value, dict) or set(value) != set(RECORD_REF_KEYS):
+        return False, "not exactly {0}".format(", ".join(RECORD_REF_KEYS))
+    record_type = value.get("record_type")
+    record_id = value.get("record_id")
+    if record_type not in RECORD_TYPES:
+        return False, "record_type={0!r} is not a defined record type".format(
+            record_type
+        )
+    if not _is_nonblank_string(record_id):
+        return False, "record_id={0!r} is blank".format(record_id)
+    if record_type not in RECORD_ID_FIELDS:
+        return True, None
+    normalized = _stable_id(record_id)
+    if normalized is None:
+        # `ArcEntry` targets are chapter numbers as strings, which are legitimate
+        # nonblank references that are not StableIDs.
+        return True, None
+    matches = index.lookup(str(record_type), normalized)
+    if len(matches) == 1:
+        return True, None
+    if not matches:
+        return False, "{0} {1} does not resolve".format(record_type, normalized)
+    return False, "{0} {1} resolves to {2} records".format(
+        record_type, normalized, len(matches)
+    )
+
+
+def check_novel_extensions(index: ReferenceIndex) -> Tuple[CheckerDiagnostic, ...]:
+    """Extension state, authority reference, and dependency resolution."""
+
+    diagnostics: List[CheckerDiagnostic] = []
+    for record in index.of_type("NovelExtension"):
+        label = _stable_id(record.payload.get("extension_id")) or record.identity
+
+        kind = record.payload.get("extension_kind")
+        if kind not in NOVEL_EXTENSION_KINDS:
+            diagnostics.append(
+                record.violation(
+                    "EXTENSION_KIND_UNKNOWN",
+                    item=label,
+                    observed="extension_kind={0!r}".format(kind),
+                    expected="one of {0}".format(", ".join(NOVEL_EXTENSION_KINDS)),
+                )
+            )
+        state = record.payload.get("state")
+        if state not in NOVEL_EXTENSION_STATES:
+            diagnostics.append(
+                record.violation(
+                    "EXTENSION_STATE_UNKNOWN",
+                    item=label,
+                    observed="state={0!r}".format(state),
+                    expected="one of {0}".format(", ".join(NOVEL_EXTENSION_STATES)),
+                )
+            )
+        elif state == "approved" and not _is_nonblank_string(
+            record.payload.get("authority_ref")
+        ):
+            diagnostics.append(
+                record.violation(
+                    "EXTENSION_AUTHORITY_REFERENCE_MISSING",
+                    item=label,
+                    observed="authority_ref={0!r}".format(
+                        record.payload.get("authority_ref")
+                    ),
+                    expected="an author decision, approved design decision, or "
+                    "completed ArcChange reference for an approved extension",
+                )
+            )
+
+        superseding = record.payload.get("superseding_arc_change_id")
+        if state == "retired" and _stable_id(superseding) is None:
+            diagnostics.append(
+                record.violation(
+                    "EXTENSION_SUPERSEDING_CHANGE_MISSING",
+                    item=label,
+                    observed="superseding_arc_change_id={0!r}".format(superseding),
+                    expected="the ArcChange that retired the extension",
+                )
+            )
+        elif state != "retired" and superseding is not None:
+            diagnostics.append(
+                record.violation(
+                    "EXTENSION_SUPERSEDING_CHANGE_UNEXPECTED",
+                    item=label,
+                    observed="state={0} with superseding_arc_change_id={1!r}".format(
+                        state, superseding
+                    ),
+                    expected="null unless the extension is retired",
+                )
+            )
+
+        resolved, reason = _resolve_record_ref(
+            index, record.payload.get("first_dependency")
+        )
+        if not resolved:
+            diagnostics.append(
+                record.violation(
+                    "EXTENSION_DEPENDENCY_UNRESOLVED",
+                    item=label,
+                    observed="first_dependency {0}".format(reason),
+                    expected="one resolvable RecordRef naming the first record or "
+                    "chapter that depends on the fact",
+                )
+            )
+
+        affected = record.payload.get("affected_records")
+        if not isinstance(affected, list) or not affected:
+            diagnostics.append(
+                record.malformed(
+                    "EXTENSION_AFFECTED_RECORDS_MALFORMED",
+                    observed="affected_records={0!r}".format(affected),
+                    expected="a nonempty array of RecordRef objects",
+                )
+            )
+        else:
+            for position, reference in enumerate(affected):
+                resolved, reason = _resolve_record_ref(index, reference)
+                if resolved:
+                    continue
+                diagnostics.append(
+                    record.violation(
+                        "EXTENSION_AFFECTED_RECORD_UNRESOLVED",
+                        item=label,
+                        observed="affected_records[{0}] {1}".format(position, reason),
+                        expected="every affected record reference to resolve "
+                        "uniquely",
+                    )
+                )
+
+        implications = record.payload.get("consistency_implications")
+        if (
+            not isinstance(implications, list)
+            or not implications
+            or any(not _is_nonblank_string(value) for value in implications)
+        ):
+            diagnostics.append(
+                record.malformed(
+                    "EXTENSION_IMPLICATIONS_MALFORMED",
+                    observed="consistency_implications={0!r}".format(implications),
+                    expected="a nonempty array of nonblank consistency "
+                    "implications",
+                )
+            )
+    return tuple(diagnostics)
+
+
+def check_reveals(index: ReferenceIndex) -> Tuple[CheckerDiagnostic, ...]:
+    """`Reveal` truth status, and the unresolved-provenance invariant.
+
+    Requirements 3.13 and 4.11 keep every Foreign_Signal origin or sender account
+    unconfirmed. A record can only break that by declaring itself `confirmed`, so
+    that is what is checked: a `confirmed` provenance reveal, or one that hands an
+    unresolved question a reveal owner and reader release chapter, which would
+    schedule an answer the novel never gives.
+    """
+
+    diagnostics: List[CheckerDiagnostic] = []
+    for record in index.of_type("Reveal"):
+        label = _stable_id(record.payload.get("reveal_id")) or record.identity
+        truth_status = record.payload.get("truth_status")
+        if truth_status not in REVEAL_TRUTH_STATUSES:
+            diagnostics.append(
+                record.violation(
+                    "REVEAL_TRUTH_STATUS_UNKNOWN",
+                    item=label,
+                    observed="truth_status={0!r}".format(truth_status),
+                    expected="one of {0}".format(", ".join(REVEAL_TRUTH_STATUSES)),
+                )
+            )
+            continue
+        if truth_status != REVEAL_UNRESOLVED:
+            continue
+        if record.payload.get("reveal_owner") is not None or record.payload.get(
+            "reader_release_chapter"
+        ) is not None:
+            diagnostics.append(
+                record.violation(
+                    "REVEAL_UNRESOLVED_RELEASE_SCHEDULED",
+                    item=label,
+                    observed="unresolved with reveal_owner={0!r} "
+                    "reader_release_chapter={1!r}".format(
+                        record.payload.get("reveal_owner"),
+                        record.payload.get("reader_release_chapter"),
+                    ),
+                    expected="no reveal owner and no reader release chapter for a "
+                    "permanently unresolved question",
+                )
+            )
+    return tuple(diagnostics)
+
+
+# ---------------------------------------------------------------------------
+# ArcChange atomicity and Chapter_Status synchronization
+# ---------------------------------------------------------------------------
+
+
+def check_arc_changes(index: ReferenceIndex) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirements 1.16 and 1.17: an ArcChange is atomic or it is not complete.
+
+    Partial synchronization is never treated as approval, which is the rule the
+    error-handling table states directly. A `complete` record must therefore carry
+    every obligation complete with evidence, an approval, and a completion time;
+    anything less is reported with the unsynchronized documents named.
+    """
+
+    diagnostics: List[CheckerDiagnostic] = []
+    for record in index.of_type("ArcChange"):
+        label = _stable_id(record.payload.get("arc_change_id")) or record.identity
+
+        for key in ("prior_state", "revised_state"):
+            value = record.payload.get(key)
+            if not isinstance(value, dict) or not value:
+                diagnostics.append(
+                    record.violation(
+                        "ARC_CHANGE_STATE_MISSING",
+                        item=label,
+                        observed="{0}={1!r}".format(key, value),
+                        expected="a nonempty snapshot object naming the changed "
+                        "logical values",
+                    )
+                )
+        if not _is_nonblank_string(record.payload.get("rationale")):
+            diagnostics.append(
+                record.violation(
+                    "ARC_CHANGE_RATIONALE_MISSING",
+                    item=label,
+                    observed="rationale={0!r}".format(record.payload.get("rationale")),
+                    expected="a nonblank narrative or calibration reason",
+                )
+            )
+        if _chapter_number_sequence(record.payload.get("affected_chapters")) is None:
+            diagnostics.append(
+                record.malformed(
+                    "ARC_CHANGE_AFFECTED_CHAPTERS_MALFORMED",
+                    observed="affected_chapters={0!r}".format(
+                        record.payload.get("affected_chapters")
+                    ),
+                    expected="a unique list of chapter numbers, possibly empty for "
+                    "a reference-only change",
+                )
+            )
+
+        documents = record.payload.get("affected_documents")
+        if (
+            not isinstance(documents, list)
+            or not documents
+            or any(not _is_workspace_relative_path(value) for value in documents)
+            or len(set(documents)) != len(documents)
+        ):
+            diagnostics.append(
+                record.malformed(
+                    "ARC_CHANGE_AFFECTED_DOCUMENTS_MALFORMED",
+                    observed="affected_documents={0!r}".format(documents),
+                    expected="a unique nonempty list of workspace-relative paths",
+                )
+            )
+            documents = []
+
+        status = record.payload.get("status")
+        if status not in ARC_CHANGE_STATUSES:
+            diagnostics.append(
+                record.violation(
+                    "ARC_CHANGE_STATUS_UNKNOWN",
+                    item=label,
+                    observed="status={0!r}".format(status),
+                    expected="one of {0}".format(", ".join(ARC_CHANGE_STATUSES)),
+                )
+            )
+
+        obligations, obligation_diagnostics = _arc_change_obligations(record)
+        diagnostics.extend(obligation_diagnostics)
+
+        covered = {document for document, _ in obligations}
+        uncovered = sorted(set(documents) - covered)
+        if uncovered:
+            diagnostics.append(
+                record.violation(
+                    "ARC_CHANGE_SYNCHRONIZATION_MISSING",
+                    item=label,
+                    observed="no synchronization obligation for {0}".format(
+                        ", ".join(uncovered)
+                    ),
+                    expected="one synchronization obligation per affected "
+                    "reference document",
+                )
+            )
+
+        if status != ARC_CHANGE_STATUS_COMPLETE:
+            continue
+
+        pending = sorted(
+            document
+            for document, obligation_status in obligations
+            if obligation_status != SYNCHRONIZATION_STATUS_COMPLETE
+        )
+        if pending:
+            diagnostics.append(
+                record.violation(
+                    "ARC_CHANGE_INCOMPLETE_SYNCHRONIZATION",
+                    item=label,
+                    observed="complete with {0} still pending".format(
+                        ", ".join(pending)
+                    ),
+                    expected="every synchronization obligation complete before "
+                    "the ArcChange is complete; partial synchronization is not "
+                    "approval",
+                )
+            )
+        if not _is_complete_approval(record.payload.get("approval")):
+            diagnostics.append(
+                record.violation(
+                    "ARC_CHANGE_APPROVAL_MISSING",
+                    item=label,
+                    observed="approval={0!r}".format(record.payload.get("approval")),
+                    expected="exactly {0} for a complete ArcChange".format(
+                        ", ".join(BASELINE_APPROVAL_KEYS)
+                    ),
+                )
+            )
+        if not _is_nonblank_string(record.payload.get("completed_at")):
+            diagnostics.append(
+                record.violation(
+                    "ARC_CHANGE_COMPLETION_TIME_MISSING",
+                    item=label,
+                    observed="completed_at={0!r}".format(
+                        record.payload.get("completed_at")
+                    ),
+                    expected="a completion timestamp for a complete ArcChange",
+                )
+            )
+    return tuple(diagnostics)
+
+
+def _arc_change_obligations(
+    record: PlanningRecord,
+) -> Tuple[Tuple[Tuple[str, str], ...], Tuple[CheckerDiagnostic, ...]]:
+    """Parse `synchronization_obligations` into `(document, status)` pairs."""
+
+    value = record.payload.get("synchronization_obligations")
+    if not isinstance(value, list) or not value:
+        return (
+            (),
+            (
+                record.malformed(
+                    "ARC_CHANGE_OBLIGATIONS_MALFORMED",
+                    observed="synchronization_obligations={0!r}".format(value),
+                    expected="a nonempty array of synchronization obligations",
+                ),
+            ),
+        )
+
+    obligations: List[Tuple[str, str]] = []
+    diagnostics: List[CheckerDiagnostic] = []
+    label = _stable_id(record.payload.get("arc_change_id")) or record.identity
+    for position, obligation in enumerate(value):
+        if not isinstance(obligation, dict) or set(obligation) != set(
+            ARC_CHANGE_OBLIGATION_KEYS
+        ):
+            diagnostics.append(
+                record.malformed(
+                    "ARC_CHANGE_OBLIGATIONS_MALFORMED",
+                    observed="synchronization_obligations[{0}] {1}".format(
+                        position,
+                        _key_set_report(obligation, ARC_CHANGE_OBLIGATION_KEYS)
+                        if isinstance(obligation, dict)
+                        else "is not an object",
+                    ),
+                    expected="exactly {0}".format(
+                        ", ".join(ARC_CHANGE_OBLIGATION_KEYS)
+                    ),
+                )
+            )
+            continue
+        document = obligation.get("document")
+        status = obligation.get("status")
+        if not _is_workspace_relative_path(document) or status not in (
+            SYNCHRONIZATION_STATUSES
+        ):
+            diagnostics.append(
+                record.malformed(
+                    "ARC_CHANGE_OBLIGATIONS_MALFORMED",
+                    observed="synchronization_obligations[{0}] document={1!r} "
+                    "status={2!r}".format(position, document, status),
+                    expected="a workspace-relative document and a status of {0}".format(
+                        " or ".join(SYNCHRONIZATION_STATUSES)
+                    ),
+                )
+            )
+            continue
+        evidence = obligation.get("evidence_ref")
+        if status == SYNCHRONIZATION_STATUS_COMPLETE and not _is_nonblank_string(
+            evidence
+        ):
+            diagnostics.append(
+                record.violation(
+                    "ARC_CHANGE_OBLIGATION_EVIDENCE_MISSING",
+                    item=label,
+                    observed="{0} complete with evidence_ref={1!r}".format(
+                        document, evidence
+                    ),
+                    expected="a nonblank record or path reference once the "
+                    "obligation is complete",
+                )
+            )
+        elif status != SYNCHRONIZATION_STATUS_COMPLETE and evidence is not None:
+            diagnostics.append(
+                record.violation(
+                    "ARC_CHANGE_OBLIGATION_EVIDENCE_PREMATURE",
+                    item=label,
+                    observed="{0} {1} with evidence_ref={2!r}".format(
+                        document, status, evidence
+                    ),
+                    expected="evidence_ref of null until the obligation is "
+                    "complete",
+                )
+            )
+        obligations.append((str(_normalized_text(document).strip()), str(status)))
+    return tuple(obligations), tuple(diagnostics)
+
+
+def _is_complete_approval(value: Any) -> bool:
+    return (
+        isinstance(value, dict)
+        and set(value) == set(BASELINE_APPROVAL_KEYS)
+        and all(_is_nonblank_string(value.get(key)) for key in BASELINE_APPROVAL_KEYS)
+    )
+
+
+def check_status_synchronization(
+    results: Sequence["ChapterCheckResult"],
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirement 10.7: an `approved` or `final` chapter agrees with its entry.
+
+    The header-versus-ArcEntry status agreement itself is a Requirement 12.5
+    chapter-local check that already runs for every file. What is added here is
+    the whole-book obligation that a Final_Prerequisite cannot be satisfied by
+    exploratory work: a manuscript presented as complete cannot hold chapters
+    still labeled `exploratory` or otherwise short of an approved status.
+    """
+
+    diagnostics: List[CheckerDiagnostic] = []
+    for result in results:
+        status = result.document.header.get("status")
+        if not isinstance(status, str) or status in APPROVED_CHAPTER_STATUSES:
+            continue
+        diagnostics.append(
+            _diagnostic(
+                "CHAPTER_STATUS_NOT_FINAL",
+                scope=SCOPE_GLOBAL,
+                item=result.relative_path,
+                observed="status={0}".format(status),
+                expected="one of {0}; exploratory or in-progress work cannot "
+                "satisfy a Final_Prerequisite".format(
+                    ", ".join(APPROVED_CHAPTER_STATUSES)
+                ),
+                disposition=DISPOSITION_INCOMPLETE,
+            )
+        )
+    return tuple(diagnostics)
+
+
+# ---------------------------------------------------------------------------
+# Baseline, Final_Prerequisites, and the two independent final gates
+# ---------------------------------------------------------------------------
+
+
+def parse_final_targets(payload: Any) -> Tuple[Optional[FinalTargets], Optional[str]]:
+    """Read a `final_targets` object, returning it or why it was rejected."""
+
+    if payload is None:
+        return None, None
+    if not isinstance(payload, dict) or set(payload) != set(FINAL_TARGET_KEYS):
+        return None, "final_targets {0}".format(
+            _key_set_report(payload, FINAL_TARGET_KEYS)
+            if isinstance(payload, dict)
+            else "is not an object"
+        )
+    values: Dict[str, int] = {}
+    for key in FINAL_TARGET_KEYS:
+        value = payload.get(key)
+        if not isinstance(value, int) or isinstance(value, bool) or value < 1:
+            return None, "final_targets.{0}={1!r}".format(key, value)
+        values[key] = value
+    if values["minimum_words"] > values["maximum_words"]:
+        return None, "final_targets minimum_words {0} exceeds maximum_words {1}".format(
+            values["minimum_words"], values["maximum_words"]
+        )
+    return (
+        FinalTargets(
+            chapter_count=values["chapter_count"],
+            minimum_words=values["minimum_words"],
+            maximum_words=values["maximum_words"],
+        ),
+        None,
+    )
+
+
+@dataclass(frozen=True)
+class BaselineState:
+    """The approved-baseline facts the global gate needs, plus its record."""
+
+    record: Optional[PlanningRecord]
+    state: Optional[str]
+    final_targets: Optional[FinalTargets]
+
+    @property
+    def approved(self) -> bool:
+        return self.state == BASELINE_STATE_APPROVED
+
+
+def check_baseline(index: ReferenceIndex) -> Tuple[BaselineState, Tuple[CheckerDiagnostic, ...]]:
+    """Read the current `Baseline` and check its internal completeness rules.
+
+    Approval is all-or-nothing: `approved` requires a complete provisional arc,
+    both Gate Results, one disposition per calibration finding, an author
+    approval, and Final_Targets. A `provisional` baseline is not a violation —
+    that is the pre-approval state this project is legitimately in — so nothing
+    here demands approval. It only refuses to let a record *claim* approval
+    without the evidence.
+    """
+
+    records = index.of_type("Baseline")
+    diagnostics: List[CheckerDiagnostic] = []
+
+    current = [
+        record
+        for record in records
+        if record.payload.get("state") != "superseded"
+    ]
+    if len(current) > 1:
+        diagnostics.append(
+            _diagnostic(
+                "BASELINE_NOT_UNIQUE",
+                scope=SCOPE_PLANNING,
+                item="planning/arc-outline.md",
+                observed=", ".join(sorted(record.identity for record in current)),
+                expected="exactly one current Baseline record",
+                disposition=DISPOSITION_INCOMPLETE,
+            )
+        )
+    record = current[0] if len(current) == 1 else None
+    if record is None:
+        return BaselineState(record=None, state=None, final_targets=None), tuple(
+            diagnostics
+        )
+
+    label = _stable_id(record.payload.get("baseline_id")) or record.identity
+    state = record.payload.get("state")
+    if state not in BASELINE_STATES:
+        diagnostics.append(
+            record.violation(
+                "BASELINE_STATE_UNKNOWN",
+                item=label,
+                observed="state={0!r}".format(state),
+                expected="one of {0}".format(", ".join(BASELINE_STATES)),
+            )
+        )
+        state = None
+
+    calibration = _chapter_number_sequence(record.payload.get("calibration_chapters"))
+    if calibration is None:
+        diagnostics.append(
+            record.malformed(
+                "BASELINE_CALIBRATION_CHAPTERS_MALFORMED",
+                observed="calibration_chapters={0!r}".format(
+                    record.payload.get("calibration_chapters")
+                ),
+                expected="a unique list of chapter numbers",
+            )
+        )
+    else:
+        minimum, maximum = CALIBRATION_BATCH_SIZE_RANGE
+        if not minimum <= len(calibration) <= maximum:
+            diagnostics.append(
+                record.violation(
+                    "BASELINE_CALIBRATION_SIZE",
+                    item=label,
+                    observed="{0} calibration chapters".format(len(calibration)),
+                    expected="{0}\u2013{1} chapters identified as the "
+                    "Calibration_Batch".format(minimum, maximum),
+                )
+            )
+
+    targets, target_error = parse_final_targets(record.payload.get("final_targets"))
+    if target_error is not None:
+        diagnostics.append(
+            record.malformed(
+                "BASELINE_FINAL_TARGETS_MALFORMED",
+                observed=target_error,
+                expected="exactly {0} with minimum_words at most "
+                "maximum_words".format(", ".join(FINAL_TARGET_KEYS)),
+            )
+        )
+
+    # A declared gate reference must resolve to a *passing* gate of the right
+    # type. This is where a stale or mismatched claim of readiness is caught:
+    # `calibration-objective` covers the staged minimal checker and
+    # `baseline-objective` covers global mode plus the mandatory suite, and
+    # neither can stand in for the other.
+    for key, gate_type in (
+        ("minimal_checker_gate_result_id", "calibration-objective"),
+        ("full_suite_gate_result_id", "baseline-objective"),
+    ):
+        gate_id = record.payload.get(key)
+        if gate_id is None:
+            continue
+        diagnostics.extend(
+            _check_baseline_gate_reference(
+                record, index, label=label, key=key, gate_type=gate_type
+            )
+        )
+
+    if state == BASELINE_STATE_APPROVED:
+        diagnostics.extend(
+            _check_approved_baseline(record, label=label, targets=targets)
+        )
+
+    return (
+        BaselineState(record=record, state=state, final_targets=targets),
+        tuple(diagnostics),
+    )
+
+
+def _check_baseline_gate_reference(
+    record: PlanningRecord,
+    index: ReferenceIndex,
+    *,
+    label: str,
+    key: str,
+    gate_type: str,
+) -> Tuple[CheckerDiagnostic, ...]:
+    """One declared Baseline gate reference: resolvable, right type, passing."""
+
+    gate_id = _stable_id(record.payload.get(key))
+    if gate_id is None:
+        return (
+            record.malformed(
+                "BASELINE_GATE_REFERENCE_MALFORMED",
+                observed="{0}={1!r}".format(key, record.payload.get(key)),
+                expected="null or a GateResult StableID",
+            ),
+        )
+    gate = index.unique("GateResult", gate_id)
+    if gate is None:
+        return (
+            record.violation(
+                "BASELINE_GATE_REFERENCE_DANGLING",
+                item=label,
+                observed="{0}={1} resolves to {2} GateResult records".format(
+                    key, gate_id, len(index.lookup("GateResult", gate_id))
+                ),
+                expected="exactly one GateResult",
+            ),
+        )
+
+    diagnostics: List[CheckerDiagnostic] = []
+    if gate.payload.get("gate_type") != gate_type:
+        diagnostics.append(
+            record.violation(
+                "BASELINE_GATE_TYPE_MISMATCH",
+                item=label,
+                observed="{0} names a {1!r} gate".format(
+                    key, gate.payload.get("gate_type")
+                ),
+                expected="a {0!r} GateResult; a local or staged result cannot "
+                "claim another gate's authority".format(gate_type),
+                related=(gate.identity,),
+            )
+        )
+    if gate.payload.get("result") != RESULT_PASS:
+        diagnostics.append(
+            record.violation(
+                "BASELINE_GATE_NOT_PASSING",
+                item=label,
+                observed="{0} names a gate with result={1!r}".format(
+                    key, gate.payload.get("result")
+                ),
+                expected="a passing GateResult",
+                related=(gate.identity,),
+            )
+        )
+    return tuple(diagnostics)
+
+
+def _check_approved_baseline(
+    record: PlanningRecord, *, label: str, targets: Optional[FinalTargets]
+) -> Tuple[CheckerDiagnostic, ...]:
+    """The evidence an `approved` Baseline must actually carry."""
+
+    diagnostics: List[CheckerDiagnostic] = []
+    if record.payload.get("provisional_arc_complete") is not True:
+        diagnostics.append(
+            record.violation(
+                "BASELINE_PROVISIONAL_ARC_INCOMPLETE",
+                item=label,
+                observed="provisional_arc_complete={0!r}".format(
+                    record.payload.get("provisional_arc_complete")
+                ),
+                expected="true before approval",
+            )
+        )
+    for key, gate in (
+        ("minimal_checker_gate_result_id", "calibration-objective"),
+        ("full_suite_gate_result_id", "baseline-objective"),
+    ):
+        if _stable_id(record.payload.get(key)) is None:
+            diagnostics.append(
+                record.violation(
+                    "BASELINE_GATE_EVIDENCE_MISSING",
+                    item=label,
+                    observed="{0}={1!r}".format(key, record.payload.get(key)),
+                    expected="a passing {0} GateResult reference before "
+                    "approval".format(gate),
+                )
+            )
+    if not _is_complete_approval(record.payload.get("author_approval")):
+        diagnostics.append(
+            record.violation(
+                "BASELINE_AUTHOR_APPROVAL_MISSING",
+                item=label,
+                observed="author_approval={0!r}".format(
+                    record.payload.get("author_approval")
+                ),
+                expected="exactly {0}".format(", ".join(BASELINE_APPROVAL_KEYS)),
+            )
+        )
+    if targets is None:
+        diagnostics.append(
+            record.violation(
+                "BASELINE_FINAL_TARGETS_MISSING",
+                item=label,
+                observed="final_targets={0!r}".format(
+                    record.payload.get("final_targets")
+                ),
+                expected="one exact planned chapter count and one inclusive "
+                "total Prose_Word range",
+            )
+        )
+    else:
+        chapter_minimum, chapter_maximum = PROVISIONAL_CHAPTER_RANGE
+        word_minimum, word_maximum = PROVISIONAL_WORD_RANGE
+        outside = (
+            not chapter_minimum <= targets.chapter_count <= chapter_maximum
+            or not word_minimum <= targets.minimum_words <= word_maximum
+            or not word_minimum <= targets.maximum_words <= word_maximum
+        )
+        if outside and not _is_nonblank_string(
+            record.payload.get("out_of_range_rationale")
+        ):
+            diagnostics.append(
+                record.violation(
+                    "BASELINE_OUT_OF_RANGE_RATIONALE_MISSING",
+                    item=label,
+                    observed="chapter_count={0} words={1}\u2013{2}".format(
+                        targets.chapter_count,
+                        targets.minimum_words,
+                        targets.maximum_words,
+                    ),
+                    expected="a recorded narrative or calibration rationale when "
+                    "Final_Targets fall outside {0}\u2013{1} chapters or "
+                    "{2}\u2013{3} Prose_Words".format(
+                        chapter_minimum, chapter_maximum, word_minimum, word_maximum
+                    ),
+                )
+            )
+
+    diagnostics.extend(_check_baseline_revision_pass(record, label=label))
+    return tuple(diagnostics)
+
+
+def _check_baseline_revision_pass(
+    record: PlanningRecord, *, label: str
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirement 1.13: one disposition per calibration finding, exactly once."""
+
+    findings = _stable_id_sequence(record.payload.get("calibration_finding_ids"))
+    if findings is None:
+        return (
+            record.malformed(
+                "BASELINE_CALIBRATION_FINDINGS_MALFORMED",
+                observed="calibration_finding_ids={0!r}".format(
+                    record.payload.get("calibration_finding_ids")
+                ),
+                expected="a unique list of EditorialFinding references",
+            ),
+        )
+
+    revision_pass = record.payload.get("baseline_revision_pass")
+    if not isinstance(revision_pass, dict) or set(revision_pass) != set(
+        BASELINE_REVISION_PASS_KEYS
+    ):
+        return (
+            record.violation(
+                "BASELINE_REVISION_PASS_MISSING",
+                item=label,
+                observed="baseline_revision_pass {0}".format(
+                    _key_set_report(revision_pass, BASELINE_REVISION_PASS_KEYS)
+                    if isinstance(revision_pass, dict)
+                    else "is {0!r}".format(revision_pass)
+                ),
+                expected="exactly {0} for the one dedicated "
+                "Baseline_Revision_Pass".format(
+                    ", ".join(BASELINE_REVISION_PASS_KEYS)
+                ),
+            ),
+        )
+
+    diagnostics: List[CheckerDiagnostic] = []
+    dispositions = revision_pass.get("dispositions")
+    if not isinstance(dispositions, list):
+        return (
+            record.malformed(
+                "BASELINE_REVISION_PASS_MALFORMED",
+                observed="dispositions={0!r}".format(dispositions),
+                expected="an array of disposition objects",
+            ),
+        )
+
+    dispositioned: List[str] = []
+    for position, disposition in enumerate(dispositions):
+        if not isinstance(disposition, dict) or set(disposition) != set(
+            BASELINE_DISPOSITION_KEYS
+        ):
+            diagnostics.append(
+                record.malformed(
+                    "BASELINE_REVISION_PASS_MALFORMED",
+                    observed="dispositions[{0}] {1}".format(
+                        position,
+                        _key_set_report(disposition, BASELINE_DISPOSITION_KEYS)
+                        if isinstance(disposition, dict)
+                        else "is not an object",
+                    ),
+                    expected="exactly {0}".format(
+                        ", ".join(BASELINE_DISPOSITION_KEYS)
+                    ),
+                )
+            )
+            continue
+        finding_id = _stable_id(disposition.get("editorial_finding_id"))
+        outcome = disposition.get("outcome")
+        if outcome not in BASELINE_DISPOSITION_OUTCOMES:
+            diagnostics.append(
+                record.violation(
+                    "BASELINE_DISPOSITION_OUTCOME_UNKNOWN",
+                    item=label,
+                    observed="dispositions[{0}].outcome={1!r}".format(
+                        position, outcome
+                    ),
+                    expected="one of {0}".format(
+                        ", ".join(BASELINE_DISPOSITION_OUTCOMES)
+                    ),
+                )
+            )
+        elif outcome == "arc-change" and _stable_id(
+            disposition.get("arc_change_id")
+        ) is None:
+            diagnostics.append(
+                record.violation(
+                    "BASELINE_DISPOSITION_ARC_CHANGE_MISSING",
+                    item=label,
+                    observed="dispositions[{0}].arc_change_id={1!r}".format(
+                        position, disposition.get("arc_change_id")
+                    ),
+                    expected="an ArcChange reference when the disposition is an "
+                    "arc change",
+                )
+            )
+        if not _is_nonblank_string(disposition.get("rationale")):
+            diagnostics.append(
+                record.violation(
+                    "BASELINE_DISPOSITION_RATIONALE_MISSING",
+                    item=label,
+                    observed="dispositions[{0}].rationale={1!r}".format(
+                        position, disposition.get("rationale")
+                    ),
+                    expected="a nonblank arc change or no-change rationale for "
+                    "every calibration finding",
+                )
+            )
+        if finding_id is not None:
+            dispositioned.append(finding_id)
+
+    missing = sorted(set(findings) - set(dispositioned))
+    if missing:
+        diagnostics.append(
+            record.violation(
+                "BASELINE_FINDING_UNDISPOSITIONED",
+                item=label,
+                observed="no disposition for {0}".format(", ".join(missing)),
+                expected="one Baseline_Revision_Pass disposition per recorded "
+                "calibration finding",
+            )
+        )
+    duplicated = sorted(
+        {
+            finding_id
+            for finding_id in dispositioned
+            if dispositioned.count(finding_id) > 1
+        }
+    )
+    if duplicated:
+        diagnostics.append(
+            record.violation(
+                "BASELINE_FINDING_DISPOSITIONED_TWICE",
+                item=label,
+                observed="{0} dispositioned more than once".format(
+                    ", ".join(duplicated)
+                ),
+                expected="exactly one disposition per finding in one dedicated "
+                "revision pass",
+            )
+        )
+    unknown = sorted(set(dispositioned) - set(findings))
+    if unknown:
+        diagnostics.append(
+            record.violation(
+                "BASELINE_DISPOSITION_UNKNOWN_FINDING",
+                item=label,
+                observed="dispositions reference {0}".format(", ".join(unknown)),
+                expected="only findings listed in calibration_finding_ids",
+            )
+        )
+    return tuple(diagnostics)
+
+
+def check_gate_results(index: ReferenceIndex) -> Tuple[CheckerDiagnostic, ...]:
+    """Each `GateResult`'s own internal consistency, from its declared fields.
+
+    An objective gate's exit status is a function of its prerequisite state and
+    diagnostics, so a record claiming a pass with an incomplete prerequisite is a
+    violation. Editorial results derive from human findings and carry a null exit
+    status; the checker never computes one for them.
+    """
+
+    diagnostics: List[CheckerDiagnostic] = []
+    for record in index.of_type("GateResult"):
+        label = _stable_id(record.payload.get("gate_result_id")) or record.identity
+        gate_type = record.payload.get("gate_type")
+        if gate_type not in GATE_TYPES:
+            diagnostics.append(
+                record.violation(
+                    "GATE_TYPE_UNKNOWN",
+                    item=label,
+                    observed="gate_type={0!r}".format(gate_type),
+                    expected="one of {0}".format(", ".join(GATE_TYPES)),
+                )
+            )
+            continue
+
+        scope = record.payload.get("scope")
+        if not isinstance(scope, dict) or set(scope) != set(GATE_SCOPE_KEYS):
+            diagnostics.append(
+                record.malformed(
+                    "GATE_SCOPE_MALFORMED",
+                    observed="scope {0}".format(
+                        _key_set_report(scope, GATE_SCOPE_KEYS)
+                        if isinstance(scope, dict)
+                        else "is not an object"
+                    ),
+                    expected="exactly {0}".format(", ".join(GATE_SCOPE_KEYS)),
+                )
+            )
+
+        prerequisite = record.payload.get("prerequisite_state")
+        if prerequisite not in GATE_PREREQUISITE_STATES:
+            diagnostics.append(
+                record.violation(
+                    "GATE_PREREQUISITE_STATE_UNKNOWN",
+                    item=label,
+                    observed="prerequisite_state={0!r}".format(prerequisite),
+                    expected="one of {0}".format(", ".join(GATE_PREREQUISITE_STATES)),
+                )
+            )
+        result = record.payload.get("result")
+        if result not in GATE_RESULTS:
+            diagnostics.append(
+                record.violation(
+                    "GATE_RESULT_UNKNOWN",
+                    item=label,
+                    observed="result={0!r}".format(result),
+                    expected="one of {0}".format(", ".join(GATE_RESULTS)),
+                )
+            )
+            continue
+
+        exit_status = record.payload.get("checker_exit_status")
+        if gate_type == GATE_TYPE_EDITORIAL:
+            if exit_status is not None:
+                diagnostics.append(
+                    record.violation(
+                        "GATE_EDITORIAL_EXIT_STATUS",
+                        item=label,
+                        observed="checker_exit_status={0!r}".format(exit_status),
+                        expected="null; an editorial gate derives from human "
+                        "findings and has no checker exit status",
+                    )
+                )
+            continue
+
+        if prerequisite == "incomplete" and result != RESULT_INCOMPLETE:
+            diagnostics.append(
+                record.violation(
+                    "GATE_INCOMPLETE_PREREQUISITE_RESULT",
+                    item=label,
+                    observed="prerequisite_state=incomplete result={0}".format(result),
+                    expected="result of {0!r} whenever a prerequisite is "
+                    "incomplete".format(RESULT_INCOMPLETE),
+                )
+            )
+        expected_status = RESULT_EXIT_STATUS.get(str(result))
+        if expected_status is not None and exit_status != expected_status:
+            diagnostics.append(
+                record.violation(
+                    "GATE_EXIT_STATUS_DISAGREEMENT",
+                    item=label,
+                    observed="result={0} checker_exit_status={1!r}".format(
+                        result, exit_status
+                    ),
+                    expected="checker_exit_status {0} for result {1!r}".format(
+                        expected_status, result
+                    ),
+                )
+            )
+        diagnostic_ids = _stable_id_sequence(
+            record.payload.get("objective_diagnostic_ids")
+        )
+        if diagnostic_ids is None:
+            diagnostics.append(
+                record.malformed(
+                    "GATE_DIAGNOSTIC_IDS_MALFORMED",
+                    observed="objective_diagnostic_ids={0!r}".format(
+                        record.payload.get("objective_diagnostic_ids")
+                    ),
+                    expected="a unique list of CheckerDiagnostic references",
+                )
+            )
+        elif result == RESULT_PASS and diagnostic_ids:
+            diagnostics.append(
+                record.violation(
+                    "GATE_PASS_WITH_DIAGNOSTICS",
+                    item=label,
+                    observed="pass with {0} objective diagnostics".format(
+                        len(diagnostic_ids)
+                    ),
+                    expected="zero objective diagnostics for a passing objective "
+                    "gate",
+                )
+            )
+    return tuple(diagnostics)
+
+
+def check_finalization_gates(index: ReferenceIndex) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirement 11.11: `final` requires both independent gates to pass.
+
+    The two gates are independent in both directions, which is the whole point:
+    an objective pass cannot substitute for editorial approval, and editorial
+    approval cannot override an objective violation or an incomplete
+    prerequisite. This reports the missing side by name rather than a single
+    undifferentiated failure, because the remedy differs completely.
+    """
+
+    passing: Dict[str, List[str]] = {}
+    for record in index.of_type("GateResult"):
+        gate_type = record.payload.get("gate_type")
+        if gate_type not in (GATE_TYPE_MANUSCRIPT_GLOBAL, GATE_TYPE_EDITORIAL):
+            continue
+        if (
+            record.payload.get("result") != RESULT_PASS
+            or record.payload.get("prerequisite_state") != GATE_PREREQUISITE_COMPLETE
+        ):
+            continue
+        label = _stable_id(record.payload.get("gate_result_id")) or record.identity
+        passing.setdefault(str(gate_type), []).append(label)
+
+    missing = [
+        gate_type
+        for gate_type in (GATE_TYPE_MANUSCRIPT_GLOBAL, GATE_TYPE_EDITORIAL)
+        if not passing.get(gate_type)
+    ]
+    if not missing:
+        return ()
+    return (
+        _diagnostic(
+            "FINALIZATION_GATE_MISSING",
+            scope=SCOPE_GLOBAL,
+            item="manuscript",
+            observed="no passing {0} GateResult".format(" or ".join(missing)),
+            expected="separate passing manuscript-global and final editorial "
+            "GateResults before the Manuscript may be marked final",
+            disposition=DISPOSITION_INCOMPLETE,
+            related=tuple(
+                sorted(label for labels in passing.values() for label in labels)
+            ),
+        ),
+    )
+
+
+# ---------------------------------------------------------------------------
+# Mandatory Fluent_Pairing coverage
+# ---------------------------------------------------------------------------
+
+
+def check_fluent_pairing_coverage(
+    index: ReferenceIndex,
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirement 15.1: every mandatory range resolves to at least one beat.
+
+    A beat is a `PAIR` TimelineEntry whose declared chapters intersect the range.
+    Read from `technical_state.mode` and the entry's own chapter list only; no
+    range is credited from prose commentary, and a `PAIR` entry with no chapters
+    yet credits nothing.
+    """
+
+    covered: Dict[Tuple[int, int], List[str]] = {}
+    for record in index.of_type("TimelineEntry"):
+        technical_state = record.payload.get("technical_state")
+        if not isinstance(technical_state, dict):
+            continue
+        if technical_state.get("mode") != "PAIR":
+            continue
+        chapters = record.payload.get("chapter_numbers")
+        if not isinstance(chapters, list):
+            continue
+        label = _stable_id(record.payload.get("timeline_id")) or record.identity
+        for start, end in FLUENT_PAIRING_RANGES:
+            if any(
+                _is_chapter_number(chapter) and start <= int(chapter) <= end
+                for chapter in chapters
+            ):
+                covered.setdefault((start, end), []).append(label)
+
+    diagnostics: List[CheckerDiagnostic] = []
+    for span in FLUENT_PAIRING_RANGES:
+        if span in covered:
+            continue
+        diagnostics.append(
+            _diagnostic(
+                "FLUENT_PAIRING_RANGE_UNCOVERED",
+                scope=SCOPE_GLOBAL,
+                item="chapters {0}\u2013{1}".format(*span),
+                observed="no PAIR TimelineEntry assigned inside the range",
+                expected="at least one mandatory Fluent_Pairing beat in every "
+                "range {0}".format(
+                    ", ".join(
+                        "{0}\u2013{1}".format(*bounds)
+                        for bounds in FLUENT_PAIRING_RANGES
+                    )
+                ),
+            )
+        )
+    return tuple(diagnostics)
+
+
+# ---------------------------------------------------------------------------
+# Front_Matter rights and acknowledgment
+#
+# Requirements 9.10 to 9.12 are bookkeeping facts about a short document, so they
+# are checked by exact-phrase presence and absence, not by reading the prose.
+# Deliberately narrow: the checker verifies that the five Canon_Source titles are
+# named, that *One-Time Pad* is not, and that the sound-recording and performance
+# ownership vocabulary is absent from the notice. It makes no judgment about
+# wording quality.
+# ---------------------------------------------------------------------------
+
+CANON_SOURCE_TITLES: Tuple[str, ...] = (
+    "Case Zero",
+    "Faraday",
+    "The Final Frontier",
+    "The Radius",
+    "The Synaptic Frontier",
+)
+EXCLUDED_CANON_SOURCE_TITLE = "One-Time Pad"
+# The ownership vocabulary Requirement 9.11 excludes from the prose notice. These
+# are claims of ownership in a recording or a performance, not the ordinary words
+# "recording" or "performance", so each phrase is matched whole.
+PROHIBITED_RIGHTS_PHRASES: Tuple[str, ...] = (
+    "sound recording copyright",
+    "sound recording rights",
+    "master recording",
+    "phonogram rights",
+    "performance rights",
+    "performer's rights",
+    "performers' rights",
+    "neighbouring rights",
+    "neighboring rights",
+    "\u2117",
+)
+# The prose-rights facts Requirement 9.10 requires the document to state, as the
+# accepted markers for each. Several forms are accepted per fact because the
+# requirement is that the document identifies the author and the prose copyright
+# holder, not that it uses one house phrasing; Requirement 12.11 keeps wording
+# outside pass/fail.
+REQUIRED_FRONT_MATTER_MARKERS: Mapping[str, Tuple[str, ...]] = {
+    "author": ("a novel by", "author:", "written by"),
+    "prose copyright holder": ("copyright", "\u00a9"),
+}
+
+
+def check_front_matter(
+    path: Path, *, relative_path: Optional[str] = None
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Requirements 9.10 to 9.12 over the Front_Matter document."""
+
+    item = relative_path or Path(path).name
+    try:
+        text = Path(path).read_text(encoding="utf-8")
+    except FileNotFoundError:
+        return (
+            _diagnostic(
+                "FRONT_MATTER_MISSING",
+                scope=SCOPE_GLOBAL,
+                item=item,
+                observed="no readable file at this path",
+                expected="a Front_Matter document naming the author and prose "
+                "copyright holder",
+                disposition=DISPOSITION_INCOMPLETE,
+            ),
+        )
+    except (OSError, UnicodeError) as exc:
+        return (
+            _diagnostic(
+                "FRONT_MATTER_UNREADABLE",
+                scope=SCOPE_GLOBAL,
+                item=item,
+                observed=str(exc),
+                expected="readable UTF-8 text",
+                disposition=DISPOSITION_INCOMPLETE,
+            ),
+        )
+
+    normalized = normalize_prose(text)
+    folded = normalized.casefold()
+    diagnostics: List[CheckerDiagnostic] = []
+
+    for description, markers in sorted(REQUIRED_FRONT_MATTER_MARKERS.items()):
+        if not any(marker.casefold() in folded for marker in markers):
+            diagnostics.append(
+                _diagnostic(
+                    "FRONT_MATTER_RIGHTS_FIELD_MISSING",
+                    scope=SCOPE_GLOBAL,
+                    item=item,
+                    observed="no {0} statement".format(description),
+                    expected="a stated {0} for the novel prose".format(description),
+                )
+            )
+
+    present = [phrase for phrase in PROHIBITED_RIGHTS_PHRASES if phrase in folded]
+    if present:
+        diagnostics.append(
+            _diagnostic(
+                "FRONT_MATTER_RECORDING_OWNERSHIP_CLAIM",
+                scope=SCOPE_GLOBAL,
+                item=item,
+                observed="contains {0}".format(", ".join(repr(p) for p in present)),
+                expected="prose rights stated independently, with no "
+                "sound-recording or performance ownership claim",
+            )
+        )
+
+    if EXCLUDED_CANON_SOURCE_TITLE.casefold() in folded:
+        diagnostics.append(
+            _diagnostic(
+                "FRONT_MATTER_EXCLUDED_SOURCE_ACKNOWLEDGED",
+                scope=SCOPE_GLOBAL,
+                item=item,
+                observed="acknowledges {0!r}".format(EXCLUDED_CANON_SOURCE_TITLE),
+                expected="no {0} acknowledgment; it is not a "
+                "Canon_Source".format(EXCLUDED_CANON_SOURCE_TITLE),
+            )
+        )
+
+    # Requirement 9.12 applies only *where* the author includes an
+    # acknowledgment, so absence of every title is absence of the optional
+    # section rather than an incomplete one. A partial list is the failure.
+    named = [
+        title for title in CANON_SOURCE_TITLES if title.casefold() in folded
+    ]
+    if named and len(named) != len(CANON_SOURCE_TITLES):
+        missing = [title for title in CANON_SOURCE_TITLES if title not in named]
+        diagnostics.append(
+            _diagnostic(
+                "FRONT_MATTER_SOURCE_ACKNOWLEDGMENT_INCOMPLETE",
+                scope=SCOPE_GLOBAL,
+                item=item,
+                observed="names {0} of {1} Canon_Sources; missing {2}".format(
+                    len(named), len(CANON_SOURCE_TITLES), ", ".join(missing)
+                ),
+                expected="all five source-song titles when an acknowledgment is "
+                "included",
+            )
+        )
+    return tuple(diagnostics)
+
+
+# ---------------------------------------------------------------------------
+# Requested-scope orchestration
+# ---------------------------------------------------------------------------
+
+
+def discover_chapter_files(manuscript_root: Path) -> Tuple[Path, ...]:
+    """Every Chapter_File under `chapters/`, in movement then sequence order.
+
+    Discovery is by the fixed filename convention, so a note or scratch file that
+    does not parse as a Chapter_File name is not silently treated as a chapter.
+    Such a file is reported by the outline/file bijection instead, which is where
+    an unexpected manuscript file belongs.
+    """
+
+    root = Path(manuscript_root) / CHAPTERS_DIRECTORY
+    if not root.is_dir():
+        return ()
+    found: List[Tuple[int, int, str, Path]] = []
+    for path in sorted(root.rglob("*.md")):
+        parsed = parse_chapter_filename(path.name)
+        if parsed is None:
+            continue
+        found.append(
+            (
+                MOVEMENT_ORDER.get(parsed.movement, len(MOVEMENTS)),
+                parsed.sequence,
+                path.name,
+                path,
+            )
+        )
+    return tuple(item[3] for item in sorted(found, key=lambda item: item[:3]))
+
+
+@dataclass(frozen=True)
+class ScopeRun:
+    """One completed chapter-or-batch run: what was asked, and what was found."""
+
+    scope: str
+    manuscript_root: str
+    chapter_paths: Tuple[str, ...]
+    chapters: Tuple[ChapterCheckResult, ...]
+    diagnostics: Tuple[CheckerDiagnostic, ...]
+    batch_kind: Optional[str] = None
+    changed_references: Tuple[str, ...] = ()
+
+    @property
+    def chapter_numbers(self) -> Tuple[int, ...]:
+        return tuple(
+            sorted(
+                {
+                    result.chapter
+                    for result in self.chapters
+                    if result.chapter is not None
+                }
+            )
+        )
+
+    @property
+    def result(self) -> str:
+        return classify_result(self.diagnostics)
+
+    @property
+    def exit_status(self) -> int:
+        return exit_status_for_result(self.result)
+
+
+def check_global_scope(
+    results: Sequence["ChapterCheckResult"],
+    *,
+    index: ReferenceIndex,
+    manuscript_root: Path,
+    front_matter_path: Optional[str] = DEFAULT_FRONT_MATTER_PATH,
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Every whole-book objective check Requirement 11 assigns to global scope.
+
+    Ordered so structure is established before the facts that depend on it: the
+    outline's own sequence and movement blocks, then the outline-to-file
+    bijection, then the counts and relationships that only mean something once
+    both sides agree.
+
+    Every check here is deliberately absent from chapter and batch scope, which
+    is the separation Requirement 10.9 and Property 12 require.
+    """
+
+    diagnostics: List[CheckerDiagnostic] = []
+    entries = index.arc_entries
+
+    diagnostics.extend(check_outline_sequence(entries))
+    diagnostics.extend(check_movement_blocks(entries))
+    diagnostics.extend(check_outline_file_bijection(entries, results))
+
+    # Whole-book POV facts. The roster's movement coverage and Anchor coverage are
+    # read from the outline rather than from the delivered files, so an
+    # undrafted-but-planned movement still counts as assigned.
+    chapter_movements: Dict[str, set] = {}
+    for entry in entries:
+        pov_id = _stable_id(entry.payload.get("pov_id"))
+        if pov_id is None or entry.movement not in MOVEMENT_ORDER:
+            continue
+        chapter_movements.setdefault(pov_id, set()).add(str(entry.movement))
+    diagnostics.extend(
+        check_pov_roster(
+            index,
+            chapter_movements={
+                pov_id: frozenset(movements)
+                for pov_id, movements in chapter_movements.items()
+            },
+        )
+    )
+
+    # Requirement 11.12 evaluates the run bounds from each Chapter_File's declared
+    # `words`, while Requirement 2.15 evaluates the plan from `estimated_words`.
+    # Both are reported, because a plan that already breaks the bound is a
+    # planning violation even before the prose exists.
+    diagnostics.extend(
+        check_pov_runs(
+            pov_runs(arc_entry_pov_assignments(entries)),
+            scope=SCOPE_PLANNING,
+            source="ArcEntry.estimated_words",
+        )
+    )
+    declared: List[Tuple[int, str, Optional[int]]] = []
+    for result in results:
+        chapter = result.chapter
+        pov_id = _stable_id(result.document.header.get("pov_id"))
+        if chapter is None or pov_id is None:
+            continue
+        observed = (
+            result.length_report.observed_words
+            if result.length_report is not None
+            else None
+        )
+        declared.append((chapter, pov_id, observed))
+    diagnostics.extend(
+        check_pov_runs(
+            pov_runs(declared),
+            scope=SCOPE_GLOBAL,
+            source="ChapterHeader.words",
+        )
+    )
+
+    diagnostics.extend(check_normal_share(results))
+    totals = movement_word_totals(results)
+    diagnostics.extend(check_movement_scale(totals))
+
+    baseline, baseline_diagnostics = check_baseline(index)
+    diagnostics.extend(baseline_diagnostics)
+    diagnostics.extend(
+        check_final_targets(
+            baseline.final_targets,
+            chapter_count=len(results),
+            total_words=sum(totals.values()),
+        )
+    )
+
+    # The planning-side reference checks run here with no batch scope, which means
+    # the whole book is in view: mechanism state on every TimelineEntry, Pair
+    # Calibration uniqueness across all of them, the Character_ID/POV_ID
+    # bijection, and Cross_Cut reciprocity. They are deliberately *not* run for a
+    # chapter scope, because validating every TimelineEntry would let one chapter's
+    # gate fail for an unrelated record, which Requirement 10.9 forbids. A chapter
+    # gets `check_direct_references` for its own references instead.
+    diagnostics.extend(check_planning_references(index))
+
+    diagnostics.extend(check_whole_book_literal_constraints(results, index))
+    diagnostics.extend(check_motif_family_totals(index))
+    diagnostics.extend(check_canon_facts(index))
+    diagnostics.extend(check_canon_source_inventory(index))
+    diagnostics.extend(check_novel_extensions(index))
+    diagnostics.extend(check_reveals(index))
+    diagnostics.extend(check_arc_changes(index))
+    diagnostics.extend(check_status_synchronization(results))
+    diagnostics.extend(check_gate_results(index))
+    diagnostics.extend(check_finalization_gates(index))
+    diagnostics.extend(check_fluent_pairing_coverage(index))
+
+    if front_matter_path is not None:
+        diagnostics.extend(
+            check_front_matter(
+                Path(manuscript_root).joinpath(*front_matter_path.split("/")),
+                relative_path=front_matter_path,
+            )
+        )
+    return tuple(diagnostics)
+
+
+def run_scope(
+    paths: Sequence[Path],
+    *,
+    scope: str,
+    manuscript_root: Path,
+    batch_kind: Optional[str] = None,
+    changed_references: Sequence[str] = (),
+    record_sources: Optional[Sequence[str]] = None,
+) -> ScopeRun:
+    """Run one `chapter`, `batch`, or `global` scope.
+
+    Chapter scope evaluates one Chapter_File against its Direct_Planning_
+    References only, per Requirement 10.1, and takes no changed references: a
+    Chapter_Local_Gate has no batch to synchronize. Batch scope adds the delivered
+    batch size rule and the changed cross-document reference audit of Requirement
+    13.3 on top of every chapter violation. Global scope discovers every
+    Chapter_File under the manuscript root, requires the whole-book record
+    sources, and adds the Manuscript_Global_Gate.
+
+    For chapter and batch scope Requirement 10.9 stays satisfied by omission.
+    Nothing in those paths reaches for Final_Targets, whole-book POV distribution,
+    cross-manuscript motif totals, movement length relationships, or final-ending
+    acceptance.
+    """
+
+    if scope not in (SCOPE_CHAPTER, SCOPE_BATCH, SCOPE_GLOBAL):
+        raise ValueError("unknown scope {0!r}".format(scope))
+    if scope != SCOPE_BATCH and changed_references:
+        raise ValueError(
+            "{0} scope takes no changed references; they belong to a delivered "
+            "batch".format(scope)
+        )
+    if scope != SCOPE_BATCH and batch_kind is not None:
+        raise ValueError("batch_kind belongs to batch scope")
+
+    root = Path(manuscript_root)
+    if record_sources is None:
+        record_sources = (
+            GLOBAL_RECORD_SOURCES if scope == SCOPE_GLOBAL else DEFAULT_RECORD_SOURCES
+        )
+    if scope == SCOPE_GLOBAL:
+        paths = discover_chapter_files(root)
+
+    index, index_diagnostics = load_reference_index(root, sources=record_sources)
+    scope_result = check_chapter_scope(
+        paths, manuscript_root=root, reference_index=index
+    )
+
+    diagnostics: List[CheckerDiagnostic] = list(index_diagnostics)
+    diagnostics.extend(scope_result.diagnostics)
+
+    if scope == SCOPE_GLOBAL:
+        diagnostics.extend(
+            check_global_scope(
+                scope_result.chapters, index=index, manuscript_root=root
+            )
+        )
+
+    resolved_kind: Optional[str] = None
+    if scope == SCOPE_BATCH:
+        numbers = sorted(
+            {
+                result.chapter
+                for result in scope_result.chapters
+                if result.chapter is not None
+            }
+        )
+        resolved_kind = (
+            batch_kind if batch_kind is not None else classify_batch_kind(numbers)
+        )
+        diagnostics.extend(
+            check_batch_composition(numbers, batch_kind=resolved_kind)
+        )
+        diagnostics.extend(
+            check_changed_references(
+                changed_references,
+                index=index,
+                chapter_scope=numbers,
+                chapter_results=scope_result.chapters,
+                known_sources=record_sources,
+            )
+        )
+
+    return ScopeRun(
+        scope=scope,
+        manuscript_root=str(root),
+        chapter_paths=tuple(
+            manuscript_relative_path(Path(path), root) for path in paths
+        ),
+        chapters=scope_result.chapters,
+        diagnostics=tuple(diagnostics),
+        batch_kind=resolved_kind,
+        changed_references=tuple(changed_references),
+    )
+
+
+# ---------------------------------------------------------------------------
+# Deterministic diagnostic output
+# ---------------------------------------------------------------------------
+
+
+FORMAT_TEXT = "text"
+FORMAT_JSON = "json"
+REPORT_FORMATS: Tuple[str, ...] = (FORMAT_TEXT, FORMAT_JSON)
+
+# Reported scope order: the narrowest first, so a chapter's own violations read
+# before the batch and planning findings that depend on more than one document.
+_SCOPE_REPORT_ORDER: Mapping[str, int] = {
+    SCOPE_CHAPTER: 0,
+    SCOPE_BATCH: 1,
+    SCOPE_PLANNING: 2,
+    SCOPE_GLOBAL: 3,
+}
+
+
+def _diagnostic_sort_key(
+    diagnostic: CheckerDiagnostic,
+) -> Tuple[int, str, str, str, str, str, str]:
+    return (
+        _SCOPE_REPORT_ORDER.get(diagnostic.scope, len(_SCOPE_REPORT_ORDER)),
+        diagnostic.scope,
+        diagnostic.item,
+        diagnostic.code,
+        diagnostic.observed,
+        diagnostic.expected,
+        diagnostic.severity,
+    )
+
+
+def sort_diagnostics(
+    diagnostics: Iterable[CheckerDiagnostic],
+) -> Tuple[CheckerDiagnostic, ...]:
+    """Impose one total order on a diagnostic list.
+
+    Every check already runs deterministically, but sorting at the output edge
+    makes the emitted report independent of the order checks happen to append in,
+    so the same normalized inputs always render byte-identically.
+    """
+
+    return tuple(sorted(diagnostics, key=_diagnostic_sort_key))
+
+
+def _count_by(
+    diagnostics: Iterable[CheckerDiagnostic], attribute: str
+) -> Mapping[str, int]:
+    counts: Dict[str, int] = {}
+    for diagnostic in diagnostics:
+        key = str(getattr(diagnostic, attribute))
+        counts[key] = counts.get(key, 0) + 1
+    return {key: counts[key] for key in sorted(counts)}
+
+
+def diagnostic_as_json(diagnostic: CheckerDiagnostic) -> Dict[str, Any]:
+    """The design's `CheckerDiagnostic` fields as a JSON-ready mapping."""
+
+    return {
+        "severity": diagnostic.severity,
+        "code": diagnostic.code,
+        "scope": diagnostic.scope,
+        "item": diagnostic.item,
+        "observed": diagnostic.observed,
+        "expected": diagnostic.expected,
+        "disposition": diagnostic.disposition,
+        "details": {key: value for key, value in diagnostic.details},
+        "related": list(diagnostic.related),
+    }
+
+
+def scope_run_as_json(run: ScopeRun) -> Dict[str, Any]:
+    """The whole run as structured facts, matching the text report exactly."""
+
+    ordered = sort_diagnostics(run.diagnostics)
+    document: Dict[str, Any] = {
+        "scope": run.scope,
+        "manuscript_root": run.manuscript_root,
+        "chapter_paths": list(run.chapter_paths),
+        "chapter_numbers": list(run.chapter_numbers),
+        "result": run.result,
+        "exit_status": run.exit_status,
+        "counts": {
+            "total": len(ordered),
+            "severity": _count_by(ordered, "severity"),
+            "scope": _count_by(ordered, "scope"),
+        },
+        "diagnostics": [diagnostic_as_json(item) for item in ordered],
+    }
+    if run.scope == SCOPE_BATCH:
+        document["batch_kind"] = run.batch_kind
+        document["changed_references"] = list(run.changed_references)
+    return document
+
+
+def render_text_report(run: ScopeRun) -> str:
+    """The author-facing report: one line per diagnostic, then the counts."""
+
+    ordered = sort_diagnostics(run.diagnostics)
+    lines = [diagnostic.format_text() for diagnostic in ordered]
+
+    request = ["SUMMARY scope={0}".format(run.scope)]
+    if run.scope == SCOPE_BATCH:
+        request.append("batch_kind={0}".format(run.batch_kind))
+    request.append(
+        "chapters={0}".format(
+            ",".join(str(number) for number in run.chapter_numbers) or "(none)"
+        )
+    )
+    if run.scope == SCOPE_BATCH:
+        request.append(
+            "changed_references={0}".format(
+                ",".join(sorted(set(run.changed_references))) or "(none)"
+            )
+        )
+    request.append("result={0}".format(run.result))
+    request.append("exit={0}".format(run.exit_status))
+    lines.append(" ".join(request))
+
+    severity_counts = _count_by(ordered, "severity")
+    lines.append(
+        "SEVERITY {0}".format(
+            " ".join(
+                "{0}={1}".format(name, severity_counts.get(name, 0))
+                for name in (SEVERITY_ERROR, SEVERITY_WARNING)
+            )
+        )
+    )
+    scope_counts = _count_by(ordered, "scope")
+    lines.append(
+        "SCOPE {0}".format(
+            " ".join(
+                "{0}={1}".format(name, scope_counts.get(name, 0))
+                for name in sorted(_SCOPE_REPORT_ORDER, key=_SCOPE_REPORT_ORDER.get)
+            )
+        )
+    )
+    if run.result == RESULT_PASS:
+        lines.append(
+            "PASS {0}-scope objective checks found no violation".format(run.scope)
+        )
+    return "\n".join(lines) + "\n"
+
+
+def render_report(run: ScopeRun, *, report_format: str = FORMAT_TEXT) -> str:
+    """Render a completed run in the requested format."""
+
+    if report_format == FORMAT_TEXT:
+        return render_text_report(run)
+    if report_format == FORMAT_JSON:
+        return (
+            json.dumps(
+                scope_run_as_json(run),
+                ensure_ascii=False,
+                indent=2,
+                sort_keys=True,
+            )
+            + "\n"
+        )
+    raise ValueError("unknown report format {0!r}".format(report_format))
+
+
 def _project_root() -> Path:
     return Path(__file__).resolve().parents[1]
 
@@ -4832,14 +10054,167 @@ def build_argument_parser() -> argparse.ArgumentParser:
         default=None,
         help="optional reference-song-visibility/v1 JSON fixture plan",
     )
+    parser.add_argument(
+        "--scope",
+        choices=(SCOPE_CHAPTER, SCOPE_BATCH, SCOPE_GLOBAL),
+        default=None,
+        help=(
+            "run the Chapter_Local_Gate, the delivered-batch audit, or the "
+            "Manuscript_Global_Gate"
+        ),
+    )
+    parser.add_argument(
+        "--chapter",
+        type=Path,
+        default=None,
+        help="the one Chapter_File to check with --scope chapter",
+    )
+    parser.add_argument(
+        "--chapters",
+        type=Path,
+        nargs="+",
+        default=None,
+        metavar="PATH",
+        help="the delivered Chapter_Files to check with --scope batch",
+    )
+    parser.add_argument(
+        "--manuscript-root",
+        type=Path,
+        default=None,
+        help=(
+            "manuscript root holding planning/ and chapters/ "
+            "(defaults to {0}/ under --workspace-root)".format(
+                DEFAULT_MANUSCRIPT_ROOT
+            )
+        ),
+    )
+    parser.add_argument(
+        "--changed-reference",
+        action="append",
+        default=None,
+        metavar="RELATIVE_PATH",
+        help=(
+            "a changed cross-document reference this batch delivers, relative to "
+            "the manuscript root; repeatable and valid only with --scope batch"
+        ),
+    )
+    parser.add_argument(
+        "--batch-kind",
+        choices=BATCH_KINDS,
+        default=None,
+        help=(
+            "declare the delivered batch kind; inferred from the chapter set "
+            "when omitted"
+        ),
+    )
+    parser.add_argument(
+        "--format",
+        dest="report_format",
+        choices=REPORT_FORMATS,
+        default=FORMAT_TEXT,
+        help="diagnostic output format (default: text)",
+    )
     return parser
+
+
+def _resolve_chapter_argument(
+    path: Path, *, manuscript_root: Path, workspace_root: Path
+) -> Path:
+    """Accept a Chapter_File path as given, or relative to either root."""
+
+    candidate = Path(path)
+    if candidate.is_absolute():
+        return candidate
+    for base in (Path.cwd(), manuscript_root, workspace_root):
+        resolved = base / candidate
+        if resolved.is_file():
+            return resolved
+    # Nothing matched. Return the manuscript-relative form so the fail-closed
+    # missing-file diagnostic names the path the checker actually expected.
+    return manuscript_root / candidate
+
+
+def _run_scope_command(
+    arguments: argparse.Namespace, parser: argparse.ArgumentParser
+) -> int:
+    """Validate a `--scope` invocation, run it, and print its report."""
+
+    scope = arguments.scope
+    if scope == SCOPE_CHAPTER:
+        if arguments.chapter is None:
+            parser.error("--scope chapter requires --chapter")
+        if arguments.chapters:
+            parser.error("--chapters belongs to --scope batch")
+        if arguments.batch_kind is not None:
+            parser.error("--batch-kind belongs to --scope batch")
+        if arguments.changed_reference:
+            # Requirement 10.1: the Chapter_Local_Gate evaluates only the current
+            # Chapter_File and its Direct_Planning_References.
+            parser.error(
+                "--changed-reference belongs to --scope batch; the "
+                "Chapter_Local_Gate reads only Direct_Planning_References"
+            )
+        requested: Sequence[Path] = (arguments.chapter,)
+    elif scope == SCOPE_GLOBAL:
+        if arguments.chapter is not None or arguments.chapters:
+            parser.error(
+                "--scope global discovers every Chapter_File under the "
+                "manuscript root and takes no chapter arguments"
+            )
+        if arguments.batch_kind is not None:
+            parser.error("--batch-kind belongs to --scope batch")
+        if arguments.changed_reference:
+            parser.error(
+                "--changed-reference belongs to --scope batch; the "
+                "Manuscript_Global_Gate evaluates the complete Manuscript"
+            )
+        requested = ()
+    else:
+        if not arguments.chapters:
+            parser.error("--scope batch requires --chapters")
+        if arguments.chapter is not None:
+            parser.error("--chapter belongs to --scope chapter")
+        requested = arguments.chapters
+
+    workspace_root = Path(arguments.workspace_root)
+    manuscript_root = (
+        Path(arguments.manuscript_root)
+        if arguments.manuscript_root is not None
+        else workspace_root / DEFAULT_MANUSCRIPT_ROOT
+    )
+
+    run = run_scope(
+        [
+            _resolve_chapter_argument(
+                path,
+                manuscript_root=manuscript_root,
+                workspace_root=workspace_root,
+            )
+            for path in requested
+        ],
+        scope=scope,
+        manuscript_root=manuscript_root,
+        batch_kind=arguments.batch_kind,
+        changed_references=tuple(arguments.changed_reference or ()),
+    )
+
+    report = render_report(run, report_format=arguments.report_format)
+    stream = sys.stdout if run.result == RESULT_PASS else sys.stderr
+    print(report, end="", file=stream)
+    return run.exit_status
 
 
 def main(argv: Optional[Sequence[str]] = None) -> int:
     parser = build_argument_parser()
     arguments = parser.parse_args(argv)
+    if arguments.site_exclusion and arguments.scope is not None:
+        parser.error("--site-exclusion and --scope are separate gates; run one")
+    if arguments.scope is not None:
+        return _run_scope_command(arguments, parser)
     if not arguments.site_exclusion:
-        parser.error("only --site-exclusion is implemented by task 3.2")
+        parser.error(
+            "choose a gate: --site-exclusion, or --scope chapter|batch|global"
+        )
 
     try:
         result = run_site_exclusion(
