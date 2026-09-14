@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DOOR-INWARD
 motif_events: []
 hook: "It can find a person more precisely than it can find a place, and the door runs inward."
-words: 1155
+words: 1215
 length_class: normal
 status: revised
 ---
@@ -51,7 +51,7 @@ Her terms were more exact than mine. One session only. No increase in output aft
 
 Before she entered the test room I ran the path into the load at the fixed level for all six planned envelopes, and the output stayed inside tolerance across the set, with the third envelope half a decibel low and the driver temperature two degrees above where I like it. I substituted the decoy address and confirmed that the controller would refuse transmission without a live matching field. I opened the physical cutoff while an envelope was armed, and forward power fell before the first measurable transition.
 
-Action, result, consequence. The controls made the apparatus obey the procedure. They did not make the procedure wise.
+The controls made the apparatus obey the procedure. They did not make the procedure authorized. The suspension chair had my deviation and had not yet ruled on it, and I ran this session under Nia's consent, which answers the question she is entitled to answer and not the one the chair is. I put that sentence in the record before the session rather than after it, which is the least I have done for anybody in this account.
 
 Nia sat behind the glass with her left thumb under the cutoff guard and her right index finger beside the advance key. I enabled the receive filter.
 

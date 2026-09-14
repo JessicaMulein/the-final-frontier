@@ -33,7 +33,7 @@ He was not evasive when I got there. That is worth recording. He had the paperwo
 
 The shielded room had been built on institute money. I have never disputed that. Development had been calling it a demonstrator since February and compliance had been calling it a containment measure since March, and a containment measure is an asset of the preparedness portfolio under a classification that has existed for eleven years and was not written for this. The array is on the same site licence. When the room moved, the licence moved, and the room where you keep the instruments that test the room moved with it.
 
-The stated reason was operator cover. The programme requires two qualified operators for any energised session. Ravi's transfer took effect at the end of April. Since then it has run on one signature and a noted deficiency, and a noted deficiency is a thing an institution is permitted to carry for a period and not permitted to carry indefinitely, and the period ran out on the third.
+The stated reason was operator cover. The programme requires two qualified operators for any energized session. Ravi's transfer took effect at the end of April. Since then it has run on one signature and a noted deficiency, and a noted deficiency is a thing an institution is permitted to carry for a period and not permitted to carry indefinitely, and the period ran out on the third.
 
 "You are aware," he said, "that I raised the second operator in March."
 

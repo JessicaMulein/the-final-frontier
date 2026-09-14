@@ -4,9 +4,10 @@ Schema version: **1**
 Normative schema: [`record-schemas.md`](record-schemas.md), especially `ArcEntry`, `CrossCut`, and `Baseline`  
 Structural authority: Requirements 1.2–1.5, 1.7–1.9, 2.1, 2.7, 2.10–2.12, 3.1, 3.6, and 15.5–15.8  
 Narrative authority: the design's *Detailed Sequence and Beat Architecture*, *POV Rotation, Cross-Cut Grammar, and Reveal Ownership*, and *Original Thriller Pacing Architecture*  
-Decision authority: binding, nonsuperseded decisions through `DEC-019`; `DEC-016` governs pacing architecture, `DEC-011` the title reversal, `DEC-017` the delayed consent parallel, `DEC-018` chapter shape, forward pressure, voice separation, human cost, warmth, and the normal-class word target, and `DEC-019` intermittent frame presence, spent outlier budget, irregular rotation, one Discovery compressed-clock cluster, and completion of the `DEC-018` frontier  
+Decision authority: binding, nonsuperseded decisions through `DEC-022`; `DEC-016` governs pacing architecture, `DEC-011` the title reversal, `DEC-017` the delayed consent parallel, `DEC-018` chapter shape, forward pressure, voice separation, human cost, and warmth, `DEC-019` intermittent frame presence and completion of the `DEC-018` frontier, amended `DEC-020` contextual anti-formula propulsion, `DEC-021` scene-earned chapter length under the complete-manuscript budget, and `DEC-022` the Oxford British house spelling standard and the open voice-separation obligation on `POV-NIA`
 Created by: task 5.1  
-Amended: **2026-09-18** — `DEC-018` planning obligations. The Mindwars and Coda movement sections carry the new drafting obligation to make the class of uncounted private civilian loss vivid inside Chapters 109–114, and `DEC-018` clause 10's 1,050–1,200 `normal`-class target is recorded beside the length-class budget. No `ArcEntry`, `CrossCut`, or `Baseline` record value changed in this pass: still 128 entries, 65 cross-cuts, the same length classes, `estimated_words`, motifs, reveals, statuses, and calibration selections. Re-budgeting `estimated_words` to the clause 10 band is an open obligation of `ARC-CHANGE-REVISION-001` and belongs to a later wave.
+Amended: **2026-09-18** — `DEC-021` length-governance repair. The historical 1,050–1,200 and 900–1,400 bands, their midpoints, and derived fixed mean windows are diagnostics rather than chapter quotas. Objective limits and Final_Targets are unchanged; no `ArcEntry`, `CrossCut`, or `Baseline` value changes, and the pending mass re-budget of `estimated_words` is superseded rather than performed. Chapter 118 retains its 1,400 planning estimate and `exploratory` status while receiving a separately authorized craft expansion.
+Amended: **2026-09-18** — `DEC-018` planning obligations. The Mindwars and Coda movement sections carry the new drafting obligation to make the class of uncounted private civilian loss vivid inside Chapters 109–114, and the historical `DEC-018` clause 10 target is recorded in the audit trail. No `ArcEntry`, `CrossCut`, or `Baseline` record value changed in that pass: still 128 entries, 65 cross-cuts, the same length classes, `estimated_words`, motifs, reveals, statuses, and calibration selections.
 Amended: **2026-09-13** — every `ArcEntry` gains the required `estimated_words` key under the amended `record-schemas.md`, and global invariant 6 gains the `DEC-016` same-POV run word limit of 3,600 Prose_Words.
 Amended: **2026-09-14** — task 5.6 audit. The reveal reference rules state the `reader_release_chapter`/`reveal_owner_pov` agreement rule explicitly, and the reveal table's release chapters for `REVEAL-NIA-SOURCE-CASUALTY` and `REVEAL-CASUALTY-CONSEQUENCE` are corrected to 24 and 52. The [task 5.6 audit result](#task-56-audit-result) records the complete pass, the repairs, and the one finding referred upward.
 Amended: **2026-09-14** — task 5.7 Calibration Batch. Chapters 1–5, 73, 118, and 124 now carry `calibration_selected: true`; 73, 118, and 124 carry a non-null `representative_purpose` and `status: "exploratory"`. The `status` and calibration rows of the field contract and global invariants 19 and 20 record the post-5.7 state, and the [task 5.7 Calibration Batch](#task-57-calibration-batch) section records the selection, the exploratory scope, and Julian's unresolved Requirement 5.11 first-appearance gate.
@@ -113,21 +114,23 @@ Per-movement outlier ceilings, allocated roughly by chapter count:
 
 These are ceilings, not quotas; a movement may use fewer. Before baseline approval, reallocating outliers between movements requires only a dated note in this section and must keep the global total at or under 20; task 5.6 audits the global figure. After baseline approval it requires an `ArcChange`.
 
-**Dated note, 2026-09-18, `DEC-019` clause 3.** Chapter 43 moves from `normal` to `long-outlier` and receives a non-null `outlier_purpose`. Private_Defense_Part goes from 4 outliers to 5, which is exactly its ceiling; the global total goes from 18 to 19 against the ceiling of 20, and the `normal` count goes from 110 to 109 against the floor of 108. No outlier moves between movements and no other entry changes.
+**Historical note, 2026-09-18, `DEC-019` clause 3.** Chapter 43 moved from `normal` to `long-outlier` and received a non-null `outlier_purpose`. Private_Defense_Part went from 4 outliers to 5, exactly its ceiling; the global total went from 18 to 19 against the ceiling of 20, and the `normal` count went from 110 to 109 against the floor of 108. No outlier moved between movements and no other entry changed.
 
-This note also records a correction to the arithmetic that motivated `DEC-019` clause 3. The delivered manuscript's 5 outliers in 49 chapters were compared against the global 20-outlier ceiling rather than against the 18 the plan already allocates, which made the budget look roughly 15 entries underspent when the true delivered shortfall is about 2. The plan is close to fully allocated, so clause 3 cannot be satisfied by adding many more outliers. The remaining rhythm variance has to come from inside the `normal` class, whose Normal_Chapter_Range is 700–1,600 and whose `DEC-018` clause 10 drafting target of 1,050–1,200 is the actual cause of the observed metric evenness: 41 of 44 delivered normals now sit inside a 150-word band. With the projection at roughly 143,700 Prose_Words against approved Final_Targets of 130,000–150,000, widening the clause 10 target while holding the same mean would restore variance at no cost to the total. That widening is an open obligation and is not made by this note.
+That pass also corrected the arithmetic that had made the outlier budget look roughly 15 entries underspent when the true delivered shortfall was about 2. It proposed widening the then-operative target while holding a derived mean. `DEC-021` now closes that proposal at the correct level: the 700–1,600 Normal_Chapter_Range and all objective limits remain exact, while former per-chapter bands and derived means are diagnostics only.
+
+**Current note, 2026-09-18, `DEC-021`.** Chapter length is scene-earned inside a contextual complete-manuscript budget. No normal `ArcEntry` is mass-rebudgeted into 1,050–1,200 or 900–1,400, and no old-band departure requires an exemption. Existing `estimated_words` values remain planning metadata for provisional movement scale and same-POV run safety. Editorial Review considers dramatic function, adjacent cadence, delivered totals, remaining estimates, movement scale, and projected Final_Targets together; it never infers a craft verdict from distance to a preferred midpoint.
 
 Every outlier — either class — carries a non-null `outlier_purpose` naming the specific compression, interruption, revelation, aftermath, or expansion function it performs (Requirements 2.10 and 2.11). A `normal` entry carries `outlier_purpose: null`. "It felt long" and "it felt short" are not purposes.
 
-#### `DEC-018` clause 10 — the normal-class target inside the band
+#### `DEC-021` — contextual manuscript-budget safeguard
 
-The Normal_Chapter_Range of 700–1,600 is the permitted class band and is unchanged. `DEC-018` clause 10 adds a **drafting target of 1,050–1,200 Prose_Words for `normal` chapters**, with 1,125 as the planning mean, because the delivered manuscript was tracking a mean of 912 and projecting roughly 117,000 words against approved Final_Targets of 130,000–150,000.
+The Normal_Chapter_Range of 700–1,600, Hard_Chapter_Maximum of 2,500, 108-entry normal floor, 20-outlier cap, 3,600-word same-POV run limit, and approved Final_Targets of exactly 128 chapters and 130,000–150,000 Prose_Words remain objective constraints. Nothing in the length-governance amendment weakens or replaces them.
 
-The outline's actual distribution is 110 `normal`, 10 `microchapter`, and 8 `long-outlier`. Outliers keep their declared `outlier_purpose` compression or expansion and are never inflated to reach a total, so their contribution is computed from selected and delivered values rather than from class-band width: the ten microchapters average 500 across the seven whose values are known, for 5,000, and the eight long-outliers average 1,798.5 across the four whose values are known, for about 14,400 — roughly **19,400 Prose_Words from the 18 outliers**. The 110 normals then carry the remainder: 115,500 at the target floor for a total near 134,900, 123,750 at the midpoint for a total near 143,150, and 132,000 at the target ceiling for a total near 151,400. The operative rule is therefore that the normal-class **mean** must land between about 1,006 and 1,187 Prose_Words; 1,200 is a per-chapter ceiling for the class and not a target for the mean.
+The 1,050–1,200 band and 1,125 midpoint recorded historically by `DEC-018`, the 900–1,400 band recorded by `DEC-019`, and the mean windows derived from estimated outlier contributions are now **diagnostics rather than quotas**. They may illuminate cadence or budget drift but do not decide a chapter, batch, movement, or manuscript Editorial_Gate, create an exemption, or compel a prose change. A short `normal` chapter may be complete because its event is brief; a long one may need uninterrupted scene room. Either may still fail when a human review finds compression, expansion, or cumulative rhythm unearned.
 
-Clause 10 does not disturb the [same-POV run budget](#same-pov-run-budget). The longest run in the outline is two chapters, so the worst two-chapter normal run reaches 2,400 against the 3,600 limit; the two runs pairing a `normal` with a `long-outlier` reach 3,500 at 100–101 and 2,850 at 127–128; and a hypothetical three-chapter normal run at the target ceiling lands on 3,600 exactly rather than above it.
+The pre-repair editorial audit recorded 64 delivered files and 73,147 Prose_Words. It recorded a 1,134.4 mean across 55 delivered `normal` chapters and a class-mean projection of roughly 143,900 words over the fixed 128-chapter plan. Those figures were passing evidence for the complete-manuscript safeguard, not a new target. Future reviews recompute delivered totals and projection in context; if the manuscript credibly drifts outside Final_Targets, allocation is repaired where the drift arises rather than by uniform padding or cutting.
 
-Clause 10 is a drafting target enforced by human Editorial_Review, not a new objective check. The objectively checkable facts remain the ones already encoded: the 700–1,600 class band, the 2,500-word Hard_Chapter_Maximum, the 108-entry normal floor, the 20-outlier cap, the 3,600-word run limit, and the 130,000–150,000 Final_Targets total. Re-budgeting the `estimated_words` values of `normal` entries into the target band is an open synchronization obligation of `ARC-CHANGE-REVISION-001`; until that is applied, the planning estimates in this document still carry their pre-`DEC-018` values.
+`estimated_words` remains planning metadata for provisional movement scale and for same-POV runs that require an explicit safety total. Existing values are retained, including Chapter 118 at 1,400. The `ARC-CHANGE-REVISION-001` mass re-budget obligation is superseded by `DEC-021` and is not performed. Individual estimates change only when a real planning dependency requires it.
 
 ### Same-POV run budget
 
@@ -255,9 +258,11 @@ An entry lists a `Reveal` ID only when the chapter materially advances or releas
 
 `reader_release_chapter` must also agree with `reveal_owner_pov`, as `record-schemas.md` requires of the `Reveal` record: the release chapter is narrated by the owning POV. A reveal may be advanced by other viewpoints anywhere inside its payoff window, but the chapter recorded as its release belongs to the POV that owns it.
 
+Current-state correction (2026-09-18): `REVEAL-NIA-SOURCE-CASUALTY` is released by Mara's explicit verification in Chapter 23. This supersedes the historical task 5.6 table value; Chapter 24 remains Nia's refusal and interpretation, not the reader release.
+
 | Reveal_ID | Owner POV | Release chapter | Payoff window |
 |---|---|---:|---|
-| `REVEAL-NIA-SOURCE-CASUALTY` | `POV-NIA` | 24 | 21–25 |
+| `REVEAL-NIA-SOURCE-CASUALTY` | `POV-MARA` | 23 | 21–25 |
 | `REVEAL-BIDIRECTIONAL-ARCHITECTURE` | `POV-MARA` | 45 | 43–49 |
 | `REVEAL-CASUALTY-CONSEQUENCE` | `POV-NIA` | 52 | 50–55 |
 | `REVEAL-COUNTERPHASE-TRANSMITS` | `POV-MARA` | 72 | 70–77 |
@@ -409,7 +414,7 @@ This is deliberately not an `ArcEntry` field. Classifying a hook requires readin
 
 ## `DEC-018` chapter-shape controls
 
-`DEC-018` is binding craft and disclosure authority added after the review of delivered Chapters 1–46. Like the `DEC-016` controls above, **every criterion here is a human Editorial_Gate** under global invariant 25 and Requirement 12.12. No checker may score, rank, or threshold any of it, no `ArcEntry` or `ChapterHeader` field may be added to carry a value for it, and findings are recorded as `EditorialFinding` and editorial `GateResult` records in [`editorial-log.md`](editorial-log.md) with representative prose evidence and a `pass` or `revision` result.
+`DEC-018` is binding craft and disclosure authority added after the review of delivered Chapters 1–46. `DEC-021` later replaces only its length-quota criterion with the contextual manuscript-budget safeguard in the final row below. **Every criterion here is a human Editorial_Gate** under global invariant 25 and Requirement 12.12. No checker may score, rank, or threshold any of it, no `ArcEntry` or `ChapterHeader` field may be added to carry a value for it, and findings are recorded as `EditorialFinding` and editorial `GateResult` records in [`editorial-log.md`](editorial-log.md) with representative prose evidence and a `pass` or `revision` result.
 
 | Gate criterion | Scope | What the human reviewer decides |
 |---|---|---|
@@ -422,7 +427,7 @@ This is deliberately not an `ArcEntry` field. Classifying a hook requires readin
 | Voice separation and rationed aphorism | Batch, movement, manuscript | Whether syntax, rhythm, paragraph shape, and what each narrator notices distinguish the viewpoints, rather than domain vocabulary alone; and whether terminal aphorism and the isolated one-sentence paragraph have become the default unit. |
 | Personal cost per lead per movement | Movement | Whether each POV lead incurs at least one personal, non-abstract cost in each movement in which they hold chapters. Institutional strain and abstract guilt do not satisfy it. |
 | Warmth, comfort, and humor per movement | Movement | Whether the movement contains non-professional warmth between named characters, food, rest, or physical comfort offered and accepted, and humor that is not a professional riposte — and whether any POV lead is lonelier or flatter than the supporting cast. |
-| Normal-class word target | Batch, movement, manuscript | Whether `normal` chapters land in the 1,050–1,200 target band with a mean near 1,125, and whether any outlier has been inflated away from its declared `outlier_purpose`. See [clause 10 arithmetic](#dec-018-clause-10--the-normal-class-target-inside-the-band). |
+| Contextual manuscript-budget safeguard | Chapter, batch, movement, manuscript | Whether each chapter's compression or expansion is earned by its dramatic work; whether adjacent lengths create useful pressure rather than a predictable default; and whether delivered totals, remaining estimates, movement scale, and projected completion remain inside Final_Targets. Historical bands and midpoints are diagnostics only and cannot determine the verdict. See [`DEC-021` contextual manuscript-budget safeguard](#dec-021--contextual-manuscript-budget-safeguard). |
 
 The `contradiction-cut` relationships this document declares are the scope of the fifth criterion. In the delivered range they are `CUT-CONFESSION-REFUSED` at 23 and 24, `CUT-CONTAINMENT-ALREADY-LOST` at 26 and 29, `CUT-SEALED-ROOM-AND-A-LIFE` at 32 and 34, `CUT-CALIBRATION-AND-THE-UNCALIBRATED` at 40 and 42, and `CUT-CONSTRAINABLE-CLAUSE` at 44 and 45. Sixteen such relationships exist across the whole outline, and the criterion applies to every one.
 
@@ -2038,7 +2043,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "representative_purpose": null,
     "record_horizon": {
       "through_timeline_id": "TL-PRIVATE-RECORD-DEPOSITS",
-      "knowledge_limit": "Nia composes this as one of the first rolling witness deposits accepted after formation and knows only her own account, her own conditions, and that the logs exist; she has not been told what the timestamps establish, and she still refuses both accounts of where her certainty came from."
+      "knowledge_limit": "Nia composes this as one of the first rolling witness deposits accepted after formation and owns the documentary release: nobody explains the closed review to her, so she reads it herself and establishes that her routing did not cause the death and that no available routing would have prevented it. She knows the review is silent on where her certainty came from, that she cannot compel release of the county's certified copy, and she still refuses both origin accounts."
     },
     "reveal_ids": [
       "REVEAL-CASUALTY-CONSEQUENCE"
@@ -2131,7 +2136,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "long-outlier",
     "estimated_words": null,
     "outlier_purpose": "Expansion to hold the movement's first sustained protocol conversation at full length, including current consent state, send gating, visible acknowledgment, and a pause that stops transport.",
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2146,8 +2151,8 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "movement": "private_defense_part",
     "timeline_id": "TL-PRIVATE-PROTOCOL",
     "pov_id": "POV-MARA",
-    "purpose": "A stale, overbroad consent state lets one contribution cross that Nia had not currently authorized, and Mara has to accept that the protocol failed on the exact principle it exists to protect.",
-    "hook": "Revocation stops the channel in the same second, and there is nothing left to examine, which is both the failure and the only part working correctly.",
+    "purpose": "A stale, overbroad session state accepts a send request after Nia's current authorization has lapsed, but the independent live-consent gate blocks neural transport, and Mara has to accept that the protocol solicited an act it had no right to solicit even though the final interlock worked.",
+    "hook": "Revocation reaches the live gate in the same second and nothing crosses, which is the safeguard working after the protocol had already asked for an unauthorized act.",
     "cross_cuts": [
       "CUT-PROTOCOL-AND-THE-STALE-STATE",
       "CUT-FAILURE-WITHOUT-CONTENT"
@@ -2156,12 +2161,12 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
       "through_timeline_id": "TL-PRIVATE-PROTOCOL",
-      "knowledge_limit": "Mara knows the session's consent state was older and broader than the act it permitted and that transport stopped immediately on revocation; she cannot recover what crossed, and nothing about the failure speaks to the winter."
+      "knowledge_limit": "Mara knows the contribution she intended, that the console accepted a send request under an older and broader session state, that the independent live-consent gate rejected it, and that no neural transport occurred; she cannot know Nia's unoffered thought, and nothing about the failure speaks to the winter."
     },
     "reveal_ids": []
   },
@@ -2171,8 +2176,8 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "movement": "private_defense_part",
     "timeline_id": "TL-PRIVATE-PROTOCOL",
     "pov_id": "POV-JULIAN",
-    "purpose": "Julian records the failure from consent-state and transport metadata alone, resigns his consortium representation, and secures the deposits under a repaired rule that separates pairing, sending, and recording consent.",
-    "hook": "He can prove exactly when the channel should have closed and can never prove what went through it, and he writes the rule out of that gap.",
+    "purpose": "Julian records the blocked stale-consent failure from consent-state and transport metadata alone, resigns his consortium representation, and secures the deposits under a repaired rule that separates pairing, sending, and recording consent.",
+    "hook": "He can prove exactly when the channel should have closed and that nothing crossed, cannot prove what Mara intended to offer, and writes the rule out of that gap.",
     "cross_cuts": [
       "CUT-FAILURE-WITHOUT-CONTENT"
     ],
@@ -2180,12 +2185,12 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
       "through_timeline_id": "TL-PRIVATE-PROTOCOL",
-      "knowledge_limit": "Julian knows session timing, consent state, and integrity events, and knows that metadata is semantically opaque; content recording was never enabled, so no transcript exists, and he holds nothing that could reconstruct what crossed."
+      "knowledge_limit": "Julian knows session timing, the stale authorization state, the live-consent rejection, and that no neural transport occurred; content recording was never enabled, so no transcript exists, and he holds nothing that could reconstruct the intended contribution or either participant's unoffered thought."
     },
     "reveal_ids": []
   },
@@ -2196,13 +2201,13 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "timeline_id": "TL-PRIVATE-PROTOCOL",
     "pov_id": "POV-MARA",
     "purpose": "Clipping and latency degrade a later session, and the repaired protocol surfaces the integrity error, requires confirmation and a retry, and drops the pair back to ordinary spoken speech instead of guessing.",
-    "hook": "The channel offers her a sentence it is not sure of, and she answers it with her mouth.",
+    "hook": "The transport returns an incomplete integrity flag where a sentence should be, and she answers with her mouth.",
     "cross_cuts": "none",
     "motif_events": [],
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2226,7 +2231,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2252,7 +2257,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "estimated_length_class": "long-outlier",
     "estimated_words": null,
     "outlier_purpose": "Expansion to close the movement on both halves of its result: a complete conditional invitation and the synchronized incident proving the private answer does not scale.",
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -4623,7 +4628,7 @@ Three carry a standing continuity load and are worth naming here. `CUT-CALIBRATI
     ],
     "shared_timeline_id": "TL-PRIVATE-PROTOCOL",
     "shared_reveal_id": null,
-    "shared_consequence": "One channel carries a fully consented conversation and later carries one contribution the recipient had not currently authorized, so the protocol's success and its failure share a mechanism.",
+    "shared_consequence": "One channel carries a fully consented conversation and later accepts a send request under a session state the recipient has not renewed; the independent live-consent gate blocks transport, so the protocol's success and its failure share a mechanism without creating an unconsented semantic crossing.",
     "handoff_mode": "causal-cut",
     "material_narrative_value": [
       {
@@ -4632,7 +4637,7 @@ Three carry a standing continuity load and are worth naming here. `CUT-CALIBRATI
       },
       {
         "chapter": 57,
-        "value": "Mara supplies the failure case: a consent state older and broader than the act it permitted, and an immediate stop that leaves nothing to inspect."
+        "value": "Mara supplies the failure case: an older and broader session state accepts an unauthorized send request, while the independent live-consent gate rejects it before anything crosses."
       }
     ],
     "replay_boundary": "Chapter 57 begins inside the failed session and does not replay the successful conversation or restate what was sent during it.",
@@ -4649,19 +4654,19 @@ Three carry a standing continuity load and are worth naming here. `CUT-CALIBRATI
     ],
     "shared_timeline_id": "TL-PRIVATE-PROTOCOL",
     "shared_reveal_id": null,
-    "shared_consequence": "One protocol failure produces a complete operational record and no semantic one, which is what forces pairing consent, sending consent, and recording consent apart.",
+    "shared_consequence": "One stale-state failure produces a complete operational record, no semantic record, and no neural crossing, which forces pairing consent, each deliberate send, and recording consent into separate checks.",
     "handoff_mode": "delayed-return",
     "material_narrative_value": [
       {
         "chapter": 57,
-        "value": "Mara supplies the failure as it was lived and the fact that revocation left nothing recoverable to argue about."
+        "value": "Mara supplies the failed authorization as it was lived, including what she intended to offer and the fact that the final live-consent gate blocked transport."
       },
       {
         "chapter": 58,
-        "value": "Julian supplies the same event as custody sees it, timing and consent state and integrity flags with no content, and the repaired rule written out of that gap."
+        "value": "Julian supplies the same event as custody sees it: stale state, send request, live-consent rejection, and zero transport, with no content from which to reconstruct intention."
       }
     ],
-    "replay_boundary": "Chapter 58 works only from the metadata record and may not narrate the session, name what crossed, or supply content the protocol did not carry.",
+    "replay_boundary": "Chapter 58 works only from the metadata record and may not narrate the session, name Mara's intended contribution, or supply content the system did not record.",
     "declared_by_chapters": [
       57,
       58

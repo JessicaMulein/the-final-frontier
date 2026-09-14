@@ -13,7 +13,7 @@ I unbolted the content recorder out of the rack, carried it to the bench, and se
 
 "That is the part that would keep your words," I said. "It is on the table."
 
-Ada Ferris looked at it for a while, then wrote on her pad and turned it toward me. **Good.** Lena read it over her shoulder and did not translate.
+Ada Ferris looked at it for a while, then wrote on her pad and turned it towards me. **Good.** Lena read it over her shoulder and did not translate.
 
 We ran in my own laboratory, on the far side of the site from the room the Consortium had borrowed. Ada and Lena authorized this session and no other. The system retained what it must — pair, permissions, acknowledged sends, volume, latency, pause, integrity — and those facts establish that transport occurred and nothing about what it meant. The calibration identifier was theirs and resolved to them. I could tune the array around it. I could not make a third person inherit it.
 

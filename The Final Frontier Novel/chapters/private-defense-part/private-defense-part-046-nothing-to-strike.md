@@ -5,13 +5,13 @@ pov_id: POV-JULIAN
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: []
 hook: "The protection he negotiated turns out to be a careful sentence about a thing that cannot be switched off."
-words: 1054
+words: 1060
 length_class: normal
 status: revised
 ---
 The answer was not in the interface control. It was in the hardware description the control referenced.
 
-Mara kept page nine open while I turned to the component schedule. The transmit-enable field pointed to a modulation assembly. The assembly shared its clock, phase-control bank, and address bus with reception. A second reference led to the front-end topology. A third led to failover behavior.
+Mara kept page nine open while I turned to the component schedule. The transmit-enable field pointed to a modulation assembly. The assembly shared its clock, phase-control bank, and address bus with reception. A second reference led to the front-end topology. A third led to failover behaviour.
 
 I made a list because lists were how I prevented alarm from becoming interpretation.
 
@@ -103,7 +103,7 @@ I wrote a new issue in the margin: **Architecture incompatible with represented 
 
 There was no clause in the term sheet I could strike to produce any of those things.
 
-I asked for the room. Dalby took the product director out and left the binder open at the component schedule, and Mara asked me one question, which was whether I had known. I said no. She said she believed me, and I have never settled whether that was generosity or simply accuracy. Then she said the thing I have not been able to put down since: that she had built her December apparatus without a transmit stage because she did not trust herself with one, that she had turned out to be right about herself, and that these people had read her bench work and drawn the opposite conclusion from it.
+I asked for the room. Dalby took the product director out and left the binder open at the component schedule, and Mara asked me one question, which was whether I had known. I said no. She said she believed me, and I have never settled whether that was generosity or simply accuracy. Then she said the thing I have carried since, and I set it down in her words rather than mine: that she had built her December apparatus without a transmit stage because she did not trust herself with one, that she had turned out to be right about herself, and that these people had read her bench work and drawn the opposite conclusion from it.
 
 She asked what I intended to do. I said I would write the issue up.
 

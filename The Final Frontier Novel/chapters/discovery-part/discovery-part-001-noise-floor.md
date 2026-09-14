@@ -11,7 +11,7 @@ status: revised
 ---
 "Say that again," I said, with my head inside the front-end cabinet and a torch in my teeth.
 
-Ravi Anand said it again, and this time he read the dates out instead of summarising them. Fourteen events in eleven weeks. Every one of them before seven in the morning, local time, and not one of them on a Saturday or a Sunday.
+Ravi Anand said it again, and this time he read the dates out instead of summarizing them. Fourteen events in eleven weeks. Every one of them before seven in the morning, local time, and not one of them on a Saturday or a Sunday.
 
 I came out of the cabinet slowly, because it has a lip that has taken skin off both my forearms and because I wanted the extra two seconds. "That's a duty cycle."
 
@@ -21,7 +21,7 @@ I had gone down there on the ninth of December to find a bad connector, which is
 
 Ravi had been pulling the archive while I did that, and what he came back with was worse than a connector. Fourteen entries I had personally dismissed, each one annotated in my own shorthand. *plant. plant? chiller step. nothing.* Four of them said *nothing*, and *nothing* is not an annotation. It is a shrug with a timestamp on it.
 
-Northline's noise floor was characterised before I arrived, and the list of it is pinned above the bench in the order I learned it. Thermal from the amplifiers, a diurnal term that tracks the cooling plant, a sidereal ripple belonging to the sky and not to us, and underneath all of it the hiss that is simply what matter at a temperature does. When something surfaces you walk down that list until one of our own machines confesses. I tabulated the fourteen while Ravi read them out, because tabulating is what I do when I am annoyed: date, start, duration, peak excess, and the small confident lie I had written at the time.
+Northline's noise floor was characterized before I arrived, and the list of it is pinned above the bench in the order I learned it. Thermal from the amplifiers, a diurnal term that tracks the cooling plant, a sidereal ripple belonging to the sky and not to us, and underneath all of it the hiss that is simply what matter at a temperature does. When something surfaces you walk down that list until one of our own machines confesses. I tabulated the fourteen while Ravi read them out, because tabulating is what I do when I am annoyed: date, start, duration, peak excess, and the small confident lie I had written at the time.
 
 Then we tested them properly. The plant's duty cycle first, because the plant is the loudest liar on site. No fit. The sidereal drift next, which would have made the events sky, and sky I could have published. Nothing there either.
 

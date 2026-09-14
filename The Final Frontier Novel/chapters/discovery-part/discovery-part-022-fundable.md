@@ -5,7 +5,7 @@ pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-NIA-AFTERMATH
 motif_events: []
 hook: "The proposal is finished before the science is, and it is the proposal that has a schedule."
-words: 1135
+words: 1126
 length_class: normal
 status: revised
 ---
@@ -15,9 +15,9 @@ The outline proposed independent oversight, public-interest licensing, accessibi
 
 I was asked to turn it into a fundable proposal without disclosing the restricted result. The distinction sounded clean in the instruction and stopped being clean in the second paragraph of the draft, where every sentence worth writing pressed against it. *The project will investigate structured fields associated with human attention* was permissible. *The project will establish whether such fields can be distinguished across individuals* was too close: the question had already been answered provisionally, and presenting it as future work concealed both the answer and the person inside it. What I put in was *The project will independently test whether observed recurrence survives controls for task, apparatus, and conventional transmission*, which is accurate, and which no funder has ever found attractive.
 
-Technology transfer restored *individual differentiation* in the margin and called it the commercial objective. The Consortium restored *equitable enrollment* and called it the social safeguard. Neither phrase named the unknown woman, and both of them depended on her.
+Technology transfer restored *individual differentiation* in the margin and called it the commercial objective. The Consortium restored *equitable enrolment* and called it the social safeguard. Neither phrase named the unknown woman, and both of them depended on her.
 
-The apparatus remained receive-only, and I put that in the first paragraph and again in the technical limitations, on the theory that a fact stated twice has some chance of being read once. No exciter. No output driver. No outgoing antenna feed. No contact with the source. The proposal authorized no transmission work, no live demonstration, and no person-specific processing until independent review established a lawful basis.
+The proposal stated the receive-only limitation and authorized no transmission work, live demonstration, or person-specific processing until independent review established a lawful basis.
 
 The Consortium's counsel accepted all three limitations and asked whether they might be treated as Phase One controls rather than conditions precedent. That revision is grammatical, and it is also the entire argument: a condition precedent stops the work until it is satisfied, while a Phase One control becomes work the funding exists to manage. I declined it in one sentence.
 
@@ -59,4 +59,6 @@ She left the paragraph in and asked me to strike *unconsenting*, on the theory t
 
 At 17:42 the Consortium accepted the draft for internal consideration. At 17:49 technology transfer entered a target date for an invention schedule. At 18:03 the director asked Mara for three dates on which she could attend a preliminary meeting. The science was not finished, the observation was not classified, and the woman had not been asked.
 
-At 18:20 compliance asked me for a one-line answer by Friday to the question I have avoided in every draft: whether continuing to acquire her field, while nobody is permitted to look at the output, is continued collection of a person or merely continued operation of a machine. I have read the instruments that are supposed to govern it, and neither was written by anyone who had met this. I have until Friday, and I do not know which answer I would be willing to defend to the people who will eventually read it.
+At 18:20 compliance asked me for a one-line answer by Friday to the question I have avoided in every draft: whether continuing to acquire her field, while nobody is permitted to look at the output, is continued collection of a person or merely continued operation of a machine. I have read the instruments that are supposed to govern it, and neither was written by anyone who had met this.
+
+The woman from the Consortium had waited by the window through all of it and let herself out while I was on the telephone. She had asked me one question in four hours, and it was whether I thought the thing was fair, and it is the only question anybody put to me that day that I did not answer.

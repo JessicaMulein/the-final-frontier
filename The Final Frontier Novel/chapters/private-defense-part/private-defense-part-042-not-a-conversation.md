@@ -5,43 +5,29 @@ pov_id: POV-NIA
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []
 hook: "She can now describe precisely what a consented sentence feels like, which is how she knows the thing that took her judgment was not one."
-words: 1057
+words: 978
 length_class: normal
 status: revised
 ---
 By the sixth session I could send Mara a correction without first turning it into a test.
 
-That did not make the channel natural. It made the work familiar.
+We began with both names, the session scope, and two current answers. Content recording stayed off. The system kept consent-state and transport metadata that could establish when the channel opened, paused, retried, and closed. It could not tell anyone what I said.
 
-We still began with both names, the session scope, and two current answers. Content recording stayed off. The system kept consent-state and transport metadata that could establish when the channel opened, paused, retried, and closed. It could not tell anyone what I said.
+Mara placed a route diagram on the table between us. One path through the proposed filter bank was labelled as though reception and active support were the same operation.
 
-Mara placed a route diagram on the table between us. One path through the proposed filter bank was labeled as though reception and active support were the same operation.
+I read it twice. I thought the word *default*. I thought about Julian's shaded box, Tomas and Cora's fire, and the certainty that had once felt finished inside me. None of that went anywhere.
 
-I read it twice.
-
-I thought the word *default*. I thought about Julian's shaded box, Tomas and Cora's fire, and the certainty that had once felt finished inside me. None of that went anywhere.
-
-Then I chose the contribution.
+Then I chose the contribution and held it at the send gate.
 
 *That arrow needs its own permission.*
 
-The send act felt like releasing something I had already decided to say, not like discovering it after it had moved me. Mara received the sentence and drew a line through the arrow.
+The send act felt like releasing something I had already decided to say, not like discovering it after it had moved me. The state log gained one send and one receipt it could not name. Content recording remained off. Mara received the sentence, put her pencil through the arrow, and said, "Agreed," aloud.
 
-"Agreed," she said aloud.
+Before I released it, I knew I was offering it. While it crossed, I could stop. When Mara's receipt registered, I knew what I had given and which calibrated partner had received it.
 
-The distinction was small enough to disappear in a product diagram and large enough to separate speech from entry.
+The earlier wanting had supplied no sentence, voice, proposition, partner, current answer, moment of offering on my side, or identifiable act on anyone else's. Certainty had already occupied the place from which I acted.
 
-A consented sentence had edges. Before it crossed, I knew I was offering it. While it crossed, I could stop. After it crossed, I knew what I had given. The recipient knew it came from the person at the other end of a calibration built by those two people and nobody else.
-
-What happened to me during the routing decision had none of those properties.
-
-There had been no sentence. No voice. No proposition. No partner. No current answer. No moment of offering on my side or an identifiable act on anyone else's. There had only been certainty already occupying the place from which I acted.
-
-That comparison gave me a vocabulary.
-
-It did not give me a source.
-
-Mara's later handshake remained one possible account. The institutional claim of an outside adversary remained another. The pairing record could not reach backward and choose between them. A clean consent state now did not prove who had crossed me then.
+On the current log, the sixth session ran forward from two current answers to my send and Mara's receipt. No line ran back from it to the winter morning. Mara's later handshake remained one possible account; the institution's outside-adversary claim remained another. The new entries selected neither. They gave me words for the current sequence and left the source field for the old one blank.
 
 When the session ended, the transport indicator dropped. Mara continued thinking. I knew because she remained alive in front of me, not because I had access to any of it.
 
@@ -51,13 +37,13 @@ When the session ended, the transport indicator dropped. Mara continued thinking
 
 "Good."
 
-That was the useful result.
+I closed the log at the dropped indicator.
 
 The Consortium representative arrived after lunch with a pilot participation agreement and a folder of benefit summaries. Ada and Lena's work appeared under medical access and language continuity. Tomas and Cora's incident appeared under emergency coordination. My name did not appear, but the category built from people like me did: protection against unauthorized channel effects.
 
-The form invited me to enroll in the service that proposed to protect me.
+The form invited me to enrol in the service that proposed to protect me. I put my pen beside the first clause.
 
-Pairing consent was described as voluntary. Active support functions were accepted as part of service delivery. Content retention for safety, quality, training, and improvement was enabled unless I changed the preference after activation. A data-rights clause granted the operator a license in de-identified interaction material and derived models.
+Pairing consent was described as voluntary. I marked the margin and moved down. The next clause accepted active support functions as part of service delivery; I bracketed *active support* and wrote *separate answer*. Content retention for safety, quality, training, and improvement was enabled unless I changed the preference after activation. I circled *after*. A data-rights clause granted the operator a licence in de-identified interaction material and derived models. I underlined *interaction material*.
 
 "Which interaction material?" I asked.
 
@@ -69,7 +55,7 @@ The representative said, "Only data generated through the service."
 
 "This agreement does not."
 
-She pointed to the privacy schedule. It distinguished account information from service data. It did not distinguish a participant's offered words from the metadata showing that words had been offered. It treated recording consent as a preference and pairing consent as enrollment.
+She opened the privacy schedule and placed it over my benefit folder. It distinguished account information from service data. I drew one line from *participant contribution* in my margin to the place where the schedule should have separated offered words from metadata showing that words had been offered. There was no corresponding term. Recording consent appeared as a preference; pairing consent appeared as enrolment.
 
 "You can disable retention," she said.
 
@@ -79,28 +65,24 @@ She pointed to the privacy schedule. It distinguished account information from s
 
 "It is the order of the answers."
 
-She moved to the benefits. The Ferris result was genuine. The dispatch result was genuine. My own six sessions had been genuine. I did not need to deny any of them to refuse the form.
+She moved the privacy schedule and opened the benefit folder instead. The Ferris result was genuine. The dispatch result was genuine. My own six sessions were genuine. I read each summary and left those lines untouched.
 
-That was what made the offer difficult rather than deceptive.
-
-People could choose pairing because it let them work, speak, coordinate, or be heard. They could choose one partner and one session and still refuse to turn every later use into standing permission. A benefit did not become false when an institution tried to acquire more than the benefit required.
-
-I crossed out the recording default. I crossed out active support functions. I crossed out the license in interaction material.
-
-The representative watched the page lose most of its shaded clauses and did not try to stop me, which told me the form was not the negotiation. The form was the record of what I had refused, and somebody would read it later and count.
+Then I returned to the agreement. I crossed out the recording default. I crossed out active support functions. I crossed out the licence in interaction material. The representative watched the page lose most of its shaded clauses and did not try to stop my pen.
 
 "Without those provisions," she said, "the network cannot improve at scale."
 
 "Then write that as your need. Do not write it as my answer."
 
-She asked whether I was declining the pilot.
+She wrote in her notes before asking whether I was declining the pilot.
 
-I declined the term, the broad enrollment, and the claim that one signature could own both transport and whatever a person chose to put through it. I did not decline the sessions I had already chosen with Mara. Those belonged to their own answers.
+"I'm declining this term, the broad enrolment, and any claim that one signature can own both the transport and whatever a person chooses to put through it." I turned the agreement back to its first page and left the signature line empty. "I am not declining the sessions I chose with Mara. Those belong to their own answers."
 
-On my way out, I passed the calibration room. The two contact bands lay on opposite sides of the table. Nothing moved between them because nobody had consented to open the channel and nobody had deliberately sent anything.
+On my way out, I passed the calibration room. The two contact bands lay on opposite sides of the table and both indicators were dark. I did not report a fault.
 
-That was not a failed conversation. It was privacy.
+That evening I tried the new vocabulary on Joss. He listened to the whole of it with a kettle in his hand and then asked whether the machine could tell that I was tired.
 
-Six sessions had given me a vocabulary, and I tried it out that evening on Joss, who listened to the whole of it with a kettle in his hand and then asked whether the machine could tell that I was tired. I said no. He said that was the first thing anybody had told him about it that sounded like a limit, and then he made me eat something, because that is the shape of every conversation we have ever had.
+"No."
 
-What the vocabulary cannot do is reach backward. I know exactly what it is to offer a sentence now. I cannot run that knowledge over the morning I sent the wrong unit, and I have started to notice that every single person who asks me about it is hoping the vocabulary will turn out to be evidence.
+He said that was the first thing anybody had told him about it that sounded like a limit. Then he put food in front of me, because that is the shape of every conversation we have ever had.
+
+After that, I watched the pens of people who asked about the winter morning. Every one of them paused when I finished describing an offered sentence, hoping the vocabulary would turn into evidence if they left enough room on the page.

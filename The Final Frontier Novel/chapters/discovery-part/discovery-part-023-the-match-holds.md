@@ -93,4 +93,4 @@ She turned the incident notice face down, wrote a time in the corner in small ev
 
 "So there's a record of when I heard it," she said.
 
-She did not put the pen down, and she did not turn the sheet toward me.
+She did not put the pen down, and she did not turn the sheet towards me.

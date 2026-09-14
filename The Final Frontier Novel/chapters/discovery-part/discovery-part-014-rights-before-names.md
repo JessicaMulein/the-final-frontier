@@ -5,7 +5,7 @@ pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "He drafts the warning, reads it back, and understands that sending it makes him the one who knew."
-words: 1188
+words: 1123
 length_class: normal
 status: revised
 ---
@@ -15,15 +15,13 @@ The phrase that mattered was *person-specific channel demonstrated*, and the thi
 
 I read it twice before opening a new matter, because a matter number is a small act of commitment and I have learned to make it deliberately. The receiver remained passive: no transmit stage, no contact, no semantic output, no geographical fix. Three consented controls had been separated from an unknown field, and the unknown field had then been identified live, lost, and reacquired by the same mathematical address. A name would have made the problem easier to enter, in the narrow institutional sense in which entering a problem is the beginning of handling it, because a named person can be approached, advised, asked, represented, or refused. An unnamed person-specific subject occupies the less convenient category: someone whose rights can be affected before the institution possesses the ordinary fact it uses to administer those rights.
 
-I reviewed the applicable forms anyway, in the order a reviewer would expect. Human-participant review assumed recruitment or an intervention. Communications review assumed a message. Data policy divided information into identifiable and non-identifiable classes, with identification described through names, account numbers, addresses, images, and combinations reasonably likely to point to one person. Mara had none of those, and she had something more exact and less usable: a repeatable way of distinguishing one person from other people without knowing who or where that person was. The policy definition nowhere said that a name had to be pronounceable.
+Mara had already walked the forms and found every one of them assuming a recruitment, a message, or a name. I did not need to repeat her work. What I had that she did not was the definition itself, and the definition nowhere said that a name had to be pronounceable. A repeatable way of telling one person from everybody else is an identifier whether or not it can be read aloud.
 
 I drafted a memorandum under three headings: present fact, immediate exposure, required restraint.
 
 Under present fact I wrote that the December apparatus was receive-only and that no outgoing act had occurred, and that the result supported a stable person-specific channel while supporting neither semantic reading, source location, source identity in civil records, nor any claim of consent. Under immediate exposure I wrote that passive apparatus does not make passive collection, that the system acquired and retained human-linked field data, that repeatable singling out can itself be identifying even where civil identity remains unknown, and that continued observation after the finding would therefore be deliberate observation of a persistent individual rather than continued characterization of an anomalous band.
 
-I revised *persistent individual* to *recurrently distinguishable human subject*, and then changed it back, because the revision was more defensible and less true, and because I could already hear myself reading the defensible version aloud to a committee that had not yet been convened.
-
-Under required restraint I listed suspension of resolved live monitoring, separation of raw acquisition from person-specific processing, access limitation, deletion review for the control sessions, independent human-subject advice, and no external disclosure until a lawful basis and a contact plan existed. I did not demand destruction of the underlying samples, since preservation might be necessary to establish what had already happened, and I did not authorize preservation either, because that decision belonged to a body constituted to make it rather than to the lawyer who had noticed the category failure.
+Under required restraint I asked for the live monitoring to stop, for raw acquisition to be kept away from the person-specific filter, and for nobody outside the building to be told anything until there was a lawful basis and a way of reaching her. I did not demand destruction of the underlying samples, since preservation might be necessary to establish what had already happened, and I did not authorize preservation either, because that decision belonged to a body constituted to make it rather than to the lawyer who had noticed the category failure.
 
 The institute director called while I was drafting. Her office has a hard floor and she walks while she talks, so the call arrived with footsteps in it.
 

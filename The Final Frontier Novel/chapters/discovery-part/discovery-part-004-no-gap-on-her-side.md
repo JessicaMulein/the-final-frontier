@@ -5,43 +5,41 @@ pov_id: POV-NIA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []
 hook: "Her clock, her road call, and her console at ten to seven agree with one another, and the twenty minutes between them hold nothing she would ever have thought to report."
-words: 1181
+words: 1091
 length_class: normal
 status: revised
 ---
 The car clock runs two minutes fast, and I have never reset it, because two minutes fast is useful and two minutes wrong is not.
 
-That is the clock the drive belongs to. Everything after it belongs to somebody else's: the depot's, the console's, and the one inside the crossing that decides when the arm comes down.
+That clock owns the drive. Everything after it belongs to somebody else's: the depot's, the console's, and the one inside the crossing that decides when the arm comes down.
 
-I have had to account for that Wednesday since, to the minute, and what I can tell you is that it accounts for itself. Quarter past six on a bedside clock I have never had cause to doubt. A shower long enough that I was rinsing my hair while the radio reader was halfway through the weather, and she said the word *freezing* twice in one sentence, which is the sort of thing you notice and cannot use. No breakfast again, because the milk was still the plan. Out at twenty-five past, give or take the clock's usual two.
+I have had to account for that Wednesday since. Quarter past six belonged to a bedside clock I had never had cause to doubt. I was rinsing my hair while the radio reader was halfway through the weather, and she said *freezing* twice in one sentence, which is the sort of thing you notice and cannot use. No breakfast again, because the milk was still the plan. Out at twenty-five past, give or take the car clock's usual two.
 
 I had not dried my hair properly, so there was a wet crescent down the back of my collar, and I felt it every time I turned my head.
 
-At six thirty-one I called the depot hands-free from the road. That time belongs to the depot log, not to me. Kev answered, gave me the waiting calls, clipped the alarm address, and corrected it when I repeated it back. You read an address back not because you doubt the person giving it but because two mouths and two sets of ears are cheaper than one wrong street, and every dispatcher I know has a street they got wrong once and can still hear.
+At six thirty-one I called the depot hands-free from the road. That time belongs to the depot log, not to me. Kev answered, gave me the waiting calls, clipped the alarm address, and corrected it when I repeated it back. You read an address back because two mouths and two sets of ears are cheaper than one wrong street, and every dispatcher I know has a street they got wrong once and can still hear.
 
-His clipped address cost me the roundabout at the retail park. I was watching him get it right instead of watching the feeder lane, the lights changed without me, and I sat through a whole second cycle with my hands on top of the wheel being furious about a set of lights.
+His clipped address cost me the roundabout at the retail park. I was watching him get it right instead of watching the feeder lane, the lights changed without me, and I sat through a whole second cycle with both hands on top of the wheel being furious about a set of lights.
 
-Then Ridge Road, and the barrier, and the bell, and a freight going through in its own time with a man and a wet dog on the far pavement. Barrier up. The rest of Ridge Road. The depot turn, the second row, and somebody's cage trolley left half over the line, so I reversed in on the second attempt rather than get out in that cold to move it. By the time I reached the side door the wet at my collar had gone cold, which is a clock nobody designed.
+Then Ridge Road: barrier, bell, freight passing in its own time, man and wet dog on the far pavement. Barrier up. The rest of Ridge Road. The depot turn, the second row, and somebody's cage trolley left half over the line, so I reversed in on the second attempt rather than get out in that cold to move it. By the time I reached the side door, the wet at my collar had gone cold.
 
-Kev repeated the fence story in person, the way people do twelve minutes from the end of a night shift, and then corrected himself: not three calls, but two completed and one hang-up. I said a hang-up still enters the queue. He said *fair enough* and wrote it down. That is why the handover note carries both counts with a time against each.
+Kev went through the fence again with his coat already over his arm, then corrected himself: not three calls, but two completed and one hang-up. I said a hang-up still enters the queue. He said *fair enough* and wrote it down. The handover note carries both counts with a time against each.
 
 I signed on at ten to seven, which gave me four minutes to hang up a coat, sit down, and become the person the county rings. The first item under my initials is the neighbour's alarm at six fifty-four.
 
 A collapse in a shop doorway came in at seven twenty. The caller gave me a street and a number, and the system put the number on the wrong side of a junction. That happens where a terrace was demolished and the numbering changed and the map never caught up.
 
-So I stopped asking her for the address. "Tell me what you can read from where you're standing."
+I stopped asking her for the address. "Tell me what you can read from where you're standing."
 
-She read me the name over the shutter, and then, when I asked for something with a number on it, the code stencilled on a bin. Two seconds each. I re-sent on the corrected location, and the forty seconds that correction cost belong in the log against my initials, and so does the fact that the route after it was right.
+She read the name over the shutter, then, when I asked for something with a number on it, the code stencilled on a bin. Two checks, both visible from where she stood. I re-sent on the corrected location. The forty seconds that cost sit in the log against my initials, followed by the route that reached the right place.
 
-The school run gave me two shunts on the ring road inside a quarter of an hour, neither serious. The screen wanted the near approach for the second one. That approach had been single file since the Monday for resurfacing. It is not on the layer, and a vehicle that size does not thread it, so I sent them the long way and they were on scene before the screen's own estimate for the short one.
+The school run gave me two shunts on the ring road inside a quarter of an hour, neither serious. The screen wanted the near approach for the second one. That approach had been single file since Monday for resurfacing. It was not on the layer, and a vehicle that size does not thread it, so I sent them the long way. They arrived before the screen's estimate for the short one.
 
-Then the thing I would think about later.
+Later the board showed an advanced unit available. I had heard that crew on another channel about two minutes earlier, still on scene and still talking to somebody. I said out loud, to nobody in particular, that the board was wrong. I sent the other unit. Eleven minutes afterward, the board caught up with the radio and changed the crew back to unavailable.
 
-The board showed an advanced unit available. I had heard that crew on another channel about two minutes earlier, still on scene, still talking to somebody, and I knew the sound of a crew who has not finished. So I did not send them. I said out loud, to nobody in particular, that the board was wrong, and I sent the other one, and eleven minutes afterward the board caught up and showed what I had already acted on.
+The assignment record is correct. It does not show the four seconds when I listened to a crew who sounded unfinished and used that over the status in front of me.
 
-Nobody noticed. That is the job. The record shows a correct assignment and shows nothing at all about the four seconds in which I decided to disbelieve my own screen.
-
-Near eleven Dev showed me the routing display freezing on a depot layer. It had been doing it for a fortnight. He had complained twice, in the way people complain when they have already decided nothing will happen, and nobody had logged it. So I logged it. He stood beside me until the ticket number came up, and we wrote it on a strip of paper and stuck it above his screen, because a number on a wall is harder to lose than a number in a system.
+Near eleven Dev showed me the routing display freezing on a depot layer. It had been doing it for a fortnight. He had complained twice, in the way people complain when they have already decided nothing will happen, and nobody had logged it. I logged it. He stood beside me until the ticket number came up, and we wrote 4716 on a strip of paper and stuck it above his screen.
 
 "They'll close it," he said.
 
@@ -49,10 +47,10 @@ Near eleven Dev showed me the routing display freezing on a depot layer. It had 
 
 Half nine had been a cereal bar standing up. One o'clock was ten minutes in the car, because the room was full. In the afternoon there was a bad call beyond the reservoir, and that one belongs to the people on that line. I finished at four.
 
-No interval disappeared. No sentence broke off. No part of the road arrived without the part before it. My work is sequence — condition, correction, route, consequence — and a missing stretch would have displaced something on either side of it. Nothing was displaced. Take the crossing out and the freight has no place to pass; move the road call and the depot log disagrees; move the console and the first alarm disagrees.
+When I put the owners of the morning in order, they read back without a correction. Bedside alarm at six fifteen. Depot log at six thirty-one. Handover counts written at the door. Console sign-on at six fifty and the first alarm at six fifty-four. Between the road call and the console were one missed light cycle, the freight, the cage trolley, and the cold wet edge of my collar. No interval disappeared, and no part of the road arrived without the part before it.
 
-None of it was worth reporting, and nobody asked. It was cold. I wore the wrong coat. I forgot the milk.
+The day gave nobody a reason to ask for that account. It was cold. I wore the wrong coat. I forgot the milk.
 
-What has stayed with me is the four seconds against the board. I was right, and I was right on nothing except my own certainty that a crew who sound unfinished are unfinished, and there is no line on any form for that. Support closed Dev's ticket on the Friday and I opened it again on the Monday, and I could do that because a paper strip existed and two of us had read it.
+When I tried to check the four seconds in the same way, my eyes went to the paper above Dev's monitor. That strip belonged to the display fault later in the morning. The assignment log kept the unit I sent and the time I sent it; it did not keep my choice to trust the radio sound over the board. I had spoken to nobody in particular, and nobody had answered. There was no second reader beside me.
 
-The four seconds have no strip and no second reader. They are the part of that day I would most want somebody to have kept, and they are the part nobody kept.
+Support closed 4716 on the Friday. On Monday the yellow strip was still above Dev's screen. I read the number, reopened the ticket, and left it where both of us could see it.

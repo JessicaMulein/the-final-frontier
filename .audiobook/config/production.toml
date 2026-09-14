@@ -1,0 +1,84 @@
+schema_version = 1
+book_id = "the-final-frontier"
+manuscript_root = "The Final Frontier Novel"
+build_root = ".audiobook/build/production"
+delivery_root = ".audiobook/dist/audiobook"
+max_tracks_per_plan = 16
+
+[defaults]
+voice = "tiffany"
+model_id = "amazon.nova-2-sonic-v1:0"
+region = "us-east-1"
+profile_label = "frontier-audiobook"
+target_segment_words = 5
+fidelity_policy = "exact"
+normalization = "frontier-word-sequence-v1"
+output_template = "{sequence:03d}-{track_slug}-{voice}.wav"
+
+[defaults.audio]
+sample_rate_hz = 24000
+sample_size_bits = 16
+channels = 1
+
+[estimate]
+rate_max_age_hours = 24
+preflight_max_age_hours = 24
+input_speech_tokens_per_call = 0
+input_text_tokens_per_call = 8192
+output_speech_tokens_per_call = 8192
+output_text_tokens_per_call = 8192
+
+[[tracks]]
+id = "opening-credits"
+kind = "opening_credits"
+sequence = 1
+source_path = ".audiobook/config/tracks/opening-credits.md"
+enabled = false
+approval_status = "pending"
+render_once = true
+
+[tracks.override]
+
+[[tracks]]
+id = "dedication"
+kind = "front_matter"
+sequence = 2
+source_path = ".audiobook/config/tracks/dedication.md"
+enabled = false
+approval_status = "pending"
+render_once = true
+
+[tracks.override]
+
+[[tracks]]
+id = "epigraph"
+kind = "front_matter"
+sequence = 3
+source_path = ".audiobook/config/tracks/epigraph.md"
+enabled = false
+approval_status = "pending"
+render_once = true
+
+[tracks.override]
+
+[[tracks]]
+id = "narratable-front-matter"
+kind = "front_matter"
+sequence = 4
+source_path = ".audiobook/config/tracks/narratable-front-matter.md"
+enabled = false
+approval_status = "pending"
+render_once = true
+
+[tracks.override]
+
+[[tracks]]
+id = "closing-credits"
+kind = "closing_credits"
+sequence = 1000
+source_path = ".audiobook/config/tracks/closing-credits.md"
+enabled = false
+approval_status = "pending"
+render_once = true
+
+[tracks.override]

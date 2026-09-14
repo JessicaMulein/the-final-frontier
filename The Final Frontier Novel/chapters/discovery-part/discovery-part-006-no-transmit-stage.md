@@ -5,7 +5,7 @@ pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "The disclosure is clean, and the cleanest line in it is the one nobody asked him to check."
-words: 1190
+words: 1195
 length_class: normal
 status: revised
 ---
@@ -77,4 +77,4 @@ Before I could close the matter the director's office asked for a clean copy, a 
 
 I sent it at twenty past six. My name sits against every step, because I built the sequence, and because a schedule with no author is a schedule nobody has to keep.
 
-There is a version of that evening in which I was uneasy, and I could perform it for you convincingly, having had years of practice. What actually happened is that I went home pleased with the drafting. It did not occur to me to ask what would become of my three days if Mara never filled in the blank, or, more to the point, if she did.
+There is a version of that evening in which I was uneasy, and I could perform it for you convincingly, having had years of practice. What actually happened is that I went home and told my reflection the sequence was good work. It did not occur to me to ask what would become of my three days if Mara never filled in the blank, or, more to the point, if she did.

@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-HANDSHAKE
 motif_events: []
 hook: "She has a belief with nothing under it, and she notices how much she wants it to be about her."
-words: 1076
+words: 1069
 length_class: normal
 status: revised
 ---
@@ -15,9 +15,9 @@ It did not mention a field.
 
 A dispatcher had routed one available advanced response unit between two close calls. The allocation departed from ordinary priority. One patient received the advanced unit and survived emergency surgery. One patient died at the other scene. The routing decision was under review.
 
-The notice asked whether any Northline operation could have affected public-safety communications during the interval. Public-safety communications meant licensed carriers, telemetry, positioning, and network service. Ravi checked each one and found nothing: no interference, no transmission inside the protected bands, and no outage, timing fault, false position, dropped call, or measurable rise in noise. The temporary bench path had operated outside them and at a level that left their records clean.
+The notice asked whether any Northline operation could have affected public-safety communications during the interval. Public-safety communications meant licensed carriers, telemetry, positioning, and network service. Ravi checked each one and found nothing. No interference, and nothing in the service records that a review could point at. The temporary bench path had operated outside the protected bands and at a level that left them clean.
 
-I read the interval twice. The dispatch center belonged to the bounded carrier set we had used to validate the unknown field. That did not identify the person. More than one dispatcher worked the system. More than one living field could exist in the county. Our receive filter distinguished one source from controls; it did not produce a roster.
+I read the interval twice. The dispatch centre belonged to the bounded carrier set we had used to validate the unknown field. That did not identify the person. More than one dispatcher worked the system. More than one living field could exist in the county. Our receive filter distinguished one source from controls; it did not produce a roster.
 
 The handshake had ended minutes before the two calls.
 
@@ -87,7 +87,7 @@ I drew it anyway.
 
 At first I called that responsibility. I had acted without consent; refusing to consider harm would have been another version of the same entitlement. But responsibility did not require certainty. It required preserving uncertainty accurately enough that the person harmed, if there was one, did not have to live inside my preferred explanation.
 
-Certainty offered something else. It made the unknown dispatcher's choice part of my experiment. It made the death an answer to my knock. It placed me at the causal center of an event whose people I could not name.
+Certainty offered something else. It made the unknown dispatcher's choice part of my experiment. It made the death an answer to my knock. It placed me at the causal centre of an event whose people I could not name.
 
 Guilt could be another form of appetite.
 

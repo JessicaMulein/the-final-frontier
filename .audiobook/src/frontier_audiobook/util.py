@@ -399,6 +399,60 @@ def resolve_inside(workspace_root: Path, value: str) -> Path:
     return resolved
 
 
+def resolve_inside_approved_root(
+    workspace_root: Path,
+    approved_root: Path | str,
+    value: str,
+    *,
+    require_exists: bool = False,
+    expected_kind: str | None = None,
+) -> Path:
+    """Resolve a no-follow workspace path inside one narrower approved root.
+
+    ``value`` remains workspace-relative so persisted paths have one canonical trust
+    anchor.  Existing components in both the approved root and candidate are checked
+    for symlinks by :func:`resolve_inside`; non-existing destinations are accepted
+    only when every existing ancestor is safe.
+    """
+
+    root = workspace_root.expanduser().resolve()
+    if isinstance(approved_root, Path):
+        approved_lexical = _absolute_lexical(approved_root)
+        try:
+            approved_relative = approved_lexical.relative_to(root).as_posix()
+        except ValueError as exc:
+            raise InputError("Approved path root is outside the workspace") from exc
+    elif isinstance(approved_root, str):
+        approved_relative = approved_root
+    else:
+        raise InputError("Approved path root must be a path or workspace-relative string")
+
+    approved = resolve_inside(root, approved_relative)
+    candidate = resolve_inside(root, value)
+    try:
+        candidate.relative_to(approved)
+    except ValueError as exc:
+        raise InputError("Path is outside its approved root") from exc
+
+    if expected_kind not in {None, "file", "directory"}:
+        raise InputError("Expected path kind must be file or directory")
+    exists = os.path.lexists(candidate)
+    if require_exists and not exists:
+        raise InputError("Required approved path does not exist")
+    if exists:
+        try:
+            metadata = os.stat(candidate, follow_symlinks=False)
+        except OSError as exc:
+            raise InputError("Approved path cannot be inspected safely") from exc
+        if stat.S_ISLNK(metadata.st_mode):
+            raise InputError("Approved path must not be a symlink")
+        if expected_kind == "file" and not stat.S_ISREG(metadata.st_mode):
+            raise InputError("Approved path is not a regular file")
+        if expected_kind == "directory" and not stat.S_ISDIR(metadata.st_mode):
+            raise InputError("Approved path is not a directory")
+    return candidate
+
+
 def workspace_relative(workspace_root: Path, path: Path) -> str:
     root = workspace_root.expanduser().resolve()
     try:

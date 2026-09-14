@@ -1,0 +1,768 @@
+{
+  "pbtResults": {
+    "1.5 Write the required property test for render-once book tracks": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346958822
+    },
+    "1.4 Write the required property test for deterministic configuration and source planning": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346956771
+    },
+    "2.4 Write the required property test for scoped per-file isolation": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346965246
+    },
+    "2.5 Write the required property test for observational legacy import": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346969511
+    },
+    "3.2 Write the required property test for independently reconstructable transaction truth": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346971470
+    },
+    "2.3 Write the required property test for immutable bounded plans and preflight": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346962691
+    },
+    "4.3 Write the required property test for exact finite one-shot authorization": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346973543
+    },
+    "4.4 Write the required property test for definitive-or-uncertain paid attempts": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346975781
+    },
+    "5.5 Write the required property test for reuse and resume call safety": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346982150
+    },
+    "5.4 Write the required property test for fail-fast independent batches": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346980081
+    },
+    "6.5 Write the required property test for complete active manifests": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346984202
+    },
+    "6.8 Write the required property test for modality-complete journals and cost": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346992735
+    },
+    "6.7 Write the required property test for assembly integrity": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346990407
+    },
+    "6.6 Write the required property test for exact transcript and LPCM replay": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346986070
+    },
+    "7.3 Write the required property test for collision-safe idempotent delivery": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346994804
+    },
+    "7.4 Write the required property test for evidence and identity allowlists": {
+      "status": "passed",
+      "lastRunTimestamp": 1789346996886
+    }
+  },
+  "executionHistory": {
+    "1.1 Implement typed record models and strict codecs": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318027701
+      },
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318038518
+      },
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318615203
+      }
+    ],
+    "1.2 Implement `production.toml`, override resolution, and the ordered Track catalog": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318027729
+      },
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318623908
+      },
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789319127285
+      }
+    ],
+    "1.3 Implement generic selectors, source adapters, snapshots, and immutable plan creation": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318027769
+      },
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789319131969
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337670319
+      }
+    ],
+    "1.4 Write the required property test for deterministic configuration and source planning": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318027793
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337672584
+      }
+    ],
+    "1.5 Write the required property test for render-once book tracks": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318027817
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337674370
+      }
+    ],
+    "2.1 Implement local preflight, per-file isolation, reuse/collision classification, and the read-only legacy adapter": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318027846
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337676329
+      }
+    ],
+    "2.2 Implement minimal identity, current official rates, and bounded Decimal estimates": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318027875
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337680641
+      }
+    ],
+    "2.3 Write the required property test for immutable bounded plans and preflight": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318027900
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337682918
+      }
+    ],
+    "2.4 Write the required property test for scoped per-file isolation": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318027924
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337684657
+      }
+    ],
+    "2.5 Write the required property test for observational legacy import": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318027960
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337686405
+      }
+    ],
+    "3.1 Implement the transaction state reducer, hash-chained event store, locks, and rebuildable status index": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318027995
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337678143
+      }
+    ],
+    "3.2 Write the required property test for independently reconstructable transaction truth": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028025
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337688065
+      }
+    ],
+    "4.1 Implement one-shot single/batch authorization creation and validation": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028050
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337689772
+      }
+    ],
+    "4.2 Implement the generic atomic direct-child attempt wrapper": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028074
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337691536
+      }
+    ],
+    "4.3 Write the required property test for exact finite one-shot authorization": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028099
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337694030
+      }
+    ],
+    "4.4 Write the required property test for definitive-or-uncertain paid attempts": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028125
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337695734
+      }
+    ],
+    "5.1 Refactor existing chapter narration behind a generic Track worker": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028150
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337697448
+      }
+    ],
+    "5.2 Implement the sequential fail-fast batch coordinator": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028174
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337699311
+      }
+    ],
+    "5.3 Implement nonbillable resume inspection and manual resolution": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028203
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337701097
+      }
+    ],
+    "5.4 Write the required property test for fail-fast independent batches": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028231
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337702750
+      }
+    ],
+    "5.5 Write the required property test for reuse and resume call safety": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028259
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337704415
+      }
+    ],
+    "6.1 Implement frozen-plan and active-manifest validation": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028287
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337706205
+      }
+    ],
+    "6.2 Implement exact transcript, event, LPCM, hash, and partial-turn validation": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028316
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337710449
+      }
+    ],
+    "6.3 Implement assembly and WAV integrity validation": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028341
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337712023
+      }
+    ],
+    "6.4 Implement journal aggregation and two-scope Decimal cost calculation": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028366
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337707779
+      }
+    ],
+    "6.5 Write the required property test for complete active manifests": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028391
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714013
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337720953
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789340676031
+      }
+    ],
+    "6.6 Write the required property test for exact transcript and LPCM replay": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028416
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714055
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337722502
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789340678599
+      }
+    ],
+    "6.7 Write the required property test for assembly integrity": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028442
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714101
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337724274
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789340680451
+      }
+    ],
+    "6.8 Write the required property test for modality-complete journals and cost": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028469
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714167
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337725993
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789340682242
+      }
+    ],
+    "7.1 Implement collision-safe delivery and track/batch reports": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028500
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714211
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789340691304
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789342632327
+      }
+    ],
+    "7.2 Implement explicit evidence allowlists, sanitization scans, and path trust boundaries": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028528
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714263
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789340693865
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789342635359
+      }
+    ],
+    "7.3 Write the required property test for collision-safe idempotent delivery": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028559
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714306
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789342640844
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789343351675
+      }
+    ],
+    "7.4 Write the required property test for evidence and identity allowlists": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028583
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714365
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789342642998
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789343353830
+      }
+    ],
+    "8.1 Wire all stable `production` commands and nonbillable integration flows": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028608
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714399
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789343358849
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789343918966
+      }
+    ],
+    "8.2 Assemble and run the targeted affected test gate with broader-suite classification": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028631
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714435
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789343925673
+      },
+      {
+        "executionId": "b12e72b6-c4ba-4995-98dd-0626f84179a4",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789345927969
+      }
+    ],
+    "8.3 Document the reusable operator workflow and enforce dependency/protected-path constraints": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028662
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714486
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789343927998
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789344738658
+      }
+    ],
+    "9.1 Complete the Chapter 3 pilot plan and nonbillable preflight": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028693
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714549
+      },
+      {
+        "executionId": "b12e72b6-c4ba-4995-98dd-0626f84179a4",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789345937247
+      },
+      {
+        "executionId": "b12e72b6-c4ba-4995-98dd-0626f84179a4",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789348987906
+      }
+    ],
+    "9.2 Obtain a fresh Chapter 3-specific paid confirmation and create one authorization": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028719
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714590
+      },
+      {
+        "executionId": "b12e72b6-c4ba-4995-98dd-0626f84179a4",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789348993701
+      },
+      {
+        "executionId": "b12e72b6-c4ba-4995-98dd-0626f84179a4",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789350634869
+      }
+    ],
+    "9.3 Execute exactly one paid Chapter 3 pilot transaction": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028754
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714648
+      },
+      {
+        "executionId": "b12e72b6-c4ba-4995-98dd-0626f84179a4",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789350639397
+      }
+    ],
+    "9.4 Validate, deliver, report, and accept the reusable workflow after a successful pilot": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028788
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714691
+      }
+    ],
+    "10. Final checkpoint - Ensure reusable implementation and pilot evidence are complete": [
+      {
+        "executionId": "c4713f43-fa75-426f-855d-80f161584152",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789318028811
+      },
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337714734
+      }
+    ],
+    "1. Build strict production models, configuration, catalog, and planning": [
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337674412
+      }
+    ],
+    "2. Implement reusable preflight, isolation, rates, estimates, and legacy observation": [
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337686462
+      }
+    ],
+    "3. Implement independent ledger truth, locks, idempotency, and status reconstruction": [
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337688101
+      }
+    ],
+    "4. Implement exact authorization and atomic paid-attempt capture": [
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337695768
+      }
+    ],
+    "5. Implement generic Track execution, bounded batches, reuse, and manual recovery": [
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789337704459
+      }
+    ],
+    "6. Implement deterministic postflight validation and exact accounting": [
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789340682284
+      }
+    ],
+    "7. Implement delivery, reports, and evidence privacy": [
+      {
+        "executionId": "e7fb33b3-bf2c-4387-bfa1-16e33422b6f7",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789343353872
+      }
+    ],
+    "8. Wire the stable CLI, complete affected quality gates, and document routine operation": [
+      {
+        "executionId": "b12e72b6-c4ba-4995-98dd-0626f84179a4",
+        "chatSessionId": "sess_77e8ef4f-9c8a-453e-83d9-0f3e8a9fbf02",
+        "timestamp": 1789345928011
+      }
+    ]
+  }
+}

@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-PRIVATE-RECORD-DEPOSITS
 motif_events: []
 hook: "The oldest thing she deposits is a recording of her own voice being delighted, and she leaves it in."
-words: 1372
+words: 1392
 length_class: normal
 status: revised
 ---
@@ -17,7 +17,7 @@ Her question for every item was the same and it was not the question I had prepa
 
 The instrument log went through in four minutes. It is bound, paginated, the entries are consecutive, and the December pages sit between November and January entries about work nobody has any reason to care about, which is a better guarantee of a date than anything I could say about it. She wrote *composition date established by sequence within a bound volume in continuous use*.
 
-The procedure sheet from the night I took the transmit path apart went through as well. I had copied the controller's configuration checksum out by hand at the bottom of it, sixty-four characters, because a number you have written yourself is harder to pretend you never had. The exported file still exists and still checksums to the same value. She checked eleven characters, then stopped, and wrote that the sheet's content is corroborated by an independently held file, which is not the same as a date and is better than one.
+The procedure sheet from the night I took the transmit path apart went through as well. I had copied the controller's configuration checksum out by hand at the bottom of it, sixty-four characters, because a number you have written yourself is harder to pretend you never had. She asked for the exported file, ran the checksum herself on the machine in the outer room, and read the result against my handwriting in blocks of eight until she had matched all sixty-four. Then she wrote that the sheet's content is corroborated by an independently held file, and said, twice, that this is not a date and must not be recorded as one.
 
 The seam maps carried the test source's asset number and the institute's own loan record dated them. The mesh delivery note dated the room. The relay had NL-4411 stamped on the side of it and an inventory entry from years before any of this, and she wrote that down too, and observed that a purchase order is the most reliable historical document in most people's possession and nobody ever thinks to keep one.
 

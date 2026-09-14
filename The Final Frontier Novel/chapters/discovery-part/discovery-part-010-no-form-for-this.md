@@ -59,7 +59,7 @@ More compute would let me preserve context at lower latency or ask for greater f
 
 I opened Northline's compliance system after the director left.
 
-The human-participant form assumed recruitment, contact, and an act the participant agreed to undergo. I had no contact and no agreed act. The intercepted-communications form assumed a message intended for some recipient. There was no message. The data form asked whether the information was identifiable. I had no name and an address hypothesis more intimate than a name might be. The radio license form concerned emitters. The December rack had no transmit stage.
+The human-participant form assumed recruitment, contact, and an act the participant agreed to undergo. I had no contact and no agreed act. The intercepted-communications form assumed a message intended for some recipient. There was no message. The data form asked whether the information was identifiable. I had no name and an address hypothesis more intimate than a name might be. The radio licence form concerned emitters. The December rack had no transmit stage.
 
 Every category offered a box whose accuracy depended on misdescribing the event.
 
@@ -75,6 +75,6 @@ I returned to the log and wrote the narrowest statement the evidence allowed: *L
 
 Below it I added a line for the next control, which is how I have always ended a bad day: by making tomorrow technical.
 
-The compliance system had logged the session and recorded that a form was started and abandoned. I learned that much later, from a page somebody else filed, by which time the timestamp was being read as the moment I first understood what I was doing. It was not. I understood it on the ninth of December, standing over a log with the cap off the pen, and everything between that evening and this one is mine. There is no category for that either.
+The compliance system had logged the session and recorded that a form was started and abandoned. I learned that much later, from a page somebody else filed, by which time the timestamp was being read as the moment I first understood what I was doing. It was not. I understood it on the ninth of December, standing over a log with a pen in my hand, and everything between that evening and this one is mine. There is no category for that either.
 
 Ravi had gone home. At night the plant noise becomes the only argument in the building, and I sat in it for a while and drafted nothing.

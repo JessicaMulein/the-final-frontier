@@ -5,13 +5,13 @@ pov_id: POV-JULIAN
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: []
 hook: "He gets the language he asked for, initials the page, and the specification he has not read is lying on the table in front of him."
-words: 1055
+words: 1052
 length_class: normal
 status: revised
 ---
 I negotiated the active-function clause as if the problem had agreed to fit inside it.
 
-Dalby began with a license to operate reception, protective response, calibration, pairing, and "related bidirectional services" across every participating site. I separated the list. Reception was observation. Pairing was deliberate transport between two named, living, currently consenting people with a calibration belonging to that pair. Recording was a second decision. Anything capable of changing a participant's field required its own defined authority.
+Dalby began with a licence to operate reception, protective response, calibration, pairing, and "related bidirectional services" across every participating site. I separated the list. Reception was observation. Pairing was deliberate transport between two named, living, currently consenting people with a calibration belonging to that pair. Recording was a second decision. Anything capable of changing a participant's field required its own defined authority.
 
 She accepted the separations in principle and resisted every consequence.
 
@@ -27,7 +27,7 @@ I had made a profession out of keeping unlike things in unlike boxes. That after
 
 We spent forty minutes on the word *enable*.
 
-My draft said no write-capable function could be enabled for a participant unless that participant gave current, specific authorization for the function and could revoke it with immediate effect. No enrollment term, safety preference, platform update, or prior pairing consent could stand in for the answer. No operator could enable the function at a fleet, site, or population level.
+My draft said no write-capable function could be enabled for a participant unless that participant gave current, specific authorization for the function and could revoke it with immediate effect. No enrolment term, safety preference, platform update, or prior pairing consent could stand in for the answer. No operator could enable the function at a fleet, site, or population level.
 
 The product director called that commercially difficult.
 
@@ -63,7 +63,7 @@ I asked Dalby to confirm the operational effect.
 
 "Yes. Subject to the final emergency language, which we have not agreed."
 
-"No implication from service enrollment or pairing?"
+"No implication from service enrolment or pairing?"
 
 "Agreed."
 
@@ -103,6 +103,6 @@ I had obtained the distinction I came to obtain. Reception was not permission to
 
 I had not yet asked whether the architecture could obey the clause.
 
-What I felt, initialing that page, was competence, and I want to be exact about it, because it is the part I am least able to defend. Not relief. Not triumph. The specific satisfaction of a difficult thing done well, which is the satisfaction I have organised an entire life around, and which had just been spent buying something I would afterwards give years to getting back.
+What I felt, initialing that page, was competence. That is the part of this I am least able to defend, and I have tried. Not relief. Not triumph. The specific satisfaction of a difficult thing done well, which is the satisfaction I have organized an entire life around, and which had just been spent buying something I would afterwards give years to getting back.
 
 The specification sat eighteen inches from my hand for four hours. Mara opened it. I did not.

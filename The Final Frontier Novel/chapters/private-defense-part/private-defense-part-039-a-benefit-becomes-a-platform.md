@@ -47,7 +47,7 @@ None of them, and I said so, and she nodded as though I had passed something.
 
 "Your definitions govern what happens after two people are already paired. Nobody will argue with them. They will be in the agreement, the agreement will be published, and it will be a good agreement." She put the page down. "What decides who is in this at all is the queue, the cost of nine sessions, and whether a second living person exists with the patience to sit through them. You have written a superb set of rules for the fortunate."
 
-Counsel accepted the five without one amendment, which pleased me for about four seconds and then did not. No default recording, no inferred consent, no transfer of calibration, immediate cessation on pause, no license in carried content absent a separate later grant from both speakers. The calibration limit drew a request for technical confirmation rather than a rejection. In my experience a counterparty who does not argue has either lost the point or never needed it, and I recorded my belief that morning as the former, in writing, so whoever reads this file can see the moment plainly.
+Counsel accepted the five without one amendment, which pleased me for about four seconds and then did not. No default recording, no inferred consent, no transfer of calibration, immediate cessation on pause, no licence in carried content absent a separate later grant from both speakers. The calibration limit drew a request for technical confirmation rather than a rejection. In my experience a counterparty who does not argue has either lost the point or never needed it, and I recorded my belief that morning as the former, in writing, so whoever reads this file can see the moment plainly.
 
 "I'd like the interface specification," I said. "Whatever the system is actually built to be able to do."
 
@@ -55,7 +55,7 @@ Counsel accepted the five without one amendment, which pleased me for about four
 
 I wrote the request in my file with the date beside it, because a request that exists in a file is a fact and a request made across a table is a memory.
 
-Then she slid the frame itself over: license, pilot sites, governance, economics, data rights, active functions, termination. "Bring it to Northline. Bring your definitions too."
+Then she slid the frame itself over: licence, pilot sites, governance, economics, data rights, active functions, termination. "Bring it to Northline. Bring your definitions too."
 
 The economics were generous and were not what moved my hand. What moved my hand was Ada correcting a medication interval before the wrong form was signed, Cora shifting a unit while Tomas stayed on the line with a woman and a crying child, and a man on a ward with no daughter in the building. Refusing to negotiate protects none of them; it leaves the conditions to people who file friction as a defect.
 

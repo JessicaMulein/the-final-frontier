@@ -1193,7 +1193,7 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       absolution. Reject artificial withholding.
     - _Requirements: 2.13, 2.14, 4.12, 8.9, 13.4_
 
-- [ ] 13. Draft the Private_Defense_Part chapters, 30–61
+- [x] 13. Draft the Private_Defense_Part chapters, 30–61
   - Apply the same per-batch completion rule as task 12.
 
   - [x] 13.1 Draft chapters 30–35 — copper and quiet
@@ -1234,9 +1234,19 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       inference, and Nia refuses both that account and Mara’s.
     - _Requirements: 6.9, 6.14, 7.17, 7.18_
 
-  - [ ] 13.5 Draft chapters 56–61 — the handle inside
+  - [x] 13.5 Draft chapters 56–61 — the handle inside
+    - Apply amended `DEC-020` from this batch onward as qualitative anti-formula guidance: give clocks
+      external consequence when they carry propulsion; vary endings, scene forms, chapter lengths, and
+      settings according to dramatic need; use an interrupted cut only where it is the strongest
+      truthful cut; avoid an accumulating document, drafting, or deliberation trough; and make every
+      chapter materially change the dramatic state. Do not satisfy the decision by inserting one of
+      each technique or following a batch recipe. Chapter 56 must establish on the page where the
+      equipment, space, and authorization come from after Chapter 55 removed Mara's array access; it
+      may not silently reissue her badge.
+    - _Requirements: 15.9, 15.12_
     - Put the first sustained Fluent_Pairing conversation on page. Draft, break, and repair the
-      specific/current/revocable consent protocol (`MOT-COME-02`, `MOT-KNOCK-01`): every contribution
+      specific/current/revocable consent protocol (`MOT-COME-02`; `MOT-KNOCK-01` remains assigned
+      to Chapter 73): every contribution
       has a Deliberate_Send_Act; pause or revocation stops transport; clipping, latency, or integrity
       failure is exposed; and participants confirm, retry, or fall back to ordinary speech rather than
       accepting guessed completion. Preserve mandatory Consent_State_Metadata and Transport_Metadata;
@@ -1246,7 +1256,15 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
       intrusion beyond private-room defense.
     - _Requirements: 3.3, 6.8, 7.8, 7.11, 14.10–14.12, 15.2, 15.3, 15.6_
 
-  - [ ] 13.6 Record the Private_Defense_Part movement Editorial_Gate **[EDITORIAL]**
+  - [x] 13.6 Record the Private_Defense_Part movement Editorial_Gate **[EDITORIAL]**
+    - Also record `pass`/`revision` against amended `DEC-020` using representative prose and contextual
+      editorial judgment: consequence-bearing propulsion; ending, scene-form, length, and setting
+      variety without checklist rotation; whether any interrupted cut or short chapter is earned
+      rather than inserted for compliance; whether document, drafting, or deliberation architecture
+      and viewpoint allocation create flatness; bodily stakes; adversary agency beyond argument; and
+      the clause 10 named tics. Do not decide the finding from fixed occurrence counts or adjacency
+      alone.
+    - _Requirements: 15.9, 15.10, 15.11_
     - Record `pass`/`revision` for canon, movement turn, motif progression, voice separation,
       institutional chronology, Julian’s professional-attribution/private-inference split, Nia’s
       refusal of both origin accounts, whether a valid ethical rule remains a physically inadequate
@@ -1265,6 +1283,16 @@ site-isolation test is required. Implementation code uses **Python**, as fixed b
 - [ ] 15. Draft the Mindwars_Part chapters, 62–112
   - Apply the same per-batch completion rule as task 12. Active counterphase and rhetorical
     collective declaration begin and end in this movement.
+  - **`DEC-020` clause 5 binds this movement specifically.** Fifty-one chapters of an undeclared war
+    may not be conducted in meetings and memoranda. Across 62–112 the movement must contain physical
+    danger to a named person, a place someone should not be, movement between locations under
+    pressure, and at least one consequence that arrives in a body rather than in a file. This creates
+    no spectacle licence and converts the Foreign_Signal into no combatant with a face.
+  - Apply `DEC-020` clauses 1 through 4 and 6 through 10 across this movement as contextual craft
+    principles, not as a repeated per-batch recipe. Each batch Editorial_Review must consider local
+    choices in movement and manuscript context and record the findings required by Requirements 15.9
+    through 15.11; no batch is required to contain a fixed ending kind, interrupted cut, short chapter,
+    or noninstitutional scene solely for compliance.
 
   - [ ] 15.1 Draft chapters 62–69 — no first shot
     - Show unrelated intrusive arrivals, no unifying sender, emergency classification hardening into

@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: [MOT-CHAIN-02]
 hook: "One printed line makes the assurance on the table worthless, and she has not put the page down yet."
-words: 431
+words: 350
 length_class: microchapter
 status: revised
 ---
@@ -29,15 +29,11 @@ Nothing on the page reached backward into December.
 
 My December apparatus had no transmit stage. It could acquire, resolve, and identify. It could not write. Months later I had built one temporary bench path with my own hands and removed it after the content-free handshake. Page nine proved neither that the December rig had transmitted nor that my later handshake caused Nia's wanting. Guilt did not turn a specification into evidence.
 
-The line established a different danger.
+The line established a present danger.
 
-They were not asking to add a rare active instrument to a receiver under a separately visible decision. They were proposing receivers whose common interface already anticipated the outward path. A participant could be promised a disabled function. An operator could be sold a network built to enable it.
+The common interface already anticipated an outward path.
 
-Julian's initialed clause lay beside my hand. It treated transmission as an option that policy could leave out.
-
-Page nine treated it as a state the system was waiting to enter.
-
-I followed the control name to the hardware reference and stopped before turning the page. If the outbound components were shared with reception, striking a word from the agreement would not strike them from the machine. If they were separate, Julian might still have a remedy.
+I followed the control name to the hardware reference and stopped before turning the page. The interface diagram did not show whether the outbound components were shared with reception or separate from it. The hardware reference would.
 
 I asked the product director, "What does this enable?"
 

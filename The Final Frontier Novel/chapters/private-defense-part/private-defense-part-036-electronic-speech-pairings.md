@@ -9,7 +9,7 @@ words: 1186
 length_class: normal
 status: revised
 ---
-The visitor book at the Northline gate was still the hardbound kind, ruled for name, organization, host group and time, and the guard turned it toward me before my window was down.
+The visitor book at the Northline gate was still the hardbound kind, ruled for name, organization, host group and time, and the guard turned it towards me before my window was down.
 
 Four entries stood above the line he wanted signed, all dated 19:40 the previous evening, all one organization, all one host group. *Development.* The vehicle column recorded a hired saloon with no institute tag. I asked who they had been, and he tapped the column with a knuckle.
 
@@ -37,7 +37,7 @@ Ada struck the chair arm with two fingers, and the left chair squeaked, and the 
 
 The clinical director asked what it had been like. Not a recording, Lena said, and not a voice from across the room; closer to knowing the exact sentence someone had just chosen to tell her, the separateness of listening intact. Nothing came before the send. "She sat there being my mother. Then she sent the chair."
 
-Ada wrote on the pad in her lap and turned it toward us.
+Ada wrote on the pad in her lap and turned it towards us.
 
 **I was also thinking the water is warm.**
 

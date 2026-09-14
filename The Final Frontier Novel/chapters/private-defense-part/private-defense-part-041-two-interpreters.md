@@ -21,7 +21,7 @@ Together, after repeated calibration unique to them, they could perform the assi
 
 They consented to the session in the waiting room. Ada selected the named engagement and the named partner on her pad. Lena confirmed. Either could pause or revoke. Content recording remained off. The service kept the mandatory operational metadata and no semantic record.
 
-While we waited, Lena told me her mother had interpreted for nineteen years and had never once been late, and Ada wrote *she has been late twice this month* on the pad and turned it toward me rather than toward her daughter. Lena read it upside down anyway and said that was different, because she has a child. Ada wrote *so did I*. They had plainly done this in front of strangers before and had stopped minding.
+While we waited, Lena told me her mother had interpreted for nineteen years and had never once been late, and Ada wrote *she has been late twice this month* on the pad and turned it towards me rather than towards her daughter. Lena read it upside down anyway and said that was different, because she has a child. Ada wrote *so did I*. They had plainly done this in front of strangers before and had stopped minding.
 
 The benefits officer began with the notice's shortest paragraph and made it longer by explaining it.
 
@@ -37,7 +37,7 @@ There was no flash of shared consciousness. Ada sometimes wrote a correction ins
 
 The difficult passage came near the end. It contained a conditional exception nested inside a definition and a cross-reference to a page the officer had not brought.
 
-Lena read the sentence and understood its ordinary grammar. She did not know which formal distinction would survive interpretation without becoming advice. Ada knew, but writing the full explanation would force the claimant and officer to wait while the room's schedule pressed them toward signature.
+Lena read the sentence and understood its ordinary grammar. She did not know which formal distinction would survive interpretation without becoming advice. Ada knew, but writing the full explanation would force the claimant and officer to wait while the room's schedule pressed them towards signature.
 
 Ada sent one clause.
 

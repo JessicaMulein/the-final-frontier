@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "The band moves when the stranger's attention moves, which makes the field a place instead of a figure of speech."
-words: 1178
+words: 1145
 length_class: normal
 status: revised
 ---
@@ -55,13 +55,13 @@ I blinded the event times and gave him the traces without audio. He marked five 
 
 If the model followed radio urgency, it should have relaxed when the urgent traffic did. If it followed the source's attention, the work could continue after the air cleared. The field did not care when the public exchange ended. It cared when the person inside it stopped holding the call.
 
-That was as far as the evidence went. Small frequency changes covaried with shifts in attention across unrelated events, and the apparatus received those changes passively: no transmit stage, no probe, no request for a response, and no way for the source to learn she had been measured. I had not read thought. I had found structure in the physical conditions under which thought attended.
+That was as far as the evidence went. Small frequency changes covaried with shifts in attention across unrelated events. The observation ran one way, without her knowledge. I had not read thought. I had found structure in the physical conditions under which thought attended.
 
 I opened the log and wrote the sentence I had been avoiding since the first weekday pattern.
 
 *Hypothesis: mind is not merely represented by activity in a body. For this receiver, a living mind is observable as a field whose internal frequency relationships change with attention while preserving continuity across the changes.*
 
-I disliked *is*, changed it to *behaves as*, and changed it back. A hypothesis has to be allowed to fail, and it also has to say what would fail. The old use of *field* was metaphor. This one had frequencies, and it could be acquired, timestamped, and compared, and it still occupied no direction my aperture could recover.
+A hypothesis has to be allowed to fail, and it also has to say what would fail. The old use of *field* was metaphor. This one had frequencies, and it could be acquired, timestamped, and compared, and it still occupied no direction my aperture could recover.
 
 On the final pass the lower family sharpened once more. The unit had already arrived. No carrier was active. Somewhere outside every coordinate I could produce, the stranger gave the call the last of her attention and let it go.
 

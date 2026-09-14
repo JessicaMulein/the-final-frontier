@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-NIA-AFTERMATH
 motif_events: []
 hook: "She goes back to the bench with nothing settled and one instruction she did not choose."
-words: 1136
+words: 1067
 length_class: normal
 status: revised
 ---
@@ -21,47 +21,27 @@ The first established passive reception from one continuous living field: the ac
 
 The second established my act. Temporary outgoing stage. Same address region. Content-free envelope. No pair calibration. No consent. No detected response. It did not establish arrival, effect, preference shift, wanting, routing, injury, death, or origin.
 
-I wanted to add one sentence beneath those limits.
-
-*The transmitted handshake was the probable cause of the subject's later certainty.*
-
-I typed it into an unsigned note and read it back with the grammar exposed. *The subject* made her available to the experiment. *Probable* converted a conviction into a method. *Cause* closed a space no instrument had crossed. *Later certainty* reduced her injury to an output. Every one of those four words does work I could not support.
-
-I deleted the sentence and tried again.
+The conviction was mine, and that was the only way I could state it.
 
 *I believe my transmission caused Nia Calder's wanting.*
 
-That version keeps the belief mine. It is honest as testimony and useless as finding, and the difficulty is not the wording but the shelf. Put it in the technical log and its location lends it more authority than its contents deserve. Leave it in a private note and I preserve the conviction while withholding the risk from everyone reviewing the work.
+It was honest as testimony and useless as finding. Put it in the technical log and its location would lend it more authority than its contents deserved. Leave it in a private note and I would preserve the conviction while withholding the risk from everyone reviewing the work.
 
 Her refusal removed nothing from my belief. That is the part I cannot offer her as evidence of having listened. The person-specific address, the short chronology, the absence of semantic content, and the exact form of her wanting still hold together too tightly in me to become coincidence because she rejected my account. Her rejection did not have to change my conviction. It had to change what I did with it.
 
-I called Julian.
+I opened the compliance response and stopped at the distribution list. Julian's name was on it. So were eight others. The form offered no way to disclose the temporary path without attaching it to the person-specific address, and no way to attach the address without making Nia retrievable inside the matter. Her instruction had not been secrecy. It had been that I stop entering my belief as her account. I was still able to turn that distinction into a reason for delay.
 
-I told him the source identity had been verified and that the same person had made the documented routing decision. I did not tell him the contents of Nia's reconstruction, which are hers. I told him I had conducted an unauthorized content-free transmission through her address before the incident, and that I had left it out of the narrow public-safety interference answer.
+The act itself belonged somewhere less interpretive. I opened a hardware-safety deviation under the temporary driver's asset number. That form required equipment, operator, authorization, output, and corrective action. It did not require a source identity.
 
-He was quiet long enough that I could hear pages turning.
+I entered the facts. The temporary path had emitted a person-specific content-free envelope without authorization or consent. No instrument had measured detection or effect. The relay had been removed and sealed; the driver was locked out; no further person-specific output was authorized. I attached the signed bench procedure, Anand's written objection, the forward-power trace, the no-response analysis, and my original temporal-proximity note.
 
-"Can you establish effect?"
-
-"No."
-
-"Can you exclude it?"
-
-"No."
-
-"Can any record identify another source?"
-
-"No."
-
-Then he gave me the shape institutions use when a truth is not enterable: preserve the underlying records, separate observation from inference, disclose the bench act to compliance, make no causal representation, and do not contact Nia again except through the channel she chose. The advice matched her instruction almost line for line, which did not make it his.
-
-I amended the compliance response. The temporary path had not interfered with licensed communications. It had nevertheless emitted a person-specific content-free envelope during the relevant interval, without consent, with effect unknown. I attached the signed bench procedure, Anand's written objection, the forward-power trace, the no-response analysis, and my original temporal-proximity note. For causal assessment I entered *indeterminate*, and the system required a basis: *No instrument measured detection or effect. No semantic payload existed. Person-specific address and chronology support possible relation but do not establish it. Alternative origin unestablished.*
+The access list held Anand, the instrument-safety lead, and the suspension chair. Julian was not on it. The legal matter would receive only a notice of a related technical record if the chair chose to link them. I selected *chair review required* and submitted the deviation. I did not amend the legal response.
 
 That was admissible. My conviction was not.
 
 Anand's objection is four sentences long and he wrote it the week before the handshake, which is why it reads as an engineering position rather than a reaction. When I asked him once to let me summarize it in the procedure preamble he said no, and gave a reason: a summary of an objection is written by the person the objection is against.
 
-He came in while the amendment was still uploading. He had come in on a day he was owed, and it was the second week he had missed the hall, and he read the whole thing from the top before he said anything.
+He came in while the deviation was still uploading. He had come in on a day he was owed, and it was the second week he had missed the hall, and he read the whole thing from the top before he said anything.
 
 He stopped at Nia's name. "You found her."
 
@@ -83,4 +63,8 @@ I changed the project vocabulary before I left. The December file no longer says
 
 I did not label her case zero. I did not turn her refusal into forgiveness, or my disclosure into repair. I did not stop believing I had caused the wanting. I stopped asking the record to make that belief hers.
 
-The acknowledgment came back at 19:04 with a matter number and a date. The suspension chair takes the amendment on the twenty-second, and she will ask me, because she always asks, whether there is anything I have not entered. Eleven days to find a record that can hold a belief without promoting it, or an answer I am willing to give her instead.
+The deviation acknowledgment came back at 19:04 with a record number and a review date. Its classification was *asset safety—restricted*. Under related-matter routing the system showed *manual*. No alert had gone to the legal file.
+
+The relay was still on the bench when I locked up, in its bag, seal side up. Ravi had written the date and the time in block capitals and then the word UNASKED, and he had underlined it twice, which is not like him.
+
+I left it exactly where he had put it.

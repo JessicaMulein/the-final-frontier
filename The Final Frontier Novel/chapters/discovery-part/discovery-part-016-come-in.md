@@ -5,11 +5,13 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-HANDSHAKE
 motif_events: [MOT-COME-01]
 hook: "She sends nothing but the fact of herself, and the difference between knocking and entering is one she decides alone."
-words: 635
+words: 679
 length_class: microchapter
 status: revised
 ---
 The synthesizer came out of the loan cupboard with somebody else's calibration sticker on it, four years out of date, and I signed for it under my own name.
+
+Julian's memorandum had arrived the day before, addressed to compliance, the director, the suspension chair, and me, asking that person-specific processing stop while review decided whether it could continue. It said nothing about an outgoing path. Nobody prohibits a stage that does not exist.
 
 I did not alter the December rack. I took its address filter out through the diagnostic port, copied the person-specific region onto an isolated controller, and built the outgoing path beside it where every added part stayed visible: synthesizer, attenuator, driver, relay, load. Every connection was in view. With the relay open, the old apparatus could still do only what Julian's memorandum said it did. It received.
 

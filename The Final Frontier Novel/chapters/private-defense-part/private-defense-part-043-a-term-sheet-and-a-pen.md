@@ -43,7 +43,7 @@ I did not answer, because she was right, and because the shape of the question t
 
 She went on without pressing the advantage. Tomas Reyner and Cora Baird holding an emergency channel open through a night when every ordinary line was occupied. A man in a rehabilitation unit who had not started a conversation in eleven months and started four in a fortnight. She did not oversell any of it. She named the failures as well: two pairs who never calibrated at all, one who calibrated and disliked it, a woman who said it felt like being helped in public.
 
-I had watched enough sessions to know where the brochure simplified. Simplification did not erase Ada working again, and it did not erase Tomas keeping a voice on a line while Cora moved help toward it.
+I had watched enough sessions to know where the brochure simplified. Simplification did not erase Ada working again, and it did not erase Tomas keeping a voice on a line while Cora moved help towards it.
 
 The man from public partnerships had said nothing for twenty minutes. He turned his phone over, looked at nothing on it, and turned it back.
 
@@ -57,13 +57,13 @@ I thought of the December morning as I had received it: coffee, irritation, ordi
 
 The people across from me were not offering uncertainty. They were offering scale.
 
-Their diagrams showed clinical access, emergency coordination, language services, and remote presence as branches of one network. Pair-specific calibration appeared in a smaller box labeled onboarding. Consent appeared as a blue ring around the whole picture, bright and continuous, as if one answer could remain current while every branch changed underneath it.
+Their diagrams showed clinical access, emergency coordination, language services, and remote presence as branches of one network. Pair-specific calibration appeared in a smaller box labelled onboarding. Consent appeared as a blue ring around the whole picture, bright and continuous, as if one answer could remain current while every branch changed underneath it.
 
 I asked who controlled the send gate.
 
 "The participant," the clinical director said.
 
-"At the moment of sending, or at enrollment?"
+"At the moment of sending, or at enrolment?"
 
 "At the moment of sending."
 

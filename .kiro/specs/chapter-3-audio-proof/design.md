@@ -468,7 +468,7 @@ For any identity response and generated evidence set, persisted identity-derived
 | Proof destination differs | Leave destination unchanged and stop before report success. |
 | Listening feedback conflicts with deterministic evidence | Deterministic failure remains blocking; listening is supplemental only. |
 
-## Testing and Validation Strategy
+## Testing Strategy
 
 ### Targeted pre-paid checks
 

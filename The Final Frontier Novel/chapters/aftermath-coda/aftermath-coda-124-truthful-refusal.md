@@ -23,7 +23,7 @@ A model could still produce output. Technically, that was true. It could generat
 
 The output would carry no reliable provenance inside the experience. Safiya could reach for her mother's word and find my construction occupying the space. If it fit, the fit would not authenticate it. If it felt remembered, the feeling would not make it her mother's.
 
-I was building toward the general case. I could feel the sentence enlarging: what it means for a species to write into itself, what history would call the boundary, how one room becomes doctrine. The first clause was ready.
+I was building towards the general case. I could feel the sentence enlarging: what it means for a species to write into itself, what history would call the boundary, how one room becomes doctrine. The first clause was ready.
 
 Then I looked at my wall.
 

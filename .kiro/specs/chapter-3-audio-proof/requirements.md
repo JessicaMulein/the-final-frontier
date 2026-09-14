@@ -49,7 +49,7 @@ Specification creation is planning only. Specification creation does not authori
 - **Evidence_Artifact**: A generated file under `Chapter_3_Build_Root/evidence/` or Proof_Report; existing runtime manifest, transcript, Event_Journal, segment-audio, and Chapter_WAV files retain their required runtime schemas and are not Evidence_Artifacts.
 - **Listening_Acceptance**: Optional human proof-listening feedback recorded only after deterministic validation.
 - **Workflow_Write_Allowlist**: Chapter_3_Build_Root and, after delivery approval, Proof_Copy.
-- **Protected_Artifact**: Chapter_3_Source, narration source/configuration/dependencies, relevant tests/tools, Chapter 1 and Chapter 2 audio artifacts, `.kiro/specs/chapter-2-audio-proof/`, and `.kiro/specs/The-Final-Frontier-novel/`.
+- **Protected_Artifact**: Chapter_3_Source; `.audiobook/src/frontier_audiobook/`; `.audiobook/config/audition.toml`; `.audiobook/README.md`; `.audiobook/pyproject.toml`; `.audiobook/requirements/`; `.audiobook/uv.lock`; `.audiobook/tests/test_audition.py`; `.audiobook/tests/test_narrate.py`; `.audiobook/tools/`; every Chapter 1 and Chapter 2 narration build and proof-audio file; `.kiro/specs/chapter-2-audio-proof/`; `.kiro/specs/The-Final-Frontier-novel/`; and existing written/audiobook front-matter or title-page files.
 - **Per_File_Inventory**: Path, existence, byte count, SHA-256, Git status, and attribution recorded for each relevant file.
 - **Concurrent_Manuscript_Change**: A changed manuscript path other than Chapter_3_Source that is not attributed to an Audio_Proof_Workflow write.
 - **Delivery_Gate**: The all-pass condition for source, paid-attempt, manifest, fidelity, assembly, usage, cost, isolation, and proof-copy prerequisites.
@@ -64,7 +64,7 @@ Specification creation is planning only. Specification creation does not authori
 #### Acceptance Criteria
 
 1. THE Source_Inspector SHALL resolve Chapter_3_Source to exactly one manuscript file.
-2. WHEN Source_Inspector parses Restricted_Header, THE Source_Inspector SHALL verify `movement: discovery_part`, `chapter: 3`, `pov_id: POV-MARA`, `timeline_id: TL-DECEMBER-RECEIVE`, `motif_events: []`, the approved hook text, `words: 1192`, `length_class: normal`, and `status: revised`.
+2. WHEN Source_Inspector parses Restricted_Header, THE Source_Inspector SHALL verify `movement: discovery_part`, `chapter: 3`, `pov_id: POV-MARA`, `timeline_id: TL-DECEMBER-RECEIVE`, `motif_events: []`, `hook: "The check she built to kill the result kills the wrong thing, and the eight seconds survive it as hers."`, `words: 1192`, `length_class: normal`, and `status: revised`.
 3. WHEN Source_Inspector normalizes Prose_Body, THE Source_Inspector SHALL verify a Prose_Body word count of `1192`.
 4. WHEN Source_Inspector creates Spoken_Text, THE Source_Inspector SHALL verify `1193` Spoken_Tokens, Prose_Body SHA-256 `a07e7dff0cceea845107eb49958c84092754daa5531ec794ea5325adfe546d45`, and Spoken_Text SHA-256 `a78247a0639799d40d66a16c5d27bc0c67dd64f42d589c7a72e132e39e59cfa7`.
 5. WHEN Source_Inspector applies target segment size `5`, THE Source_Inspector SHALL verify `91` ordered segments, `10` narration-only-punctuation segments, and Spoken_Token conservation across the segments.

@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-TRUST-FORMATION
 motif_events: [MOT-RECORD-01]
 hook: "Her demand becomes an institution inside a week, and she is not certain that counts as winning."
-words: 1289
+words: 1403
 length_class: normal
 status: revised
 ---
@@ -49,15 +49,19 @@ He did not answer for a while. Then he asked me what the words were for, and I s
 
 It took him six days.
 
+I asked how, in a tone that suggested I thought he had done something improbable, and he was almost offended. He had not built anything. The institute has a dormant charitable company on its books from a teaching trust that wound up in 2016, with a registered number, a bank mandate and a constitution drafted to be amended, and he amended it. The archivist had run the county records office he had been sending referrals to for years and had retired in March with nothing to do. The strongroom is hers, two fitted rooms behind a solicitor's office on the same street, insured, already holding other people's papers. The encryption is a service that costs him forty pounds a month.
+
+"It is assembled," he said, "out of things that were lying about, by somebody who knew where they were. Which is why it exists. It is also how it could be taken apart."
+
 What he brought back was not a letter. It was a deed, eleven pages, and a schedule, and he made me read the schedule first because he said the pages were the easy part.
 
-The name at the top was Civic Record Trust. There were three custodians and he was one of them. The second was a retired county archivist who had spent nineteen years running a records office and had, Julian said, the only professional instinct that mattered, which was distrust of tidiness. The third was a clinician who had sat eleven years on a research ethics committee and had resigned from it, in writing, over a consent form.
+The name at the top was Civic Record Trust. There were three custodians and he was one of them. The second was the archivist. The third was a clinician who had sat eleven years on a research ethics committee and resigned from it over a consent form, which sounds more principled than it was; she told me later it was mostly about a man she could not stand, and that the form had merely been the available ground.
 
 "Three," I said. "So you can be outvoted."
 
 "So I can be outvoted. It is the only clause in there I insisted on for myself."
 
-The mechanism was narrower than I expected and better for it. A deposit came in signed and encrypted. The depositor wrote the conditions — who could open it, on what event, in what form — and the custodians were bound by the conditions and had no power to relax them, including by unanimity, including after the depositor's death. Provenance was recorded at intake: what the thing was, when it was made, and how the date could be established by somebody who did not take the depositor's word for it. Nothing was edited. Nothing was summarized. A deposit was released whole or not at all.
+The mechanism was narrower than I expected and better for it. A deposit came in signed and encrypted. The depositor wrote the conditions, and the custodians were bound by them and could not relax them, including by unanimity, including after the depositor's death. Provenance was recorded at intake. Nothing was edited or summarized, and a deposit was released whole or not at all.
 
 I read it twice and found the hole, because there is always one and it is usually the one the drafter has already found.
 

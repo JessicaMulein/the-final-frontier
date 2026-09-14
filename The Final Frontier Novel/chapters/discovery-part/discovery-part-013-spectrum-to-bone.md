@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: [MOT-CHAIN-01]
 hook: "The spectrum resolves into something with a body, and the address is still there when she goes back for it."
-words: 1868
+words: 1858
 length_class: long-outlier
 status: revised
 ---
@@ -33,19 +33,19 @@ Ravi watched the progress bar empty. "All of it?"
 
 The stranger remained in storage. My claim did not.
 
-A person-specific address could not be the subject matter of her attention, the urgency of the work, the radio system around her, or the reconstruction settings around me. It had to survive all of them, and it had to differ when the person differed. Recurrence was not enough. A siren recurs, a shift recurs, a county radio network recurs. I needed something that traveled through changing attention without collapsing into the task.
+A person-specific address could not be the subject matter of her attention, the urgency of the work, the radio system around her, or the reconstruction settings around me. It had to survive all of them, and it had to differ when the person differed. Recurrence was not enough. A siren recurs, a shift recurs, a county radio network recurs. I needed something that travelled through changing attention without collapsing into the task.
 
 So I stopped sorting the field by what I thought it meant. I represented each interval as relationships among frequencies instead: which components moved together, which stayed orthogonal under load, which phase couplings survived a change in amplitude, which disappeared when I altered the receiver configuration. Anything that followed Northline hardware went out. Anything that followed a licensed carrier went out. Anything that needed me to assign a call category went out.
 
 What remained looked less informative. That was its value.
 
-Across the crossing, the route correction, routine traffic, and the hard call, a sparse set of phase relationships held while almost everything legible changed around it. During concentrated attention the set bent and did not break. When attention released, it returned toward the same narrow region without tracing the same path.
+Across the crossing, the route correction, routine traffic, and the hard call, a sparse set of phase relationships held while almost everything legible changed around it. During concentrated attention the set bent and did not break. When attention released, it returned towards the same narrow region without tracing the same path.
 
 *A field with a body,* I wrote, and crossed out *body*. I had no anatomical measurement. I had structure that behaved as though change belonged to one continuous living system.
 
 To call that person-specific, I needed other people.
 
-I asked four Northline staff for control sessions and told each of them exactly what the receiver had already done to the unknown source. I did not call the apparatus harmless. It emitted nothing, and passivity did not make observation empty. Two refused. Ravi agreed. Two engineers from the night team agreed on the condition that we destroy resolved output after extracting blinded frequency relationships, and I wrote that condition into the procedure before we began.
+I asked four Northline staff for control sessions and told each of them exactly what the receiver had already done to the unknown source. I did not call the apparatus harmless. It emitted nothing, and passivity did not make observation empty. One refused. Ravi agreed. Two engineers from the night team agreed on the condition that we destroy resolved output after extracting blinded frequency relationships, and I wrote that condition into the procedure before we began.
 
 Each participant sat alone in the instrument room for twelve minutes with no task from me. A clock, a page of arithmetic, a recorded weather bulletin, and silence were available, and nobody reported their choice until after acquisition. The December apparatus was unchanged: front end, digitiser, storage, compute. No exciter, no driver, no antenna feed outward. Nothing in the procedure could prompt, write to, or contact a field.
 
@@ -95,7 +95,7 @@ I let the live acquisition run for eleven minutes, then disabled the filter, cle
 
 The spectrum on the display was only the surface of it. Beneath the graph, the recurring currents of a living system held their relationships through sound, decision, effort, and release. I could not locate those currents anatomically. I could not claim I was measuring a neuron or reading a brain. But the mathematical spectrum had reached something that persisted as intimately as bone. One person occupied the channel.
 
-That was the first transmission-chain image, although no transmission occurred. Spectrum reached bone because a living field made an address out of its own continuity. The apparatus did nothing but receive.
+A living field had made an address out of its own continuity, and the apparatus had done nothing but receive it.
 
 I signed the result at 07:19.
 

@@ -5,21 +5,19 @@ pov_id: POV-NIA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []
 hook: "Her morning closes into an ordinary shift, and the only thing out of place is a sound she cannot say why she remembers."
-words: 1137
+words: 1101
 length_class: normal
 status: revised
 ---
 There is a bell at the crossing on Ridge Road, and it beats about twice a second, and it does not care that you have somewhere to be.
 
-That is where the morning starts in my memory, though it is not where the morning starts. The alarm is only the first item in the sequence.
+That is where the morning starts in my memory, though it is not where the morning starts. The alarm is the first item in the sequence.
 
 Quarter past six: alarm. Shower straight away, because the pipes took a minute to warm and I knew exactly how long I could give them. Radio low on the bathroom sill. Teeth while the mirror cleared. No breakfast, because the milk was the plan. Blue coat, since the grey one was still damp from Tuesday. Out at twenty-five past.
 
-It was a Wednesday in December, cold enough that the windscreen fogged from my breathing. The blower was pointed up, so for the first part of the drive I was steering a small hot cloud. You clear an arc the width of a wiper with the heel of your hand and you drive inside it until the demister catches up.
+It was a Wednesday in December, cold enough that the windscreen fogged from my breathing. The blower was pointed up, so for the first part of the drive I was steering a small hot cloud. You clear an arc the width of a wiper with the heel of your hand and drive inside it until the demister catches up.
 
-At six thirty-one I called the depot from the road. Kev answered on the tail end of nights and gave me the queue in order: one woman waiting on a neighbour's alarm, one caller who had rung three times about the same fence, no advanced unit held, nothing I needed to divert for. I repeated the alarm address, because he clipped the street name the first time. He corrected it. We both moved on.
-
-A minute and a half, and it sits in a log somewhere for seven years.
+At six thirty-one I called the depot from the road. Kev answered on the tail end of nights and gave me the queue in order: one woman waiting on a neighbour's alarm, one caller who had rung three times about the same fence, no advanced unit held, nothing I needed to divert for. I repeated the alarm address because he clipped the street name the first time. He corrected it. We both moved on. The call took about ninety seconds, and the depot log keeps it for seven years.
 
 Then Ridge Road. The barrier came down while I was four cars back, which is the worst position, because you can see the arm and not the train. I put both hands on top of the wheel. A man in a high-visibility coat walked the far pavement with a dog that did not want to be out, and the dog sat down halfway along, in the wet, to make its point. The bell kept going. Freight, in the end, the long slow kind with container cars. I counted for a while, lost the count, and let the bell take up the space.
 
@@ -27,13 +25,13 @@ The barrier rose. I drove the rest of Ridge Road, turned at the depot, and parke
 
 I signed on at ten to seven, pressed the headset cup against my ear with two fingers, and took the neighbour's alarm at six fifty-four.
 
-After that it was a shift, and the shift is not what this account is for. Other people's worst mornings, in the order they arrived, each of them belonging to the person who rang. I finished at four and drove home the other way, as I usually did, so I met the crossing once that day and only in the morning.
+After that it was a shift: other people's worst mornings in the order they arrived, each belonging to the person who rang. I finished at four and drove home the other way, as I usually did, so I met the crossing once that day and only in the morning.
 
-One item from the morning has no place in the sequence, and it is the bell.
+I have written the account four times. The alarm stays at quarter past. The road call stays at six thirty-one, with Kev correcting the address. Sign-on stays at six fifty and the first alarm at six fifty-four. Between the road call and the depot door, the bell returns every time.
 
-I do not remember Tuesday's bell. I sat at that crossing on Thursday as well and I could not tell you a thing about Thursday's. Wednesday's is complete: the weight of my hands on top of the wheel, the dog giving up, the container cars going by in their own time, the beat of it coming through cold glass.
+I tried the days beside it. Tuesday's crossing gives me nothing I can use. I sat there again on Thursday and cannot recover that bell either. Wednesday gives me the weight of my hands on the wheel, the dog sitting in the wet, the container cars passing behind cold glass, and the beat at roughly two to the second.
 
-The ordinary explanation is a good one. Four cars back behind a freight is several minutes with nothing to do, and an unattended sound settles deep. Good explanations do not need improving. Remembering a bell does not make it evidence — it makes it the one part of an otherwise ordinary morning that stayed available in detail, and I marked it that way and left it alone.
+Four cars back behind a freight leaves several minutes for an unattended sound to settle. That explanation fits the road and the time. In each version I marked the bell as memory rather than evidence. In the fourth, I stopped taking it out.
 
 Wednesday is my brother's night, and Joss does not accept cancellations by text.
 
@@ -57,4 +55,4 @@ He had also put a new bulb in my nearside sidelight at some point and not mentio
 
 He stood in the doorway in a T-shirt while I reversed out, because he will not put a coat on to say goodbye. Text when you're in. I texted when I was in.
 
-Then I set the alarm for quarter past six, because Thursday was a working day, and so was the day after it, and so was every day after that until the weekend. The pipes would want their minute. The milk was still the plan. It was the most ordinary week of my life, and I would like it back.
+Then I set the alarm for quarter past six. Thursday was a working day. The pipes would want their minute, and the milk was still the plan.

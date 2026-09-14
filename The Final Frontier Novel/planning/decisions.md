@@ -2154,3 +2154,288 @@ reader feels the record, not what the record can do.
 | Remaining chapters with Consortium scenes | Dalby recurs under clause 10 as those chapters are drafted or revised | pending, later waves |
 | `design.md` — Testimony Frame and Original Thriller Pacing Architecture | Record intermittent frame presence, deliberate rhythm variance, irregular rotation, and one Discovery cluster | pending, later wave |
 | `planning/editorial-log.md` | Record the Chapters 1–10, 23–24 review and the clause 1–5 obligations as Editorial_Gate criteria | pending, later wave |
+
+---
+
+## DEC-020 — Propulsion architecture: consequence clocks, interrupted cuts, rhythm, bodies, and the anti-slop register
+
+- **Task:** author-directed review of the delivered 55 chapters against the recorded Brown/Richards class bar **[AUTHOR]**
+- **Date:** 2026-09-12
+- **Amended:** 2026-09-13 — fixed per-batch occurrence and adjacency thresholds in clauses 1–4, 7, and 8 withdrawn; see the anti-formula application note below
+- **State:** `binding`
+- **Selected:** Keep the withholding ban and supply the missing engine. The delivered manuscript's prose and premise meet or exceed the class bar; its propulsion machinery does not, and the cause is mechanical rather than a matter of ability.
+
+### Amendment note — 2026-09-13: anti-formula editorial application
+
+The diagnosis, benchmark evidence, and qualitative propulsion principles of `DEC-020` stand. The fixed per-batch remedies do not. A rule intended to prevent repetition must not require every delivery to advertise the same interrupted cut, short chapter, location excursion, and ending rotation. Irregular spacing and deliberate unpredictability may prevent a visible cadence, but no technique is inserted by lottery or to complete a checklist.
+
+For current application, clocks used as primary propulsion should create or credibly threaten external consequence; deliberation deadlines remain available but fail when they become the dominant or predictably repeated engine. Ending kinds listed in clause 2 are examples, not an exhaustive rotation. Interrupted cuts are authorized but never mandatory. Chapter lengths and settings should vary when dramatically earned, not to fill a batch slot. Editorial Review judges whether document, drafting, or deliberation architecture and viewpoint allocation create a momentum trough from the prose's cumulative effect, not from a fixed run length.
+
+Accordingly, the maximum of two deliberation endings per batch, the three-consecutive-ending limit, the required interrupted cut in batches of four or more, the required materially shorter chapter in batches of five or more, the required noninstitutional scene in each batch, and the absolute three-consecutive document/drafting/deliberation limit are withdrawn as acceptance conditions. A local repetition may be justified; a numerically varied batch may still fail if it reads formulaically. Findings must cite representative prose and consider batch, movement, and manuscript context without a numeric craft score.
+
+Clauses 5, 6, 9, 10, and 11 remain binding. Clause 10's “once or twice” is illustrative of accumulation, not an occurrence threshold. Requirements 2.13 and 2.14 continue to govern exactly as before.
+
+### What the review established
+
+The book's sentence craft is above the named inspirations and its premise is competitive with the best of them. Chapter 12 is the benchmark: real time, a clock the reader feels, a child's hands on her father's chest, and an outcome withheld because dispatch genuinely never learns it. Chapter 28 delivers the premise from inside a body. Chapter 27 contains the manuscript's only true interrupted cut. The problem is that these are rare, and three habits have hardened around their absence.
+
+**Every clock in the delivered manuscript is a decision clock.** Eight chapters end on time remaining until the narrator must choose what to write, say, or defend: 19, 21, 22, 25, 26, 28, 29, and 38. Individually they are characterful. Collectively they are one chord, and a deliberation deadline has no physical consequence attached to its expiry. Nothing irreversible happens when the twentieth arrives.
+
+**After Chapter 12 no character is in physical danger.** No pursuit, no injury, no threat, no coercion, no travel. The recurring institutional counterforce argues superbly and never acts. The settings are almost entirely institutional interiors.
+
+**Four consecutive chapters — 14, 15, 22, 26 — are document archaeology.** One man reads drafts, revises his own sentences, takes one telephone call each, and receives a deadline. The prose is not the fault; the assignment is. Across 11–29 the strongest narrator holds two chapters and both are the best in the movement, while the flattest four belong to one viewpoint.
+
+### Binding clauses
+
+1. **Consequence clocks govern; deliberation clocks are seasoning.** Every declared clock must attach an irreversible external event that occurs whether or not the narrator decides anything: a deployment, a shipment, a hearing that proceeds in absence, an access list reissued, a transfer taking effect, a person moved, a document circulated beyond recall. A deadline whose only expiry is *the narrator must now answer* may appear, but it may not be a movement's dominant clock and may not close more than two chapters in any drafting batch.
+
+2. **Chapter endings must vary by kind, and no kind may become the default.** The legitimate kinds are: the interrupted act; the arriving object or document; the answer given aloud; the physical image with no gloss; the consequence landing on someone other than the narrator; the refusal; the deliberation deadline. The identified over-used form is *time remaining plus an unanswered question about what the narrator would defend*. Its use is capped at two chapters per drafting batch. No batch may close three consecutive chapters with the same kind.
+
+3. **The interrupted cut is authorized and encouraged, and it is not concealment.** Cutting mid-act — as Chapter 27 does with `I was still deciding when the tone sounded in the test room.` — withholds no fact from the reader that any narrator possesses. It interrupts, and interruption is a rhythm device. Requirements 2.13 and 2.14 forbid manufactured concealment of facts the narrator holds; they have never forbidden ending a chapter before an act completes. Every drafting batch of four or more chapters must contain at least one interrupted cut. This clause exists because the delivered 55 chapters contain exactly one.
+
+4. **Rhythm variance is an obligation, not a budget to underspend.** Long runs of chapters inside a narrow word band flatten pace regardless of sentence quality. Chapter 50 at 448 words is the best-paced chapter in the Private Defense record sequence because it is short and single-purpose. Every drafting batch of five or more chapters must contain at least one chapter materially shorter than the batch's others. `DEC-019` clause 11's 900–1,400 band governs the normal class only and never argues against spending an outlier.
+
+5. **Bodies, jeopardy, and physical consequence.** Each remaining movement must place characters in physical situations with bodily stakes, not only institutional ones. Mindwars_Part especially: fifty-one chapters of an undeclared war cannot be meetings and memoranda. Required across 62–112 are scenes containing at least physical danger to a named person, a place someone should not be, movement between locations under pressure, and a consequence that arrives in a body rather than in a file. This creates no spectacle licence: the Aftermath_Coda still decelerates, and no scene may convert the Foreign_Signal into a combatant with a face.
+
+6. **Adversary agency.** The recurring institutional counterforce must take actions that cost the protagonists something, not only make arguments that trouble them. Imogen Dalby is the strongest adversary in the delivered book and has so far only ever argued. Permitted actions include procurement moves, access decisions, hiring, publication, referral, regulatory filing, and the ordinary institutional power to proceed without you. This clause does not create a concealed villain, a sender connection, an unmasking, or an adversary POV; `DEC-019` clause 13 and the three never-revealed reveals stand.
+
+7. **Setting variety.** A movement may not be conducted entirely in offices, laboratories, and meeting rooms. Rooms remain the book's native habitat and that is a strength; the requirement is that each batch put at least one scene somewhere nobody is being professional.
+
+8. **Viewpoint distribution against flatness.** No three consecutive chapters may be document, drafting, or deliberation chapters, regardless of viewpoint. Where a movement's strongest dramatic narrator is under-allocated relative to the flattest, Editorial Review records that as a `revision` finding against the batch rather than against the prose.
+
+9. **Every scene changes something.** A chapter must leave at least one of the following different from how it found it: a fact somebody holds, a document that exists, a relationship, an access right, a physical state, or a decision that is now irreversible. A chapter whose only outcome is that the narrator has considered a problem more carefully is not a chapter. This is the clause that governs the author's instruction that nothing be pointless.
+
+10. **The anti-slop register: named tics, capped.** These are the specific habits the review found hardening across three viewpoints. Each is legitimate once or twice and becomes machine-signature in accumulation, and each is a human Editorial_Gate criterion carrying no numeric score.
+
+    - **The self-correcting sentence.** A narrator writes a phrase, dissects its grammar, and revises it. Found in 11, 13, 14, 22, 25, 27, and 28. It is characterization once per viewpoint and a tic at seven, and it flattens three distinct minds into one editorial habit.
+    - **The complicity subordinate clause.** Bad faith confessed inside a dependent clause rather than enacted: *and I am aware that saying so is not the same as declining to do it*; *which I noticed at the time and did not correct*. Excellent, and currently the only mode of self-indictment available to any narrator.
+    - **The negative finding as climax.** Chapters resolving into a limitation clause rather than an event: 13, 18, 25, 29. A null result is honest and cannot be four chapters' payload.
+    - **The technical disclaimer, restated.** *No exciter, no driver, no outgoing feed*, the eight-second reconstruction, and *no semantic content* are re-explained across 11, 13, 18, 22, and 26. Canon protection is a planning obligation, not a prose one; the records already hold it. Say it once where a character needs it.
+    - **The aphoristic thesis coda.** A paragraph closing on a balanced antithesis or finished maxim. Withdrawn from `DEC-019` clause 12 as a counting rule and restored here as what it actually is: a judgment about how many paragraphs in a row may know their own final form. Keep the best terminal reversals; let intermediate paragraphs remain observational, partial, or unresolved.
+
+11. **What this decision does not change.** Requirements 2.13 and 2.14 stand: no fact a narrator holds is concealed from the reader to manufacture suspense, and honest testimony against institutional withholding remains the book's distinctive tension. The three never-revealed reveals stand. No sender, adversary, operative, archive, or group-mind POV is created. No culprit or mechanism reveal closes provenance. `DEC-016`, `DEC-018`, and `DEC-019` are preserved except that `DEC-019` clause 12's withdrawn paragraph rule is superseded by clause 10 above. The anti-imitation boundary stands and is strengthened: the class bar is the target, the manner is this book's own, and Editorial Review still records a `revision` finding on recognizable imitation of either named author.
+
+### Retired alternatives
+
+| Alternative | Why retired |
+|---|---|
+| Reverse the withholding ban to recover the concealment engine | The ban is the book's identity. Honest testimony competing with institutional summary is more distinctive than a withheld culprit, and the author has twice affirmed keeping it. Supplying a different engine is the harder and better answer. |
+| Accept the current pace as a literary choice and stop measuring against the named inspirations | The author's recorded inspirations are Brown and Richards, and the instruction is to have class and pace, not to have an excuse. A book may be better written than its inspirations and still owe the reader momentum. |
+| Add action set pieces and chases | Wrong remedy for this book. The delivered manuscript's power comes from procedure, documents, and rooms. The fix is consequence, interruption, rhythm, and bodies inside that world, not a genre transplant. |
+| Fix the flat chapters by rewriting their sentences | The four-chapter document trough is an allocation problem. Its prose is competent; its arrangement is the defect, and no line editing repairs three consecutive chapters of the same shape. |
+| Convert every deliberation deadline into a consequence deadline | Would replace one formula with another. Variety is the clause, not substitution. |
+
+---
+
+## DEC-021 — Scene-earned chapter length under a contextual manuscript budget
+
+- **Task:** Author-directed resolution of `EDITORIAL-LENGTH-BAND-MANUSCRIPT-001`, authorization of the
+  Chapter 118 craft repair, and synchronization input to tasks 13.6 and 14
+- **Date:** 2026-09-18
+- **State:** `binding`; craft, budgeting, and planning authority. It amends `DEC-018` clause 10 and
+  `DEC-019` clause 11, supersedes the exemption mechanism in `DEC-019` clause 8, and governs every
+  later reference to those clauses. It changes no canon fact, chronology, reveal, motif, POV, movement,
+  chapter count, or approved Final_Target.
+- **Selected:** Protect the complete manuscript's approved budget and objective safety limits, while
+  allowing each chapter to take the length its dramatic work earns. The manuscript is not to be padded,
+  cut, or reclassified merely to satisfy a preferred per-chapter band or midpoint.
+
+### Why this amendment exists
+
+`DEC-018` clause 10 was written when 45 delivered chapters held 41,020 Prose_Words, averaged 912, and
+projected roughly 117,000 words across 128 chapters — below the approved 130,000-word floor. Its
+1,050–1,200 target was a useful recovery estimate. `DEC-019` then treated small overages as exempt and
+widened the target to 900–1,400 while holding a fixed normal-class mean. Those successive rules solved
+an earlier planning problem but left three incompatible ideas in force at once: a narrow per-chapter
+band, a wider per-chapter band, and the amended `DEC-020`/Requirement 15.9 rule that chapter lengths
+must vary for dramatic reasons and must not be judged by quota.
+
+The current manuscript no longer has the shortfall the arithmetic was designed to correct. The editorial
+audit available when this decision was opened reported 64 delivered files and 73,147 Prose_Words. The
+55 delivered `normal` chapters averaged 1,134.4 Prose_Words, and the recorded class-mean projection was
+roughly 143,900 words across the fixed 128-chapter plan, comfortably inside the approved
+130,000–150,000 Final_Targets. Thirteen functioning normal chapters sat outside the old 1,050–1,200
+band in both directions. Their variance is dramatic: Chapter 52 needs room for Nia to read the closed
+review and set her conditions; Chapter 57 lasts seventy-six milliseconds and refuses to pad around that
+event.
+
+A rule that would cut the former and inflate the latter while the manuscript is on budget is no longer
+a safeguard. It is a formula, and it conflicts with the project's stronger anti-formula authority.
+
+### Binding clauses
+
+1. **The objective limits remain exact.** The complete manuscript remains exactly 128 chapters and
+   130,000–150,000 Prose_Words. The Normal_Chapter_Range remains 700–1,600, the
+   Hard_Chapter_Maximum remains 2,500, at least 108 of 128 entries remain `normal`, no more than 20
+   entries are outliers, and no same-POV run may exceed three chapters or 3,600 combined Prose_Words.
+   This amendment weakens none of those checker-enforced constraints.
+2. **The former bands are diagnostics, not quotas.** The 1,050–1,200 band and 1,125 midpoint from
+   `DEC-018`, the 900–1,400 band from `DEC-019`, and the derived fixed mean windows remain historical
+   budgeting evidence. They do not determine a chapter, batch, movement, or manuscript Editorial_Gate,
+   do not create exceptions or waivers, and do not require prose revision when the objective limits and
+   complete-manuscript budget are healthy. `DEC-019` clause 8's exemptions are therefore retired as
+   unnecessary: Chapters 19 and 35 need no special dispensation, and no later chapter does either.
+3. **Length is judged contextually.** Editorial Review asks whether a chapter has enough room to
+   inhabit its load-bearing action and emotional consequence, whether compression or expansion is
+   earned by the scene, whether adjacent chapters create a monotonous cadence or a useful change of
+   pressure, and whether the cumulative manuscript remains on course for Final_Targets. A short normal
+   chapter may pass because its event is brief. A long normal chapter may pass because its scene needs
+   uninterrupted room. Either may fail on craft grounds even while its number is legal. No verdict may
+   be inferred from distance to a preferred midpoint.
+4. **The manuscript budget remains a real safeguard.** Delivered totals, class distribution, class
+   means, remaining outline estimates, movement scale, and projected completion total are reviewed as
+   diagnostics. If they credibly project the finished manuscript outside 130,000–150,000, Editorial
+   Review records a manuscript-budget finding and repairs allocation at the level where the shortfall or
+   excess actually arises. It must not order uniform padding or cutting, and no fixed mean window is an
+   acceptance threshold independent of Final_Targets.
+5. **`estimated_words` remains planning metadata.** Existing estimates continue to support provisional
+   movement scale and the 3,600-word same-POV run check. They are not promises about final chapter
+   length and are not to be mass-normalized into either historical band. The pending
+   `ARC-CHANGE-REVISION-001` obligation to re-budget every normal entry to 1,050–1,200 is superseded,
+   not performed. Any individual estimate changes only when a real planning dependency — especially a
+   multi-chapter POV run or movement-scale risk — requires it.
+6. **Chapter 118 is revised for craft, not arithmetic.** Its 756-word state remains a genuine editorial
+   defect because the Coda's load-bearing Tuesday account names material that the scene has not yet
+   inhabited. Expansion is authorized inside the existing `ArcEntry`, planned 1,400-word estimate,
+   `POV-SAFIYA`, `TL-CODA-ACCOUNT`, `MOT-KETTLE-01`, and
+   `REVEAL-SAFIYA-TUESDAY-LOSS`. The repair must preserve `status: exploratory`, the 118–119 reveal
+   window, Safiya's ownership, the unspecified heritage base, and the describe-never-quote boundary.
+   It creates no arrival, foreign voice or presence, private corpus, reconstruction route, authorization
+   question, real-world language inference, lexical inventory belonging to Chapter 119, new Reveal,
+   CrossCut, MotifEvent, or LiteralPhraseConstraint.
+
+### Current determination
+
+At the evidence state that produced this decision, the manuscript-budget safeguard **passes**: 64
+delivered files, 73,147 Prose_Words, a 1,134.4 mean across 55 delivered normal chapters, and a projected
+completion near 143,900. The twelve old-band departures other than Chapter 118 require no length-driven
+revision. Chapter 118 remains separately open until a human reread determines that its material is fully
+inhabited; reaching any particular number cannot make that determination.
+
+### What this decision does not touch
+
+Everything protected by `DEC-018`, `DEC-019`, and amended `DEC-020` remains protected: the receive-only
+December apparatus and distinct later bench path; receiver-owned reconstruction latency; unresolved
+causation and `DEC-007` asymmetry; the three never-revealed Reveal IDs; page nine as architectural
+capability only; closed motif families; the four POVs and 56/32/33/7 loads; the 29/32/51/16 movement
+allocation; honest narration without artificial withholding; and the ban on sender, adversary, archive,
+simulation, model, or group-mind POV. This decision changes no Chapter 118 wording by itself and does
+not begin Chapter 62.
+
+### Rejected alternatives
+
+| Alternative | Why rejected |
+|---|---|
+| Enforce 1,050–1,200 on every normal chapter | It would cut functioning load-bearing scenes and pad intentionally compressed ones while the manuscript already projects inside Final_Targets. |
+| Keep 900–1,400 as a second mandatory band | It reduces the conflict but preserves the same category error: a planning diagnostic deciding a human craft gate. |
+| Retain fixed mean 1,006–1,187 as an acceptance rule | The range was derived from an estimated outlier contribution that changes as prose is delivered. Final_Targets are authoritative; the derived mean is evidence, not law. |
+| Mass-edit all `ArcEntry.estimated_words` | It would encode a quota the prose does not follow, create needless baseline churn, and obscure the estimates' real job in same-POV and movement planning. |
+| Mark Chapter 118 repaired because the overall budget passes | Its defect is emotional under-inhabitation, not manuscript arithmetic. It requires prose and a new human finding. |
+
+### Required synchronization
+
+| Record | Required action |
+|---|---|
+| `planning/arc-outline.md` | Extend authority through `DEC-021`; replace the obsolete band gate with the contextual safeguard; retain all ArcEntry values, including Chapter 118's 1,400 estimate. |
+| `planning/arc-changes.md` | Record the amendment and Chapter 118 repair atomically; supersede rather than execute the mass re-budget obligation. |
+| `planning/editorial-log.md` | Resolve `EDITORIAL-LENGTH-BAND-MANUSCRIPT-001`; after prose revision, re-review Chapter 118 and rerun the affected revision and movement gates without editing historical records. |
+| `planning/gate-results.md` | Record a new Chapter 118 objective rerun after its declared count is synchronized. |
+| `requirements.md` | No text change: Requirement 15.9 already prohibits chapter-length quotas as gate logic, and the objective limits remain in Requirements 2, 11, and 12. |
+| `tasks.md` | Change task 13.6 only after a new passing movement gate exists; leave task 14 blocked by the separate Discovery evidence gap. |
+| `chapters/aftermath-coda/aftermath-coda-118-tuesday-kettle-on.md` | Expand only within clause 6's craft and continuity envelope; retain `exploratory`. |
+
+---
+
+## DEC-022 — House spelling standard and the voice-separation obligation
+
+- **Task:** Author-directed quality pass following the full status review; input to every remaining
+  drafting task and to tasks 14, 15, 17, and 18
+- **Date:** 2026-09-18
+- **State:** `binding`; editorial and craft authority. It supersedes nothing and creates no canon.
+- **Selected:** Record one spelling standard so the remaining sixty-four chapters inherit it, and record
+  the voice-separation obligation as a named open craft debt rather than allowing it to be absorbed into
+  a movement pass.
+
+### Clause 1 — One house spelling standard
+
+The manuscript is set in a British county and uses British vocabulary throughout: car park, windscreen,
+greaseproof paper, boot, ring road, sterling. It had no recorded orthographic standard, and the delivered
+prose mixed forms inside single chapters, including *neighbour relief* and *a neighbor came through the
+back garden* on the same page of Chapter 12.
+
+The standard is **Oxford British**, applied to all prose and dialogue:
+
+| Class | Standard | Notes |
+|---|---|---|
+| Verb endings | `-ize`, `-ization` | *authorize, organize, recognize, summarize, synchronize, standardize, apologize*. This is the dominant delivered form and is fully British under Oxford style. |
+| Always `-ise` | unchanged | *advertise, arise, compromise, devise, exercise, improvise, premise, promise, revise, supervise, surprise, expertise* are not `-ize` verbs and are never converted. |
+| `-our` | `colour, favour, neighbour` | including *neighbouring* |
+| `-ce` nouns | `licence, defence, practice` | the verbs remain *license, defend, practise*: **a licence** but **licensed radio traffic**, **years of practice** but **a practised outline** |
+| Single-`l` stems | `enrol, enrolment` | *enrolled* and *enrolling* keep the doubled consonant |
+| Doubled before suffix | `labelled, travelled, signalling, cancelled` | |
+| Other | `grey, metre, programme, catalogue, towards, judgment` | *judgment* is retained without the medial `e` in the legal register the manuscript uses throughout |
+
+Fifty-five replacements across twenty-five files plus nineteen `toward` corrections brought the delivered
+manuscript to this standard. Every future chapter is drafted to it, and a mixed form is a copyedit defect
+rather than a matter of taste.
+
+### Clause 2 — The voice-separation obligation is a named debt
+
+`DEC-018` clause 7 requires voice separation carried by syntax, rhythm, paragraph shape, and attention
+rather than by domain vocabulary. The current manuscript satisfies that clause for Julian Adebayo and for
+Safiya Mir. It does not satisfy it for Mara Venn and Nia Calder, whose delivered narration measures at
+13.7 against 12.6 mean sentence length, 33 against 37 per cent short sentences, 33 against 30 per cent
+single-sentence paragraphs, and 2.31 against 2.05 appositive `which` clauses per thousand words. Four
+independent close reads reached the same conclusion from the prose.
+
+The voice pass performed under `ARC-CHANGE-VOICE-SEPARATION-001` removed the shared abstract epigrams and
+assigned each retained construction to one narrator. That was necessary and is not sufficient, and the
+difference matters enough to record: the epigrams were the symptom, and the shared assert-then-limit
+paragraph rhythm is the defect.
+
+The obligation is therefore:
+
+1. **Nia Calder's narration is rewritten at paragraph scale before Mindwars drafting begins.** She holds
+   fourteen of the fifty-one Mindwars chapters, so the cost of this pass roughly doubles once they exist.
+   She reaches conclusions through sequence, consequence, sound, and load rather than through the
+   Anchor's assert-then-limit construction.
+2. **Her warm observational `which` clauses are preserved.** *Which is his entire vocabulary for that
+   sort of thing* and *the hold music, which is eleven seconds long* are assets and are not the defect.
+   `DEC-019` clause 12 is the standing precedent: a counting-driven cull of this construction was
+   attempted, failed verification, and was withdrawn.
+3. **No numeric target governs any of it.** The measurements above are diagnostics that located a defect
+   a reader had already found. Under Requirement 12.12, global invariant 25, and `DEC-021`, no checker
+   scores voice and no per-chapter figure determines a gate.
+4. **The Discovery movement gate stays `revision` until a human reread finds the two registers
+   separable.** Task 14 remains blocked on this finding, and no Discovery chapter returns to `approved`
+   before it clears.
+
+### Clause 3 — Two standing craft cautions for the undrafted movements
+
+Recorded because both were found by reading and both will recur at volume if unnamed.
+
+1. **Endings must sometimes establish rather than exclude.** Thirty-eight of sixty-four delivered chapters
+   close on a paragraph containing a negation, and the null result is the book's epistemology. It is
+   defensible and it has become the only ending shape the manuscript reaches for. Across Chapters 62–128,
+   a substantial share of endings must leave something established, arrived, refused aloud, or physically
+   changed.
+2. **Bodies are owed across 62–112.** `DEC-020` clause 5 already requires this. The delivered manuscript
+   places almost nobody in physical jeopardy after Chapter 17, and Chapter 57 — an attempted unauthorized
+   write into a person who had refused — needed a body added retrospectively. Fifty-one chapters of an
+   undeclared war cannot be meetings and memoranda.
+
+### What this decision does not touch
+
+Everything preserved by `DEC-018`, `DEC-019`, amended `DEC-020`, and `DEC-021` remains preserved. This
+decision creates no canon fact, extension, timeline, reveal, motif, or literal-phrase constraint; changes
+no POV identity, load, or movement allocation; sets no length target; and does not authorize Chapter 62.
+
+### Rejected alternatives
+
+| Alternative | Why rejected |
+|---|---|
+| Normalize to `-ise` throughout | Roughly 105 delivered instances are `-ize` against 20 `-ise`. Oxford British `-ize` with *colour* and *licence* is internally coherent and needed a fifth of the edits, with correspondingly less risk to quoted matter. |
+| Leave spelling to a copyedit before release | Sixty-four chapters are undrafted. An unrecorded standard guarantees the same inconsistency is written twice more before anyone looks. |
+| Strip the appositive `which` from Nia to force separation | Attempted once under `DEC-019` clause 12, failed verification, withdrawn. Most instances carry genuine retrospective judgment or warmth; removing them would damage the prose and would not supply rhythm. |
+| Pass the Discovery movement gate on the strength of the fifteen repairs | The repairs are real and the clause-7 criterion still fails. Recording a pass would be the precise failure the editorial log exists to prevent, and it would take the pressure off the one fix that most improves the book. |
+| Defer the Nia pass until after Mindwars is drafted | The pass is cheapest now. Deferring it converts an eighteen-chapter repair into a thirty-two-chapter one. |

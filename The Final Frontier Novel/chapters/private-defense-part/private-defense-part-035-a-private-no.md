@@ -21,7 +21,7 @@ It cannot give her a public one.
 
 I had built the boundary at the scale of one closed door, because that is the scale at which the person behind it controls the answer. The field does not stay at that scale.
 
-Julian sent me a scan of one page from the Consortium's draft enrollment framework, a shaded paragraph marked beneath the proposed signature line and no covering argument, which from him is a shout.
+Julian sent me a scan of one page from the Consortium's draft enrolment framework, a shaded paragraph marked beneath the proposed signature line and no covering argument, which from him is a shout.
 
 *Channel support functions enabled by default.*
 
@@ -53,7 +53,7 @@ We could build more rooms. Hospitals could install them; people with money could
 
 "No technical specification?"
 
-"None. A service concept. Benefits first, operations described as support. They will say enrollment is voluntary."
+"None. A service concept. Benefits first, operations described as support. They will say enrolment is voluntary."
 
 "Access can be voluntary and the hidden acts still unchosen."
 

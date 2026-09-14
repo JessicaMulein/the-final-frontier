@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []
 hook: "What she is receiving is addressed to no one, which means someone is simply being overheard."
-words: 1179
+words: 1182
 length_class: normal
 status: revised
 ---
@@ -23,7 +23,7 @@ The afternoon took my last respectable alternative, which was a machine: somebod
 
 So I stopped guessing at content and tested the structure instead.
 
-Anything built to send information makes concessions to a receiver. A preamble, so the receiver can find the start. Synchronisation, so it can lock. Redundancy, so it survives a bad second. Framing, addressing, error checks, repeats. The intended listener leaves a negative shape in a transmission the way a keyhole tells you about a key.
+Anything built to send information makes concessions to a receiver. A preamble, so the receiver can find the start. Synchronization, so it can lock. Redundancy, so it survives a bad second. Framing, addressing, error checks, repeats. The intended listener leaves a negative shape in a transmission the way a keyhole tells you about a key.
 
 This had none of that furniture. No preamble. No framing. No address. Nothing repeated for the sake of survival, and nothing in it that anticipated being received at all. The raw field existed before my reconstruction and without the slightest regard for it, and my apparatus was the only object in the whole arrangement behaving like a receiver.
 
@@ -37,7 +37,7 @@ The distinction survived every configuration worth running and vanished the mome
 
 I had spent three days treating this as an emitted signal, and I had known better since the ninth of December.
 
-That is the honest accounting. On the ninth I stood over an equipment log with the cap off the pen and left the clause about a person out, and told myself it was rigour, and it was partly rigour. Two days of controls had since removed every machine on site, every cycle in the sky, and every stage of my own chain. There was nothing left to be rigorous with. The sentence I had refused to write was now the only available description of the data.
+That is the honest accounting. On the ninth I stood over an equipment log and left the clause about a person out, and told myself it was rigour, and it was partly rigour. Two days of controls had since removed every machine on site, every cycle in the sky, and every stage of my own chain. There was nothing left to be rigorous with. The sentence I had refused to write was now the only available description of the data.
 
 There was no correspondent and there had never been a message. There was a person inside an ordinary morning who had done nothing whatever in our direction, and who was being overheard.
 
@@ -45,7 +45,7 @@ That made the eight seconds worse rather than stranger. Her morning reached reso
 
 And I could do nothing about any of it. The rack had no exciter, no driver, no output path, and no hidden return. I could not ask who she was, could not tell her she had been heard, could not put the question of permission to the only person entitled to answer it. Receive-only had stopped being a limitation around the discovery and become the condition under which it incurred a debt.
 
-I had also been pleased with myself all week: clean blank control, reproducible reconstruction, alternatives dying in the right order. Pleasure had been moving through that work the entire time, wearing discipline's coat.
+And I had enjoyed the week. Clean blank control, reproducible reconstruction, alternatives dying in the right order. Something had been moving through that work the entire time wearing discipline's coat, and I had let it, because it did the hours for me.
 
 Ravi stood by the door with his bag already on his shoulder. "Do we stop acquisition?"
 

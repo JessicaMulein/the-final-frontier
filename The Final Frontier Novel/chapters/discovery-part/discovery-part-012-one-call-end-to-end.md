@@ -43,17 +43,17 @@ She stopped answering. I used her name once, then again. The second time she sai
 
 I counted with her. At first she matched me and then ran ahead, and I slowed her down. She lost the rhythm when the dog started at the front door. I told her to leave the dog, keep her hands where they were, and listen only for my count. She said her wrists hurt. I told her that hurt was allowed and stopping was not, not yet.
 
-There were other calls in the room. A lift alarm chimed twice and then a third time, in the way lift alarms do when nobody is trapped. Someone behind me asked for a unit status and Dev answered it without being asked to. The queue added two items and changed color at the edge of my screen, and the plastic of my headset arm was warm where I had been holding it against my jaw.
+There were other calls in the room. A lift alarm chimed twice and then a third time, in the way lift alarms do when nobody is trapped. Someone behind me asked for a unit status and Dev answered it without being asked to. The queue added two items and changed colour at the edge of my screen, and the plastic of my headset arm was warm where I had been holding it against my jaw.
 
 I kept counting.
 
-The ambulance called approaching. I told them the door might be locked. The girl heard me and said it was. Could she reach the latch without leaving her father? No. I told the crew. They requested police for entry and cancelled the request when a neighbor came through the back garden.
+The ambulance called approaching. I told them the door might be locked. The girl heard me and said it was. Could she reach the latch without leaving her father? No. I told the crew. They requested police for entry and cancelled the request when a neighbour came through the back garden.
 
-The neighbor entered the call as a man's voice asking what to do.
+The neighbour entered the call as a man's voice asking what to do.
 
 "Take over compressions," I said. "Same place. Same pace. She'll show you."
 
-The girl did not want to move her hands. For eight seconds—call-clock seconds, not felt ones—she went on working while the neighbor knelt on the other side and I repeated the transfer twice. Then he took over. His first compressions were too shallow and I corrected him. The girl cried once, sharply, as if the sound had surprised her, and then told me the ambulance was outside.
+The girl did not want to move her hands. For eight seconds—call-clock seconds, not felt ones—she went on working while the neighbour knelt on the other side and I repeated the transfer twice. Then he took over. His first compressions were too shallow and I corrected him. The girl cried once, sharply, as if the sound had surprised her, and then told me the ambulance was outside.
 
 "Go open the door now," I said.
 

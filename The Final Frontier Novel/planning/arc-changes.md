@@ -8,9 +8,13 @@ This document is the active audit trail for changes proposed after the Approved 
 
 ## Initialization state
 
-**Active `ArcChange` records: 3.**
+**Active `ArcChange` records: 9.**
 
-`ARC-CHANGE-REVISION-001` and `ARC-CHANGE-REVISION-002` are the second and third post-baseline changes, both dated 2026-09-18 and both `in-progress`. They authorize the author-directed revision pass on delivered Chapters 1–46 under `DEC-018` and the supporting canon that pass requires. Their planning obligations are complete; their Chapter_File obligations are open and belong to later waves. See [`ARC-CHANGE-REVISION-001`](#arc-change-revision-001--prose-revision-of-delivered-chapters-146-under-dec-018) and [`ARC-CHANGE-REVISION-002`](#arc-change-revision-002--dec-018-supporting-canon).
+`ARC-CHANGE-VOICE-SEPARATION-001` is the ninth post-baseline change and is `complete`. It closes the Discovery current-evidence gap, repairs fifteen chapter revisions including two authorization-continuity gaps at Chapters 16 and 27, rebuilds one duplicated warmth scene, gives Chapter 57 a physical body, and applies one house spelling standard across the delivered manuscript. It changes no `ArcEntry`, canon fact, motif, reveal, POV, or movement allocation, and it leaves the `POV-MARA`/`POV-NIA` voice-separation finding open as the sole blocker on task 14.
+
+`ARC-CHANGE-REVISION-001` and `ARC-CHANGE-REVISION-002` are the second and third post-baseline changes, both dated 2026-09-18 and both `in-progress`. They authorize the author-directed revision pass on delivered Chapters 1–46 under `DEC-018` and the supporting canon that pass requires. Their Private Defense and planning work is complete; current Discovery chapter review, objective reruns, and movement-gate obligations remain open. See [`ARC-CHANGE-REVISION-001`](#arc-change-revision-001--prose-revision-of-delivered-chapters-146-under-dec-018) and [`ARC-CHANGE-REVISION-002`](#arc-change-revision-002--dec-018-supporting-canon).
+
+`ARC-CHANGE-LENGTH-GOVERNANCE-001` is the eighth post-baseline change and is `complete`. It records `DEC-021`, closes the obsolete mass re-budget by supersession rather than performance, authorizes and synchronizes the Chapter 118 craft expansion, and carries the passing reruns for the nine-finding revision pass and task 13.6. It changes no `ArcEntry`, canon fact, motif, POV, reveal, or movement allocation.
 
 The Approved Baseline remains `BASELINE-FINAL-FRONTIER-PROVISIONAL` with `state: approved` in [`arc-outline.md`](arc-outline.md). Task 10.2 established that baseline. `ARC-CHANGE-DISCOVERY-001` is the first post-baseline correction: task 12.7 aligned the source/casualty Reveal record with the current Chapter 23 prose rather than forcing artificial withholding, without changing prose, canon identity, causation, motif placement, POV load, or movement architecture.
 
@@ -709,8 +713,8 @@ An author-commissioned craft review of the delivered manuscript returned nine `r
     {
       "document": "planning/arc-outline.md",
       "required_change": "Re-budget the estimated_words value of every normal-class ArcEntry into the 1050-1200 clause 10 band, keeping every same-POV run at or under 3600 Prose_Words and every outlier estimate at its declared outlier_purpose.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Closed by supersession rather than performance: DEC-021 clause 5 and ARC-CHANGE-LENGTH-GOVERNANCE-001 retire mass normalization as a conflicting formula. No ArcEntry estimated_words value changed; existing estimates remain planning metadata for movement scale and same-POV run safety."
     },
     {
       "document": "planning/arc-outline.md",
@@ -745,8 +749,8 @@ An author-commissioned craft review of the delivered manuscript returned nine `r
     {
       "document": "planning/gate-results.md",
       "required_change": "Record the objective reruns required as each revised chapter and batch is delivered, including the Chapter_Local_Gate word-count and status-agreement checks for chapters 43-46.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Objective reruns recorded in planning/gate-results.md: Chapters 43-49 chapter-local and batch backfill results, the Chapter 34, 44, 49 and 53 reruns, and the 30-35, 43-49 and 50-55 batch reruns. Chapters 43-46 now pass word-count and status-agreement checks."
     },
     {
       "document": "planning/editorial-log.md",
@@ -931,104 +935,104 @@ An author-commissioned craft review of the delivered manuscript returned nine `r
     {
       "document": "chapters/private-defense-part/private-defense-part-030-something-came-in.md",
       "required_change": "Revise chapter 30 against DEC-018 clauses 1-10, and develop the exposed-persons list and Ravi Anand's objection under CF-PRIVATE-EXPOSED-PERSONS-LIST; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 30 revised; opens on the running tap, the exposed-persons list is created and contested by Ravi on the page, and the Ruth scene supplies clause 9 warmth. GATE-EDITORIAL-PRIVATE-DEFENSE-030 pass; header and ArcEntry both revised at 1,169 Prose_Words."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-031-copper-and-quiet.md",
       "required_change": "Revise chapter 31 against DEC-018 clauses 1-10; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 31 revised; MOT-COPPER-01 keeps its relief-and-measurement function and Nia forces the page to be dated and annotated. GATE-EDITORIAL-PRIVATE-DEFENSE-031 pass; 1,148 Prose_Words."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-032-a-handle-on-the-inside.md",
       "required_change": "Revise chapter 32 against DEC-018 clauses 1-10, and remove any explicit statement of the CUT-SEALED-ROOM-AND-A-LIFE contradiction; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 32 revised; the sealed-enclosure refusal is retained and no explicit statement of the CUT-SEALED-ROOM-AND-A-LIFE contradiction remains. GATE-EDITORIAL-PRIVATE-DEFENSE-032 pass; 1,170 Prose_Words."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-033-reception-transmission-consent.md",
       "required_change": "Revise chapter 33 against DEC-018 clauses 1-10; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 33 revised; the thesis opening and the Hook-echo ending are both gone, and Dalby now extracts a concession and opens the named-individuals inquiry. GATE-EDITORIAL-PRIVATE-DEFENSE-033 pass; 1,171 Prose_Words."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-034-what-a-room-costs.md",
       "required_change": "Revise chapter 34 against DEC-018 clauses 1-10, and remove Nia's explicit statement of the CUT-SEALED-ROOM-AND-A-LIFE contradiction; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 34 revised; the spoken contradiction is removed and the cost is paid on the corridor floor, with warmth through the supervisor and Joss. GATE-EDITORIAL-PRIVATE-DEFENSE-034 pass; 1,116 Prose_Words after the voice-separation repair."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-035-a-private-no.md",
       "required_change": "Revise chapter 35 against DEC-018 clauses 1-10, and carry the car at the gate forward under CF-PRIVATE-CONSORTIUM-ADVANCE-PARTY without resolving it inside the chapter's final line; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 35 revised; the car at the gate is carried forward as counted freight rather than resolved in the final line, and Ravi announces his transfer request. GATE-EDITORIAL-PRIVATE-DEFENSE-035 pass; 1,210 Prose_Words, with the ten-word clause 10 overage recorded in EDITORIAL-PRIVATE-DEFENSE-BATCH-030-035-003 rather than trimmed."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-036-electronic-speech-pairings.md",
       "required_change": "Revise chapter 36 against DEC-018 clauses 1-10, connect the demonstration room to the Chapter 35 arrival under CF-PRIVATE-CONSORTIUM-ADVANCE-PARTY, and establish the private two-person layer class through Ada and Lena Ferris under CF-PRIVATE-TWO-PERSON-LAYER-CLASS; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 36 revised; the gate visitor book connects the demonstration room to the Chapter 35 arrival, and the Ferris two-person layer class is established with no connection to Safiya. GATE-EDITORIAL-PRIVATE-DEFENSE-036 pass; 1,186 Prose_Words."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-037-the-send-gate-holds.md",
       "required_change": "Revise chapter 37 against DEC-018 clauses 1-10; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 37 revised; the Hook echo is gone, Ada challenges the observation resolution, and Ravi's single Thursday is expressly not a series. GATE-EDITORIAL-PRIVATE-DEFENSE-037 pass; 1,159 Prose_Words."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-038-two-dispatchers-one-incident.md",
       "required_change": "Revise chapter 38 against DEC-018 clauses 1-10; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 38 revised; the fire benefit stays bounded, Tomas's argument for recording is left unanswered, and the enrollment clock carries a dated external consequence. GATE-EDITORIAL-PRIVATE-DEFENSE-038 pass; 1,172 Prose_Words."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-039-a-benefit-becomes-a-platform.md",
       "required_change": "Revise chapter 39 against DEC-018 clauses 1-10; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 39 revised; the five definitions are accepted without amendment and the interface specification is withheld. GATE-EDITORIAL-PRIVATE-DEFENSE-039 pass; 1,171 Prose_Words."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-040-first-calibration.md",
       "required_change": "Revise chapter 40 against DEC-018 clauses 1-10, and remove any explicit statement of the CUT-CALIBRATION-AND-THE-UNCALIBRATED contradiction; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 40 revised; no explicit statement of the CUT-CALIBRATION-AND-THE-UNCALIBRATED contradiction remains, and Ravi's handwritten transfer delivers the Anchor cost. GATE-EDITORIAL-PRIVATE-DEFENSE-040 pass; 1,187 Prose_Words."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-041-two-interpreters.md",
       "required_change": "Revise chapter 41 against DEC-018 clauses 1-10, and carry the private two-person layer class through the Ferris pair's working practice under CF-PRIVATE-TWO-PERSON-LAYER-CLASS; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 41 revised; the Ferris pair carry the two-person layer class as paid professional practice under CF-PRIVATE-TWO-PERSON-LAYER-CLASS. GATE-EDITORIAL-PRIVATE-DEFENSE-041 pass; 1,054 Prose_Words."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-042-not-a-conversation.md",
       "required_change": "Revise chapter 42 against DEC-018 clauses 1-10, and remove Nia's explicit statement of the CUT-CALIBRATION-AND-THE-UNCALIBRATED contradiction; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 42 revised; the explicit contradiction statement is gone, the single enumerated absence is the chapter's own subject, and the irony moves onto other people at the close. GATE-EDITORIAL-PRIVATE-DEFENSE-042 pass; 1,057 Prose_Words."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-043-a-term-sheet-and-a-pen.md",
       "required_change": "Revise chapter 43 against DEC-018 clauses 1-10 and correct the declared words value to the actual Prose_Body token count; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 43 revised and its declared count corrected; Dalby's ambulance argument stands unanswered. GATE-EDITORIAL-PRIVATE-DEFENSE-043 pass; 1,692 Prose_Words as a declared long outlier."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-044-a-clause-he-can-constrain.md",
       "required_change": "Revise chapter 44 against DEC-018 clauses 1-10, remove any explicit statement of the CUT-CONSTRAINABLE-CLAUSE contradiction, and correct the declared words value to the actual Prose_Body token count; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 44 revised and its declared count corrected; no explicit statement of the CUT-CONSTRAINABLE-CLAUSE contradiction remains and the reserved reader-instruction formula was removed from Julian's narration. GATE-EDITORIAL-PRIVATE-DEFENSE-044 pass; 1,052 Prose_Words."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-045-page-nine.md",
       "required_change": "Revise chapter 45 against DEC-018 clauses 1-10, remove any explicit statement of the CUT-CONSTRAINABLE-CLAUSE contradiction, keep the declared microchapter compression, and correct the declared words value to the actual Prose_Body token count; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 45 revised and its declared count corrected; the declared microchapter compression is retained at 431 Prose_Words and GATE-EDITORIAL-PRIVATE-DEFENSE-045 passes. Reasoned deviation from the literal obligation: Mara's recognition of the gap between the initialed clause and the specification is retained rather than removed, because she is holding both documents and suppressing her reading would be the artificial withholding Requirements 2.13 and 2.14 forbid. The cut's irony belongs to Julian and is preserved, since the chapter ends on him stopping writing. Recorded in EDITORIAL-PRIVATE-DEFENSE-LOCAL-045 and EDITORIAL-REVISION-003-FOLLOWUP-001."
     },
     {
       "document": "chapters/private-defense-part/private-defense-part-046-nothing-to-strike.md",
       "required_change": "Revise chapter 46 against DEC-018 clauses 1-10 and correct the declared words value to the actual Prose_Body token count; set the Chapter_Header status to revised in step with its ArcEntry.",
-      "status": "pending",
-      "evidence_ref": null
+      "status": "complete",
+      "evidence_ref": "Chapter 46 revised and its declared count corrected; the Hook-echo ending is replaced by nodes already in manufacture while the parties agree about permission. GATE-EDITORIAL-PRIVATE-DEFENSE-046 pass; 1,054 Prose_Words."
     }
   ],
   "approval": {
@@ -1182,3 +1186,764 @@ Two boundaries are worth restating outside the record, because they are the ones
 ### Why both records are `in-progress` rather than `complete`
 
 Every planning and canon obligation above is `complete` with an evidence reference. The open obligations are all Chapter_File work and the objective and editorial reruns that follow it: revising Chapters 1–29 and 30–46, re-budgeting `estimated_words`, demoting Chapters 1–29 to `revised` as each is touched, correcting the declared `words` of Chapters 43–46, and re-recording the Discovery movement Editorial_Gate. Under the status rules above, partial synchronization is never approval, so neither record may reach `complete` and no revised chapter may return to `approved` until those obligations carry evidence.
+
+## `ARC-CHANGE-REVISION-003` — Chapter 52 horizon synchronization and third-party deposit authority
+
+Task 5.6 moved `REVEAL-CASUALTY-CONSEQUENCE` from Chapter 53 to Chapter 52 so the release chapter would match its owning `POV-NIA`, and the Arc Outline recorded the remaining beat-structure question as a residual matter for human decision rather than record repair. The Chapter 52 `record_horizon` was never synchronized to that move: it still said Nia knew only that the logs existed and had not been told what the timestamps established, while the reveal records require her to own and release the documentary exoneration in her own chapter. Drafting Chapter 52 made the contradiction operative rather than theoretical, because no chapter can both release the finding and be barred from knowing it.
+
+The same review found a second problem that the checker cannot see. Chapter 51 establishes that a depositor may deposit only their own account, and Chapter 54 enforces that rule against Mara by refusing Ravi Anand's notebook. Chapter 52 as first drafted let Nia deposit and set release conditions on the county's dispatch review, which is a third party's record containing a dead man's clinical details. That is the precise act the Trust exists to refuse, so the institution contradicted itself at the point its credibility depends on.
+
+```json record=ArcChange schema=1
+{
+  "arc_change_id": "ARC-CHANGE-REVISION-003",
+  "date": "2026-09-12",
+  "prior_state": {
+    "ArcEntry_52_record_horizon_knowledge_limit": "Nia composes this as one of the first rolling witness deposits accepted after formation and knows only her own account, her own conditions, and that the logs exist; she has not been told what the timestamps establish, and she still refuses both accounts of where her certainty came from.",
+    "dispatch_review_deposit_authority": "Chapter 52 prose had Nia deposit the county dispatch review herself, under one shared reference with her sealed account, on her own release conditions",
+    "chapter_52_condition_two_scope": "unqualified trigger on any published account, official summary, history, submission, or product document identifying the incident as mental intrusion, with no definition of published and no identification threshold",
+    "chapter_53_holding_description": "one sealed envelope and one dispatch review under the same reference, single depositor",
+    "chapter_53_local_heading_constraint": "a local heading appears in no other index, matches no other search, and is invisible to every future researcher",
+    "chapter_54_checksum_verification": "archivist compared eleven of sixty-four characters and recorded content corroboration described as better than a date"
+  },
+  "revised_state": {
+    "ArcEntry_52_record_horizon_knowledge_limit": "Nia composes this as one of the first rolling witness deposits accepted after formation and owns the documentary release: nobody explains the closed review to her, so she reads it herself and establishes that her routing did not cause the death and that no available routing would have prevented it. She knows the review is silent on where her certainty came from, that she cannot compel release of the county's certified copy, and she still refuses both origin accounts.",
+    "dispatch_review_deposit_authority": "the archivist refuses the review from Nia because it is a third party's record; the county records office issues a certified copy direct to the Trust under its own authority as a separate accession with a separate reference, deposited and conditioned by the county",
+    "chapter_52_condition_four": "negative control only: Nia's account is not released unless the county's certified copy is released beside it, and she cannot compel the county's copy to open",
+    "chapter_52_condition_two_scope": "published or laid before a public body, and identified as hers by name or by particulars amounting to her name; Nia states on the page that Chapter 47's internally circulated Case B binder is deliberately outside the trigger",
+    "chapter_53_holding_description": "two accessions with two depositors, bound by her condition rather than by the catalogue",
+    "chapter_53_local_heading_constraint": "only scheme authority headings are exported in the quarterly accessions return that county and national listings harvest; local headings and scope notes remain in the Trust's own catalogue and are reachable only by direct enquiry",
+    "chapter_54_checksum_verification": "archivist runs the checksum herself and matches all sixty-four characters in blocks of eight, then records that content corroboration is not a date"
+  },
+  "rationale": "Two findings could not be fixed in prose alone. The Chapter 52 horizon contradicted the authoritative reveal ownership that task 5.6 established, so the stale planning value had to move rather than the prose. The third-party deposit problem required an actual lawful mechanism, because the Trust cannot enforce depositor ownership against Mara in Chapter 54 while suspending it for Nia in Chapter 52 without losing the moral credibility the whole record thread rests on. The scoped release trigger, the two-accession catalogue, the realistic index-export constraint, and the corrected checksum verification are the synchronization consequences of those two decisions. No reveal owner, release chapter, payoff window, motif assignment, cross-cut, timeline, or origin-account status changed, and the dispatch review still sits beside Nia's account as the Arc Outline requires.",
+  "affected_chapters": [52, 53, 54],
+  "affected_documents": [
+    "planning/arc-outline.md",
+    "planning/arc-changes.md",
+    "planning/editorial-log.md",
+    "planning/gate-results.md",
+    "chapters/private-defense-part/private-defense-part-052-on-my-own-conditions.md",
+    "chapters/private-defense-part/private-defense-part-053-cleared-and-not-relieved.md",
+    "chapters/private-defense-part/private-defense-part-054-older-than-the-archive.md"
+  ],
+  "synchronization_obligations": [
+    {
+      "document": "planning/arc-outline.md",
+      "required_change": "Replace the stale Chapter 52 record_horizon knowledge_limit with one that matches Nia's authoritative ownership and release of the documentary exoneration, while preserving her silence on authorship and her refusal of both origin accounts.",
+      "status": "complete",
+      "evidence_ref": "planning/arc-outline.md, ArcEntry chapter 52 record_horizon.knowledge_limit"
+    },
+    {
+      "document": "chapters/private-defense-part/private-defense-part-052-on-my-own-conditions.md",
+      "required_change": "Have the archivist refuse the third-party review, route the certified copy through the county's own authority as a separate accession, reduce condition four to negative control, scope condition two so the Chapter 47 binder is deliberately excluded, and replace the procedural closing beat.",
+      "status": "complete",
+      "evidence_ref": "chapters/private-defense-part/private-defense-part-052-on-my-own-conditions.md, condition two scope passage, condition four, the two-conversation passage, and the closing three paragraphs"
+    },
+    {
+      "document": "chapters/private-defense-part/private-defense-part-053-cleared-and-not-relieved.md",
+      "required_change": "Describe two accessions and two depositors, remove the duplicated Chapter 52 timestamp proof and repeated review-field enumeration, and replace the absolute invisible-local-heading claim with the authority-heading export constraint.",
+      "status": "complete",
+      "evidence_ref": "chapters/private-defense-part/private-defense-part-053-cleared-and-not-relieved.md, opening two paragraphs, the compressed review paragraph, and the local-heading passage"
+    },
+    {
+      "document": "chapters/private-defense-part/private-defense-part-054-older-than-the-archive.md",
+      "required_change": "Replace the partial eleven-character checksum comparison with full verification and drop the claim that content corroboration is better than a date.",
+      "status": "complete",
+      "evidence_ref": "chapters/private-defense-part/private-defense-part-054-older-than-the-archive.md, procedure-sheet paragraph"
+    },
+    {
+      "document": "planning/canon-bible.md",
+      "required_change": "Confirm that no CanonFact, NovelExtension, TimelineEntry, or Reveal record requires a value change: CF-CASE-ZERO-LOGS remains Nia's attributed first-person documentary account, REVEAL-CASUALTY-CONSEQUENCE keeps POV-NIA ownership with release 52 and window 50-55, EXT-TRUST-GOVERNANCE already requires witness-controlled conditions and provenance rather than truth, and TL-PRIVATE-RECORD-DEPOSITS keeps its participants and uncertainty notes.",
+      "status": "complete",
+      "evidence_ref": "planning/canon-bible.md reviewed with no value change required; CF-CASE-ZERO-LOGS, REVEAL-CASUALTY-CONSEQUENCE, EXT-TRUST-GOVERNANCE, EXT-APRIL-RECORD-ALTERATION, and TL-PRIVATE-RECORD-DEPOSITS all already permit the revised state, and the county's own deposit authority is an ordinary institutional mechanism that creates no new canon record"
+    },
+    {
+      "document": "planning/arc-changes.md",
+      "required_change": "Record this change as a typed ArcChange carrying exact prior and revised state, every affected document, an approval object, and completion only once every other obligation holds evidence.",
+      "status": "complete",
+      "evidence_ref": "planning/arc-changes.md, the ARC-CHANGE-REVISION-003 record and its closing note on what the change deliberately does not do"
+    },
+    {
+      "document": "planning/motif-ledger.md",
+      "required_change": "Confirm that MOT-RECORD-01 remains assigned only to Chapter 51 and that no new literal phrase enters Chapter File scan scope.",
+      "status": "complete",
+      "evidence_ref": "planning/motif-ledger.md reviewed with no value change required; MOT-RECORD-01 stays at Chapter 51 as the private insistence event, and Chapters 52-54 carry empty motif_events"
+    },
+    {
+      "document": "planning/editorial-log.md",
+      "required_change": "Record the editorial findings that produced this change and the craft findings resolved in the same pass.",
+      "status": "complete",
+      "evidence_ref": "planning/editorial-log.md, EDITORIAL-PRIVATE-DEFENSE-050-055 findings"
+    },
+    {
+      "document": "planning/gate-results.md",
+      "required_change": "Record the six Chapter_Local_Gate results and the Chapters 50-55 drafting-batch result for task 13.4 after the repair pass.",
+      "status": "complete",
+      "evidence_ref": "planning/gate-results.md, task 13.4 objective drafting gates section"
+    }
+  ],
+  "approval": {
+    "approved_by": "Author instruction during the Chapters 50-55 review",
+    "approved_at": "2026-09-12T00:00:00Z",
+    "approval_record": "Author instruction: please make the repair pass, following the reviewed findings for Chapters 51-53 and the technical correction in Chapter 54."
+  },
+  "status": "complete",
+  "completed_at": "2026-09-12T00:00:00Z"
+}
+```
+
+### What this change deliberately does not do
+
+It does not move a reveal, an owner, a release chapter, or a payoff window. It does not resolve either origin account: Nia still refuses both, Julian still enters the adversary heading as an inference he records as an inference, and Mara's conviction remains unvoiced here. It does not make the Trust an adjudicator; the county's certified copy is deposited on the county's terms precisely so that no custodian and no witness can be shown controlling another party's record. And it does not convert Nia's release trigger into a device that fires offstage: she states the limit herself, names what it excludes, and accepts the cost.
+## `ARC-CHANGE-DEC-020-ANTI-FORMULA-001` — Contextual propulsion without a batch recipe
+
+The author approved softening `DEC-020` after identifying that its fixed remedies could create the same detectable pattern they were meant to prevent. The diagnosis remains binding; future prose is judged for cumulative propulsion, variety, consequence, and dramatic change without requiring each batch to display a prescribed set of devices.
+
+```json record=ArcChange schema=1
+{
+  "arc_change_id": "ARC-CHANGE-DEC-020-ANTI-FORMULA-001",
+  "date": "2026-09-13",
+  "prior_state": {
+    "DEC-020_clause_1": "no more than two deliberation-deadline endings per drafting batch",
+    "DEC-020_clause_2": "no three consecutive endings of one listed kind and a closed list treated as the legitimate ending kinds",
+    "DEC-020_clause_3": "at least one interrupted cut in every drafting batch of four or more chapters",
+    "DEC-020_clause_4": "at least one materially shorter chapter in every drafting batch of five or more chapters",
+    "DEC-020_clause_7": "at least one scene outside an institutional interior in every drafting batch",
+    "DEC-020_clause_8": "no three consecutive document, drafting, or deliberation chapters",
+    "Requirement_15_9": "fixed occurrence, adjacency, ending-kind, length, and setting thresholds decide the batch finding",
+    "task_application": "tasks 13.5, 13.6, and 15 operationalize the thresholds as a repeated batch checklist"
+  },
+  "revised_state": {
+    "DEC-020_clauses_1_through_4_7_8": "the diagnosis and qualitative principles stand; fixed occurrence and adjacency thresholds are withdrawn as acceptance conditions",
+    "ending_kinds": "illustrative rather than exhaustive or rotational",
+    "interrupted_cuts_short_chapters_and_setting_changes": "available when dramatically earned and never mandatory tokens",
+    "editorial_scale": "representative prose judged contextually across batch, movement, and manuscript without a numeric craft score",
+    "Requirement_15_9": "propulsion, variety, accumulation, and material state change are judged without a fixed count, adjacency limit, rotation, length quota, or setting quota",
+    "task_application": "tasks 13.5, 13.6, and 15 require anti-formula judgment rather than one of each technique"
+  },
+  "rationale": "The author explicitly rejected a rigid system and approved slight irregularity rather than a visible pattern. Mandatory interruption, microchapter, location, and ending slots would make future batches advertise an artificial construction. The amendment preserves consequence-bearing propulsion, meaningful change, bodily stakes, adversary agency, honest narration, and human review of accumulating prose tics while allowing the story to choose the strongest truthful shape.",
+  "affected_chapters": [56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128],
+  "affected_documents": [
+    "planning/decisions.md",
+    "planning/arc-changes.md",
+    "planning/editorial-log.md",
+    ".kiro/specs/The-Final-Frontier-novel/requirements.md",
+    ".kiro/specs/The-Final-Frontier-novel/tasks.md",
+    "planning/arc-outline.md",
+    "planning/canon-bible.md",
+    "planning/motif-ledger.md",
+    "planning/pov-roster.md",
+    "planning/voice-briefs.md",
+    "planning/gate-results.md"
+  ],
+  "synchronization_obligations": [
+    {
+      "document": "planning/decisions.md",
+      "required_change": "Amend DEC-020 without erasing its historical diagnosis; withdraw the fixed thresholds in clauses 1–4, 7, and 8 and state the contextual anti-formula application.",
+      "status": "complete",
+      "evidence_ref": "planning/decisions.md, DEC-020 amendment note dated 2026-09-13"
+    },
+    {
+      "document": ".kiro/specs/The-Final-Frontier-novel/requirements.md",
+      "required_change": "Replace Requirement 15.9's batch quotas with evidence-bearing contextual review and preserve Requirements 15.10 through 15.12 unchanged.",
+      "status": "complete",
+      "evidence_ref": ".kiro/specs/The-Final-Frontier-novel/requirements.md, Requirement 15.9"
+    },
+    {
+      "document": ".kiro/specs/The-Final-Frontier-novel/tasks.md",
+      "required_change": "Replace quota instructions in tasks 13.5, 13.6, and parent task 15 with anti-formula drafting and editorial guidance without changing task state.",
+      "status": "complete",
+      "evidence_ref": ".kiro/specs/The-Final-Frontier-novel/tasks.md, tasks 13.5, 13.6, and 15"
+    },
+    {
+      "document": "planning/editorial-log.md",
+      "required_change": "Append a prospective application note that preserves the historical findings and makes clear that their old counts no longer decide future pass or revision findings.",
+      "status": "complete",
+      "evidence_ref": "planning/editorial-log.md, Prospective application after the DEC-020 anti-formula amendment"
+    },
+    {
+      "document": "planning/arc-changes.md",
+      "required_change": "Record the author-approved amendment with exact prior and revised state, full future chapter scope, synchronization evidence, and completion metadata.",
+      "status": "complete",
+      "evidence_ref": "planning/arc-changes.md, ARC-CHANGE-DEC-020-ANTI-FORMULA-001"
+    },
+    {
+      "document": "planning/arc-outline.md",
+      "required_change": "Confirm that no ArcEntry purpose, hook, cross-cut, chronology, reveal, motif, POV, length class, or status changes solely because batch quotas were withdrawn.",
+      "status": "complete",
+      "evidence_ref": "planning/arc-outline.md reviewed; no DEC-020 quota is copied into an ArcEntry and no ArcEntry value changes"
+    },
+    {
+      "document": "planning/canon-bible.md",
+      "required_change": "Confirm that the amendment asserts no new CanonFact, NovelExtension, TimelineEntry, Reveal, mode rule, or evidence rule.",
+      "status": "complete",
+      "evidence_ref": "planning/canon-bible.md reviewed; no DEC-020 quota copy or canon value requires change"
+    },
+    {
+      "document": "planning/motif-ledger.md",
+      "required_change": "Confirm that no motif placement, function, representation mode, or literal phrase scope changes.",
+      "status": "complete",
+      "evidence_ref": "planning/motif-ledger.md reviewed; no value change required"
+    },
+    {
+      "document": "planning/pov-roster.md",
+      "required_change": "Confirm that no POV identity, knowledge position, dramatic function, movement coverage, or load changes.",
+      "status": "complete",
+      "evidence_ref": "planning/pov-roster.md reviewed; no value change required"
+    },
+    {
+      "document": "planning/voice-briefs.md",
+      "required_change": "Confirm that the existing distinct registers remain controlling and that anti-formula application changes no voice value.",
+      "status": "complete",
+      "evidence_ref": "planning/voice-briefs.md reviewed; no value change required"
+    },
+    {
+      "document": "planning/gate-results.md",
+      "required_change": "Confirm that no completed objective or editorial GateResult claims DEC-020 quota compliance and that no objective rerun is required solely for this human craft amendment.",
+      "status": "complete",
+      "evidence_ref": "planning/gate-results.md reviewed; no DEC-020 or Requirement 15.9 GateResult exists and checker metadata is unchanged"
+    }
+  ],
+  "approval": {
+    "approved_by": "Author instruction in Kiro session",
+    "approved_at": "2026-09-13T17:23:01Z",
+    "approval_record": "Author instruction: 'I definitely dont want a rigid system. Soften DEC-020 for sure.'"
+  },
+  "status": "complete",
+  "completed_at": "2026-09-13T17:23:01Z"
+}
+```
+
+### What this change deliberately does not do
+
+It does not reduce the obligation to create suspense, consequence, human cost, bodily stakes, active institutional counterforce, distinct voices, or chapters that materially change the situation. It does not authorize random events, fake cliffhangers, concealed narrator-held facts, spectacle, or imitation. It changes the editorial question from whether a batch filled its assigned slots to whether the prose moves, surprises, and varies without exposing a recipe.
+## `ARC-CHANGE-REVISION-004` — Chapter 25–26 knowledge-horizon synchronization
+
+The direct reread requested before further drafting found that Chapter 25 told Julian the verified identity and temporary bench path even though the approved Chapter 26 horizon and binding reveal boundary require him not to know either until Chapter 46. The repair changes the route and audience of Mara's factual disclosure, not what she knows, what the reader knows, or what the bench act did.
+
+```json record=ArcChange schema=1
+{
+  "arc_change_id": "ARC-CHANGE-REVISION-004",
+  "date": "2026-09-13",
+  "prior_state": {
+    "chapter_25_disclosure": "Mara directly told Julian the verified source identity and unauthorized temporary-path transmission, then amended a compliance response circulated through the legal matter",
+    "chapter_26_horizon": "Julian states that he knows neither the source identity nor any later path and his file ends at passive addressability",
+    "chapter_26_hook_use": "the ArcEntry Hook was repeated nearly verbatim inside the body after already being performed by the opening inquiries",
+    "compression_question": "EDITORIAL-PROPULSION-002 left percentage compression or redistribution of Chapters 15, 22, and 26 open under a fixed adjacency remedy"
+  },
+  "revised_state": {
+    "chapter_25_disclosure": "Mara records the unauthorized act in a restricted hardware-safety deviation under the temporary driver's asset number, excludes source identity, marks chair review required, and creates no automatic legal-file alert",
+    "chapter_26_horizon": "Julian truthfully remains ignorant of Nia and the later path; the receive-only audit remains as a first-person knowledge boundary and dramatic irony",
+    "chapter_26_hook_use": "the near-verbatim body echo is removed while the opening and forced national briefing continue to perform the Hook",
+    "compression_question": "a continuous reread rejects percentage compression; the named chapters are nonconsecutive and perform distinct state changes, so EDITORIAL-PROPULSION-002 resolves to a follow-up pass"
+  },
+  "rationale": "The prior seam asked the reader to accept mutually exclusive knowledge states. Synchronizing Chapter 25 to the already approved horizon preserves the stronger Chapter 26 irony and the delayed Chapter 46 reveal. Retaining Chapter 26's audit sentence is deliberate: its meaning is not hardware recap but the boundary between what Julian verified and what institutions are already pricing. No percentage cut is justified by the prose, and amended DEC-020 rejects arithmetic as a substitute for literary judgment.",
+  "affected_chapters": [25, 26],
+  "affected_documents": [
+    "planning/arc-changes.md",
+    "planning/arc-outline.md",
+    "planning/canon-bible.md",
+    "planning/decisions.md",
+    "planning/editorial-log.md",
+    "planning/gate-results.md",
+    "planning/motif-ledger.md",
+    "planning/pov-roster.md",
+    "planning/voice-briefs.md",
+    "chapters/discovery-part/discovery-part-025-nothing-admissible.md",
+    "chapters/discovery-part/discovery-part-026-already-outside.md"
+  ],
+  "synchronization_obligations": [
+    {
+      "document": "chapters/discovery-part/discovery-part-025-nothing-admissible.md",
+      "required_change": "Replace the direct Julian disclosure and broad compliance amendment with an honest restricted hardware-safety deviation that preserves the approved knowledge boundary; update the declared word count.",
+      "status": "complete",
+      "evidence_ref": "chapter 25, hardware-safety deviation and manual related-matter routing passages; Chapter Header words 1153"
+    },
+    {
+      "document": "chapters/discovery-part/discovery-part-026-already-outside.md",
+      "required_change": "Retain the receive-only knowledge boundary, remove the near-verbatim ArcEntry Hook echo from the body, preserve the forced-briefing ending, and update the declared word count.",
+      "status": "complete",
+      "evidence_ref": "chapter 26, receive-only audit, passive-addressability boundary, and national-briefing close; Chapter Header words 1196"
+    },
+    {
+      "document": "planning/arc-outline.md",
+      "required_change": "Confirm Chapter 25's purpose and Chapter 26's purpose, Hook, timeline, POV, status, and record horizon already describe the revised state and require no value change.",
+      "status": "complete",
+      "evidence_ref": "planning/arc-outline.md, ArcEntries 25 and 26 reviewed with no value change required"
+    },
+    {
+      "document": "planning/decisions.md",
+      "required_change": "Preserve the binding rule that Julian does not know the temporary bench path until Chapter 46 and record no decision change.",
+      "status": "complete",
+      "evidence_ref": "planning/decisions.md, DEC-019 Discovery compressed-clock finding and Chapter 46 knowledge boundary"
+    },
+    {
+      "document": "planning/canon-bible.md",
+      "required_change": "Confirm no TimelineEntry, mode classification, participant, Reveal, or evidence rule changes; only the audience of one institutional record changes.",
+      "status": "complete",
+      "evidence_ref": "planning/canon-bible.md reviewed with no value change required"
+    },
+    {
+      "document": "planning/motif-ledger.md",
+      "required_change": "Confirm Chapters 25 and 26 retain empty motif assignments and no literal phrase scope changes.",
+      "status": "complete",
+      "evidence_ref": "planning/motif-ledger.md reviewed with no value change required"
+    },
+    {
+      "document": "planning/pov-roster.md",
+      "required_change": "Confirm Mara and Julian retain their existing identities, knowledge functions, and chapter loads.",
+      "status": "complete",
+      "evidence_ref": "planning/pov-roster.md reviewed with no value change required"
+    },
+    {
+      "document": "planning/voice-briefs.md",
+      "required_change": "Confirm the revised passages deliver the existing Mara and Julian registers without changing voice guidance.",
+      "status": "complete",
+      "evidence_ref": "planning/voice-briefs.md reviewed with no value change required"
+    },
+    {
+      "document": "planning/editorial-log.md",
+      "required_change": "Resolve EDITORIAL-PROPULSION-002 through a full-scope follow-up finding and record current chapter-level continuity, voice, economy, and Hook passes for Chapters 25 and 26.",
+      "status": "complete",
+      "evidence_ref": "planning/editorial-log.md, EDITORIAL-PROPULSION-002-FOLLOWUP-001 and EDITORIAL-DISCOVERY-025/026-HORIZON-RERUN-001"
+    },
+    {
+      "document": "planning/gate-results.md",
+      "required_change": "Record clean current Chapter_Local_Gates for Chapters 25 and 26 and clean reruns of both affected Discovery drafting batches.",
+      "status": "complete",
+      "evidence_ref": "planning/gate-results.md, Chapter 25-26 knowledge-horizon repair objective reruns"
+    },
+    {
+      "document": "planning/arc-changes.md",
+      "required_change": "Record the repair, no-change impact conclusions, author approval, and completion evidence in one typed ArcChange.",
+      "status": "complete",
+      "evidence_ref": "planning/arc-changes.md, ARC-CHANGE-REVISION-004"
+    }
+  ],
+  "approval": {
+    "approved_by": "Author instruction in Kiro session",
+    "approved_at": "2026-09-13T17:23:01Z",
+    "approval_record": "Author instruction to use GPT-5.6 judgment regarding the proposed Chapter 26 cut, Chapter 15/26 compression, and proceeding to Chapter 56."
+  },
+  "status": "complete",
+  "completed_at": "2026-09-13T17:26:29Z"
+}
+```
+
+### What this change deliberately does not do
+
+It does not change the bench event, the unresolved origin accounts, Mara's belief, Nia's refusal, Julian's later Chapter 46 knowledge, any Reveal, or any ArcEntry. It does not compress Chapter 15, Chapter 22, or Chapter 26. The factual bench record remains available to its restricted safety audience; the reader loses nothing, and only the contradictory premature disclosure to Julian is removed.
+## `ARC-CHANGE-PRIVATE-PROTOCOL-001` — Lawful calibration-room access and blocked stale-consent attempt
+
+The pre-draft audit of Chapters 56–61 found two contradictions that prose could not safely improvise around. Chapter 55 removed Mara's array-room access without naming a lawful replacement source of equipment, space, or authority. The planned Chapter 57 beat also described an unconsented semantic `PAIR` contribution, which the four-mode taxonomy forbids. This change establishes the narrow retained asset path and makes the failed session a blocked attempt rather than an impossible fifth mode.
+
+```json record=ArcChange schema=1
+{
+  "arc_change_id": "ARC-CHANGE-PRIVATE-PROTOCOL-001",
+  "date": "2026-09-13",
+  "prior_state": {
+    "chapter_56_asset_source": "no post-transfer owner, room booking, or equipment authority named after Chapter 55 removed the array room, source, probe, array time, anechoic hours, and badge access",
+    "chapter_57_event": "a stale and overbroad consent state allowed a semantic contribution to cross without current recipient authorization",
+    "TL-PRIVATE-PROTOCOL_mode": "PAIR for the whole interval despite the planned unconsented semantic crossing",
+    "chapter_58_evidence": "metadata could prove closure timing but not what crossed",
+    "chapter_59_hook": "the channel offered a sentence it was not sure of, implying semantic guessing",
+    "task_13_5_motif_reference": "listed MOT-KNOCK-01 inside Chapters 56-61 despite its authoritative assignment to Chapter 73"
+  },
+  "revised_state": {
+    "chapter_56_asset_source": "Northline research operations retains the calibration room, PAIR console, and contact bands outside the Emergency Preparedness transfer and grants written time-bounded room-and-equipment bookings; Mara's array badge and lost measurement assets remain unavailable",
+    "chapter_57_event": "an older and broader session state accepts Mara's send request after Nia's current authorization has lapsed, but an independent live-consent gate rejects the request before neural transport",
+    "TL-PRIVATE-PROTOCOL_mode": "PAIR describes successful and repaired sessions; the blocked failed attempt produces no neural communication event and therefore creates no second mode",
+    "chapter_58_evidence": "metadata proves stale-state acceptance, live-consent rejection, and zero transport but cannot reconstruct Mara's intended contribution",
+    "chapter_59_hook": "an incomplete integrity flag replaces any guessed sentence and ordinary speech supplies the fallback",
+    "task_13_5_motif_reference": "MOT-COME-02 remains in Chapter 61 and MOT-KNOCK-01 is expressly preserved at Chapter 73"
+  },
+  "rationale": "The retained calibration console can test PAIR transport behavior without restoring the instruments Mara lost or energizing the transferred array, so Chapter 55 keeps its full cost and the two-operator rule is not evaded. Current mutual consent is constitutive of semantic PAIR, not an optional software label; an unconsented semantic contribution would contradict Requirements 14.3, 14.4, and 14.10. A blocked send request still fails ethically because the system solicited and accepted an act under stale authority, while the independent live gate demonstrates the exact defense the repaired protocol must retain. No new mode, participant, POV, sender, or provenance claim is created.",
+  "affected_chapters": [56, 57, 58, 59, 60, 61],
+  "affected_documents": [
+    "planning/arc-changes.md",
+    "planning/arc-outline.md",
+    "planning/canon-bible.md",
+    "planning/motif-ledger.md",
+    "planning/pov-roster.md",
+    "planning/voice-briefs.md",
+    ".kiro/specs/The-Final-Frontier-novel/requirements.md",
+    ".kiro/specs/The-Final-Frontier-novel/tasks.md"
+  ],
+  "synchronization_obligations": [
+    {
+      "document": "planning/arc-outline.md",
+      "required_change": "Revise Chapter 57 and 58 purposes, Hooks, horizons, and both failure Cross Cuts to describe stale-state acceptance followed by live-consent rejection and zero transport; revise Chapter 59's Hook to forbid semantic guessing.",
+      "status": "complete",
+      "evidence_ref": "planning/arc-outline.md, ArcEntries 57-59 and CUT-PROTOCOL-AND-THE-STALE-STATE / CUT-FAILURE-WITHOUT-CONTENT"
+    },
+    {
+      "document": "planning/canon-bible.md",
+      "required_change": "Name the retained calibration-room assets and booking authority, preserve the transferred array exclusion, and clarify that the blocked stale-state attempt creates no neural event or second mode while successful and repaired sessions remain PAIR.",
+      "status": "complete",
+      "evidence_ref": "planning/canon-bible.md, TL-PRIVATE-PROTOCOL relative_chronology, location, uncertainty_notes, and technical_state.evidence_scope"
+    },
+    {
+      "document": ".kiro/specs/The-Final-Frontier-novel/tasks.md",
+      "required_change": "Correct task 13.5 so it does not assign MOT-KNOCK-01 to Chapters 56-61 and explicitly preserves that motif at Chapter 73.",
+      "status": "complete",
+      "evidence_ref": ".kiro/specs/The-Final-Frontier-novel/tasks.md, task 13.5"
+    },
+    {
+      "document": "planning/motif-ledger.md",
+      "required_change": "Confirm MOT-COME-02 remains assigned only to Chapter 61 and MOT-KNOCK-01 only to Chapter 73, with no motif value change.",
+      "status": "complete",
+      "evidence_ref": "planning/motif-ledger.md reviewed; authoritative chapter assignment table unchanged"
+    },
+    {
+      "document": ".kiro/specs/The-Final-Frontier-novel/requirements.md",
+      "required_change": "Confirm Requirements 14.3, 14.4, 14.10 through 14.12, and 15.6 already require the revised consent and evidence boundary and need no text change.",
+      "status": "complete",
+      "evidence_ref": ".kiro/specs/The-Final-Frontier-novel/requirements.md reviewed with no value change required"
+    },
+    {
+      "document": "planning/pov-roster.md",
+      "required_change": "Confirm the Nia/Mara/Julian allocation and all knowledge functions remain unchanged.",
+      "status": "complete",
+      "evidence_ref": "planning/pov-roster.md reviewed with no value change required"
+    },
+    {
+      "document": "planning/voice-briefs.md",
+      "required_change": "Confirm the existing PAIR registers already distinguish deliberate sends, current consent, opaque pauses, metadata, and ordinary-speech fallback and need no value change.",
+      "status": "complete",
+      "evidence_ref": "planning/voice-briefs.md reviewed with no value change required"
+    },
+    {
+      "document": "planning/arc-changes.md",
+      "required_change": "Record exact prior and revised state, author approval, no-change impact evidence, and a clean planning-layer validation before prose relies on the repair.",
+      "status": "complete",
+      "evidence_ref": "planning/arc-changes.md, ARC-CHANGE-PRIVATE-PROTOCOL-001; global checker rerun after synchronization reported planning=0, global=134 expected incompleteness errors"
+    }
+  ],
+  "approval": {
+    "approved_by": "Author instruction in Kiro session",
+    "approved_at": "2026-09-13T17:23:01Z",
+    "approval_record": "Author instruction to soften the rigid system and use GPT-5.6 judgment before proceeding to Chapter 56."
+  },
+  "status": "complete",
+  "completed_at": "2026-09-13T17:32:20Z"
+}
+```
+
+### What this change deliberately does not do
+
+It does not return Mara's array-room badge, source, probe, array time, anechoic hours, independent measurement capacity, or visibility into Emergency Preparedness. It does not let consent metadata stand in for semantic content, make an unconsented write articulate, create a fifth mode, or identify what caused Nia's winter. It changes no POV, participant, Reveal, motif placement, or later Chapter 62 onset boundary.
+### Synchronization progress on `ARC-CHANGE-REVISION-001` and `ARC-CHANGE-REVISION-002`, 2026-09-13
+
+Eighteen obligations moved from `pending` to `complete` with evidence in this pass: the seventeen Private_Defense Chapter_File obligations for Chapters 30 through 46, and the `planning/gate-results.md` objective-rerun obligation. The evidence for each names the current editorial gate and the observed Prose_Word count, and one obligation records a reasoned deviation rather than a clean discharge.
+
+That deviation is Chapter 45. The obligation asked for the removal of any explicit statement of the `CUT-CONSTRAINABLE-CLAUSE` contradiction. Mara's recognition of the gap between Julian's initialed clause and the specification's waiting state is retained instead, because she is physically holding both documents at that moment and a narrator who failed to register what she was reading would be the artificial withholding Requirements 2.13 and 2.14 forbid. The irony that the cut exists to protect is Julian's, and it survives intact: Chapter 44 ends with the binder eighteen inches from his hand, and Chapter 45 ends on him stopping writing rather than on any account of what he now understands.
+
+**Both revision records remain `in-progress`, and neither may reach `complete` yet.** Their current synchronization state is as follows.
+
+- The twenty-nine Discovery Chapter_File obligations remain open. Their prose has been revised and every Chapter_Header and `ArcEntry` has been demoted to `revised`, so nothing currently overstates their status, but no per-chapter verification against the current craft authority exists for twenty-four of them. Word counts alone are not that verification.
+- The former `estimated_words` mass re-budget is **closed by supersession, not performance**. `DEC-021` clause 5 and `ARC-CHANGE-LENGTH-GOVERNANCE-001` establish that existing estimates remain planning metadata and are not normalized into a quota the prose does not follow. No `ArcEntry.estimated_words` value changed.
+- The re-recording of the Discovery movement Editorial_Gate remains open; `GATE-EDITORIAL-DISCOVERY-MOVEMENT-002-INCOMPLETE` reports the unavailable current evidence and scopes it precisely.
+- The objective chapter and batch reruns for Discovery remain open, because they have not been recorded since the revision changed those files.
+
+`ARC-CHANGE-REVISION-002`'s own planning and canon obligations were already complete and remain so. It stays `in-progress` because it was written to close alongside the prose work it supports, and the Discovery half of that work is unfinished. Its Private_Defense half is now discharged: `CF-PRIVATE-EXPOSED-PERSONS-LIST`, `CF-PRIVATE-TECHNICIAN-REPORT`, `CF-PRIVATE-TECHNICIAN-REASSIGNMENT`, `CF-PRIVATE-CONSORTIUM-ADVANCE-PARTY`, and `CF-PRIVATE-TWO-PERSON-LAYER-CLASS` are all on the page, and `CHAR-015` Joss Calder and `CHAR-016` Ruth Venn appear in Chapters 30, 34, 38, 40, 42, and 43 without becoming exposition audiences.
+
+Under the status rules in this document, partial synchronization is never approval. No Discovery chapter returns to `approved`. The Private_Defense movement gate now passes as `GATE-EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-003`, completing task 13.6, but task 14 remains blocked by the separate Discovery evidence gap.
+
+## `ARC-CHANGE-LENGTH-GOVERNANCE-001` — contextual manuscript budget and Chapter 118 repair
+
+This change resolves a conflict created after baseline approval rather than disguising it as prose debt.
+`DEC-018` and `DEC-019` left two different per-chapter bands and a fixed mean window in force while
+amended `DEC-020` and Requirement 15.9 prohibited chapter-length quotas as craft logic. The current
+manuscript was already inside its approved budget. `DEC-021` keeps the objective safeguards, retires the
+formula, and authorizes the one chapter whose brevity remained a literary defect on independent grounds.
+
+```json record=ArcChange schema=1
+{
+  "arc_change_id": "ARC-CHANGE-LENGTH-GOVERNANCE-001",
+  "date": "2026-09-18",
+  "prior_state": {
+    "decision_authority": "DEC-018 clause 10 named 1050-1200 and midpoint 1125; DEC-019 clause 11 named 900-1400 and a fixed normal mean window; DEC-019 clause 8 required exemptions",
+    "outline_gate": "normal chapters judged against 1050-1200 with a mean near 1125",
+    "estimated_words_obligation": "ARC-CHANGE-REVISION-001 required every normal ArcEntry estimate to be mass-rebudgeted into 1050-1200 and recorded the item as pending",
+    "delivered_budget_evidence": "64 delivered files, historically recorded as 73147 Prose_Words; 55 normal chapters averaging 1134.4; projected completion approximately 143900, inside 130000-150000",
+    "chapter_118": "756 Prose_Words, normal, exploratory; emotionally under-inhabited under EDITORIAL-REVISION-009-FOLLOWUP-001",
+    "private_defense_gate": "GATE-EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-002 revision solely because EDITORIAL-LENGTH-BAND-MANUSCRIPT-001 was open",
+    "task_13_6": "unchecked"
+  },
+  "revised_state": {
+    "decision_authority": "DEC-021 preserves objective limits and makes historical bands, midpoint, and derived means diagnostics rather than craft quotas or waiver triggers",
+    "outline_gate": "contextual manuscript-budget safeguard judges scene-earned compression or expansion, adjacent cadence, delivered totals, remaining estimates, movement scale, and projected Final_Targets together",
+    "estimated_words_obligation": "closed by supersession rather than performance; no ArcEntry estimate changes, and existing estimates retain movement-scale and same-POV run planning roles",
+    "delivered_budget_evidence": "64 delivered files, 73604 declared Prose_Words; 55 normal chapters averaging 1142.7; current delivered class means projected across 109 normal, 10 microchapter, and 9 long-outlier outline entries give approximately 145400, inside 130000-150000",
+    "chapter_118": "1215 observed and declared Prose_Words, normal, exploratory; local objective and editorial gates pass after craft expansion",
+    "private_defense_gate": "GATE-EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-003 pass; all assigned craft criteria pass and the former governance blocker is resolved",
+    "task_13_6": "complete; parent task 13 complete",
+    "task_14": "still blocked by GATE-EDITORIAL-DISCOVERY-MOVEMENT-002-INCOMPLETE and its 24 missing current chapter reviews, five batch reviews, movement re-verification, and objective reruns",
+    "preserved_unchanged": [
+      "Final_Targets of exactly 128 chapters and 130000-150000 Prose_Words",
+      "Normal_Chapter_Range 700-1600 and Hard_Chapter_Maximum 2500",
+      "at least 108 normal entries and no more than 20 outliers",
+      "same-POV runs no longer than three chapters or 3600 combined Prose_Words",
+      "all 128 ArcEntry values, including chapter 118 estimated_words 1400 and status exploratory",
+      "POV-SAFIYA, TL-CODA-ACCOUNT, MOT-KETTLE-01, REVEAL-SAFIYA-TUESDAY-LOSS, and the 118-119 reveal window",
+      "heritage_base unspecified_by_author and the describe-never-quote boundary",
+      "the three never-revealed Reveal IDs and unresolved provenance",
+      "four POVs, 56/32/33/7 loads, and 29/32/51/16 movement allocation",
+      "no Chapter 62 prose or status change"
+    ]
+  },
+  "rationale": "The historical bands repaired a real early shortfall, but the delivered manuscript now projects inside Final_Targets with margin and contains dramatically earned normal chapters on both sides of those bands. Cutting a load-bearing scene and padding a seventy-six-millisecond event would make the book more formulaic while improving no objective safeguard. The correct current rule is the one Requirement 15.9 already states: human review judges whether length varies for dramatic reasons in chapter, batch, movement, and manuscript context. Chapter 118 is different from the other departures because repeated literary review found its central account under-inhabited. Expanding it supplies domestic duration, bodily sequence, intact public competence, grief, and witnessed restraint without altering any continuity record or using arithmetic as the pass condition.",
+  "affected_chapters": [118],
+  "affected_documents": [
+    "planning/decisions.md",
+    "planning/arc-outline.md",
+    "planning/arc-changes.md",
+    "planning/editorial-log.md",
+    "planning/gate-results.md",
+    "planning/canon-bible.md",
+    "planning/motif-ledger.md",
+    "planning/pov-roster.md",
+    "planning/voice-briefs.md",
+    ".kiro/specs/The-Final-Frontier-novel/requirements.md",
+    ".kiro/specs/The-Final-Frontier-novel/tasks.md",
+    "chapters/aftermath-coda/aftermath-coda-118-tuesday-kettle-on.md"
+  ],
+  "synchronization_obligations": [
+    {
+      "document": "planning/decisions.md",
+      "required_change": "Record a later binding amendment that preserves objective limits, makes the historical bands diagnostic, retires waivers and fixed-mean gate logic, supersedes mass estimate normalization, and authorizes the bounded Chapter 118 craft repair.",
+      "status": "complete",
+      "evidence_ref": "planning/decisions.md, DEC-021 - Scene-earned chapter length under a contextual manuscript budget"
+    },
+    {
+      "document": "planning/arc-outline.md",
+      "required_change": "Extend current authority through DEC-021, replace the obsolete normal-band criterion with the contextual manuscript safeguard, and retain every ArcEntry value including chapter 118 estimated_words 1400.",
+      "status": "complete",
+      "evidence_ref": "planning/arc-outline.md, authority header, length-class budget current note, DEC-021 contextual manuscript-budget safeguard, and contextual gate criterion; no typed record changed"
+    },
+    {
+      "document": "planning/arc-changes.md",
+      "required_change": "Close the ARC-CHANGE-REVISION-001 mass re-budget obligation explicitly by supersession rather than by claiming the estimates were changed.",
+      "status": "complete",
+      "evidence_ref": "ARC-CHANGE-REVISION-001 synchronization_obligations now records complete with evidence 'Closed by supersession rather than performance'; the synchronization-progress note confirms no estimated_words value changed"
+    },
+    {
+      "document": "chapters/aftermath-coda/aftermath-coda-118-tuesday-kettle-on.md",
+      "required_change": "Inhabit the Tuesday account through Safiya's domestic memory, body, intact interpreting work, and sole-survivor grief without crossing the Chapter 117/119, heritage, corpus, reconstruction, reveal, motif, or POV boundaries; synchronize the observed count and retain exploratory.",
+      "status": "complete",
+      "evidence_ref": "Chapter 118 now declares 1215 observed Prose_Words, normal, exploratory; EDITORIAL-AFTERMATH-CODA-118-REPAIR-001 and both local gates pass"
+    },
+    {
+      "document": "planning/editorial-log.md",
+      "required_change": "Attach structured resolutions to the open length finding and Chapter 118 follow-up, add current follow-up findings, and rerun the Chapter 118 local, nine-finding revision, and Private Defense movement editorial gates without editing historical verdicts.",
+      "status": "complete",
+      "evidence_ref": "EDITORIAL-LENGTH-BAND-MANUSCRIPT-001-FOLLOWUP-001, EDITORIAL-REVISION-009-FOLLOWUP-002, EDITORIAL-AFTERMATH-CODA-118-REPAIR-001, GATE-EDITORIAL-AFTERMATH-CODA-118-REPAIR-001, GATE-EDITORIAL-REVISION-PASS-003, and GATE-EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-003"
+    },
+    {
+      "document": "planning/gate-results.md",
+      "required_change": "Record a current Chapter 118 objective rerun after prose and header synchronization, and state why no adjacent Coda batch result is available.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-AFTERMATH-CODA-118-DEC-021-RERUN-001 pass; Chapters 117 and 119 remain undelivered"
+    },
+    {
+      "document": ".kiro/specs/The-Final-Frontier-novel/requirements.md",
+      "required_change": "Confirm Requirement 15.9 already prohibits chapter-length quotas as verdict logic and that objective length constraints remain unchanged; make no unnecessary text edit.",
+      "status": "complete",
+      "evidence_ref": "requirements.md reviewed: Requirement 15.9 requires contextual chapter-length judgment and forbids a chapter-length quota; Requirements 2, 11, and 12 retain objective limits"
+    },
+    {
+      "document": ".kiro/specs/The-Final-Frontier-novel/tasks.md",
+      "required_change": "Mark task 13.6 and parent task 13 complete only after the Private Defense movement gate passes; leave task 14 unchecked because Discovery remains incomplete.",
+      "status": "complete",
+      "evidence_ref": "tasks.md: 13 and 13.6 checked; 14 remains unchecked; GATE-EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-003 pass and GATE-EDITORIAL-DISCOVERY-MOVEMENT-002-INCOMPLETE retained"
+    },
+    {
+      "document": "planning/canon-bible.md",
+      "required_change": "Confirm the amendment and prose repair change no CanonFact, NovelExtension, TimelineEntry, Reveal, heritage base, mechanism state, participant, or evidence boundary.",
+      "status": "complete",
+      "evidence_ref": "canon-bible.md reviewed with no value change required; Chapter 118 remains inside TL-CODA-ACCOUNT and REVEAL-SAFIYA-TUESDAY-LOSS"
+    },
+    {
+      "document": "planning/motif-ledger.md",
+      "required_change": "Confirm Chapter 118 still carries only MOT-KETTLE-01 and creates no second kettle event, MotifEvent, or LiteralPhraseConstraint.",
+      "status": "complete",
+      "evidence_ref": "motif-ledger.md reviewed with no value change required; chapter header and ArcEntry retain MOT-KETTLE-01 only"
+    },
+    {
+      "document": "planning/pov-roster.md",
+      "required_change": "Confirm POV-SAFIYA, four-POV architecture, Anchor identity, chapter loads, and movement coverage remain unchanged.",
+      "status": "complete",
+      "evidence_ref": "pov-roster.md reviewed with no value change required"
+    },
+    {
+      "document": "planning/voice-briefs.md",
+      "required_change": "Confirm the expanded direct-address prose delivers the existing Safiya register without changing voice guidance or entering Mara's interior.",
+      "status": "complete",
+      "evidence_ref": "voice-briefs.md reviewed with no value change required; EDITORIAL-AFTERMATH-CODA-118-REPAIR-001 passes current voice fidelity"
+    },
+    {
+      "document": "planning/arc-changes.md",
+      "required_change": "Record exact prior and revised state, complete impact assessment, author authorization, and synchronization evidence in one typed ArcChange.",
+      "status": "complete",
+      "evidence_ref": "planning/arc-changes.md, ARC-CHANGE-LENGTH-GOVERNANCE-001"
+    }
+  ],
+  "approval": {
+    "approved_by": "Author instruction in Kiro session",
+    "approved_at": "2026-09-18T22:10:00Z",
+    "approval_record": "Author instruction: 'please repair the defects' and continue the current anti-formula, quality-first approach."
+  },
+  "status": "complete",
+  "completed_at": "2026-09-18T22:10:00Z"
+}
+```
+
+### Scope deliberately left open
+
+This change does not complete `ARC-CHANGE-REVISION-001` or `ARC-CHANGE-REVISION-002`: their Discovery
+review and rerun obligations remain open. It does not turn Chapter 118 from `exploratory` to `approved`,
+claim a Coda drafting batch when Chapters 117 and 119 are absent, complete task 14, or begin Chapter 62.
+
+## `ARC-CHANGE-VOICE-SEPARATION-001` — Discovery current evidence, voice repairs, and one house spelling standard
+
+This change closes the Discovery evidence gap that `ARC-CHANGE-REVISION-001` left open, repairs the craft
+defects that reading the current prose exposed, and fixes a manuscript-wide inconsistency that would
+otherwise have propagated into sixty-four undrafted chapters. It changes no `ArcEntry`, canon fact,
+timeline, reveal, motif, POV identity, or movement allocation.
+
+Two of the repairs are continuity rather than polish and are recorded as such. Chapters 16 and 27 both
+performed person-specific work without acknowledging the restraint memorandum Julian addressed to Mara in
+Chapter 14 and the suspension still open at Chapter 25. Both now name the constraint they proceed
+against. This increases the Anchor's culpability and removes an unearned innocence; it establishes no new
+canon, because the memorandum and the suspension were already on the page.
+
+```json record=ArcChange schema=1
+{
+  "arc_change_id": "ARC-CHANGE-VOICE-SEPARATION-001",
+  "date": "2026-09-18",
+  "prior_state": {
+    "discovery_movement_evidence": "current craft evidence for 5 of 29 chapters; GATE-EDITORIAL-DISCOVERY-MOVEMENT-002-INCOMPLETE reported the gap and asserted no verdict",
+    "spelling_standard": "none recorded; mixed US and UK forms across the manuscript, including colour/color, neighbour/neighbor, licence/license, defence/defense, enrol/enroll, and mixed -ise/-ize inside the same word families",
+    "shared_constructions": "the self-indictment marker in chapters 3, 5 and 6; a deliberation-formula ending in chapters 21, 22 and 28 across three narrators; the phrase 'I have not been able to' across three narrators; 'with the cap off the pen' in chapters 1, 5 and 10; a duplicated warmth-scene beat order in chapters 30 and 38; seven six-word phrases repeated across three or more chapters",
+    "chapter_16_and_27_authorization": "person-specific build, transmission, and a consented session run without reference to the restraint memorandum or the open suspension",
+    "chapter_13_participants": "four staff asked, then two refused plus three participants accounted for, which does not reconcile",
+    "chapter_57_body": "an attempted unauthorized write into a refusing participant with no physical reaction from either person",
+    "task_14": "blocked by missing Discovery evidence"
+  },
+  "revised_state": {
+    "discovery_movement_evidence": "current craft evidence for all 29 chapters and all 6 batches, plus canon, shape, and voice movement findings; GATE-EDITORIAL-DISCOVERY-MOVEMENT-003 recorded",
+    "spelling_standard": "one Oxford British house standard: -ize verb endings with colour, neighbour, licence as noun, defence, practised as verb, enrol, enrolment, labelled, travelled, towards, grey, metre",
+    "shared_constructions": "self-indictment marker confined to one chapter; deliberation-formula ending broken in two of three; 'I have not been able to' assigned to the Anchor alone; the pen image left as one canonical instance with two varied callbacks; the Chapter 38 warmth scene rebuilt on a different beat order; cross-chapter six-word repetition reduced from seven to four, the survivors being technical terms and one assigned signature",
+    "chapter_16_and_27_authorization": "both chapters name the constraint they proceed against, and Chapter 27 explicitly distinguishes the participant's consent from the chair's authorization",
+    "chapter_13_participants": "four asked, one refused, three participants, three sessions",
+    "chapter_57_body": "Mara's pulse in the hand that performs the send, and Nia taking her own pulse to check her body for a change a machine was asked to make in it",
+    "task_14": "still blocked, now by EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-VOICE rather than by missing evidence",
+    "preserved_unchanged": [
+      "all 128 ArcEntry values, all 65 CrossCut records, and the approved Baseline",
+      "receive-only December apparatus and the separate later temporary bench path",
+      "receiver-owned reconstruction latency as a configuration-dependent cost",
+      "unresolved causation, the DEC-007 asymmetry, and the three never-revealed Reveal IDs",
+      "page nine as architectural capability only, absent from Discovery",
+      "closed motif families with no new MotifEvent or LiteralPhraseConstraint",
+      "four POVs and the 56/32/33/7 loads across 29/32/51/16",
+      "every declared length class, including the Chapter 16 microchapter and the Chapter 13 and 17 long-outliers",
+      "no Chapter 62 prose and no chapter returned to approved"
+    ]
+  },
+  "rationale": "Reading all twenty-nine Discovery chapters against current text produced fifteen chapter revisions that no earlier record could have seen, because the earlier records evaluated pre-DEC-018 prose. Most were shared formulas rather than local faults: the same self-indictment marker in three chapters, the same closing construction in three narrators, the same warmth beat order in two chapters eight apart. Those are the signature of drafting at volume and they are invisible chapter by chapter, which is why a continuous read was required rather than another per-chapter audit. Two findings were continuity rather than craft and mattered more: the Anchor twice performed person-specific work inside a constraint the manuscript had already established, and the prose did not notice. The spelling standard was recorded now rather than later because half the manuscript is undrafted and an unrecorded standard guarantees the inconsistency returns. The voice-separation finding is left open and unresolved because it is real: local repairs removed the shared epigrams without producing the rhythm and paragraph-shape separation DEC-018 clause 7 requires, and passing the movement gate on the strength of the repairs would misrepresent the manuscript.",
+  "affected_chapters": [1, 2, 4, 5, 6, 7, 9, 10, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 31, 34, 35, 36, 37, 38, 39, 41, 42, 43, 44, 46, 47, 48, 49, 52, 53, 55, 56, 57, 58, 73, 118],
+  "affected_documents": [
+    "planning/arc-changes.md",
+    "planning/editorial-log.md",
+    "planning/gate-results.md",
+    "planning/decisions.md",
+    "planning/arc-outline.md",
+    "planning/canon-bible.md",
+    "planning/motif-ledger.md",
+    "planning/pov-roster.md",
+    "planning/voice-briefs.md",
+    ".kiro/specs/The-Final-Frontier-novel/tasks.md"
+  ],
+  "synchronization_obligations": [
+    {
+      "document": "planning/editorial-log.md",
+      "required_change": "Record current chapter findings for all 29 Discovery chapters, batch findings for all 6 batches, the repair follow-up, the canon, shape and voice movement findings, and the re-recorded movement gate, without editing any historical record.",
+      "status": "complete",
+      "evidence_ref": "EDITORIAL-DISCOVERY-CURRENT-001 through -029, EDITORIAL-DISCOVERY-CURRENT-BATCH-001-005 through -026-029, EDITORIAL-DISCOVERY-CURRENT-REPAIR-FOLLOWUP-001, EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-CANON/-SHAPE/-VOICE, GATE-EDITORIAL-DISCOVERY-MOVEMENT-003"
+    },
+    {
+      "document": "chapters/**",
+      "required_change": "Repair the fifteen chapter revisions, rebuild one duplicated warmth scene, give Chapter 57 a physical body, and apply one spelling standard across all delivered files; resynchronize every header word count.",
+      "status": "complete",
+      "evidence_ref": "34 Chapter_Files changed prose; all 64 chapter-local gates and all 11 batch audits pass with zero errors; no declared length class changed"
+    },
+    {
+      "document": "planning/gate-results.md",
+      "required_change": "Record chapter-local reruns for every file whose prose changed and batch reruns for every delivered batch.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-*-VOICE-PASS-RERUN for 34 chapters and GATE-BATCH-*-VOICE-PASS-RERUN for all 11 delivered batches"
+    },
+    {
+      "document": "planning/decisions.md",
+      "required_change": "Record the Oxford British house spelling standard as binding editorial direction so the remaining 64 chapters inherit it.",
+      "status": "complete",
+      "evidence_ref": "planning/decisions.md, DEC-022 - House spelling standard and the voice-separation obligation"
+    },
+    {
+      "document": "planning/canon-bible.md",
+      "required_change": "Confirm that naming the restraint memorandum in Chapter 16 and the open suspension in Chapter 27 asserts no new CanonFact, since both were already established in Chapters 14 and 25.",
+      "status": "complete",
+      "evidence_ref": "canon-bible.md reviewed with no value change required; the memorandum is established at Chapter 14 and the suspension and deviation at Chapter 25"
+    },
+    {
+      "document": "planning/motif-ledger.md",
+      "required_change": "Confirm no MotifEvent or LiteralPhraseConstraint changed, and that removing the Chapter 13 metafictional motif-tag does not disturb MOT-CHAIN-01.",
+      "status": "complete",
+      "evidence_ref": "motif-ledger.md reviewed with no value change required; MOT-CHAIN-01 remains assigned to Chapter 13 and is now carried by the image rather than named in narration"
+    },
+    {
+      "document": "planning/pov-roster.md",
+      "required_change": "Confirm four profiles, one Anchor, and the 56/32/33/7 loads are unchanged, and record that the voice obligation falls on POV-NIA's narration rather than on her identity or load.",
+      "status": "complete",
+      "evidence_ref": "pov-roster.md reviewed with no value change required"
+    },
+    {
+      "document": "planning/voice-briefs.md",
+      "required_change": "Confirm the four Voice_Briefs already specify distinct registers, and record that the open finding is a failure of the prose to deliver VOICE-NIA rather than a defect in the brief.",
+      "status": "complete",
+      "evidence_ref": "voice-briefs.md reviewed with no value change required; EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-VOICE finds the guidance correct and undelivered"
+    },
+    {
+      "document": "planning/arc-outline.md",
+      "required_change": "Confirm no ArcEntry, CrossCut, or Baseline value changed and that no Discovery ArcEntry status moves out of revised.",
+      "status": "complete",
+      "evidence_ref": "arc-outline.md unchanged by this pass; all 29 Discovery ArcEntries and Chapter Headers remain revised"
+    },
+    {
+      "document": ".kiro/specs/The-Final-Frontier-novel/tasks.md",
+      "required_change": "Leave task 14 unchecked and record that its blocker has changed from missing evidence to an open craft finding.",
+      "status": "complete",
+      "evidence_ref": "tasks.md task 14 remains unchecked; GATE-EDITORIAL-DISCOVERY-MOVEMENT-003 result=revision"
+    },
+    {
+      "document": "planning/arc-changes.md",
+      "required_change": "Record this change with exact prior and revised state, the two authorization-continuity repairs, complete impact assessment across the reference system, author authorization, and per-document synchronization evidence in one typed ArcChange.",
+      "status": "complete",
+      "evidence_ref": "planning/arc-changes.md, ARC-CHANGE-VOICE-SEPARATION-001, and the updated active-record count in the initialization state"
+    }
+  ],
+  "approval": {
+    "approved_by": "Author instruction in Kiro session",
+    "approved_at": "2026-09-18T23:40:00Z",
+    "approval_record": "Author instruction: 'Please do everything you suggested' following the full status and quality review."
+  },
+  "status": "complete",
+  "completed_at": "2026-09-18T23:40:00Z"
+}
+```
+
+### What this change deliberately does not do
+
+It does not return any Discovery chapter to `approved`, complete task 14, or begin Chapter 62. It does not
+close the voice-separation finding, which requires a paragraph-scale pass on `POV-NIA`'s narration and is
+recorded as the single remaining blocker. It does not alter the Mindwars or Coda plan, and it creates no
+canon, motif, reveal, or cross-cut.

@@ -5,7 +5,7 @@ pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "The institute's appetite arrives before the result does and already knows what it is worth."
-words: 1053
+words: 1042
 length_class: normal
 status: revised
 ---
@@ -39,11 +39,11 @@ A pause is not an answer, except in negotiations where everyone records it as on
 
 I revised the phrase to *structured signals under investigation* and returned it. The director's office restored *human-associated* and added *identity-bearing* in tracked changes.
 
-The comment carried initials I did not recognise, which meant the phrase had come from outside the scientific group and outside my review, and had been typed by somebody who had read no data because there was none to read. I asked who had drafted it. I was told the wording had been *discussed*. A phrase that has been discussed has no author and cannot be questioned, which is the entire reason people say it.
+The comment carried initials I did not recognize, which meant the phrase had come from outside the scientific group and outside my review, and had been typed by somebody who had read no data because there was none to read. I asked who had drafted it. I was told the wording had been *discussed*. A phrase that has been discussed has no author and cannot be questioned, which is the entire reason people say it.
 
 That addition was unsupported by any file I possessed. I rejected it for the stated reason. Within nine minutes I received a meeting invitation from technology transfer, a request for an accelerated publication hold, and a question from finance about whether restricted funds could pay for dedicated compute before the end of the quarter.
 
-Institutional appetite rarely announces itself as appetite. It appears as readiness. A room reserved before a meeting is approved. A confidentiality agreement sent to people no one has yet agreed to consult. A budget code created for money no one has offered. Each act is defensible because each act merely preserves an option. The options accumulate until declining them begins to look like the decision that requires justification.
+By four o'clock the room was booked, the confidentiality agreement had gone to two people nobody had agreed to consult, and finance had opened a budget code for money that had not been offered. Every one of those preserved an option and committed to nothing, and I could have written a defence of each in a sentence.
 
 I made the accumulation efficient.
 
@@ -61,7 +61,7 @@ The shorter answer was that absence of a name did not produce absence of a perso
 
 By four o'clock, the institute had opened a restricted project folder. Its title was *Signal Reconstruction Opportunity*. Mara had not approved the title. She had not supplied a result for the invention notice. The funding disclosure's material question remained blank.
 
-Technology transfer nevertheless sent me a proposed recipient list for a confidential briefing. It included the institute director, finance, research security, two patent lawyers, and an outside adviser whose organization was identified only as a prospective funding participant. I asked twice for that organization's name and was twice assured it would be supplied in due course, which is a sentence with a shelf life. No Open Channel Consortium existed in the file before me. There was only the practiced outline of one: money, counsel, technical promise, and an unnamed public benefit waiting to be written into the first paragraph.
+Technology transfer nevertheless sent me a proposed recipient list for a confidential briefing. It included the institute director, finance, research security, two patent lawyers, and an outside adviser whose organization was identified only as a prospective funding participant. I asked twice for that organization's name and was twice assured it would be supplied in due course, which is a sentence with a shelf life. No Open Channel Consortium existed in the file before me. There was only the practised outline of one: money, counsel, technical promise, and an unnamed public benefit waiting to be written into the first paragraph.
 
 I reduced the list. I added a statement that attendance conveyed no right to data. I required Mara's written approval before any briefing. These were real constraints, and I was good at making them legible.
 

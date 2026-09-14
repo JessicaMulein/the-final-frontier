@@ -3254,10 +3254,10 @@ Mechanism-bearing entries declare exactly one `mode`. `mode: not-applicable` mea
     "timeline_id": "TL-PRIVATE-PROTOCOL",
     "chronology_kind": "interval",
     "canon_status": "mixed",
-    "relative_chronology": "Mara and Nia formulate, test, break, and repair a challenge-response protocol in which entry follows specific, current, revocable consent and the handle remains inside.",
+    "relative_chronology": "Mara and Nia formulate, test, break, and repair a challenge-response protocol in which entry follows specific, current, revocable consent and the handle remains inside. They use the retained PAIR console and contact bands in Northline's calibration room under a written, time-bounded research-operations booking; no session enters or energizes the transferred array room.",
     "exact_time": null,
     "duration": null,
-    "location": "Northline Array and protected testing spaces",
+    "location": "Northline Array calibration room and protected testing spaces; transferred array room excluded",
     "participants": [
       "CHAR-001",
       "CHAR-002",
@@ -3297,7 +3297,9 @@ Mechanism-bearing entries declare exactly one `mode`. `mode: not-applicable` mea
       "The protocol is ethically valid but physically inadequate as a complete public defense.",
       "Electronic Speech Pairings may be coined no earlier than this movement and need not be coined until Mindwars.",
       "This entry fixes the first sustained fluent pairing as Mara and Nia because the approved design fixes it; every other pair identity and session owner remains deferred to Arc Outline work.",
-      "One session in this range fails on a stale or overbroad consent state, stops without inventing semantic content, and is repaired by separating pairing, sending, and content-recording consent; the failure changes an action rather than producing a transcript."
+      "The PAIR console, contact bands, and calibration room remain outside the Emergency Preparedness transfer and are available only through a written, time-bounded research-operations booking; this restores no array-room badge, test source, calibrated probe, array time, anechoic hours, or independent boundary measurement.",
+      "One attempted session in this range accepts a send request under a stale or overbroad session state, but the independent live-consent gate rejects it before neural transport. The range-level PAIR technical state describes the successful and repaired sessions; because the failed attempt produces no neural communication event, it creates no second mode and no semantic content.",
+      "The repair separates permission to pair for a named current session, each participant's deliberate send act under current consent, and separate mutual content-recording consent."
     ],
     "record_chronology": null,
     "technical_state": {
@@ -3337,7 +3339,7 @@ Mechanism-bearing entries declare exactly one `mode`. `mode: not-applicable` mea
         "recording_consent_b": false,
         "transcript": null
       },
-      "evidence_scope": "The first sustained fluent pairing proves that two living calibrated people can deliberately exchange near-natural internal speech while unoffered thought stays private. Consent-state and transport metadata exist and are semantically opaque; content recording stays off, so no transcript exists and none of this speaks to Nia's earlier uncalibrated wanting."
+      "evidence_scope": "The first sustained fluent pairing proves that two living calibrated people can deliberately exchange near-natural internal speech while unoffered thought stays private. Consent-state and transport metadata exist and are semantically opaque; content recording stays off, so no transcript exists and none of this speaks to Nia's earlier uncalibrated wanting. The stale-state failure proves only that the console accepted an unauthorized send request before an independent live-consent gate rejected it; zero neural transport occurred, and metadata cannot reconstruct what Mara intended to offer."
     },
     "cross_cut_ids": [
       "CUT-ENCLOSURE-AND-THE-PUBLIC",

@@ -35,7 +35,7 @@ A dispatcher asked a unit to confirm the west service road. The unit confirmed a
 
 I listened to it once. Then I stopped, because listening is not a method and I could feel myself wanting to do it again.
 
-The spoken correction did not explain the field. It gave me an external marker. At the moment the unit confirmed its location, the field's high-dimensional structure reorganised across intervals too brief to belong to a mechanical duty cycle and too coordinated to be incidental modulation. Attention selected one account of the world and acted.
+The spoken correction did not explain the field. It gave me an external marker. At the moment the unit confirmed its location, the field's high-dimensional structure reorganized across intervals too brief to belong to a mechanical duty cycle and too coordinated to be incidental modulation. Attention selected one account of the world and acted.
 
 I moved the marker twenty seconds in either direction. The alignment vanished, which is what a real coincidence in time does and a wishful one does not.
 
@@ -57,7 +57,7 @@ I could have asked the institute for access. I sat with that for a while, with t
 
 So I did not ask, and that was my first deliberate withholding.
 
-It was not the source identity, because I did not possess one. What I withheld was that the source now appeared to be a single live emergency dispatcher rather than a town, a tower, or an unknown class of machine. The institute still believed I was characterising an anomalous band. Julian's disclosure review still described the hardware truthfully: receive-only, no transmit stage. Neither statement disclosed the person emerging inside the result, and neither statement was false, which is the property of a good withholding.
+It was not the source identity, because I did not possess one. What I withheld was that the source now appeared to be a single live emergency dispatcher rather than a town, a tower, or an unknown class of machine. The institute still believed I was characterizing an anomalous band. Julian's disclosure review still described the hardware truthfully: receive-only, no transmit stage. Neither statement disclosed the person emerging inside the result, and neither statement was false, which is the property of a good withholding.
 
 Ravi stood at the glass while I opened the book.
 

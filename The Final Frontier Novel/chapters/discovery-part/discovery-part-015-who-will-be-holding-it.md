@@ -5,11 +5,11 @@ pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "Somebody alive was always going to find this channel, and the only open question is who will be holding it when they do."
-words: 1193
+words: 1218
 length_class: normal
 status: revised
 ---
-The confidential briefing list existed in six drafts, and I read them backward, because the order in which a document acquires its adjectives usually tells you more than the document does.
+The confidential briefing list existed in six drafts, and I read them backward at the window with my thumb keeping the place, because the order in which a document acquires its adjectives usually tells you more than the document does. The radiator under that window has two settings and I have never found the second one.
 
 In the first draft the outside adviser had no affiliation. In the second he had one, *Open Channel working group*, lower case, in a footnote. By the fourth the working group was a Consortium, and by the sixth the capital letters had arrived with no explanation of where they came from.
 
@@ -21,7 +21,7 @@ The restrictions I had proposed before the person-specific result were no longer
 
 I replied that the address result could not be disclosed pending review. Technology transfer replied to everyone that no identifiable information would be shared. I asked what they meant by identifiable and got a definition copied from policy: no name, contact detail, government number, image, or location. The finding had no location, which is precisely why the definition failed.
 
-So I opened the document history, which is the part of any institution that keeps talking after everybody has agreed to stop. The outside adviser had received an earlier phrase from the invention notice, *structured human-associated signals*, and had returned three questions. Could a receiver distinguish simultaneous subjects? Could a channel persist across hardware? Could the method support enrollment without conventional identity data?
+So I opened the document history, which is the part of any institution that keeps talking after everybody has agreed to stop. The outside adviser had received an earlier phrase from the invention notice, *structured human-associated signals*, and had returned three questions. Could a receiver distinguish simultaneous subjects? Could a channel persist across hardware? Could the method support enrolment without conventional identity data?
 
 The third question disclosed more understanding than the institute claimed to have shared.
 

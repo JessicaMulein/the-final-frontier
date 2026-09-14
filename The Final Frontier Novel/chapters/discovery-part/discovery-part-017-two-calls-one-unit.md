@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-DISCOVERY-HANDSHAKE
 motif_events: []
 hook: "She was sure, she routed against practice, and she cannot find the moment the sureness started."
-words: 1759
+words: 1606
 length_class: long-outlier
 status: revised
 ---
@@ -15,11 +15,11 @@ The first was from a house near the north bus depot. Adult male, sixty-two, coll
 
 The second was from the old quarry road. Single vehicle off the carriageway, one caller, driver out of the car and walking. He said he had hit the barrier and spun. He denied injury twice before I asked, and on the third question he said his chest hurt where the belt had caught him.
 
-Condition: one available advanced response unit. Two ordinary ambulance crews were already moving, one toward each call. Unit Seventeen carried the additional airway equipment and the clinician who could do more before transport.
+Condition: one available advanced response unit. Two ordinary ambulance crews were already moving, one towards each call. Unit Seventeen carried the additional airway equipment and the clinician who could do more before transport.
 
 Ordinary practice put Seventeen on the collapse. I knew that.
 
-I assigned it to the road. The act took four touches: select Unit Seventeen, select incident 6841, confirm advanced diversion, acknowledge extended response to incident 6839. I made all four without hesitating.
+I assigned it to the road. Four touches: select Unit Seventeen, select incident 6841, confirm advanced diversion, acknowledge extended response to incident 6839. My thumb found confirm without looking; the chair took my weight forward and the desk edge met my forearms.
 
 Dev looked over when the route line changed. "Seventeen to the quarry?"
 
@@ -27,17 +27,17 @@ Dev looked over when the route line changed. "Seventeen to the quarry?"
 
 "What changed?"
 
-Nothing had changed on either card. The man behind the bathroom door was still unresponsive. The driver was still ambulant, breathing, and able to answer. The road crew's estimated arrival was nine minutes and the collapse crew's was seven, and Seventeen could reach the house in twelve and the quarry in fourteen.
+Nothing had changed on either card. The man behind the bathroom door was still unresponsive. The driver was still ambulant, breathing, and able to answer. The road crew's estimated arrival was nine minutes and the collapse crew's was seven. Seventeen could reach the house in twelve and the quarry in fourteen.
 
-The screen supported the house, and so did the resource table. Seventeen's clinician carried the airway kit the ordinary crew did not, and the collapse protocol puts that capability beside an unresponsive patient before it puts it beside a talking driver. No exception rule favoured distance, road geometry, or the possibility that a walking person was sicker than he sounded. Exceptions require a fact, and I had no new fact.
+The screen supported the house, and so did the resource table. Seventeen's clinician carried airway equipment the ordinary crew did not, and the collapse protocol put that capability beside an unresponsive patient before it put it beside a talking driver. No exception rule favoured distance, road geometry, or the possibility that a walking person was sicker than he sounded. Exceptions required a fact. I had no new fact.
 
 I wanted the road.
 
-That was the whole reason, and it sat inside me with the finished quality of a judgment after the judging is over. Not a voice. Not words. Nobody said *send Seventeen to the quarry*. No image of the driver arrived, and no command displaced my own thought. I looked at two live incidents and wanted one unit on one road, and the wanting felt exactly like mine.
+The wanting was complete by the time Dev asked. It had the finished quality of judgment after judging, and it felt like mine. No voice, no words, no image, no order I could quote. I had made all four touches without feeling a decision arrive.
 
-"Chest mechanism," I told Dev.
+"Chest mechanism," I told him.
 
-It was true and insufficient. A seat belt can conceal internal injury, a walking caller can deteriorate, and we are trained not to let fluent speech stand in for physiology. Those facts justified keeping the road call urgent. They did not justify taking the advanced unit away from a likely arrest.
+I heard myself hand him a real reason for a decision I had not made on it. A seat belt can conceal internal injury, a walking caller can deteriorate, and we are trained not to let fluent speech stand in for physiology. Those facts kept the road call urgent. They did not justify taking the advanced unit away from a likely arrest.
 
 Dev opened the road card. "He got himself out."
 
@@ -45,57 +45,55 @@ Dev opened the road card. "He got himself out."
 
 "Didn't say it did."
 
-His correction gave me room to review, so I reviewed. Age unknown on the road. One occupant reported. No fire, no entrapment, no loss of consciousness reported. At the house, probable cardiac arrest with access delayed by the body against the door, the first crew requesting fire assistance for entry, and no breathing status anybody could confirm.
+His correction gave me room to review. Age unknown on the road. One occupant reported. No fire, no entrapment, no loss of consciousness reported. At the house, probable cardiac arrest, access delayed by the body against the door, the first crew requesting fire assistance, and no breathing status anybody could confirm.
 
-I left Seventeen on the quarry route. Then I went back to the wife.
+I left Seventeen on the quarry route and went back to the wife.
 
 "Tell me whether his hand changes colour when you press a fingernail."
 
-She said she could not reach the nail. Only two fingers, through the gap.
+She could not reach a nail, only two fingers through the gap.
 
 "Touch the back of the hand. Is it warm?"
 
-She started crying before she answered. I heard her set the phone down and drag something across the floor, and the gap widened enough for her arm. Warm, she said. She thought it was warm.
+She started crying before she answered. I heard her set the phone down and drag something across the floor. The gap widened enough for her arm. Warm, she said. She thought it was warm.
 
 The fire crew acknowledged. The ordinary ambulance reported three minutes out.
 
-On the road call, the driver had stopped walking and was sitting on the verge because I had told him to. He described pain across the left side of his chest and into his shoulder. He could take a full breath, though it hurt. There was no blood and nothing broken near him that he could see. He gave the registration, corrected one letter, and asked whether the car would be recovered that night.
+On the road call, the driver had stopped walking and was sitting on the verge because I had told him to. Pain crossed the left side of his chest and ran into his shoulder. He could take a full breath, though it hurt. No blood, nothing broken near him that he could see. He gave the registration, corrected one letter, and asked whether the car would be recovered that night.
 
-People near death can ask about recovery. People not near death can sound terrified. Voice is evidence and not verdict, and I knew that too.
+People near death can ask about recovery. People not near death can sound terrified. I had heard both often enough to distrust my own ear, and I distrusted it then.
 
-Seventeen called for an incident summary and I gave it: single vehicle, barrier impact, ambulant driver now seated, chest pain after restraint, conscious and coherent, ordinary crew fourteen minutes. I did not add that I had chosen the road against priority, because the unit needed conditions and not my state.
+Seventeen asked for an incident summary. I gave it: single vehicle, barrier impact, ambulant driver now seated, chest pain after restraint, conscious and coherent, ordinary crew fourteen minutes. I did not add that I had chosen the road against priority. The unit needed conditions, not my state.
 
-My hands were steady on the desk. I noticed them being steady the way you notice a light that is not flickering, and then I stopped noticing, because certainty makes a room simpler. The collapse and the quarry were no longer competing for the same answer. The quarry had Seventeen, the house had its crew and fire assistance, and I could work two plans instead of continuing to choose between them.
+The route lines now held two plans instead of one unresolved choice. Seventeen beside 6841. Ambulance and fire beside 6839. My hands were steady on the desk. Each update arrived under the incident it belonged to, and I moved between the channels without having to choose the unit again.
 
 At 18:42:09, fire reported access to the bathroom. At 18:42:21, the ambulance crew entered. At 18:42:44, they confirmed cardiac arrest and began resuscitation.
 
-I read the times back because sequence controls consequence. The crew asked how long the patient had been down. The wife said he had gone to the bathroom ten minutes before she heard the sound, and she had called within two minutes, and that answer went into the card as caller estimate rather than measured fact.
+The crew asked how long the patient had been down. His wife said he had gone to the bathroom ten minutes before she heard the sound and she had called within two minutes. I read the sequence back and entered her answer as caller estimate rather than measured fact.
 
 At 18:44:03, Unit Seventeen reached the quarry road. The advanced clinician examined the driver and requested transport priority. His blood pressure had fallen, his skin was pale and wet, the chest pain was increasing. They suspected internal bleeding.
 
-Dev pointed at the status without speaking. There it was: the outcome that could make my choice look correct.
+Dev pointed at the status without speaking. Relief came before I could stop it. I put the allocation time and the examination time beside each other: 18:38:06 and 18:44:03. The later condition supported what Seventeen did next. It had not been on the card under my hand, and it did not reduce what the house crew was facing.
 
-I felt relief before I could stop it. Relief is not vindication. The road driver needing Seventeen does not establish that the collapse patient needed it less; scarcity makes two truths occupy one available vehicle, and a later fact cannot travel backward and become the reason for an earlier choice. I knew that, and I also knew I had wanted the road before any blood pressure appeared.
-
-The crew at the house worked the arrest and requested a second set of hands. The nearest available support unit was eighteen minutes away. I sent it, notified the hospital, and stayed with the wife after fire moved her into the hall.
+The arrest crew requested a second set of hands. The nearest available support unit was eighteen minutes away. I sent it, notified the hospital, and stayed with the wife after fire moved her into the hall.
 
 "Are they still working?"
 
-I could hear the equipment and the short counted language they use in a room like that. "Yes."
+I could hear equipment and the short counted language used in a room like that. "Yes."
 
 "Is that good?"
 
-The answer she wanted was not available to me. "It means they are still treating him. Stay where the firefighter can see you."
+The answer she wanted was not available to me, so I gave her the condition the channel still supported. "It means they are still treating him. Stay where the firefighter can see you."
 
-She asked whether she should call their son. I told her I could not decide that for her, and she said she had already called him and did not know why she had asked me.
+She asked whether she should call their son. I said I could not decide that for her. She had already called him and did not know why she had asked me.
 
 On the quarry road, Seventeen requested an air transfer that the weather denied, so they moved by road. The driver was conscious when they departed.
 
-At the house, the arrest crew continued for twenty-seven minutes after entry. Then the channel went quiet long enough for me to know what kind of transmission was coming. The clinician asked for the exact dispatch time. I gave it. He gave me the time resuscitation stopped.
+At the house, the arrest crew continued for twenty-seven minutes after entry. Then the channel stayed quiet long enough for me to know what transmission was coming. The clinician asked for the exact dispatch time. I gave it. He gave me the time resuscitation stopped.
 
 One real death entered the card at 19:10.
 
-The system did not place it beside my routing decision. It keeps each event in its own field. Unit assigned. Unit diverted. Access. Patient contact. Treatment. Transport for one call, death at scene for the other.
+The system kept the two incidents in separate fields. Unit assigned. Unit diverted. Access. Patient contact. Treatment. Transport for one call, death at scene for the other.
 
 Dev took his headset off one ear. "You couldn't know both."
 
@@ -103,30 +101,28 @@ Dev took his headset off one ear. "You couldn't know both."
 
 "The road patient needed them."
 
-"That is not the same statement."
+"That's not what I decided on."
 
 He put the headset back on.
 
 A supervisor flag appeared on incident 6839 because the advanced unit had been assigned elsewhere during a fatal outcome. It did not accuse. It required a routing note before shift end.
 
-I opened the note and typed *Advanced resource allocated to competing incident based on—* and stopped there.
+I opened the note and typed *Advanced resource allocated to competing incident based on—*
 
-Based on what? Chest mechanism was evidence. Deterioration later validated the need for advanced care, but later evidence was not available at allocation. The caller was ambulant. The collapse had higher ordinary priority. No new location problem, access update, unit request, or medical detail had changed the balance before I routed.
+The cursor waited after the dash. I put both hands flat on the desk and replayed from the first queue tone. House call. Quarry call. One unit. Resource table. Four touches. Dev's question. By his question, the road already felt selected. I could recover the wanting and its finished quality. I could not recover a sentence, image, command, or chain that came before it.
 
-I put my hands flat on the desk and replayed the interval from the first queue tone. House call. Quarry call. One unit. The screen. Dev's question. Four touches. I could remember wanting Seventeen on the road, and I could remember how complete the wanting felt, and I could not remember arriving at it.
+Chest mechanism was available before allocation. The driver's falling blood pressure was not. The mechanism could defend urgency; I did not remember using it to produce the route.
 
-That is different from forgetting a reason. Reasons disappear under workload all the time while the decision they produced stays behind. This had no blurred argument behind it, no half-remembered cue, no instinct I could translate once the room quieted. There was certainty, already in place, with nothing in front of it.
+I selected the unfinished line and deleted it.
 
-So I corrected the note.
+Then I typed: *Advanced resource allocated to competing incident 6841 after dispatcher judgment that reported chest mechanism presented greater immediate need. Allocation departed from ordinary priority. Basis under review.*
 
-*Advanced resource allocated to competing incident 6841 after dispatcher judgment that reported chest mechanism presented greater immediate need. Allocation departed from ordinary priority. Basis under review.*
+I read it against both incident numbers. *Judgment* kept my hand in the record. *Basis under review* stopped where my memory stopped. I searched once for *intuition* and *mistake*; neither was there. The first would turn an absent explanation into a faculty. The second would claim a consequence the records did not establish.
 
-I did not write *intuition*, which would have named ignorance as a faculty. I did not write *mistake*, because the road patient had needed the care and because consequence was not yet established. I wrote what I could prove: judgment, departure, review.
-
-I filed it at 19:36. The reply came back inside a minute and was four words long. *See me after handover.*
+I filed the note at 19:36. The reply came back inside a minute and was four words long. *See me after handover.*
 
 The next call entered the queue and I took it. My voice worked. I verified the address twice, and then a third time, which is not procedure.
 
 At 19:52 the card for 6839 acquired a line I had not written. *Deceased at scene. Family present.* The system sets that in the same font as everything else.
 
-Handover was at 20:00. I put my headset in the drawer at 19:59 and walked the length of the floor to her office with three words I could stand behind and nothing else that would survive being written down. Dev did not look up as I passed, which was the only useful thing he could have done.
+Handover was at 20:00. I put my headset in the drawer at 19:59 and walked the length of the floor to my supervisor's office with *basis under review* still available to say. Dev did not look up as I passed.

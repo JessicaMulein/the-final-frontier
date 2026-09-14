@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DOOR-INWARD
 motif_events: []
 hook: "She locks a door the channel has never needed, and the thing she wanted to explore has already come the other way."
-words: 1197
+words: 1203
 length_class: normal
 status: revised
 ---
@@ -13,7 +13,7 @@ I processed the timing with the trial order still sealed, wrote the result to a 
 
 She compared the order herself. When the match held she signed the observation she had made — action first, recognition second — and nothing else. She did not sign my mechanism. I signed that separately.
 
-*The temporary transmit path can reuse a live person-specific receive address to produce a low-dimensional nonsemantic change in urgency toward an available act. The effect is an uncalibrated addressed write, not communication. This result applies to the consented bounded session and does not establish any earlier effect or origin.*
+*The temporary transmit path can reuse a live person-specific receive address to produce a low-dimensional nonsemantic change in urgency towards an available act. The effect is an uncalibrated addressed write, not communication. This result applies to the consented bounded session and does not establish any earlier effect or origin.*
 
 Five active envelopes were followed by her action inside the interval we had declared before the session began. No sham envelope was. Her definite reports identified five active trials and five shams. On the last active trial she pressed first and identified the live condition afterward.
 
@@ -59,6 +59,6 @@ I knew five of the names. Two of the others carry titles from organizations that
 
 I wrote those three lines on the back of the access list, which was the wrong paper for them and the only paper in my hand, and then I taped the list inside the cabinet door with the writing facing in.
 
-I turned the key. The latch went into the frame with the clean mechanical certainty that good hardware has. Behind it the receiver was dark and the transmit path was in pieces, and outside it Nia was carrying the knowledge of an action she can identify only after performing it.
+Eight people are coming on the twenty-sixth. The room is booked, the papers go out on the nineteenth whatever I send them, and one of the eight is a line I cannot put a person behind.
 
-Eight people are coming on the twenty-sixth. Twelve days to decide how much of this apparatus I am willing to describe to three lines on a list I could not place.
+Then I turned the key. The latch went into the frame with the clean mechanical certainty that good hardware has, and I put the key in my pocket, where it will be on the twenty-sixth when eight people who do not need it come through a door I did not book.
