@@ -172,7 +172,9 @@ class ChapterSourceAdapter:
             raise InputError(f"Chapter source changed while planning {track.id!r}")
         if source.chapter != chapter_number:
             raise InputError(f"Chapter source identity changed while planning {track.id!r}")
-        spoken = markdown_to_spoken(source.body, track.id)
+        spoken, _applied = config.pronunciations.apply(
+            markdown_to_spoken(source.body, track.id)
+        )
         return _PreparedSource(
             source_path=track.source_path,
             source_section=None,
@@ -193,7 +195,6 @@ class ApprovedSpecialTrackSourceAdapter:
         track: CatalogTrack,
         workspace_root: Path,
     ) -> _PreparedSource:
-        del config  # The catalog already carries the fully resolved source declaration.
         if track.kind is TrackKind.CHAPTER:
             raise InputError("ApprovedSpecialTrackSourceAdapter requires a Special Track")
         if not track.enabled or track.approval_status is not SourceApprovalStatus.APPROVED:
@@ -220,7 +221,9 @@ class ApprovedSpecialTrackSourceAdapter:
             if track.source_section is None
             else _extract_named_markdown_section(normalized, track.source_section, track.id)
         )
-        spoken = markdown_to_spoken(selected, track.id)
+        spoken, _applied = config.pronunciations.apply(
+            markdown_to_spoken(selected, track.id)
+        )
         after = read_bytes_nofollow(source_path)
         if before != after:
             raise InputError(f"Approved source changed while planning {track.id!r}")

@@ -2,67 +2,67 @@
   "pbtResults": {
     "1.5 Write the required property test for render-once book tracks": {
       "status": "passed",
-      "lastRunTimestamp": 1789346958822
+      "lastRunTimestamp": 1789353887808
     },
     "1.4 Write the required property test for deterministic configuration and source planning": {
       "status": "passed",
-      "lastRunTimestamp": 1789346956771
+      "lastRunTimestamp": 1789353885445
     },
     "2.4 Write the required property test for scoped per-file isolation": {
       "status": "passed",
-      "lastRunTimestamp": 1789346965246
+      "lastRunTimestamp": 1789353892265
     },
     "2.5 Write the required property test for observational legacy import": {
       "status": "passed",
-      "lastRunTimestamp": 1789346969511
+      "lastRunTimestamp": 1789353897479
     },
     "3.2 Write the required property test for independently reconstructable transaction truth": {
       "status": "passed",
-      "lastRunTimestamp": 1789346971470
+      "lastRunTimestamp": 1789353899681
     },
     "2.3 Write the required property test for immutable bounded plans and preflight": {
       "status": "passed",
-      "lastRunTimestamp": 1789346962691
+      "lastRunTimestamp": 1789353889966
     },
     "4.3 Write the required property test for exact finite one-shot authorization": {
       "status": "passed",
-      "lastRunTimestamp": 1789346973543
+      "lastRunTimestamp": 1789353901994
     },
     "4.4 Write the required property test for definitive-or-uncertain paid attempts": {
       "status": "passed",
-      "lastRunTimestamp": 1789346975781
+      "lastRunTimestamp": 1789353904095
     },
     "5.5 Write the required property test for reuse and resume call safety": {
       "status": "passed",
-      "lastRunTimestamp": 1789346982150
+      "lastRunTimestamp": 1789353912455
     },
     "5.4 Write the required property test for fail-fast independent batches": {
       "status": "passed",
-      "lastRunTimestamp": 1789346980081
+      "lastRunTimestamp": 1789353906425
     },
     "6.5 Write the required property test for complete active manifests": {
       "status": "passed",
-      "lastRunTimestamp": 1789346984202
+      "lastRunTimestamp": 1789353915508
     },
     "6.8 Write the required property test for modality-complete journals and cost": {
       "status": "passed",
-      "lastRunTimestamp": 1789346992735
+      "lastRunTimestamp": 1789353923870
     },
     "6.7 Write the required property test for assembly integrity": {
       "status": "passed",
-      "lastRunTimestamp": 1789346990407
+      "lastRunTimestamp": 1789353920798
     },
     "6.6 Write the required property test for exact transcript and LPCM replay": {
       "status": "passed",
-      "lastRunTimestamp": 1789346986070
+      "lastRunTimestamp": 1789353917891
     },
     "7.3 Write the required property test for collision-safe idempotent delivery": {
       "status": "passed",
-      "lastRunTimestamp": 1789346994804
+      "lastRunTimestamp": 1789353928672
     },
     "7.4 Write the required property test for evidence and identity allowlists": {
       "status": "passed",
-      "lastRunTimestamp": 1789346996886
+      "lastRunTimestamp": 1789353932149
     }
   },
   "executionHistory": {

@@ -22,6 +22,7 @@ from frontier_audiobook.production_config import (
 )
 from frontier_audiobook.production_models import AudioEncoding, FidelityPolicy, TrackKind
 from frontier_audiobook.util import sha256_bytes
+from frontier_audiobook.verify import normalized_tokens
 
 
 VALID_TOML = """\
@@ -289,21 +290,35 @@ def test_tracked_config_has_required_defaults_and_pending_render_once_catalog():
     ) == (24000, 16, 1)
     assert print_production_toml(config) == config_path.read_text(encoding="utf-8")
 
+    # The dedication Special Track has an explicitly approved source; every other
+    # Special Track still ships disabled and pending operator approval.
+    approved_ids = {"dedication"}
     pending_ids = {
         "opening-credits",
-        "dedication",
         "epigraph",
         "narratable-front-matter",
         "closing-credits",
     }
-    assert {track.id for track in config.tracks} == pending_ids
-    assert all(not track.enabled for track in config.tracks)
-    assert all(track.approval_status is SourceApprovalStatus.PENDING for track in config.tracks)
+    special_ids = approved_ids | pending_ids
+    assert {track.id for track in config.tracks} == special_ids
+    by_declaration = {track.id: track for track in config.tracks}
+    for track_id in pending_ids:
+        assert not by_declaration[track_id].enabled
+        assert by_declaration[track_id].approval_status is SourceApprovalStatus.PENDING
+    for track_id in approved_ids:
+        assert by_declaration[track_id].enabled
+        assert by_declaration[track_id].approval_status is SourceApprovalStatus.APPROVED
+        assert by_declaration[track_id].approved_sha256 is not None
     assert all(track.render_once for track in config.tracks)
+    assert [(entry.written, entry.spoken) for entry in config.pronunciations.entries] == [
+        ("Hannah", "Haanah"),
+        ("waveform", "wave-form"),
+        ("waveforms", "wave-forms"),
+    ]
 
     catalog = build_ordered_track_catalog(config, workspace_root)
     by_id = {track.id: track for track in catalog.tracks}
-    assert pending_ids < set(by_id)
+    assert special_ids < set(by_id)
     assert "chapter-003" in by_id
     assert by_id["chapter-003"].sequence == 7
     assert by_id["chapter-003"].enabled
@@ -383,3 +398,20 @@ def test_approved_handoff_hash_render_once_and_plan_bound_are_enforced(tmp_path)
         build_ordered_track_catalog(
             replace(config, tracks=(not_render_once, pending)), tmp_path
         )
+
+
+def test_waveform_lexicon_hyphenates_without_touching_neighbor_words():
+    workspace_root = Path(__file__).resolve().parents[2]
+    config = load_production_config(workspace_root / ".audiobook" / "config" / "production.toml")
+    source = (
+        "No arbitrary waveform generator had been borrowed from the test building. "
+        "The two waveforms had not met cleanly."
+    )
+    spoken, applied = config.pronunciations.apply(source)
+
+    assert applied == ("waveform", "waveforms")
+    assert "waveform" not in spoken
+    assert "wave-form generator" in spoken
+    assert "wave-forms had" in spoken
+    assert normalized_tokens("wave-form") == ("wave", "form")
+    assert normalized_tokens("wave-forms") == ("wave", "forms")

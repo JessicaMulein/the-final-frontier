@@ -20,20 +20,20 @@ EXPECTED_EXCERPT_SCOPE = (
     (
         "technical-authority",
         5,
-        "Anything built to send information carries concessions to a receiver.",
-        "My apparatus was the only thing in the arrangement behaving as a receiver.",
+        "Anything built to send information makes concessions to a receiver.",
+        "my apparatus was the only object in the whole arrangement behaving like a receiver.",
     ),
     (
         "consent-and-dialogue",
         73,
-        "My conditions were four.",
-        "That was the consent. Not my badge, not the three signatures, not the channel.",
+        "I gave Halloran four conditions standing up, before anybody switched on the field.",
+        "The badge remained on its cord, the three signatures remained on their sheet, and the participant box now had one spoken answer attached to one run.",
     ),
     (
         "private-grief",
         118,
         "Forgetting has friction.",
-        "What I cannot access in this head has no surviving copy elsewhere.",
+        "What I cannot reach in this head is nowhere else.",
     ),
     (
         "quiet-refusal",

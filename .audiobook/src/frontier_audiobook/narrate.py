@@ -44,7 +44,38 @@ SEGMENT_GAP_SECONDS = 0.28
 PARAGRAPH_GAP_SECONDS = 0.62
 
 SENTENCE_BOUNDARY = re.compile(r'(?<=[.!?])["\u201d\u2019\')\]]*\s+')
-SEGMENT_BOUNDARY_POLICY = "safe-narration-punctuation-v3"
+NO_COMMAND_FRAGMENT = re.compile(r"^No [A-Za-z][A-Za-z'-]*\.$")
+NO_NOUN_TAIL = re.compile(r"\bno [A-Za-z][A-Za-z'-]*[.!?]$", re.IGNORECASE)
+NO_COMMAND_MAX_WORDS = 8
+UNQUOTED_IMPERATIVE_OPENER = re.compile(
+    r"^(?:Confirm|Verify|Ensure|Acknowledge|Disclose|Submit|Declare|Describe|"
+    r"Explain|Summarize|Provide|Return|Read|Check|Report|State|Tell|List|Stop|"
+    r"Treat|Record|Preserve|Accept|Ask|Name|Add|Write|Log|Do not|Don't)\b",
+    re.IGNORECASE,
+)
+CONTINUATION_OPENER = re.compile(
+    r"^(?:When|Where|While|Because|And|But|Which|That|If|Though|Although|"
+    r"Until|After|Before|As)\b",
+    re.IGNORECASE,
+)
+SEGMENT_BOUNDARY_POLICY = "safe-narration-punctuation-v17"
+SHORT_QUOTED_MAX_WORDS = 8
+SHORT_QUOTED_PAIR_MAX_WORDS = 20
+MAX_PACKED_SENTENCE_ENDS = 2
+SHORT_DIALOGUE_ATTRIBUTION_MAX_WORDS = 5
+SHORT_LABEL_MAX_WORDS = 3
+DIALOGUE_ATTRIBUTION_VERB = re.compile(
+    r"^(?:asked|said|told|answered|replied|whispered|muttered)$",
+    re.IGNORECASE,
+)
+SHORT_COLON_ATTRIBUTION_MAX_WORDS = 32
+ATTRIBUTION_COLON_VERB = re.compile(
+    r"\b(?:wrote|typed|said|dictated|logged|noted|recorded|asked|told)\b",
+    re.IGNORECASE,
+)
+OVER_TARGET_LEFTOVER_MIN_WORDS = 5
+OVER_TARGET_LEFTOVER_MAX_WORDS = 8
+OVER_TARGET_LEFTOVER_MAX_CHARACTERS = 160
 
 
 @dataclass(frozen=True)
@@ -161,6 +192,15 @@ def _fits_safe_turn(text: str) -> bool:
     )
 
 
+def _ends_with_no_noun(text: str) -> bool:
+    """True when a fragment ends on 'no procedure.' / 'no message.' as if the turn stopped."""
+
+    stripped = text.strip()
+    if not stripped or stripped[:1] in {'"', "\u201c", "'", "\u2018"}:
+        return False
+    return NO_NOUN_TAIL.search(stripped) is not None
+
+
 def _narration_sentence_fragment(source: str, *, final: bool) -> str:
     text = source.strip()
     if not final:
@@ -178,9 +218,15 @@ def _split_for_narration(
     paragraph_index: int,
     sentence_index: int,
 ) -> tuple[str, ...]:
-    """Add narration-only sentence punctuation while preserving every word."""
+    """Add narration-only sentence punctuation while preserving every word.
 
-    def solve(boundaries: list[int]) -> tuple[str, ...] | None:
+    Prefer cuts that do not start a later fragment with an unquoted imperative
+    and do not end a non-final fragment on 'no procedure.' Nova treats a USER
+    turn such as 'Confirm that...' as an instruction, and it may stop at
+    '...have no' as if there were nothing left to narrate.
+    """
+
+    def solve(boundaries: list[int], *, avoid_instruction_cuts: bool) -> tuple[str, ...] | None:
         positions = sorted({0, *boundaries, len(sentence)})
         memo: dict[int, tuple[str, ...] | None] = {}
 
@@ -197,6 +243,18 @@ def _split_for_narration(
                 )
                 if not _fits_safe_turn(fragment):
                     continue
+                if (
+                    avoid_instruction_cuts
+                    and positions[position_index] > 0
+                    and _is_unquoted_imperative(fragment)
+                ):
+                    continue
+                if (
+                    avoid_instruction_cuts
+                    and next_index != len(positions) - 1
+                    and _ends_with_no_noun(fragment)
+                ):
+                    continue
                 remainder = visit(next_index)
                 if remainder is None:
                     continue
@@ -208,18 +266,28 @@ def _split_for_narration(
 
         return visit(0)
 
-    comma_boundaries = [match.start() + 1 for match in re.finditer(r",\s+", sentence)]
-    result = solve(comma_boundaries)
-    if result is None:
-        conjunction_boundaries = [
-            match.start()
-            for match in re.finditer(
-                r"\s+(?=(?:and|but|with|because|while|when)\s)",
-                sentence,
-                flags=re.IGNORECASE,
-            )
-        ]
-        result = solve([*comma_boundaries, *conjunction_boundaries])
+    clause_boundaries = [
+        match.start() + 1 for match in re.finditer(r"[,;:]\s+", sentence)
+    ]
+    conjunction_boundaries = [
+        match.start()
+        for match in re.finditer(
+            r"\s+(?=(?:and|but|with|because|while|when)\s)",
+            sentence,
+            flags=re.IGNORECASE,
+        )
+    ]
+    result = None
+    for avoid_instruction_cuts in (True, False):
+        result = solve(clause_boundaries, avoid_instruction_cuts=avoid_instruction_cuts)
+        if result is not None:
+            break
+        result = solve(
+            [*clause_boundaries, *conjunction_boundaries],
+            avoid_instruction_cuts=avoid_instruction_cuts,
+        )
+        if result is not None:
+            break
     if result is None:
         raise InputError(
             "Narration sentence cannot be partitioned into safe turns using approved "
@@ -233,22 +301,408 @@ def _split_for_narration(
     return result
 
 
+def _split_short_colon_attribution(sentence: str) -> tuple[str, ...] | None:
+    """Split a writing/speaking attribution off the content that follows a colon.
+
+    Nova often drops a framing prefix such as 'I wrote:' and starts at the later
+    heading or quoted content. The rule is verb-based, not chapter-specific: a
+    short clause whose main verb is wrote/typed/said/dictated/logged/noted/
+    recorded/asked/told splits from what follows. Heading-style colons
+    ('Hypothesis: ...') stay one turn. Long colon cuts that would mint an
+    unquoted imperative stay unsplit here; oversized-sentence splitting already
+    avoids that cut.
+    """
+
+    if _is_quoted_speech(sentence):
+        return None
+    match = re.match(r"^([^:]{1,120}):\s+(\S.*)$", sentence.strip())
+    if match is None:
+        return None
+    left = match.group(1).strip()
+    right = match.group(2).strip()
+    if len(normalized_tokens(left)) > SHORT_COLON_ATTRIBUTION_MAX_WORDS:
+        return None
+    if ATTRIBUTION_COLON_VERB.search(left) is None:
+        return None
+    if _is_unquoted_imperative(right):
+        return None
+    prefix = _narration_sentence_fragment(left, final=False)
+    right_turn = _narration_sentence_fragment(right, final=True)
+    if not _fits_safe_turn(prefix) or not _fits_safe_turn(right_turn):
+        return None
+    if normalized_tokens(f"{prefix} {right_turn}") != normalized_tokens(sentence):
+        return None
+    return (prefix, right_turn)
+
+
+def _is_no_command_fragment(text: str) -> bool:
+    """True for an unquoted 'No ...' turn Nova may treat as 'nothing to narrate'."""
+
+    stripped = text.strip()
+    if not stripped or _is_quoted_speech(stripped):
+        return False
+    if NO_COMMAND_FRAGMENT.fullmatch(stripped) is not None:
+        return True
+    tokens = normalized_tokens(stripped)
+    return stripped.startswith("No ") and 1 <= len(tokens) <= NO_COMMAND_MAX_WORDS
+
+
+def _is_quoted_speech(text: str) -> bool:
+    return text.lstrip()[:1] in {'"', "\u201c", "'", "\u2018"}
+
+
+def _is_short_quoted_sentence(text: str) -> bool:
+    """True for a short quoted utterance that Nova may empty-FINAL when sent alone."""
+
+    stripped = text.strip()
+    if not stripped or not _is_quoted_speech(stripped):
+        return False
+    words = len(normalized_tokens(stripped))
+    return 1 <= words <= SHORT_QUOTED_MAX_WORDS
+
+
+def _has_unclosed_double_quote(text: str) -> bool:
+    """True when a fragment opened a double quote that has not yet closed."""
+
+    straight = text.count('"')
+    curly_net = text.count("\u201c") - text.count("\u201d")
+    return straight % 2 == 1 or curly_net > 0
+
+
+def _rejoin_unclosed_quoted_fragments(pieces: list[str]) -> list[str]:
+    """Keep a quoted utterance together when sentence splitting cut inside it."""
+
+    joined: list[str] = []
+    current: str | None = None
+    for piece in pieces:
+        if current is None:
+            if _is_quoted_speech(piece) and _has_unclosed_double_quote(piece):
+                current = piece
+            else:
+                joined.append(piece)
+            continue
+        candidate = f"{current} {piece}"
+        if (
+            not _fits_safe_turn(candidate)
+            or _sentence_end_count(candidate) > MAX_PACKED_SENTENCE_ENDS
+        ):
+            joined.append(current)
+            current = piece if _is_quoted_speech(piece) and _has_unclosed_double_quote(piece) else None
+            if current is None:
+                joined.append(piece)
+            continue
+        current = candidate
+        if not _has_unclosed_double_quote(current):
+            joined.append(current)
+            current = None
+    if current is not None:
+        joined.append(current)
+    return joined
+
+
+def _sentence_end_count(text: str) -> int:
+    """Count period-terminated sentences. Questions stay one spoken utterance."""
+
+    return len(re.findall(r"\.", text))
+
+
+def _can_pair_quoted_turns(left: str, right: str) -> bool:
+    """True when a short quoted turn can borrow the next quoted sentence."""
+
+    if not _is_short_quoted_sentence(left) or not _is_quoted_speech(right):
+        return False
+    joined = f"{left} {right}"
+    return (
+        len(normalized_tokens(joined)) <= SHORT_QUOTED_PAIR_MAX_WORDS
+        and _sentence_end_count(left) + _sentence_end_count(right) <= MAX_PACKED_SENTENCE_ENDS
+        and _fits_safe_turn(joined)
+    )
+
+
+def _is_short_dialogue_attribution(text: str) -> bool:
+    """True for a short 'he asked.' / 'Ravi said.' tail after quoted speech."""
+
+    stripped = text.strip()
+    if not stripped or _is_quoted_speech(stripped):
+        return False
+    tokens = normalized_tokens(stripped)
+    if not (2 <= len(tokens) <= SHORT_DIALOGUE_ATTRIBUTION_MAX_WORDS):
+        return False
+    return DIALOGUE_ATTRIBUTION_VERB.fullmatch(tokens[-1]) is not None
+
+
+def _is_short_label(text: str) -> bool:
+    """True for a tiny form-field caption that should pack with neighboring labels."""
+
+    stripped = text.strip()
+    if not stripped or _is_quoted_speech(stripped) or _is_no_command_fragment(stripped):
+        return False
+    return len(normalized_tokens(stripped)) <= SHORT_LABEL_MAX_WORDS
+
+
+def _is_unquoted_imperative(text: str) -> bool:
+    """True when a turn would look like an instruction to Nova rather than manuscript."""
+
+    stripped = text.strip()
+    if not stripped or _is_quoted_speech(stripped) or _is_no_command_fragment(stripped):
+        return False
+    return UNQUOTED_IMPERATIVE_OPENER.match(stripped) is not None
+
+
+def _is_instruction_shaped_turn(text: str) -> bool:
+    """True when the whole USER turn is command-shaped and should borrow a neighbor."""
+
+    stripped = text.strip()
+    if _is_unquoted_imperative(stripped):
+        return True
+    pieces = tuple(f"{part.strip()}." for part in stripped.split(".") if part.strip())
+    return bool(pieces) and all(_is_no_command_fragment(piece) for piece in pieces)
+
+
+def _absorb_command_join_allowed(left: str, right: str) -> bool:
+    """No-X runs may keep several short commands; other joins stay at two sentences."""
+
+    joined = f"{left} {right}"
+    if not _fits_safe_turn(joined):
+        return False
+    no_command_side = (
+        (_is_instruction_shaped_turn(left) and not _is_unquoted_imperative(left))
+        or (_is_instruction_shaped_turn(right) and not _is_unquoted_imperative(right))
+    )
+    if no_command_side:
+        return True
+    return _sentence_end_count(joined) <= MAX_PACKED_SENTENCE_ENDS
+
+
+def _absorb_instruction_shaped(segments: list[Segment]) -> list[Segment]:
+    """Keep command-shaped turns from going to Nova alone when a neighbor still fits."""
+
+    items = list(segments)
+    changed = True
+    while changed:
+        changed = False
+        for index, segment in enumerate(items):
+            if not _is_instruction_shaped_turn(segment.text):
+                continue
+            if index > 0 and items[index - 1].paragraph_index == segment.paragraph_index:
+                joined = f"{items[index - 1].text} {segment.text}"
+                if _absorb_command_join_allowed(items[index - 1].text, segment.text):
+                    items[index - 1 : index + 1] = [
+                        Segment(
+                            items[index - 1].index,
+                            segment.paragraph_index,
+                            joined,
+                            items[index - 1].narration_only_punctuation
+                            or segment.narration_only_punctuation,
+                        )
+                    ]
+                    changed = True
+                    break
+            if index + 1 < len(items) and items[index + 1].paragraph_index == segment.paragraph_index:
+                joined = f"{segment.text} {items[index + 1].text}"
+                if _absorb_command_join_allowed(segment.text, items[index + 1].text):
+                    items[index : index + 2] = [
+                        Segment(
+                            segment.index,
+                            segment.paragraph_index,
+                            joined,
+                            segment.narration_only_punctuation
+                            or items[index + 1].narration_only_punctuation,
+                        )
+                    ]
+                    changed = True
+                    break
+    return [
+        Segment(position, item.paragraph_index, item.text, item.narration_only_punctuation)
+        for position, item in enumerate(items, start=1)
+    ]
+
+
+def _absorb_short_quoted_pairs(segments: list[Segment], max_words: int) -> list[Segment]:
+    """Pair consecutive short quoted turns so Nova is not given an isolated reply.
+
+    Adjacent quoted sentences are often separate paragraphs. A short quoted turn
+    may borrow the next quoted sentence when the pair still fits a safe turn and
+    the quote-pair word budget, even if the second sentence is longer than a
+    short quote by itself.
+    """
+
+    if max_words < 12:
+        return segments
+    items = list(segments)
+    index = 0
+    while index + 1 < len(items):
+        left = items[index]
+        right = items[index + 1]
+        joined_text = f"{left.text} {right.text}"
+        if _can_pair_quoted_turns(left.text, right.text):
+            items[index : index + 2] = [
+                Segment(
+                    left.index,
+                    left.paragraph_index,
+                    joined_text,
+                    left.narration_only_punctuation or right.narration_only_punctuation,
+                )
+            ]
+            index += 1
+            continue
+        index += 1
+    return [
+        Segment(position, item.paragraph_index, item.text, item.narration_only_punctuation)
+        for position, item in enumerate(items, start=1)
+    ]
+
+
+def _is_single_short_quoted_turn(text: str) -> bool:
+    """True for one quoted utterance, not an already packed quote pair."""
+
+    if not _is_short_quoted_sentence(text):
+        return False
+    return text.count('"') + text.count("\u201c") + text.count("\u201d") <= 2
+
+
+def _absorb_isolated_short_quotes(segments: list[Segment], max_words: int) -> list[Segment]:
+    """Trail a leftover short quote onto the next short or quoted sentence.
+
+    After quote pairing, an odd reply such as "That isn't an answer." can still
+    be the whole USER turn. Borrow the next sentence when it is quoted, a
+    continuation, or itself short.
+    """
+
+    if max_words < 12:
+        return segments
+    items = list(segments)
+    index = 0
+    while index + 1 < len(items):
+        left = items[index]
+        right = items[index + 1]
+        joined_text = f"{left.text} {right.text}"
+        short_follower = right.word_count <= SHORT_QUOTED_MAX_WORDS
+        if (
+            _is_single_short_quoted_turn(left.text)
+            and (
+                _is_quoted_speech(right.text)
+                or short_follower
+                or CONTINUATION_OPENER.match(right.text) is not None
+            )
+            and len(normalized_tokens(joined_text)) <= SHORT_QUOTED_PAIR_MAX_WORDS
+            and _sentence_end_count(left.text) + _sentence_end_count(right.text)
+            <= MAX_PACKED_SENTENCE_ENDS
+            and _fits_safe_turn(joined_text)
+        ):
+            items[index : index + 2] = [
+                Segment(
+                    left.index,
+                    left.paragraph_index,
+                    joined_text,
+                    left.narration_only_punctuation or right.narration_only_punctuation,
+                )
+            ]
+            index += 1
+            continue
+        index += 1
+    return [
+        Segment(position, item.paragraph_index, item.text, item.narration_only_punctuation)
+        for position, item in enumerate(items, start=1)
+    ]
+
+
 def _pack(pieces: list[str], target_words: int) -> list[str]:
-    """Pack safe sentences while preserving established paragraph grouping."""
+    """Pack safe sentences while preserving established paragraph grouping.
+
+    A USER turn must not look like an isolated instruction. 'No X.' fragments and
+    other short unquoted 'No ...' sentences are not glued to prior narrative; they
+    trail the next same-paragraph sentence when that still fits a safe turn, so a
+    line such as 'No message was present in it.' is not sent as the whole USER turn. An unquoted imperative sentence stays attached to
+    the preceding sentence when the pair still fits, so packing does not mint a
+    turn that starts with 'Confirm that...'. Chapter packing (12-word target) does
+    not join two complete narrative sentences just to fill the budget: Nova often
+    speaks the first sentence and drops the rest. Consecutive short labels such as
+    'Date.' pack together. After an over-target flush, one leftover of five to
+    eight words may absorb the next sentence when the pair is still short, so
+    'Each edge produced...' is not sent alone. The follower must be a continuation
+    clause (When/Where/And/...), not a new independent sentence. Consecutive short
+    quoted sentences pack in pairs when both still fit the quote-pair word budget,
+    so a reply like "That requires more observation." is not sent as its own USER
+    turn. A short quoted turn may borrow a longer following quote when the pair
+    still fits a safe turn. Pairs may join across adjacent paragraphs: spoken
+    dialogue is often one quoted sentence per paragraph. A short attribution tail
+    such as 'he asked.' stays on the quoted sentence that sentence-splitting would
+    otherwise isolate. Sentence splitting that cuts inside a quoted utterance
+    rejoins those fragments before packing.
+    """
 
     packed: list[str] = []
     current: list[str] = []
     current_words = 0
+    after_over_target_flush = False
+    one_sentence_turns = target_words >= 12
+
+    def flush() -> None:
+        nonlocal current_words
+        if current:
+            packed.append(" ".join(current))
+            current.clear()
+            current_words = 0
+
+    def only_commands() -> bool:
+        return bool(current) and all(_is_no_command_fragment(item) for item in current)
+
+    def only_labels() -> bool:
+        return bool(current) and all(_is_short_label(item) for item in current)
+
+    def only_short_quotes() -> bool:
+        return bool(current) and all(_is_short_quoted_sentence(item) for item in current)
+
     for piece in pieces:
         words = len(normalized_tokens(piece))
-        if current and current_words + words > target_words:
-            packed.append(" ".join(current))
-            current = []
-            current_words = 0
+        command = _is_no_command_fragment(piece)
+        if current and command and not only_commands():
+            after_over_target_flush = False
+            flush()
+        candidate = " ".join((*current, piece)) if current else piece
+        overflow = bool(current) and current_words + words > target_words
+        if current and (one_sentence_turns or overflow):
+            keep_with_current = _fits_safe_turn(candidate) and (
+                only_commands()
+                or (
+                    _is_unquoted_imperative(piece)
+                    and _sentence_end_count(candidate) <= MAX_PACKED_SENTENCE_ENDS
+                )
+                or (only_labels() and _is_short_label(piece))
+                or (
+                    only_short_quotes()
+                    and _is_short_dialogue_attribution(piece)
+                    and current_words + words <= target_words
+                )
+                or (
+                    one_sentence_turns
+                    and only_short_quotes()
+                    and len(current) == 1
+                    and _can_pair_quoted_turns(current[0], piece)
+                )
+                or (
+                    one_sentence_turns
+                    and after_over_target_flush
+                    and OVER_TARGET_LEFTOVER_MIN_WORDS
+                    <= current_words
+                    <= OVER_TARGET_LEFTOVER_MAX_WORDS
+                    and len(candidate) <= OVER_TARGET_LEFTOVER_MAX_CHARACTERS
+                    and CONTINUATION_OPENER.match(piece) is not None
+                )
+            )
+            if keep_with_current:
+                current.append(piece)
+                current_words += words
+                after_over_target_flush = False
+                continue
+            after_over_target_flush = current_words > target_words
+            flush()
         current.append(piece)
         current_words += words
-    if current:
-        packed.append(" ".join(current))
+        if len(current) > 1:
+            after_over_target_flush = False
+    flush()
     return packed
 
 
@@ -268,11 +722,15 @@ def segment_spoken_text(spoken: str, max_words: int = MAX_SEGMENT_WORDS) -> tupl
         pending: list[str] = []
 
         def flush_pending() -> None:
-            for text in _pack(pending, max_words):
+            for text in _pack(_rejoin_unclosed_quoted_fragments(pending), max_words):
                 segments.append(Segment(len(segments) + 1, paragraph_index, text))
             pending.clear()
 
         for sentence_index, sentence in enumerate(sentences):
+            attribution = _split_short_colon_attribution(sentence)
+            if attribution is not None:
+                pending.extend(attribution)
+                continue
             if _fits_safe_turn(sentence):
                 pending.append(sentence)
                 continue
@@ -290,6 +748,9 @@ def segment_spoken_text(spoken: str, max_words: int = MAX_SEGMENT_WORDS) -> tupl
                 )
         flush_pending()
 
+    segments = _absorb_instruction_shaped(segments)
+    segments = _absorb_short_quoted_pairs(segments, max_words)
+    segments = _absorb_isolated_short_quotes(segments, max_words)
     expected = normalized_tokens(spoken)
     actual = tuple(token for segment in segments for token in normalized_tokens(segment.text))
     if expected != actual:

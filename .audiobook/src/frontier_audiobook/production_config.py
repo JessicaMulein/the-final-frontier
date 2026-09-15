@@ -19,6 +19,11 @@ from typing import Iterable
 
 from .errors import InputError
 from .manuscript import FILENAME_CHAPTER
+from .pronunciation import (
+    EMPTY_LEXICON,
+    PronunciationLexicon,
+    parse_pronunciation_entries,
+)
 from .production_models import (
     RECORD_SCHEMA_VERSION,
     AudioEncoding,
@@ -374,6 +379,7 @@ class BookProductionConfig:
     estimate: EstimateConfig
     track_kind_overrides: tuple[TrackKindOverride, ...]
     tracks: tuple[TrackDeclaration, ...]
+    pronunciations: PronunciationLexicon = EMPTY_LEXICON
 
     SCHEMA_VERSION = RECORD_SCHEMA_VERSION
 
@@ -412,6 +418,8 @@ class BookProductionConfig:
         if len({item.sequence for item in self.tracks}) != len(self.tracks):
             raise InputError("production config contains duplicate Track sequence positions")
         object.__setattr__(self, "tracks", tuple(sorted(self.tracks, key=lambda item: item.sequence)))
+        if not isinstance(self.pronunciations, PronunciationLexicon):
+            raise InputError("production config pronunciations must be a PronunciationLexicon")
 
 
 ProductionConfig = BookProductionConfig
@@ -603,7 +611,7 @@ def parse_production_toml(
             "estimate",
             "tracks",
         },
-        optional={"track_kinds"},
+        optional={"track_kinds", "pronunciations"},
         label="production config",
     )
     if type(parsed["schema_version"]) is not int or parsed["schema_version"] != RECORD_SCHEMA_VERSION:
@@ -778,6 +786,13 @@ def parse_production_toml(
         estimate=estimate,
         track_kind_overrides=tuple(kind_overrides),
         tracks=tuple(tracks),
+        pronunciations=(
+            EMPTY_LEXICON
+            if "pronunciations" not in parsed
+            else parse_pronunciation_entries(
+                parsed["pronunciations"], "production config pronunciations"
+            )
+        ),
     )
 
 
@@ -860,6 +875,14 @@ def print_production_toml(config: BookProductionConfig) -> str:
 
     for item in config.track_kind_overrides:
         _append_override(lines, f"track_kinds.{item.kind.value}", item.settings)
+
+    for entry in config.pronunciations.entries:
+        lines.append("[[pronunciations]]")
+        _append_assignment(lines, "written", entry.written)
+        _append_assignment(lines, "spoken", entry.spoken)
+        if entry.note is not None:
+            _append_assignment(lines, "note", entry.note)
+        lines.append("")
 
     for track in config.tracks:
         lines.append("[[tracks]]")

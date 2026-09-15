@@ -15,6 +15,7 @@ HEADER_KEYS = frozenset(
 HEADER_LINE = re.compile(r"^([a-z_]+): (.+)$")
 FILENAME_CHAPTER = re.compile(r"-(\d{3})-[a-z0-9]+(?:-[a-z0-9]+)*\.md$")
 EMPHASIS = re.compile(r"(?<!\*)\*([^*\n]+)\*(?!\*)")
+INLINE_CODE = re.compile(r"`([^`\r\n]+)`")
 UNSUPPORTED_BLOCK = re.compile(r"(?m)^\s{0,3}(?:#{1,6}\s|>|```|~~~|(?:\*{3,}|-{3,})\s*$)")
 UNSUPPORTED_LINK = re.compile(r"!?\[[^\]]*\]\([^)]*\)")
 
@@ -114,10 +115,11 @@ def extract_anchored_excerpt(body: str, start_anchor: str, end_anchor: str, exce
 
 
 def markdown_to_spoken(source: str, excerpt_id: str) -> str:
-    """Remove only inline emphasis; fail closed on other Markdown constructs."""
-    if UNSUPPORTED_BLOCK.search(source) or UNSUPPORTED_LINK.search(source) or "`" in source:
+    """Remove supported inline emphasis/code; fail closed on other Markdown."""
+    spoken_source = INLINE_CODE.sub(r"\1", source)
+    if UNSUPPORTED_BLOCK.search(spoken_source) or UNSUPPORTED_LINK.search(spoken_source) or "`" in spoken_source:
         raise InputError(f"Excerpt {excerpt_id!r} contains unsupported Markdown")
-    spoken = EMPHASIS.sub(r"\1", source)
+    spoken = EMPHASIS.sub(r"\1", spoken_source)
     if "*" in spoken:
         raise InputError(f"Excerpt {excerpt_id!r} contains unpaired or unsupported asterisks")
     if not spoken.strip():

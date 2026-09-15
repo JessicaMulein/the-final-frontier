@@ -28,6 +28,24 @@ input_text_tokens_per_call = 8192
 output_speech_tokens_per_call = 8192
 output_text_tokens_per_call = 8192
 
+[track_kinds.chapter]
+target_segment_words = 12
+
+[[pronunciations]]
+written = "Hannah"
+spoken = "Haanah"
+note = "Open first vowel as in Hawaii; audio-only respelling, never printed"
+
+[[pronunciations]]
+written = "waveform"
+spoken = "wave-form"
+note = "Force wave + form, not ware-form; audio-only respelling, never printed"
+
+[[pronunciations]]
+written = "waveforms"
+spoken = "wave-forms"
+note = "Plural of waveform; audio-only respelling, never printed"
+
 [[tracks]]
 id = "opening-credits"
 kind = "opening_credits"
@@ -43,9 +61,11 @@ render_once = true
 id = "dedication"
 kind = "front_matter"
 sequence = 2
-source_path = ".audiobook/config/tracks/dedication.md"
-enabled = false
-approval_status = "pending"
+source_path = "The Final Frontier Novel/front-matter.md"
+source_section = "dedication"
+approved_sha256 = "5abdbfb7175897f9e670cdde97b9d58f3a122f6d0d3136ac6da902dc9582e2f1"
+enabled = true
+approval_status = "approved"
 render_once = true
 
 [tracks.override]

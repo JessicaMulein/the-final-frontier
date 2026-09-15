@@ -223,6 +223,57 @@ $CLI production status --book
 
 Validation never estimates missing evidence. A missing/duplicate/malformed manifest, transcript, journal, hash, path, attempt result, native status, WAV property, rate, or isolation input blocks delivery. Listening feedback may be added to a report only as supplemental evidence; it cannot replace deterministic gates.
 
+### Pronunciation lexicon (correct spelling, correct pronunciation)
+
+This workflow sends plain text to Amazon Nova 2 Sonic. No SSML, no phoneme markup, and no service-side pronunciation lexicon is used, so the only way to change how a word is spoken is to change the characters the model receives. Respelling a proper noun in the manuscript is not acceptable, so the respelling lives in the transform between *source text* and *spoken text*.
+
+That seam already exists: `markdown_to_spoken` strips emphasis, so spoken text already differs from source text, and every source snapshot records `normalized_body_sha256` and `spoken_sha256` separately. Deterministic fidelity verification compares the returned transcript against the **spoken** text, so a declared respelling validates normally.
+
+Declare entries in `.audiobook/config/production.toml`:
+
+```toml
+[[pronunciations]]
+written = "Hannah"
+spoken = "Haanah"
+note = "Open first vowel as in Hawaii; audio-only respelling, never printed"
+```
+
+The manuscript keeps the correct spelling; the model receives the respelling. Matching is deliberately strict:
+
+- `written` matches whole words only, never inside a longer word (`Savannah` is untouched).
+- Matching is case-sensitive, because these are proper nouns.
+- Longer `written` forms are tried first, so a short entry cannot shadow a longer one containing it.
+- Substitution is a single pass, so replacement text is never rewritten by another entry.
+
+Entries are part of the production config, so `config_sha256` covers them and changing the lexicon changes the spoken text, its `spoken_sha256`, and therefore the frozen plan. A lexicon edit after planning fails closed at render time rather than silently altering delivered audio.
+
+### Source-currency audit (is the delivered audio still correct?)
+
+Deterministic validation proves audio matched its source *at render time*. It cannot know about a manuscript edit made afterwards. Run the audit at any time to compare every recorded render digest against the live manuscript:
+
+```bash
+$CLI audit                 # operator summary
+$CLI audit --json          # full record
+$CLI audit --skip-unbound  # only artifacts carrying their own render evidence
+```
+
+The audit is read-only and never contacts AWS or a model. It exits `0` when every audited artifact is current and `1` when any artifact needs attention, so it works as a pre-publish gate.
+
+Reported statuses:
+
+- `current`: recorded source digest matches the live manuscript and the audio bytes match their delivery digest.
+- `stale-source-changed`: the chapter text changed after the audio was rendered. The audio must be re-rendered.
+- `audio-modified`: audio bytes no longer match the digest recorded at render time.
+- `audio-missing` / `source-missing`: a recorded path is absent from the workspace.
+- `source-unreadable`: the chapter no longer parses under the restricted-header contract.
+
+Each pipeline is compared under the convention it actually recorded, because comparing under the wrong one invents false staleness:
+
+- `production` records `source_sha256` as the digest of the whole source file.
+- `legacy-narration` records `source_sha256` as the digest of the prose body only, deliberately ignoring restricted-header edits.
+
+WAVs without their own render evidence, such as hand-exported copies under `voice-samples/`, are listed separately. When such a copy is byte-identical to a recorded artifact it inherits that artifact's status; otherwise it is reported as having no matching recorded artifact and cannot be certified.
+
 ### Cost labels
 
 Keep these values separate in every review and report:

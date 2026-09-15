@@ -22,6 +22,7 @@ from .audition import (
     reveal_blind_key,
 )
 from .config import load_audition_config
+from .currency import audit_currency, format_currency_table
 from .errors import AudiobookError, InputError
 from .narrate import MAX_SEGMENT_WORDS, narrate_chapter, plan_narration
 from .production_worker import run_production_worker
@@ -242,6 +243,21 @@ def _parser() -> argparse.ArgumentParser:
     reveal.add_argument("--confirm-scoring-complete", action="store_true", required=True)
 
     _add_production_parser(commands)
+
+    audit = commands.add_parser(
+        "audit",
+        help="Verify delivered chapter audio still matches the current manuscript; never calls AWS",
+    )
+    audit.add_argument(
+        "--json",
+        action="store_true",
+        help="Emit the full audit record as JSON instead of the operator summary",
+    )
+    audit.add_argument(
+        "--skip-unbound",
+        action="store_true",
+        help="Audit only artifacts that carry their own render evidence",
+    )
 
     worker = commands.add_parser("_production-worker", help=argparse.SUPPRESS)
     worker.add_argument("--plan", type=Path, required=True)
@@ -1008,6 +1024,16 @@ def run(arguments: argparse.Namespace) -> int:
         )
     if arguments.command == "production":
         return _run_production(workspace, arguments)
+    if arguments.command == "audit":
+        payload = audit_currency(
+            workspace,
+            include_unbound=not arguments.skip_unbound,
+        )
+        if arguments.json:
+            _print_json(payload)
+        else:
+            print(format_currency_table(payload))
+        return EXIT_PASS if payload["all_current"] else EXIT_FIDELITY_MISMATCH
     if arguments.command != "audition":
         raise InputError(f"Unsupported command: {arguments.command}")
 
