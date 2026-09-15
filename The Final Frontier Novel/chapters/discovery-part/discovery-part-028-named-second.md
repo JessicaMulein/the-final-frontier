@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-DISCOVERY-DOOR-INWARD
 motif_events: []
 hook: "She names the arrival correctly, and she names it second."
-words: 1256
+words: 1157
 length_class: normal
 status: revised
 ---
@@ -31,7 +31,7 @@ I watched my right hand, which was the wrong place to look: staring at the expec
 
 My finger pressed.
 
-Then I knew. Not before. There had been no warning sensation, no foreign edge, no word, no thought I could hold up as the cause. The key moved under my finger, the screen went dark, and in the instant after the act I found the same finished quality I remembered from the quarry routing: of course now, already chosen, no need to keep waiting.
+Then I knew. Not before. There had been no warning sensation, foreign edge, word, or thought I could hold up as the cause. The key moved under my finger, the screen went dark, and in the instant after the act I found the same finished quality I remembered from the quarry routing: of course now, already chosen, no need to keep waiting.
 
 "Live," I said.
 
@@ -43,7 +43,7 @@ On trial six the key went down while I was still deciding whether my shoulder hu
 
 "Live."
 
-Nothing spoke or told me to press. The available act had become complete before I remembered completing it, and that description risks making me passive, which I was not. I knew the task. I had chosen to sit in the room and agreed that a fixed nonsemantic envelope might alter urgency. Consent made the exposure authorized. It did not make the effect stop feeling like my own judgment.
+Nothing spoke or told me to press. The available act became complete before I remembered completing it. I was not passive: I knew the task, chose the room, and had agreed that a fixed nonsemantic envelope might alter urgency. My own hand still felt like my own hand.
 
 At the midpoint Anand came in with water and a chair cushion, because the required question has to be asked in person and he had decided the rest of it on his way.
 
@@ -73,9 +73,7 @@ Six active. Six sham.
 
 My definite labels identified five of the six active trials, and I had called five of the six shams blank. The active trial I missed was the one where impatience arrived before I acted. The keypress record showed the same division without relying on my labels: on five active rounds my action followed the hidden envelope inside the predeclared interval, and no sham keypress did.
 
-Anand put the printed order beside the keypress record. Mara asked me for the limits before she wrote the result. I gave them in the order the sheets supported them: this path, this address, this session, and a push towards an act I was already willing to perform. The sheets did not establish how a field becomes wanting, whether another person would respond, or whether an effect could carry meaning.
-
-Then Mara asked me to describe the final trial.
+Anand put the printed order beside the keypress record. Mara asked me to describe the final trial.
 
 "I had reasons to press," I said. "I could name them before I did it. Then I pressed without using them. I knew the difference after."
 
@@ -91,15 +89,9 @@ She deleted the sentence.
 
 I dictated: *On the final active trial, the keypress followed the hidden envelope inside the predeclared interval. Nia reported action first and recognition of a finished judgment afterward.*
 
-Mara read it back exactly.
+Then I gave her the boundary for the whole result: *Observed effect is limited to this path, this address, this session, and a push towards an act Nia was already willing to perform. Similarity to the reported routing experience does not establish how a field becomes wanting, whether another person would respond, whether an effect could carry meaning, or the source of the earlier event.*
 
-"Now the comparison," she said.
-
-"Similar effect to the reported routing experience. Source of the earlier event not established. This session does not establish the cause of the earlier route."
-
-She entered all three sentences and read them back. I corrected *same effect* to *similar effect*. She made the change without adding a sender.
-
-The old routing remained unresolved on the page. The trial record established that Mara could produce a similar order under conditions I had chosen. It did not turn those conditions into retroactive consent or make her the source of the first wanting.
+Mara read both entries back. I corrected *same* to *similar* in her comparison. She made the change without adding a sender.
 
 I asked Anand for copies of the printed order and the keypress record. He brought both sheets to the door rather than making me come back.
 

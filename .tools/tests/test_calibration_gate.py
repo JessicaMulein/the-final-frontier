@@ -259,31 +259,28 @@ def test_the_calibration_motif_assignments_are_in_the_committed_ledger(
     ) == ()
 
 
-def test_only_calibration_prose_exists_after_gate_unlocks_drafting(manuscript_root):
-    """The gate unlocks only the eight exploratory Calibration_Batch chapters.
+def test_delivered_chapter_files_match_current_arc_entries(
+    checker, manuscript_root
+):
+    """Every delivered ArcEntry has exactly one file, with no prose leakage."""
 
-    No later Discovery chapter is present, and all four movement directories
-    remain available for the later author-approved workflow.
-    """
+    index, diagnostics = checker.load_reference_index(manuscript_root)
+    assert diagnostics == ()
 
     chapters = manuscript_root.joinpath("chapters")
-    expected = [
-        "aftermath-coda/aftermath-coda-118-tuesday-kettle-on.md",
-        "aftermath-coda/aftermath-coda-124-truthful-refusal.md",
-        "discovery-part/discovery-part-001-noise-floor.md",
-        "discovery-part/discovery-part-002-an-ordinary-morning.md",
-        "discovery-part/discovery-part-003-the-failed-check.md",
-        "discovery-part/discovery-part-004-no-gap-on-her-side.md",
-        "discovery-part/discovery-part-005-not-a-message.md",
-        "mindwars-part/mindwars-part-073-did-i-say-yes.md",
-    ]
+    expected = sorted(
+        record.payload["filename"].split("chapters/", 1)[1]
+        for record in index.of_type("ArcEntry")
+        if record.payload["status"] != "planned"
+    )
+    actual = sorted(
+        path.relative_to(chapters).as_posix()
+        for path in chapters.rglob("*.md")
+    )
 
     assert manuscript_root.joinpath("planning", "arc-outline.md").is_file()
-    assert [
-        path.relative_to(chapters).as_posix()
-        for path in sorted(chapters.rglob("*.md"))
-    ] == expected
-    assert sorted(path.name for path in chapters.iterdir()) == [
+    assert actual == expected
+    assert sorted({path.split("/", 1)[0] for path in actual}) == [
         "aftermath-coda",
         "discovery-part",
         "mindwars-part",

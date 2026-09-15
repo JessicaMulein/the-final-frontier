@@ -4,8 +4,8 @@ chapter: 47
 pov_id: POV-NIA
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: []
-hook: "She is an appendix, and the appendix is the reason the program is considered urgent."
-words: 1149
+hook: "She is an appendix, and the appendix is the reason the programme is considered urgent."
+words: 1038
 length_class: normal
 status: revised
 ---
@@ -25,17 +25,17 @@ Section two was governance. I read all of it. It was better than I expected; som
 
 Appendix D was headed *Illustrative harm cases supporting protective deployment priority*. There were four, lettered. Case B was mine.
 
-*County emergency service, winter. Two simultaneous life-threatening incidents, one available advanced response unit. Allocation departed from established priority. One fatality. The dispatcher subsequently reported an inability to reconstruct the basis of the allocation decision. Pattern consistent with unauthorized channel effect on volitional certainty.*
+*County emergency service, winter. Two simultaneous life-threatening incidents, one advanced response unit. Allocation departed from established priority. One fatality; the dispatcher reported an inability to reconstruct the basis of the allocation decision. Pattern consistent with unauthorized channel effect on volitional certainty.*
 
 Forty-one words. I counted them, numbered the sentences in the margin, and went back through them in order.
 
-The first four sentences were accurate. I could have written them, and part of one I did write, at 19:36, in a routing note: *Allocation departed from ordinary priority. Basis under review.* I copied that beneath sentence four. The note went into a county system, which means people I will never meet are entitled to read it later. That is what the system is for.
+The first four matched the incident record. One of them had begun under my hand at 19:36: *Allocation departed from ordinary priority. Basis under review.* I copied that beneath it.
 
 Beside sentence five I underlined *consistent with*. Then I underlined it again.
 
-*Consistent with* was doing the work of *caused by* while keeping its coat on. In the margin I made two short entries. The first began with a woman at a bench fifty miles away who had told me to my face what she did and could not tell me what it reached. The second began with something nobody could identify; if that account was true, I was the first item in a sequence other people would get to explain. Under both I wrote: *no evidence inside my decision*.
+*Consistent with* was doing the work of *caused by* while keeping its coat on. In the margin I put the two accounts I had already refused: Mara's later handshake and a source nobody had identified. Under both I wrote *no evidence inside my decision*.
 
-I had said that aloud in a training room, with a pen lying across the corner of a sheet, to the only person who could have been the first account. The binder had kept the incident, removed the uncertainty, and set a deployment priority on top of it. My initials were still on line nine.
+The binder had kept the incident, dressed one possible explanation as a pattern, and set a deployment priority on top. My initials were still on line nine.
 
 I rang the number inside the cover on the Monday. The woman I got was patient and quick and had clearly had the conversation before.
 
@@ -73,8 +73,8 @@ Dev rang on the Tuesday because he had watched the binder go past his screen and
 
 He had taken the yellow paper off the wall above his screen, put it through the machine in the back office, and fixed it back with new tape. It proved nothing about the display. It would outlive the ticket.
 
-I copied the forty-one words by hand into the notebook, behind the account of the crossing bell and behind the yellow strip from the reservoir morning. Three pages now. The first two held things I had noticed when the day did not require it. On the third, somebody else had noticed me and got four sentences right. Sentence five was not mine and was not anybody's.
+I copied the forty-one words by hand into the notebook, behind the account of the crossing bell and behind the yellow strip from the reservoir morning. Three pages now. The first two held things I had noticed when the day did not require it. On the third, somebody else had noticed me and got four sentences right. Sentence five had arrived in somebody else's coat.
 
-I have been asked since why I did not simply write to them and put it plainly. I did write. What I could not put into the request was *the man in your Case B died on my shift* without supplying what the standing telephone answer required next: name, service, date, dead man.
+I wrote the removal request. At *the man in your Case B died on my shift*, the next particulars lined up behind the sentence: name, service, date, dead man. Supplying them would rebuild the identity the appendix claimed not to hold. I left them out and wrote the objection against the language instead.
 
-I copied that sentence beneath the forty-one words in the notebook and listed the four particulars below it. Dev's laminated strip went back above his screen and Ticket 4716 was open again. I closed the notebook with the particulars still on my side of the cover.
+Then I copied the stopped sentence beneath the forty-one words and listed the four particulars below it. Dev's laminated strip went back above his screen and Ticket 4716 was open again. I closed the notebook with the particulars still on my side of the cover.

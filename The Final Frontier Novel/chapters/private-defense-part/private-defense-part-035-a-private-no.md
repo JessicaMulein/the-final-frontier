@@ -5,13 +5,13 @@ pov_id: POV-MARA
 timeline_id: TL-PRIVATE-COPPER
 motif_events: []
 hook: "A car she does not recognize is at the Northline Array gate before she has finished admitting the room is not an answer."
-words: 1210
+words: 1509
 length_class: normal
 status: revised
 ---
-Nia left the pad on the chair inside the enclosure with two times on it in pencil, 11:02 and 2:06, and a note under them: see the openings, not only the hours.
+Nia left the pad on the chair inside the enclosure with two opening times on it in pencil, 11:07 and 2:06, between the written start at 9:06 and endpoint at 3:06. Under them she had written: see the openings, not only the hours.
 
-I read it as a maintenance record, because that is what I am for. Two cycles in six hours. The gasket had taken a light compression set at the latch corner and recovered overnight. The threshold plate showed two scuff arcs where a heel had turned. At two openings a day the contact fingers reach their rated cycle count in nine years, and I wrote *9 yr, revisit at 5* in the log and sat looking at the number for some time.
+I read it as a maintenance record, because that is what I am for. Two openings before the planned six-hour endpoint. The gasket had taken a light compression set at the latch corner and recovered overnight. The threshold plate showed two scuff arcs where a heel had turned. At two openings a day the contact fingers reach their rated cycle count in nine years, and I wrote *9 yr, revisit at 5* in the log and sat looking at the number for some time.
 
 The attenuation held with the fan running, the filtered lights on, and the acoustic tube open, and the seam map stayed under our declared resolution. An occupant could verify the enclosure, open it without asking permission, and stop it being silently closed or released from outside.
 
@@ -26,6 +26,12 @@ Julian sent me a scan of one page from the Consortium's draft enrolment framewor
 *Channel support functions enabled by default.*
 
 The phrase did not identify reception or transmission, or say what the system would observe, what it might apply, when active operation began, or who could stop it. The participant's later preferences remained subject to safety and service requirements written by the operator.
+
+Support of that kind is not one capability, and the page did not say which of several it meant. So I costed each of them, because costing a thing is the only way I can hold somebody else's sentence still enough to read it.
+
+My December rack observes and emits nothing. The one bench path I built applied a content-free envelope through an address I had already found: a shove, dimensionally poor, carrying no vocabulary and with no route to acquire one. Getting an offered sentence out of one person and into another needs three things I have never built. A modulation stage that holds phase outward as accurately as mine holds it inward. A mapping between one particular nervous system and one other particular nervous system, made by those two and belonging to nobody else. And a gate that opens only on a deliberate act, because a channel without one carries whatever is loudest rather than whatever was chosen.
+
+The first is money and engineering. The third is a decision somebody either makes or declines to make. The second cannot be issued, purchased, or installed. It has to be grown, by two people who keep turning up.
 
 I called him.
 
@@ -46,6 +52,16 @@ Through the glass the chair inside the enclosure was empty and the red handle sa
 A form can. A signature collected for access can be made to authorize whatever the service later calls support; a current answer becomes an account state; revocation becomes a preference applied after activation. The room has no such language: closed and open are physical states, the handle belongs to one side, and that clarity does not scale.
 
 We could build more rooms. Hospitals could install them; people with money could line a bedroom. Each would buy a bounded interval for someone able to get inside it, and outside those intervals the roads, the workplaces, and other people's homes would stay as permeable as in December. That is not freedom. It is a life organized around the few places where refusal has been made affordable.
+
+"Do they have a working one?" I asked. "Not a concept. Two people, sending."
+
+"Yes. Volunteers, their own rooms, their own money, weeks for each pair. Their counsel offered me the session records before I thought to ask for them."
+
+"Then they have built the part I never went near. It says nothing about December."
+
+"No. It says nothing about December. She was careful about that too, and then she said you found the address."
+
+I let that sit where it landed and did not pick it up.
 
 "What do they want from Northline?" I asked.
 

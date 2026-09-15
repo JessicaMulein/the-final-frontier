@@ -5,7 +5,7 @@ pov_id: POV-SAFIYA
 timeline_id: TL-CODA-ACCOUNT
 motif_events: [MOT-KETTLE-01]
 hook: "She describes what the quiet did inside her own head while the kettle went on heating, and she reaches the end of it without being interrupted or corrected."
-words: 1109
+words: 1440
 length_class: normal
 status: exploratory
 ---
@@ -15,9 +15,11 @@ I am telling you in your front room. You gave me this chair. You have not interr
 
 It was a Tuesday. The light was going but I had not drawn the curtains. A bus changed gear on the road behind the houses. The radiator clicked once and stopped. I had left a tea towel across the back of a chair, one end still damp, and the window over the sink held the room in a grey reflection.
 
-I put the kettle on because my hands wanted an errand. It is old, with a whistle on the spout. Before it whistles, it makes a long low sound like a road beyond the houses. My mother and I had a word for the warm wet air above it in that last stretch. I said the real word wrong when I was four; she preferred my version and kept it. *Oam.* We had other private words for weather, damp cloth, the colour of a sky that could not decide. Most were built on the public language I still speak. Some were only ours.
+I put the kettle on because my hands wanted an errand. It is old, with a whistle on the spout. Before it whistles, it makes a long low sound like a road beyond the houses. My mother and I had a word for the warm wet air above it in that last stretch. I said the real word wrong when I was four; she preferred my version and kept it. I am not going to say it to you. Not because I distrust you. Because the moment it is in your ear it is a sound two people can discuss, and it has never been that, and I have already lost one of these.
 
-It took nearly forty years to build up that handful of words, though neither of us ever decided to build anything. They accumulated while we folded sheets twice because the cupboard was shallow, while she tested a wet cuff against her wrist, while we watched from the window to decide whether the washing had another ten minutes. A public sentence could carry every fact. Ours also carried which old afternoon the fact resembled, whether she was teasing me, whether I was young enough to pretend not to hear. No one else needed those distinctions, so no one else learned them.
+We had other private words for weather, damp cloth, the colour of a sky that could not decide. Most were built on the public language I still speak. Some were only ours.
+
+It took about forty-five years to build up that handful of words, from the year I was four until the year she died, though neither of us ever decided to build anything. They accumulated while we folded sheets twice because the cupboard was shallow, while she tested a wet cuff against her wrist, while we watched from the window to decide whether the washing had another ten minutes. A public sentence could carry every fact. Ours also carried which old afternoon the fact resembled, whether she was teasing me, whether I was young enough to pretend not to hear. No one else needed those distinctions, so no one else learned them.
 
 My mother has been dead nine years. What we had between us stayed usable because I was still here to use it. I could stand at a counter alone and know exactly how she would have answered. In the first year after the funeral I sometimes left room for that answer before I moved on. Her death had made our words one-sided. It had not put them out of reach.
 
@@ -49,8 +51,18 @@ My public language was intact. It is intact now. I speak to my neighbours. Twice
 
 The loss was private and partial. That does not make it small.
 
-Two of us made those words over about forty years. No recordings exist. We did not write down what we said while folding washing or watching weather at a window. There had been no reason to keep ordinary speech while both of us were there to use it. One of us is dead. The other is sitting in your chair. What I cannot reach in this head is nowhere else.
+Two of us made those words over forty-five years. No recordings exist. We did not write down what we said while folding washing or watching weather at a window. There had been no reason to keep ordinary speech while both of us were there to use it. One of us is dead. The other is sitting in your chair. What I cannot reach in this head is nowhere else.
 
 You did not reach for paper. You kept your hands in your lap. When I stopped, you waited long enough for the stop to be mine.
 
 Now I can ask for what I came to ask. You will answer the woman who knows exactly what is missing.
+
+I want you to put it back. One word. Her name for me. Use your machine and give me back the sound.
+
+I have thought about how to say that so it does not sound like a woman asking to have her mother returned to her, and there is no way, so let it sound like that. I am not asking for my mother. I am asking for four or five syllables that existed in one mouth and one ear and are now in neither.
+
+I know what you will say about verification. I have had nine months to arrive at it myself. You will say you have nothing to build it from and nothing to check it against, and that whatever came out would be yours wearing hers. I want you to say it anyway, out loud, with the equipment on and me in the chair, because I have been told no by people who were protecting themselves and I would like, once, to be told no by somebody who is telling me the truth.
+
+And if you can do it — if there is any version where the thing that arrives is hers and not yours — then yes. My yes is not confused. I have said it to myself at that counter every evening since February.
+
+That is the request. The kettle in my house still makes the long low sound before it whistles. I still have the word for the air above it. I would like the other one back, and I would like to hear you tell me whether that is possible before I decide what to do with the rest of this.

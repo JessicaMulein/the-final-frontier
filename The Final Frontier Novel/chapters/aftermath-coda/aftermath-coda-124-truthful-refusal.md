@@ -5,19 +5,19 @@ pov_id: POV-MARA
 timeline_id: TL-CODA-REFUSAL
 motif_events: [MOT-COME-04, MOT-COPPER-03, MOT-KETTLE-02]
 hook: "The relay clicks off under her hand, and what she has left to offer is water, a chair, and her own voice."
-words: 787
+words: 948
 length_class: normal
 status: exploratory
 ---
 I spent the first part of that evening answering a person with an architecture.
 
-Safiya had asked. I had the mechanism arranged in my head like a floor plan and walked her through it, though walking somebody through rooms is not the same as answering.
+Safiya had asked for one word back. Her mother's name for her, four or five syllables, put into her head by my equipment. I had the mechanism arranged in my head like a floor plan and walked her through it, though walking somebody through rooms is not the same as answering.
 
 A pairing needs two living people, both currently agreeing, calibrated to each other, with every contribution crossing by a deliberate act of the person it came from. There is no valid one-participant version. I cannot hold the second end for someone else. Safiya's mother had been dead nine years. That closed the pairing question in the first minute.
 
 I continued anyway.
 
-An archive cannot stand in for a participant. Calibration belongs to two nervous systems, not to one nervous system and a recording. Here there was no recording, no written corpus, no second source against which any proposed reconstruction could be checked. Two people made the private layer at counters and windows over forty years. Neither documented it because nobody documents ordinary speech with her mother.
+An archive cannot stand in for a participant. Calibration belongs to two nervous systems, not to one nervous system and a recording. Here there was no recording, no written corpus, no second source against which any proposed reconstruction could be checked. Two people made the private layer at counters and windows over forty-five years. Neither documented it because nobody documents ordinary speech with her mother.
 
 A model could still produce output. Technically, that was true. It could generate plausible fragments in the shape of a language it had never encountered, and a transmitter could place those fragments into a consenting mind.
 
@@ -27,7 +27,13 @@ I was building towards the general case. I could feel the sentence enlarging: wh
 
 Then I looked at my wall.
 
-Copper mesh sits inside it: ceiling, exterior walls, window frames. I installed it. It works. I sleep in a shielded room because I can. Eleven miles away, Safiya put a kettle on in a house without mesh and lost the only part of her language that had no copy. Everything I knew about preventing entry was irrelevant because nothing entered. Protection was a fact about my house, not an answer to hers.
+Copper mesh sits inside it: ceiling, exterior walls, window frames. I installed it. It works inside the band I declared, which is the only honest way I have ever been able to finish that sentence. I sleep in a shielded room because I can. Eleven miles from the array, in a house with no mesh in the walls, Safiya put a kettle on and lost the only part of her language that had no copy.
+
+I nearly thought: everything I know about preventing entry is irrelevant here, because nothing entered.
+
+That is false and I have spent five years teaching myself why. Something reached her. It was ours. It worked by taking away instead of adding, and a field that adds no recoverable structure to anything I can measure is not a field that was never in the room. I have written that distinction into other people's protocols and I do not get to forget it in my own hallway because the comfortable version is available.
+
+What was irrelevant was the direction of my defence, not the fact of an arrival. I had built everything to stop something being put in. Nobody put anything in. Protection was a fact about my house, and about additions, and it was not an answer to hers.
 
 I stopped the paragraph.
 

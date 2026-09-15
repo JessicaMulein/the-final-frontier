@@ -2173,7 +2173,7 @@ These records add continuity beneath higher authority. The Nia name/mechanism ma
 ]
 ```
 
-Ten supporting participants hold Character IDs and no viewpoint in this fence, and `DEC-018` adds two more in [`DEC-018` supporting canon](#dec-018-supporting-canon) for a current total of twelve. Under the [Character ID registry](record-schemas.md#character-id-registry) an approved `character-name` extension declares a Character ID whether or not a `POVProfile` exists for it, so `CHAR-005` through `CHAR-016` resolve in `TimelineEntry.participants`, `PairState.participants`, and other Character ID references while creating no POV, no Voice Brief obligation, and no change to the 56/32/33/7 loads. Six support operational pairing; Ravi Anand, Kev, Dev, and Halloran witness only the bounded continuity functions recorded above. None is a sender, adversary, archive, simulation, model, or group mind, and none may be narrated from inside.
+Ten supporting participants hold Character IDs and no viewpoint in this fence. `DEC-018` adds two more in [`DEC-018` supporting canon](#dec-018-supporting-canon), and `DEC-019` adds one in [`DEC-019` supporting canon](#dec-019-supporting-canon), for a current total of thirteen. Under the [Character ID registry](record-schemas.md#character-id-registry) an approved `character-name` extension declares a Character ID whether or not a `POVProfile` exists for it, so `CHAR-005` through `CHAR-017` resolve in `TimelineEntry.participants`, `PairState.participants`, and other Character ID references while creating no POV, no Voice Brief obligation, and no change to the 56/32/33/7 loads. Six support operational pairing; Ravi Anand, Kev, Dev, and Halloran witness only the bounded continuity functions recorded above; Joss Calder and Ruth Venn carry the `DEC-018` warmth relationships; Imogen Dalby carries the `DEC-019` recurring-counsel role. None is a sender, adversary inside the mechanism, archive, simulation, model, or group mind, and none may be narrated from inside.
 
 ### Names and entities quick reference
 
@@ -2195,7 +2195,7 @@ Ten supporting participants hold Character IDs and no viewpoint in this fence, a
 | `CHAR-014` | Halloran | approved; non-viewpoint; transcribes Nia's conditions and receives spoken consent; no given name selected |
 | `CHAR-015` | Joss Calder | approved; non-viewpoint; Nia's older brother; `DEC-018` clause 9 warmth; no professional role |
 | `CHAR-016` | Ruth Venn | approved; non-viewpoint; Mara's aunt; `DEC-018` clause 9 warmth; no institutional role |
-| `CHAR-017` | Imogen Dalby | approved; non-viewpoint; lead counsel for the Open Channel Consortium; `DEC-019` clause 9 recurring institutional counterforce; never a sender, adversary-in-the-signal, or POV |
+| `CHAR-017` | Imogen Dalby | approved; non-viewpoint; lead counsel for the Open Channel Consortium; `DEC-019` clause 10 recurring institutional counterforce; never a sender, adversary-in-the-signal, or POV |
 | technical institution | Northline Array | exact approved name |
 | commercial institution | Open Channel Consortium | exact approved name |
 | custodial institution | Civic Record Trust | exact approved name |
@@ -2203,7 +2203,7 @@ Ten supporting participants hold Character IDs and no viewpoint in this fence, a
 | country and counties | deliberately unnamed | selected state, not a blank |
 | Safiya heritage base | `unspecified_by_author` | exact protected state everywhere |
 
-No absolute calendar year, fictional country name, county proper name, or real heritage language is selected here. The twelve supporting names carry no nation, county, ethnicity, religion, politics, language, or other inferred real-world cultural detail: like `Safiya Mir`, each is a plain selected name and licenses no such inference under `DEC-003` and `DEC-005`. The four POV rows are the complete viewpoint roster; the twelve `CHAR-005` through `CHAR-016` rows are non-viewpoint participants, continuity witnesses, or `DEC-018` warmth relationships and hold no `POV-` identity at all.
+No absolute calendar year, fictional country name, county proper name, or real heritage language is selected here. The thirteen supporting names carry no nation, county, ethnicity, religion, politics, language, or other inferred real-world cultural detail: like `Safiya Mir`, each is a plain selected name and licenses no such inference under `DEC-003` and `DEC-005`. The four POV rows are the complete viewpoint roster; the thirteen `CHAR-005` through `CHAR-017` rows are non-viewpoint participants, continuity witnesses, `DEC-018` warmth relationships, or the `DEC-019` recurring institutional counterforce, and hold no `POV-` identity at all.
 
 ## Neural communication mechanism
 
@@ -5989,7 +5989,7 @@ Twelve supporting participants now hold Character IDs and no viewpoint. `CHAR-00
 
 ## `DEC-019` supporting canon
 
-`DEC-019` clause 9 authorizes exactly one supporting-canon addition: a name and a recurring role for the
+`DEC-019` clause 10 authorizes exactly one supporting-canon addition: a name and a recurring role for the
 Open Channel Consortium's lead counsel, who already appears unnamed in Chapters 33, 43, 44, and 46 and
 who is the strongest institutional counterforce the delivered manuscript contains. This closes the
 standing recorded craft risk *no recurring human counterforce*, which named a recurring negotiator
@@ -6033,7 +6033,7 @@ signal, and is never narrated from inside. The supporting-character count is now
     "extension_id": "EXT-ROLE-COUNSEL-RECURRING",
     "extension_kind": "profession",
     "fact": "Imogen Dalby recurs as the Open Channel Consortium's negotiating counsel across the movements in which the Consortium is active, arguing from participant-facing operability rather than from profit, and repeatedly obtaining outcomes by conceding the principle and keeping the mechanism.",
-    "rationale": "DEC-019 clause 9 requires someone the leads can lose arguments to on the page. Her Chapter 33 position, that a rule which cannot be performed by a tired person in a bad chair protects nobody, is a real objection to Julian's taxonomy and must stay unanswerable rather than becoming a disguised villain speech.",
+    "rationale": "DEC-019 clause 10 requires someone the leads can lose arguments to on the page. Her Chapter 33 position, that a rule which cannot be performed by a tired person in a bad chair protects nobody, is a real objection to Julian's taxonomy and must stay unanswerable rather than becoming a disguised villain speech.",
     "authority_ref": "DEC-019",
     "first_dependency": {
       "record_type": "ArcEntry",

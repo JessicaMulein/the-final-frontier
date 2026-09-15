@@ -5,29 +5,25 @@ pov_id: POV-NIA
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []
 hook: "She can now describe precisely what a consented sentence feels like, which is how she knows the thing that took her judgment was not one."
-words: 978
+words: 766
 length_class: normal
 status: revised
 ---
-By the sixth session I could send Mara a correction without first turning it into a test.
+Mara had drawn one arrow through the proposed filter bank as though reception and active support were the same operation. On our sixth session, she put the diagram between us and waited.
 
-We began with both names, the session scope, and two current answers. Content recording stayed off. The system kept consent-state and transport metadata that could establish when the channel opened, paused, retried, and closed. It could not tell anyone what I said.
+We had already said both names, the session scope, and two current answers. Content recording was off. The system would keep the channel's state changes and transport metadata, not the words I chose.
 
-Mara placed a route diagram on the table between us. One path through the proposed filter bank was labelled as though reception and active support were the same operation.
+I read the label twice. I thought *default*. Julian's shaded box came back, then Tomas and Cora's fire, then the certainty that had once felt finished inside me. The send gate stayed closed. None of it went anywhere.
 
-I read it twice. I thought the word *default*. I thought about Julian's shaded box, Tomas and Cora's fire, and the certainty that had once felt finished inside me. None of that went anywhere.
-
-Then I chose the contribution and held it at the send gate.
+I chose one contribution and held it there.
 
 *That arrow needs its own permission.*
 
-The send act felt like releasing something I had already decided to say, not like discovering it after it had moved me. The state log gained one send and one receipt it could not name. Content recording remained off. Mara received the sentence, put her pencil through the arrow, and said, "Agreed," aloud.
+Then I sent.
 
-Before I released it, I knew I was offering it. While it crossed, I could stop. When Mara's receipt registered, I knew what I had given and which calibrated partner had received it.
+The state log gained a send and a receipt without the sentence. Mara received it, put her pencil through the arrow, and said, "Agreed," aloud.
 
-The earlier wanting had supplied no sentence, voice, proposition, partner, current answer, moment of offering on my side, or identifiable act on anyone else's. Certainty had already occupied the place from which I acted.
-
-On the current log, the sixth session ran forward from two current answers to my send and Mara's receipt. No line ran back from it to the winter morning. Mara's later handshake remained one possible account; the institution's outside-adversary claim remained another. The new entries selected neither. They gave me words for the current sequence and left the source field for the old one blank.
+I had known what I was offering before I released it. The contribution crossed to a calibrated partner under two current answers, and I watched her receipt register. The winter certainty had given me none of that sequence. It had already occupied the place from which I acted.
 
 When the session ended, the transport indicator dropped. Mara continued thinking. I knew because she remained alive in front of me, not because I had access to any of it.
 
@@ -39,11 +35,23 @@ When the session ended, the transport indicator dropped. Mara continued thinking
 
 I closed the log at the dropped indicator.
 
+Joss rang while I was packing up to ask why I still had his casserole dish.
+
+"Because it still has casserole in it."
+
+"That isn't how casseroles work."
+
+He asked if I was tired. I said yes.
+
+"Eat it tonight."
+
+He did not ask what had made me tired or offer a theory. I told him I would bring the dish back at the weekend. He said he would believe it when he saw the dish.
+
 The Consortium representative arrived after lunch with a pilot participation agreement and a folder of benefit summaries. Ada and Lena's work appeared under medical access and language continuity. Tomas and Cora's incident appeared under emergency coordination. My name did not appear, but the category built from people like me did: protection against unauthorized channel effects.
 
 The form invited me to enrol in the service that proposed to protect me. I put my pen beside the first clause.
 
-Pairing consent was described as voluntary. I marked the margin and moved down. The next clause accepted active support functions as part of service delivery; I bracketed *active support* and wrote *separate answer*. Content retention for safety, quality, training, and improvement was enabled unless I changed the preference after activation. I circled *after*. A data-rights clause granted the operator a licence in de-identified interaction material and derived models. I underlined *interaction material*.
+Pairing consent was described as voluntary, but the same signature accepted active support functions as part of service delivery. I bracketed *active support* and wrote *separate answer*. A data-rights clause granted the operator a licence in de-identified interaction material and derived models. I underlined *interaction material*.
 
 "Which interaction material?" I asked.
 
@@ -55,19 +63,11 @@ The representative said, "Only data generated through the service."
 
 "This agreement does not."
 
-She opened the privacy schedule and placed it over my benefit folder. It distinguished account information from service data. I drew one line from *participant contribution* in my margin to the place where the schedule should have separated offered words from metadata showing that words had been offered. There was no corresponding term. Recording consent appeared as a preference; pairing consent appeared as enrolment.
+She opened the privacy schedule and placed it over my benefit folder. It distinguished account information from service data. I drew one line from *participant contribution* in my margin to the place where offered words should have separated from metadata showing that words had been offered. There was no corresponding term. Pairing consent appeared as enrolment; participant contribution disappeared into service data.
 
-"You can disable retention," she said.
+She moved the schedule and opened the benefit folder instead. The Ferris result was genuine. The dispatch result was genuine. My six sessions were genuine. I read each summary and left those lines untouched.
 
-"After activation."
-
-"That is an implementation detail."
-
-"It is the order of the answers."
-
-She moved the privacy schedule and opened the benefit folder instead. The Ferris result was genuine. The dispatch result was genuine. My own six sessions were genuine. I read each summary and left those lines untouched.
-
-Then I returned to the agreement. I crossed out the recording default. I crossed out active support functions. I crossed out the licence in interaction material. The representative watched the page lose most of its shaded clauses and did not try to stop my pen.
+Then I returned to the agreement. I crossed out active support functions. I crossed out the licence in interaction material. I narrowed enrolment to named pairings and current sessions. The representative watched the page lose most of its shaded clauses and did not try to stop my pen.
 
 "Without those provisions," she said, "the network cannot improve at scale."
 
@@ -75,14 +75,6 @@ Then I returned to the agreement. I crossed out the recording default. I crossed
 
 She wrote in her notes before asking whether I was declining the pilot.
 
-"I'm declining this term, the broad enrolment, and any claim that one signature can own both the transport and whatever a person chooses to put through it." I turned the agreement back to its first page and left the signature line empty. "I am not declining the sessions I chose with Mara. Those belong to their own answers."
+"I'm declining active support, broad enrolment, and any claim that one signature can own both the transport and whatever a person chooses to put through it." I turned the agreement back to its first page and left the signature line empty. "I am not declining the sessions I chose with Mara. Those belong to their own answers."
 
-On my way out, I passed the calibration room. The two contact bands lay on opposite sides of the table and both indicators were dark. I did not report a fault.
-
-That evening I tried the new vocabulary on Joss. He listened to the whole of it with a kettle in his hand and then asked whether the machine could tell that I was tired.
-
-"No."
-
-He said that was the first thing anybody had told him about it that sounded like a limit. Then he put food in front of me, because that is the shape of every conversation we have ever had.
-
-After that, I watched the pens of people who asked about the winter morning. Every one of them paused when I finished describing an offered sentence, hoping the vocabulary would turn into evidence if they left enough room on the page.
+On my way out, I passed the calibration room. The two contact bands lay on opposite sides of the table. Both indicators were dark. Between them, the route diagram still had Mara's pencil line through the arrow.

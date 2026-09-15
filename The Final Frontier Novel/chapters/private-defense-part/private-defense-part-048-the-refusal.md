@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: []
 hook: "She says no in words she chooses very carefully, and the minute-taker writes considerably fewer of them down."
-words: 1154
+words: 1076
 length_class: normal
 status: revised
 ---
@@ -15,7 +15,7 @@ The fourth version was the one I took with me. It was ninety-one words long and 
 
 There were seven of us. Imogen Dalby, the product director, the clinical director, the man from public partnerships, Julian, me, and a minute-taker from the director's office who set a laptop at the end of the table and angled it so nobody had to look at the screen. Nobody introduced her by name. I have wished since that I had asked.
 
-Julian went first and he was very good. He put the interface specification on the table open at the component schedule, and he said that the transmit-enable field on page nine resolved to a modulation assembly sharing its clock, phase-control bank and address bus with reception, that no component was omitted in a reception-only deployment because the architecture was standardized, that the failover profile permitted a state change before the authorization was consulted, and that his own active-function clause therefore governed a switch and not a capability. He said it in the flat register he uses when he has decided not to be persuasive. Then he said that the language he had drafted was clear, and that clarity made it worse rather than better, and he stopped.
+Julian went first and he was very good. He set page nine beside the component schedule and said that his clause governed use of an outward path already built into every node, not the existence of the path. He said it in the flat register he uses when he has decided not to be persuasive. Then he admitted that the language he had drafted was clear, and that clarity made it worse rather than better, and he stopped.
 
 The product director said the platform was unified.
 
@@ -23,7 +23,7 @@ The product director said the platform was unified.
 
 Then it came to me and I read out the fourth version.
 
-"Northline will not put its name to a receiver network whose interface specification contains a transmit-enable field on page nine, sharing clock, phase control and address bus with reception, present at every deployed address, disabled by software and enabled by configuration. That is not a receiver with an option. It is a transmitter with a policy. My December apparatus had no transmit stage. I know exactly how much difference that made, because I later built one by hand and used it, and I have not been able to establish what it did. I am not willing to certify that a person's address is safe because a company has promised not to use a path it has already installed at her."
+"Northline will not certify a receiver network whose interface contains a transmit-enable field on page nine, sharing clock, phase control and address bus with reception, present at every address, disabled by software and enabled by configuration. That is a transmitter with a policy, not a receiver with an option. My apparatus had no transmit stage. I built one by hand and used it, and I cannot establish what it did. I will not certify a person's address safe because a company promises not to use a path it has installed there."
 
 The minute-taker typed while I was talking. When I finished she stopped, and I asked whether that had been captured as spoken.
 

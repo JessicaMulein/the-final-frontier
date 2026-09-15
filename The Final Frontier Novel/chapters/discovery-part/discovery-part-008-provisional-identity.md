@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "She writes the hypothesis in her log and leaves the space beside it deliberately empty."
-words: 1200
+words: 1322
 length_class: normal
 status: revised
 ---
@@ -55,9 +55,13 @@ The radio archive gave me a workplace class and a bounded set of carriers. It di
 
 I could have asked the institute for access. I sat with that for a while, with the pen down. Explaining why I wanted a roster would have converted an unverified human source into an administrative object before I had established what the apparatus was doing to her.
 
-So I did not ask, and that was my first deliberate withholding.
+So I did not ask, and I wrote down that this was my first deliberate withholding, and that sentence was wrong before the ink dried.
 
-It was not the source identity, because I did not possess one. What I withheld was that the source now appeared to be a single live emergency dispatcher rather than a town, a tower, or an unknown class of machine. The institute still believed I was characterizing an anomalous band. Julian's disclosure review still described the hardware truthfully: receive-only, no transmit stage. Neither statement disclosed the person emerging inside the result, and neither statement was false, which is the property of a good withholding.
+The first one was the clause I composed twice in October and never wrote, the one about agreements being kept by people at hours those people have agreed to keep. I told myself then that rigour justified leaving it out. What is different now is only the direction. In October I kept something out of my own log. Today I kept something from the institution that owns the apparatus, and there is a name for that which does not appear anywhere in my own account of it.
+
+So: not the first. The first of the kind that has somebody else's interests on the other side of it.
+
+What I withheld was not the source identity, because I did not possess one. What I withheld was that the source now appeared to be a single live emergency dispatcher rather than a town, a tower, or an unknown class of machine. The institute still believed I was characterizing an anomalous band. Julian's disclosure review still described the hardware truthfully: receive-only, no transmit stage. Neither statement disclosed the person emerging inside the result, and neither statement was false, which is the property of a good withholding.
 
 Ravi stood at the glass while I opened the book.
 

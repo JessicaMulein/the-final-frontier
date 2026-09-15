@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-TRUST-FORMATION
 motif_events: [MOT-RECORD-01]
 hook: "Her demand becomes an institution inside a week, and she is not certain that counts as winning."
-words: 1403
+words: 1592
 length_class: normal
 status: revised
 ---
@@ -49,7 +49,7 @@ He did not answer for a while. Then he asked me what the words were for, and I s
 
 It took him six days.
 
-I asked how, in a tone that suggested I thought he had done something improbable, and he was almost offended. He had not built anything. The institute has a dormant charitable company on its books from a teaching trust that wound up in 2016, with a registered number, a bank mandate and a constitution drafted to be amended, and he amended it. The archivist had run the county records office he had been sending referrals to for years and had retired in March with nothing to do. The strongroom is hers, two fitted rooms behind a solicitor's office on the same street, insured, already holding other people's papers. The encryption is a service that costs him forty pounds a month.
+I asked how, in a tone that suggested I thought he had done something improbable, and he was almost offended. He had not built anything. The institute has a dormant charitable company on its books from a teaching trust that wound up in 2016, with a registered number, a bank mandate and a constitution drafted to be amended. He drafted; the council passed the resolution that transferred its membership to the three custodians and surrendered its power to appoint. The archivist had run the county records office he had been sending referrals to for years and had retired in March with nothing to do. The strongroom is hers, two fitted rooms behind a solicitor's office on the same street, insured, already holding other people's papers. The encryption is a service that costs him forty pounds a month.
 
 "It is assembled," he said, "out of things that were lying about, by somebody who knew where they were. Which is why it exists. It is also how it could be taken apart."
 
@@ -62,6 +62,14 @@ The name at the top was Civic Record Trust. There were three custodians and he w
 "So I can be outvoted. It is the only clause in there I insisted on for myself."
 
 The mechanism was narrower than I expected and better for it. A deposit came in signed and encrypted. The depositor wrote the conditions, and the custodians were bound by them and could not relax them, including by unanimity, including after the depositor's death. Provenance was recorded at intake. Nothing was edited or summarized, and a deposit was released whole or not at all.
+
+Then I asked the questions I would have asked about a piece of apparatus, because it is the only way I know how to ask anything.
+
+Northline held no seat and no veto. The surrendered power to appoint had been in his draft before he approached the archivist. He had recused himself from every deposit in which he appears as a participant, which by his own count was already four. The clinician held the casting position on any dispute between custodians. The funding was forty pounds a month and one retired woman's goodwill, and he said both of those aloud as weaknesses rather than letting me find them myself.
+
+"Court order," I said.
+
+"Then we produce what the order compels, and we tell the depositor we have done it, unless we are prohibited from telling them, in which case we record that we could not." He did not soften it. "The conditions bind the custodians. They do not bind a judge. Any document that told you otherwise would be lying to you."
 
 I read it twice and found the hole, because there is always one and it is usually the one the drafter has already found.
 

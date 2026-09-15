@@ -4,12 +4,54 @@ chapter: 73
 pov_id: POV-NIA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: [MOT-KNOCK-01, MOT-YES-01]
-hook: "She says yes to one bounded field on her own conditions, and then finds out what her own head sounds like while it is running."
-words: 1136
+hook: "She says yes to one bounded field, the pattern cancels, and forty minutes later a familiar phrase is inaccessible when the console asks for her back."
+words: 1443
 length_class: normal
-status: exploratory
+status: revised
 ---
-My conditions were four. I gave them standing up, in the room, before anybody switched on the field.
+The door was shut. Five of us stood between the whiteboard and the marked floor: Halloran, Venn, me, and the two people whose signatures sat beside Venn's on the authorization sheet.
+
+The whiteboard held the four-metre boundary and the countdown. My name was typed in the participant box. Properly filed.
+
+Halloran asked whether I was cleared for the floor.
+
+"Badge question," I said. "Ask the person question."
+
+He waited with the clipboard against his leg.
+
+"You have established that I am allowed through the door. Knock anyway. Ask whether I agree to what happens after it. Wait for the answer."
+
+One of the two signers said the incoming pattern would not wait for a seminar. A digit changed on the whiteboard.
+
+Venn looked at it. "We have time for a question."
+
+The other signer pointed to the authorization sheet.
+
+Did I say yes?
+
+Nobody answered. Nobody reached for the sheet.
+
+Did I say yes?
+
+The countdown changed again.
+
+"Before that," Venn said. "There are three things you have to have from me first, and I am going to say them in front of these two so that nobody can tell you afterwards that you were not told."
+
+She did not sit down to do it.
+
+The counterwave has to reach the same space my own field occupies, because that is the only place the pattern is; there is no arrangement she can currently draw where it cancels the thing without reaching me. She has measured what it does to saline and has no measurement of what it does to a person. And the version she can run tonight is built from a recording of an event that has already finished, which is not the same problem as one still arriving.
+
+"That is all of it?" I said.
+
+"That is all of it that I know. There will be things I do not know, and I cannot list those."
+
+"Say the second one again."
+
+She said it again without improving it.
+
+"Now write what my answer would cover," I said.
+
+I gave Halloran four conditions standing up, before anybody switched on the field.
 
 One. Mark the boundary in metres on the floor plan and on the floor.
 
@@ -25,45 +67,37 @@ Halloran transcribed them. He put the stop second. I laid one finger beside his 
 
 He set the first sheet aside and took a fresh one. This time the four marks reached the paper in the order I had spoken them.
 
-Then he asked whether I was cleared for the floor.
+Then he lowered the clipboard. "Nia Calder, do you consent to one bounded counterphase run under the four conditions recorded here?"
 
-"Badge question," I said. "Ask the person question."
-
-He waited with the clipboard against his leg.
-
-"You have established that I am allowed through the door. Knock anyway. Ask whether I agree to what happens after it. Wait for the answer."
-
-Someone behind him said the incoming pattern would not wait for a seminar. A digit changed on the countdown.
-
-Venn looked at it. "We have time for a question."
-
-Halloran lowered the clipboard. "Nia Calder, do you consent to one bounded counterphase run under the four conditions recorded here?"
-
-Someone pointed to the authorization sheet. Three signatures. My name typed in the participant box. Properly filed.
-
-Did I say yes?
-
-Halloran did not answer. Nobody reached for the authorization sheet. The countdown changed again while he waited for me.
-
-At eleven minutes past four I said yes aloud to Halloran. One run. Four-metre boundary. Stop in my left hand. My answer expired when the run ended.
+At eleven minutes past four I said yes aloud to Halloran. One run. The four-metre square. Stop in my left hand. My answer expired when the run ended.
 
 He read all four conditions back in order. He wrote the time beside my answer and asked me to confirm. I confirmed. The badge remained on its cord, the three signatures remained on their sheet, and the participant box now had one spoken answer attached to one run.
 
-Venn and I used the paired channel to coordinate. We had calibrated together over two days. That calibration belonged to us as a pair; neither of us could substitute another person. Her address appeared opposite mine, but the transport line stayed flat until one of us deliberately sent.
+The paired channel stayed separate from the field. Venn and I had calibrated together over two days, and that calibration belonged to us as a pair. We named the boundary check as a current-session coordination task, with content recording off and either of us able to pause or stop.
+
+"Nia Calder, do you consent to that pairing with me now?" Venn asked.
+
+"Yes. Mara Venn, do you consent to the same?"
+
+"Yes."
+
+Two current states appeared. Her address sat opposite mine, but the transport line waited for one of us to send.
 
 I sent: *boundary at four metres, confirm.*
 
 She sent the confirmation.
 
-I did not send what I thought about the authorization form. I did not send my calculation about whether I would be fit for a console after exposure. Each stayed where it began. The channel carried the pieces we pushed through the gate.
+My opinion of the authorization form stayed with me. So did my calculation about whether I would be fit for a console after exposure. The paired channel carried only the pieces we pushed through its gate.
 
 In the middle of the boundary check, I paused. Transport stopped at once. I counted four seconds against the display and reopened it. Nothing had queued behind the pause. Nothing arrived late.
 
-The metadata retained start, pause, resumption, consent state, timing, and volume. Content recording was off because neither of us had agreed to it. The record held no withheld thought and no transcript for a committee to reinterpret.
+The channel record retained start, pause, resumption, consent state, timing, and volume. Content recording was off because neither of us had agreed to it. It held no withheld thought and no transcript for a committee to reinterpret.
 
-Halloran checked my spoken yes one last time. I raised the stop in my left hand. Venn started the field.
+Halloran checked my spoken yes to the field one last time. I raised the stop in my left hand. Venn started the emission inside the marked square.
 
-The room went level.
+The first few seconds were not the thing. They were uneven, the way a room is uneven when somebody is adjusting something in it, and twice something came almost to a height and slipped off it again.
+
+Then the room went level.
 
 Not quiet. Quiet has distance and direction. This had neither. Every small unevenness in my head came to one height, as if a straightedge had passed across the whole interior and left no edge above it.
 
@@ -85,7 +119,7 @@ A blocked word has pressure behind it. This had none. I could name the sentence'
 
 I tried twice more. My mouth reached the same place and stopped. I lowered the cup, stopped testing, and returned to the room.
 
-The paired channel was still available. I left it closed. A missing phrase was not part of the boundary check, and transport metadata could not be made to explain it by giving it more volume.
+The paired channel was still available. I left it closed. A missing phrase was not part of the boundary check, and more transport volume would not explain it.
 
 I reported the loss aloud.
 
@@ -97,7 +131,9 @@ He struck through the word and wrote: *participant unable to access familiar ope
 
 Venn asked when I had last used it. I told her. She asked whether I wanted to attempt it again. I said no.
 
-Nobody in the room could tell me whether the effect could be aimed, whether a wider field would behave the same way, or whether another procedure could alter what had happened. The page held the local facts: one bounded volume, one consenting person, nineteen seconds, cancellation of the incoming pattern, and loss of access to one familiar phrase afterward. Halloran stopped the sentence there. It acquired no claim about the next room or the next machine.
+Halloran asked what the run record could say beyond the corrected line. I gave him the sequence: four-metre volume, one consenting person, nineteen seconds, incoming pattern cancelled, access to one familiar phrase unavailable afterward. He read each item back before adding the next.
+
+Could the effect be aimed inside the boundary? They had no evidence that it could. Would a wider field behave the same way, or another procedure alter the loss? The run had not tested either question. Halloran stopped before the next room and the next machine entered the sentence.
 
 They asked whether to log the run as a success.
 

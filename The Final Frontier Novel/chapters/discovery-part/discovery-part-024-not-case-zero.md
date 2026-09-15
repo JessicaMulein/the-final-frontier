@@ -5,11 +5,11 @@ pov_id: POV-NIA
 timeline_id: TL-DISCOVERY-NIA-AFTERMATH
 motif_events: []
 hook: "She hands Mara the difference between receiving a signal and losing confidence in your own yes, and hands her nothing else."
-words: 519
+words: 475
 length_class: microchapter
 status: revised
 ---
-The clock above the training-room door ran forty seconds fast. I had checked it against my phone while she was still speaking, because I wanted the time I wrote down to be one I could defend later. I laid the pen across the corner of the sheet and left it there.
+The clock above the training-room door ran forty seconds fast. I checked it against my phone while she was still speaking, wrote the time I could defend, and laid the pen across the corner of the sheet.
 
 "You know you transmitted," I said. "You know it used the address you built from me. You know when you did it."
 
@@ -59,11 +59,9 @@ She did not deny it.
 
 "Not case zero."
 
-I was not asking her to pick a kinder word.
-
 "You don't get to make me the proof that your machine works," I said. "You don't get to make me the proof that something else exists. And you don't get to make me the reason you confess."
 
-She said my name. That was not absolution, and I did not take the pen back off the sheet to soften it.
+She said my name. I left the pen where it was.
 
 "Record what you did," I said. "Record what I reported. Stop before you write why."
 
@@ -71,4 +69,4 @@ She said she would.
 
 "Then send me every page you file. All of it, not a summary. I want to read what I am in that file before anybody else reads it and decides. Whatever arrives, I will have no independent way to know whether it is whole."
 
-She wrote the request down, which is how she agrees to things. She wrote it in the December folder, the one I had asked her to keep separate. I watched her do it. The pen stayed across my sheet.
+She wrote the request in the December folder, the one I had asked her to keep separate. I watched the words reach the page. The pen stayed across my sheet.

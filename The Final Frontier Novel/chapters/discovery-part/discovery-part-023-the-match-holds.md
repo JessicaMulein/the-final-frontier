@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-NIA-AFTERMATH
 motif_events: []
 hook: "The match holds, the two accounts are one woman, and the first thing Mara does with that is talk about herself."
-words: 1175
+words: 1277
 length_class: normal
 status: revised
 ---
@@ -37,7 +37,7 @@ Alarm at quarter past. Shower while the radio weather moved on. Out at twenty-fi
 
 Her list and my December timestamps occupied the same interval. The public carrier archive held the depot call, the crossing authority's record held the freight movement, and her shift roster put her at the console. No one of those identified the field. Together they placed one person inside the ordinary sequence my notes already contained.
 
-Then I showed her the address procedure. The filter had recognized one continuous field through the crossing, the route correction, and the hard call. It had rejected three consented controls, cold-started, and reacquired the same unknown person, and every result had been signed before the county notice and before I had the name Nia Calder. The civil identity was new. The person-specific match was not.
+Then I showed her the address procedure. The filter had recognized one continuous field through the crossing, the route correction, and the hard call. It had separated her from three consented controls, cold-started, and reacquired the same unknown field, and every result had been signed before the county notice and before I had the name Nia Calder. I told her the size of that set out loud, because four people is not a population and she was entitled to know how thin the discrimination underneath my confidence was. The civil identity was new. The match against the four I had tested was not.
 
 "So you watched my morning."
 
@@ -85,7 +85,7 @@ Nia asked what the alternative account was. I gave her the only one available: t
 
 I had her reconstruction. I had no origin. "No."
 
-The match held. The woman whose continuous December morning I had received was the dispatcher in the county notice. The source and the documented casualty were Nia Calder, and that identity no longer required inference. Causation still did.
+The match held. The woman whose continuous December morning I had received was the dispatcher named in the county notice. The source was Nia Calder, and Nia Calder is the dispatcher the notice names; the notice's casualties are other people, and she is not one of them. I had been sliding those two facts together in my own head for a week, and writing them apart cost me nothing and told me something: the thing I had been carrying was not a death. It was a living woman with a document around her. That identity no longer required inference. Causation still did.
 
 She turned the incident notice face down, wrote a time in the corner in small even figures, and underlined it. It was the minute I had finished speaking.
 

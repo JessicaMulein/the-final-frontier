@@ -705,8 +705,12 @@ does not remain suspended inside it for 128 chapters.
 
 ### Situation
 
-The author confirmed the lyrics-site tooling lives in a separate repository. This workspace contains
-no `.tools/` directory, no `build_site.py`, and no song-index generator. The five current
+The author confirmed the lyrics-site tooling lives in a separate repository. This workspace contains no
+`build_site.py` and no song-index generator. (**Corrected 2026-09-12:** as first written this sentence
+also said the workspace contains no `.tools/` directory. That was true on 2026-09-08 and is now false —
+`.tools/` holds this project's own `check_novel.py` and its property-test suite. The site-isolation
+premise is unaffected, because none of that tooling builds or discovers songs; what is absent is the
+external Site_Build, not a tools directory.) The five current
 Canon_Sources here are reference copies at `songs/The Synaptic Frontier.md`, `songs/Faraday.md`,
 `songs/The Final Frontier.md`, `songs/The Radius.md`, and `songs/Case Zero.md`; `DEC-014` added the
 fifth after this site-isolation decision. The *One-Time Pad* draft is preserved in git history and
@@ -1746,7 +1750,30 @@ result.
     the Hard_Chapter_Maximum stays 2,500, and the `DEC-016` same-POV run limit of 3,600 combined
     Prose_Words is unchanged and still binds.
 
+    **Superseded. Do not draft to this band.** It was widened by `DEC-019` clause 11 and then retired
+    outright by `DEC-021`, which makes it a diagnostic rather than a quota. `DEC-021` clauses 1–4
+    govern chapter length. The sentences in this clause that still bind are the ones about outliers
+    keeping their declared `outlier_purpose` and about the Normal_Chapter_Range, Hard_Chapter_Maximum,
+    and run limit — all of which `DEC-021` clause 1 restates as exact.
+
 ### Clause 10 arithmetic, against the approved Final_Targets
+
+**Historical. Every figure below is superseded and several no longer exist anywhere in the project.**
+This section is retained because it records how the 13,000-word shortfall was diagnosed and recovered,
+which is auditable reasoning worth keeping. It must not be used as current evidence. Corrected
+2026-09-12 against the manuscript:
+
+| This section claims | Measured |
+|---|---|
+| outline distribution 110 `normal`, 10 `microchapter`, 8 `long-outlier`; 18 outliers | **108 `normal`, 11 `microchapter`, 9 `long-outlier`; 20 outliers** — exactly at the 108 floor and the 20 ceiling, so a new outlier needs an `ArcChange` |
+| microchapters 550, 487, 423 at Chapters 16, 24, 45 | 679, 475, 350 |
+| long-outliers 1,618 and 1,626 at Chapters 13 and 17 | Chapter 13 is 1,858; **Chapter 17 is no longer an outlier at all** and was delivered `normal` |
+| outlier contribution ≈19,400 | not recomputed; the class means below replace it |
+| 45 delivered chapters, 41,020 Prose_Words, mean 912, projection ≈117,000 | 64 delivered chapters, **71,931** Prose_Words; class means 1,145.7 `normal`, 512.4 `microchapter`, 1,737.3 `long-outlier`; projection **≈143,800** with about 6,200 words of headroom |
+| "the outline's longest same-POV run is two chapters" | still true, and all 17 multi-chapter runs carry non-null `estimated_words`, so the 3,600 run cap is auditable |
+
+The shortfall this section was written to fix is closed. The live budget statement is `DEC-021` clause 4
+plus the measured figures above.
 
 The approved `Final_Targets` in `BASELINE-FINAL-FRONTIER-PROVISIONAL` are 128 chapters and an inclusive
 total of 130,000–150,000 Prose_Words. The delivered manuscript was tracking well below that: 45
@@ -1866,28 +1893,44 @@ and tasks 5.3 and 5.4 have now made those selections: Mara and Nia are the carri
 supporting participants placed inside existing POV chapters. That was implementation of a deferred
 selection, not a reopened mechanism or POV decision, and the 56/32/33/7 loads are unchanged.
 
-## Synchronization state — audit of 2026-09-13
+## Synchronization state — audit of 2026-09-12
 
 The per-decision synchronization tables above record each obligation **as it stood when that decision
 was made**, which is the correct historical record but is no longer an accurate picture of the
 workspace. Many rows still read `pending` for artifacts that now exist. This block is the authoritative
 current state; where it disagrees with a row above, this block governs.
 
-| Artifact | State |
-|---|---|
-| `requirements.md`, `design.md`, `tasks.md` | synchronized through `DEC-017`; **not** synchronized for the 2026-09-13 run-cap amendment |
-| `The Final Frontier Novel/front-matter.md` | written |
-| `The Final Frontier Novel/exclusion-contract.json` | written |
-| `planning/record-schemas.md` | written, including the 2026-09-11 four-mode `technical_state` amendment; needs a run-word field |
-| `planning/canon-bible.md` | written |
-| `planning/pov-roster.md` | written, amended 2026-09-12 |
-| `planning/voice-briefs.md` | written, amended 2026-09-12 |
-| `planning/motif-ledger.md` | written, amended 2026-09-12 |
-| `planning/editorial-log.md`, `planning/arc-changes.md` | schemas written; zero active findings and zero active changes |
-| `planning/arc-outline.md` | chapters 1–112 and all 55 cross-cuts written and verified reciprocal; `estimated_words` migrated across all 112 entries; chapters 113–128 not written |
-| Chapter prose | none written; all voice, pacing, and originality judgments remain untested |
+Because this block claims precedence, it is the one section in this file that must never be allowed to
+go stale. The 2026-09-13 version had drifted badly enough to be actively misleading — it still recorded
+zero chapters written, 113–128 unplanned, and zero editorial findings, while 64 chapters, all 128
+`ArcEntry` records, and 20 findings existed. That version is replaced rather than annotated, and its
+three false rows are listed below so the drift is auditable.
 
-Two defects are known and unresolved at the time of this audit:
+| Artifact | State, measured 2026-09-12 |
+|---|---|
+| `requirements.md`, `design.md`, `tasks.md` | synchronized through `DEC-017`; **not** synchronized for the 2026-09-13 run-cap amendment, `DEC-019` clause 1's frame amendment, or `DEC-021` |
+| `The Final Frontier Novel/front-matter.md` | written |
+| `The Final Frontier Novel/exclusion-contract.json` | written; `--site-exclusion` passes locally, adoption by the external lyrics repository remains `not-adopted` |
+| `planning/record-schemas.md` | written, including the 2026-09-11 four-mode `technical_state` amendment and `ArcEntry.estimated_words` |
+| `planning/canon-bible.md` | written |
+| `planning/pov-roster.md` | written, amended 2026-09-16 |
+| `planning/voice-briefs.md` | written, amended 2026-09-12 |
+| `planning/motif-ledger.md` | written, amended 2026-09-12; two `LiteralPhraseConstraint` records active |
+| `planning/editorial-log.md` | written; **20 `EditorialFinding` records**, not zero |
+| `planning/arc-changes.md` | written; **12 `ArcChange` IDs** including two example templates, not zero. `ARC-CHANGE-VOICE-SEPARATION-002` carries the one live synchronization error the global gate reports |
+| `planning/arc-outline.md` | **all 128 `ArcEntry` records and all 65 cross-cuts written**; 108 `normal`, 11 `microchapter`, 9 `long-outlier`; POV loads exactly 56/32/33/7; 17 multi-chapter same-POV runs all carrying non-null `estimated_words` |
+| `planning/mindwars-propulsion-spec.md` | written 2026-09-12; craft guidance for Chapters 62–112, no records, not a checker record source |
+| Chapter prose | **64 chapters delivered, 71,931 Prose_Words** — Chapters 1–61 continuous, plus exploratory 73, 118, 124. 62 `revised`, 2 `exploratory`. Projection ≈143,800 against 130,000–150,000 |
+| Objective gates | `--scope chapter` and `--scope batch` pass for every delivered chapter and batch. `--scope global` reports `incomplete` with 135 errors: 134 expected completion/finalization errors for the 64 undrafted chapters, plus the one real `ARC-CHANGE-VOICE-SEPARATION-002` planning error. Zero chapter-scope and zero batch-scope errors |
+| Open craft debt | `DEC-022` clause 2, the Nia Calder paragraph-scale voice pass, remains the blocker on the Discovery movement gate and on task 14. `DEC-020` clause 5 bodies and `DEC-022` clause 3 endings remain owed across 62–112 and are now assigned per chapter in `mindwars-propulsion-spec.md` |
+
+**Drift corrected in this pass**, recorded so the same failure is detectable next time: the previous
+block asserted that no chapter prose existed, that Chapters 113–128 were unwritten, and that the
+editorial log and arc-change register were empty. All three were false, and because the block claims
+precedence over every table above it, those three rows were overriding accurate per-decision records
+with stale ones.
+
+Two defects were known and unresolved at the time of the earlier audit, and both are now closed:
 
 1. **Arc outline count drift — resolved 2026-09-13.** The Mindwars cross-cut section's final ten records
    were written, bringing the fence to 30 Mindwars and 55 overall and matching the stated totals. An
@@ -1895,12 +1938,15 @@ Two defects are known and unresolved at the time of this audit:
    exactly three temporal braids, every null-night chapter participating twice, no cross-cut joining
    Chapter 73 to any null-night chapter, and all 18 `"none"` chapters absent from every cut. Task 5.4 is
    complete.
-2. **Run-cap propagation — mostly resolved 2026-09-13.** `requirements.md` (glossary `Same_POV_Run`,
-   criteria 2.7, 2.15, 2.16, 11.12, 12.16), `design.md` (rotation rule 1, global checks, Property 8),
-   `record-schemas.md` (`ArcEntry.estimated_words` and the run invariant), `tasks.md` (5.1, 5.6, 5.8, 8.8,
-   8.17, Notes), and `arc-outline.md` (invariant 6, field contract, run budget, all 112 entries) now carry
-   the limit. What remains is implementation rather than specification: no checker code exists yet, so the
-   rule is unenforced until tasks 7 and 8 build and test it.
+2. **Run-cap propagation — resolved.** `requirements.md` (glossary `Same_POV_Run`, criteria 2.7, 2.15,
+   2.16, 11.12, 12.16), `design.md` (rotation rule 1, global checks, Property 8), `record-schemas.md`
+   (`ArcEntry.estimated_words` and the run invariant), `tasks.md` (5.1, 5.6, 5.8, 8.8, 8.17, Notes), and
+   `arc-outline.md` (invariant 6, field contract, run budget, all 128 entries) carry the limit.
+   **Closed 2026-09-12:** the implementation gap this entry recorded is also closed. `check_novel.py`
+   defines `POV_RUN_CHAPTER_LIMIT = 3` and `POV_RUN_WORD_LIMIT = 3600` and emits
+   `POV_RUN_CHAPTER_LIMIT`, `POV_RUN_WORD_LIMIT`, and `POV_RUN_WORDS_UNKNOWN` diagnostics, with
+   `.tools/tests/test_property_08_pov_run_cap_and_word_limit.py` as the principal property test. All 17
+   multi-chapter runs in the outline carry non-null `estimated_words`, so no run is unevaluable.
 
 ## Nonblocking follow-ups
 
@@ -1921,7 +1967,9 @@ caught.
 
 | Risk | Why it matters | Where it is caught |
 |---|---|---|
-| No recurring human counterforce | The Foreign Signal is correctly faceless and the opposition is institutional, so scenes can lack a specific adversary to play against. A recurring negotiator, program director, regulator, or operations lead inside the existing POV architecture would give the middle book someone to lose arguments to. Such a character must not be the sender and must not receive a POV. | tasks 12.7, 13.6, 15.8 movement gates |
+| No recurring human counterforce — **partly closed** | The Foreign Signal is correctly faceless and the opposition is institutional, so scenes can lack a specific adversary to play against. A recurring negotiator, program director, regulator, or operations lead inside the existing POV architecture would give the middle book someone to lose arguments to. Such a character must not be the sender and must not receive a POV. **`DEC-019` clauses 10 and 13 closed the naming half by recording Imogen Dalby as `CHAR-017` and placing her across 47–61 and the Mindwars. `DEC-020` clause 6 records the half that is still open: she has so far only ever argued. Six specific actions are assigned to her at Chapters 63, 67, 76, 78, 94 and 111 in [`mindwars-propulsion-spec.md`](mindwars-propulsion-spec.md).** | tasks 12.7, 13.6, 15.8 movement gates |
+| Propulsion remedies diagnosed but not executed | `DEC-016` clause 3, `DEC-018` clauses 1–3, `DEC-020` clauses 1–9, and `DEC-022` clause 3 have each diagnosed the same defect — closed-loop chapters, deliberation clocks, no bodies, no interrupted cuts — and the only substantial execution to date is the Chapter 43 rewrite. Fifty-one of the sixty-four undrafted chapters are Mindwars, so a fifth diagnosis would arrive against a finished manuscript. Per-chapter assignment of clocks, ending kinds, cuts, bodies, settings, warmth, and narrator cost for 62–112 now exists in [`mindwars-propulsion-spec.md`](mindwars-propulsion-spec.md), including the two identified troughs at 62–69 and 94–101. | tasks 15.8 and 17 movement gates, against the spec's assignments |
+| Chapter 73 payload overlap blocks 74 and 75 | Delivered Chapter 73 performs the bounded test, the cancellation, the phrase loss, the report, the corrected log wording, and the fitness decision — material the plan assigns across 73, 74, and 75. Chapters 74 and 75 cannot be drafted against their own `ArcEntry` purposes until Chapter 73 is trimmed, and the `CUT-ENTRY-ON-A-CURRENT-ANSWER` replay boundary already forbids 75 from re-narrating the session. Trimming 73 is the correct direction rather than rewriting 74 and 75 around the overlap. | before Chapter 74 is drafted; needs an authorized trim decision |
 | Safiya arriving as a moral instrument | She enters at 115 and structurally exists to present Mara with the bill. She needs work, obligations, irritation, and relationships that are not about Mara, and the request must be one thing she is doing rather than her whole identity. Civilian subtraction should also be established earlier through other people. | tasks 8.7, 17.4 gates |
 | Doctrine voice bleeding across all four POVs | The planning documents necessarily speak in *consent, provenance, authorization, inference, mechanism*. In prose that vocabulary belongs mostly to Mara and Julian. Nia carries operational specifics and corrections; Safiya must not sound like she has read the Canon Bible. | task 8.7 calibration review |
 | Professional authenticity | Three domains carry real credibility risk and are not covered by the community-portrayal review already required by `DEC-003`: emergency dispatch and EMS for the Chapter 17 routing and the exonerating timestamps; neuroscience or signal processing for receive, write, and calibration language; technology-transactions and archival governance for the term sheet, record alteration, and the speed of Trust formation. The dispatch evidence in particular must clear Nia without feeling conveniently miraculous. | before Approved_Baseline, task 10.2 |
@@ -2010,8 +2058,13 @@ value for them. Clauses 5 through 8 are objective and are checkable.
    chronology is timestamped to the second across the cut, from the relay closing at 18:31:14 in
    Chapter 16 to the two calls, the access at 18:42:09, the arrival at 18:44:03, the death at 19:10,
    the routing note filed at 19:36, and handover at 20:00 in Chapter 17. The pair also already spends
-   the outlier budget the way clause 3 asks: a 635-word `microchapter` cutting at the irreversible act,
-   answered immediately by a 1,759-word `long-outlier` that runs the consequence as continuous scene.
+   the outlier budget the way clause 3 asks: a microchapter cutting at the irreversible act, answered
+   immediately by a much longer chapter that runs the consequence as continuous scene. **Figures
+   corrected 2026-09-12:** Chapter 16 measures 679 Prose_Words, not 635, and Chapter 17 measures 1,438
+   and is classed `normal`, not the 1,759-word `long-outlier` recorded here — its `ArcEntry` still plans
+   `long-outlier`, and the delivered chapter came in under the band. The clause's finding is unaffected:
+   the compression-then-consequence pairing is what makes the cluster work, and the ratio between the
+   two chapters is still roughly one to two.
    Chapter 17 is the strongest chapter in the delivered manuscript and it is built out of exactly the
    two techniques clauses 3 and 9 exist to spread.
 
@@ -2026,6 +2079,26 @@ value for them. Clauses 5 through 8 are objective and are checkable.
    under this clause.
 6. **The frontier is finished.** Chapters 9, 10, and 20 and Chapters 41–46 are brought to `DEC-018`
    clauses 1, 2, and 10. Chapters 30–40 move to `status: revised` once confirmed compliant.
+7. **Chapter_Status is synchronized.** Every `ArcEntry.status` agrees with its Chapter Header, under the
+   `record-schemas.md` rule that substantive edits demote `approved` to `revised`. This is bookkeeping
+   that executes an existing rule and is not an `ArcChange`.
+8. **Clause 10 is a budgeting target, not a craft rule, and small overages are exempt.** The
+   1,050–1,200 band exists to keep the manuscript inside approved Final_Targets, and it carries no
+   automated score under `DEC-018` and Requirement 12.12. Chapters 19 and 35, at 1,203 and 1,210
+   Prose_Words, are **author-exempted** and are not findings. Neither is to be re-flagged in a later
+   review pass, and neither is to be trimmed to satisfy arithmetic. The operative constraints remain
+   the Normal_Chapter_Range of 700–1,600 and the Hard_Chapter_Maximum of 2,500, both of which are
+   objective and both of which every delivered chapter satisfies. Where the band and the prose disagree
+   by a margin that does not move the manuscript total, the prose wins.
+
+   **Corrected 2026-09-12.** Both figures in this clause are dead, and the exemption they granted is
+   retired. Chapter 19 measures **812** Prose_Words and Chapter 35 measures **1,509**, so neither
+   chapter is over any ceiling and neither needs a dispensation. `DEC-021` clause 2 has since retired
+   the exemption mechanism itself: the former bands are diagnostics, no chapter requires a waiver
+   against them, and length is judged contextually. The clause's surviving principle is the last
+   sentence — where a band and the prose disagree by a margin that does not move the manuscript total,
+   the prose wins — and that principle is now carried by `DEC-021` clause 3.
+
 9. **Scenes are dramatized, not summarized.** The delivered manuscript's dominant unit is narrated
    compression followed by two or three lines of dialogue offered as evidence for it. Chapter 33 is the
    standing counter-example and the reason it outperforms its neighbours: counsel is allowed an
@@ -2041,17 +2114,6 @@ value for them. Clauses 5 through 8 are objective and are checkable.
     one supporting-canon addition, recorded in [`canon-bible.md`](canon-bible.md) under
     `source_location: DEC-019` as `CHAR-017` with `EXT-CHAR-COUNSEL-NAME` and
     `EXT-ROLE-COUNSEL-RECURRING`, and it authorizes nothing else.
-7. **Chapter_Status is synchronized.** Every `ArcEntry.status` agrees with its Chapter Header, under the
-   `record-schemas.md` rule that substantive edits demote `approved` to `revised`. This is bookkeeping
-   that executes an existing rule and is not an `ArcChange`.
-8. **Clause 10 is a budgeting target, not a craft rule, and small overages are exempt.** The
-   1,050–1,200 band exists to keep the manuscript inside approved Final_Targets, and it carries no
-   automated score under `DEC-018` and Requirement 12.12. Chapters 19 and 35, at 1,203 and 1,210
-   Prose_Words, are **author-exempted** and are not findings. Neither is to be re-flagged in a later
-   review pass, and neither is to be trimmed to satisfy arithmetic. The operative constraints remain
-   the Normal_Chapter_Range of 700–1,600 and the Hard_Chapter_Maximum of 2,500, both of which are
-   objective and both of which every delivered chapter satisfies. Where the band and the prose disagree
-   by a margin that does not move the manuscript total, the prose wins.
 
 11. **The `normal`-class per-chapter band widens; the mean is held.** `DEC-018` clause 10 is amended.
     The per-chapter drafting target for `normal` chapters becomes **900–1,400 Prose_Words**, and the
@@ -2068,6 +2130,14 @@ value for them. Clauses 5 through 8 are objective and are checkable.
     per-chapter band while holding the mean costs nothing against the total and buys rhythm for the
     largest movement in the book. Chapters at the edges of the band must earn the edge: a 900-word
     chapter is a compression and a 1,400-word chapter is a scene that needed the room.
+
+    **Superseded 2026-09-18 by `DEC-021`. Do not enforce the numbers in this clause.** The 900–1,400
+    per-chapter band and the held 1,006–1,187 mean are diagnostics rather than quotas, and neither
+    determines any gate. `DEC-021` clauses 1–4 govern: the objective limits stay exact, length is judged
+    by whether the scene earned its room, and the manuscript budget is protected at the level where a
+    shortfall or excess actually arises. What survives from this clause is its reasoning, which
+    `DEC-021` adopted — an even per-chapter band written 79 more times would convert a 49-chapter
+    repair into a 128-chapter one.
 
 12. **Withdrawn. Do not act on this clause.** It originally asserted that the isolated one-sentence
     paragraph had become the default unit of narration, that this was the manuscript's strongest
@@ -2144,7 +2214,7 @@ reader feels the record, not what the record can do.
 | Chapters 9, 10, 20 | Revise to clauses 1, 2, and 10 of `DEC-018`; demote status to `revised` in header and outline | done |
 | Chapters 41–46 | Revise to clauses 1, 2, and 10 of `DEC-018` | pending, next wave |
 | Chapters 30–40 | Confirm compliance, then move header and outline to `revised` | pending, next wave |
-| Chapters 19 and 35 | Bring inside the 1,200 Prose_Word ceiling under clause 8 | pending, next wave |
+| Chapters 19 and 35 | ~~Bring inside the 1,200 Prose_Word ceiling under clause 8~~ | **withdrawn 2026-09-12.** This row ordered the exact trim clause 8 forbids, and cited clause 8 as its authority. It was self-contradictory when written. `DEC-021` clause 2 has since retired the band as a gate, and the measured counts are 812 and 1,509, so nothing is over any ceiling. No action. |
 | `planning/arc-outline.md` — length-class allocation | Chapter 43 moved to `long-outlier` with a non-null `outlier_purpose`; dated note records Private_Defense_Part at its ceiling of 5, the global total at 19 of 20, and `normal` at 109 against the floor of 108 | done |
 | `planning/arc-outline.md` — clause 3 arithmetic correction | Dated note records that the delivered outlier shortfall is about 2, not 15, and that the remaining rhythm variance must come from widening the `DEC-018` clause 10 target inside the 700–1,600 `normal` class | done; the widening itself is open |
 | Chapter 43 | Rewritten as continuous scene under clause 9, 1,065 to 1,620 Prose_Words | done |
@@ -2224,6 +2294,24 @@ The book's sentence craft is above the named inspirations and its premise is com
 | Add action set pieces and chases | Wrong remedy for this book. The delivered manuscript's power comes from procedure, documents, and rooms. The fix is consequence, interruption, rhythm, and bodies inside that world, not a genre transplant. |
 | Fix the flat chapters by rewriting their sentences | The four-chapter document trough is an allocation problem. Its prose is competent; its arrangement is the defect, and no line editing repairs three consecutive chapters of the same shape. |
 | Convert every deliberation deadline into a consequence deadline | Would replace one formula with another. Variety is the clause, not substitution. |
+
+### Execution — added 2026-09-12
+
+Clauses 1 through 9 are now assigned to specific chapters in
+[`mindwars-propulsion-spec.md`](mindwars-propulsion-spec.md), which covers all fifty-one Mindwars
+chapters and records a clock type, ending kind, and obligation for each. Two structural troughs visible
+in the `ArcEntry` records are named there and given remedies: **62–69**, eight consecutive
+institutional-process chapters with no body anywhere in the onset of a war and three Julian document
+chapters inside them, and **94–101**, eight chapters of deliberation at the moral climax. The spec also
+identifies the physical-jeopardy engine this book already owns and has not used — arrivals make people
+certain, people act on certainty with their bodies, and Chapter 61's rail, water, and picking-line
+incidents arrived as forwarded paper rather than as events in front of a viewpoint.
+
+That document is craft guidance under the same authority as this decision. It creates no record, is not
+in the checker's record-source allowlist, changes no `ArcEntry` value, and carries no automated score.
+It is bound by the 2026-09-13 anti-formula amendment above: every assignment is derived from a chapter's
+existing `purpose` and `hook`, nothing is inserted to fill a slot, and if an assignment stops serving a
+scene the scene wins and the cluster-level obligation lands elsewhere on purpose.
 
 ---
 
@@ -2306,11 +2394,41 @@ a safeguard. It is a formula, and it conflicts with the project's stronger anti-
 
 ### Current determination
 
-At the evidence state that produced this decision, the manuscript-budget safeguard **passes**: 64
+At the evidence state that produced this decision, the manuscript-budget safeguard **passed**: 64
 delivered files, 73,147 Prose_Words, a 1,134.4 mean across 55 delivered normal chapters, and a projected
 completion near 143,900. The twelve old-band departures other than Chapter 118 require no length-driven
-revision. Chapter 118 remains separately open until a human reread determines that its material is fully
-inhabited; reaching any particular number cannot make that determination.
+revision.
+
+**Re-measured 2026-09-12. The safeguard still passes, and two figures above have moved.**
+
+| Measure | At decision | Measured 2026-09-12 |
+|---|---:|---:|
+| Delivered chapters | 64 | 64 |
+| Delivered Prose_Words | 73,147 | **71,931** |
+| Delivered `normal` chapters | 55 | **56** |
+| `normal` class mean | 1,134.4 | **1,145.7** |
+| Projected completion | ≈143,900 | **≈143,800** |
+| Headroom to the 150,000 ceiling | — | **≈6,200** |
+
+The delivered total fell while the projection held, which is the expected signature of the task-14
+repairs: a duplicated recording-default unit removed from Chapter 42, Case B cut to exactly 41 words in
+Chapter 47, and the refusal cut to exactly 91 words in Chapter 48. Class means are 1,145.7 `normal`,
+512.4 `microchapter`, and 1,737.3 `long-outlier`, and the remaining plan is 54 `normal`, 6
+`microchapter`, and 4 `long-outlier`.
+
+**Clause 6 is executed.** Chapter 118 has been expanded from 756 to **1,109** Prose_Words inside its
+existing `ArcEntry`, `POV-SAFIYA`, `TL-CODA-ACCOUNT`, `MOT-KETTLE-01`, and
+`REVEAL-SAFIYA-TUESDAY-LOSS`, and it retains `status: exploratory`. Reaching a number did not close the
+craft question, exactly as clause 6 said it could not: whether the Tuesday is now fully inhabited
+remains a human reread, and the chapter stays open until one records a finding.
+
+One forward-looking caution, since this section is the live budget statement. Roughly 6,200 words of
+headroom is thin against what the craft decisions still owe. `DEC-019` clause 9, `DEC-020` clauses 5 and
+7, and `DEC-022` clause 2 all push length upward, and the six-chapter hinge repair of 2026-09-12 added
+1,417 words to six existing chapters at an average of +236 each. `DEC-019` clause 9 is a substitution
+rather than an addition — dramatizing an event means deleting the narrated summary of it — and
+[`mindwars-propulsion-spec.md`](mindwars-propulsion-spec.md) carries that rule plus re-measurement
+checkpoints at Chapters 77, 93, and 108.
 
 ### What this decision does not touch
 

@@ -5,13 +5,13 @@ pov_id: POV-NIA
 timeline_id: TL-PRIVATE-PROTOCOL
 motif_events: []
 hook: "She holds a whole argument back while talking easily, then reads the third report this month from someone with no room to stand in."
-words: 914
+words: 1125
 length_class: normal
 status: revised
 ---
-I checked the repaired console before I put on the band.
+Yesterday's answers were gone from the repaired console.
 
-Mara's identity occupied one side and mine the other. The purpose field named this session. The scope ended after five minutes. Recording showed OFF. I read the build identifier, then the two current-answer fields. The console asked after I sat down; it had not carried either answer across from yesterday. We answered for this interval, and only then did the send control appear.
+Mara's identity occupied one side and mine the other. The purpose field named this session; the scope ended after five minutes; recording showed OFF. Only after I sat down did the console ask each of us again. We answered for this interval, and the send control appeared.
 
 I left my hand beside it. The state stayed idle.
 
@@ -19,9 +19,9 @@ The band warmed against my temple, and Mara's question arrived complete.
 
 *Would you sign the protocol as safe?*
 
-I looked from the word *safe* to the build field. Safe from transport continuing after an answer changed was a claim the build could test. Safe from a signature travelling into an advertisement was not. The stale-state test belonged to one objection. What Mara might want the protocol to say about the winter belonged to another.
+I looked from the word *safe* to the new build identifier. Transport stopping after an answer changed was one claim. A signature travelling into an advertisement was another. What Mara might want the protocol to imply about the winter was a third.
 
-Neither crossed. My fingers stayed off send and the indicator remained down.
+All three remained with me. My fingers stayed off send and the indicator remained down.
 
 When I had the sentence I could own, I released it once.
 
@@ -57,7 +57,17 @@ A few minutes later she asked what Joss repaired when nobody brought him anythin
 
 Mara laughed aloud, which made the channel briefly unnecessary.
 
-At the end of five minutes the console asked both of us again. Mara selected CONTINUE. I selected END. The transport line dropped, the band cooled, and she did not ask me why.
+At five minutes the console asked both of us again. Mara selected CONTINUE. I selected END. The transport line dropped, the band cooled, and she did not ask me why.
+
+She did not ask because I had made not asking a condition, and she had agreed to it in front of me, and keeping it cost her something I watched her decide to pay. I noted that and did not thank her for it.
+
+I came back for reasons of my own and I keep them in order.
+
+The protocol is going to exist whether or not I am in the room, and the version written without me will be worse. The sentence that stopped nothing last week is the sentence I want fixed before it is drafted by somebody who has never been on the receiving end of a send. And what it is like to have a certainty arrive with no author is a thing I can still describe more exactly than anyone else available to describe it.
+
+None of those is forgiveness. I have not offered her any. She performed an act against my stated answer, a machine and not her judgment is the reason it went nowhere, and both of those stay true on a good afternoon with a working console.
+
+What has changed is smaller and it is mine. A week ago I did not know what my no was worth inside that room. Now I know it is worth whatever the last interlock decides, which is not enough, and I know what I intend to do about that. The intending is the part nobody has to give me.
 
 Joss had the mixer in pieces on his workbench when I reached his flat that evening. There were five bolts in the bag.
 

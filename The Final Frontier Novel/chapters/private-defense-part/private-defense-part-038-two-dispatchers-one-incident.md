@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []
 hook: "The demonstration is the best argument anyone has made to her, and it is printed on the same page as the box she would have to un-tick."
-words: 1268
+words: 1206
 length_class: normal
 status: revised
 ---
@@ -51,8 +51,6 @@ Cora drank half a cup of cold coffee and made a face at it. "I want the pause co
 
 "That too."
 
-Two residents were out before the rear route failed. Cora had stopped the transport when she needed one radio stream, and Tomas's private complaint had remained private until he chose to say it aloud. Their answers belonged to the work they had just done.
-
 A Consortium representative had left enrolment packets beside the trial station. Page one described the fire response in language broad enough to make the channel responsible for the rescue. Page two invited county staff into the continuing pilot. I turned it over and found the authorization to pair: named partner, scheduled shift, revocable participation. Beneath it sat a separate box.
 
 **Enable content retention for service quality, training, safety review, and product improvement.**
@@ -69,7 +67,7 @@ I asked whether today had been recorded.
 
 Tomas said he wanted it, in front of me. Two years ago he sat through nine months of an inquest with a radio log that showed which unit he sent and nothing about the four minutes he spent trying to get an address out of a man who was drowning. The family's counsel read that silence as indifference. He would rather be recorded than described.
 
-I had no answer for him and I am not going to invent one now. I moved the packet towards him, because the argument was his to make and belonged in his answer, not in the operator's default.
+I moved the packet towards him. His reason belonged in his answer; it did not belong inside the operator's default.
 
 "You can disable retention," the representative said.
 

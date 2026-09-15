@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: []
 hook: "They tell her nobody on earth would be a stranger again, and the worst part of the afternoon is that she wants it to be true."
-words: 1692
+words: 1886
 length_class: long-outlier
 status: revised
 ---
@@ -27,7 +27,7 @@ The clinical director began, and she began with Ada.
 
 "Tell me what you saw."
 
-I said that Ada Ferris had read a discharge sheet, understood that the interval printed on it was wrong, and got the correction to her daughter in about four seconds, and that the nurse had changed the sheet before anyone acted on it.
+I told her exactly what I saw, because it was on the record and because the exact version is the one I can defend. A prepared exercise. A printed sheet with a deliberately wrong interval on it, written by her own clinicians that morning. Ada Ferris read it, understood the error, and got the correction to Lena in about four seconds. Lena corrected herself aloud. No dose existed. No trolley existed. Nobody was on a ward.
 
 "Four seconds," the clinical director said. "How long would writing it have taken her?"
 
@@ -37,11 +37,15 @@ I said that Ada Ferris had read a discharge sheet, understood that the interval 
 
 "Ninety seconds. Perhaps two minutes."
 
-"And the trolley was already moving."
+She let that sit. Then: "And in a real room, the trolley is already moving."
 
-I did not answer, because she was right, and because the shape of the question told me she had asked it in other rooms of other people who had also not answered it.
+It was a fair sentence. It was also a different sentence from the one I had just given her, and the distance between them is the whole distance between a measured interval and a saved life. I could have said so. The correct words were available and short: that is a hypothesis about a ward, and we have not run it on one.
 
-She went on without pressing the advantage. Tomas Reyner and Cora Baird holding an emergency channel open through a night when every ordinary line was occupied. A man in a rehabilitation unit who had not started a conversation in eleven months and started four in a fortnight. She did not oversell any of it. She named the failures as well: two pairs who never calibrated at all, one who calibrated and disliked it, a woman who said it felt like being helped in public.
+I did not say them. I let the trolley into the room, and I have thought since that this was the first thing I gave them, before the pen, before anything with my name on it.
+
+She went on without pressing the advantage. Tomas Reyner and Cora Baird on a supervised afternoon shift, an apartment fire, a location database that returned two buildings sharing a number on two different streets, and a description of a child's bedroom moving from the call-taker to the crew in the courtyard in the time it takes to say it. A man in a rehabilitation unit who had not started a conversation in eleven months and started four in a fortnight. She did not oversell any of it. She named the failures as well: two pairs who never calibrated at all, one who calibrated and disliked it, a woman who said it felt like being helped in public.
+
+She did not say that the fire went on burning afterwards, or that a resident went to hospital, or that the chained door stayed chained until a firefighter cut it. She did not have to. Leaving those out is not lying, and I noticed that I could not name the rule it broke.
 
 I had watched enough sessions to know where the brochure simplified. Simplification did not erase Ada working again, and it did not erase Tomas keeping a voice on a line while Cora moved help towards it.
 

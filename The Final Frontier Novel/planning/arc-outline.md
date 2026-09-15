@@ -325,7 +325,7 @@ These hold across the complete 128-entry outline. Each is objectively checkable 
 **Status and calibration**
 
 19. Every entry as written by tasks 5.2–5.5, before task 5.7 runs, carries `status: "planned"`, `calibration_selected: false`, and `representative_purpose: null`. Task 5.7 is the only task permitted to change those three fields; nothing else in the outline may.
-20. After task 5.7, exactly eight entries carry `calibration_selected: true` — chapters 1, 2, 3, 4, 5, 73, 118, and 124 — and the set equals `Baseline.calibration_chapters`. Chapters 73, 118, and 124 sit outside the opening sequence and therefore carry a non-null `representative_purpose`; chapters 1–5 sit inside it and keep `null`. The same three nonconsecutive entries carry `status: "exploratory"`; every other entry, including 1–5, still carries `status: "planned"`, `calibration_selected: false`, and `representative_purpose: null`. `exploratory` here is a planning state, not a claim that a Chapter File exists: no Chapter File exists yet for any of the eight.
+20. Task 5.7 selected exactly eight entries for calibration — chapters 1, 2, 3, 4, 5, 73, 118, and 124 — and the set remains equal to `Baseline.calibration_chapters`. It initially set the three nonconsecutive entries outside the opening sequence to `exploratory` and supplied their non-null `representative_purpose` values. Later `status` values track existing Chapter Files without changing calibration history: Chapter 73 is now `revised`, while Chapters 118 and 124 remain `exploratory`; all eight retain `calibration_selected: true`, and their representative-purpose rules remain unchanged.
 
 **Boundaries this outline may not cross**
 
@@ -845,7 +845,7 @@ Movement invariants beyond the global set:
     "timeline_id": "TL-DECEMBER-RECEIVE",
     "pov_id": "POV-NIA",
     "purpose": "Nia's morning runs continuous through the same interval, fixing that the source side has no discontinuity at all.",
-    "hook": "Her clock, her road call, and her console at ten to seven agree with one another, and the twenty minutes between them hold nothing she would ever have thought to report.",
+    "hook": "Every clock agrees on her morning, while the four seconds she trusted a voice over the board leave no second reader and a closed ticket above Dev's screen.",
     "cross_cuts": [
       "CUT-RECONSTRUCTION-LATENCY"
     ],
@@ -1199,7 +1199,7 @@ Movement invariants beyond the global set:
     "timeline_id": "TL-DISCOVERY-HANDSHAKE",
     "pov_id": "POV-NIA",
     "purpose": "Nia spends the hours after the call trying to source the certainty she acted on, and finds no memory, habit, or reason that produced it.",
-    "hook": "She retraces the whole shift twice and cannot find the place the certainty entered it.",
+    "hook": "Removed from live routing, she builds a page that keeps useful reasons from becoming remembered ones and carries it back to a desk that cannot assign.",
     "cross_cuts": [
       "CUT-UNANSWERED-SILENCE"
     ],
@@ -1245,14 +1245,14 @@ Movement invariants beyond the global set:
     "timeline_id": "TL-DISCOVERY-NIA-AFTERMATH",
     "pov_id": "POV-NIA",
     "purpose": "Nia reconstructs the routing decision in full and establishes that no memory of hers generated the certainty, which makes lost self-trust the injury rather than the death alone.",
-    "hook": "The reconstruction is complete and still does not contain the moment she became sure.",
+    "hook": "She signs the sentence that may keep her off routing, and leaves with two dates her brother quietly moves around.",
     "cross_cuts": [
       "CUT-SOURCE-AND-CASUALTY-JOINED"
     ],
     "motif_events": [],
-    "estimated_length_class": "normal",
+    "estimated_length_class": "microchapter",
     "estimated_words": null,
-    "outlier_purpose": null,
+    "outlier_purpose": "Compresses the formal review to the signed finding and immediate work-status consequence, avoiding a third replay of the routing evidence.",
     "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
@@ -1910,7 +1910,7 @@ The selected fluent pair identities are Mara and Nia, whose joint calibration be
     "timeline_id": "TL-APRIL-TERM-SHEET",
     "pov_id": "POV-NIA",
     "purpose": "Nia finds her own incident inside the deployment justification and establishes that her injury has been used to argue for the thing that produced it, without anyone asking her.",
-    "hook": "She is an appendix, and the appendix is the reason the program is considered urgent.",
+    "hook": "She is an appendix, and the appendix is the reason the programme is considered urgent.",
     "cross_cuts": [
       "CUT-PROMISE-AND-THE-CASE"
     ],
@@ -2324,7 +2324,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2348,7 +2348,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2373,7 +2373,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2397,7 +2397,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2419,7 +2419,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2443,7 +2443,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2467,7 +2467,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2491,7 +2491,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1100,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2517,7 +2517,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2541,7 +2541,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2567,7 +2567,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "microchapter",
     "estimated_words": 480,
     "outlier_purpose": "Compression to the single result and its immediate ethical consequence, so the reversal lands in the time it takes her to finish the sentence.",
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2585,7 +2585,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "timeline_id": "TL-MINDWARS-COUNTERPHASE",
     "pov_id": "POV-NIA",
     "purpose": "Nia forces the working defense apart from its authorization, sets the terms on which she will be inside a cancellation field at all, answers aloud for herself, coordinates those conditions with Mara over the consented paired channel one deliberately sent contribution at a time, and learns from the inside exactly what the field does to a person.",
-    "hook": "She says yes to one bounded field on her own conditions, and then finds out what her own head sounds like while it is running.",
+    "hook": "She says yes to one bounded field, the pattern cancels, and forty minutes later a familiar phrase is inaccessible when the console asks for her back.",
     "cross_cuts": [
       "CUT-TRANSMITTED-DEFENSE-AND-THE-QUESTION",
       "CUT-HER-CONDITIONS-AND-HIS-INSTRUMENT"
@@ -2597,7 +2597,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "exploratory",
+    "status": "revised",
     "calibration_selected": true,
     "representative_purpose": "Tests counterphase consent, the Mindwars tonal expansion, and Nia's ability to exercise authorization authority without a resolved provenance (`DEC-007`).",
     "record_horizon": {
@@ -2625,7 +2625,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2649,7 +2649,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2674,7 +2674,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2698,7 +2698,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {

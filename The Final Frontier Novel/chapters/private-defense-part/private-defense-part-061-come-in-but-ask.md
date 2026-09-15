@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-PRIVATE-PROTOCOL
 motif_events: [MOT-COME-02]
 hook: "The rule is finished and correct, and it protects everyone who has a room, which is the smaller half of the people it needs to protect."
-words: 1647
+words: 1662
 length_class: long-outlier
 status: revised
 ---
@@ -31,7 +31,7 @@ I deleted the line. “Come in. But ask.”
 
 “Ask what?”
 
-I read the scope field above it: *Mara Venn and Nia Calder; one paired protocol-review session; no content recording; either participant may pause or end; each contribution requires a deliberate send.*
+I read the scope field above it: *Mara Venn and Nia Calder; one five-minute paired protocol-review session; no content recording; either participant may pause or end; each contribution requires a deliberate send.*
 
 “That,” I said.
 
@@ -85,7 +85,7 @@ The first attachment came from a rail control office. At 14:07:31, an operator h
 
 There was no statement from the operator.
 
-Nia reached for her pause control, saw that transport was already paused, and selected END. The session closed. She did not owe the remaining seven minutes because she had agreed to the first five.
+Nia reached for her pause control, saw that transport was already paused, and selected END. The session closed. She had agreed to five minutes and used three of them; the remaining two were not owed to me, to the console, or to the protocol we had just written.
 
 A second message arrived while we were reading the first. This one came from a municipal water plant asking whether a shielded control position could be assessed. An operator had closed an intake at 14:07:46 after becoming certain a contamination alarm had failed to sound. The alarm system showed no fault. The first water samples were clear. The closure had reduced pressure enough to trigger a precautionary notice at a clinic supplied by the plant.
 
@@ -99,7 +99,7 @@ The attached document was written by the plant manager. The operator had gone ho
 
 “Yes.”
 
-I opened the metadata panel on the messages. The sending systems were unrelated. Both documents had been created after the events they described. Their local clocks claimed network synchronization, but the attachments did not include clock-audit records. Fourteen seconds of apparent separation could have been fourteen seconds, or less, or more.
+I opened the metadata panel on the messages. The sending systems were unrelated. Both documents had been created after the events they described. Their local clocks claimed network synchronization, but the attachments did not include clock-audit records. Fifteen seconds of apparent separation could have been fifteen seconds, or less, or more.
 
 A third forwarding notice appeared. The medicine distribution centre that sent it had found our address through the same public guidance, but its request had been written by a different safety office. At 14:07:39, a shift controller had stopped an automated picking line because she was certain a person had entered the guarded aisle. The line’s gate logs and two camera views showed no entry. Restart checks delayed a refrigerated shipment by thirty-six minutes.
 

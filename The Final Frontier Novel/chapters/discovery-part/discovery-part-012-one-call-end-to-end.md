@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "She gives the call everything she has, and the only record of that effort is a timestamp."
-words: 1098
+words: 1019
 length_class: normal
 status: revised
 ---
@@ -17,7 +17,7 @@ You take the address first. Not because the address matters more than the man on
 
 She gave me a house number and Alder Close. The system offered two Alder Closes, one in town and one beyond the reservoir. I asked what she could see through the front window. Bus shelter. Green pharmacy sign. Houses opposite, no fields. Town.
 
-Condition: adult collapsed, breathing uncertain, young caller alone. Consequence: the ambulance response started while I kept the line.
+Adult collapsed, breathing uncertain, young caller alone. The ambulance response started while I kept the line.
 
 "Put the phone on speaker," I said. "Take it with you. Go back to your dad."
 
@@ -61,22 +61,18 @@ She ran. The phone hit something and spun, and for a moment I had shoes, the dog
 
 I stayed until they told me to clear.
 
-The free-text field holds two hundred characters. I spent them on what a later reader would need and could not infer: *caller is daughter of patient, aged unverified; compressions from 14:10, neighbour relief 14:13; entry via rear garden.* You write for whoever opens the card in six months with none of the sound in it.
+The free-text field opened with two hundred characters. I used them on the parts a later reader could not infer: *caller is daughter of patient, aged unverified; compressions from 14:10, neighbour relief 14:13; entry via rear garden.* Then the collapse form closed itself behind the crew's patient-contact time.
 
-Six minutes and thirty-five seconds is not a long call by the system's measure. The collapse form closed itself when the crew assumed care. Address validated. Response dispatched. Instructions provided. Access gained. Patient contact.
-
-None of those fields had room for the girl, or for the moment she stopped answering because she had put both hands on her father's chest, or for the choice to give one frightened person a voice she could borrow until another pair of hands arrived.
+Six minutes and thirty-five seconds became five completed fields: address validated, response dispatched, instructions provided, access gained, patient contact. The girl's hands were in the times between them. I had nowhere else on the card to put the moment she borrowed my count and kept going.
 
 Dev set a cup of water by my keyboard. "You good?"
 
 "No. Next item."
 
-That answer meant I was working. It did not mean the call had passed through me without cost.
-
 The next item was a broken shop window reported after the owner arrived. No suspect present. I took the location, corrected the business name, and assigned it. My voice worked. The queue advanced. I drank the water after it had gone warm.
 
-At 14:27 the ambulance status changed to transporting, with no destination on my screen. At 14:31 a supervisor message asked whether the caller had sounded under sixteen. I marked *age not verified*, because sounding young is not evidence, even when every part of me had treated her as a child.
+At 14:27 the ambulance status changed to transporting, with no destination on my screen. At 14:31 a supervisor message asked whether the caller had sounded under sixteen. I marked *age not verified*. Her voice had changed how I worked the call; it did not give me a date of birth.
 
-At 22:10, before I logged off, I opened the card again. Start, dispatch, arrival, transfer, close. Dispatch does not receive hospital outcomes; there is no field for one and no rule that would make one. I had used her first name twice to keep her hands where they needed to be, and I did not have her surname, and I would not be told at any point tonight or afterward whether the man on that kitchen floor was alive.
+At 22:10, before I logged off, I opened the card again. Start, dispatch, arrival, transfer, close. Dispatch receives no hospital outcome. I had used her first name twice to keep her hands where they needed to be, but I did not have her surname and nothing on my screen would tell me whether the man on that kitchen floor was alive.
 
 The queue was at four items when I handed the console to the night shift. My shift started again at six.

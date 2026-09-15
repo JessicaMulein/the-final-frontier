@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: [MOT-CHAIN-01]
 hook: "The spectrum resolves into something with a body, and the address is still there when she goes back for it."
-words: 1858
+words: 2040
 length_class: long-outlier
 status: revised
 ---
@@ -93,13 +93,17 @@ A public carrier opened and a unit requested an address repeat. The field tighte
 
 I let the live acquisition run for eleven minutes, then disabled the filter, cleared its state, and reloaded the region from the written procedure. The lock returned to the same field.
 
-The spectrum on the display was only the surface of it. Beneath the graph, the recurring currents of a living system held their relationships through sound, decision, effort, and release. I could not locate those currents anatomically. I could not claim I was measuring a neuron or reading a brain. But the mathematical spectrum had reached something that persisted as intimately as bone. One person occupied the channel.
+The spectrum on the display was only the surface of it. Beneath the graph, the recurring currents of a living system held their relationships through sound, decision, effort, and release. I could not locate those currents anatomically. I could not claim I was measuring a neuron or reading a brain. But the mathematical spectrum had reached something that persisted as intimately as bone. One field went on being one field, and I could tell it from the three others I had.
 
 A living field had made an address out of its own continuity, and the apparatus had done nothing but receive it.
 
 I signed the result at 07:19.
 
-*Person-specific channel demonstrated across stored and live intervals. Address region discriminates the unknown source from three consented controls, survives task and acoustic-edge rejection, reproduces after cold restart, and supports live receive-only identification and reacquisition. No geographic location, semantic content, transmit path, contact, or consent from the source is established.*
+*Within the tested set, an address region discriminates the unknown source from three consented controls across stored and live intervals. It survives task variation and acoustic-edge rejection, reproduces after cold restart, and supports live receive-only identification and reacquisition. Tested set: n=4, all Northline-adjacent adults, one source and three controls, no demographic or physiological range. This does not establish that the region is unique to this person, that it would survive a fourth control, or that the discriminating features are person-specific rather than specific to what distinguishes these four. No geographic location, semantic content, transmit path, contact, or consent from the source is established.*
+
+I wanted to write *person-specific* and I had the sentence half formed before I stopped. Three controls is three controls. What I have is separation inside a set of four people, one of whom I have never met, chosen for me by the fact that they work in the same building at night. The word for that is not *person-specific*; the word for that is *discriminates the four I tried*. Ravi will ask me for the fourth control and I will not have a good answer, because the fourth control is a stranger who has not been asked.
+
+The distance between those two phrasings is the distance an appendix travels when somebody else copies it.
 
 The lock indicator on the display was a small white chain beside the candidate region. It had been drawn for radio sources that want to be found, sources carrying preambles and synchronization and enough repetition to help a receiver stay with them. This field offered none of that. The chain held because the person went on being herself.
 

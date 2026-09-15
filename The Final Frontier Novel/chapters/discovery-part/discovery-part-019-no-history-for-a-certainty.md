@@ -4,8 +4,8 @@ chapter: 19
 pov_id: POV-NIA
 timeline_id: TL-DISCOVERY-HANDSHAKE
 motif_events: []
-hook: "She retraces the whole shift twice and cannot find the place the certainty entered it."
-words: 1059
+hook: "Removed from live routing, she builds a page that keeps useful reasons from becoming remembered ones and carries it back to a desk that cannot assign."
+words: 812
 length_class: normal
 status: revised
 ---
@@ -21,7 +21,7 @@ I kept the death and the departure on separate lines while I answered. House col
 
 "Do you still judge that?"
 
-"The road patient deteriorated and required advanced care. That doesn't establish what I knew at 18:38."
+"The road patient deteriorated and required advanced care. That happened after I assigned the unit."
 
 She folded her hands over the notice. "Were you overloaded?"
 
@@ -37,7 +37,7 @@ She folded her hands over the notice. "Were you overloaded?"
 
 Then she waited. "A hunch?"
 
-"That names it without explaining it."
+"That gives the gap a name. It doesn't fill it."
 
 Procedure required her to remove me from live routing pending review. She did, and I did not object. Dev took my console. I moved to the training desk and watched the queue from a screen that cannot assign anything.
 
@@ -51,15 +51,11 @@ I opened a blank page and wrote the facts available before assignment.
 
 *Seventeen: one advanced unit.*
 
-On those facts, I routed Seventeen to the collapse on paper. I turned the page over and wrote what my hand had done: *Quarry.* Then I turned it back and ruled the lower half into two columns, *possible* and *remembered*.
+Those facts sent Seventeen to the collapse when I rebuilt the route on paper. I turned the page over and wrote what my hand had done: *Quarry.* Then I turned it back and ruled the lower half into two columns, *possible* and *remembered*.
 
-Under *possible* I wrote *strain in driver's breath*. The recording would answer the sound when it was released; under *remembered* I put *coherent speech, repeated denial of injury*.
+Under *possible* went three entries: strain in the driver's breath, delay on the quarry road, fire already moving to the blocked bathroom. I checked each one. The recording would answer the first when it was released. The route estimate showed both road units delayed. Fire had acknowledged before Seventeen could have reached the house.
 
-Next: *quarry-road delay*. I checked the estimated routes. The road delayed the ordinary crew and Seventeen both. It increased need without reversing priority, so I kept it under *possible*.
-
-Then: *bathroom access blocked until fire*. Fire was already moving and reached the house before Seventeen could have. That could support the choice. I wrote beside it: *not remembered as basis*.
-
-I crossed nothing out. Each candidate remained available for review, but none moved into the remembered column by being useful afterward.
+Under *remembered* I wrote *coherent speech, repeated denial of injury* and, beside the fire entry, *not remembered as basis*. Useful reasons stayed in the column where I had found them.
 
 Dev came off console on his break and stood behind the training desk. "You found anything?"
 
@@ -67,7 +63,7 @@ Dev came off console on his break and stood behind the training desk. "You found
 
 "That's something."
 
-"It isn't the source of the decision."
+"It isn't where the decision started."
 
 He pulled the spare chair around. "Sometimes you know before you know why."
 
@@ -83,38 +79,20 @@ He looked at the list. "You wrote quarry on the back."
 
 "Did it feel like yours?"
 
-"Yes. That doesn't explain where it began."
+"Yes."
 
-"Did it feel like it wasn't yours?"
+I added that answer beneath the columns. I had heard no instruction and received no words I could quote. When two calls needed one answer, I had wanted the quarry with the ordinary intimacy of preference. That was what I remembered, so that was what I wrote.
 
-"No. That would not prove where it began either."
+At the end of shift, my supervisor let me hear the opening forty seconds of each call with her present. I held the pen over the page.
 
-I added those answers beneath the columns. I had heard no instruction and received no words I could quote. When two calls needed one answer, I had wanted the quarry with the ordinary intimacy of preference. That was what I remembered, so that was what I wrote.
+The house channel carried panic, the blocked door, and the wife's breath. The road channel carried wind, traffic, and a man insisting he was fine. I wrote down each sound I could identify. Beneath both was the even network hiss, level from the first second to the last.
 
-At the end of shift, my supervisor let me hear the first minute of each call with her present. I held the pen over the page.
-
-The house channel carried panic, the blocked door, and the wife's breath. I wrote each sound I could identify.
-
-The road channel carried wind, traffic, and a man insisting he was fine. I wrote those too.
-
-Beneath both was the even network hiss, level from the first second to the last. No phrase said *quarry*. No cue matched the finished certainty I remembered. The pen made no mark for one.
+No phrase said *quarry*. The pen made no mark for the finished certainty I remembered.
 
 I listened a second time. Nothing new reached the page.
 
 She stopped the recordings before the unit assignment and said the formal review would preserve the rest. I wrote the endpoint beside the audio notes so I could not later claim more than I had heard. The review was Tuesday at ten, and I remained off live routing until then.
 
-At home I laid the yellow strip from ticket 4716 beside the page. On that shift the system said east and the driver said west. Report, contradiction, screenshot, corrected route, ticket number: the strip held each handoff. On the quarry shift, picture and practice agreed and my hand moved against them.
+At home I laid the yellow strip from ticket 4716 beside the page. On that shift the system said east and the driver said west. The strip carried the contradiction through screenshot, corrected route, and ticket number. On the quarry shift, picture and practice had agreed. I had *Quarry* on the reverse of a page and no handoff into it.
 
-I retraced that shift once from the call tones and once backward from the four touches. Facts, unit status, Dev's question, assignment. Both passes ended with *Quarry* on the reverse and the two columns on the front.
-
-Joss let himself in at nine with a bag of food from the place near his workshop and my desk fan under his arm, rewound. He had taken it three weeks ago and had been saying since that it was nearly done.
-
-"It runs," he said. "It also makes a noise now. At this price you get one or the other."
-
-He plugged it in. It made the noise. Then he set a container in front of me and stood there until I picked up the fork, which he has done since we were children and which still works.
-
-I ate. It was too hot and I ate it anyway.
-
-He asked whether I was on nights that week. I said I was on the training desk for a while. He said, "Right," did not ask why, and told me about a customer who had brought in a food mixer with a mouse living in it. He stayed until half past ten and took the empty containers with him, because he knows I will not.
-
-Tuesday at ten was thirty-seven hours away. The fan kept its new noise beside the open page, and the moving air lifted the corner marked *possible* and set it down again beside *remembered*.
+I wrote *Tuesday, 10:00* in the top right corner, slid the page into the notebook behind the yellow strip, and put the notebook under my keys. At six it went back with me to the training desk.

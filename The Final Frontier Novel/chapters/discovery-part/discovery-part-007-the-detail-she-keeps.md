@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "Nothing in the day asks to be remembered, and she remembers it anyway."
-words: 827
+words: 804
 length_class: normal
 status: revised
 ---
@@ -15,7 +15,7 @@ status: revised
 
 On my screen her icon was on the east side of the reservoir, moving away from me at the speed of a vehicle that existed.
 
-Condition: a welfare call at a locked pumping station, one caller waiting outside in the rain, no report of violence, weather closing in from the north. If I trusted the screen, I would send a second unit the long way round the water while Fourteen drove away from a gate she could already see.
+Rain was closing from the north. One caller waited at a locked pumping station for a welfare check, and nobody had reported violence. If I followed the screen, I would send a second unit the long way round the water while Fourteen drove away from a gate she could already see.
 
 "Ignore your display position," I said. "Continue to the maintenance gate. Mark on scene by voice."
 
@@ -47,7 +47,7 @@ At nine forty, a lift alarm with no answer. At ten past ten, a child locked in a
 
 At eleven thirty-seven, support closed 4716 as *unable to reproduce*.
 
-I read that twice. It was accurate as far as their desk went: reproducing the fault required the layer to freeze while a unit crossed the reservoir while somebody watched. I took the strip back out, reopened the ticket, and attached Dev's screenshot. At eleven forty-two the status changed to *monitoring*, with a review date twenty-eight days out.
+I read that twice. Their desk had not reproduced the fault; the layer would have to freeze while a unit crossed the reservoir while somebody watched. I took the strip back out, reopened the ticket, and attached Dev's screenshot. At eleven forty-two the status changed to *monitoring*, with a review date twenty-eight days out.
 
 At lunch Dev pointed at the yellow strip with his fork.
 
@@ -63,6 +63,6 @@ He put his hands up and left it there, then told me at some length about his sis
 
 I took the strip home by accident. It adhered to the cuff of my sleeve when I cleared the console, then fell beside the handbrake when I reached across for my bag. Under the car-park light I had the whole morning in small marks: 4716, *screen east*, *voice west*, the repaired o, and the coffee crescent.
 
-The ticket was open. The screenshot was attached. The caretaker was home with a plaster on his thumb. The review date sat twenty-eight days away; I was due on that console for nineteen of them, and Fourteen ran the reservoir twice a week. *Monitoring* gave me a status, not the name of the person who would be at the desk when voice and picture next separated.
+The review sat twenty-eight days away. I counted nineteen of those days with my name on that console and two reservoir runs a week for Fourteen. *Monitoring* did not put a person at the desk for the next time voice and picture separated.
 
-I slid the strip into the notebook beside the earlier account of the crossing bell. The cover closed over the yellow edge.
+I slid the strip into the notebook beside the earlier account of the crossing bell. The ticket remained open in the system. The cover closed over the yellow edge.

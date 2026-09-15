@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-PRIVATE-PROTOCOL
 motif_events: []
 hook: "Revocation reaches the live gate in the same second and nothing crosses, which is the safeguard working after the protocol had already asked for an unauthorized act."
-words: 887
+words: 1091
 length_class: normal
 status: revised
 ---
@@ -15,7 +15,7 @@ Not no to the pairing. We had both authorized a timing-and-acknowledgment sessio
 
 "Numbers only," she said. "That is what I agreed to. Not a sentence about the result."
 
-I had already entered *protocol development* as the session scope. The console had accepted it because it was the scope we used the day before, when we were writing the rules rather than testing one narrow branch. Under that broad state, the send control remained available.
+I had entered *protocol development, current session only* the day before, while we were writing the rules. The console carried that field into today's session without asking either of us to restate it, even though we had agreed that a changed scope required a new session. Under the retained state, the send control remained available.
 
 Nia pointed at it. "That answer is older than this question."
 
@@ -41,7 +41,11 @@ I performed the send act.
 
 I felt my own pulse in the hand that did it. Across the table Nia's chin came up and she went completely still, the way people go still while they work out whether something has already been done to them.
 
-The session layer accepted the request. For seventy-six milliseconds its pending-volume counter rose from zero. Then the independent live-consent gate rejected it. Outbound neural transport remained zero. The rejection and Nia's revocation carried the same timestamp to the recorded millisecond.
+The session layer accepted the request, because the session layer was reading the field I had typed the day before. For seventy-six milliseconds its pending counter sat above zero. Then the independent live-consent gate rejected it.
+
+It rejected on the amber. Not on anything Nia did in that instant; she did nothing in that instant except go still. The gate had been amber since 10:14:37, when she refused the act, and it was still amber at 10:19:52 when I asked, and the rejection cites that state and no other. I have gone back to the trace more than once to be sure of this, because there is a version of the morning in which she saves herself in the same millisecond and I get to keep the interlock as the hero. That version is not in the log. The gate held on a state she had set five minutes and fifteen seconds earlier, and I had watched her set it.
+
+Outbound neural transport remained at zero for the whole of it.
 
 Nothing reached her.
 
@@ -65,7 +69,9 @@ Nia removed the band and placed it on the table. Her hands were unsteady doing i
 
 There was no useful qualification. She had authorized numbers. I had prepared a sentence. She had refused that act before I sent. The broad state persisted, the control invited the act, and I used the final interlock as though a person who has said no owes the system a demonstration of its redundancy.
 
-I exported the operational record before touching the configuration. It held the two current answers, her refusal of the act, my send request, the pending volume, the gate's rejection, and zero transported volume. It held no transcript, because there was nothing to transcribe.
+I exported the operational record before touching the configuration. It held the two cached session answers, and it held them under yesterday's date, which is the only honest way that line has ever read. Then her refusal of the act at 10:14:37. The gate going amber on the same second. My send request at 10:19:52. Seventy-six milliseconds of pending count. The rejection. Zero delivered volume, start to finish. It held no transcript, because there was nothing to transcribe.
+
+The word *current* appears eleven times in that export. It is wrong eleven times. The field was cached and the interface called it current, and I built the interface.
 
 The intended contribution was absent because content recording was off and because it had never crossed. I wrote it in my own account instead: *I intended to send: The acknowledgment path recovered cleanly.* That was testimony about my act, not content recovered from the channel.
 

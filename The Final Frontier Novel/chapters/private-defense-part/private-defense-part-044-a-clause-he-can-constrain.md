@@ -39,7 +39,7 @@ That was the premise on which the negotiation rested. The write path was a funct
 
 Dalby offered a revised sentence. Active transmission would remain disabled by default and could be enabled only under a participant-specific authorization conforming to the consent schedule.
 
-I added that pairing consent could authorize only deliberately offered contributions inside the named session. She added an exception for integrity checks. I limited those checks to nonsemantic transport metadata. She asked for diagnostic payloads. I required them to be generated test patterns that never entered a person's field.
+I added that pairing consent could authorize only deliberately offered contributions inside the named session. She added an exception for integrity checks. I limited those checks to payload-free transport metadata. She asked for diagnostic payloads. I required them to be generated test patterns that never entered a person's field.
 
 The paragraph became ugly and useful.
 

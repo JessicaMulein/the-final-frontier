@@ -534,10 +534,21 @@ def test_committed_baseline_contains_exactly_one_complete_revision_pass(
     assert checker.check_arc_changes(committed_global_index) == ()
 
 
-def test_all_eight_committed_calibration_chapters_remain_exploratory(
+def test_all_eight_committed_calibration_chapters_track_current_status(
     checker, committed_global_index, manuscript_root
 ) -> None:
-    """Validates: Requirements 1.8-1.10 and 13.1-13.2."""
+    """Validates fixed calibration identity and current status synchronization."""
+
+    current_baselines = [
+        record
+        for record in committed_global_index.of_type("Baseline")
+        if record.payload.get("state") != "superseded"
+    ]
+    assert len(current_baselines) == 1
+    baseline_chapters = tuple(
+        current_baselines[0].payload["calibration_chapters"]
+    )
+    assert baseline_chapters == CALIBRATION_CHAPTERS
 
     entries = {
         int(record.payload["chapter"]): record.payload
@@ -550,16 +561,16 @@ def test_all_eight_committed_calibration_chapters_remain_exploratory(
             if entry["calibration_selected"] is True
         )
     )
-    assert selected == CALIBRATION_CHAPTERS
-    for chapter in CALIBRATION_CHAPTERS:
+    assert selected == baseline_chapters
+    for chapter in baseline_chapters:
         entry = entries[chapter]
-        assert entry["status"] == "exploratory"
+        assert entry["status"] != "planned"
         path = manuscript_root.joinpath(*entry["filename"].split("/"))
         document = checker.parse_chapter_document(
             path.read_text(encoding="utf-8"),
             relative_path=entry["filename"],
         )
-        assert document.header["status"] == "exploratory"
+        assert document.header["status"] == entry["status"]
 
 
 def test_task_11_checkpoint_gate_is_readable_and_passing(

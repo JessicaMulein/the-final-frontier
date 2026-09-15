@@ -5,7 +5,7 @@ pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []
 hook: "The benefit in front of him is real, and the phrase they have chosen for it is already doing work the mechanism does not support."
-words: 1186
+words: 1293
 length_class: normal
 status: revised
 ---
@@ -15,7 +15,7 @@ Four entries stood above the line he wanted signed, all dated 19:40 the previous
 
 "Open Channel. They came out to set the room up."
 
-So the car that sat at the outer barrier while Mara Venn checked a wall calendar was four contractors and a clinical director come early to move furniture. I record the flatness because the flatness is the finding: booked by a group entitled to book it, in a ledger anyone could read, on a page where her group did not appear, because nobody needed her permission to take a room at the site she runs.
+So the car that sat at the outer barrier while Mara Venn checked a wall calendar was three contractors and a clinical director come early to move furniture. I record the flatness because the flatness is the finding: booked by a group entitled to book it, in a ledger anyone could read, on a page where her group did not appear, because nobody needed her permission to take a room at the site she runs.
 
 They had arranged that room as if the answer were approved already — two upholstered chairs, a low table, identical glasses of water, a screen showing the words **Electronic Speech Pairings** before anyone explained what was paired or what counted as speech. Mara came in four minutes late, coat on, and stood at the back, having heard of the session from the technician who opened the gate.
 
@@ -28,6 +28,10 @@ While the technician fitted the bands, Lena said something to her mother that wa
 Several hundred of those, she said: words made when she was small, two or three habits of grammar that behave like rules, references hardened over twenty-odd years into something quicker than English. None of it written down. The calibration they spent weeks building holds not a syllable of it, being a channel that carries what one of them decides to send and keeps no lexicon. Anyone wanting a copy should have started two decades ago, in a kitchen, with a notebook nobody could have explained the purpose of.
 
 A technician read the authorization aloud: this pairing, this morning, Ada and Lena. Either could pause, either could revoke, every contribution required an offer, silence carried nothing, content recording was disabled. Ada touched the green contact beside her chair, Lena touched hers, and the screen showed two current consents and no transcript window. Their mapping had been built across several voluntary sessions and belonged to these two; a technician could copy the hardware profile and not the calibration.
+
+Before coming out I had asked who built the apparatus on that table, because a device carries a provenance in the same way a document does, and the answer was three answers. The front end derives from the institute's own signal-reconstruction work under a licence I have now read twice. The outward stage was designed and manufactured by the Consortium's engineering group, which is why no clause of mine reaches it by describing Northline. The mapping belonged to the two women in the chairs and to nobody else living.
+
+Three provenances inside one instrument, and only the third had been given by the people it came from.
 
 Ada closed her eyes. The transport indicator stayed dark, so whatever she was thinking stayed hers. Then it rose once.
 

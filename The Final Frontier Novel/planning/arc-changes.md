@@ -8,7 +8,9 @@ This document is the active audit trail for changes proposed after the Approved 
 
 ## Initialization state
 
-**Active `ArcChange` records: 9.**
+**Active `ArcChange` records: 10.**
+
+`ARC-CHANGE-VOICE-SEPARATION-002` is the tenth post-baseline change and is `in-progress`. It implements the paragraph-scale `POV-NIA` repair required by `DEC-022` across all eighteen delivered Nia chapters, synchronizes Chapter 73 to `revised`, and leaves current editorial findings and affected gates pending until the independent reread and reruns are recorded.
 
 `ARC-CHANGE-VOICE-SEPARATION-001` is the ninth post-baseline change and is `complete`. It closes the Discovery current-evidence gap, repairs fifteen chapter revisions including two authorization-continuity gaps at Chapters 16 and 27, rebuilds one duplicated warmth scene, gives Chapter 57 a physical body, and applies one house spelling standard across the delivered manuscript. It changes no `ArcEntry`, canon fact, motif, reveal, POV, or movement allocation, and it leaves the `POV-MARA`/`POV-NIA` voice-separation finding open as the sole blocker on task 14.
 
@@ -1947,3 +1949,299 @@ It does not return any Discovery chapter to `approved`, complete task 14, or beg
 close the voice-separation finding, which requires a paragraph-scale pass on `POV-NIA`'s narration and is
 recorded as the single remaining blocker. It does not alter the Mindwars or Coda plan, and it creates no
 canon, motif, reveal, or cross-cut.
+
+## ARC-CHANGE-VOICE-SEPARATION-002 — Paragraph-scale Nia voice separation
+
+This successor change performs the work that `ARC-CHANGE-VOICE-SEPARATION-001` explicitly left open. It does not reopen that completed record. Under `DEC-022`, all eighteen delivered `POV-NIA` chapters are revised at paragraph scale so sequence, correction, sensory load, accountable action, and changed state carry Nia's conclusions instead of Mara's proposition–qualification–limit rhythm. The change preserves plot architecture, canon, motifs, hooks, POV allocation, planning estimates, and the protected Chapter 73 consent and mode boundaries.
+
+```json record=ArcChange schema=1
+{
+  "arc_change_id": "ARC-CHANGE-VOICE-SEPARATION-002",
+  "date": "2026-09-18",
+  "prior_state": {
+    "voice_execution": "The delivered Nia chapters preserved her evidence discipline and observational warmth but repeatedly used Mara's assert-then-limit paragraph construction; EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-VOICE remained open.",
+    "chapter_73_status": "Chapter Header exploratory and matching ArcEntry exploratory before the paragraph-scale revision.",
+    "observed_header_words": {
+      "2": 1101,
+      "4": 1091,
+      "7": 827,
+      "12": 1098,
+      "17": 1606,
+      "19": 1059,
+      "21": 1048,
+      "24": 519,
+      "28": 1256,
+      "31": 1112,
+      "34": 1244,
+      "38": 1268,
+      "42": 948,
+      "47": 1147,
+      "52": 1433,
+      "56": 1647,
+      "60": 914,
+      "73": 1136
+    },
+    "observed_long_outliers": [17, 56],
+    "editorial_gate_state": "GATE-EDITORIAL-DISCOVERY-MOVEMENT-003 was revision; GATE-EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-003 and GATE-EDITORIAL-CALIBRATION-001 predated the new prose and became stale when affected chapters changed."
+  },
+  "revised_state": {
+    "voice_execution": "All eighteen delivered Nia chapters now reach conclusions through incoming condition or source, sequence or correction, action, and changed state or consequence, with sound and physical load carrying transitions; Chapter 52 remains an ensemble reference rather than a universal form.",
+    "chapter_status": "All eighteen Nia Chapter Headers remain revised; collateral Chapter 35 remains revised; Chapter 21's ArcEntry is now microchapter with a compression purpose and Chapter 73's ArcEntry remains revised. No chapter is reapproved by this prose pass.",
+    "observed_header_words": {
+      "2": 1095,
+      "4": 1023,
+      "7": 804,
+      "12": 1019,
+      "17": 1438,
+      "19": 812,
+      "21": 610,
+      "24": 475,
+      "28": 1157,
+      "31": 1001,
+      "34": 1166,
+      "38": 1206,
+      "42": 766,
+      "47": 1038,
+      "52": 1333,
+      "56": 1542,
+      "60": 1125,
+      "73": 1230
+    },
+    "collateral_chapter_35": {
+      "reason": "Independent continuity review found that the Chapter 34 pad handoff had to preserve its start, endpoint, and both opening times in Chapter 35.",
+      "observed_header_words": 1509,
+      "length_class": "normal",
+      "status": "revised"
+    },
+    "observed_length_class_changes": {
+      "17": "long-outlier to normal",
+      "21": "normal to microchapter, mirrored in the ArcEntry with an explicit compression purpose",
+      "56": "long-outlier to normal"
+    },
+    "changed_hooks": {
+      "4": "Every clock agrees on her morning, while the four seconds she trusted a voice over the board leave no second reader and a closed ticket above Dev's screen.",
+      "19": "Removed from live routing, she builds a page that keeps useful reasons from becoming remembered ones and carries it back to a desk that cannot assign.",
+      "21": "She signs the sentence that may keep her off routing, and leaves with two dates her brother quietly moves around.",
+      "47": "She is an appendix, and the appendix is the reason the programme is considered urgent.",
+      "73": "She says yes to one bounded field, the pattern cancels, and forty minutes later a familiar phrase is inaccessible when the console asks for her back."
+    },
+    "editorial_gate_state": "EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-VOICE is resolved by EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-VOICE-FOLLOWUP-001; GATE-EDITORIAL-DISCOVERY-MOVEMENT-004, GATE-EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-004, and GATE-EDITORIAL-CALIBRATION-002 pass on current prose.",
+    "objective_gate_state": "All nineteen changed or collateral Chapter_Local_Gates, all eleven affected complete drafting-batch gates, GATE-CALIBRATION-OBJECTIVE-VOICE-SEPARATION-002, and GATE-SITE-ISOLATION-VOICE-SEPARATION-002 pass with zero attributable diagnostics.",
+    "global_validation_state": "The complete delivered-manuscript global run retains exactly 134 expected completion-only global diagnostics for the intentionally partial 64-of-128-chapter manuscript and no chapter, batch, or planning diagnostics after this ArcChange closes.",
+    "preserved_unchanged": [
+      "all chronology, CrossCuts, reveal horizons, planning word estimates, POV assignments, and chapter purposes other than Chapter 21's added compression-purpose metadata",
+      "all CanonFact, Reveal, MotifEvent, LiteralPhraseConstraint, POV identity, load, and movement-allocation values",
+      "Nia's warm observational which clauses and the qualitative-only voice standard",
+      "unresolved provenance and both refused accounts of Nia's earlier wanting",
+      "Chapter 73's exact Did I say yes? phrase twice, MOT-KNOCK-01, MOT-YES-01, four-metre bounded CANCEL, nineteen seconds, left-hand stop, access-not-recall consequence, current spoken CANCEL consent, and separate current mutual PAIR consent",
+      "the prohibition on an explicit Chapter 73/null-night parallel before Chapter 128"
+    ]
+  },
+  "rationale": "DEC-022 identifies the shared paragraph rhythm, not vocabulary or sentence-count statistics, as the remaining Mara/Nia defect and requires repair before further Mindwars drafting multiplies the surface. The pass therefore changes delivery rather than plot: Nia's chapters proceed through source, sequence, correction, bodily load, accountable action, and consequence while preserving protected observational clauses and every evidentiary boundary. Independent review also required one collateral Chapter 35 handoff repair so the revised Chapter 34 record remained continuous. No numeric craft threshold governs the work.",
+  "affected_chapters": [2, 4, 7, 12, 17, 19, 21, 24, 28, 31, 34, 35, 38, 42, 47, 52, 56, 60, 73],
+  "affected_documents": [
+    "planning/arc-changes.md",
+    "planning/arc-outline.md",
+    "planning/canon-bible.md",
+    "planning/editorial-log.md",
+    "planning/gate-results.md",
+    "planning/motif-ledger.md",
+    "planning/pov-roster.md",
+    "planning/voice-briefs.md",
+    "chapters/discovery-part/discovery-part-002-an-ordinary-morning.md",
+    "chapters/discovery-part/discovery-part-004-no-gap-on-her-side.md",
+    "chapters/discovery-part/discovery-part-007-the-detail-she-keeps.md",
+    "chapters/discovery-part/discovery-part-012-one-call-end-to-end.md",
+    "chapters/discovery-part/discovery-part-017-two-calls-one-unit.md",
+    "chapters/discovery-part/discovery-part-019-no-history-for-a-certainty.md",
+    "chapters/discovery-part/discovery-part-021-reconstruction.md",
+    "chapters/discovery-part/discovery-part-024-not-case-zero.md",
+    "chapters/discovery-part/discovery-part-028-named-second.md",
+    "chapters/private-defense-part/private-defense-part-031-copper-and-quiet.md",
+    "chapters/private-defense-part/private-defense-part-034-what-a-room-costs.md",
+    "chapters/private-defense-part/private-defense-part-035-a-private-no.md",
+    "chapters/private-defense-part/private-defense-part-038-two-dispatchers-one-incident.md",
+    "chapters/private-defense-part/private-defense-part-042-not-a-conversation.md",
+    "chapters/private-defense-part/private-defense-part-047-my-case-in-their-appendix.md",
+    "chapters/private-defense-part/private-defense-part-052-on-my-own-conditions.md",
+    "chapters/private-defense-part/private-defense-part-056-ask-first.md",
+    "chapters/private-defense-part/private-defense-part-060-fluent-is-not-open.md",
+    "chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md"
+  ],
+  "synchronization_obligations": [
+    {
+      "document": "chapters/discovery-part/discovery-part-002-an-ordinary-morning.md",
+      "required_change": "Apply the qualitative Nia paragraph pass and synchronize the revised Header.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-002-VOICE-SEPARATION-002 pass; 1095 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/discovery-part/discovery-part-004-no-gap-on-her-side.md",
+      "required_change": "Apply the Nia pass, keep Ticket 4716 closed here, synchronize the changed hook and Header.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-004-VOICE-SEPARATION-002 pass; 1023 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/discovery-part/discovery-part-007-the-detail-she-keeps.md",
+      "required_change": "Apply the Nia pass while preserving ownership of Ticket 4716's later reopening.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-007-VOICE-SEPARATION-002 pass; 804 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/discovery-part/discovery-part-012-one-call-end-to-end.md",
+      "required_change": "Apply the Nia pass while preserving the live call and evidentiary sequence.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-012-VOICE-SEPARATION-002 pass; 1019 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/discovery-part/discovery-part-017-two-calls-one-unit.md",
+      "required_change": "Apply the Nia pass, reconcile route timing, and synchronize the derived normal class.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-017-VOICE-SEPARATION-002 pass; 1438 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/discovery-part/discovery-part-019-no-history-for-a-certainty.md",
+      "required_change": "Apply the Nia pass, bound the audio to forty seconds before assignment, and synchronize the changed hook.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-019-VOICE-SEPARATION-002 pass; 812 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/discovery-part/discovery-part-021-reconstruction.md",
+      "required_change": "Compress the formal finding to its distinct function and synchronize the microchapter Header, ArcEntry, purpose, and hook.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-021-VOICE-SEPARATION-002 and GATE-BATCH-DISCOVERY-021-025-VOICE-SEPARATION-002 pass; 610 Prose_Words, microchapter, revised."
+    },
+    {
+      "document": "chapters/discovery-part/discovery-part-024-not-case-zero.md",
+      "required_change": "Apply the Nia pass while preserving the declared microchapter function and Case Zero boundary.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-024-VOICE-SEPARATION-002 pass; 475 Prose_Words, microchapter, revised."
+    },
+    {
+      "document": "chapters/discovery-part/discovery-part-028-named-second.md",
+      "required_change": "Apply the Nia pass while stating experimental limits once in the accountable record.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-028-VOICE-SEPARATION-002 pass; 1157 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/private-defense-part/private-defense-part-031-copper-and-quiet.md",
+      "required_change": "Apply the Nia pass through measured cards, bodily load, acoustic speech, and action consequence.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-031-VOICE-SEPARATION-002 pass; 1001 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/private-defense-part/private-defense-part-034-what-a-room-costs.md",
+      "required_change": "Apply the Nia pass and preserve both enclosure openings and the complete pad handoff.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-034-VOICE-SEPARATION-002 pass; 1166 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/private-defense-part/private-defense-part-035-a-private-no.md",
+      "required_change": "Repair the collateral Chapter 34 pad handoff by retaining the start, endpoint, and both opening times without changing Mara's viewpoint architecture.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-035-VOICE-SEPARATION-002-COLLATERAL and GATE-BATCH-PRIVATE-DEFENSE-030-035-VOICE-SEPARATION-002 pass; 1509 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/private-defense-part/private-defense-part-038-two-dispatchers-one-incident.md",
+      "required_change": "Apply the Nia pass while preserving third-party benefit, pause, valid retention choice, and the checked-default defect.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-038-VOICE-SEPARATION-002 pass; 1206 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/private-defense-part/private-defense-part-042-not-a-conversation.md",
+      "required_change": "Apply the Nia pass around offered speech, bundled-agreement refusal, and the changed ending state.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-042-VOICE-SEPARATION-002 pass; 766 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/private-defense-part/private-defense-part-047-my-case-in-their-appendix.md",
+      "required_change": "Apply the Nia pass, preserve the five-sentence Case B audit, and synchronize the programme hook spelling.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-047-VOICE-SEPARATION-002 pass; 1038 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/private-defense-part/private-defense-part-052-on-my-own-conditions.md",
+      "required_change": "Apply the Nia pass while preserving all timings, six conditions, separate records, custody, and digit-by-digit readback.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-052-VOICE-SEPARATION-002 pass; 1333 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/private-defense-part/private-defense-part-056-ask-first.md",
+      "required_change": "Apply the Nia pass through the complete working protocol and synchronize the derived normal class.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-056-VOICE-SEPARATION-002 pass; 1542 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/private-defense-part/private-defense-part-060-fluent-is-not-open.md",
+      "required_change": "Apply the Nia pass through fresh state and consequence without reteaching the protocol.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-060-VOICE-SEPARATION-002 pass; 1125 Prose_Words, normal, revised."
+    },
+    {
+      "document": "chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md",
+      "required_change": "Apply the Nia pass inside the protected CANCEL and PAIR envelope, restore the complete five-person consent scene, and synchronize the changed hook and Header.",
+      "status": "complete",
+      "evidence_ref": "GATE-CHAPTER-LOCAL-073-VOICE-SEPARATION-002 and GATE-CALIBRATION-OBJECTIVE-VOICE-SEPARATION-002 pass; 1230 Prose_Words, normal, revised, with protected motifs and phrase retained."
+    },
+    {
+      "document": "planning/arc-outline.md",
+      "required_change": "Synchronize changed hooks, Chapter 21's microchapter class and compression purpose, and Chapter 73's revised status without changing calibration selection or planning estimates.",
+      "status": "complete",
+      "evidence_ref": "GATE-BATCH-DISCOVERY-021-025-VOICE-SEPARATION-002 and GATE-CALIBRATION-OBJECTIVE-VOICE-SEPARATION-002 pass with planning/arc-outline.md declared as the changed reference."
+    },
+    {
+      "document": "planning/voice-briefs.md",
+      "required_change": "Confirm VOICE-NIA and VOICE-MARA already govern the qualitative distinction implemented by this pass.",
+      "status": "complete",
+      "evidence_ref": "VOICE-NIA and VOICE-MARA reviewed with no value change required; EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-VOICE-FOLLOWUP-001 passes."
+    },
+    {
+      "document": "planning/pov-roster.md",
+      "required_change": "Confirm the pass changes execution rather than POV identity, knowledge position, movement coverage, or chapter load.",
+      "status": "complete",
+      "evidence_ref": "planning/pov-roster.md reviewed with no value change required; all current chapter and batch objective gates pass."
+    },
+    {
+      "document": "planning/canon-bible.md",
+      "required_change": "Confirm the revised prose preserves chronology, unresolved provenance, Chapter 73 mode boundaries, and all established facts.",
+      "status": "complete",
+      "evidence_ref": "planning/canon-bible.md reviewed with no value change required; current editorial movement and calibration gates pass."
+    },
+    {
+      "document": "planning/motif-ledger.md",
+      "required_change": "Confirm no MotifEvent or LiteralPhraseConstraint placement or wording changed, especially MOT-KNOCK-01, MOT-YES-01, and Did I say yes?.",
+      "status": "complete",
+      "evidence_ref": "GATE-CALIBRATION-OBJECTIVE-VOICE-SEPARATION-002 passes; Chapter 73 retains MOT-KNOCK-01, MOT-YES-01, and two exact in-scope occurrences of Did I say yes?."
+    },
+    {
+      "document": "planning/editorial-log.md",
+      "required_change": "Resolve the historical Discovery voice finding and append current Discovery, Private Defense, and calibration follow-up findings and editorial gates without rewriting historical verdicts.",
+      "status": "complete",
+      "evidence_ref": "EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-VOICE resolved by its follow-up; GATE-EDITORIAL-DISCOVERY-MOVEMENT-004, GATE-EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-004, and GATE-EDITORIAL-CALIBRATION-002 pass."
+    },
+    {
+      "document": "planning/gate-results.md",
+      "required_change": "Record current chapter-local, complete affected batch, calibration, and site-isolation objective reruns.",
+      "status": "complete",
+      "evidence_ref": "Thirty-two repair-specific objective GateResults pass: nineteen chapter-local, eleven drafting-batch, one calibration-objective, and one site-isolation."
+    },
+    {
+      "document": "planning/arc-changes.md",
+      "required_change": "Mature ARC-CHANGE-VOICE-SEPARATION-002 with exact affected paths, current counts and planning changes, complete evidence, approval, and completion time.",
+      "status": "complete",
+      "evidence_ref": "ARC-CHANGE-VOICE-SEPARATION-002 current complete record; exact affected-document coverage and all synchronization obligations validated with no planning diagnostic."
+    }
+  ],
+  "approval": {
+    "approved_by": "Jessica Mulein",
+    "approved_at": "2026-09-19T00:50:00Z",
+    "approval_record": "Current Kiro session: author instruction to resolve the Nia voice separation autonomously and proceed through final validation."
+  },
+  "status": "complete",
+  "completed_at": "2026-09-19T00:50:00Z"
+}
+```
+
+### What this change deliberately does not do
+
+It does not reopen `ARC-CHANGE-VOICE-SEPARATION-001`, alter the approved arc, assign a source to Nia's earlier wanting, create a numeric voice gate, strip Nia's observational `which` clauses, or return any chapter to `approved` or `final`. It does not treat pre-revision editorial or objective gates as current evidence. The successor remains `in-progress` until the independent reread, current findings, affected gate reruns, and objective validation are recorded.

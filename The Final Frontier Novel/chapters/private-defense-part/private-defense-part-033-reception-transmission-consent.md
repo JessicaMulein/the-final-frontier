@@ -5,11 +5,15 @@ pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-COPPER
 motif_events: []
 hook: "His distinction is sound, and the enrollment form he is handed has already answered it on everyone's behalf."
-words: 1171
+words: 1575
 length_class: normal
 status: revised
 ---
 Imogen Dalby, counsel for the Open Channel Consortium, arrived eleven minutes early with a policy director and two identical folders, set the one marked *Participant Access Framework* face down on the table, and did not open it for fifty minutes.
+
+There was a second act in my file by then, and there had not been one in December. The suspension chair had exercised a discretion I drafted myself and linked a related technical record to the legal matter, which he was entitled to do and not obliged to do. The notice ran to one line. Behind it sat Venn's own deviation, submitted against herself, and with it her signed bench procedure, Anand's written objection, and a forward-power trace.
+
+I read all four at my own table on a Sunday. The disclosure I certified in December was accurate on the day I certified it and had stopped being a description of what had happened. A temporary path had existed for one act and had been removed by the person who built it. Nobody outside Northline told me so, and nothing in Dalby's folder is explained by it, which is the part I had not yet understood when I picked up the marker.
 
 I had a whiteboard and three nouns, and I wrote them out in the order in which a person is actually reached.
 
@@ -34,6 +38,20 @@ Their position on transmission was that active functions could stay disabled unl
 "It is a condition of reliable access."
 
 The qualification altered the sentence and not the choice. I wrote beneath the three nouns that consent to one is not consent to the next, and when Dalby said that people authorize complex services daily without approving each packet, I said packets do not become permission because they are small.
+
+Then I asked the question I had come with, and it was not about permission.
+
+"Your framework assumes calibration. Northline has demonstrated a receive-only address and one bench path that no longer exists. Where did the rest of this come from?"
+
+The policy director began to answer. Dalby let him reach four words and then took it herself.
+
+"Three sources, and none of them theft. The institute's development office circulated a discussion paper to fourteen recipients under six agreements, and we were one of them. It carried a proposition rather than data: a receiver can distinguish one person repeatedly without holding a name. Then a national office briefed us on source characterization through the institute's own nominated contact, and we minuted the briefing. Everything after that is ours. Our engineers built the outward stage. Our volunteers built the mappings, in our rooms, on our money, and I can produce a signed session record for every hour of it."
+
+"None of it Dr Venn's."
+
+"Dr Venn found the address," she said. "She did not find the language. We did, by putting two living people in a room together for weeks until the mapping between those two settled, and that mapping cannot be issued with a staff number, copied to a replacement, or sold."
+
+I wrote *lawful, undisclosed to counsel, not transferable* in the margin. Only the third was any comfort, and it is the one they will spend a year trying to design away.
 
 I was enjoying myself, which I mention because it bears on what followed.
 

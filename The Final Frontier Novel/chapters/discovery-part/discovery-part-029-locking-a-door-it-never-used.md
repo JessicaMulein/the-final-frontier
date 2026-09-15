@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DOOR-INWARD
 motif_events: []
 hook: "She locks a door the channel has never needed, and the thing she wanted to explore has already come the other way."
-words: 1203
+words: 1462
 length_class: normal
 status: revised
 ---
@@ -29,13 +29,21 @@ My handshake used her address. It preceded the routing decision, and it carried 
 
 A later demonstration can show that I am capable of the kind of crossing she described. It cannot travel backward and witness the crossing itself.
 
-If my handshake caused the wanting, I entered without permission and learned it too late to prove it. If it did not, some other unestablished source entered by a path we now know is physically available. The two accounts differ in responsibility and agree on the danger, and I wrote both of them into the session cross-reference in the order that does not flatter me.
+If my handshake caused the wanting, I entered without permission and learned it too late to prove it. If some other source did, it entered by a path we now know is physically available. And if neither did, then a tired woman on a bad morning wanted something badly and I have spent four months building an apparatus to take that from her.
 
-*Account one: Mara Venn's content-free handshake may have affected Nia Calder through the person-specific address. Supported by chronology, shared address, and later demonstrated capability; not confirmed by detection or contemporaneous effect evidence.*
+I wrote all three into the session cross-reference, in the order that does not flatter me, and I had to be argued into the third one.
 
-*Account two: an unknown source may have produced Nia Calder's wanting independently of Mara Venn's handshake. Supported by the absence of proof connecting the handshake; no source, instrument record, or identifying evidence established.*
+*Account one: Mara Venn's content-free handshake may have affected Nia Calder through the addressed path. Supported by chronology, shared address, and later demonstrated capability; not confirmed by detection or contemporaneous effect evidence.*
 
-Neither is a finding. My private conviction sits where it sat before the session, easier to defend and no more admissible as history. I still believe I caused the wanting. Nia still refuses to let my belief become her origin, and the test has given me nothing that changes either of those facts.
+*Account two: an unknown source may have produced Nia Calder's wanting independently of Mara Venn's handshake. No source, instrument record, or identifying evidence established. This account has no positive support. It remains open because account one is unproven, and an unproven account one is not evidence for anything else.*
+
+*Account three: Nia Calder's wanting may have had no external origin. Human urgency of that kind occurs without a transmitter, it is the most common explanation for any instance of it, and nothing in the December record excludes it. Supported by base rates and by the absence of any contemporaneous field measurement. Not excluded by the county record, which holds a routing departure and no waveform.*
+
+Nia put the third one there. I had produced two accounts, both of which had a machine in them, and she read them and asked why the only explanations I could write were ones where something had been done to her. I did not have an answer that survived being said out loud. I had built four months of instrumentation and it had quietly become the only category of cause I could see.
+
+I should also say what the procedure calls the address, because the label has been doing work the evidence has not. The written procedure says *person-specific*. The test behind that phrase separated four people. I have gone on using the procedure's word because it is the word in the signed records, and every time I write it I am lending a four-person result the authority of a general one.
+
+Neither of the first two is a finding, and the third is not a comfort. My private conviction sits where it sat before the session, easier to defend and no more admissible as history. I still believe I caused the wanting. Nia still refuses to let my belief become her origin, and the test has given me nothing that changes either of those facts.
 
 Then I closed it down. Person-specific filter off. Outgoing controller disabled, enable lead removed, driver checked into restricted storage. The relay went into a sealed cabinet with the original handshake record. I revoked every project credential except mine, Anand's, and compliance's, set raw acquisition to retain only the minimum field data the suspension order requires, and disabled resolved live output.
 

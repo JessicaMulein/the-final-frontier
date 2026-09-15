@@ -5,7 +5,7 @@ pov_id: POV-JULIAN
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: []
 hook: "The protection he negotiated turns out to be a careful sentence about a thing that cannot be switched off."
-words: 1060
+words: 956
 length_class: normal
 status: revised
 ---
@@ -69,13 +69,7 @@ There it was. Not impossibility. Product identity.
 
 I asked him to put that in writing. He said he would take it back to engineering. I have the message in which engineering agreed to consider a reception-only variant, dated eleven days later, by which time the first production run had a serial-number range.
 
-The Consortium could build a reception-only device. Mara had done so in December. Her original apparatus had no transmit stage at all. It had acquired a living field, resolved it on her side, and identified an address. Nothing in this April binder changed that machine or supplied an event it had been physically unable to perform.
-
-The binder described a different machine. Both were called receivers. Only one of them was one.
-
-It also said nothing about the later temporary path Mara had added, beyond proving that her bench work belonged to a class of capability other people now intended to standardize. It did not identify the source of Nia's certainty. It did not make one origin account more enterable than the other.
-
-Its consequence was present, not retroactive.
+The component schedule changed the April matter. It gave me no new fact about the winter, and I wrote that limit once in the margin.
 
 A network marketed as reception infrastructure would place an active path at every participant address. Consent would be asked to govern use of an architecture already built for entry. An operator who changed the policy would not need to install new hardware, visit a site, or make a visible alteration. The change could arrive as configuration.
 

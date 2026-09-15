@@ -3236,3 +3236,332 @@ planning=0`, which is the fail-closed contract behaving correctly against a half
   }
 ]
 ```
+
+## `ARC-CHANGE-VOICE-SEPARATION-002` objective reruns
+
+The paragraph-scale Nia repair changed eighteen Nia Chapter Files and one collateral Mara chapter needed to preserve the Chapter 34-to-35 pad handoff. Every changed chapter passed a fresh Chapter_Local_Gate. Every complete delivered drafting batch containing one of those chapters passed a fresh batch audit, including the changed `planning/arc-outline.md` reference for Chapters 21 and 73. The full eight-chapter Calibration_Batch and repository site-isolation contract also pass. These records preserve all chapter statuses as `revised`; objective success does not substitute for editorial approval or promote a chapter.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-002-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [2],
+      "documents": ["chapters/discovery-part/discovery-part-002-an-ordinary-morning.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 1095 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-004-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [4],
+      "documents": ["chapters/discovery-part/discovery-part-004-no-gap-on-her-side.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 1023 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-007-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [7],
+      "documents": ["chapters/discovery-part/discovery-part-007-the-detail-she-keeps.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 804 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-012-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [12],
+      "documents": ["chapters/discovery-part/discovery-part-012-one-call-end-to-end.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 1019 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-017-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [17],
+      "documents": ["chapters/discovery-part/discovery-part-017-two-calls-one-unit.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 1438 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-019-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [19],
+      "documents": ["chapters/discovery-part/discovery-part-019-no-history-for-a-certainty.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 812 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-021-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [21],
+      "documents": ["chapters/discovery-part/discovery-part-021-reconstruction.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 610 Prose_Words, microchapter, revised, with a synchronized compression purpose and zero errors or warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-024-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [24],
+      "documents": ["chapters/discovery-part/discovery-part-024-not-case-zero.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 475 Prose_Words, microchapter, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-028-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [28],
+      "documents": ["chapters/discovery-part/discovery-part-028-named-second.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 1157 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-031-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [31],
+      "documents": ["chapters/private-defense-part/private-defense-part-031-copper-and-quiet.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 1001 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-034-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [34],
+      "documents": ["chapters/private-defense-part/private-defense-part-034-what-a-room-costs.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 1166 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-035-VOICE-SEPARATION-002-COLLATERAL",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [35],
+      "documents": ["chapters/private-defense-part/private-defense-part-035-a-private-no.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the collateral Chapter 34-to-35 pad-handoff repair; observed and declared 1509 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-038-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [38],
+      "documents": ["chapters/private-defense-part/private-defense-part-038-two-dispatchers-one-incident.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 1206 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-042-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [42],
+      "documents": ["chapters/private-defense-part/private-defense-part-042-not-a-conversation.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 766 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-047-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [47],
+      "documents": ["chapters/private-defense-part/private-defense-part-047-my-case-in-their-appendix.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 1038 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-052-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [52],
+      "documents": ["chapters/private-defense-part/private-defense-part-052-on-my-own-conditions.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 1333 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-056-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [56],
+      "documents": ["chapters/private-defense-part/private-defense-part-056-ask-first.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 1542 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-060-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [60],
+      "documents": ["chapters/private-defense-part/private-defense-part-060-fluent-is-not-open.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 1125 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-073-VOICE-SEPARATION-002",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [73],
+      "documents": ["chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Chapter_Local_Gate after the paragraph-scale Nia repair; observed and declared 1230 Prose_Words, normal, revised, with zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-DISCOVERY-001-005-VOICE-SEPARATION-002",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [1, 2, 3, 4, 5],
+      "documents": ["chapters/discovery-part/discovery-part-001-noise-floor.md", "chapters/discovery-part/discovery-part-002-an-ordinary-morning.md", "chapters/discovery-part/discovery-part-003-the-failed-check.md", "chapters/discovery-part/discovery-part-004-no-gap-on-her-side.md", "chapters/discovery-part/discovery-part-005-not-a-message.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Current drafting-batch audit after the Nia paragraph repair; 5691 Prose_Words across Chapters 1-5, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-DISCOVERY-006-010-VOICE-SEPARATION-002",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [6, 7, 8, 9, 10],
+      "documents": ["chapters/discovery-part/discovery-part-006-no-transmit-stage.md", "chapters/discovery-part/discovery-part-007-the-detail-she-keeps.md", "chapters/discovery-part/discovery-part-008-provisional-identity.md", "chapters/discovery-part/discovery-part-009-appetite-before-result.md", "chapters/discovery-part/discovery-part-010-no-form-for-this.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Current drafting-batch audit after the Nia paragraph repair; 5307 Prose_Words across Chapters 6-10, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-DISCOVERY-011-015-VOICE-SEPARATION-002",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [11, 12, 13, 14, 15],
+      "documents": ["chapters/discovery-part/discovery-part-011-the-mind-as-a-field.md", "chapters/discovery-part/discovery-part-012-one-call-end-to-end.md", "chapters/discovery-part/discovery-part-013-spectrum-to-bone.md", "chapters/discovery-part/discovery-part-014-rights-before-names.md", "chapters/discovery-part/discovery-part-015-who-will-be-holding-it.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Current drafting-batch audit after the Nia paragraph repair; 6363 Prose_Words across Chapters 11-15, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-DISCOVERY-016-020-VOICE-SEPARATION-002",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [16, 17, 18, 19, 20],
+      "documents": ["chapters/discovery-part/discovery-part-016-come-in.md", "chapters/discovery-part/discovery-part-017-two-calls-one-unit.md", "chapters/discovery-part/discovery-part-018-clean-silence.md", "chapters/discovery-part/discovery-part-019-no-history-for-a-certainty.md", "chapters/discovery-part/discovery-part-020-a-belief-with-nothing-under-it.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Current drafting-batch audit after the Nia paragraph repair; 5132 Prose_Words across Chapters 16-20, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-DISCOVERY-021-025-VOICE-SEPARATION-002",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [21, 22, 23, 24, 25],
+      "documents": ["chapters/discovery-part/discovery-part-021-reconstruction.md", "chapters/discovery-part/discovery-part-022-fundable.md", "chapters/discovery-part/discovery-part-023-the-match-holds.md", "chapters/discovery-part/discovery-part-024-not-case-zero.md", "chapters/discovery-part/discovery-part-025-nothing-admissible.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Current drafting-batch audit after the Nia paragraph repair; 4453 Prose_Words across Chapters 21-25, including the changed arc-outline reference for Chapter 21's microchapter classification, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-DISCOVERY-026-029-VOICE-SEPARATION-002",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [26, 27, 28, 29],
+      "documents": ["chapters/discovery-part/discovery-part-026-already-outside.md", "chapters/discovery-part/discovery-part-027-the-door-runs-inward.md", "chapters/discovery-part/discovery-part-028-named-second.md", "chapters/discovery-part/discovery-part-029-locking-a-door-it-never-used.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Current drafting-batch audit after the Nia paragraph repair; 4747 Prose_Words across Chapters 26-29, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-PRIVATE-DEFENSE-030-035-VOICE-SEPARATION-002",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [30, 31, 32, 33, 34, 35],
+      "documents": ["chapters/private-defense-part/private-defense-part-030-something-came-in.md", "chapters/private-defense-part/private-defense-part-031-copper-and-quiet.md", "chapters/private-defense-part/private-defense-part-032-a-handle-on-the-inside.md", "chapters/private-defense-part/private-defense-part-033-reception-transmission-consent.md", "chapters/private-defense-part/private-defense-part-034-what-a-room-costs.md", "chapters/private-defense-part/private-defense-part-035-a-private-no.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Current drafting-batch audit after the Nia paragraph repair and collateral Chapter 35 handoff repair; 7590 Prose_Words across Chapters 30-35, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-PRIVATE-DEFENSE-036-042-VOICE-SEPARATION-002",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [36, 37, 38, 39, 40, 41, 42],
+      "documents": ["chapters/private-defense-part/private-defense-part-036-electronic-speech-pairings.md", "chapters/private-defense-part/private-defense-part-037-the-send-gate-holds.md", "chapters/private-defense-part/private-defense-part-038-two-dispatchers-one-incident.md", "chapters/private-defense-part/private-defense-part-039-a-benefit-becomes-a-platform.md", "chapters/private-defense-part/private-defense-part-040-first-calibration.md", "chapters/private-defense-part/private-defense-part-041-two-interpreters.md", "chapters/private-defense-part/private-defense-part-042-not-a-conversation.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Current drafting-batch audit after the Nia paragraph repair; 7836 Prose_Words across Chapters 36-42, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-PRIVATE-DEFENSE-043-049-VOICE-SEPARATION-002",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [43, 44, 45, 46, 47, 48, 49],
+      "documents": ["chapters/private-defense-part/private-defense-part-043-a-term-sheet-and-a-pen.md", "chapters/private-defense-part/private-defense-part-044-a-clause-he-can-constrain.md", "chapters/private-defense-part/private-defense-part-045-page-nine.md", "chapters/private-defense-part/private-defense-part-046-nothing-to-strike.md", "chapters/private-defense-part/private-defense-part-047-my-case-in-their-appendix.md", "chapters/private-defense-part/private-defense-part-048-the-refusal.md", "chapters/private-defense-part/private-defense-part-049-filed-as-agreed.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Current drafting-batch audit after the Nia paragraph repair; 7247 Prose_Words across Chapters 43-49, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-PRIVATE-DEFENSE-050-055-VOICE-SEPARATION-002",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [50, 51, 52, 53, 54, 55],
+      "documents": ["chapters/private-defense-part/private-defense-part-050-the-roof-is-not-the-building.md", "chapters/private-defense-part/private-defense-part-051-put-that-on-the-record.md", "chapters/private-defense-part/private-defense-part-052-on-my-own-conditions.md", "chapters/private-defense-part/private-defense-part-053-cleared-and-not-relieved.md", "chapters/private-defense-part/private-defense-part-054-older-than-the-archive.md", "chapters/private-defense-part/private-defense-part-055-the-price-of-the-instruments.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Current drafting-batch audit after the Nia paragraph repair; 7206 Prose_Words across Chapters 50-55, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-PRIVATE-DEFENSE-056-061-VOICE-SEPARATION-002",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [56, 57, 58, 59, 60, 61],
+      "documents": ["chapters/private-defense-part/private-defense-part-056-ask-first.md", "chapters/private-defense-part/private-defense-part-057-no-longer-current.md", "chapters/private-defense-part/private-defense-part-058-metadata-and-nothing-else.md", "chapters/private-defense-part/private-defense-part-059-say-it-out-loud.md", "chapters/private-defense-part/private-defense-part-060-fluent-is-not-open.md", "chapters/private-defense-part/private-defense-part-061-come-in-but-ask.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Current drafting-batch audit after the Nia paragraph repair; 7233 Prose_Words across Chapters 56-61, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CALIBRATION-OBJECTIVE-VOICE-SEPARATION-002",
+    "gate_type": "calibration-objective",
+    "scope": {
+      "chapter_numbers": [1, 2, 3, 4, 5, 73, 118, 124],
+      "documents": ["chapters/discovery-part/discovery-part-001-noise-floor.md", "chapters/discovery-part/discovery-part-002-an-ordinary-morning.md", "chapters/discovery-part/discovery-part-003-the-failed-check.md", "chapters/discovery-part/discovery-part-004-no-gap-on-her-side.md", "chapters/discovery-part/discovery-part-005-not-a-message.md", "chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md", "chapters/aftermath-coda/aftermath-coda-118-tuesday-kettle-on.md", "chapters/aftermath-coda/aftermath-coda-124-truthful-refusal.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Full current Calibration_Batch objective rerun after substantive Nia repairs in Chapters 2, 4, and 73 and the changed arc-outline reference; 8817 Prose_Words, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:40:00Z"
+  },
+  {
+    "gate_result_id": "GATE-SITE-ISOLATION-VOICE-SEPARATION-002",
+    "gate_type": "site-isolation",
+    "scope": {
+      "chapter_numbers": [],
+      "documents": ["exclusion-contract.json"],
+      "description": "Repository site-isolation rerun after the voice-separation repair; the configured manuscript root remained excluded and the collector found zero manuscript entries. This local result does not prove external Site_Build adoption."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-19T00:42:00Z"
+  }
+]
+```

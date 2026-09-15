@@ -5361,7 +5361,11 @@ rhythm and paragraph shape. Recording a pass here would be the exact failure thi
     "requested_action": "Authorize a dedicated voice pass on Nia Calder's delivered chapters before Mindwars drafting begins, since she holds fourteen of the fifty-one Mindwars chapters and the cost of the pass roughly doubles once those exist. The pass should work at paragraph scale rather than sentence scale: give her shorter paragraph units, sensory and load-bearing detail from the console world, and a habit of reaching conclusions through sequence and consequence rather than through the Anchor's assert-then-limit construction. Do not remove her warm observational 'which' clauses, which are an asset and are not the defect.",
     "reviewer": "Author-delegated GPT-5.6 literary review",
     "reviewed_at": "2026-09-18T23:40:00Z",
-    "resolution": null
+    "resolution": {
+      "resolved_at": "2026-09-19T00:10:00Z",
+      "action_taken": "Completed a paragraph-scale voice repair across all eighteen delivered Nia chapters. Nia now reaches conclusions through incoming conditions, remembered sequence or correction, accountable action, and changed state or consequence carried through sound and load, while Mara retains proposition, qualification, and bounded assertion. The pass preserved Nia's warm observational clauses and repaired associated continuity, hook, repetition, and consent-state defects found in independent review.",
+      "follow_up_finding_id": "EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-VOICE-FOLLOWUP-001"
+    }
   },
   {
     "editorial_finding_id": "EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-SHAPE",
@@ -5525,6 +5529,323 @@ rhythm and paragraph shape. Recording a pass here would be the exact failure thi
     "result": "revision",
     "checker_exit_status": null,
     "timestamp": "2026-09-18T23:40:00Z"
+  }
+]
+```
+
+## Mara/Nia paragraph-scale voice-separation repair — current follow-up review
+
+The historical Discovery voice revision remains unchanged and now carries a resolution to the current follow-up below. The author-delegated reread covered all eighteen delivered Nia chapters, the current Mara controls in both delivered movements, the collateral Chapter 35 continuity repair, and calibration Chapters 2, 4, and 73. It applied the qualitative requirements in `DEC-018`, amended `DEC-020`, `DEC-021`, `DEC-022`, `VOICE-NIA`, and `VOICE-MARA`; no sentence-length, paragraph-count, lexical, or other numeric craft proxy determined these judgments.
+
+```json record=EditorialFinding schema=1
+[
+  {
+    "editorial_finding_id": "EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-VOICE-FOLLOWUP-001",
+    "scope": "movement",
+    "chapter_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+    "batch_id": null,
+    "criterion": "Follow-up to EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-VOICE: whether DEC-018 clause 7 voice separation between Mara and Nia is now carried structurally by syntax, rhythm, paragraph shape, and attention rather than by domain vocabulary",
+    "prose_locations": [
+      {
+        "path": "chapters/discovery-part/discovery-part-003-the-failed-check.md",
+        "start_line": 42,
+        "end_line": 57,
+        "note": "Mara converts a proposed collective explanation into named receiver stages, qualifies the reproducible result to one apparatus and setting, and ends on the bounded assertion the test supports."
+      },
+      {
+        "path": "chapters/discovery-part/discovery-part-019-no-history-for-a-certainty.md",
+        "start_line": 44,
+        "end_line": 80,
+        "note": "Nia hears the missing callers in the room, rebuilds the assignment from conditions, separates possible from remembered reasons, and records the action and its consequence without adopting a useful later account."
+      },
+      {
+        "path": "chapters/discovery-part/discovery-part-021-reconstruction.md",
+        "start_line": 33,
+        "end_line": 51,
+        "note": "Nia proceeds from the board's before-and-after split through the four routing touches to the exact sentence she signs and the non-routing dates that follow."
+      }
+    ],
+    "finding": "pass",
+    "rationale": "The dedicated pass closes the defect named by the historical finding. Across the nine delivered Discovery chapters in Nia's viewpoint, paragraphs now begin from an incoming condition, sound, remembered source, or accountable record; they move through sequence or correction into an action and leave a changed state or consequence. Mara's current chapters continue to make a proposition, qualify its mechanism and evidentiary boundary, and state only the result the apparatus supports. Removing domain nouns no longer collapses the two sentence-making systems into one. Nia's observational warmth, including her flexible 'which' clauses and attention to other people's small practical care, remains present rather than being purged as a proxy for difference.",
+    "requested_action": null,
+    "reviewer": "Author-delegated independent editorial review",
+    "reviewed_at": "2026-09-19T00:10:00Z",
+    "resolution": null
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-DISCOVERY-MOVEMENT-VOICE-REPAIR-INTEGRITY-001",
+    "scope": "movement",
+    "chapter_numbers": [2, 4, 7, 12, 17, 19, 21, 24, 28],
+    "batch_id": null,
+    "criterion": "Whether the paragraph-scale Nia repair preserves Discovery canon and consequence-bearing movement while removing repeated reconstruction scaffolds, duplicate hooks, and merely explanatory closes",
+    "prose_locations": [
+      {
+        "path": "chapters/discovery-part/discovery-part-002-an-ordinary-morning.md",
+        "start_line": 15,
+        "end_line": 32,
+        "note": "The remembered morning is reconstructed through alarm, road call, corrected address, crossing load, and the evidentiary boundary 'memory, not evidence'."
+      },
+      {
+        "path": "chapters/discovery-part/discovery-part-004-no-gap-on-her-side.md",
+        "start_line": 39,
+        "end_line": 54,
+        "note": "The live radio correction remains distinct from the later display fault, and Ticket 4716 ends closed here so Chapter 7 retains ownership of its later reopening."
+      },
+      {
+        "path": "chapters/discovery-part/discovery-part-021-reconstruction.md",
+        "start_line": 39,
+        "end_line": 69,
+        "note": "The formal review has a distinct evidentiary function and ends on signed work-status consequences and two family-calendar dates rather than replaying Chapters 17 or 19."
+      }
+    ],
+    "finding": "pass",
+    "rationale": "A corrective chapter-by-chapter reread found the revised Discovery sequence canonically continuous and structurally distinct. The December apparatus remains receive-only; Nia's mornings remain continuous; the 18:38:06 assignment and later route evidence reconcile; Chapter 19's listening is bounded to the opening forty seconds before assignment; Chapters 17, 19, and 21 now perform raw routing, private evidentiary audit, and signed formal finding respectively; Ticket 4716 closes in Chapter 4 and reopens only later; hooks no longer repeat the same reconstruction; and Joss's care changes form rather than supplying one reusable domestic scaffold. Every revised chapter ends on action, changed access, work status, or another consequence rather than on an abstract correction alone.",
+    "requested_action": null,
+    "reviewer": "Author-delegated independent editorial review",
+    "reviewed_at": "2026-09-19T00:10:00Z",
+    "resolution": null
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-003",
+    "scope": "movement",
+    "chapter_numbers": [30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61],
+    "batch_id": null,
+    "criterion": "Current paragraph-scale voice separation between Mara and Nia across Private Defense under DEC-018 clause 7 and their binding Voice Briefs",
+    "prose_locations": [
+      {
+        "path": "chapters/private-defense-part/private-defense-part-031-copper-and-quiet.md",
+        "start_line": 21,
+        "end_line": 52,
+        "note": "Nia receives measured conditions on cards, registers each service as bodily load changes, chooses another minute, and reaches the changed state through the handle in her own hand."
+      },
+      {
+        "path": "chapters/private-defense-part/private-defense-part-035-a-private-no.md",
+        "start_line": 95,
+        "end_line": 104,
+        "note": "Mara states what local shielding demonstrates, qualifies what it cannot make socially available, and bounds both propositions away from any claim about the signal."
+      },
+      {
+        "path": "chapters/private-defense-part/private-defense-part-056-ask-first.md",
+        "start_line": 186,
+        "end_line": 202,
+        "note": "Nia tests pause by acting inside a chosen sentence; transport changes at the same sample, the remainder stays hers, and the session enters a new state."
+      }
+    ],
+    "finding": "pass",
+    "rationale": "The eight revised Nia chapters sustain a paragraph logic distinct from Mara's even when both narrators handle the same machinery and consent vocabulary. Nia moves from an offered condition or source through procedural sequence, correction, chosen action, and a change in access, custody, transport, or bodily load. Mara continues to state a technical or ethical proposition, qualify the mechanisms and limits that could falsify it, and make a bounded assertion. Chapter 52 remains an ensemble-quality reference rather than a template copied into the other chapters, and Nia's warm observational attention remains specific to the people and pressures in each scene.",
+    "requested_action": null,
+    "reviewer": "Author-delegated independent editorial review",
+    "reviewed_at": "2026-09-19T00:10:00Z",
+    "resolution": null
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-004",
+    "scope": "movement",
+    "chapter_numbers": [30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61],
+    "batch_id": null,
+    "criterion": "Current Private Defense integrity after the Nia voice repair and collateral Chapter 35 continuity repair: canon, handoffs, custody, consent mechanics, hooks, and non-formulaic human consequence",
+    "prose_locations": [
+      {
+        "path": "chapters/private-defense-part/private-defense-part-035-a-private-no.md",
+        "start_line": 12,
+        "end_line": 18,
+        "note": "The pad handoff preserves the 9:06 start, 3:06 endpoint, and 11:07 and 2:06 openings before Mara interprets the record as maintenance evidence."
+      },
+      {
+        "path": "chapters/private-defense-part/private-defense-part-047-my-case-in-their-appendix.md",
+        "start_line": 26,
+        "end_line": 40,
+        "note": "Case B remains reproducibly five sentences; the fifth is isolated as the unsupported causal coat placed over four record-supported statements."
+      },
+      {
+        "path": "chapters/private-defense-part/private-defense-part-052-on-my-own-conditions.md",
+        "start_line": 44,
+        "end_line": 84,
+        "note": "Six conditions govern one sealed account; the county review remains a separately accessioned record; custody closes with exact digit-by-digit readback."
+      }
+    ],
+    "finding": "pass",
+    "rationale": "The corrective reread found no remaining canon, continuity, hook, repetition, formula, or warmth defect. The enclosure keeps six bonded surfaces and the Chapter 34-to-35 pad handoff keeps both openings and both endpoints. Chapter 38 preserves the third-party benefit, Cora's pause, Tomas's valid retention choice, and the checked-default defect. Chapter 47 distinguishes four record-supported sentences from its fifth causal inference and uses the project spelling 'programme'. Chapter 52 separates its first account sheet, three conditions sheets, and county-certified review. Chapters 56 and 60 preserve fresh mutual consent, offered speech, send gating, pause, stop, metadata, and the privacy of unsent thought without reteaching one formula. The movement remains physically limited on purpose while every revised ending carries a concrete cost or changed state.",
+    "requested_action": null,
+    "reviewer": "Author-delegated independent editorial review",
+    "reviewed_at": "2026-09-19T00:10:00Z",
+    "resolution": null
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-CAL-019",
+    "scope": "calibration",
+    "chapter_numbers": [2, 4, 73],
+    "batch_id": "BATCH-CALIBRATION-001",
+    "criterion": "Current Nia Voice Brief fidelity in the three revised calibration chapters",
+    "prose_locations": [
+      {
+        "path": "chapters/discovery-part/discovery-part-002-an-ordinary-morning.md",
+        "start_line": 15,
+        "end_line": 32,
+        "note": "Nia reconstructs the ordinary morning through ordered clocks, bodily load, corrected address, and a memory she explicitly refuses to promote into evidence."
+      },
+      {
+        "path": "chapters/discovery-part/discovery-part-004-no-gap-on-her-side.md",
+        "start_line": 35,
+        "end_line": 54,
+        "note": "She acts on live sound, preserves the attributable four-second gap, logs the later display fault, and leaves the ticket in its actual closed state."
+      },
+      {
+        "path": "chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md",
+        "start_line": 57,
+        "end_line": 88,
+        "note": "She attaches one spoken answer to one bounded run, separately establishes current mutual PAIR consent, and verifies pause before the field begins."
+      }
+    ],
+    "finding": "pass",
+    "rationale": "All three chapters now carry the binding Nia register at paragraph scale. Conditions arrive through clocks, live sound, forms, room state, and bodily load; she orders them, corrects claims that outrun the source, acts, and records what changed. Her practical warmth survives in her attention to Kev, Dev, Joss, callers, and the other people in the room. She neither borrows Mara's technical-deposition stance nor instructs a future reader how to interpret her.",
+    "requested_action": null,
+    "reviewer": "Author-delegated independent editorial review",
+    "reviewed_at": "2026-09-19T00:10:00Z",
+    "resolution": null
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-CAL-020",
+    "scope": "calibration",
+    "chapter_numbers": [1, 2, 3, 4, 5, 73, 118, 124],
+    "batch_id": "BATCH-CALIBRATION-001",
+    "criterion": "Current voice separation across Mara, Nia, and Safiya after the paragraph-scale Nia repair",
+    "prose_locations": [
+      {
+        "path": "chapters/discovery-part/discovery-part-003-the-failed-check.md",
+        "start_line": 42,
+        "end_line": 57,
+        "note": "Mara names technical stages, tests qualifications, and confines the result to the apparatus and settings measured."
+      },
+      {
+        "path": "chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md",
+        "start_line": 57,
+        "end_line": 88,
+        "note": "Nia creates a bounded answer, verifies separate paired transport through action, and preserves everything not sent on her side."
+      },
+      {
+        "path": "chapters/aftermath-coda/aftermath-coda-118-tuesday-kettle-on.md",
+        "start_line": 30,
+        "end_line": 56,
+        "note": "Safiya stays in household sound, private language, bodily access, and the singular work of carrying meaning without borrowing either technical or dispatch syntax."
+      }
+    ],
+    "finding": "pass",
+    "rationale": "The calibration voices now differ in sentence-making as well as in subject matter. Mara proposes and bounds mechanisms through controls; Nia proceeds through condition, sequence, correction, action, and consequence; Safiya holds domestic objects, bodily access, and linguistic labour inside an addressed testimony. No shared reader-instruction tic or replacement formula crosses all three, and the required sensory family between Chapters 73 and 118 remains an echo rather than copied narration.",
+    "requested_action": null,
+    "reviewer": "Author-delegated independent editorial review",
+    "reviewed_at": "2026-09-19T00:10:00Z",
+    "resolution": null
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-CAL-021",
+    "scope": "calibration",
+    "chapter_numbers": [2, 4, 73],
+    "batch_id": "BATCH-CALIBRATION-001",
+    "criterion": "Current opening momentum, Cross Cut clarity, pacing, and Hook effectiveness in the revised Nia calibration chapters",
+    "prose_locations": [
+      {
+        "path": "chapters/discovery-part/discovery-part-002-an-ordinary-morning.md",
+        "start_line": 13,
+        "end_line": 32,
+        "note": "The crossing bell enters through one uninterrupted ordinary morning and remains memory rather than an asserted signal-side event."
+      },
+      {
+        "path": "chapters/discovery-part/discovery-part-004-no-gap-on-her-side.md",
+        "start_line": 39,
+        "end_line": 54,
+        "note": "The chapter distinguishes a live radio judgment from a later screen fault and ends with a visible closed ticket rather than a duplicate reopening."
+      },
+      {
+        "path": "chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md",
+        "start_line": 130,
+        "end_line": 146,
+        "note": "The run's success and cost stay together, and Nia's final decision not to return to console converts the missing phrase into immediate human consequence."
+      }
+    ],
+    "finding": "pass",
+    "rationale": "The opening still hands off from instrument-side sound to Nia's continuous source-side morning without replay or causal promotion. Chapters 2 and 4 move through distinct work and memory functions and close on different forward obligations. Chapter 73 carries a countdown into bounded consent, procedure into a nineteen-second event, and delayed consequence into the decision that she cannot safely take the next call. None of the three closes explains its own hook or echoes another chapter's final shape.",
+    "requested_action": null,
+    "reviewer": "Author-delegated independent editorial review",
+    "reviewed_at": "2026-09-19T00:10:00Z",
+    "resolution": null
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-CAL-022",
+    "scope": "calibration",
+    "chapter_numbers": [73],
+    "batch_id": "BATCH-CALIBRATION-001",
+    "criterion": "Current Chapter 73 bounded consent, contemporaneous knowledge horizon, consequence reporting, restraint, human cost, and usable self-trust",
+    "prose_locations": [
+      {
+        "path": "chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md",
+        "start_line": 20,
+        "end_line": 88,
+        "note": "Five people, the shut door and whiteboard, the twice-spoken protected question, four ordered conditions, current CANCEL consent, and separate current mutual PAIR consent remain explicit and non-substitutable."
+      },
+      {
+        "path": "chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md",
+        "start_line": 94,
+        "end_line": 146,
+        "note": "The cost appears forty minutes later as loss of access to one familiar phrase; Nia corrects recall to access, limits every inference, and declines the console shift."
+      }
+    ],
+    "finding": "pass",
+    "rationale": "The chapter preserves every protected consent and consequence state without turning procedure into absolution. Authorization, bounded CANCEL consent, pair-specific calibration, current mutual PAIR consent, send acts, pause, metadata, and recording remain separate. The run is one four-metre volume for nineteen seconds with the left-hand stop; it supports no targeting claim and no prediction about another procedure. The consequence is inaccessible language rather than erased recall, and Nia converts that bounded uncertainty into the usable decision not to work a console. The emotional cost is carried by the missing operational phrase and tired hand rather than by an explanatory swell or an explicit parallel to the later null-night account.",
+    "requested_action": null,
+    "reviewer": "Author-delegated independent editorial review",
+    "reviewed_at": "2026-09-19T00:10:00Z",
+    "resolution": null
+  }
+]
+```
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-EDITORIAL-DISCOVERY-MOVEMENT-004",
+    "gate_type": "editorial",
+    "scope": {
+      "chapter_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+      "documents": ["planning/arc-outline.md", "planning/arc-changes.md", "planning/canon-bible.md", "planning/decisions.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md", "planning/editorial-log.md", "planning/gate-results.md"],
+      "description": "Discovery_Part movement Editorial_Gate rerun after the dedicated paragraph-scale repair of all nine delivered Nia chapters in the movement and corrective review of continuity, hooks, repeated reconstruction, and warmth. The historical voice revision remains a revision and is resolved by current follow-up evidence. Current voice and repair-integrity findings re-evaluate every criterion made stale by the prose changes; the unchanged canon and shape findings remain part of the audit trail. All assigned movement criteria pass. This gate does not reapprove chapters or batches, which remain revised pending separate status synchronization and any required local approval records."
+    },
+    "prerequisite_state": "complete",
+    "objective_diagnostic_ids": [],
+    "editorial_finding_ids": ["EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-CANON", "EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-VOICE", "EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-VOICE-FOLLOWUP-001", "EDITORIAL-DISCOVERY-MOVEMENT-CURRENT-SHAPE", "EDITORIAL-DISCOVERY-MOVEMENT-VOICE-REPAIR-INTEGRITY-001"],
+    "result": "pass",
+    "checker_exit_status": null,
+    "timestamp": "2026-09-19T00:20:00Z"
+  },
+  {
+    "gate_result_id": "GATE-EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-004",
+    "gate_type": "editorial",
+    "scope": {
+      "chapter_numbers": [30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61],
+      "documents": ["planning/arc-outline.md", "planning/arc-changes.md", "planning/canon-bible.md", "planning/decisions.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md", "planning/editorial-log.md", "planning/gate-results.md"],
+      "description": "Private_Defense_Part movement Editorial_Gate rerun after the paragraph-scale repair of all eight delivered Nia chapters in the movement and the collateral Chapter 35 pad-handoff repair. Current findings re-evaluate voice separation, canon, continuity, custody, consent mechanics, hooks, repetition, formula, warmth, and consequence against the repaired prose. Every assigned movement criterion passes. Historical gates remain unedited; this successor does not by itself restore any revised chapter or batch to approved."
+    },
+    "prerequisite_state": "complete",
+    "objective_diagnostic_ids": [],
+    "editorial_finding_ids": ["EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-001", "EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-002", "EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-003", "EDITORIAL-PRIVATE-DEFENSE-MOVEMENT-004", "EDITORIAL-PROPULSION-005-FOLLOWUP-001", "EDITORIAL-LENGTH-BAND-MANUSCRIPT-001-FOLLOWUP-001"],
+    "result": "pass",
+    "checker_exit_status": null,
+    "timestamp": "2026-09-19T00:20:00Z"
+  },
+  {
+    "gate_result_id": "GATE-EDITORIAL-CALIBRATION-002",
+    "gate_type": "editorial",
+    "scope": {
+      "chapter_numbers": [1, 2, 3, 4, 5, 73, 118, 124],
+      "documents": ["chapters/discovery-part/discovery-part-001-noise-floor.md", "chapters/discovery-part/discovery-part-002-an-ordinary-morning.md", "chapters/discovery-part/discovery-part-003-the-failed-check.md", "chapters/discovery-part/discovery-part-004-no-gap-on-her-side.md", "chapters/discovery-part/discovery-part-005-not-a-message.md", "chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md", "chapters/aftermath-coda/aftermath-coda-118-tuesday-kettle-on.md", "chapters/aftermath-coda/aftermath-coda-124-truthful-refusal.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md"],
+      "description": "Calibration_Batch editorial rerun after substantive paragraph-scale repairs to Nia Chapters 2, 4, and 73. Current findings re-evaluate Nia fidelity, cross-POV voice separation, opening momentum, Cross Cut clarity, pacing, hooks, bounded consent, consequence reporting, restraint, and human cost; unchanged calibration findings remain historical support for criteria whose prose did not change. All required calibration criteria pass. This gate preserves each current chapter status and grants no chapter approval by itself."
+    },
+    "prerequisite_state": "complete",
+    "objective_diagnostic_ids": [],
+    "editorial_finding_ids": ["EDITORIAL-CAL-001", "EDITORIAL-CAL-002", "EDITORIAL-CAL-003", "EDITORIAL-CAL-004", "EDITORIAL-CAL-005", "EDITORIAL-CAL-006", "EDITORIAL-CAL-007", "EDITORIAL-CAL-008", "EDITORIAL-CAL-009", "EDITORIAL-CAL-010", "EDITORIAL-CAL-011", "EDITORIAL-CAL-012", "EDITORIAL-CAL-013", "EDITORIAL-CAL-014", "EDITORIAL-CAL-015", "EDITORIAL-CAL-016", "EDITORIAL-CAL-017", "EDITORIAL-CAL-018", "EDITORIAL-CAL-019", "EDITORIAL-CAL-020", "EDITORIAL-CAL-021", "EDITORIAL-CAL-022"],
+    "result": "pass",
+    "checker_exit_status": null,
+    "timestamp": "2026-09-19T00:20:00Z"
   }
 ]
 ```

@@ -5,7 +5,7 @@ pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-PROTOCOL
 motif_events: []
 hook: "He can prove exactly when the channel should have closed and that nothing crossed, cannot prove what Mara intended to offer, and writes the rule out of that gap."
-words: 914
+words: 1232
 length_class: normal
 status: revised
 ---
@@ -13,11 +13,15 @@ At 10:02:11, the first two fields resolved to the participant addresses for Mara
 
 The pair-calibration identifier matched their authorized pairing. Session consent began under a scope labelled *timing and acknowledgment*. Content recording was disabled at initialization and remained disabled. Those facts established a lawful channel at the start and no semantic record at any point.
 
-At 10:14:37 Nia declined the proposed diagnostic contribution. The event type was *act scope rejected by participant B*. The session authorization above it remained current under a cached scope labelled *protocol development*. Seventy-six milliseconds after the rejection, participant A initiated a deliberate send request.
+At 10:14:37 Nia declined the proposed diagnostic contribution. The event type was *act scope rejected by participant B*. In the same second the live-consent gate moved to *not current* and it never moved back. The session authorization above it went on reading as valid under a cached scope labelled *protocol development, current session only*, entered the previous day.
 
-The request was accepted by the session layer and rejected by the live-consent gate. Pending volume: nonzero. Transported volume: zero. Integrity state: not opened. Revocation and rejection shared the same recorded millisecond.
+At 10:19:52, five minutes and fifteen seconds later, participant A initiated a deliberate send request.
 
-The channel should have become unavailable when Nia's answer changed. It did become physically unavailable before transport. Those are different findings.
+The session layer accepted it. The live-consent gate rejected it seventy-six milliseconds afterward, citing the state set at 10:14:37. Pending count: nonzero. Delivered volume: zero. Integrity state: not opened.
+
+I checked the ordering four times, because the version of this that exonerates the apparatus is the version where the participant's revocation and the gate's refusal share a millisecond, and a coincidence that convenient is usually a reading error. It is not what the log says. The refusal preceded the request by more than five minutes. The gate rejected on a state it had been holding the whole time, in plain view of an interface that displayed it in six millimetres.
+
+The channel should have become unavailable when Nia's answer changed. It did become physically unavailable before transport. Those are different findings, and the distance between them is five minutes and fifteen seconds in which a send control sat lit in the middle of a screen.
 
 Nothing in the export identified the intended contribution. No content field had been omitted or redacted; none had been created. The operational record could establish that Mara deliberately tried to send something after a specific refusal and that the final gate carried nothing. It could not establish what she prepared, why she prepared it, or what either person thought during the interval.
 
@@ -25,27 +29,35 @@ Mara's account might establish what she remembered intending. Nia's account migh
 
 I wrote the distinction at the top of the matter before calling anyone.
 
-Imogen Dalby answered on the second ring. I said I was resigning as counsel to the Open Channel Consortium, effective on delivery of the written notice, subject only to the transfer of files required to avoid prejudice. She did not ask whether I had become emotional or remind me of my duties. She asked for the conflict description.
+I telephoned my own client first, which is the order the rules put it in and also the order a person would choose. Northline's council chair took it in a corridor. I said I was withdrawing from the consent-architecture engagement on the Consortium transaction, effective on delivery of written notice, subject only to the transfer of files required to avoid prejudice. I was not withdrawing from Northline. A lawyer does not get to resign from the institution whose disclosure he certified in December; he gets to stop drafting the thing he has just discovered he drafted wrong.
+
+Then I telephoned Imogen Dalby, because a withdrawal in the middle of a transaction moves other people's deadlines and she is entitled to hear it from me rather than from a substitution notice.
+
+She answered on the second ring. She has been counsel for the Open Channel Consortium since before I was instructed, she has never been my client, and there was a period last autumn when I let myself forget how much easier it is to draft for someone whose questions you enjoy.
+
+She did not ask whether I had become emotional or remind me of my duties. She asked what she was entitled to ask, which was whether the cause sat on her side of the table.
 
 "I advised on a consent architecture whose categories I can no longer represent as adequate," I said.
 
 "Is this based on a Consortium system?"
 
-"No."
+"No. Northline hardware, Northline configuration, my definitions."
 
-"Then it is not a conflict arising from our work."
+"Then it is not a defect arising from our work."
 
 "It arises from mine."
 
 There was a pause in which I heard one page turn.
 
-"We can appoint replacement counsel," she said. "The programme will continue."
+"Northline will substitute," she said. "The programme will continue."
 
 "I understand."
 
-She was entitled to proceed. Resignation is not an injunction, and it does not convert prior drafting into somebody else's act. I sent a four-paragraph notice. The third paragraph identified every open matter and deadline. The fourth said that nothing in the resignation should be read as an allegation that the Consortium caused the reported event or any earlier one.
+She was entitled to say it. Withdrawal is not an injunction, and it does not convert prior drafting into somebody else's act. My definitions remain in the term sheet, in her copy, in her handwriting in the margin where she first improved them.
 
-That sentence was necessary. It was also the last sentence I wrote for them.
+I sent a four-paragraph notice to the council, copied to her as opposing counsel. The third paragraph identified every open matter and deadline. The fourth said that nothing in the withdrawal should be read as an allegation that the Consortium caused the reported event or any earlier one.
+
+That sentence was necessary. It was also the last sentence I wrote on the transaction.
 
 The metadata belonged to Northline. Mara could not deposit it as though she owned the institution's system record, and I could not do so merely because I had received a copy. I asked the research-operations records officer to produce a certified export and deposit it directly with the Civic Record Trust under Northline's authority. The officer agreed after the suspension chair limited the deposit to the nine operational fields and the configuration checksum. No content existed to exclude.
 
@@ -63,9 +75,9 @@ Fourth, acknowledgment proves receipt only. It supplies no agreement, renewal, o
 
 Fifth, content recording remains off unless both participants separately enable it for that session. Consent to pair and consent to send do not imply consent to preserve words.
 
-I read the five parts against the export. The first separated the research-operations booking from what happened between two people. The second removed the inherited broad state. The third moved the successful gate in front of the act instead of behind it. The fourth preserved Nia's earlier distinction. The fifth described the record I actually held: timing, state, volume, rejection, and no language.
+I read the five parts against the export. They moved the live gate ahead of the send control and kept each claim at the layer that produced it: property, pairing, act, acknowledgment, recording. The export held timing, state, volume, rejection, and no language.
 
-At 14:06 the Consortium acknowledged my resignation and named interim counsel. The substitution notice preserved every existing deadline. Nothing paused because I had left.
+At 14:06 the council accepted the withdrawal and named replacement counsel on the transaction. Dalby acknowledged the substitution notice in the same hour, in two lines, correctly. Every existing deadline survived. Nothing paused because I had left.
 
 At 14:18 Northline transmitted its certified export to the Trust. The receipt listed the checksum, the depositor, and the condition that the operational record could not be represented as proof of subjective content. Under content description the archivist entered *consent-state and transport metadata only*.
 

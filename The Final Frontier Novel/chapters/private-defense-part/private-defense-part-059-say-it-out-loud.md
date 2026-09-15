@@ -5,13 +5,31 @@ pov_id: POV-MARA
 timeline_id: TL-PRIVATE-PROTOCOL
 motif_events: []
 hook: "The transport returns an incomplete integrity flag where a sentence should be, and she answers with her mouth."
-words: 907
+words: 1164
 length_class: normal
 status: revised
 ---
 The amber bar moved almost to the right edge and stopped there.
 
 Nia had not sent anything. I knew that because her endpoint still showed READY and mine showed WAITING, and because the repaired console would no longer accept either participant’s request until it had asked the other one again. The delay belonged to the question, not to her answer.
+
+She had come back on conditions, and she made me read them standing at the door before she took the chair.
+
+There were four, numbered, in her own hand. I would not prepare an act while her refusal of that act was on the table. I would not use her body to find out what my equipment does. Every session between us would open with her question rather than mine. And when she ended one, I would not ask why, then or afterwards.
+
+“Is any of it unreasonable?” she said.
+
+“No.”
+
+“Then say your part now, so it is not in the room with us at four o’clock.”
+
+“I performed a send after you refused it.”
+
+“And the gate?”
+
+“The gate is why nothing reached you that time. It is not why nothing reached you.”
+
+She sat down. She did not tell me the conditions were a repair, and she left me no wording with which to call them one. They were the terms on which she was prepared to be in a room with my machine, which is a different thing from being prepared to trust it, and she had written them out so that I could not blur the difference later.
 
 “Current for five minutes?” I asked.
 
@@ -53,7 +71,7 @@ I sent the same answer deliberately. It reached her in seventy-one milliseconds.
 
 The next contribution began with pressure at the contact band and did not become language.
 
-The semantic field on my display stayed blank. Beneath it, the transport state changed from ACTIVE to INTEGRITY INCOMPLETE. Offered volume had been detected at Nia’s endpoint; delivered semantic volume at mine was zero. The acknowledgment control never appeared. There was no pale suggested text, no partial phrase, and no confidence-ranked completion. The console gave me nothing I could mistake for what she meant.
+The contribution field on my display stayed blank. Beneath it, the transport state changed from ACTIVE to INTEGRITY INCOMPLETE. Offered volume had been detected at Nia’s endpoint; delivered payload volume at mine was zero. The console counts units crossing a boundary and has never been able to count meaning, which is a distinction I insist on in writing and which mattered here for once: a zero in that field tells me nothing arrived to be rendered, and tells me nothing whatever about what she was trying to say. The acknowledgment control never appeared. There was no pale suggested text, no partial phrase, and no confidence-ranked completion. The console gave me nothing I could mistake for what she meant.
 
 Latency had reached three hundred and twelve milliseconds.
 

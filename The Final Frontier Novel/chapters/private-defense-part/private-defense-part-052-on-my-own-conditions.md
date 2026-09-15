@@ -5,51 +5,49 @@ pov_id: POV-NIA
 timeline_id: TL-PRIVATE-RECORD-DEPOSITS
 motif_events: []
 hook: "She hands over the one document that could convict her and specifies exactly who may open it and when."
-words: 1439
+words: 1333
 length_class: normal
 status: revised
 ---
-I wrote the conditions before I wrote the account, because I have watched what happens to people who hand over the facts first and negotiate the terms afterwards.
+The third box on the deposit form was headed *Conditions of access, in the depositor's own words. Continue on additional sheets. Conditions will be transcribed exactly and will not be edited for length.* It printed six lines for that. I used the six, then three additional sheets, and I finished all of it before I wrote any part of the account it governed.
 
-The form had four boxes. The third was headed *Conditions of access, in the depositor's own words. Continue on additional sheets. Conditions will be transcribed exactly and will not be edited for length.* The printed box held six lines. I reached the bottom of the third additional sheet before I was finished.
+The review closed on the ninth. I was a party to it, so the file came to the training desk in an envelope with a compliments slip and no covering letter. Nobody sat me down. Nobody rang.
 
-The account came from the formal dispatch review, which closed on the ninth. I was a party to it, so the file arrived at the training desk in an envelope with a compliments slip and no covering letter. I have decided since that this was the correct amount of ceremony.
-
-Nobody sat me down. Nobody rang. I took the envelope home, kept my coat on, and opened it at the kitchen table. The chair caught the back of my coat when I pulled it in. I freed it, put both sleeves on the table, and started with the incident entries.
+I took it home, kept my coat on, and opened it at the kitchen table. The chair caught the back of the coat when I pulled it in. I freed the hem, put both sleeves flat on the table, and started at the incident entries.
 
 House call, incident 6839, entered 18:37:12. Adult male, sixty-two, collapse in a bathroom, unresponsive behind a blocked door, breathing not confirmed.
 
 Quarry collision, incident 6841, entered 18:37:23. One available advanced unit. Seventeen assigned to the quarry at 18:38:06.
 
-I kept one finger beside the house call while I turned the page. Fire reported access to the bathroom at 18:42:09. The ordinary crew entered at 18:42:21. They confirmed cardiac arrest and began resuscitation at 18:42:44.
+I kept one finger beside the house call and turned the page with the other hand. Fire reported access to the bathroom at 18:42:09. The ordinary crew entered at 18:42:21. They confirmed cardiac arrest and began resuscitation at 18:42:44.
 
-Those times had been on my own cards since December. I had read them a hundred times, separately. On the review page the blocked door held them in one line: the patient remained behind it until fire opened it four and a half minutes after the incidents entered my screen. The crew was already on the landing. The door did not care.
+Those times had been on my own cards since December. I had read them a hundred times, one at a time. On the review page they sat in a single row, and the row put four minutes and fifty-seven seconds between the house call reaching my screen and that door opening. The crew was on the landing for most of it. The door did not care.
 
-The vehicle sheet came next. Seventeen left its assignment at 18:38:06 and reached the quarry road at 18:44:03: five minutes and fifty-seven seconds, travelling the other way. The review fixed its position at assignment and calculated its best case to the house at six and a half minutes. I copied both travel intervals onto the compliments slip and set it above the access time.
+The vehicle sheet came next. Seventeen left its assignment at 18:38:06 and reached the quarry road at 18:44:03, five minutes and fifty-seven seconds, travelling away from the house. The review fixed its position at assignment and put its best case to the house at six and a half minutes. I copied both intervals onto the compliments slip and laid the slip above the access time so the three numbers read across in order.
 
-Then I reached the clinical section, which was the part I had not been able to guess at for four months.
+Then the clinical section, which I had not been able to guess at for four months.
 
-The arrest had occurred before the call was placed. Not at the sound the wife heard. Before it. By the time she called, the interval without resuscitation was already longer than the interval in which advanced intervention changes the outcome.
+The arrest had happened before the call was placed. Not at the sound his wife heard through the door. Before it. By the time she reached us, the interval without resuscitation had already passed the interval in which advanced intervention changes an outcome.
 
-My hand stayed at the bottom of that page. The coat was too warm by then, but taking it off would have meant standing up. I pushed the chair back instead, read the clinical finding again, and then returned to the first incident entry and worked through every time once more.
+My hand stayed flat on the bottom of that page. The coat had gone too warm and taking it off meant standing up, so I pushed the chair back a few inches and read the clinical finding again. Then I returned to the first incident entry and worked forward through every time in order.
 
-On the first of my additional sheets, I wrote the exact limit of the review in four lines. My routing decision did not cause that death. No available route could have saved him. The route I chose was still unsupported. The certainty behind it was still unexplained.
+On the first sheet of the account I wrote four lines.
 
-That was the whole exoneration. I kept the lines that size because I had watched forty-one words about me travel round a county in a ring binder, getting larger without adding evidence.
+My routing decision did not cause that death. No available route could have saved him. The route I chose was still unsupported. The certainty behind it was still unexplained.
 
-I searched the review twice for the certainty. A dispatch review has a field for the decision, a field for the basis given, and a field for whether the information available at the time supports that basis. Mine said *departed from ordinary priority; basis not established*. It was the last box on the form.
+Forty-one words about me had already gone round the county in a grey ring binder, getting longer at every desk without acquiring evidence. I wanted these findings to arrive together.
 
-I turned the page over in case there was another box. There was only the clinical continuation.
+I searched the review twice for the certainty. The form had a field for the decision, one for the basis given, and one for whether the available information supported that basis. Mine read *departed from ordinary priority; basis not established*. It was the last box on the page. I turned it over and found only the clinical continuation.
 
-The two accounts I had been offered remained where they were in January: a woman at a bench who transmitted and could not tell me what it reached, and something nobody could identify. Neither account had one piece of evidence inside my decision. I refused both in the account, then went back to the third box on the deposit form.
+The empty basis box did not choose between the two accounts I had already refused. I put that refusal into my account, then returned to the conditions of access.
 
 One. The account is sealed. It opens on my written authorization and on nothing else, except under condition two.
 
 Two. If my incident is publicly identified as a case of mental intrusion, the deposit opens in full, immediately, without my authorization.
 
-I spent longer on *publicly* than on the other five conditions together. A grey binder was already travelling round the county with my incident in it and a sentence about volitional certainty attached. If any document I had not seen counted as public, condition two had already fired before I wrote it.
+*Publicly* took longer than the other five conditions together. The binder was already moving, with a sentence about volitional certainty attached to my incident. If a document I had never seen counted as public, condition two had fired before I finished writing it.
 
-I made *publicly* mean published, or laid before a public body, with the incident identified as mine by my name or by particulars that amounted to it. Internal Case B was neither. I wrote that exclusion knowing what it let through: the binder kept its forty-one words and I kept the seal. What I was providing for was the later sentence that named me when the whole event had become somebody else's paragraph.
+So I made *publicly* mean published, or laid before a public body, with the incident identified as mine by my name or by particulars that came to the same thing. Internal Case B was neither. That exclusion let the binder keep its forty-one words and let me keep the seal. The later sentence—the one that might name me after the event became somebody else's paragraph—would open it.
 
 Three. It is released whole. Not as a summary. Not as an extract. Not as a lettered illustrative case in an appendix. If the whole account will not fit in the document somebody is writing, it does not go in that document.
 
@@ -59,26 +57,28 @@ Five. The sentence in which I refuse both accounts of my certainty is part of th
 
 Six. My authorization passes to nobody. Not to family, not to an executor, not to the custodians. If I die before I use it, condition two is what remains.
 
-Condition four took two conversations. In the first, I asked to deposit the review myself under one reference, sealed on my say. The archivist kept her hand on the county copy while she refused.
+Condition four took two conversations. In the first, I carried the review to the archivist and asked her to deposit it under one reference, sealed on my say. She kept her hand flat on the county copy and returned it to me.
 
-It was the county's document, not mine. It contained a dead man's clinical details and his family had agreed to nothing. If she accepted a third party's record from my hands and let me set its terms, she would be doing the thing her office existed to refuse. She was not apologetic. She said it the way you read out a policy you agree with.
+It was the county's document. It carried a dead man's clinical details, and his family had agreed to nothing. Her office would not take a third party's record from my hands and let me set its terms. She read the refusal like a policy she agreed with.
 
-Mr Adebayo approached it from the other side. The county records office issued a certified copy direct to the Trust under its own authority. It received a separate accession, a separate reference, and conditions set by the county.
+Mr Adebayo opened the other route. The county records office issued a certified copy direct to the Trust under county authority. The Trust gave it a separate accession and reference; the county set its conditions. I did not sign for that copy, set its seal, or gain authority to open it.
 
-I could not deposit it. I could not make it open. The archivist and the county both told me so, in case I had been polite about it the first time. Condition four was the control I did have: if their copy stayed shut, mine stayed shut beside it. I could refuse to be read without the record that set the limit.
+I wrote condition four so my deposit followed the county copy's state. The two records stayed separate. If theirs remained shut, mine remained shut beside it.
 
-In the archivist's office, she read all six conditions back to me aloud. She went slowly and did not improve any of them. Then she asked what title I wanted.
+In her office the archivist read all six conditions back to me aloud. She went slowly and did not improve any of them. Then she asked what title I wanted.
 
-I had thought about that for a week. The plain description was a woman routed a unit and could not say why, which was the account rather than a title. Anything shorter supplied an interpretation.
+I had been thinking about that for a week. The plain description was that a woman routed a unit and could not say why, and that is the account rather than a title. Everything shorter came out as an interpretation.
 
-"No title. Put the reference number and the date."
+"No title. The reference number and the date."
 
 "People will call it something."
 
-"I know. They can call it what they like. I'm not going to hand them the name as well."
+"I know. They can call it what they like. I'm not handing them the name as well."
 
-She did not argue with that one. She had already told me no once that morning and had not enjoyed it.
+She let that one go. She had already told me no once that morning and had not enjoyed it.
 
-The six conditions went into their own folder, unsealed, because the people bound by them had to be able to read them. I signed the account. She sealed it in front of me and wrote its reference on the outside in pencil. I read the number once. She carried the account to the safe and shut the door. The certified review remained a separate accession under county authority.
+The six conditions went into their own folder, unsealed, because the people bound by them have to be able to read them. I signed the account. She sealed it in front of me and wrote the reference on the outside in pencil. I read the number once. Then she carried it to the safe, put it in, and pushed the door until the handle dropped.
 
-She slid the receipt across the table. Its reference matched the number I had just read. I folded the paper once and put it inside my coat. Its edge caught against the lining on the way to the door, so I put my hand into the pocket and flattened it.
+She slid the receipt across the table. I read the reference on it, then read it back against the number I had watched her write, digit by digit, out loud, the way I read an address back to a caller who has given it once and is not going to be able to give it again.
+
+They matched. I said so. She wrote that down too.

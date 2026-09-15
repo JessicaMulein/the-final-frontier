@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-PRIVATE-COPPER
 motif_events: []
 hook: "She can be safe or she can take the call, and the room is very clear that she cannot do both."
-words: 1204
+words: 1166
 length_class: normal
 status: revised
 ---
@@ -19,9 +19,9 @@ Then I reached the section of the binder on simultaneous incidents.
 
 Two calls. One advanced unit.
 
-My pencil stopped between the lines. I closed the binder over it and put both hands on the cover. They stayed there while my pulse filled the room, audible in my ears inside eight bonded walls.
+My pencil stopped between the lines. I closed the binder over it and put both hands on the cover. They stayed there while my pulse filled the room, audible in my ears inside six bonded surfaces.
 
-The known Northline test field stayed below resolution inside the enclosure. The old call sequence arrived intact anyway: two locations, one unit, the interval in which I had to choose. I moved my hands from the binder to my knees and waited until I could count my pulse without hearing a clock under it. No record in the county system names what authored the certainty I acted on. The paper in front of me could not add one.
+The probe lamp held its below-resolution state. Behind the closed binder came the old sequence intact: two locations, one unit, the interval in which I had to choose. I moved my hands to my knees and waited until I could count my pulse without hearing a clock under it. The county record still had no author for the certainty I acted on. The paper room did not supply one.
 
 At 10:14 I wrote *restart* on the pad and opened my shift notes.
 
@@ -31,7 +31,7 @@ At 11:02 the signal lamp beside the door flashed once.
 
 The lamp carries no message. We had agreed one flash for a routine request, two for a safety issue, continuous for leave now. One flash meant somebody outside wanted my attention and had no way to open the door.
 
-I put the pencil down and watched the lamp. I want that in the record too: I waited, deliberately, and timed it. The second flash came at 11:07, still routine.
+I put the pencil down and watched. The second flash came at 11:07, still routine.
 
 When I released the handle, a county supervisor was in the corridor with my work phone sealed in a clear bag. Nobody had ordered me back. A dispatcher on the morning floor had asked whether I was willing to look at a call involving an industrial solvent, because I had handled the same site two years ago.
 
@@ -53,19 +53,19 @@ When it ended the supervisor was still there, holding two paper cups of the mach
 
 "Absolutely not." She sat down on the floor too, which she did not have to do. "We had a vote."
 
-I ate the pretzels. They were terrible and I ate all of them, and for four minutes the two of us sat against a wall in a corridor at Northline talking about a vending machine, and nothing about that conversation had to be verified.
+I ate the pretzels. They were terrible and I ate all of them. For four minutes we talked about a vending machine, and nothing about the conversation needed checking.
 
 Then she said the dispatcher who asked for me had wanted to know if I was all right. His name reached my mouth and stopped there.
 
-There is a page with three names on it and a word at the top. By its own logic — *until we can exclude it* — a man who sat at the console beside me for a year belongs on that page, and so does the woman on this floor with the coffee, and so does the crew on the hill who breathed something they could not name.
+Mara's page had three names under *exposed persons*. Its rule was *until we can exclude it*. The man beside me for a year would fit that rule; so would the supervisor with the coffee and the crew on the hill breathing something they could not name.
 
-I gave the supervisor his message back and nothing else. The solvent log would hold the advice I had given. The room pad would hold an opening. Neither had a field for the name I nearly added.
+I gave his message back and nothing else. The solvent log held the advice I had given. The room pad waited for an opening. Neither place asked for the name I nearly added.
 
-I went back in because the day was supposed to continue. Beneath 9:06 I marked the first opening in pencil, pulled the handle, and heard the room close around me. The quiet came back. So did the relief. On the pad, the blank route to 3:06 now had a break in it.
+I went back in because the day was supposed to continue. Beneath 9:06 I marked the first opening at 11:07 in pencil, pulled the handle, and heard the room close around me. The quiet came back. So did the relief. On the pad, the route to 3:06 now had a break in it.
 
 At 2:06 the lamp flashed once and I opened the door before the second flash. Nobody was testing me. A routine county message sat in another clear bag: solvent call closed, no exposure reported, units available.
 
-I read the line twice, added the second opening to the pad, and put the message back in its bag. Then I packed the binder and the unfinished book. The sandwich paper went in too. I left the pad on the chair with 3:06 still written at the bottom and both openings visible above it.
+I read the line twice, added the second opening to the pad, and put the message back in its bag. Then I packed the binder and the unfinished book. The sandwich paper went in too. I left the pad on the chair with 3:06 still written at the bottom and both openings visible above it. Under the two times I wrote one line for whoever came to read the gasket and hinge after me: *see the openings, not only the hours.*
 
 At the outer door the supervisor asked whether I wanted to come off the review roster for a few months. She meant it kindly. Her pen was already out, but she did not put it to the paper.
 

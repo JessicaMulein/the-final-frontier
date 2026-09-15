@@ -5,21 +5,19 @@ pov_id: POV-NIA
 timeline_id: TL-PRIVATE-PROTOCOL
 motif_events: []
 hook: "She pauses in the middle of a sentence she was sending, the channel stops where she stopped it, and the rest of the sentence stays hers."
-words: 1647
+words: 1610
 length_class: long-outlier
 status: revised
 ---
-There were three permissions on the table, and only one of them belonged to the building.
+Mara's card gave one red refusal at the array-room reader.
 
-The first was a research-operations booking for Calibration Room C, the pairing console, and two contact bands between nine and noon. It named Mara and me. It excluded the array room, the test source, the calibrated probe, and every instrument listed on the transfer schedule. A line at the bottom said the booking did not amend any access list.
+She held it still until the light cleared, put it away, and did not wipe it on her sleeve or try again. The same card opened Calibration Room C. Research operations still owned that room and the pairing console inside it.
 
-Mara had proved the line on the way in. Her card opened the building, then the calibration corridor. At the array-room reader it gave one red refusal. She held the card still until the light cleared, put it away, and did not wipe it on her sleeve or try again. The same card opened Room C because research operations still owned the room and the console inside it.
+On the dull table I laid out the authority that had worked and the authority that had failed. The booking named Mara, me, Room C, the console, and two contact bands between nine and noon. It excluded the array room, test source, calibrated probe, and every instrument on the transfer schedule. A line at the bottom said the booking did not amend any access list.
 
-The second permission was the participant protocol signed by the independent review chair. It allowed named Mara–Nia calibration sessions and required a new answer from both of us each time. The signatures did not supply today's answers.
+Beside it went the participant protocol signed by the independent review chair. It allowed named Mara–Nia calibration sessions and required a new answer from both of us each time. The signatures on the page were not today's answers.
 
-The third permission did not yet exist.
-
-I put the booking and protocol at the far end of the dull table. Two contact bands lay beside the console. Between them I placed one blank sheet.
+Two contact bands lay beside the console. Between them I placed one blank sheet.
 
 "The room is authorized," Mara said.
 
@@ -35,17 +33,17 @@ Mara read it without reaching for the pen. "Do you want that in the machine?"
 
 "I want it said where both people can hear it. The machine can keep the state change. It does not get the answer as content."
 
-She turned the console towards me. Our two participant addresses were present from calibration. The session field was empty. Content recording showed OFF in grey, as the starting state rather than an option waiting to be noticed.
+She turned the console towards me. Our participant addresses remained from calibration. The session field was empty. Content recording showed OFF in grey.
 
-I entered *protocol conversation, current session only*. Mara entered the same words at her side. The console stayed closed.
+I entered *protocol development, current session only*. Mara entered the same words at her side. The console stayed closed.
 
-"Nia Calder," she said. "Do you consent to pairing with me for this session, for a protocol conversation, with content recording off and either of us able to pause or stop?"
+"Nia Calder," she said. "Do you consent to pairing with me for this protocol-development session, with content recording off and either of us able to pause or stop?"
 
 "Yes. Mara Venn, do you consent to the same?"
 
 "Yes."
 
-Two state lights changed together. A start time appeared. The third permission had begun.
+Two state lights changed together. A start time appeared. The permission between us had begun.
 
 I moved my hand down the sheet and wrote:
 
@@ -69,9 +67,9 @@ She wrote:
 
 *Consent to pair is not consent to record.*
 
-We signed the bottom before testing any line. The paper could not make the console obey; it put the claim where both of us could point to it when the machinery changed state.
+We signed the bottom before testing any line. The paper could not make the console obey; it put the claims where either of us could point when the machinery changed state.
 
-I settled the left band behind my ear. Its pressure found the same place as before. Room C had the low fan, the dull table, and none of the copper depth of the array room. Mara could measure transport here. The booking gave her no test source, no boundary inspection, and no route through the red reader to the instruments she had lost.
+I settled the left band behind my ear. Its pressure found the same place as before. Room C had the low fan, the dull table, and none of the copper depth of the array room. Mara could measure transport here. The booking gave her no test source, boundary inspection, or route through the red reader to the instruments she had lost.
 
 "Ready?" she asked.
 
@@ -83,7 +81,7 @@ She corrected herself. "Do you want to begin sending?"
 
 The send control became available on both sides.
 
-The console kept no words. I am giving them here because I remember choosing them, and because a record made later from memory is not a transcript merely because the machinery was present.
+The console kept no words. I am giving them here because I remember choosing them, and because a record made later from memory is not a transcript merely because machinery was present.
 
 I rested my hand beside the send control and chose the first contribution.
 
@@ -141,7 +139,7 @@ Her answer arrived.
 
 One word, deliberately sent. The light established that she had chosen to put it through. Whatever else she believed remained on her side.
 
-We continued for twenty-three minutes. We argued about whether a session scope could be renewed or had to be remade. I said remade. Mara said renewal might be safe if both people restated the scope. I asked what renewal saved besides a few seconds. She had no answer worth sending and said so aloud. We agreed that convenience was not a category of consent.
+The channel stayed open twenty-three minutes in all. We argued about whether a session scope could be renewed or had to be remade. I said remade. Mara said renewal might be safe if both people restated the scope. I asked what renewal saved besides a few seconds. She had no answer worth sending and said so aloud. We agreed that convenience was not a category of consent.
 
 Then the work stopped sounding like a checklist. For six minutes neither of us used ordinary speech.
 
@@ -173,7 +171,7 @@ Mara looked at me instead of the reader. *That was almost unkind.*
 
 *Those are not opposites.*
 
-I laughed before deciding whether to send again. The console carried none of it. Mara heard the laugh through the ordinary air and smiled anyway. For a few seconds the contact band was the slower way to speak.
+I laughed before deciding whether to send again. The console carried none of it. Mara heard the laugh through ordinary air and smiled anyway. For a few seconds the contact band was the slower way to speak.
 
 We tested acknowledgment without agreement. Mara sent:
 
@@ -181,9 +179,9 @@ We tested acknowledgment without agreement. Mara sent:
 
 I acknowledged receipt and answered with my mouth. "I received that. I do not agree to test it today."
 
-The channel remained open. No restart followed. Receipt had authorized nothing further.
+The channel remained open. No restart followed.
 
-We tested silence. Mara asked aloud whether I wanted to continue. I kept my hand away from send and considered it. The console stayed flat. After ten seconds I said yes with my mouth. The state did not change; speech in the room was not a send act unless I chose to make it one.
+We tested silence. Mara asked aloud whether I wanted to continue. I kept my hand away from send and considered it. The console stayed flat. After ten seconds I said yes with my mouth. Speech in the room did not become a send act.
 
 Then we tested pause.
 
@@ -193,7 +191,7 @@ I chose a contribution long enough to stop inside it. I knew the whole sentence.
 
 I sent through *then* and paused.
 
-The transport trace ended on the same sample. Mara's acknowledgment control disappeared before she could touch it. No buffered remainder arrived. No completion marker appeared. Channel volume held exactly where I had stopped and stayed at zero.
+The transport trace ended on the same sample. Mara's acknowledgment control disappeared before she could touch it. No buffered remainder arrived. No completion marker appeared. The delivered count stopped at the amount that had already crossed and took nothing further. Not zero. Zero would have meant nothing left me at all, and something had; I had sent through a word and the word was gone from me and present at her end. What went to zero was the rate. The counter simply stopped climbing, and it stopped on the sample where my hand did.
 
 The rest remained in me: *you will have made one answer broad enough to own the next one.* I had not offered it. Mara gave no sign that she knew it, and the console had no field in which to keep it.
 
@@ -203,8 +201,8 @@ The rest remained in me: *you will have made one answer broad enough to own the 
 
 She waited without asking me to finish. The fan filled the wait.
 
-The consent-state record showed two current answers, twenty-three minutes of channel operation, my pause, and no recording consent. The transport record showed volume, acknowledgments, latency, and a clean stop. There was no sentence, half sentence, or reason in either record.
+The export held both answers with the time each was given and the session they expired with, twenty-three minutes of operation, my pause, delivered volume, acknowledgments, latency, and no recording consent. It held no sentence or reason.
 
-I took off the band. The third permission ended. The booking and protocol remained valid until noon on the far end of the table; neither could open anything between us.
+I took off the band. The booking and signed protocol remained at the far end of the table until noon. The console between us stayed closed.
 
-I folded the sheet we had written together and kept it. Mara kept the operational export. The system kept the pause.
+I folded the sheet we had written together and kept it. Mara took the operational export.

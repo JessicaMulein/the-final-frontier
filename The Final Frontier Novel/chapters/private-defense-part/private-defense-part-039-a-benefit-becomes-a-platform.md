@@ -5,7 +5,7 @@ pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []
 hook: "He agrees to carry a term sheet, and what persuades him is not the money but the sentence he believes he can write into it."
-words: 1171
+words: 1224
 length_class: normal
 status: revised
 ---
@@ -33,7 +33,7 @@ Calibration is not a credential. It cannot be issued with an employee record, pr
 
 It was the most encouraging sentence anyone said to me that morning, which tells you something about the morning. I did the clarifying in their margin while they waited, because a definition written into a term sheet is a wall and a definition volunteered across a table is weather.
 
-A pairing means exactly two named living participants with matching pair-specific calibration. A contribution means content consciously offered through a deliberate send act. Private mentation means every unsent thought, image, memory, emotion and background process, none of which the service is authorized to acquire, infer, retain or complete. Operational metadata means the nonsemantic facts of consent state, timing, acknowledgment, volume, latency, pause, revocation and integrity. Content recording means a separate function, disabled unless both participants expressly enable it for one identified session.
+A pairing means exactly two named living participants with matching pair-specific calibration. A contribution means content consciously offered through a deliberate send act. Private mentation means every unsent thought, image, memory, emotion and background process, none of which the service is authorized to acquire, infer, retain or complete. Operational metadata means the payload-free facts of consent state, timing, acknowledgment, volume, latency, pause, revocation and integrity. Payload-free, not meaningless: I struck *nonsemantic* out of my own second draft because a record of who was paired with whom, for how long, how often and at what hour will tell a careful reader a great deal, and a definition that pretends otherwise is the first place this document would be attacked. Content recording means a separate function, disabled unless both participants expressly enable it for one identified session.
 
 Five terms, each of which works as an obligation rather than a description. If recording is a separate function it cannot be a default; if consent is an act then use is not consent; if calibration is pair-specific no transfer clause survives; if a pause stops transport the system owes immediate cessation rather than graceful completion. I know how to hang each of those on a condition of access, an audit right, a termination trigger and an injunction, and that is the whole of my competence.
 

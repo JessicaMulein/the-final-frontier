@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []
 hook: "Her morning closes into an ordinary shift, and the only thing out of place is a sound she cannot say why she remembers."
-words: 1101
+words: 1095
 length_class: normal
 status: revised
 ---
@@ -27,11 +27,9 @@ I signed on at ten to seven, pressed the headset cup against my ear with two fin
 
 After that it was a shift: other people's worst mornings in the order they arrived, each belonging to the person who rang. I finished at four and drove home the other way, as I usually did, so I met the crossing once that day and only in the morning.
 
-I have written the account four times. The alarm stays at quarter past. The road call stays at six thirty-one, with Kev correcting the address. Sign-on stays at six fifty and the first alarm at six fifty-four. Between the road call and the depot door, the bell returns every time.
+The first time I wrote Wednesday down, I began with the alarm and followed the clocks to the depot. On the second page I tried Tuesday beside it. On the third I put Thursday underneath. Tuesday's crossing gave me nothing I could use. Thursday gave me no bell at all. Wednesday gave me the road call at six thirty-one, Kev correcting the address, my sign-on at six fifty, and the first alarm at six fifty-four. Between the call and the side door came the weight of my hands on the wheel, the dog sitting in the wet, the container cars behind cold glass, and the beat at roughly two to the second.
 
-I tried the days beside it. Tuesday's crossing gives me nothing I can use. I sat there again on Thursday and cannot recover that bell either. Wednesday gives me the weight of my hands on the wheel, the dog sitting in the wet, the container cars passing behind cold glass, and the beat at roughly two to the second.
-
-Four cars back behind a freight leaves several minutes for an unattended sound to settle. That explanation fits the road and the time. In each version I marked the bell as memory rather than evidence. In the fourth, I stopped taking it out.
+Four cars back behind a freight leaves several minutes for an unattended sound to settle. I wrote that beside the bell. I marked it *memory, not evidence*, as I had on the other versions. On the fourth account I left it where it kept returning.
 
 Wednesday is my brother's night, and Joss does not accept cancellations by text.
 
@@ -45,13 +43,13 @@ I said I was not hungry. Then I ate all of it.
 
 "I know. You forgot the milk in November as well. At some point it stops being forgetting and starts being a lifestyle."
 
-I laughed with my mouth full, which he counted as a win and did not press. He does not ask me about work. He asks whether I have slept, and he asks it in a way that does not require an answer, and then he tells me about a fan heater that came in with a bird's nest inside it.
+I laughed with my mouth full, which he counted as a win and did not press. He does not ask me about work. He asks whether I have slept in a way that does not require an answer, then tells me about a fan heater that came in with a bird's nest inside it.
 
-The nest was empty, he said, and he had kept it, and it had been sitting on the windowsill behind the sink for a fortnight where I had never once looked. So I went and looked. It was the size of a teacup and made mostly out of somebody's loft insulation, pink and grey and woven tight, and we both stood there holding a mug and admiring it like a pair of idiots.
+The nest was empty, he said, and he had kept it. It had been sitting on the windowsill behind the sink for a fortnight where I had never once looked. So I went and looked. It was the size of a teacup and made mostly out of somebody's loft insulation, pink and grey and woven tight, and we both stood there holding a mug and admiring it like a pair of idiots.
 
 Somewhere after that I went under. I came back with my head against the wing of his armchair, the plate gone from my knee, and one of his fleeces over me, which is his entire vocabulary for that sort of thing. Twenty minutes, he said, when I asked. It felt like an hour out of somebody else's life.
 
-He had also put a new bulb in my nearside sidelight at some point and not mentioned it. I only found out because he said the old one had been a fire risk, which it had not, and which is the closest he comes to telling me he worries.
+He had also put a new bulb in my nearside sidelight at some point and not mentioned it. The old one was a fire risk, he said. It had not been, and that is about as close as he comes to telling me he worries.
 
 He stood in the doorway in a T-shirt while I reversed out, because he will not put a coat on to say goodbye. Text when you're in. I texted when I was in.
 

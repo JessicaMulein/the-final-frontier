@@ -1415,11 +1415,34 @@ def test_committed_records_load_and_index_without_diagnostics(checker, committed
     assert len(index.of_type("VoiceBrief")) == 4
     assert len(index.of_type("MotifEvent")) == 22
     assert len(index.of_type("CrossCut")) == 65
-    # Four viewpoints plus twelve approved non-viewpoint character-name
-    # extensions. DEC-018 added CHAR-015 Joss Calder and CHAR-016 Ruth Venn as
-    # the clause 9 warmth relationships for Nia and Mara; neither creates a
-    # POVProfile, so the profile count above is unchanged.
-    assert len(index.character_ids) == 16
+    character_name_extensions = [
+        record.payload
+        for record in index.of_type("NovelExtension")
+        if record.payload["state"] == "approved"
+        and record.payload["extension_kind"] == "character-name"
+    ]
+    expected_character_ids = {
+        record.payload["character_id"]
+        for record in index.of_type("POVProfile")
+    }
+    expected_character_ids.update(
+        extension["fact"].split()[0]
+        for extension in character_name_extensions
+    )
+    assert index.character_ids == tuple(sorted(expected_character_ids))
+
+    dalby_extensions = [
+        extension
+        for extension in character_name_extensions
+        if extension["extension_id"] == "EXT-CHAR-COUNSEL-NAME"
+    ]
+    assert len(dalby_extensions) == 1
+    assert dalby_extensions[0]["fact"].split()[0] == "CHAR-017"
+    assert "CHAR-017" in index.character_ids
+    assert all(
+        record.payload["character_id"] != "CHAR-017"
+        for record in index.of_type("POVProfile")
+    )
 
 
 def test_committed_records_report_no_objective_violations(checker, committed):
