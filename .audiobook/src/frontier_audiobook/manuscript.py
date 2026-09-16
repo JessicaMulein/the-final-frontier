@@ -18,6 +18,32 @@ EMPHASIS = re.compile(r"(?<!\*)\*([^*\n]+)\*(?!\*)")
 INLINE_CODE = re.compile(r"`([^`\r\n]+)`")
 UNSUPPORTED_BLOCK = re.compile(r"(?m)^\s{0,3}(?:#{1,6}\s|>|```|~~~|(?:\*{3,}|-{3,})\s*$)")
 UNSUPPORTED_LINK = re.compile(r"!?\[[^\]]*\]\([^)]*\)")
+SENTENCE_INITIAL_AT_CLOCK = re.compile(
+    r"(?m)(?P<prefix>(?:^|(?<=[.!?]\s))At )(?P<hour>\d{1,2}):(?P<minute>\d{2})(?!:)"
+)
+_ONES = (
+    "zero",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+    "ten",
+    "eleven",
+    "twelve",
+    "thirteen",
+    "fourteen",
+    "fifteen",
+    "sixteen",
+    "seventeen",
+    "eighteen",
+    "nineteen",
+)
+_TENS = ("", "", "twenty", "thirty", "forty", "fifty")
 
 
 @dataclass(frozen=True)
@@ -114,6 +140,46 @@ def extract_anchored_excerpt(body: str, start_anchor: str, end_anchor: str, exce
     return body[start:end]
 
 
+def _cardinal_words(value: int) -> str:
+    if not 0 <= value <= 59:
+        raise InputError(f"Clock numeral {value} is outside the spoken 0-59 range")
+    if value < 20:
+        return _ONES[value]
+    tens, ones = divmod(value, 10)
+    if ones == 0:
+        return _TENS[tens]
+    return f"{_TENS[tens]}-{_ONES[ones]}"
+
+
+def _clock_words(hour: int, minute: int) -> str:
+    """Spoken 24-hour clock matching Nova's expansion of 'At 14:27'."""
+
+    hour_words = _cardinal_words(hour)
+    if minute == 0:
+        return hour_words
+    if minute < 10:
+        return f"{hour_words} oh {_ONES[minute]}"
+    return f"{hour_words} {_cardinal_words(minute)}"
+
+
+def expand_sentence_initial_at_clocks(text: str) -> str:
+    """Respell sentence-initial 'At 14:27' so Nova's time-of-day reading still matches.
+
+    Mid-sentence clocks such as 'said 14:08:17' and 'at 14:14:52' are left as digits
+    because Nova already copies those. A USER turn that starts 'At HH:MM' is read as
+    a time of day and comes back as 'fourteen twenty-seven'.
+    """
+
+    def replace(match: re.Match[str]) -> str:
+        hour = int(match.group("hour"))
+        minute = int(match.group("minute"))
+        if hour > 23 or minute > 59:
+            return match.group(0)
+        return f"{match.group('prefix')}{_clock_words(hour, minute)}"
+
+    return SENTENCE_INITIAL_AT_CLOCK.sub(replace, text)
+
+
 def markdown_to_spoken(source: str, excerpt_id: str) -> str:
     """Remove supported inline emphasis/code; fail closed on other Markdown."""
     spoken_source = INLINE_CODE.sub(r"\1", source)
@@ -122,6 +188,7 @@ def markdown_to_spoken(source: str, excerpt_id: str) -> str:
     spoken = EMPHASIS.sub(r"\1", spoken_source)
     if "*" in spoken:
         raise InputError(f"Excerpt {excerpt_id!r} contains unpaired or unsupported asterisks")
+    spoken = expand_sentence_initial_at_clocks(spoken)
     if not spoken.strip():
         raise InputError(f"Excerpt {excerpt_id!r} becomes empty after spoken-text transformation")
     return spoken

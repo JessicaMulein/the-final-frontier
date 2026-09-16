@@ -31,7 +31,7 @@ The programme liaison arrived seven minutes later with a consent form and an apo
 
 “What does the director say happened to me?”
 
-She put the form on the desk but did not turn it toward me. “That you experienced an unauthorized signal effect consistent with the current incident class.”
+She put the form on the desk but did not turn it towards me. “That you experienced an unauthorized signal effect consistent with the current incident class.”
 
 “Origin?”
 
@@ -69,7 +69,7 @@ Then she said, “We can ask now.”
 
 “You can.”
 
-She turned the consent form toward me.
+She turned the consent form towards me.
 
 The request was specific. Nine minutes at the afternoon briefing. No apparatus. My name and image on the public feed. The director would describe my December experience as the earliest documented instance associated with the current emergency classification. I could make a statement of up to two minutes. Questions would be selected in advance. The recording would remain in the programme archive and could be supplied to participating agencies.
 

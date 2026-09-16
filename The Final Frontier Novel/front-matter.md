@@ -6,7 +6,9 @@ Novel prose © 2026 Jessica Mulein. All rights reserved.
 
 ## Dedication
 
-To Hannah, who gives me a reason to live, to expand my horizons, to keep pushing, and to keep going - to expand the frontier.
+To Hannah, who gives me a reason to live, to expand my horizons, and to keep pushing forward—to forever expand the frontier.
+
+And to Dan, who gave me the will to write, the friendship of a lifetime, and the curiosity to persevere.
 
 ## Source acknowledgment
 

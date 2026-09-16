@@ -46,6 +46,11 @@ written = "waveforms"
 spoken = "wave-forms"
 note = "Plural of waveform; audio-only respelling, never printed"
 
+[[pronunciations]]
+written = "repeat"
+spoken = "re-peat"
+note = "Keep Nova from treating the verb as an embedded instruction; audio-only respelling, never printed"
+
 [[tracks]]
 id = "opening-credits"
 kind = "opening_credits"
@@ -63,7 +68,7 @@ kind = "front_matter"
 sequence = 2
 source_path = "The Final Frontier Novel/front-matter.md"
 source_section = "dedication"
-approved_sha256 = "5abdbfb7175897f9e670cdde97b9d58f3a122f6d0d3136ac6da902dc9582e2f1"
+approved_sha256 = "5dd14fc451b53675aafa2bab95e3384f839c321b5a36778cb979e4f3ec91876b"
 enabled = true
 approval_status = "approved"
 render_once = true

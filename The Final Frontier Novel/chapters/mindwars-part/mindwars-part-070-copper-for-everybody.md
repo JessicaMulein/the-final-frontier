@@ -5,7 +5,7 @@ pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: [MOT-COPPER-02]
 hook: "The shielding works, the waiting rooms are quiet, and the quiet is where everyone now has to live."
-words: 1096
+words: 1032
 length_class: normal
 status: draft
 ---
@@ -23,15 +23,13 @@ Nobody wanted to leave. That is the finding.
 
 A retired postman told me he had slept there twice with the site manager's permission and would do it again, because at home he had come to distrust his own certainty about the stairs. A woman who worked nights at a bakery said she took the seven o'clock slot because it was the only ninety minutes she was sure of. A man with a child on his lap said the child had stopped asking whether the room was safe and had started asking when they could go back.
 
-The room worked. That is also the finding, and the two are the same finding, which is what took me four hours to see.
+The room worked. That is the same finding.
 
 I recorded what the programme had bought. Twenty units. Two thousand three hundred assessed people. Nine hundred and forty on rotation. Real attenuation, honestly measured, delivering hours in which a person could stop bracing against their own head. One woman described it as being able to put something down.
 
 Then I recorded what it cost, because that was also my instruction, and the costs were not in the expenditure column.
 
 The bakery worker had given up the shift that paid the differential to keep her slot. The postman had stopped attending a Tuesday club because the club met during his window and he would not exchange the window for company. Two of the eleven had moved in with relatives closer to a unit. The site manager kept a separate list, not required by the doctrine, of people who had asked whether the room could be brought to them.
-
-A protection that people organize their lives inside is not the same as a protection that lets them keep their lives. I wrote that sentence, read it, and cut it, because a sentence like that is how a report announces its own conclusion before it has earned it.
 
 At the third hour a man arrived who was not on the rota.
 

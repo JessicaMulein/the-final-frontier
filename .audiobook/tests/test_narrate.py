@@ -12,6 +12,7 @@ from frontier_audiobook.config import load_audition_config
 from frontier_audiobook.errors import InputError
 from frontier_audiobook.nova import NovaRenderResult
 from frontier_audiobook.util import atomic_write_json, read_json, sha256_bytes, workspace_relative
+from frontier_audiobook.manuscript import markdown_to_spoken
 from frontier_audiobook.verify import normalized_tokens
 
 
@@ -259,7 +260,7 @@ def test_soft_word_target_never_splits_a_sentence_or_paragraph():
     ]
     assert segments[0].word_count == 12
     assert all(segment.word_count > 0 for segment in segments)
-    assert narrate.SEGMENT_BOUNDARY_POLICY == "safe-narration-punctuation-v17"
+    assert narrate.SEGMENT_BOUNDARY_POLICY == "safe-narration-punctuation-v26"
     assert narrate.EDGE_FADE_SECONDS == 0.002
 
 
@@ -496,10 +497,62 @@ def test_unclosed_quoted_fragments_rejoin_inside_one_paragraph():
     segments = narrate.segment_spoken_text(spoken, max_words=12)
     texts = [segment.text for segment in segments]
 
-    assert any("You don't have to want to" in text and "I need you beside him" in text for text in texts)
-    assert any("Tell me when you're there" in text for text in texts)
-    assert not any(text.count(".") >= 3 for text in texts)
-    assert not any(text == '"You don\'t have to want to.' for text in texts)
+    assert any("You don't have to want to" in text for text in texts)
+    assert any(
+        "I need you beside him" in text and "Tell me when you're there" in text
+        for text in texts
+    )
+    assert not any(text.lstrip().startswith("Tell me") for text in texts)
+    assert all(narrate._sentence_end_count(text) <= narrate.MAX_PACKED_SENTENCE_ENDS for text in texts)
+    assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
+        normalized_tokens(spoken)
+    )
+    assert all(len(segment.text) <= narrate.NOVA_SAFE_MAX_CHARACTERS for segment in segments)
+
+
+def test_sentence_split_keeps_the_closing_quote_after_a_period():
+    spoken = (
+        '"He\'s on the floor by the table," the girl said. Then, "He\'s breathing." '
+        'Then, "I don\'t know if that\'s breathing."'
+    )
+    segments = narrate.segment_spoken_text(spoken, max_words=12)
+    texts = [segment.text for segment in segments]
+
+    assert any(text.endswith('"He\'s breathing."') or text.endswith("breathing.\"") for text in texts)
+    assert not any(text.rstrip().endswith("breathing.") and '"' not in text[-12:] for text in texts)
+    assert all('breathing.' in text for text in texts if "He's breathing" in text)
+    assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
+        normalized_tokens(spoken)
+    )
+
+
+def test_bare_no_trails_the_next_same_paragraph_sentence():
+    question = "Could she reach the latch without leaving her father?"
+    refusal = "No."
+    trailer = "I told the crew."
+    segments = narrate.segment_spoken_text(f"{question} {refusal} {trailer}", max_words=12)
+    texts = [segment.text for segment in segments]
+
+    assert question in texts
+    assert refusal not in texts
+    assert f"{refusal} {trailer}" in texts
+    assert not any(text == "No." for text in texts)
+    assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
+        normalized_tokens(f"{question} {refusal} {trailer}")
+    )
+
+
+def test_isolated_one_word_caption_attaches_to_the_previous_short_sentence():
+    spoken = (
+        "I asked what she could see through the front window. Bus shelter. "
+        "Green pharmacy sign. Houses opposite, no fields. Town."
+    )
+    segments = narrate.segment_spoken_text(spoken, max_words=12)
+    texts = [segment.text for segment in segments]
+
+    assert "Town." not in texts
+    assert any(text.endswith("Town.") for text in texts)
+    assert not any(text == "Town." for text in texts)
     assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
         normalized_tokens(spoken)
     )
@@ -518,6 +571,43 @@ def test_leftover_short_quote_trails_the_next_short_sentence():
     assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
         normalized_tokens(spoken)
     )
+
+
+def test_leftover_short_quote_trails_a_following_narrative_sentence():
+    quoted = '"I can\'t tell."'
+    follower = (
+        "Was that breath, or was it the sound a throat makes when nobody is using it?"
+    )
+    spoken = f"{quoted}\n\n{follower}"
+    segments = narrate.segment_spoken_text(spoken, max_words=12)
+    texts = [segment.text for segment in segments]
+
+    assert quoted not in texts
+    assert any(quoted in text and follower in text for text in texts)
+    assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
+        normalized_tokens(spoken)
+    )
+
+
+def test_short_quote_tail_closes_the_previous_unclosed_turn():
+    spoken = (
+        '"Detection, initially. Consent architecture when the science permits it. '
+        'Equitable access."'
+    )
+    segments = narrate.segment_spoken_text(spoken, max_words=12)
+    texts = [segment.text for segment in segments]
+
+    assert any(text.startswith('"Detection, initially.') for text in texts)
+    assert any("Consent architecture when the science permits it." in text for text in texts)
+    assert any("Equitable access" in text for text in texts)
+    assert all(
+        narrate._sentence_end_count(text) <= narrate.QUOTE_FRAGMENT_MAX_SENTENCE_ENDS
+        for text in texts
+    )
+    assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
+        normalized_tokens(spoken)
+    )
+    assert all(len(segment.text) <= narrate.NOVA_SAFE_MAX_CHARACTERS for segment in segments)
 
 
 def test_quoted_imperative_dialogue_may_open_a_turn():
@@ -698,6 +788,26 @@ def test_quoted_commands_do_not_pack_three_sentences_in_one_turn():
     assert all(len(segment.text) <= narrate.NOVA_SAFE_MAX_CHARACTERS for segment in segments)
 
 
+def test_quoted_write_command_does_not_keep_a_following_sentence_in_the_same_turn():
+    spoken = (
+        '"Write down that it exists and that I know it does. And if my name goes '
+        'anywhere near this, I hear it from you first."'
+    )
+    segments = narrate.segment_spoken_text(spoken, max_words=12)
+    texts = [segment.text for segment in segments]
+
+    assert any("Write down that it exists" in text for text in texts)
+    assert any("I hear it from you first" in text for text in texts)
+    assert not any(
+        "Write down that it exists" in text and "I hear it from you first" in text
+        for text in texts
+    )
+    assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
+        normalized_tokens(spoken)
+    )
+    assert all(len(segment.text) <= narrate.NOVA_SAFE_MAX_CHARACTERS for segment in segments)
+
+
 def test_comma_cut_does_not_end_a_turn_on_no_noun():
     source = (
         "The request went into the queue at 19:52, and in the morning I would know "
@@ -765,3 +875,143 @@ def test_oversized_sentence_without_comma_uses_conjunction_fallback():
     ]
     assert all(segment.narration_only_punctuation for segment in segments)
     assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == normalized_tokens(source)
+
+
+def test_sentence_initial_at_clock_is_spelled_and_mid_sentence_digits_stay():
+    source = (
+        "The call clock said 14:08:17. At 14:27 the ambulance status changed "
+        "to transporting, with no destination on my screen. Then the crew "
+        "confirmed patient contact at 14:14:52."
+    )
+    spoken = markdown_to_spoken(source, "chapter-012")
+
+    assert "said 14:08:17." in spoken
+    assert "contact at 14:14:52." in spoken
+    assert "At fourteen twenty-seven the ambulance" in spoken
+    assert "At 14:27" not in spoken
+    assert normalized_tokens("fourteen twenty-seven") == ("fourteen", "twenty", "seven")
+    segments = narrate.segment_spoken_text(spoken, max_words=12)
+    assert not any(segment.text.startswith("At 14:") for segment in segments)
+    assert any("fourteen twenty-seven" in segment.text for segment in segments)
+    assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
+        normalized_tokens(spoken)
+    )
+
+
+def test_hhmmss_clock_is_not_treated_as_an_at_time():
+    spoken = markdown_to_spoken("At 14:08:17 the stamp advanced.", "chapter-012")
+
+    assert spoken == "At 14:08:17 the stamp advanced."
+
+
+def test_short_isolated_narrative_attaches_to_the_previous_over_budget_host():
+    host = (
+        "Mara had already walked the forms and found every one of them assuming a "
+        "recruitment, a message, or a name."
+    )
+    short = "I did not need to repeat her work."
+    follower = (
+        "What I had that she did not was the definition itself, and the definition "
+        "nowhere said that a name had to be pronounceable."
+    )
+    spoken = f"{host} {short} {follower}"
+    segments = narrate.segment_spoken_text(spoken, max_words=12)
+    texts = [segment.text for segment in segments]
+
+    assert short not in texts
+    assert any(host in text and short in text for text in texts)
+    assert any(text == follower or follower in text for text in texts)
+    assert not any(text.startswith(short) for text in texts)
+    assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
+        normalized_tokens(spoken)
+    )
+    assert all(narrate._sentence_end_count(text) <= narrate.MAX_PACKED_SENTENCE_ENDS for text in texts)
+    assert all(len(text) <= narrate.NOVA_SAFE_MAX_CHARACTERS for text in texts)
+
+
+def test_ordinary_short_narrative_does_not_attach_to_make_a_two_sentence_turn():
+    host = (
+        "A former public research director, outside counsel, and the adviser the "
+        "institute had already proposed inviting."
+    )
+    short = "Their introductory note stated a public-interest purpose."
+    spoken = f"{host} {short}"
+    segments = narrate.segment_spoken_text(spoken, max_words=12)
+    texts = [segment.text for segment in segments]
+
+    assert texts == [host, short]
+    assert all(narrate._sentence_end_count(text) <= 1 for text in texts)
+
+
+def test_consecutive_short_questions_pack_into_pairs_not_triples():
+    host = (
+        "The outside adviser had received an earlier phrase from the invention notice, "
+        "structured human-associated signals, and had returned three questions."
+    )
+    q1 = "Could a receiver distinguish simultaneous subjects?"
+    q2 = "Could a channel persist across hardware?"
+    q3 = "Could the method support enrolment without conventional identity data?"
+    spoken = f"{host} {q1} {q2} {q3}"
+    segments = narrate.segment_spoken_text(spoken, max_words=12)
+    texts = [segment.text for segment in segments]
+    pair = f"{q1} {q2}"
+
+    assert q1 not in texts
+    assert q2 not in texts
+    assert pair in texts
+    assert q3 in texts
+    assert host in texts
+    assert f"{q1} {q2} {q3}" not in texts
+    assert all(text.count("?") <= narrate.MAX_PACKED_SHORT_QUESTIONS for text in texts)
+    assert all(len(text) <= narrate.NOVA_SAFE_MAX_CHARACTERS for text in texts)
+    assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
+        normalized_tokens(spoken)
+    )
+
+
+def test_single_short_question_attaches_to_the_previous_host():
+    host = "She checked the hallway once more before she moved."
+    question = "Could she reach the latch without leaving her father?"
+    spoken = f"{host} {question}"
+    segments = narrate.segment_spoken_text(spoken, max_words=12)
+    texts = [segment.text for segment in segments]
+
+    assert question not in texts
+    assert any(host in text and question in text for text in texts)
+    assert all(narrate._sentence_end_count(text) <= narrate.MAX_PACKED_SENTENCE_ENDS for text in texts)
+    assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
+        normalized_tokens(spoken)
+    )
+
+
+def test_short_quote_does_not_absorb_a_three_period_quoted_reply():
+    opener = '"A standard for what?"'
+    reply = (
+        '"Detection, initially. Consent architecture when the science permits it. '
+        'Equitable access."'
+    )
+    spoken = f"{opener}\n\n{reply}"
+    segments = narrate.segment_spoken_text(spoken, max_words=12)
+    texts = [segment.text for segment in segments]
+
+    assert opener in texts
+    assert not any(opener in text and "Detection" in text for text in texts)
+    assert any("Detection, initially" in text for text in texts)
+    assert any("Equitable access." in text for text in texts)
+    assert all(narrate._sentence_end_count(text) <= narrate.MAX_PACKED_SENTENCE_ENDS for text in texts)
+    assert all(len(text) <= narrate.NOVA_SAFE_MAX_CHARACTERS for text in texts)
+    assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
+        normalized_tokens(spoken)
+    )
+
+
+def test_short_form_labels_do_not_pack_past_two_sentence_ends():
+    spoken = "May constitute. Could engage. Subject to determination."
+    segments = narrate.segment_spoken_text(spoken, max_words=12)
+    texts = [segment.text for segment in segments]
+
+    assert "May constitute. Could engage. Subject to determination." not in texts
+    assert all(narrate._sentence_end_count(text) <= narrate.MAX_PACKED_SENTENCE_ENDS for text in texts)
+    assert tuple(token for segment in segments for token in normalized_tokens(segment.text)) == (
+        normalized_tokens(spoken)
+    )

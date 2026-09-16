@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: [MOT-COME-03]
 hook: "The pattern is gone, the room is quiet, and Nia reports aloud that a familiar phrase she could use before the test is no longer there."
-words: 1283
+words: 1230
 length_class: normal
 status: draft
 ---
@@ -47,7 +47,7 @@ I asked whether anything had arrived. Nothing had. I asked whether she could ide
 
 Forty minutes later she came back into the room and said, in front of Halloran and both signers, that a phrase she uses on the console was not available to her.
 
-I was there for that. I have read the run record since, the way anybody else would, and the corrected line says *participant unable to access familiar operational phrase after exposure*, with one word struck through and a better one written above it in Halloran's hand. The better word was hers. She gave it to him standing up, the same way she had given him the conditions.
+I was there for that, and the correction that went into the run record was hers and not ours. She gave it to Halloran standing up, the same way she had given him the conditions.
 
 We opened a session two days afterward to agree the wording of the technical annex.
 
@@ -81,7 +81,7 @@ She took the band off and put it on the table.
 
 I wrote exactly that and read it back to her before it was saved.
 
-She did not tell me the words. I did not ask, then or since. The channel had carried nothing and the room had carried nothing, and no record we made holds it now. She holds it, which is the only correct place for it, and is also the place from which it has gone.
+She did not tell me the words. I did not ask, then or since. The channel had carried nothing and the room had carried nothing, and no record we made holds it now.
 
 The console kept what it keeps. Two current answers. One prepared send. Seventeen seconds between preparation and release. Zero volume. A clean close at 11:26.
 

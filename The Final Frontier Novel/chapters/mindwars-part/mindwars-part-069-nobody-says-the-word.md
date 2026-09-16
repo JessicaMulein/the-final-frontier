@@ -5,7 +5,7 @@ pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-ONSET
 motif_events: []
 hook: "He files the doctrine under the only heading the system offers, and in the room where it is signed nobody says the word war."
-words: 1125
+words: 1128
 length_class: normal
 status: draft
 ---
@@ -15,7 +15,7 @@ The Consortium’s money had released at fourteen ten. By sixteen hundred the em
 
 Dr Venn answered her sixteen-hundred deadline at fifteen fifty-one, in one sentence: *No scientific basis for attributing these events to coordinated hostile activity of external origin has been established.* She attached the null result and the method, unaltered.
 
-The drafting group put both documents in the evidence annex and wrote the doctrine anyway. Her sentence appears at annex item nine. The annex is cited in section one as *technical material considered*, which is true, and which is the most that any accurate document can be made to do.
+The drafting group put both documents in the evidence annex. The doctrine went to signature the same evening. Her sentence appears at annex item nine. The annex is cited in section one as *technical material considered*, which is true, and which is the most that any accurate document can be made to do.
 
 I was invited to the signing because the Trust held material cited in appendix four and because, after my objection, the committee wanted somebody to certify that the doctrine did not breach witness conditions. That was narrower than certifying the doctrine. It was also the only part anybody asked me to certify.
 
@@ -55,7 +55,7 @@ I filed the doctrine under *unauthorized signal effects* and entered my uncertai
 
 The records hall closed its public doors at six. I left through the loading entrance because the front steps had been cordoned for a press statement. Rain had begun, light enough that the paving looked dry until a shoe crossed it.
 
-A porter was bringing the empty document crates back from the signing room on a flat trolley. A delivery rider came through the open vehicle gate at walking speed, one foot down, reflective jacket bright under the loading lights. The porter looked toward the gate and dropped the trolley handle.
+A porter was bringing the empty document crates back from the signing room on a flat trolley. A delivery rider came through the open vehicle gate at walking speed, one foot down, reflective jacket bright under the loading lights. The porter looked towards the gate and dropped the trolley handle.
 
 “Down,” he said.
 
@@ -77,4 +77,4 @@ The first responders arrived in five minutes. I gave my account twice: the open 
 
 They lifted the porter onto a vacuum mattress. One responder cut the sleeve of his uniform to place a line. The doctrine lay where I had put it, its lower corner darkening in the rain under the words COORDINATED RESPONSE.
 
-The stretcher passed me on its way to the ambulance. The porter’s right shoe had come off and remained beside the trolley, toe pointing toward the open gate.
+The stretcher passed me on its way to the ambulance. The porter’s right shoe had come off and remained beside the trolley, toe pointing towards the open gate.

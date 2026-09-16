@@ -13,7 +13,7 @@ Nia read the top of my procedure twice, took the pen out of my hand, and added t
 
 *This session may establish what the present path can do. It cannot establish what caused the earlier routing certainty.*
 
-Her addition went after *what*: **or who**. She wrote it in the margin with a caret, initialled the caret, and dated it, and then she asked me to countersign the change before we went any further. That condition came before apparatus, protocol, or hypothesis.
+Her addition went after *what*: *or who*. She wrote it in the margin with a caret, initialled the caret, and dated it, and then she asked me to countersign the change before we went any further. That condition came before apparatus, protocol, or hypothesis.
 
 The receiver identified her before I enabled anything else.
 

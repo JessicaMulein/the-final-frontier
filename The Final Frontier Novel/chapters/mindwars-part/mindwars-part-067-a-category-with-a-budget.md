@@ -5,7 +5,7 @@ pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-ONSET
 motif_events: []
 hook: "The category passes with a line item attached, and the people it was built out of are cited in it without having been asked."
-words: 1272
+words: 1262
 length_class: normal
 status: draft
 ---
@@ -117,4 +117,4 @@ Then I read appendix four one more time, because it is the part that will outliv
 
 Case B is a woman who told me, in a room with a foam strip under the near edge of the table, that she was not handing anybody the name as well.
 
-They did not need the name. They needed the shape of her, and the shape was public all along.
+She kept the name. They had never needed it.

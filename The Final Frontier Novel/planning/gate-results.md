@@ -3565,3 +3565,723 @@ The paragraph-scale Nia repair changed eighteen Nia Chapter Files and one collat
   }
 ]
 ```
+## Mindwars drafting gates for Chapters 62–79, recorded as current backfill
+
+The Mindwars drafting wave delivered Chapters 62 through 77 without recording objective
+`GateResult` records for them, so the manuscript's prose ran ahead of its gate evidence for sixteen
+chapters. These four records close that gap on the same basis as the task 13.3 backfill above: each
+one is a real checker run performed at the recorded timestamp against the current prose, and none of
+them claims to have been evaluated when the chapters were first drafted.
+
+The two batch records are aligned to the drafting clusters declared in
+[`mindwars-propulsion-spec.md`](mindwars-propulsion-spec.md) — Onset 62–69 and Counterphase 70–77 —
+rather than to an arbitrary window. Chapters 78 and 79 are newly delivered and carry
+`chapter-local` records of their own. The Shield cluster's batch gate is deliberately **not**
+recorded here: a `drafting` batch requires four to eight Chapter_Files and only two of the eight
+Shield chapters exist, so that gate is owed once 78–81 are delivered.
+
+These are objective gates only. No editorial gate, chapter approval, or status promotion follows
+from them: Chapters 62–79 remain `draft`, and craft remains a human Editorial_Gate matter under
+Requirement 12.12 and global invariant 25.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-062-069",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [62, 63, 64, 65, 66, 67, 68, 69],
+      "documents": ["chapters/mindwars-part/mindwars-part-062-not-only-me.md", "chapters/mindwars-part/mindwars-part-063-name-a-flag.md", "chapters/mindwars-part/mindwars-part-064-an-infrastructure-problem.md", "chapters/mindwars-part/mindwars-part-065-not-a-demonstration.md", "chapters/mindwars-part/mindwars-part-066-no-border-no-demand.md", "chapters/mindwars-part/mindwars-part-067-a-category-with-a-budget.md", "chapters/mindwars-part/mindwars-part-068-a-property-of-the-event.md", "chapters/mindwars-part/mindwars-part-069-nobody-says-the-word.md"],
+      "description": "Backfilled drafting-batch audit of the Onset cluster against current prose; 8873 Prose_Words across Chapters 62-69, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-070-077",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [70, 71, 72, 73, 74, 75, 76, 77],
+      "documents": ["chapters/mindwars-part/mindwars-part-070-copper-for-everybody.md", "chapters/mindwars-part/mindwars-part-071-an-inverted-copy.md", "chapters/mindwars-part/mindwars-part-072-the-defense-transmits.md", "chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md", "chapters/mindwars-part/mindwars-part-074-only-on-the-answer.md", "chapters/mindwars-part/mindwars-part-075-timing-and-no-content.md", "chapters/mindwars-part/mindwars-part-076-current-local-revocable.md", "chapters/mindwars-part/mindwars-part-077-fluency-is-not-permission.md"],
+      "description": "Backfilled drafting-batch audit of the Counterphase cluster against current prose; 9581 Prose_Words across Chapters 70-77, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-078",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [78],
+      "documents": ["chapters/mindwars-part/mindwars-part-078-protection-nobody-asked-for.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 78; 1159 Prose_Words, normal, draft, with header, filename, directory, and ArcEntry in four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-079",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [79],
+      "documents": ["chapters/mindwars-part/mindwars-part-079-the-capability-we-condemned.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 79; 1104 Prose_Words, normal, draft, with header, filename, directory, and ArcEntry in four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Shield drafting gates for Chapters 80–81 and the 78–81 batch
+
+Chapters 80 and 81 are newly delivered and carry `chapter-local` records. Their arrival brings the
+Shield cluster to four delivered Chapter_Files, which is the minimum size of a `drafting` batch, so
+`GATE-BATCH-MINDWARS-078-081` discharges the batch obligation the preceding section recorded as owed.
+The Shield cluster runs to 85; this batch covers only its delivered prefix, and a further batch is
+owed for 82–85 when those exist.
+
+The batch run exercises the cross-chapter constraints that chapter scope cannot see, including the
+`DEC-016` same-POV limits across the Mara run at 80–81, which measures 2,474 combined Prose_Words
+against the 3,600 ceiling.
+
+Objective gates only. Chapters 78–81 remain `draft`, and no editorial finding, craft verdict, or
+chapter approval follows from these records.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-080",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [80],
+      "documents": ["chapters/mindwars-part/mindwars-part-080-the-first-we.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 80; 1239 Prose_Words, normal, draft, with header, filename, directory, and ArcEntry in four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-081",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [81],
+      "documents": ["chapters/mindwars-part/mindwars-part-081-two-living-people-at-a-time.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 81; 1235 Prose_Words, normal, draft, with header, filename, directory, and ArcEntry in four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-078-081",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [78, 79, 80, 81],
+      "documents": ["chapters/mindwars-part/mindwars-part-078-protection-nobody-asked-for.md", "chapters/mindwars-part/mindwars-part-079-the-capability-we-condemned.md", "chapters/mindwars-part/mindwars-part-080-the-first-we.md", "chapters/mindwars-part/mindwars-part-081-two-living-people-at-a-time.md"],
+      "description": "Drafting-batch audit of the delivered Shield prefix; 4737 Prose_Words across Chapters 78-81, the 80-81 Mara run at 2474 combined Prose_Words, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Chapters 82–83 drafting gates, and the Chapter 80 canon-repair rerun
+
+Chapters 82 and 83 are newly delivered. Chapter 80 was repaired after delivery: its closing answer
+had the counterphase field returning what it removes when the field drops, which contradicts the
+delivered Chapter 74–77 record of a familiar phrase whose access did not return and which Mara is in
+a position to know about. The repaired text has her state that most of it returns, that one case she
+knows of did not, and that she cannot say which part or how much. The repair changes no `ArcEntry`
+value, canon fact, motif, reveal, or POV, and Chapter 80's observed Prose_Words moved from 1239 to
+1265 with its `normal` class unchanged.
+
+`GATE-BATCH-MINDWARS-078-081` evaluated Chapter 80 in its pre-repair state and remains in the audit
+trail unedited as a record of the text it evaluated. For Chapter 80 it is superseded by the rerun
+below, on the same basis as the earlier rerun sections in this file: a superseded gate is not a wrong
+gate.
+
+The batch record covers 80–83, the four-chapter window that contains both new chapters and the
+repaired one. The Mara run at 80–81 measures 2,500 combined Prose_Words against the `DEC-016`
+ceiling of 3,600. A further batch is owed for 84–85 when those exist.
+
+Objective gates only. Chapters 78–83 remain `draft`.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-080-CANON-REPAIR",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [80],
+      "documents": ["chapters/mindwars-part/mindwars-part-080-the-first-we.md"],
+      "description": "Chapter_Local_Gate rerun for Chapter 80 after the subtraction-persistence canon repair; 1265 Prose_Words, normal, draft, synchronized header and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-082",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [82],
+      "documents": ["chapters/mindwars-part/mindwars-part-082-timing-traffic-and-nothing.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 82; 1108 Prose_Words, normal, draft, with header, filename, directory, and ArcEntry in four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-083",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [83],
+      "documents": ["chapters/mindwars-part/mindwars-part-083-chosen-risk.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 83; 1318 Prose_Words, normal, draft, with header, filename, directory, and ArcEntry in four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-080-083",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [80, 81, 82, 83],
+      "documents": ["chapters/mindwars-part/mindwars-part-080-the-first-we.md", "chapters/mindwars-part/mindwars-part-081-two-living-people-at-a-time.md", "chapters/mindwars-part/mindwars-part-082-timing-traffic-and-nothing.md", "chapters/mindwars-part/mindwars-part-083-chosen-risk.md"],
+      "description": "Drafting-batch audit over the repaired Chapter 80 and the newly delivered 82 and 83; 4926 Prose_Words across Chapters 80-83, the 80-81 Mara run at 2500 combined Prose_Words, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Shield cluster complete — Chapters 84–85 and the full 78–85 batch
+
+Chapters 84 and 85 complete the Shield cluster declared at 78–85 in
+[`mindwars-propulsion-spec.md`](mindwars-propulsion-spec.md). All eight Chapter_Files now exist, so
+`GATE-BATCH-MINDWARS-078-085` audits the cluster as a whole and is the current batch record for it.
+
+`GATE-BATCH-MINDWARS-078-081` and `GATE-BATCH-MINDWARS-080-083` evaluated partial windows of the same
+cluster and remain in the audit trail unedited as records of the delivered prefixes they evaluated.
+The full-cluster record supersedes neither their history nor their findings; it covers a larger scope
+at a later time.
+
+Both Mara runs inside the cluster satisfy the `DEC-016` word limit: 80–81 at 2,500 combined
+Prose_Words and 84–85 at 2,071, against a ceiling of 3,600. No `pov_id` run in the cluster exceeds two
+chapters.
+
+Objective gates only. Chapters 78–85 remain `draft`, and the Shield cluster's editorial gate is not
+recorded here and is not implied by these results.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-084",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [84],
+      "documents": ["chapters/mindwars-part/mindwars-part-084-inside-the-pocket.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 84; 1181 Prose_Words, normal, draft, with header, filename, directory, and ArcEntry in four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-085",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [85],
+      "documents": ["chapters/mindwars-part/mindwars-part-085-single-answers-do-not-scale.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 85; 890 Prose_Words, normal, draft, deliberately the shortest chapter in the cluster, with header, filename, directory, and ArcEntry in four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-078-085",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [78, 79, 80, 81, 82, 83, 84, 85],
+      "documents": ["chapters/mindwars-part/mindwars-part-078-protection-nobody-asked-for.md", "chapters/mindwars-part/mindwars-part-079-the-capability-we-condemned.md", "chapters/mindwars-part/mindwars-part-080-the-first-we.md", "chapters/mindwars-part/mindwars-part-081-two-living-people-at-a-time.md", "chapters/mindwars-part/mindwars-part-082-timing-traffic-and-nothing.md", "chapters/mindwars-part/mindwars-part-083-chosen-risk.md", "chapters/mindwars-part/mindwars-part-084-inside-the-pocket.md", "chapters/mindwars-part/mindwars-part-085-single-answers-do-not-scale.md"],
+      "description": "Drafting-batch audit of the complete Shield cluster; 9260 Prose_Words across Chapters 78-85, Mara runs at 2500 and 2071 combined Prose_Words, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Territory drafting gates — Chapters 86–87
+
+Chapters 86 and 87 open the Territory cluster declared at 86–93 and are the reciprocal halves of
+`CUT-THEORIES-AND-THE-UNPARSED`. They are newly delivered and carry `chapter-local` records. The
+batch record covers 82–87, a six-file window spanning the Shield tail and the Territory opening,
+because the Territory cluster itself has only two delivered files and a `drafting` batch requires
+four. A cluster-aligned batch is owed for 86–93 once those exist.
+
+No `pov_id` run in the 82–87 window exceeds one chapter, so the `DEC-016` run limits are satisfied
+without arithmetic.
+
+Objective gates only. Chapters 86 and 87 are `draft`, no origin account is ranked or resolved by any
+record here, and the three permanently unresolved Reveal IDs are untouched.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-086",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [86],
+      "documents": ["chapters/mindwars-part/mindwars-part-086-theories-with-believers.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 86; 1223 Prose_Words, normal, draft, with header, filename, directory, and ArcEntry in four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-087",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [87],
+      "documents": ["chapters/mindwars-part/mindwars-part-087-not-a-language.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 87; 1226 Prose_Words, normal, draft, with header, filename, directory, and ArcEntry in four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-082-087",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [82, 83, 84, 85, 86, 87],
+      "documents": ["chapters/mindwars-part/mindwars-part-082-timing-traffic-and-nothing.md", "chapters/mindwars-part/mindwars-part-083-chosen-risk.md", "chapters/mindwars-part/mindwars-part-084-inside-the-pocket.md", "chapters/mindwars-part/mindwars-part-085-single-answers-do-not-scale.md", "chapters/mindwars-part/mindwars-part-086-theories-with-believers.md", "chapters/mindwars-part/mindwars-part-087-not-a-language.md"],
+      "description": "Drafting-batch audit across the Shield tail and the Territory opening; 6946 Prose_Words across Chapters 82-87, no same-POV run longer than one chapter, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Territory drafting gates — Chapters 88–89 and the 86–89 batch
+
+Chapters 88 and 89 are newly delivered and are the reciprocal halves of `CUT-RECORDED-AND-UNRECORDED`.
+Chapter 88 is the manuscript's single recorded session under
+`TL-PAIR-MARA-NIA-RECORDED-SESSION`; its transcript is bounded to the contributions that one session
+carried, and nothing in this gate extends that scope. Chapter 89 holds the same limit under
+operational pressure and enters no traffic pattern as meaning.
+
+`GATE-BATCH-MINDWARS-086-089` is the first cluster-aligned batch for Territory and covers its
+delivered prefix. A batch is owed for 90–93 when those exist. No `pov_id` run in the window exceeds
+one chapter.
+
+Objective gates only. Chapters 86–89 remain `draft`. No origin account is ranked or resolved, and the
+three permanently unresolved Reveal IDs are untouched.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-088",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [88],
+      "documents": ["chapters/mindwars-part/mindwars-part-088-recorded-once-on-purpose.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 88; 1155 Prose_Words, normal, draft, with header, filename, directory, and ArcEntry in four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-089",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [89],
+      "documents": ["chapters/mindwars-part/mindwars-part-089-a-disputed-recording-state.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 89; 1245 Prose_Words, normal, draft, with header, filename, directory, and ArcEntry in four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-086-089",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [86, 87, 88, 89],
+      "documents": ["chapters/mindwars-part/mindwars-part-086-theories-with-believers.md", "chapters/mindwars-part/mindwars-part-087-not-a-language.md", "chapters/mindwars-part/mindwars-part-088-recorded-once-on-purpose.md", "chapters/mindwars-part/mindwars-part-089-a-disputed-recording-state.md"],
+      "description": "Drafting-batch audit of the delivered Territory prefix; 4849 Prose_Words across Chapters 86-89, no same-POV run longer than one chapter, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Territory cluster complete — Chapters 90–93 and the full 86–93 batch
+
+Chapters 90 through 93 complete the Territory cluster declared at 86–93, so
+`GATE-BATCH-MINDWARS-086-093` audits it whole and is the current batch record for it.
+`GATE-BATCH-MINDWARS-086-089` covered the delivered prefix and remains in the audit trail unedited.
+
+Chapter 90 is the cluster's declared `long-outlier` and measures 1863 Prose_Words inside the
+1,601–2,500 band, against a non-null `outlier_purpose` already carried by its `ArcEntry`. Delivered
+outliers now number 11 of the 20 permitted, and 84 of the delivered entries are `normal`.
+
+No `pov_id` run in the cluster exceeds one chapter, so the `DEC-016` limits hold without arithmetic.
+
+Objective gates only. Chapters 86–93 remain `draft`. Nothing in these records ranks or resolves an
+origin account: Chapter 92's ranking is recorded in prose as belief and is not a finding here either,
+Chapter 90's reversal is a statement of human position and not a provenance claim, and the three
+permanently unresolved Reveal IDs are untouched.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-090",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [90],
+      "documents": ["chapters/mindwars-part/mindwars-part-090-the-shore-was-us.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 90; 1863 Prose_Words, long-outlier, draft, class derived from observed words with a non-null outlier_purpose in the ArcEntry, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-091",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [91],
+      "documents": ["chapters/mindwars-part/mindwars-part-091-integrity-fault.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 91; 1337 Prose_Words, normal, draft, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-092",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [92],
+      "documents": ["chapters/mindwars-part/mindwars-part-092-ranked-by-belief.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 92; 1183 Prose_Words, normal, draft, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-093",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [93],
+      "documents": ["chapters/mindwars-part/mindwars-part-093-one-synchronized-night.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 93; 1125 Prose_Words, normal, draft, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-086-093",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [86, 87, 88, 89, 90, 91, 92, 93],
+      "documents": ["chapters/mindwars-part/mindwars-part-086-theories-with-believers.md", "chapters/mindwars-part/mindwars-part-087-not-a-language.md", "chapters/mindwars-part/mindwars-part-088-recorded-once-on-purpose.md", "chapters/mindwars-part/mindwars-part-089-a-disputed-recording-state.md", "chapters/mindwars-part/mindwars-part-090-the-shore-was-us.md", "chapters/mindwars-part/mindwars-part-091-integrity-fault.md", "chapters/mindwars-part/mindwars-part-092-ranked-by-belief.md", "chapters/mindwars-part/mindwars-part-093-one-synchronized-night.md"],
+      "description": "Drafting-batch audit of the complete Territory cluster; 10357 Prose_Words across Chapters 86-93 including one declared long-outlier at 1863, no same-POV run longer than one chapter, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Null decision cluster complete — Chapters 94–101
+
+Chapters 94 through 101 complete the Null decision cluster, and `GATE-BATCH-MINDWARS-094-101` audits it
+whole. This is the cluster the propulsion spec names as the second structural trough; the objective
+record cannot evaluate that remedy, which remains a human Editorial_Gate matter.
+
+Two constraints in this cluster are worth naming because they are the tightest in the manuscript so
+far. Chapter 101 is a declared `long-outlier` at 1934 Prose_Words against its non-null
+`outlier_purpose`, and it is the first delivered chapter to carry a `MotifEvent`, `MOT-RADIUS-01`,
+whose Motif_Ledger assignment to Chapter 101 the chapter-local gate resolved. The Mara run at 100–101
+measures 3157 combined Prose_Words against the `DEC-016` ceiling of 3600, which is the closest any
+delivered run has come to that limit.
+
+Chapters 95, 96, and 101 carry `REVEAL-AFFECTED-AREA-EXTENT`, whose reader release is Chapter 96 and
+whose owner is `POV-JULIAN`. Nothing in these records derives a radius, names a county, or adds a
+casualty inventory, and the canonical extent is preserved as recorded in `CF-NULL-EXTENT`.
+
+A further completion-only global diagnostic has cleared since the previous section:
+`MOVEMENT_SCALE_MINDWARS_NOT_LONGEST` no longer fires, because Mindwars_Part is now the longest
+delivered movement.
+
+Objective gates only. Chapters 94–101 remain `draft`. No origin account is ranked or resolved, and the
+three permanently unresolved Reveal IDs are untouched.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-094",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [94],
+      "documents": ["chapters/mindwars-part/mindwars-part-094-enrolled-by-default.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 94; 1288 Prose_Words, normal, draft, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-095",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [95],
+      "documents": ["chapters/mindwars-part/mindwars-part-095-the-only-defense-in-the-model.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 95; 1244 Prose_Words, normal, draft, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-096",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [96],
+      "documents": ["chapters/mindwars-part/mindwars-part-096-three-counties-wide.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 96, the reader-release chapter for REVEAL-AFFECTED-AREA-EXTENT; 1097 Prose_Words, normal, draft, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-097",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [97],
+      "documents": ["chapters/mindwars-part/mindwars-part-097-it-will-not-take-a-list.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 97; 1353 Prose_Words, normal, draft, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-098",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [98],
+      "documents": ["chapters/mindwars-part/mindwars-part-098-nobody-can-be-asked.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 98; 1304 Prose_Words, normal, draft, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-099",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [99],
+      "documents": ["chapters/mindwars-part/mindwars-part-099-authorized-not-consented.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 99; 1240 Prose_Words, normal, draft, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-100",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [100],
+      "documents": ["chapters/mindwars-part/mindwars-part-100-my-name-in-the-operator-field.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 100; 1223 Prose_Words, normal, draft, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-101",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [101],
+      "documents": ["chapters/mindwars-part/mindwars-part-101-silence-has-a-radius.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 101; 1934 Prose_Words, long-outlier, draft, class derived from observed words against a non-null outlier_purpose, MOT-RADIUS-01 resolved to this chapter, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-094-101",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [94, 95, 96, 97, 98, 99, 100, 101],
+      "documents": ["chapters/mindwars-part/mindwars-part-094-enrolled-by-default.md", "chapters/mindwars-part/mindwars-part-095-the-only-defense-in-the-model.md", "chapters/mindwars-part/mindwars-part-096-three-counties-wide.md", "chapters/mindwars-part/mindwars-part-097-it-will-not-take-a-list.md", "chapters/mindwars-part/mindwars-part-098-nobody-can-be-asked.md", "chapters/mindwars-part/mindwars-part-099-authorized-not-consented.md", "chapters/mindwars-part/mindwars-part-100-my-name-in-the-operator-field.md", "chapters/mindwars-part/mindwars-part-101-silence-has-a-radius.md"],
+      "description": "Drafting-batch audit of the complete Null decision cluster; 10683 Prose_Words across Chapters 94-101 including one declared long-outlier at 1934, the 100-101 Mara run at 3157 combined Prose_Words against the 3600 ceiling, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Objective reruns after the Chapters 62–101 review repairs
+
+An editorial review of the delivered Mindwars range produced targeted repairs to seventeen chapters.
+Four were canon or mechanics corrections and the rest were craft and copyedit changes. Every earlier
+gate over the superseded text remains in the audit trail unedited; these records evaluate the current
+prose.
+
+The four corrections were: Chapter 82 now audits the Vane–Osei operators' channel that
+`TL-PAIR-OPERATOR-TRAFFIC` assigns to it, with the Mara–Vane session held as a separate channel and
+calibration; Chapter 89's enabled flag is a bench diagnostic capture loop reported in the recording
+field rather than the consent-gated content recorder defaulting on, which restores `DEC-015`'s
+default-off mutual-consent rule; Chapters 94 and 98 now carry the live Mara–Nia channel that
+`TL-PAIR-MARA-NIA-NULL-DECISION` assigns to them, session-renewed rather than standing, recording off,
+every contribution deliberately sent; and Chapter 74 no longer has Mara locate or adjudicate the
+inaccessible phrase, which returns that reckoning to Chapter 75 where the `ArcEntry` places it.
+
+The remaining changes were craft: thesis-repetition trimmed in Chapter 90, an explanatory gloss removed
+from Chapter 97's closing beat, one ambiguous phrase clarified in Chapter 85, seven instances of a
+repeated self-announcing testimony construction recast across Chapters 80, 83, 84, 87, 92, 95, and 100,
+`enrolment` spelling corrected in Chapter 94's prose under `DEC-022` clause 1, and four `toward`
+corrections in Chapters 65 and 69.
+
+Every changed chapter's declared `words` was resynchronized to the observed count. All five
+cluster-aligned drafting batches were rerun and pass, which covers all seventeen changed files. Mara
+runs measure 2,492 at 80–81, 2,065 at 84–85, and 3,149 at 100–101 against the `DEC-016` ceiling of
+3,600.
+
+Objective gates only. Chapters 62–101 remain `draft`, and the editorial review that prompted these
+repairs is recorded separately.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-074-REVIEW-REPAIR",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [74],
+      "documents": ["chapters/mindwars-part/mindwars-part-074-only-on-the-answer.md"],
+      "description": "Chapter_Local_Gate rerun for Chapter 74 after removing Mara's adjudication of the inaccessible phrase; 1262 Prose_Words, normal, draft, zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-082-REVIEW-REPAIR",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [82],
+      "documents": ["chapters/mindwars-part/mindwars-part-082-timing-traffic-and-nothing.md"],
+      "description": "Chapter_Local_Gate rerun for Chapter 82 after correcting the audited channel to the Vane-Osei pairing recorded in TL-PAIR-OPERATOR-TRAFFIC; 1282 Prose_Words, normal, draft, zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-089-REVIEW-REPAIR",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [89],
+      "documents": ["chapters/mindwars-part/mindwars-part-089-a-disputed-recording-state.md"],
+      "description": "Chapter_Local_Gate rerun for Chapter 89 after reframing the enabled flag as a bench diagnostic rather than a default-on content recorder; 1356 Prose_Words, normal, draft, zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-090-REVIEW-REPAIR",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [90],
+      "documents": ["chapters/mindwars-part/mindwars-part-090-the-shore-was-us.md"],
+      "description": "Chapter_Local_Gate rerun for Chapter 90 after trimming thesis repetition so the reversal rests on the maps and the drawing; 1771 Prose_Words, long-outlier, draft, class derived from observed words against a non-null outlier_purpose, zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-094-REVIEW-REPAIR",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [94],
+      "documents": ["chapters/mindwars-part/mindwars-part-094-enrolled-by-default.md"],
+      "description": "Chapter_Local_Gate rerun for Chapter 94 after adding the assigned live Mara-Nia session and correcting enrolment spelling; 1473 Prose_Words, normal, draft, zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-097-REVIEW-REPAIR",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [97],
+      "documents": ["chapters/mindwars-part/mindwars-part-097-it-will-not-take-a-list.md"],
+      "description": "Chapter_Local_Gate rerun for Chapter 97 after removing the explanatory gloss from the closing beat; 1332 Prose_Words, normal, draft, zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-098-REVIEW-REPAIR",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [98],
+      "documents": ["chapters/mindwars-part/mindwars-part-098-nobody-can-be-asked.md"],
+      "description": "Chapter_Local_Gate rerun for Chapter 98 after adding the assigned live Mara-Nia session behind the arithmetic; 1400 Prose_Words, normal, draft, zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-062-069-REVIEW-REPAIR",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [62, 63, 64, 65, 66, 67, 68, 69],
+      "documents": ["chapters/mindwars-part/mindwars-part-062-not-only-me.md", "chapters/mindwars-part/mindwars-part-063-name-a-flag.md", "chapters/mindwars-part/mindwars-part-064-an-infrastructure-problem.md", "chapters/mindwars-part/mindwars-part-065-not-a-demonstration.md", "chapters/mindwars-part/mindwars-part-066-no-border-no-demand.md", "chapters/mindwars-part/mindwars-part-067-a-category-with-a-budget.md", "chapters/mindwars-part/mindwars-part-068-a-property-of-the-event.md", "chapters/mindwars-part/mindwars-part-069-nobody-says-the-word.md"],
+      "description": "Onset cluster rerun after the Chapter 65 and 69 towards corrections; 8873 Prose_Words across Chapters 62-69, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-070-077-REVIEW-REPAIR",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [70, 71, 72, 73, 74, 75, 76, 77],
+      "documents": ["chapters/mindwars-part/mindwars-part-070-copper-for-everybody.md", "chapters/mindwars-part/mindwars-part-071-an-inverted-copy.md", "chapters/mindwars-part/mindwars-part-072-the-defense-transmits.md", "chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md", "chapters/mindwars-part/mindwars-part-074-only-on-the-answer.md", "chapters/mindwars-part/mindwars-part-075-timing-and-no-content.md", "chapters/mindwars-part/mindwars-part-076-current-local-revocable.md", "chapters/mindwars-part/mindwars-part-077-fluency-is-not-permission.md"],
+      "description": "Counterphase cluster rerun after the Chapter 74 ownership repair; 9560 Prose_Words across Chapters 70-77, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-078-085-REVIEW-REPAIR",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [78, 79, 80, 81, 82, 83, 84, 85],
+      "documents": ["chapters/mindwars-part/mindwars-part-078-protection-nobody-asked-for.md", "chapters/mindwars-part/mindwars-part-079-the-capability-we-condemned.md", "chapters/mindwars-part/mindwars-part-080-the-first-we.md", "chapters/mindwars-part/mindwars-part-081-two-living-people-at-a-time.md", "chapters/mindwars-part/mindwars-part-082-timing-traffic-and-nothing.md", "chapters/mindwars-part/mindwars-part-083-chosen-risk.md", "chapters/mindwars-part/mindwars-part-084-inside-the-pocket.md", "chapters/mindwars-part/mindwars-part-085-single-answers-do-not-scale.md"],
+      "description": "Shield cluster rerun after the Chapter 82 channel correction and the 80, 83, 84, and 85 craft repairs; 9412 Prose_Words across Chapters 78-85, the 80-81 Mara run at 2492 and the 84-85 Mara run at 2065 combined Prose_Words, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-086-093-REVIEW-REPAIR",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [86, 87, 88, 89, 90, 91, 92, 93],
+      "documents": ["chapters/mindwars-part/mindwars-part-086-theories-with-believers.md", "chapters/mindwars-part/mindwars-part-087-not-a-language.md", "chapters/mindwars-part/mindwars-part-088-recorded-once-on-purpose.md", "chapters/mindwars-part/mindwars-part-089-a-disputed-recording-state.md", "chapters/mindwars-part/mindwars-part-090-the-shore-was-us.md", "chapters/mindwars-part/mindwars-part-091-integrity-fault.md", "chapters/mindwars-part/mindwars-part-092-ranked-by-belief.md", "chapters/mindwars-part/mindwars-part-093-one-synchronized-night.md"],
+      "description": "Territory cluster rerun after the Chapter 89 recording-state correction and the 87, 90, and 92 craft repairs; 10362 Prose_Words across Chapters 86-93 including one declared long-outlier at 1771, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-094-101-REVIEW-REPAIR",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [94, 95, 96, 97, 98, 99, 100, 101],
+      "documents": ["chapters/mindwars-part/mindwars-part-094-enrolled-by-default.md", "chapters/mindwars-part/mindwars-part-095-the-only-defense-in-the-model.md", "chapters/mindwars-part/mindwars-part-096-three-counties-wide.md", "chapters/mindwars-part/mindwars-part-097-it-will-not-take-a-list.md", "chapters/mindwars-part/mindwars-part-098-nobody-can-be-asked.md", "chapters/mindwars-part/mindwars-part-099-authorized-not-consented.md", "chapters/mindwars-part/mindwars-part-100-my-name-in-the-operator-field.md", "chapters/mindwars-part/mindwars-part-101-silence-has-a-radius.md"],
+      "description": "Null decision cluster rerun after the Chapter 94 and 98 pairing-beat additions and the 95, 97, and 100 craft repairs; 10927 Prose_Words across Chapters 94-101 including one declared long-outlier at 1934, the 100-101 Mara run at 3149 combined Prose_Words against the 3600 ceiling, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Second wave of Chapters 62–101 review repairs — endings and replay
+
+The first repair wave deferred four items as author-judgement calls rather than defects. On author
+direction that everything is flexible, three were taken and one was deliberately declined.
+
+Taken: Chapter 67's closing aphorism is replaced by a shorter beat that leaves the inference to the
+reader; Chapter 69 no longer editorializes the contradiction its cross-cut exists to create, reporting
+the annex and the signature timing instead; Chapter 70 drops the repeated finding-labelling and the
+portable maxim that the narrator then staged himself cutting; and Chapter 74 no longer re-narrates the
+log correction that Chapter 73 already dramatizes in real time, keeping only that the corrected word
+was Nia's.
+
+Declined, with reasons recorded so the decision is auditable rather than an oversight. Chapter 68's
+final line, *There was no question mark anywhere on the page*, does closely track its `ArcEntry` hook.
+It is retained because `DEC-018` clause 2 exists to prevent chapters from closing into self-summary,
+and this line does the opposite: it opens the obligation that Chapter 69 then answers. Chapter 70's
+first sentence also states a judgement early, and it is retained as characterization. Chapter 73 is not
+trimmed; the plan's 73/74/75 repartition was addressed from the Chapter 74 side, because Chapter 73's
+current text carries passing calibration findings and its aftermath is load-bearing.
+
+The unauthorized June dating in Chapters 93, 95, 96, and 101 is unchanged. It is internally consistent
+across all four chapters, and no planning record fixes any calendar month anywhere in the manuscript,
+so it is an addition rather than a contradiction and belongs to a planning decision rather than a prose
+repair.
+
+Both affected clusters were rerun and pass.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-062-069-ENDINGS-REPAIR",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [62, 63, 64, 65, 66, 67, 68, 69],
+      "documents": ["chapters/mindwars-part/mindwars-part-062-not-only-me.md", "chapters/mindwars-part/mindwars-part-063-name-a-flag.md", "chapters/mindwars-part/mindwars-part-064-an-infrastructure-problem.md", "chapters/mindwars-part/mindwars-part-065-not-a-demonstration.md", "chapters/mindwars-part/mindwars-part-066-no-border-no-demand.md", "chapters/mindwars-part/mindwars-part-067-a-category-with-a-budget.md", "chapters/mindwars-part/mindwars-part-068-a-property-of-the-event.md", "chapters/mindwars-part/mindwars-part-069-nobody-says-the-word.md"],
+      "description": "Onset cluster rerun after the Chapter 67 closing-beat replacement and the Chapter 69 contradiction-cut repair; 8866 Prose_Words across Chapters 62-69, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-070-077-ENDINGS-REPAIR",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [70, 71, 72, 73, 74, 75, 76, 77],
+      "documents": ["chapters/mindwars-part/mindwars-part-070-copper-for-everybody.md", "chapters/mindwars-part/mindwars-part-071-an-inverted-copy.md", "chapters/mindwars-part/mindwars-part-072-the-defense-transmits.md", "chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md", "chapters/mindwars-part/mindwars-part-074-only-on-the-answer.md", "chapters/mindwars-part/mindwars-part-075-timing-and-no-content.md", "chapters/mindwars-part/mindwars-part-076-current-local-revocable.md", "chapters/mindwars-part/mindwars-part-077-fluency-is-not-permission.md"],
+      "description": "Counterphase cluster rerun after the Chapter 70 verdict-paragraph repair and the Chapter 74 replay compression; 9464 Prose_Words across Chapters 70-77, Chapter 73 unchanged, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```

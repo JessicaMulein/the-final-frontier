@@ -2722,7 +2722,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2746,7 +2746,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2770,7 +2770,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2794,7 +2794,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1200,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2818,7 +2818,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2843,7 +2843,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2867,7 +2867,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2889,7 +2889,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1100,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2913,7 +2913,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2937,7 +2937,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2961,7 +2961,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2985,7 +2985,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3009,7 +3009,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "long-outlier",
     "estimated_words": null,
     "outlier_purpose": "Expansion to earn the reversal in full: the inherited outward maps, the measurements that contradict them, and the position of being the crossed rather than the crosser, without letting it become a thesis about the war.",
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3033,7 +3033,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3057,7 +3057,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3081,7 +3081,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3105,7 +3105,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3129,7 +3129,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3156,7 +3156,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3182,7 +3182,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3206,7 +3206,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3230,7 +3230,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3252,7 +3252,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3278,7 +3278,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "long-outlier",
     "estimated_words": 2300,
     "outlier_purpose": "Expansion to spend the decision at full cost in one place: the modeled benefit, the admitted civilian reach of a defensive silence, and the refusal to convert the canonical extent into a comforting figure.",
-    "status": "planned",
+    "status": "draft",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
