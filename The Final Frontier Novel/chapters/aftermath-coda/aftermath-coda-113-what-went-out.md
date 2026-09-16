@@ -33,7 +33,7 @@ A woman has the tune of something her mother sang her and not the words. She was
 
 A man in his forties rang to say he thought something had gone and he could not tell me what, only that a room in his week feels smaller, and he wanted to know whether that counted. I told him what I tell everybody: that I write down what he says, that I do not decide whether it counts, and that no instrument anywhere can corroborate him or contradict him. He said that was the most honest thing anybody had said to him in two years and then he cried for a while and then we finished the form.
 
-And a woman of eighty rang, described something perfectly clearly, and then said she was sixty-nine when it happened and eighty now and she was not going to swear it was the field rather than her own age, and could I write that down as well. I wrote it down as well. There is no test that separates those two and she knew it before I did.
+And a woman of eighty rang, described something perfectly clearly, and then said she was seventy-eight when it happened and eighty now and she was not going to swear it was the field rather than her own age, and could I write that down as well. I wrote it down as well. There is no test that separates those two and she knew it before I did.
 
 One of them I had to put the pen down for.
 

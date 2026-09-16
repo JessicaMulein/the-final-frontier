@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-PRIVATE-PROTOCOL
 motif_events: []
 hook: "Revocation reaches the live gate in the same second and nothing crosses, which is the safeguard working after the protocol had already asked for an unauthorized act."
-words: 1091
+words: 1093
 length_class: normal
 status: revised
 ---
@@ -91,7 +91,7 @@ Those were engineering conclusions. They did not reduce the human sequence.
 
 Nia answered one question. The software retained an older answer. I saw the current refusal and tested the machine anyway.
 
-I sent the metadata export to Julian because he had asked to see any record that separated operational proof from content. I did not send him a description of the session. The export carried no words. My account and Nia's, if she chose to make one, were separate records owned by the people who made them.
+I sent the metadata export to Julian because he had asked to see any record that separated operational proof from content. I did not include a description of the session in the export. The export carried no words. My account and Nia's, if she chose to make one, were separate records owned by the people who made them.
 
 Before we left, I photographed the console with the session summary still visible. The image contained no contribution. It contained two lines the interface had displayed together:
 

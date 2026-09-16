@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: []
 hook: "She says no in words she chooses very carefully, and the minute-taker writes considerably fewer of them down."
-words: 1076
+words: 1075
 length_class: normal
 status: revised
 ---
@@ -51,7 +51,7 @@ The clinical director had not spoken. She did then, and she was the only person 
 
 "There is a man on my ward," she said, "who spent eleven minutes last month trying to shape his daughter's name with a mouth that will not do it any more, and no daughter in the building. Your refusal is not free. It is paid for by him and by everybody behind him in a queue you will never see. I want that in the summary too."
 
-I said I accepted it. I said I had no answer that made her patient's position better. I said that a protection which only covers the people who can reach a copper room at the end of a service road is not a protection, and that I had written exactly that in my own log a fortnight earlier and it had not stopped being true when it became inconvenient to me.
+I said I accepted it. I said I had no answer that made her patient's position better. I said that a protection which only covers the people who can reach a copper room at the end of a service road is not a protection, and that I had written exactly that in my own log in February and it had not stopped being true when it became inconvenient to me.
 
 "Then you are refusing on principle," the man from public partnerships said, "and the principle costs him."
 

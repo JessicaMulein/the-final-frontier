@@ -29,7 +29,7 @@ My handshake used her address. It preceded the routing decision, and it carried 
 
 A later demonstration can show that I am capable of the kind of crossing she described. It cannot travel backward and witness the crossing itself.
 
-If my handshake caused the wanting, I entered without permission and learned it too late to prove it. If some other source did, it entered by a path we now know is physically available. And if neither did, then a tired woman on a bad morning wanted something badly and I have spent four months building an apparatus to take that from her.
+If my handshake caused the wanting, I entered without permission and learned it too late to prove it. If some other source did, it entered by a path we now know is physically available. And if neither did, then a tired woman on a bad shift wanted something badly and I have spent four months building an apparatus to take that from her.
 
 I wrote all three into the session cross-reference, in the order that does not flatter me, and I had to be argued into the third one.
 

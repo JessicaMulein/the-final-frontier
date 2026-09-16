@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: []
 hook: "Three records agree on when everything happened, and not one of them contains a single thing that was thought."
-words: 1084
+words: 1083
 length_class: normal
 status: revised
 ---
@@ -51,7 +51,7 @@ The phrase is in one place. It was in one place before the run too. The differen
 
 They also do not contain the reason. Nine pages of timing, and not one line of them says why a familiar sentence stopped being available. The seventeen seconds are in the log. What happened during the seventeen seconds is not, because what happened was that I went looking in the place where it lives and found the place and not the thing.
 
-And they do not contain an origin. This is the part I expect to have to say in a room, so I have written it out here first, at my brother's table, with the highlighter down.
+And they do not contain an origin. This is the part I expect to have to say in a room, so I have written it out here first, at my table, with the highlighter down.
 
 The records establish that a cancellation ran on my current answer. They establish that a later send carried nothing. They establish no fault. What they cannot do is reach backward past the run. Nothing in nine pages of consent transitions says where the certainty came from in December, or whether a research handshake reached me, or whether somebody wrote to me from outside. The metadata was made by a console that started existing months after the thing I am asked about. It is a good record of itself and it is silent about everything before it was switched on.
 

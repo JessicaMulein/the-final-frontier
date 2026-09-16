@@ -17,7 +17,7 @@ What I can set down is what happened on my side of that room, which is that a ph
 
 *The silence has a radius.*
 
-I said it first in a minuted statement in the small committee room on the eighteenth of June, before the emission, as the most honest thing I could think of to say about what I was going to do. I meant it. It was the sentence that admitted the cost, and I have been quietly proud of it for two years, and I have never once examined the shape of my own pride in it.
+I said it first in a minuted statement in the small committee room on the fourteenth of June, before the emission, as the most honest thing I could think of to say about what I was going to do. I meant it. It was the sentence that admitted the cost, and I have been quietly proud of it for two years, and I have never once examined the shape of my own pride in it.
 
 It has travelled the way I knew it would when I made it. It is quoted on page eleven of the September account. It is in two textbooks. A young man at a study day in the spring said it back to me as though he were handing me something, and I signed his copy, and I let him.
 

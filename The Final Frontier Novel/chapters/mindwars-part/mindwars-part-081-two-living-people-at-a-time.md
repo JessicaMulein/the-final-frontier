@@ -5,13 +5,13 @@ pov_id: POV-MARA
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []
 hook: "The channel hands her back her own mouth at the worst possible second, and the fallback is what saves the block."
-words: 1477
+words: 1481
 length_class: normal
 status: revised
 ---
 Volume two went live on the ninth of October and the first thing it cost was Osei's second shift.
 
-She had told the committee in writing that she would not work a second volume after eight hours, and on the ninth she stopped at eight hours, exactly as written, at twenty past midnight, with volume three unheld and a trailer sitting in a car park with nobody entitled to switch it on. That is not a failure of hers. It is the shape of a network that runs on two trained people, and I built the shape.
+She had told the committee in writing that she would not work a second volume after eight hours, and on the ninth she declined the second volume exactly as written and closed her shift at twenty past midnight, with volume three unheld and a trailer sitting in a car park with nobody entitled to switch it on. That is not a failure of hers. It is the shape of a network that runs on two trained people, and I built the shape.
 
 So at half past one I had Vane and volume two and nothing else.
 

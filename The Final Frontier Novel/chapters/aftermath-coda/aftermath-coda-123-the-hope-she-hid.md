@@ -19,7 +19,7 @@ I started with my answer, and it was short.
 
 I said: whatever you are about to tell me, do not tell me that I cannot mean it.
 
-I have been waiting nine months for somebody to say no to me honestly, and what I have had instead is four people deciding, out of kindness, that I was not in a state to be asked. A woman at the helpline who moved me to a different category. A clinician who wrote *understandable distress* and put his pen down. My own sister, who is a good woman and who said we would talk about it when I was feeling stronger, which was eleven months ago.
+I have been waiting nine months for somebody to say no to me honestly, and what I have had instead is three people deciding, out of kindness, that I was not in a state to be asked. A woman at the helpline who moved me to a different category. A clinician who wrote *understandable distress* and put his pen down. My own sister, who is a good woman and who said we would talk about it when I was feeling stronger, which was eleven months ago.
 
 Every one of them protected themselves and filed it as protecting me. I know the difference from the inside now and I can smell it coming across a table.
 

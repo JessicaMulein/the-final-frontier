@@ -53,7 +53,7 @@ I had a clean sheet and I got as far as a heading and three subheadings before t
 
 There is no demonstrated inverse operation in the mechanism. The field subtracts. Nothing in the loader, parameter file, ramp or emitter runs the other way. A counterphase cancels an oscillation while it is arriving. It does not identify or restore a thing that has gone.
 
-Second: even if there were an inverse, it would have to be aimed, and you cannot aim at what you cannot enumerate. I do not have the set. Nobody has the set. It could not be predicted before, it could not be enumerated while it ran, and it will not be completely mapped afterwards, because the only detector of a subtraction is the person it happened to, noticing, and choosing to say so. Thirty-four people said so before nine. There is no arithmetic that gets from thirty-one to the true figure, and anyone who offers you one is doing rhetoric.
+Second: even if there were an inverse, it would have to be aimed, and you cannot aim at what you cannot enumerate. I do not have the set. Nobody has the set. It could not be predicted before, it could not be enumerated while it ran, and it will not be completely mapped afterwards, because the only detector of a subtraction is the person it happened to, noticing, and choosing to say so. Thirty-four people said so before nine. There is no arithmetic that gets from thirty-four to the true figure, and anyone who offers you one is doing rhetoric.
 
 Third, and this is the one that stopped me writing.
 

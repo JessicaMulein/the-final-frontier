@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-CODA-OUTWARD
 motif_events: [MOT-RECORD-03, MOT-KNOCK-03, MOT-WHOSE-01]
 hook: "She stands at a stranger's door inside the affected area, knocks, waits, and is left holding a question about provenance that nobody is going to answer for her."
-words: 1560
+words: 1540
 length_class: normal
 status: revised
 ---
@@ -17,7 +17,7 @@ I have been to thirty-one doors since February. Fourteen opened. Four of the fou
 
 The script I use at doors took me a fortnight to write and it is four sentences.
 
-My name is Mara Venn. On the night of the eighteenth of June, three years ago, I operated the field that was raised over this area. I have come to ask whether anything was taken from you that night, and to answer any question you want to put to me. I have nothing to offer and nothing to give back.
+My name is Mara Venn. On the night of the fourteenth of June, three years ago, I operated the field that was raised over this area. I have come to ask whether anything was taken from you that night, and to answer any question you want to put to me. I have nothing to offer and nothing to give back.
 
 The last sentence is in it because the first draft did not have it, and I stood on a step in Kelsden Row watching a man's face do arithmetic, and I understood that a woman arriving at your door saying she is responsible reads, for about four seconds, as a woman arriving with something.
 
@@ -35,7 +35,7 @@ Seven numbered paragraphs in my own handwriting, into the Trust's rolling deposi
 
 Six of the paragraphs are chronology and settings I have deposited four times already. Paragraph five is not.
 
-*Five. I was subject to a consent protocol for the bounded cancellation trials. Its requirement was a current, specific, revocable answer from every person inside the volume, given at the time of the act, and I was held to it in a room eleven feet by nine, and I complied with it, and I argued for it. On the night of the eighteenth of June I operated the same mechanism, at the same settings class, across an affected area canonically described as three counties wide, and asked nobody, because there was no one it was possible to ask. Both of those are true and I have never written them down in the same paragraph before.*
+*Five. I was subject to a consent protocol for the bounded cancellation trials. Its requirement was a current, specific, revocable answer from every person inside the volume, given at the time of the act, and I was held to it in a room eleven feet by nine, and I complied with it, and I argued for it. On the night of the fourteenth of June I operated the same mechanism, at the same settings class, across an affected area canonically described as three counties wide, and asked nobody, because there was no one it was possible to ask. Both of those are true and I have never written them down in the same paragraph before.*
 
 That is all of it. There is no paragraph six that develops it.
 
@@ -67,7 +67,7 @@ She looked at me in her own hallway with the rain starting behind me and she sai
 
 I have been asked for a lot of things in three years. Compensation, an explanation, a public statement, my resignation, and once, in a front room, for four or five syllables. This is the only question anybody has put to me that I could not even begin.
 
-Because the honest answer is a list of what nobody knows. Nothing in the record establishes whether her morning was an arrival at all, or ordinary human error on an ordinary day, and no method exists to separate the two. If it was an arrival, nothing establishes who or what produced it. The carrier stopped at twenty-six minutes past four on the nineteenth of June and nothing accompanied it, nobody claimed it, no counterparty was ever identified, no surrender was received, and there is no return address to send a question to. My field was the answer to that traffic and my field is also the reason a third of a woman's private language is not where she left it. I cannot tell this woman in her hallway whose the thing in her head was, and neither can anybody else who is alive.
+Because the honest answer is a list of what nobody knows. Nothing in the record establishes whether her morning was an arrival at all, or ordinary human error on an ordinary day, and no method exists to separate the two. If it was an arrival, nothing establishes who or what produced it. The carrier stopped at twenty-six minutes past four on the fifteenth of June and nothing accompanied it, nobody claimed it, no counterparty was ever identified, no surrender was received, and there is no return address to send a question to. My field was the answer to that traffic. I cannot tell this woman in her hallway whose the thing in her head was, and neither can anybody else who is alive.
 
 I told her that. All of it, in about a minute, without softening the ends.
 

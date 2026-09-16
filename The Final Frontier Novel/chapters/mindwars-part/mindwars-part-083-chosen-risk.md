@@ -65,7 +65,7 @@ I did not open it. I gave Ravi two fingers flat, through the mesh, so that he wo
 
 Forty-eight seconds is not a long time to sit in a chair in a hot room holding a switch you have decided not to use. It is the longest I have been anywhere.
 
-The field dropped at sixty. The number came back at about forty seconds after that, which is slower than the route order and faster than never, and I dialled it from the bench phone in front of both of them to prove it, and Joss answered and asked what was wrong, because I had never once rung him at twenty to eight on a Tuesday.
+The field dropped at sixty. The number came back at about forty seconds after that, which is slower than the route order and faster than never, and I dialled it from the bench phone in front of both of them to prove it, and Joss answered and asked what was wrong, because I had never once rung him at twenty to eight on a Sunday.
 
 I said nothing was wrong and that I would come round at the weekend.
 

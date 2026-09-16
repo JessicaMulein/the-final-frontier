@@ -5,13 +5,13 @@ pov_id: POV-NIA
 timeline_id: TL-MINDWARS-TERRITORY
 motif_events: []
 hook: "The transcript is four minutes long and completely true, and by evening two institutions have asked her for it."
-words: 1449
+words: 1451
 length_class: normal
 status: revised
 ---
 There are two forms and that is the whole design.
 
-The first is the one we have used since March. Named person, named partner, scope, window, revocable, signed at the time. The second one did not exist until the eighteenth of November, because until the eighteenth of November nobody had wanted it, and it says one thing: that the content of this session may be recorded. Separate paper, separate signature, separate line for the time.
+The first is the one we have used since March. Named person, named partner, scope, window, revocable, signed at the time. The second one exists only because I proposed a recorded session for the eighteenth of November. Before that proposal nobody had wanted it, and it says one thing: that the content of this session may be recorded. Separate paper, separate signature, separate line for the time.
 
 I asked for it to be separate paper rather than a box on the first form. A box is a thing people tick on the way past.
 
@@ -23,7 +23,7 @@ Mara agreed within about four seconds of my finishing the sentence, which I had 
 
 I wrote them at Joss's, which is where I write things.
 
-We have had the same standing Thursday for seven years, at his place, because his kitchen table is a bench with a vice bolted to one end and there is always something on it in pieces. That Thursday it was a food mixer from 1974 belonging to a woman four doors up who had been quoted more to repair it than a new one costs, which is the kind of arithmetic that makes my brother go quiet and get the small screwdrivers out.
+We have had the same standing Wednesday for seven years, at his place, because his kitchen table is a bench with a vice bolted to one end and there is always something on it in pieces. That Wednesday it was a food mixer from 1974 belonging to a woman four doors up who had been quoted more to repair it than a new one costs, which is the kind of arithmetic that makes my brother go quiet and get the small screwdrivers out.
 
 He does not know what I do beyond dispatch. He knows there is a thing on the news, and that his sister writes forms about it, and in three years he has asked me twice, and both times he took the first answer I gave him and passed me the salt.
 

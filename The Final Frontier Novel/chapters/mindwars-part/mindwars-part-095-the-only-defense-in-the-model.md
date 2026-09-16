@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-NULL-DECISION
 motif_events: []
 hook: "The model gives her one answer that works and cannot give her the name of a single person it will take something from."
-words: 965
+words: 972
 length_class: normal
 status: revised
 ---
@@ -17,7 +17,7 @@ What I had asked it was narrow. Given the fitted rate, given a synchronized even
 
 It evaluated four.
 
-The first three candidates produced the inventory we already had. Four copper rooms protected at most a dozen people at three in the morning. Nine pockets, ten if the trailers came, answered nine or ten acquisitions. Pairing made those pockets easier to coordinate and added no coverage. A model does not care how elegant a thing is.
+The first three candidates produced the inventory we already had. Four copper rooms protected at most a dozen people at three in the morning. Nine pockets, ten if the trailers came, could answer at most four simultaneous acquisitions with the two available operators. Pairing made those pockets easier to coordinate and added no coverage. A model does not care how elegant a thing is.
 
 The fourth candidate is the one I had put in the run as a control, in the way you put a straight line in a fit so that you can see what the curve is worth.
 

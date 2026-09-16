@@ -5,7 +5,7 @@ pov_id: POV-JULIAN
 timeline_id: TL-CODA-PUBLIC-ACCOUNTING
 motif_events: []
 hook: "He could warn Mara and let her have an answer ready, and instead he sends Safiya the address and leaves the day to her."
-words: 1228
+words: 1222
 length_class: normal
 status: revised
 ---
@@ -27,7 +27,7 @@ She does not say why. She does not ask for a remedy, a hearing, or a finding. Sh
 
 I read it four times over two days and each time I got further from being able to file it.
 
-I cannot verify one word of it. There is no independent corroboration, no repeatable test, and no method that separates what she reports from other causes. Custody does not warrant truth. It warrants provenance: that this document is what it says it is, that it arrived when the log says it arrived, that nobody has altered it, and that the person who wrote it was the person it happened to. That is the whole of what I can put my name to and it is worth exactly as much as it is worth.
+I cannot verify one word of it. There is no independent corroboration, no repeatable test, and no method that separates what she reports from other causes. Custody does not warrant truth. It warrants provenance: that this document is what it says it is, that it arrived when the log says it arrived, that nobody has altered it, and that the identified claimant wrote it. That is the whole of what I can put my name to and it is worth exactly as much as it is worth.
 
 There is a facilitation procedure. Where a claimant asks to be put in contact with a named individual, the Trust approaches that individual, explains the request in general terms, and asks whether they consent to contact. It takes between four and nine weeks. It is a decent procedure and I helped write it.
 

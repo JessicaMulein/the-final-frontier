@@ -23,7 +23,7 @@ The numbered entry is mine. I made it. I know exactly what I wrote and exactly w
 
 Nobody smoothed it. Citation smoothed it. An inference that gets cited four times acquires the grammar of a finding, and after that the burden mysteriously moves to anyone who wants to unsettle it.
 
-It remains an inference. It has not been established. It is not established by page nine, by the chain, or by this chapter, and the sentence I placed beside it in the event history in June is still the only thing standing next to it anywhere.
+It remains an inference. It has not been established. It is not established by page nine, by the chain, or by this account, and the sentence I placed beside it in the event history in June is still the only thing standing next to it anywhere.
 
 Our answer went out on the sixth of September, four days later. It was the second of the conditioned releases, built to the same pattern as the one we put up in late June about the operation itself, because by then the pattern was the only thing we had that the other side did not.
 
@@ -41,7 +41,7 @@ There is no body. Not a slow one, not an underfunded one, not one that would nee
 
 Dalby had it out with me on the eighteenth, in the café on the ground floor of the county building, because neither of us wanted a room with a table in it.
 
-She had been lead counsel opposite me for nearly three years. The September account was hers in the way that matters: she did not write it, she decided when it went out, and she went out four days before us because she knew our conditions took weeks to clear and hers took an afternoon.
+She had been lead counsel opposite me for nearly three years. The September account was hers in the way that matters: she did not write it, she decided when it went out, and it went out four days before ours because she knew our conditions took weeks to clear and hers took an afternoon.
 
 She conceded the principle immediately, which is what she always did.
 

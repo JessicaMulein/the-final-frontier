@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []
 hook: "Two streets apart, one block gets a protected night and the other gets the same night without it."
-words: 1315
+words: 1317
 length_class: normal
 status: revised
 ---
@@ -13,11 +13,11 @@ The calibration with Osei took eleven days, and I had assumed it would take two.
 
 That assumption is the most expensive thing I have been wrong about, and it was not a small carelessness. I had a working channel with Vane by then. I knew what the process felt like from the inside, I had the settings written down, and I went into the first session with Osei expecting to transfer them across the way you would move a template between two machines of the same make.
 
-They do not transfer. Not the settings, not the timings, not the thresholds at which a prepared contribution goes and a half-formed one does not. A channel is calibrated between two particular people and it holds only between those two. Vane and I took nine days in the summer. Osei and I took eleven in October, working evenings around her shifts, and at the end of it I had a second channel and no method for producing a third faster than the first two.
+They do not transfer. Not the settings, not the timings, not the thresholds at which a prepared contribution goes and a half-formed one does not. A channel is calibrated between two particular people and it holds only between those two. Vane and I took nine days in the summer. Osei and I took eleven in September, working evenings around her shifts, and at the end of it I had a second channel and no method for producing a third faster than the first two.
 
 During those eleven days there were nineteen arrivals in the two counties. None of them was in a place with a pocket over it. That is not a reproach against anybody. It is the pace of the thing set against the pace of us.
 
-By the twenty-fourth we held six.
+By the twenty-fourth of October we held six.
 
 I did the accounting properly that week because a committee had asked for coverage and because I wanted to see it written down in a form I could not argue with.
 

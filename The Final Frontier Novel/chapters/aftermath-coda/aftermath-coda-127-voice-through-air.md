@@ -13,7 +13,7 @@ She spoke until twenty past one, and I am not going to set down a word of it.
 
 Not a noun. Not an image. Not the order she chose. The condition she set was that nothing would be kept, and an account is a machine for keeping.
 
-So this is a chapter about a room with nothing in it.
+So this is an account of a room with nothing in it.
 
 I have no way of establishing that any of it is accurate. There is no document, no photograph in front of me, no third party, and there is not going to be. What I had was a voice in my front room in the dark, because neither of us got up to put the light on for a long time after it stopped being light.
 

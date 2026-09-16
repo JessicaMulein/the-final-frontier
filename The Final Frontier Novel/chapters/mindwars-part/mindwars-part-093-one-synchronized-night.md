@@ -33,7 +33,7 @@ A pocket is one volume with one operator's answer behind it. An operator holds t
 
 That architecture is not a limitation I failed to solve. It is the design, it is the thing I argued for in a cold hall in September, and I would argue for it again on the same grounds.
 
-Against a synchronized event it fails completely, and it fails in a way that has nothing to do with effort. Nine pockets on the best December projection, ten if the trailers come. Two operators. If forty things happen in the same hour in forty places, the defence covers nine of them and there is no version of working harder, longer, or more bravely that touches the other thirty-one. You cannot serialize a simultaneous event. That is not a shortage of resolve, it is arithmetic, and I have been in enough rooms this year to know that it will be heard as the first thing.
+Against a synchronized event it fails completely, and it fails in a way that has nothing to do with effort. Nine pockets on the best December projection, ten if the trailers come. Two operators. If forty things happen in the same hour in forty places, the defence covers four of them and there is no version of working harder, longer, or more bravely that touches the other thirty-six. You cannot serialize a simultaneous event. That is not a shortage of resolve, it is arithmetic, and I have been in enough rooms this year to know that it will be heard as the first thing.
 
 I have sat with this for a fortnight before writing it down, and what I keep arriving at is that the question has changed shape under me.
 

@@ -18,7 +18,7 @@ In August 2025 a group at Stanford went a layer in. Not attempted speech, which 
 
 This novel's only real rule is that entry requires a current answer from the person behind the door. While I was writing it, a laboratory shipped that rule as a feature.
 
-Nor does all of it need surgery. A decoder published in 2026 reads typed sentences off the magnetic fields outside an intact skull: about twenty-nine per cent character error on average, eighteen for its best participant, with a second version reporting some sixty-one per cent of words recovered and seventy-eight for its best. It also requires the person to hold still inside a scanner that lives in a magnetically shielded room. I enjoy that more than I should. In this book the copper goes around the person and the handle is on the inside. In the world the shielding goes around the instrument, and it is there to keep the world out of the machine.
+Nor does all of it need surgery. A decoder published in 2026 reads typed sentences off the magnetic fields outside an intact skull: about twenty-nine per cent character error on average, eighteen for its best participant. It also requires the person to hold still inside a scanner that lives in a magnetically shielded room. I enjoy that more than I should. In this book the copper goes around the person and the handle is on the inside. In the world the shielding goes around the instrument, and it is there to keep the world out of the machine.
 
 So much for reading data out. Writing *in* is not hypothetical either. In 2020 a group traced letter shapes onto the visual cortex of blind and sighted volunteers by stimulating electrodes in sequence, and the volunteers read them back — as many as eighty-six forms a minute. Deep brain stimulation has treated movement disorders for decades. Focused ultrasound and temporal interference stimulation now reach structures well below the cortex without opening the skull, and in 2026 a study reported ultrasound delivered to the frontal eye fields changing which way and how quickly volunteers chose to look.
 
@@ -30,7 +30,7 @@ You do not need a multi-million-dollar scanner to read a mind if you already pos
 
 Which brings me to the part I would bet on being early, and it is not the hardware. It is the paperwork.
 
-Colorado amended its privacy act in 2024 to treat neural data as sensitive. California followed the same year, and other states have since. In November 2025 the member states of UNESCO adopted the first global standard on the ethics of neurotechnology, and it does something worth noticing: it covers neural data, and it also covers inferences about mental states drawn from data that is not neural at all. The drafters understood that you do not need the aperture.
+Colorado amended its privacy act in 2024 to treat neural data as sensitive. California followed later the same year. In November 2025 the member states of UNESCO adopted the first global standard on the ethics of neurotechnology, and it does something worth noticing: it covers neural data, and it also covers inferences about mental states drawn from data that is not neural at all. The drafters understood that you do not need the aperture.
 
 So the consent machinery is being built ahead of the capability, and it is being built in the vocabulary this novel is made of. Authorization. Revocability. Whether a yes was specific and whether it was current. Who held the record, and what the record is evidence of.
 
@@ -77,6 +77,10 @@ Beyond the surface: a review of transcranial temporal interference stimulation f
 https://www.frontiersin.org/journals/neurology/articles/10.3389/fneur.2025.1661049/full
 
 Colorado House Bill 24-1058, adding biological data, and with it neural data, to the sensitive-data definition of the Colorado Privacy Act. Signed 17 April 2024.
+
+California Senate Bill 1223, adding neural data to the definition of sensitive personal information under the California Consumer Privacy Act. Approved 28 September 2024.
+
+https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202320240SB1223
 
 Recommendation on the Ethics of Neurotechnology. UNESCO, adopted November 2025, in force 12 November 2025.
 

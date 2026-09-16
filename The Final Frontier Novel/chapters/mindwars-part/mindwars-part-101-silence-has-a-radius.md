@@ -11,7 +11,7 @@ status: revised
 ---
 I asked for it to be minuted, and the clerk asked me twice whether I was sure, because nobody requests a minute of their own statement unless they are protecting themselves and I was very obviously doing the opposite.
 
-The eighteenth of June, ten past nine in the morning, in the small committee room rather than the large one. Seven people. The clerk, a recorder running because I asked for it to be running, and a jug of water that nobody touched for fifty minutes.
+The fourteenth of June, ten past nine in the morning, in the small committee room rather than the large one. Seven people. The clerk, a recorder running because I asked for it to be running, and a jug of water that nobody touched for fifty minutes.
 
 The instrument was signed. The timetable had eleven milestones on it and ten of them were struck through. Everything that was going to be decided had been decided, and I want that understood before anything else in this account: I was not there to argue, I did not ask anybody to stop, and nothing I said that morning was capable of stopping it. If I had wanted to stop it the place to do that was March and the method was refusing to configure the emission, and I did not refuse, and I am not going to be allowed to pretend otherwise and neither should I be.
 

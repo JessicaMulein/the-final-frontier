@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-TRUST-FORMATION
 motif_events: [MOT-RECORD-01]
 hook: "Her demand becomes an institution inside a week, and she is not certain that counts as winning."
-words: 1528
+words: 1525
 length_class: normal
 status: revised
 ---
@@ -85,7 +85,7 @@ There was one more problem and I found it holding the schedule. What I wanted pr
 
 "You cannot deposit their document," Julian said. "You can deposit yours."
 
-I read my own ninety-one words again and understood something about them that I had not designed on purpose. I had written the field name into my refusal. The transmit-enable field on page nine, the shared clock, the phase control, the address bus, present at every deployed address, disabled by software and enabled by configuration. I had put the specification inside my own sentence because I had wanted the sentence to be unarguable in a room, and the effect four months later was that the technical fact travelled as my testimony and needed nobody's permission to be kept.
+I read my own ninety-one words again and understood something about them that I had not designed on purpose. I had written the field name into my refusal. The transmit-enable field on page nine, the shared clock, the phase control, the address bus, present at every deployed address, disabled by software and enabled by configuration. I had put the specification inside my own sentence because I had wanted the sentence to be unarguable in a room, and the result was that the technical fact travelled as my testimony and needed nobody's permission to be kept.
 
 "That was luck," I said.
 

@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-NULL-NIGHT
 motif_events: []
 hook: "The peak is loud enough that people arrive already certain of things they never decided, and she asks each of them at the door anyway."
-words: 1438
+words: 1439
 length_class: normal
 status: revised
 ---
@@ -25,7 +25,7 @@ I worked with my mouth, which is what I had.
 
 Baird does not believe anything has arrived. She has said so in rooms where it cost her something to say it: nineteen years on a console, people going strange in exactly these ways every year of it, and what is new is a receiver in a shed and a category on a form. She was there from nine until half past four. At about one she told Reyner that in nineteen years she had never once seen a night improved by a man with a hammer, which is a reference to a window he broke in November, and he said the window had been improved, and she said that was between him and the window. She had brought six loaves and a box of teabags out of her own money and would not discuss it.
 
-They started at 22:40. The heaviest stretch at the door was 23:10 to 00:40, and in that ninety minutes nineteen people came in.
+People started arriving at 22:40. The heaviest stretch at the door was 23:10 to 00:40, and in that ninety minutes nineteen people came in.
 
 I did not know it that night and I know it now: the pattern the county was working against did not come up to its own worst until after two. The busiest part of my night and the loudest part of theirs were three hours apart. I have no account of that which does not require me to guess, so I am not going to give one.
 

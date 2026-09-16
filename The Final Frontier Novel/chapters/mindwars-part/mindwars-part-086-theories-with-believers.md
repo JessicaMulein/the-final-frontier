@@ -41,6 +41,6 @@ So I did not fill in the third box.
 
 I wrote, in the space provided for a primary judgment with confidence: *Six accounts are recorded at Annex A, each attributed to the person who holds it and to the material it rests on. No primary judgment is available. The record contains no authenticated sender, and any ranking of these six would be a statement about the people who hold them rather than about the origin of the arrivals.*
 
-That is ninety-one words in a box built for thirty, and I wrote it out longhand first to be sure of every clause, and I signed it, and I sent it in on the fourteenth with Annex A attached and all six accounts in the order I had received them, which is not an order of anything.
+That is fifty-seven words in a box built for thirty, and I wrote it out longhand first to be sure of every clause, and I signed it, and I sent it in on the fourteenth with Annex A attached and all six accounts in the order I had received them, which is not an order of anything.
 
 The assessment still goes to print on the twentieth.
