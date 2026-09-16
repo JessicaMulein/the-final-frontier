@@ -5,9 +5,9 @@ pov_id: POV-MARA
 timeline_id: TL-NULL-DECISION
 motif_events: []
 hook: "She spends the night trying to hand the field a list of names, and it will not take one."
-words: 1332
+words: 1336
 length_class: normal
-status: draft
+status: revised
 ---
 I went into the copper room at nine on the evening of the tenth of April and came out of it at twenty past six the next morning, and I did not achieve any of the five things I went in to do.
 
@@ -29,7 +29,7 @@ At low power the edge is not an edge. It is a gradient over hundreds of metres, 
 
 The third was enumerating during. If I cannot choose who, then at least instrument it: know, while it is running, who is being affected and how much, so that the thing is auditable in flight the way a pairing session is.
 
-There is no telemetry of a subtraction. This is the attempt that took the longest because it is the one I most wanted, and I built three versions of a monitoring scheme between midnight and half past two before I understood that I was trying to measure an absence from the outside. The field does not report what it removes. The only instrument that can detect that something has gone from a person's reach is that person, noticing, and telling somebody. Everything else is inference from behaviour, after the fact, at a population level, with no way to attribute one person's Tuesday to the field rather than to being fifty-eight and tired.
+There is no telemetry of a subtraction. This is the attempt that took the longest because it is the one I most wanted, and I built three versions of a monitoring scheme between midnight and half past two before I understood that I was trying to measure an absence from the outside. The field does not report what it removes. The only instrument that can detect that something has gone from a person's reach is that person, noticing, and telling somebody. Everything else is inference from behaviour, after the fact, across a population, with no way to attribute one person's Tuesday to the field rather than to a bad week and a worse night's sleep.
 
 The fourth was mapping after. Accept the ignorance in flight, and reconstruct the affected set afterwards, properly, with a survey.
 
@@ -37,13 +37,13 @@ You will find the people who noticed. That is who a survey finds: the ones who r
 
 The fifth was reversal, and I did that one last because I already knew.
 
-There is no additive inverse. I ran the obvious thing anyway at ten past four, on the bench, on a signal generator rather than on any living thing, which is the only place any of this was ever going to be run: raise the cancellation, then raise its inverse and see whether the inverse restores. It does not. Adding a field to a field does not put back what a subtraction took. Cancellation is not a transformation you can invert, it is a removal, and the mechanism has no mode that returns anything to anybody. There is nothing to run afterwards. There is no apology in the physics.
+There is no additive inverse in the emitter mechanism. I ran the obvious thing anyway at ten past four, on the bench, on a signal generator rather than on any living thing, which is the only place any of this was ever going to be run: raise the cancellation, then raise its inverse and see whether the waveform returns. It does not. The hardware has no inverse operation that restores what its subtraction removed from the measured field. That establishes no clinical fact about relearning or recovery; it establishes that the emitter cannot put anything back by running the physics in reverse. There is no apology in the mechanism.
 
 At about five I did the thing that I am going to be asked about, if anybody ever asks me about any of this properly.
 
 I made a list.
 
-Eleven names, on the back of a printout, of people I know who are inside the extent. My aunt is on it. Anand is on it. Both operators are on it. It is not a defensible list, it is not a sample, and it is not the list of everybody I care about; it is the eleven people whose names came to me between one thought and the next, and it took me about forty seconds to write and I am not going to reproduce it here.
+Eleven names, on the back of a printout, of people I know who are inside the extent. My aunt is on it. Ravi is on it. Both operators are on it. It is not a defensible list, it is not a sample, and it is not the list of everybody I care about; it is the eleven people whose names came to me between one thought and the next, and it took me about forty seconds to write and I am not going to reproduce it here.
 
 Then I opened the parameter file and tried to put them in.
 

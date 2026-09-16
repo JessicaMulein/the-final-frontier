@@ -5,13 +5,13 @@ pov_id: POV-NIA
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []
 hook: "She keeps her hand on the revocation the whole time and never uses it, and the not using is the part that is hers."
-words: 1310
+words: 1309
 length_class: normal
-status: draft
+status: revised
 ---
 The stop is a grey plastic switch on eight feet of orange cable, the kind that hangs off a lathe, and it cost about four pounds.
 
-That is the whole of it. There is no interlock, no key, no second signature, no supervisor with an override. The cable runs to the emitter's enable line and the switch breaks it, and when the switch is open the field is not there any more, and it does not matter what anybody in the building thinks about that.
+That is all of it. There is no interlock, no key, no second signature, no supervisor with an override. The cable runs to the emitter's enable line and the switch breaks it, and when the switch is open the field is not there any more, and it does not matter what anybody in the building thinks about that.
 
 I asked for it to be that switch specifically. Ravi offered me a proper isolator with a shrouded key and I said no, because a key is a thing you can be asked to hand over and a handle is a thing you hold.
 
@@ -47,7 +47,7 @@ My thumb was on the switch. I did not open it.
 
 The field dropped at sixty seconds and the order came back before Ravi had finished writing the time. Not gradually. It came back the way a word comes back when you stop reaching for it, which is all at once and slightly embarrassing.
 
-Then we sat for eleven minutes because that was the protocol I had written, and Ravi drank most of a bottle of water and gave me the rest, and Halloran asked whether I wanted to stop at one run.
+Then we sat for twelve minutes because that was the protocol I had written, and Ravi drank most of a bottle of water and gave me the rest, and Halloran asked whether I wanted to stop at one run.
 
 I have thought about that question more than about anything else that happened in the room. I said no. There is a version where I say it was for the number and the briefing and the people in the pilot, and all of that is true and none of it is the whole truth. The other part is that I already have one thing that did not come back. I have had it for weeks. I wanted to know whether the second time would take something and give it back, or take something and keep it, and that question is not answerable in one run, and it was my head.
 

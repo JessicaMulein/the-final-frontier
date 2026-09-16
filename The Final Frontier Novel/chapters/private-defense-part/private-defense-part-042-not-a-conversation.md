@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []
 hook: "She can now describe precisely what a consented sentence feels like, which is how she knows the thing that took her judgment was not one."
-words: 766
+words: 789
 length_class: normal
 status: revised
 ---
@@ -77,4 +77,6 @@ She wrote in her notes before asking whether I was declining the pilot.
 
 "I'm declining active support, broad enrolment, and any claim that one signature can own both the transport and whatever a person chooses to put through it." I turned the agreement back to its first page and left the signature line empty. "I am not declining the sessions I chose with Mara. Those belong to their own answers."
 
-On my way out, I passed the calibration room. The two contact bands lay on opposite sides of the table. Both indicators were dark. Between them, the route diagram still had Mara's pencil line through the arrow.
+On my way out I passed the calibration room. Both indicators were dark and the two bands were lying on opposite sides of the table where we had left them.
+
+I got as far as the car park before the shaking started, which is when it always starts, about four minutes after the part that needed me to be steady.

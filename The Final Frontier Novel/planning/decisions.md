@@ -2557,3 +2557,104 @@ no POV identity, load, or movement allocation; sets no length target; and does n
 | Strip the appositive `which` from Nia to force separation | Attempted once under `DEC-019` clause 12, failed verification, withdrawn. Most instances carry genuine retrospective judgment or warmth; removing them would damage the prose and would not supply rhythm. |
 | Pass the Discovery movement gate on the strength of the fifteen repairs | The repairs are real and the clause-7 criterion still fails. Recording a pass would be the precise failure the editorial log exists to prevent, and it would take the pressure off the one fix that most improves the book. |
 | Defer the Nia pass until after Mindwars is drafted | The pass is cheapest now. Deferring it converts an eighteen-chapter repair into a thirty-two-chapter one. |
+
+---
+
+## DEC-023 — Back matter: an author's Afterword on the real state of the art
+
+- **Task:** Author-directed addition of reader-facing back matter; input to tasks 14, 15, 17, and 18
+  and to the audiobook Special Track catalogue **[AUTHOR]**
+- **Date:** 2026-09-16
+- **State:** `binding`; reader-facing document and layout authority. It creates no canon, no
+  extension, no timeline entry, no reveal, no motif, and no literal-phrase constraint.
+- **Selected:** One new root document, `back-matter.md`, holding an author-voice `## Afterword` and a
+  `## A note on sources`. The Afterword states plainly which part of the novel's mechanism is
+  invented, describes the published neurotechnology that is not invented, and argues that the
+  consent vocabulary the book is built from is arriving ahead of any capability that would need it.
+
+### Clause 1 — Why the book needs it and why it goes at the back
+
+The novel is a technothriller whose central instrument is impossible, and its epistemology is the
+null result: nothing in the record establishes the origin of the arriving want, and Chapter 128
+closes on a question nobody alive can answer. A reader who finishes that and asks *could this
+actually happen* is asking the right question, and the manuscript currently answers it nowhere.
+
+An epigraph cannot carry the answer. An epigraph is read before the evidence and would tell the
+reader what to conclude; the Afterword is read after it and can concede the physics without
+weakening anything, because the argument the book actually makes does not depend on the physics.
+`epigraph` also already exists as a distinct pending Special Track and is not repurposed here.
+
+### Clause 2 — The Afterword concedes the aperture and defends the argument
+
+The register is the author's, not Mara's, and it is stated in this order:
+
+1. **The aperture is invented.** Reception of a resolved mental state at a distance, through no
+   contact and no cooperation, is not near-term work and no published line points at it. Saying so
+   first is what makes the rest credible.
+2. **What is published, described accurately.** Per-subject fMRI semantic decoding of continuous
+   language that requires cooperation to train *and* to apply; inner speech decoded from motor
+   cortex with an intentional password gate; typed sentences recovered without surgery from magnetic
+   fields, inside a shielded room; percepts written into visual cortex by sequenced stimulation; deep
+   non-invasive modulation shifting a choice.
+3. **The gap is named and not closed.** Between a nudge in a bias and a certainty that arrives
+   already decided there is a distance nobody knows how to cross, and the Afterword says so.
+4. **The unpublished-programme question is answered honestly.** The published frontier consistently
+   requires surgery, a scanner in a shielded room, or hours of a willing person's stillness. The
+   cheap risk is therefore inference from ordinary data, not an aperture.
+5. **The paperwork is the early part.** Neural data is sensitive data under enacted US state law and
+   UNESCO's 2025 Recommendation reaches inferences about mental states drawn from non-neural data.
+   The governance vocabulary is already this book's vocabulary.
+6. **The portable claims.** A known sender is not an authorized one; a defence that enters
+   uninvited is still an entry; provenance is not truth; and where nobody can be asked, proceeding
+   is a signed decision. These survive being wrong about the instrument.
+
+It closes on the knock and the wait rather than on reassurance, because the coda does not reassure.
+
+### Clause 3 — Boundaries this document must respect
+
+- **No canon.** It is nonfiction author commentary and sits outside the `DEC-011`/`DEC-014`
+  precedence order entirely. It cannot be cited as authority for any Canon Fact, chronology,
+  identity, or naming rule, and no checker reads it.
+- **No literal-phrase exposure.** Every `LiteralPhraseConstraint` scans Chapter File Prose Bodies
+  only. Root Markdown is outside that scope by construction, so the Afterword's echoes of the
+  invitation and of the door neither satisfy nor violate `LPC-DID-I-SAY-YES` or
+  `LPC-WHOSE-WAS-THAT`, and no `scope_exclusions` value is added.
+- **No rights drift.** Requirements 9.10–9.12 bind `front-matter.md`. The Afterword repeats no
+  copyright or rights line, names no individual Canon_Source, and carries no recording or
+  performance ownership language, so it cannot create the partial-acknowledgment or
+  recording-claim conditions those requirements exist to prevent.
+- **Two root Markdown files, and no more.** `file-conventions.md` now lists `back-matter.md` in the
+  Layout tree and states the rule. A third reader-facing root document requires a new decision.
+- **Dated on purpose.** The accuracy figures will age. The sources note says so, the Afterword is
+  signed with the year, and a refresh before release is a copyedit rather than an amendment.
+- **Oxford British throughout,** per `DEC-022`.
+
+### Clause 4 — Audiobook status: catalogued later, not now
+
+The Afterword is narratable and the sources note is not. If it is ever produced, it is declared as a
+`closing_credits` Special Track with a `sequence` above the last chapter and below the reserved
+`1000`, `render_once = true`, `approval_status = "approved"`, and an `approved_sha256` matching the
+file. It must **not** be declared `front_matter`: `prefix_sequence` is the maximum over the
+opening-credits and front-matter sequences, so a front-matter declaration would renumber the output
+filename of every delivered chapter. No track is added by this decision and no rendered audio
+changes.
+
+### What this decision does not touch
+
+Every constraint preserved by `DEC-018` through `DEC-022` remains preserved. The 128-chapter
+architecture, the four movement blocks, the 56/32/33/7 POV loads, the Final_Targets, the motif
+families, the exclusion contract, and all recorded gate results are unchanged. Nothing here
+authorizes a chapter, alters a Chapter_Header, or adds an ArcEntry, so no ArcChange arises: the
+exclusion contract's synchronization list is triggered by a root rename, not by a new file, and the
+contract's `scope` already covers every path under the manuscript root at any depth.
+
+### Rejected alternatives
+
+| Alternative | Why rejected |
+|---|---|
+| A front epigraph instead | Read before the evidence, so it instructs the reader's conclusion and pre-empts the null result the book spends 128 chapters earning. `epigraph` is also a separate pending Special Track and should stay available for a short quoted opening. |
+| Extend `front-matter.md` with an Afterword section | Front matter is a Final_Prerequisite scanned by `check_front_matter` for rights markers, prohibited recording-ownership phrases, the excluded source title, and all-five-or-none canon titles. Putting fifteen hundred words of science commentary inside that file puts prose in front of a rights checker for no benefit and risks a false positive on wording that is not a rights claim. |
+| A chapter 129 in `aftermath-coda/` | Breaks the fixed 128-chapter architecture, requires a matching ArcEntry and a nine-key Chapter_Header, fails the outline/file bijection until every one of those exists, and demands an ArcChange — all to make nonfiction pass a fiction gate. It would also put author commentary inside literal-phrase scan scope. |
+| Fold the material into the existing in-world `## A note on the record` | That note is diegetic framing about Trust custody and provenance. Mixing the author's voice into it damages the one piece of apparatus that tells the reader how to read the record frame. |
+| Say nothing and let the novel stand alone | Defensible, and it was the state until now. It leaves the most common honest reader question unanswered, and it leaves the book looking like a claim about the future rather than an argument about consent that holds whether or not the instrument is ever built. |
+| Assert the technology is imminent | It is not, on any published evidence, and the book's credibility rests on the same discipline Mara applies to her own log: state the null result, do not dress it up. An Afterword that oversold would contradict the epistemology of the thing it follows. |

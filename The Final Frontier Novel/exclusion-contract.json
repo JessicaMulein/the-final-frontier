@@ -53,7 +53,7 @@
         "search-index-generation",
         "generated-song-index"
       ],
-      "reason": "The manuscript is prose, not a song source. Its root markdown (front-matter.md), its planning documents, and its 128 chapter files must never enter the lyrics catalog."
+      "reason": "The manuscript is prose, not a song source. Its root markdown (front-matter.md, back-matter.md), its planning documents, and its 128 chapter files must never enter the lyrics catalog."
     }
   ],
   "matching_rule": {

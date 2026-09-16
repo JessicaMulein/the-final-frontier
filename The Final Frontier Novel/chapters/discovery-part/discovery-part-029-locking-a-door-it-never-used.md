@@ -5,11 +5,11 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DOOR-INWARD
 motif_events: []
 hook: "She locks a door the channel has never needed, and the thing she wanted to explore has already come the other way."
-words: 1462
+words: 1469
 length_class: normal
 status: revised
 ---
-I processed the timing with the trial order still sealed, wrote the result to a read-only file, and put that file in Nia's hands before Anand took the tape off his envelope. Three timestamps in the log, in that order. It is the only part of the day I built to be checkable by somebody who has no reason to trust me.
+I processed the timing with the trial order still sealed, wrote the result to a read-only file, and put that file in Nia's hands before Ravi took the tape off his envelope. Three timestamps in the log, in that order. It is the only part of the day I built to be checkable by somebody who has no reason to trust me.
 
 She compared the order herself. When the match held she signed the observation she had made — action first, recognition second — and nothing else. She did not sign my mechanism. I signed that separately.
 
@@ -41,17 +41,17 @@ I wrote all three into the session cross-reference, in the order that does not f
 
 Nia put the third one there. I had produced two accounts, both of which had a machine in them, and she read them and asked why the only explanations I could write were ones where something had been done to her. I did not have an answer that survived being said out loud. I had built four months of instrumentation and it had quietly become the only category of cause I could see.
 
-I should also say what the procedure calls the address, because the label has been doing work the evidence has not. The written procedure says *person-specific*. The test behind that phrase separated four people. I have gone on using the procedure's word because it is the word in the signed records, and every time I write it I am lending a four-person result the authority of a general one.
+The procedure still said *person-specific*. I marked *tested set: four* beside the label before I closed the file.
 
 Neither of the first two is a finding, and the third is not a comfort. My private conviction sits where it sat before the session, easier to defend and no more admissible as history. I still believe I caused the wanting. Nia still refuses to let my belief become her origin, and the test has given me nothing that changes either of those facts.
 
-Then I closed it down. Person-specific filter off. Outgoing controller disabled, enable lead removed, driver checked into restricted storage. The relay went into a sealed cabinet with the original handshake record. I revoked every project credential except mine, Anand's, and compliance's, set raw acquisition to retain only the minimum field data the suspension order requires, and disabled resolved live output.
+Then I closed it down. Person-specific filter off. Outgoing controller disabled, enable lead removed, driver checked into restricted storage. The relay went into a sealed cabinet with the original handshake record. I revoked every project credential except mine, Ravi's, and compliance's, set raw acquisition to retain only the minimum field data the suspension order requires, and disabled resolved live output.
 
 Those are real acts. They change who can operate this apparatus and what it can do inside Northline. They change nothing about what has been learned. The address procedure exists in three signed records, the restricted summary exists in the institute's system, and the driver is a standard component available on a fortnight's lead time. Nothing in the physics requires Northline's room, only enough acquisition, reconstruction, and power to find the same inward relation.
 
 Containment, as far as I can still act on it, means reducing the number of hands. So I wrote a suspension notice with no offer attached, no specification, and no claim about who crossed Nia's boundary, sent it to the director and to compliance, and printed the current access list to tape inside the cabinet door.
 
-Anand waited in the hall while I shut down the test room. He has taken the two days he was owed, starting tomorrow, and he told me where he was going, and I have already forgotten, which is a thing about myself I noticed and did not like.
+Ravi waited in the hall while I shut down the test room. He has taken the two days he was owed, starting tomorrow, and he told me where he was going, and I have already forgotten, which is a thing about myself I noticed and did not like.
 
 "Does locking it help?" he asked.
 
@@ -59,9 +59,11 @@ Anand waited in the hall while I shut down the test room. He has taken the two d
 
 He looked through the glass at the dark rack. "That wasn't the question."
 
-I knew. He waited long enough to be sure I knew, then said the useful half of it: that of the four people who can still operate the apparatus, one is suspended, one is compliance, one is him, and none of us is the constraint. Then he went to get his coat, because he had a bus and he had already given me the sentence he came to give.
+I knew. He waited long enough to be sure I knew, then said the useful half of it: that of the three people who can still operate the apparatus, one is suspended, one is compliance, one is him, and none of us is the constraint. Then he went to get his coat, because he had a bus and he had already given me the sentence he came to give.
 
 The director's reply was on my screen when I got back to the office. She accepted the suspension notice as an internal control, thanked me for the clarity, and attached the confirmation for the preliminary meeting: one of the three dates I had offered, a room I have never booked, and an attendee list of eight.
+
+The eleventh had been the date until I stopped answering about it. Julian's condition made the meeting impossible without me, so the eleventh went quietly past while I said nothing, and then the director asked me for three dates herself and the choosing was mine. He built me a veto and I have now spent it on scheduling.
 
 I knew five of the names. Two of the others carry titles from organizations that are not in my project folder. The eighth line says *observer, to be confirmed*.
 

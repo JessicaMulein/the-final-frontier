@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 
+.audiobook/tools/kokoro-local/.venv/
+.audiobook/tools/kokoro-local/__pycache__/
+
 # `.pytest_cache/` needs no entry: pytest writes its own `.gitignore` containing
 # `*` inside that directory, so it already excludes itself.
 
@@ -20,3 +23,7 @@ __pycache__/
 .audiobook/src/*.egg-info/
 .audiobook/infrastructure/packaged.*
 .audiobook/infrastructure/*-outputs.json
+
+# Written-edition compile outputs (sources under .tools/book/ stay tracked).
+book/build/
+book/dist/

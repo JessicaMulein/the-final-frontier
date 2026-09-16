@@ -79,7 +79,7 @@ He had put soup on the small table between the workbench and the window. He move
 
 He did not ask about the contact mark above my ear. When my phone lit beside the bowl, he pointed at it. "That one has been trying to get your attention since you came in."
 
-The public list of shielded rooms had added eleven addresses in nine days. Two were commercial rooms rented by the hour. Four belonged to institutions and opened only to staff. One required a referral. The others had booking forms, and every form asked for a time in the future.
+The public list of shielded rooms had added fourteen addresses in nine days. Two were commercial rooms rented by the hour. Four belonged to institutions and opened only to staff. One required a referral. The others had booking forms, and every form asked for a time in the future.
 
 The message had not come from any room. A night housing worker forwarded it through a volunteer who had seen the copper-room guidance. The person at the beginning of the chain had no name in the message and had not written it herself.
 

@@ -5,9 +5,9 @@ pov_id: POV-NIA
 timeline_id: TL-MINDWARS-TERRITORY
 motif_events: []
 hook: "The channel offers her half a sentence it is not sure of, she refuses the half, and shouting works but not fast enough."
-words: 1337
+words: 1338
 length_class: normal
-status: draft
+status: revised
 ---
 It was my third shift back on live routing and the fourth of December and there was ice on the inside of the car park barrier when I came in at ten.
 
@@ -21,15 +21,15 @@ She was extremely good. She gave me the fence, the direction he went, what he wa
 
 The culvert under that road takes a stream that is nothing for most of the year. On the fourth of December it had been raining for two days.
 
-I had two units and a decision about access. That culvert has two ends and they are eleven hundred metres apart along the carriageway, and the upstream end is off a farm track and the downstream end is behind the industrial units. Getting that wrong does not cost you a wrong turn. It costs you the whole eleven hundred metres and a locked gate at the other end.
+I had two units and a decision about access. That culvert has two ends and they are twelve hundred metres apart along the carriageway, and the upstream end is off a farm track and the downstream end is behind the industrial units. Getting that wrong does not cost you a wrong turn. It costs you the whole twelve hundred metres and a locked gate at the other end.
 
-Reyner had the mapping open on his side because he had worked that ring road for eleven years and I had worked it for four.
+Reyner had the mapping open on his side because he had worked that ring road for fourteen years and I had worked it for four.
 
 He sent at 23:43:10. The contribution came in and the integrity strip came up amber in the same instant.
 
 What arrived on my side was: *not the downstream grille, go in at the*
 
-That is the whole of it. That is exactly what I had, and I have the transcript of nothing, because content was not recorded and the fragment exists only in the transport log as a length and a flag.
+That is where it stopped. That is exactly what I had, and I have the transcript of nothing, because content was not recorded and the fragment exists only in the transport log as a length and a flag.
 
 The protocol will not complete a clipped contribution. It does not guess, it does not offer the most likely ending, and it will not hand you a sentence it is not certain of. What it does is show you what it received, mark it, and refuse. I had seen that behaviour in training on a made-up example about a coffee order.
 
@@ -39,17 +39,17 @@ I sat with half a sentence about an access point for something between one and t
 
 I refused it.
 
-I want to be precise, because a form afterwards asked me whether I had received routing guidance and the honest answer is that I received the beginning of some. Refusing the half was not a judgment call and I would not want it recorded as courage. It is the only thing you can do. In this job you do not act on a fragment of an address. You do not act on three of five digits of a house number, you do not act on a street name that got stepped on, and you do not send two crews eleven hundred metres in a direction that came out of a channel that has just told you it is unsure. A protocol that refuses to complete is doing its job, and the reason I know that is that I have listened back to calls where somebody completed a fragment in their own head and was confident about it.
+I want to be precise, because a form afterwards asked me whether I had received routing guidance and the honest answer is that I received the beginning of some. Refusing the half was not a judgment call and I would not want it recorded as courage. It is the only thing you can do. In this job you do not act on a fragment of an address. You do not act on three of five digits of a house number, you do not act on a street name that got stepped on, and you do not send two crews twelve hundred metres in a direction that came out of a channel that has just told you it is unsure. A protocol that refuses to complete is doing its job, and the reason I know that is that I have listened back to calls where somebody completed a fragment in their own head and was confident about it.
 
 So I said, out loud, into the phone, at the volume that makes a room look up: "Tomas. Voice. Which end."
 
 Then the phone. His line, four rings, because he had a caller on the other one and had to hand it. Then me repeating the question because he had answered mid-sentence to somebody else. Then his answer, which was the upstream end, in at the farm track, because the downstream grille was screened by the units and the access had been blocked by a skip since the summer, which was the thing he knew and I did not and the thing the fragment had been carrying.
 
-Two seconds is what the channel does. Forty-one seconds is what that took.
+Two seconds is what the channel does. Forty-five seconds is what that took.
 
 I have the timings from three sources and they agree. Contribution released 23:43:10. Flag raised 23:43:10. My voice call to him at 23:43:14. His answer complete at 23:43:55. Units redirected at 23:44:02.
 
-Forty-one seconds, of which I own four and the telephone owns the rest.
+Forty-five seconds, of which I own four and the telephone owns forty-one.
 
 They found him in the culvert about thirty metres in, in water that was up to his thighs at the walls and deeper in the channel, wedged against a grating with debris behind it and his left arm through the bars. He had been in there, on the best reconstruction anybody has, for somewhere between nine and twelve minutes. The crew that went in were four minutes twenty from the farm track once they were at the right end.
 
@@ -63,6 +63,6 @@ That is not recovery. What he has is a memory of an intention, formed before the
 
 The integrity fault itself I have deliberately not theorized about. It happened while a pattern was resolving four miles away and I have been asked, by two people who should know better, whether the one caused the other. The log carries a length, a flag, and a time. It carries nothing about what was arriving anywhere or where any of it came from, and I have said so both times and will keep saying it.
 
-I wrote the incident up at four in the morning with the heating off and got as far as the fourth line, which is the line where you put what the delay consisted of, and I had written *forty-one seconds, of which four are mine, the remainder being*
+I wrote the incident up at four in the morning with the heating off and got as far as the fourth line, which is the line where you put what the delay consisted of, and I had written *forty-five seconds, of which four are mine and forty-one belong to the telephone*
 
 Then 999 line two lit, and it was a fall in a bathroom on the far side of the county, and I took it.

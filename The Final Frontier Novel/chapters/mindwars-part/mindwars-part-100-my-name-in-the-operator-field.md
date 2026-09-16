@@ -5,11 +5,11 @@ pov_id: POV-MARA
 timeline_id: TL-NULL-DECISION
 motif_events: []
 hook: "She puts her own name in the operator field, and the argument about who is responsible ends in one line of a form."
-words: 1215
+words: 1218
 length_class: normal
-status: draft
+status: revised
 ---
-Ruth rang on the ninth of May and said she had made too much of something and that I was to come on Saturday, and when I said I had work she said that she knew, and that Saturday was still Saturday.
+Ruth rang on Friday the seventh of May and said she had made too much of something and that I was to come on Saturday, and when I said I had work she said that she knew, and that Saturday was still Saturday.
 
 She is seventy-nine and she has never once asked me what I do. She knows the words — array, receiver, the county, the thing on the news — and she has never asked me to explain any of it, and I understood at some point in my thirties that this is not incuriosity. It is a decision she made about how to have a niece.
 
@@ -17,7 +17,7 @@ The conservatory is the same conservatory. Same rattling frame, same crack in th
 
 She had made a pie and there was far too much of it. There was also a bag of runner beans from the garden which she pressed on me in the manner of a woman conducting a transaction that has already been agreed.
 
-We talked about the man three doors down who has bought a caravan he cannot reverse, and about her hip, and about whether the crack in the second pane is worse, which it is not and which we both know is worse. She told me that her friend Marjorie has taken up watercolours and is bad at them, and she said it with such precise cruelty and such obvious love that I laughed with my mouth full and had to put my hand over it, and she looked pleased with herself for about four minutes.
+We talked about the man three doors down who has bought a caravan he cannot reverse, and about her hip, and about whether the crack in the second pane is worse, which we agreed it was not and which we both knew was worse. She told me that her friend Marjorie has taken up watercolours and is bad at them, and she said it with such precise cruelty and such obvious love that I laughed with my mouth full and had to put my hand over it, and she looked pleased with herself for about four minutes.
 
 She asked me once, at the sink, with her back to me, whether I was all right.
 
@@ -35,7 +35,7 @@ I said I would try.
 
 She said, "You won't. But try."
 
-Then Monday, the eleventh, at the office, with the instrument on the desk.
+Then Tuesday, the eleventh, at the office, with the instrument on the desk.
 
 Four hundred and six words on one side of paper. The authorizing body's box filled in. The description block saying what it says, which I had read three times over the weekend and which is the most honest document anybody has produced about any of this, and I have told its author so, and he received it the way he receives things, which is by looking at the middle distance and changing the subject.
 

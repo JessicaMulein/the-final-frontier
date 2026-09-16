@@ -4285,3 +4285,329 @@ Both affected clusters were rerun and pass.
   }
 ]
 ```
+## Null night delivery, Chapters 102–108
+
+The book's tightest compressed-clock cluster is delivered. All seven chapters hold the single
+`timeline_id` `TL-NULL-NIGHT`, the closed cross-cut ring joins them in sequence and returns 108 to 102,
+and every `material_narrative_value` covers a different action: Nia's door and hand-kept list, Mara's
+phase match and emitter, Julian's contemporaneous custody book. No chapter re-narrates another's
+material.
+
+The planned length classes are delivered as planned. Chapters 103, 105 and 107 are microchapters
+carrying compression as their `outlier_purpose`; 108 is the long-outlier holding the operational end of
+the night and the first reports of its cost in one place. Chapter 105 was drafted against its
+handle-with-care assignment: the unobtainable answer governs the mental act only, and the narrator gives
+every form of aid that needs no mental authorization — threshold shelter, warmth, a nurse, an ambulance,
+her own hands, and an explicit statement that she would have carried the woman inside had she stopped
+breathing. What she refuses is proxy consent and putting a person who cannot agree into a channel.
+
+Three canon boundaries were held deliberately across the cluster. The canonical extent stays the
+protected wording *three counties wide* with no radius, geometry, or named counties. The silence carries
+no counterparty, surrender, sender, or authorised all-clear, and the carrier's cessation is recorded as
+resolving no provenance. And the `DEC-017` withholding holds: neither Mara nor Nia names the parallel
+between the one-room consent protocol and the unconsentable area-scale field, in any of the seven
+chapters.
+
+The cluster also carries its `DEC-020` obligations. Bodies and physical consequence land at 105, 106 and
+108; the interrupted cut is at 103; warmth is at 102 in Reyner and Baird's humour with each other; 102
+and 105 are set somewhere nobody is being professional. No chapter in the cluster carries a
+narrator-cost assignment, which is the deliberate gap the propulsion spec records, because the null is
+the cost.
+
+Objective results: seven chapter-local gates pass, the seven-chapter drafting batch gate passes at
+7,279 Prose_Words, and the manuscript-global run remains `incomplete` by design at 132 completion-only
+diagnostics with `chapter=0 batch=0 planning=0`. Delivered chapters now number 110 and total Prose_Words
+129,172.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-102",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [102],
+      "documents": ["chapters/mindwars-part/mindwars-part-102-a-room-with-a-door.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 102; 1368 Prose_Words, normal, draft, four-way agreement across header, file, Arc_Outline and observed words, empty motif_events honoured, zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-103",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [103],
+      "documents": ["chapters/mindwars-part/mindwars-part-103-into-phase.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 103; 582 Prose_Words, microchapter, draft, class derived from observed words against a non-null outlier_purpose, zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-104",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [104],
+      "documents": ["chapters/mindwars-part/mindwars-part-104-timestamped-while-it-runs.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 104; 1203 Prose_Words, normal, draft, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-105",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [105],
+      "documents": ["chapters/mindwars-part/mindwars-part-105-one-answer-at-the-door.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 105; 699 Prose_Words, microchapter, draft, class derived from observed words against a non-null outlier_purpose, zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-106",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [106],
+      "documents": ["chapters/mindwars-part/mindwars-part-106-quieter-in-here.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 106; 1064 Prose_Words, normal, draft, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-107",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [107],
+      "documents": ["chapters/mindwars-part/mindwars-part-107-clean-silence.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 107; 532 Prose_Words, microchapter, draft, class derived from observed words against a non-null outlier_purpose, zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-108",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [108],
+      "documents": ["chapters/mindwars-part/mindwars-part-108-what-it-took.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 108; 1831 Prose_Words, long-outlier, draft, class derived from observed words against a non-null outlier_purpose, zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-102-108",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [102, 103, 104, 105, 106, 107, 108],
+      "documents": ["chapters/mindwars-part/mindwars-part-102-a-room-with-a-door.md", "chapters/mindwars-part/mindwars-part-103-into-phase.md", "chapters/mindwars-part/mindwars-part-104-timestamped-while-it-runs.md", "chapters/mindwars-part/mindwars-part-105-one-answer-at-the-door.md", "chapters/mindwars-part/mindwars-part-106-quieter-in-here.md", "chapters/mindwars-part/mindwars-part-107-clean-silence.md", "chapters/mindwars-part/mindwars-part-108-what-it-took.md"],
+      "description": "Drafting Batch_Gate for the delivered null-night cluster; 7279 Prose_Words across Chapters 102-108, one shared timeline_id, no same-POV run in the cluster, three microchapters and one long-outlier as planned, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Postnull delivery, Chapters 109–112, and Mindwars_Part completion
+
+The Postnull cluster is delivered and the Mindwars_Part is complete at 51 chapters and 61,192
+Prose_Words, which is the movement's planned chapter allocation.
+
+The cluster closes the movement's four open obligations. `MOT-RECORD-02` is realized as an act of
+deposition rather than a quotation, per the ledger's `adapted` marking: the absences are opened as a
+numbered heading inside the event history's outcomes section rather than left to the optional
+observations section. Dalby's assigned action lands as a publication-timing decision that costs the
+protagonists the contest, and she concedes the principle while keeping the mechanism, is never unmasked,
+and is right about the thing she says last. Nia's `DEC-007` resolution arrives as a live operational
+decision with a person on the other end of it: five stated facts, one labelled inference, her name in the
+decision box, and self-trust grounded in auditable reasons rather than in a settled origin. The
+Mara–Julian conversion completes in two halves, the accession and notification in 109 and the reply and
+withdrawal in 112.
+
+Four boundaries were held. No adjudicator is produced anywhere in 111; the absence of any body with the
+job of deciding is established by three refusals of remit rather than asserted. The first-casualty
+attribution is traced through its citation chain to Julian's own entry and is left standing as an
+inference, uncorrected and unconverted. Nia's regained self-trust decides no causation, forgives nobody,
+and validates no archive, and both origin accounts are refused in the same paragraph without either
+becoming evidence for the other. And the `DEC-017` withholding survives the movement intact: the parallel
+between the one-room protocol and the area-scale field is named nowhere in Chapters 62 through 112.
+
+Chapter 112 also refuses the available consolation. The parameter file is not destroyed, because it is a
+deposited record and because it is the only document that shows what was done at what settings; the
+withdrawal therefore removes the operator and not the capability.
+
+Objective results: four chapter-local gates pass, the four-chapter drafting batch gate passes at 4,884
+Prose_Words, and the manuscript-global run remains `incomplete` by design at 131 completion-only
+diagnostics with `chapter=0 batch=0 planning=0`. `FINAL_TARGET_TOTAL_WORDS` has cleared: the manuscript
+now stands at 114 delivered chapters and 134,056 Prose_Words, inside the approved 130,000–150,000 range.
+The remaining 14 entries are the undrafted Aftermath_Coda chapters.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-109",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [109],
+      "documents": ["chapters/mindwars-part/mindwars-part-109-into-the-history.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 109; 1221 Prose_Words, normal, draft, MOT-RECORD-02 resolved to this chapter as an adapted act of deposition, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-110",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [110],
+      "documents": ["chapters/mindwars-part/mindwars-part-110-not-the-word-saved.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 110; 1295 Prose_Words, normal, draft, record_horizon reached through TL-TRUST-CONDITIONED-RELEASES, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-111",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [111],
+      "documents": ["chapters/mindwars-part/mindwars-part-111-provenance-not-truth.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 111; 1138 Prose_Words, normal, draft, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-112",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [112],
+      "documents": ["chapters/mindwars-part/mindwars-part-112-the-line-held.md"],
+      "description": "Chapter_Local_Gate for the newly delivered Chapter 112; 1230 Prose_Words, normal, draft, cross_cuts none as planned, four-way agreement and zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-109-112",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [109, 110, 111, 112],
+      "documents": ["chapters/mindwars-part/mindwars-part-109-into-the-history.md", "chapters/mindwars-part/mindwars-part-110-not-the-word-saved.md", "chapters/mindwars-part/mindwars-part-111-provenance-not-truth.md", "chapters/mindwars-part/mindwars-part-112-the-line-held.md"],
+      "description": "Drafting Batch_Gate for the delivered Postnull cluster; 4884 Prose_Words across Chapters 109-112, all four normal class as planned, no same-POV run in the cluster, zero errors and zero warnings. Completes the Mindwars_Part at 51 chapters and 61192 Prose_Words."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Territory cluster rerun after the Chapter 88 warmth addition
+
+The 86–93 cluster was rerun after 294 Prose_Words were added to Chapter 88 to close the warmth gap
+recorded at movement completion. Chapter 88 moves from 1,155 to 1,449 Prose_Words and stays `normal`; its
+status remains `draft`, its `ArcEntry` is unchanged, and no other chapter in the cluster was touched. The
+cluster total moves from 10,362 to 10,656 Prose_Words.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-MINDWARS-088-WARMTH-REPAIR",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [88],
+      "documents": ["chapters/mindwars-part/mindwars-part-088-recorded-once-on-purpose.md"],
+      "description": "Chapter_Local_Gate rerun after the warmth addition; 1449 Prose_Words, normal, draft, header resynchronized to observed words, ArcEntry values unchanged, zero attributable diagnostics."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": ["EDITORIAL-MINDWARS-088-WARMTH-001"], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-MINDWARS-086-093-WARMTH-REPAIR",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [86, 87, 88, 89, 90, 91, 92, 93],
+      "documents": ["chapters/mindwars-part/mindwars-part-086-theories-with-believers.md", "chapters/mindwars-part/mindwars-part-087-not-a-language.md", "chapters/mindwars-part/mindwars-part-088-recorded-once-on-purpose.md", "chapters/mindwars-part/mindwars-part-089-a-disputed-recording-state.md", "chapters/mindwars-part/mindwars-part-090-the-shore-was-us.md", "chapters/mindwars-part/mindwars-part-091-integrity-fault.md", "chapters/mindwars-part/mindwars-part-092-ranked-by-belief.md", "chapters/mindwars-part/mindwars-part-093-one-synchronized-night.md"],
+      "description": "Territory cluster rerun after the Chapter 88 warmth addition; 10656 Prose_Words across Chapters 86-93, no length class changed, no same-POV run affected, zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": ["EDITORIAL-MINDWARS-088-WARMTH-001"], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Aftermath_Coda delivery, Chapters 113–128 — the manuscript is complete in draft
+
+The Coda is delivered and the manuscript now holds all 128 planned chapters. Fourteen chapters were
+drafted in this pass, and the two previously delivered Calibration Batch members, 118 and 124, were
+repaired where their prose exceeded their own `ArcEntry` scope; those two repairs are recorded as
+editorial findings in [`editorial-log.md`](editorial-log.md) rather than treated as drafting.
+
+Four completion diagnostics cleared with this delivery. `OUTLINE_ENTRY_WITHOUT_FILE` is gone, because
+every one of the 128 entries now resolves to a file. `LITERAL_CONSTRAINT_SCOPE_INCOMPLETE` is gone,
+because Chapter 128's Prose Body now exists and carries exactly one `<!-- final-passage:start -->` marker,
+so the checker can locate `SPAN-FINAL-PASSAGE` deterministically instead of reporting incomplete input.
+`FINAL_TARGET_CHAPTER_COUNT` is satisfied at exactly 128. `FINAL_TARGET_TOTAL_WORDS` is satisfied at
+148,913 Prose_Words, inside the approved 130,000–150,000 range with 1,087 words of headroom.
+
+The literal phrase constraints hold as specified. `Whose was that?` appears exactly twice inside the
+declared Final Passage and zero times anywhere before the marker or in any other chapter file, which
+satisfies `exact_in_scope: 2` and `maximum_outside_scope: 0`. `Did I say yes?` appears in no Coda file, so
+`LPC-DID-I-SAY-YES` remains confined to the Mindwars movement.
+
+The length invariants hold with margin on the correct side of both limits: 109 `normal` against the
+108-entry floor, and 19 `microchapter` plus `long-outlier` combined against the 20-outlier ceiling.
+
+The Coda's motif schedule is discharged in full. `MOT-KNOCK-02` is one event at 116 and 117, the knock
+supplied from outside the door and the same knock received inside it, and it never becomes two events.
+`MOT-RADIUS-02` turns the extent into named human debt at 120 without deriving a geometry, naming a
+county, or letting Mara narrate Safiya's interior. `MOT-CHAIN-03` reduces the whole apparatus to a larynx,
+a metre and a quarter of air, and three small bones at 127. `MOT-RECORD-03`, `MOT-KNOCK-03` and
+`MOT-WHOSE-01` land together at 128 as an entry against herself, an outward obligation with no completion
+condition, and a terminal question asked twice and answered neither time.
+
+`REVEAL-SAFIYA-TUESDAY-LOSS` releases at 118 and completes at 119 inside its unchanged window.
+`REVEAL-CODA-PROVENANCE` remains unrevealed: the Final Passage supplies no counterparty, no sender, no
+surrender, and no method that could separate an arrival from ordinary human error.
+
+The `DEC-017` withholding held for sixty-six chapters and is discharged exactly once, in Chapter 128
+paragraph five of the deposited entry, dry, four sentences, with no paragraph six developing it. It
+resolves no provenance, absolves nobody, validates no archive, and does not touch the validity of the
+consent given in Chapter 122.
+
+Objective results: fourteen chapter-local gates pass, three drafting batch gates pass at 5,305, 5,126 and
+4,489 Prose_Words, and the manuscript-global run remains `incomplete` by design at 129 diagnostics with
+`chapter=0 batch=0 planning=0`. The residue is now only `CHAPTER_STATUS_NOT_FINAL` across all 128
+chapters and one `FINALIZATION_GATE_MISSING`. Both require author approval and a separate finalization
+sequence; neither is a drafting defect, and neither may be self-awarded.
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-BATCH-CODA-113-117",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [113, 114, 115, 116, 117],
+      "documents": ["chapters/aftermath-coda/aftermath-coda-113-what-went-out.md", "chapters/aftermath-coda/aftermath-coda-114-a-documented-request.md", "chapters/aftermath-coda/aftermath-coda-115-the-road-in.md", "chapters/aftermath-coda/aftermath-coda-116-three-knocks.md", "chapters/aftermath-coda/aftermath-coda-117-the-inside-of-the-door.md"],
+      "description": "Drafting Batch_Gate for the public-accounting and threshold cluster; 5305 Prose_Words across Chapters 113-117, one microchapter as planned, MOT-KNOCK-02 shared by 116 and 117 as a single event, DEC-018 uncounted-private-loss obligation discharged at 113 and 114 in people unconnected to Safiya, and her particular loss neither named nor foreshadowed before 118. Zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-CODA-119-123",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [119, 120, 121, 122, 123],
+      "documents": ["chapters/aftermath-coda/aftermath-coda-119-a-clean-lexical-space.md", "chapters/aftermath-coda/aftermath-coda-120-three-counties-of-people.md", "chapters/aftermath-coda/aftermath-coda-121-setting-the-reflexes-down.md", "chapters/aftermath-coda/aftermath-coda-122-the-request.md", "chapters/aftermath-coda/aftermath-coda-123-the-hope-she-hid.md"],
+      "description": "Drafting Batch_Gate for the account and consent cluster; 5126 Prose_Words across Chapters 119-123, all normal class as planned, REVEAL-SAFIYA-TUESDAY-LOSS completed at 119, MOT-RADIUS-02 at 120 with no derived geometry, and no question of permission placed anywhere near 118 or 119. Zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-BATCH-CODA-125-128",
+    "gate_type": "batch",
+    "scope": {
+      "chapter_numbers": [125, 126, 127, 128],
+      "documents": ["chapters/aftermath-coda/aftermath-coda-125-water-chairs-breath.md", "chapters/aftermath-coda/aftermath-coda-126-not-repair.md", "chapters/aftermath-coda/aftermath-coda-127-voice-through-air.md", "chapters/aftermath-coda/aftermath-coda-128-knock-and-wait.md"],
+      "description": "Drafting Batch_Gate for the terminal cluster; 4489 Prose_Words across Chapters 125-128, one microchapter and one long-outlier as planned, MOT-CHAIN-03 at 127, MOT-RECORD-03 and MOT-KNOCK-03 and MOT-WHOSE-01 at 128, LPC-WHOSE-WAS-THAT satisfied at exactly two in-span occurrences with a single resolvable Final Passage marker. Zero errors and zero warnings."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  },
+  {
+    "gate_result_id": "GATE-CHAPTER-LOCAL-CODA-113-128-DELIVERY",
+    "gate_type": "chapter-local",
+    "scope": {
+      "chapter_numbers": [113, 114, 115, 116, 117, 119, 120, 121, 122, 123, 125, 126, 127, 128],
+      "documents": ["chapters/aftermath-coda/aftermath-coda-113-what-went-out.md", "chapters/aftermath-coda/aftermath-coda-114-a-documented-request.md", "chapters/aftermath-coda/aftermath-coda-115-the-road-in.md", "chapters/aftermath-coda/aftermath-coda-116-three-knocks.md", "chapters/aftermath-coda/aftermath-coda-117-the-inside-of-the-door.md", "chapters/aftermath-coda/aftermath-coda-119-a-clean-lexical-space.md", "chapters/aftermath-coda/aftermath-coda-120-three-counties-of-people.md", "chapters/aftermath-coda/aftermath-coda-121-setting-the-reflexes-down.md", "chapters/aftermath-coda/aftermath-coda-122-the-request.md", "chapters/aftermath-coda/aftermath-coda-123-the-hope-she-hid.md", "chapters/aftermath-coda/aftermath-coda-125-water-chairs-breath.md", "chapters/aftermath-coda/aftermath-coda-126-not-repair.md", "chapters/aftermath-coda/aftermath-coda-127-voice-through-air.md", "chapters/aftermath-coda/aftermath-coda-128-knock-and-wait.md"],
+      "description": "Chapter_Local_Gate run individually and passing for each of the fourteen newly delivered Coda chapters; every header agrees with its file, its ArcEntry, and its observed Prose_Words, every declared length class is derived from observed words against a non-null outlier_purpose where applicable, and every motif_events list matches the ledger row exactly. Recorded as one record covering fourteen individually passing runs. Aftermath_Coda now totals 16 chapters and 16951 Prose_Words."
+    },
+    "prerequisite_state": "complete", "objective_diagnostic_ids": [], "editorial_finding_ids": [], "result": "pass", "checker_exit_status": 0, "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```

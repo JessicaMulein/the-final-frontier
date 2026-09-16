@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-PRIVATE-RECORD-DEPOSITS
 motif_events: []
 hook: "She hands over the one document that could convict her and specifies exactly who may open it and when."
-words: 1333
+words: 1269
 length_class: normal
 status: revised
 ---
@@ -15,13 +15,11 @@ The review closed on the ninth. I was a party to it, so the file came to the tra
 
 I took it home, kept my coat on, and opened it at the kitchen table. The chair caught the back of the coat when I pulled it in. I freed the hem, put both sleeves flat on the table, and started at the incident entries.
 
-House call, incident 6839, entered 18:37:12. Adult male, sixty-two, collapse in a bathroom, unresponsive behind a blocked door, breathing not confirmed.
+The entries were the ones I had been carrying since December. House call at 18:37:12. Quarry at 18:37:23. One advanced unit. Seventeen sent to the quarry at 18:38:06.
 
-Quarry collision, incident 6841, entered 18:37:23. One available advanced unit. Seventeen assigned to the quarry at 18:38:06.
+I kept one finger beside the house call and turned the page with the other hand. Fire reported access to the bathroom at 18:42:09, and the crew confirmed cardiac arrest at 18:42:44.
 
-I kept one finger beside the house call and turned the page with the other hand. Fire reported access to the bathroom at 18:42:09. The ordinary crew entered at 18:42:21. They confirmed cardiac arrest and began resuscitation at 18:42:44.
-
-Those times had been on my own cards since December. I had read them a hundred times, one at a time. On the review page they sat in a single row, and the row put four minutes and fifty-seven seconds between the house call reaching my screen and that door opening. The crew was on the landing for most of it. The door did not care.
+I had read those times a hundred times, one at a time. On the review page they sat in a single row, and the row put four minutes and fifty-seven seconds between the house call reaching my screen and that door opening. The crew was on the landing for most of it. The door did not care.
 
 The vehicle sheet came next. Seventeen left its assignment at 18:38:06 and reached the quarry road at 18:44:03, five minutes and fifty-seven seconds, travelling away from the house. The review fixed its position at assignment and put its best case to the house at six and a half minutes. I copied both intervals onto the compliments slip and laid the slip above the access time so the three numbers read across in order.
 
@@ -57,13 +55,9 @@ Five. The sentence in which I refuse both accounts of my certainty is part of th
 
 Six. My authorization passes to nobody. Not to family, not to an executor, not to the custodians. If I die before I use it, condition two is what remains.
 
-Condition four took two conversations. In the first, I carried the review to the archivist and asked her to deposit it under one reference, sealed on my say. She kept her hand flat on the county copy and returned it to me.
+Condition four took two conversations. I carried the review to the archivist first and asked her to deposit it under one reference, sealed on my say, and she kept her hand flat on the county copy and gave it back to me. It was the county's document, it carried a dead man's clinical details, and his family had agreed to nothing. She read the refusal out like a policy she agreed with.
 
-It was the county's document. It carried a dead man's clinical details, and his family had agreed to nothing. Her office would not take a third party's record from my hands and let me set its terms. She read the refusal like a policy she agreed with.
-
-Mr Adebayo opened the other route. The county records office issued a certified copy direct to the Trust under county authority. The Trust gave it a separate accession and reference; the county set its conditions. I did not sign for that copy, set its seal, or gain authority to open it.
-
-I wrote condition four so my deposit followed the county copy's state. The two records stayed separate. If theirs remained shut, mine remained shut beside it.
+Mr Adebayo found the other route. The records office issued a certified copy direct to the Trust under county authority, on the county's terms, with its own accession. I never signed for it and I cannot open it. So I wrote condition four to follow its state: if theirs stays shut, mine stays shut beside it.
 
 In her office the archivist read all six conditions back to me aloud. She went slowly and did not improve any of them. Then she asked what title I wanted.
 

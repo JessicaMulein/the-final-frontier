@@ -5,9 +5,9 @@ pov_id: POV-MARA
 timeline_id: TL-CODA-REFUSAL
 motif_events: [MOT-COME-04, MOT-COPPER-03, MOT-KETTLE-02]
 hook: "The relay clicks off under her hand, and what she has left to offer is water, a chair, and her own voice."
-words: 948
+words: 832
 length_class: normal
-status: exploratory
+status: revised
 ---
 I spent the first part of that evening answering a person with an architecture.
 
@@ -45,7 +45,7 @@ She had given it soberly and more than once. She understood the request. My refu
 
 Safiya said, "I know. I needed to hear you say it with the machine switched on."
 
-The relay stood on the bench under the window, lit and on standby. I put my thumb on the switch. The relay clicked off. Its light went out.
+The relay stood on the workbench inside the window, lit and on standby. I put my thumb on the switch. The relay clicked off. Its light went out.
 
 It was not absolution and it was not repair. It was an instrument capable of doing the thing I had refused, and after the click it was no longer available in the room.
 
@@ -59,12 +59,4 @@ She said she had been afraid I would use ethics to avoid her.
 
 That answer was less kind than several available answers and more useful than any of them.
 
-The kettle finished. I made two cups, carried them over, and sat in the lower chair without adjusting it.
-
-Two cups. Two chairs. Safiya, fifty-eight, who once walked the river route to check the map distance and who retained most of the weather. Me, not speaking.
-
-I did not tell her the loss would ease. I did not tell her what her account might mean. I did not touch her arm or promise to work on it. I had made those offers to other people and finally understood whose distress they treated.
-
-She stayed another forty minutes. We talked about the river and the woman on her road whose appointments she interprets. She drank what I had made. At the door she thanked me. I did not turn the thanks into a verdict on the evening.
-
-After her car reached the end of the lane, I remained in the hall of my shielded house and listened until the sound was gone.
+Behind me the element went on working. Water moving towards a temperature is one of the few processes in my house that does not require me to decide anything, and I stood with my hands on the counter and let it get on with it.

@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-PRIVATE-COPPER
 motif_events: []
 hook: "She turns back to the notebook that found the field and begins drawing a cage in it, a few pages after the door."
-words: 1169
+words: 1197
 length_class: normal
 status: revised
 ---
@@ -109,4 +109,6 @@ I asked for the tape measure and Ruth found it in the drawer with the batteries 
 
 Then I laid the pen on the list without adding a fourth name. Not because she lives an hour from the array. My certainty arrived at a sink with no address, so I cannot say what distance would mean, and a page naming everyone I cannot exclude has the county on it.
 
-At twenty to six I called the facilities line and asked for the old calibration room for a screened-enclosure trial. I said instrument noise. That was true about the enclosure and false about the trial, and I went out to scrape the windscreen with the notebook still open behind me.
+At twenty to six I called the facilities line and asked for the old calibration room for a screened-enclosure trial. I said instrument noise. That was true about the enclosure and false about the trial.
+
+Then I went out and scraped the windscreen in the dark of Ruth's drive, and my hands were shaking the way they had shaken at her table in December, and I stood there and let them get on with it until they stopped.

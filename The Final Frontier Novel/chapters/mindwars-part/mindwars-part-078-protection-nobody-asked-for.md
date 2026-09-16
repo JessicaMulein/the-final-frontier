@@ -5,9 +5,9 @@ pov_id: POV-NIA
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []
 hook: "They call it a shield because it points the other way, and she makes them say out loud who they intend to ask."
-words: 1159
+words: 1181
 length_class: normal
-status: draft
+status: revised
 ---
 The radiator was on in the third week of September, the window did not open, and the papers came round the table still warm from the copier.
 
@@ -27,7 +27,7 @@ How long from detection to raising. Ninety seconds was the figure they wanted. F
 
 How wide. The mapped volume, which at pilot scale meant a residential block with its boundary drawn off coverage models rather than off anything anybody had walked.
 
-What it does inside that boundary. Degrades access to some content and faculties for as long as it runs. That is not a side effect to be engineered out later. It is the mechanism. It is the reason the thing works against the thing it is raised against.
+What it does inside that boundary. Degrades access to some content and faculties during the run and, in the one observed case we have, afterward. That is not a side effect to be engineered out later. It is the mechanism. It is the reason the thing works against the thing it is raised against.
 
 Who gets asked.
 
@@ -47,13 +47,13 @@ Civil protection had the morning's incident with them and used it there, which I
 
 "That is what we are being asked to prevent," the chair said. "Ninety seconds of degraded recall, against a man going over a rail."
 
-"I know what it is for. I read those reports every week. I am asking who says yes."
+"Mine did not end at ninety seconds," I said. "The phrase is still gone. I know what the field is for. I read those reports every week. I am asking who says yes."
 
 That was when Dalby opened the folder.
 
 "The group should have this before it goes any further," she said. "It is not a proposal."
 
-She sent copies down both sides of the table, and the copies were warm as well. An executed participation agreement between the Consortium and a county I had heard of and never worked, signed eight days earlier, two protective volumes, commencement on the first of October. Northline was not a party to it. Northline's agreement appeared nowhere in it, because there was nothing in it for Northline to agree to.
+She sent copies down both sides of the table, and the copies were warm as well. An executed participation agreement between the Consortium and a county I had heard of and never worked in, signed eight days earlier, two protective volumes, commencement on the first of October. Northline was not a party to it. Northline's agreement appeared nowhere in it, because there was nothing in it for Northline to agree to.
 
 "You have started," the statistician said.
 

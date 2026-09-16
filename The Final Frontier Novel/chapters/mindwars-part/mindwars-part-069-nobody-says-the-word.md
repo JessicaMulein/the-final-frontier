@@ -7,11 +7,11 @@ motif_events: []
 hook: "He files the doctrine under the only heading the system offers, and in the room where it is signed nobody says the word war."
 words: 1128
 length_class: normal
-status: draft
+status: revised
 ---
 The category order carried four signatures by the time I was permitted to see the final copy.
 
-The Consortium’s money had released at fourteen ten. By sixteen hundred the emergency programme had staff requisitions, two protected-transport contracts and a drafting group for the Coordinated Unauthorized Signal Effects Response Doctrine. The order had converted an inference into an office, a budget and a document that needed to exist before midnight.
+The Consortium's money had released at fourteen ten. By sixteen hundred the emergency programme had staff requisitions, two protected-transport contracts and a drafting group for the Coordinated Unauthorized Signal Effects Response Doctrine. The order had converted an inference into an office, a budget and a document that needed to exist before midnight.
 
 Dr Venn answered her sixteen-hundred deadline at fifteen fifty-one, in one sentence: *No scientific basis for attributing these events to coordinated hostile activity of external origin has been established.* She attached the null result and the method, unaltered.
 
@@ -27,15 +27,15 @@ It also required every participating authority to classify compatible events und
 
 The holding value could still not be removed without replacement.
 
-I certified that the doctrine described the Trust holding’s existence without opening, quoting or summarizing it. Beside my certification I added that the depositor’s conditions rejected use of the account to support either available origin theory. The chair accepted the sentence because it changed no operative part.
+I certified that the doctrine described the Trust holding's existence without opening, quoting or summarizing it. Beside my certification I added that the depositor's conditions rejected use of the account to support either available origin theory. The chair accepted the sentence because it changed no operative part.
 
 A security representative asked whether the note created uncertainty in field instructions.
 
-“It records uncertainty already present in the evidence,” I said.
+"It records uncertainty already present in the evidence," I said.
 
-“The field instruction cannot ask an officer to relitigate attribution at each incident.”
+"The field instruction cannot ask an officer to relitigate attribution at each incident."
 
-“It does not. It asks the record not to represent a holding value as a finding.”
+"It does not. It asks the record not to represent a holding value as a finding."
 
 The chair said the doctrine already called it a working assessment.
 
@@ -57,24 +57,24 @@ The records hall closed its public doors at six. I left through the loading entr
 
 A porter was bringing the empty document crates back from the signing room on a flat trolley. A delivery rider came through the open vehicle gate at walking speed, one foot down, reflective jacket bright under the loading lights. The porter looked towards the gate and dropped the trolley handle.
 
-“Down,” he said.
+"Down," he said.
 
 Nothing was coming down. The barrier arm was upright and locked. The roller shutter above us was open.
 
-The porter stepped backward into the rider’s path with both hands over his head.
+The porter stepped backward into the rider's path with both hands over his head.
 
 The bicycle struck him at the hip. He went sideways onto the edge of the loading ramp and the back of his head hit concrete. The rider fell with him. The bicycle spun once on its rear wheel and dropped.
 
 I put the doctrine on the wet ground and called emergency services. The rider sat up and held one wrist. The porter did not move until the loading supervisor reached him and said his name. Then he opened his eyes and tried to get under the parked trolley.
 
-“It’s coming down,” he said.
+"It's coming down," he said.
 
-The supervisor looked up at the open shutter. “What is?”
+The supervisor looked up at the open shutter. "What is?"
 
 The porter could not answer. He was certain enough to fight the hand checking his neck and not certain of anything he could name.
 
-The first responders arrived in five minutes. I gave my account twice: the open gate, the rider’s speed, the porter stepping backward. The ambulance form had fields for mechanism of injury, loss of consciousness and environmental hazard. The police form had fields for rider, pedestrian, weather and obstruction. Neither had a place for certainty without an object, and I had no professional standing in that loading bay to create one.
+The first responders arrived in five minutes. I gave my account twice: the open gate, the rider's speed, the porter stepping backward. The ambulance form had fields for mechanism of injury, loss of consciousness and environmental hazard. The police form had fields for rider, pedestrian, weather and obstruction. Neither had a place for certainty without an object, and I had no professional standing in that loading bay to create one.
 
 They lifted the porter onto a vacuum mattress. One responder cut the sleeve of his uniform to place a line. The doctrine lay where I had put it, its lower corner darkening in the rain under the words COORDINATED RESPONSE.
 
-The stretcher passed me on its way to the ambulance. The porter’s right shoe had come off and remained beside the trolley, toe pointing towards the open gate.
+The stretcher passed me on its way to the ambulance. The porter's right shoe had come off and remained beside the trolley, toe pointing towards the open gate.

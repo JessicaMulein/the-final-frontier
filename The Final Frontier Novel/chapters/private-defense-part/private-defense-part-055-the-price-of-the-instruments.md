@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-PRIVATE-RECORD-DEPOSITS
 motif_events: []
 hook: "Her badge still opens the building and no longer opens the room with the array in it."
-words: 1039
+words: 1035
 length_class: normal
 status: revised
 ---
@@ -31,7 +31,7 @@ I did not go and find the director. I went and sat in the outer room with the se
 
 He was not evasive when I got there. That is worth recording. He had the paperwork out before I sat down and he answered in order.
 
-The shielded room had been built on institute money. I have never disputed that. Development had been calling it a demonstrator since February and compliance had been calling it a containment measure since March, and a containment measure is an asset of the preparedness portfolio under a classification that has existed for eleven years and was not written for this. The array is on the same site licence. When the room moved, the licence moved, and the room where you keep the instruments that test the room moved with it.
+The shielded room had been built on institute money. I have never disputed that. Development had been calling it a demonstrator since February and compliance had been calling it a containment measure since March, and a containment measure is an asset of the preparedness portfolio under a classification that has existed for fifteen years and was not written for this. The array is on the same site licence. When the shielded room moved into the preparedness portfolio, the site licence moved with it, and therefore so did the array room where the test instruments sat.
 
 The stated reason was operator cover. The programme requires two qualified operators for any energized session. Ravi's transfer took effect at the end of April. Since then it has run on one signature and a noted deficiency, and a noted deficiency is a thing an institution is permitted to carry for a period and not permitted to carry indefinitely, and the period ran out on the third.
 
@@ -43,7 +43,7 @@ The stated reason was operator cover. The programme requires two qualified opera
 
 "Yes."
 
-He did not say the rest of it. He is not a cruel man and he did not need to, because I had done that arithmetic out loud in a room full of people in April specifically so that it would be a decision and not a gesture, and the thing about making a decision out loud in front of the party who benefits from it is that they can hear it too. I said no to the money. The money was the second operator. Without the second operator the room cannot run. A room that cannot run is an asset, and an asset goes where the portfolio puts it.
+He did not say the rest of it. He is not a cruel man and he did not need to, because I had spelled the whole chain out at that April table myself, on purpose, in front of the people it benefited. Say a thing like that aloud and you have not only decided it. You have handed everyone in the room the timetable. I said no to the money. The money was the second operator. Without the second operator the room cannot run. A room that cannot run is an asset, and an asset goes where the portfolio puts it.
 
 Nobody broke a rule to do this to me. That is the part I keep returning to. Every step is defensible in isolation and every step was taken by somebody doing their job accurately, and I supplied the load-bearing step myself, in public, on purpose, for reasons I still think were correct.
 

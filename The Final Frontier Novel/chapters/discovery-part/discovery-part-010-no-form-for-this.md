@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "There is no form for what she is doing, and the absence of a form is not permission."
-words: 1066
+words: 966
 length_class: normal
 status: revised
 ---
@@ -33,7 +33,7 @@ When I tested one interval against another, the match held. When I tested either
 
 A region in that space was not a location on a map. It was closer to a channel assigned by the person simply being the person.
 
-I wrote *person-specific* and then crossed out *specific*. I had evidence of recurrence, not proof of uniqueness. An honest claim at that moment would require the controls I had not yet run: other people, other mornings, shifted attention, blinded matching, a test that could fail. At that moment I had one stranger and a model increasingly good at recognizing the shape of her work.
+I wrote *person-specific* and crossed out *specific*. I had recurrence and not uniqueness, one stranger, and a model getting better every day at recognizing the shape of her work.
 
 The institute wanted a briefing.
 
@@ -55,7 +55,7 @@ The director came to the lab rather than answering in writing. She stood outside
 
 The argument was efficient because every sentence was true.
 
-More compute would let me preserve context at lower latency or ask for greater fidelity at the same latency. Better algorithms might change the reconstruction time entirely. Eight seconds had been reproducible under the early settings and information load; it was not a natural constant and not a grace period granted by the source. Faster reconstruction would not make the observation more consensual. It would only shorten the time between her life and my access to it.
+More compute would not make the observation more consensual. It would shorten the time between her life and my access to it.
 
 I opened Northline's compliance system after the director left.
 
@@ -69,7 +69,7 @@ The form required an institutional sponsor before it would save.
 
 I closed it without submitting.
 
-That decision did not protect her. Acquisition still ran. Raw samples still entered Northline storage. Ravi and I still possessed what we had already reconstructed. Refusing to choose an inaccurate category did not move us outside the institution or outside responsibility.
+That decision did not protect her. Acquisition still ran, the samples still entered storage, and declining to choose an inaccurate category did not move us outside the institution or outside responsibility.
 
 I returned to the log and wrote the narrowest statement the evidence allowed: *Location model rejected. Recurrence is consistent with one living source and a person-specific address, not yet demonstrated. No transmission path exists. No contact or consent exists.*
 

@@ -5,9 +5,9 @@ pov_id: POV-NIA
 timeline_id: TL-NULL-DECISION
 motif_events: []
 hook: "Their word for it is enrollment and hers is default, and she refuses to let her own session logs be the template."
-words: 1473
+words: 1586
 length_class: normal
-status: draft
+status: revised
 ---
 The filing runs to sixty-one pages and my forms are on pages forty-four to forty-nine.
 
@@ -31,7 +31,7 @@ The third claim is the one that took me longest to see, because it is written as
 
 Standing continuity. A consent state, once given in a designated operational context, is presumed to continue across sessions within that context until revoked.
 
-That is the whole argument, and it is four lines long, and everything else in the document rests on it. Presumed to continue. Until revoked. It reverses the direction of the yes. It makes the answer a state you are in rather than an act you perform, and it moves the work from the person who wants to enter to the person who wants to be left alone, and it does so in a subordinate clause on page thirty-one of a document nobody outside eleven organizations will read.
+That is the whole argument, and it is four lines long, and everything else in the document rests on it. Presumed to continue. Until revoked. It reverses the direction of the yes. It makes the answer a state you are in rather than an act you perform, and it moves the work from the person who wants to enter to the person who wants to be left alone, and it does so in a subordinate clause on page thirty-one of a document nobody outside fifteen organizations will read.
 
 Vane answers at the start of every shift because answering is an act. Under standing continuity he would answer once, in September, and be in a state of having answered until such time as he did something about it. I know what that becomes on the fourth consecutive night shift in February. It becomes a thing nobody has thought about since September.
 
@@ -45,11 +45,17 @@ That is the thirty seconds the filing calls friction. Twice, at the top of an ho
 
 And then pages forty-four to forty-nine.
 
-They are my forms. The pairing consent and the recording consent, reproduced, with the annotations I wrote on the second one about why it is separate paper, and a redacted copy of the transcript from the eighteenth of November with the meter serial blanked and my four words about Joss blanked, which was decent of somebody and which I did not ask for. They are captioned as *illustrative best practice in auditable consent* and cited as the evidentiary basis for the claim that consent at population scale can be made auditable.
+They are my forms. The pairing consent and the recording consent, reproduced, with the annotations I wrote on the second one about why it is separate paper, and a redacted copy of the transcript from the eighteenth of November with the meter serial blanked, which was correct and which I did not ask for. They are captioned as *illustrative best practice in auditable consent* and cited as the evidentiary basis for the claim that consent at population scale can be made auditable.
+
+The redaction schedule on the facing page has a second entry. *Participant content withheld, 14:12:12–14:13:02.*
+
+Those fifty seconds are the fifty seconds I held a sentence about my brother and did not send it. The whole value of that page is that they are empty. No contribution, no volume, no entry of any kind, because nothing crossed and the protocol has nowhere to put a thing that did not cross. Somebody has read the gap, found a template with a row for withheld material, and produced a document in which the one thing I proved could not be taken is listed as content that has been protected.
+
+Nobody did it to hurt me. That is the part I keep going back to.
 
 Everything on those six pages exists because I wrote it to do the opposite of what it is being used to support. The separate paper is there so a recording consent cannot be a box you tick going past. The read-back is there because Halloran does not trust anybody's silence, including mine. The both-to-enable rule is there so that neither of us can turn it on for the other. Not one of those features survives contact with default enrolment and standing continuity, and the document does not claim they do; it simply puts my forms in the annex as proof that the general idea can be done properly, and the general idea in the front of the document is not the idea in the annex.
 
-I wrote to the regulator on the eleventh of March.
+I wrote to the regulator on the twelfth of March.
 
 I asked for the material at pages forty-four to forty-nine to be withdrawn from the application, on the ground that it is cited as a demonstration of a proposition it does not demonstrate, and that I am the person who made it and the person named in it.
 

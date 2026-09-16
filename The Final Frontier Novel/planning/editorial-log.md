@@ -5849,3 +5849,1207 @@ The historical Discovery voice revision remains unchanged and now carries a reso
   }
 ]
 ```
+## Null night and Postnull review, Chapters 102–112
+
+Review of the two newly delivered clusters at the close of the Mindwars_Part. Two defects were found and
+repaired inside the review; four criteria pass; one movement-level obligation is recorded as still open
+rather than closed by assertion.
+
+The first defect is the one worth naming carefully, because it is the failure mode this novel is most
+exposed to. The prose runs on stated quantities — minutes, counts, page numbers, percentages — and that
+texture is the book's evidence of good faith. Across the eleven chapters, the specifying number was not
+distributed like observation. Bare *four* appeared 56 times and bare *seven* three times, with *four*
+supplying arbitrary counts (volunteers, loaves, years of examples, rooms away, people in a room, minutes
+in a car park) alongside its canon-fixed uses. Precision that always reaches for the same number is
+decoration, and a reader who notices it stops trusting every other figure in the manuscript. Fourteen
+arbitrary instances across *four* and *eleven* were redistributed; every canon-fixed and
+cross-chapter-consistent value was left alone, including *four hundred and six words*, the four words of
+Mara's self-check, the four-page conditioned release, the four shielded rooms, the clock four minutes
+slow, and the 04:26 cessation. One repair also closed a genuine inconsistency: Chapter 103 puts four
+people in the operations room and Chapter 108 had said four others, which is now three.
+
+The second defect was two arithmetic slips inside narrators whose credibility is arithmetic. Chapter 108
+described an emission running 03:00:41 to 05:12 as two hours and twelve minutes, and Chapter 109 placed
+an 11:00 announcement six hours after a 05:12 shutdown. Both are now correct.
+
+```json record=EditorialFinding schema=1
+[
+  {
+    "editorial_finding_id": "EDITORIAL-MINDWARS-102-112-NUMERIC-PRECISION-001",
+    "scope": "batch",
+    "chapter_numbers": [102, 103, 104, 105, 108, 110, 111, 112],
+    "batch_id": "BATCH-MINDWARS-102-112",
+    "criterion": "Documentary credibility of stated quantities; whether specifying numbers read as observed detail or as authorial default",
+    "prose_locations": [
+      {
+        "path": "chapters/mindwars-part/mindwars-part-104-timestamped-while-it-runs.md",
+        "start_line": 18,
+        "end_line": 24,
+        "note": "Canon-fixed quantities retained here: four hundred and six words, and the protected extent rendered as three counties wide without a boundary or radius."
+      },
+      {
+        "path": "chapters/mindwars-part/mindwars-part-106-quieter-in-here.md",
+        "start_line": 22,
+        "end_line": 24,
+        "note": "The four words of the self-check are the chapter's device and were excluded from redistribution."
+      },
+      {
+        "path": "chapters/mindwars-part/mindwars-part-108-what-it-took.md",
+        "start_line": 20,
+        "end_line": 20,
+        "note": "Operations-room headcount corrected from four others to three, aligning with the four people stated in Chapter 103."
+      }
+    ],
+    "finding": "revision",
+    "rationale": "Bare four occurred 56 times across the eleven chapters against three occurrences of seven, and a majority of the arbitrary counts in the cluster resolved to four or eleven. In prose whose authority rests on the narrators counting accurately, a specifying number that recurs at that rate is a tell of authorship rather than of observation, and it discredits the figures that are load-bearing.",
+    "requested_action": "Redistribute arbitrary instances of four and eleven while preserving every canon-fixed and cross-chapter-consistent value.",
+    "reviewer": "Drafting self-review at Mindwars_Part close",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": "Applied. Fourteen arbitrary instances redistributed across two, five, six, nine, twelve and sixteen; bare four reduced from 56 to 44, with the remainder canon-fixed or internally paired. Chapter 103 and 108 headcounts reconciled. All eleven headers reverified against observed Prose_Words after the edits."
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-MINDWARS-102-112-ARITHMETIC-001",
+    "scope": "batch",
+    "chapter_numbers": [108, 109],
+    "batch_id": "BATCH-MINDWARS-102-112",
+    "criterion": "Internal arithmetic consistency of stated intervals in narrators whose register is measurement",
+    "prose_locations": [
+      {
+        "path": "chapters/mindwars-part/mindwars-part-108-what-it-took.md",
+        "start_line": 28,
+        "end_line": 28,
+        "note": "Emission duration restated as two hours and eleven minutes against the 03:00:41 commencement and the 05:12 shutdown."
+      },
+      {
+        "path": "chapters/mindwars-part/mindwars-part-109-into-the-history.md",
+        "start_line": 12,
+        "end_line": 12,
+        "note": "The 11:00 announcement is now placed not quite six hours after the 05:12 shutdown rather than six hours after it."
+      }
+    ],
+    "finding": "revision",
+    "rationale": "Both narrators are established as people who record a two-second discrepancy rather than resolve it. An interval that does not survive subtraction is a worse error in their mouths than in anybody else's, and neither slip was doing any work.",
+    "requested_action": "Correct both intervals against the recorded clock times.",
+    "reviewer": "Drafting self-review at Mindwars_Part close",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": "Applied. Chapter 109 gained two words and its header was resynchronized to 1221 Prose_Words; the affected GateResult descriptions and the batch total were corrected to match."
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-MINDWARS-102-112-DEC017-001",
+    "scope": "batch",
+    "chapter_numbers": [102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112],
+    "batch_id": "BATCH-MINDWARS-102-112",
+    "criterion": "`DEC-017` withholding: the parallel between the one-room consent protocol and the unconsentable area-scale field must be named nowhere in Chapters 62 through 123",
+    "prose_locations": [
+      {
+        "path": "chapters/mindwars-part/mindwars-part-108-what-it-took.md",
+        "start_line": 60,
+        "end_line": 60,
+        "note": "The chapter reaches the closest available approach and stops at mechanism: restoration would require insertion, so the consent distinction cannot be abolished. The two-scopes claim is not made."
+      },
+      {
+        "path": "chapters/mindwars-part/mindwars-part-102-a-room-with-a-door.md",
+        "start_line": 20,
+        "end_line": 24,
+        "note": "A consent shelter operates inside the reach of an unconsented field and the narrator never points at the contrast, which is left to the cluster structure."
+      }
+    ],
+    "finding": "pass",
+    "rationale": "Chapter 108 is the position of maximum pressure on the withholding, since Mara is accounting for the cost with the vocabulary to state the parallel in one sentence. She states the mechanism instead. Nia's chapters carry the contrast structurally and her register stays on her own door and her own list, which is the correct division: the connection belongs to the person who ran the machine, and in her mouth it would be accusation rather than accounting.",
+    "requested_action": null,
+    "reviewer": "Drafting self-review at Mindwars_Part close",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": null
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-MINDWARS-102-112-VOICE-001",
+    "scope": "batch",
+    "chapter_numbers": [102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112],
+    "batch_id": "BATCH-MINDWARS-102-112",
+    "criterion": "Voice separation across three narrators inside one compressed clock, and reduction of the shared retrospective scaffolding found across Chapters 62–101",
+    "prose_locations": [
+      {
+        "path": "chapters/mindwars-part/mindwars-part-110-not-the-word-saved.md",
+        "start_line": 22,
+        "end_line": 28,
+        "note": "Nia separates five facts from one labelled inference, which is dispatch logic doing the work her origin question used to block."
+      },
+      {
+        "path": "chapters/mindwars-part/mindwars-part-111-provenance-not-truth.md",
+        "start_line": 52,
+        "end_line": 52,
+        "note": "Julian's hearing chamber empties: the opponent states the true thing, he offers no rebuttal, and the record stays contested rather than resolving."
+      },
+      {
+        "path": "chapters/mindwars-part/mindwars-part-106-quieter-in-here.md",
+        "start_line": 24,
+        "end_line": 24,
+        "note": "Mara's grand register breaks at the flat place and does not reassemble into doctrine for the rest of the cluster."
+      }
+    ],
+    "finding": "pass",
+    "rationale": "The prior review found retrospective account scaffolding crossing all three narrators. The null-night cluster is narrated close instead: clock-stamped, scene-driven, with retrospect held to a clause, which both distinguishes the cluster texturally and removes the shared frame. The self-announcing gesture that was thinned across 80–100 occurs twice in eleven chapters, both times anchored to a stated obligation. Separation holds under the tightest condition in the book, three narrators inside one night, with the door, the emitter and the custody book never re-narrating one another.",
+    "requested_action": null,
+    "reviewer": "Drafting self-review at Mindwars_Part close",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": null
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-MINDWARS-105-CARE-001",
+    "scope": "chapter",
+    "chapter_numbers": [105],
+    "batch_id": "BATCH-MINDWARS-102-112",
+    "criterion": "Handle-with-care assignment: the unobtainable answer governs the mental act only, and no aid that requires no mental authorization may be withheld",
+    "prose_locations": [
+      {
+        "path": "chapters/mindwars-part/mindwars-part-105-one-answer-at-the-door.md",
+        "start_line": 44,
+        "end_line": 44,
+        "note": "The refusal to move her is grounded in clinical sufficiency and closed by an unconditional statement that she would have carried her through the door had she stopped breathing."
+      },
+      {
+        "path": "chapters/mindwars-part/mindwars-part-105-one-answer-at-the-door.md",
+        "start_line": 38,
+        "end_line": 38,
+        "note": "What is actually refused is a description of a person who cannot agree being put into a channel she is not part of, at a cost of nine seconds the narrator accepts as hers."
+      }
+    ],
+    "finding": "pass",
+    "rationale": "Every form of aid needing no mental authorization is given on the page: threshold shelter, a coat, a nurse with pressure and elevation, an ambulance at a stated minute, the neighbour redirected to what he can actually supply, and the narrator's own hands. The two refusals are proxy consent and a channel carrying an unconsenting person. The scene therefore cannot be read as consent doctrine used to abandon a woman in crisis, which is the failure the assignment exists to prevent.",
+    "requested_action": null,
+    "reviewer": "Drafting self-review at Mindwars_Part close",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": null
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-MINDWARS-MOVEMENT-WARMTH-GAP-001",
+    "scope": "movement",
+    "chapter_numbers": [86, 87, 88, 89, 90, 91, 92, 93],
+    "batch_id": null,
+    "criterion": "`DEC-018` clause 9 warmth obligation and the propulsion spec's recorded cluster gap at 86–93",
+    "prose_locations": [
+      {
+        "path": "planning/mindwars-propulsion-spec.md",
+        "start_line": 205,
+        "end_line": 213,
+        "note": "The cluster ledger records no warmth assignment for 86–93 and states that one more somewhere in that cluster is the better answer."
+      }
+    ],
+    "finding": "revision",
+    "rationale": "The Mindwars_Part is now complete at 51 chapters with warmth landing at 62, 75, 100 and 102. The movement obligation is satisfied, so this is not a gate failure. It is still four warm scenes in fifty-one chapters, and the 86–93 stretch remains the longest run without one. Recording it as open is more honest than treating movement-level satisfaction as closure.",
+    "requested_action": "Consider a warmth beat inside 86–93 during any later revision wave; it is a craft improvement rather than a compliance repair, and it is not assigned to the Coda drafting sequence.",
+    "reviewer": "Drafting self-review at Mindwars_Part close",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": "Closed on author direction in the same session. Warmth added at Chapter 88 from the chapter's own material rather than inserted as a set piece; see EDITORIAL-MINDWARS-088-WARMTH-001. Warmth now lands at 62, 75, 88, 100 and 102, and the propulsion spec ledger and cluster table were updated to match."
+  }
+]
+```
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-EDITORIAL-MINDWARS-102-112",
+    "gate_type": "editorial",
+    "scope": {
+      "chapter_numbers": [102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112],
+      "documents": ["planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/voice-briefs.md", "planning/mindwars-propulsion-spec.md", "planning/decisions.md"],
+      "description": "Editorial_Gate for the two clusters delivered at the close of the Mindwars_Part. Two defects were found and repaired inside the review, numeric fake-precision and two interval miscalculations; DEC-017 withholding, voice separation under the compressed clock, and the Chapter 105 handle-with-care assignment pass. The 86–93 warmth gap is recorded as an open craft item rather than closed. This gate covers 102–112 only, does not re-review Chapters 62–101, does not constitute the Mindwars_Part movement Editorial_Gate, and grants no chapter approval."
+    },
+    "prerequisite_state": "complete",
+    "objective_diagnostic_ids": [],
+    "editorial_finding_ids": ["EDITORIAL-MINDWARS-102-112-NUMERIC-PRECISION-001", "EDITORIAL-MINDWARS-102-112-ARITHMETIC-001", "EDITORIAL-MINDWARS-102-112-DEC017-001", "EDITORIAL-MINDWARS-102-112-VOICE-001", "EDITORIAL-MINDWARS-105-CARE-001", "EDITORIAL-MINDWARS-MOVEMENT-WARMTH-GAP-001"],
+    "result": "pass",
+    "checker_exit_status": null,
+    "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Warmth gap closure, Chapter 88
+
+`EDITORIAL-MINDWARS-MOVEMENT-WARMTH-GAP-001` was logged as open at the close of the Mindwars_Part and has
+been closed on author direction. It is recorded separately because the repair adds prose to a delivered
+chapter outside the two clusters under review, and because the choice of site is the substance of the
+finding rather than an implementation detail.
+
+The site was not free. `DEC-018` clause 9 warmth is carried by two approved non-viewpoint relationships,
+Joss Calder for Nia and Ruth Venn for Mara, and Julian is deliberately given no equivalent because his
+isolation is characterization — which excludes Chapters 86, 89 and 92. Of the remaining five, Chapter 90
+is the long-outlier title reversal that `DEC-017` and `DEC-020` clause 10 both bear on, Chapter 93 is cold
+by design because it starts the external clock, and Chapter 91 already carries a body, an interrupted cut
+and a consequence landing on someone other than the narrator. Chapter 88 was the only site where warmth
+was already implied by the delivered text.
+
+That is what makes the repair legitimate under the spec's own rule that every assignment be derived from
+the chapter's existing purpose rather than scheduled into it. Chapter 88 as delivered had Nia write her
+test protocols "that evening" and hold, in test two, a four-word sentence about her brother "chosen the
+night before." Both the evening and the choosing were offstage. The addition puts them on the page and
+removes the now-redundant summary clause from test two.
+
+The chapter gains 294 Prose_Words and stays `normal` at 1,449. Status remains `draft`, consistent with how
+the earlier repair waves treated revised chapters.
+
+```json record=EditorialFinding schema=1
+[
+  {
+    "editorial_finding_id": "EDITORIAL-MINDWARS-088-WARMTH-001",
+    "scope": "chapter",
+    "chapter_numbers": [88],
+    "batch_id": "BATCH-MINDWARS-086-093",
+    "criterion": "`DEC-018` clause 9 non-professional warmth inside the 86–93 cluster, without an exposition audience, a confession chamber, or a route to absolution",
+    "prose_locations": [
+      {
+        "path": "chapters/mindwars-part/mindwars-part-088-recorded-once-on-purpose.md",
+        "start_line": 24,
+        "end_line": 36,
+        "note": "The standing Thursday at her brother's bench: a neighbour's 1974 mixer he will repair for nothing, a chicken dish with too much lemon defended for ten minutes on principle, and a childhood accusation about eating butter on its own."
+      },
+      {
+        "path": "chapters/mindwars-part/mindwars-part-088-recorded-once-on-purpose.md",
+        "start_line": 36,
+        "end_line": 36,
+        "note": "The scene ends by naming the withheld object and refusing it to the reader as well as to the institutions, which is the chapter's ethic stated as action rather than as principle."
+      },
+      {
+        "path": "chapters/mindwars-part/mindwars-part-088-recorded-once-on-purpose.md",
+        "start_line": 46,
+        "end_line": 46,
+        "note": "Test two now refers back to the dramatized evening instead of summarizing it, so the addition replaces exposition rather than adding to it."
+      }
+    ],
+    "finding": "pass",
+    "rationale": "The warmth is food, humour and ordinary company, and the humour is between siblings rather than a professional riposte. The canon boundaries hold: he is told nothing about the mechanism, he has asked twice in three years and accepted the first answer both times, he receives no confession, and he grants no absolution. He is not used to explain anything to the reader. The beat also strengthens the chapter's argument, because the thing test two proves cannot cross is now a thing the reader has watched her choose and still does not get to know.",
+    "requested_action": null,
+    "reviewer": "Drafting self-review at Mindwars_Part close",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": "Applied. Chapter 88 reverified at 1449 Prose_Words against its header, chapter-local gate passes, and the 86–93 drafting batch gate was rerun and passes."
+  }
+]
+```
+
+```json record=GateResult schema=1
+[
+  {
+    "gate_result_id": "GATE-EDITORIAL-MINDWARS-088-WARMTH",
+    "gate_type": "editorial",
+    "scope": {
+      "chapter_numbers": [88],
+      "documents": ["chapters/mindwars-part/mindwars-part-088-recorded-once-on-purpose.md", "planning/mindwars-propulsion-spec.md", "planning/pov-roster.md", "planning/canon-bible.md"],
+      "description": "Editorial_Gate for the Chapter 88 warmth addition closing the 86–93 cluster gap. Warmth is derived from the chapter's existing material, the two approved warmth relationships are respected, and the added scene supplies no exposition, confession, or absolution. This gate covers the addition only and grants no chapter approval; Chapter 88 remains draft."
+    },
+    "prerequisite_state": "complete",
+    "objective_diagnostic_ids": [],
+    "editorial_finding_ids": ["EDITORIAL-MINDWARS-088-WARMTH-001", "EDITORIAL-MINDWARS-MOVEMENT-WARMTH-GAP-001"],
+    "result": "pass",
+    "checker_exit_status": null,
+    "timestamp": "2026-09-15T00:00:00Z"
+  }
+]
+```
+## Coda scope repairs to delivered Chapters 118 and 124
+
+Two Calibration Batch members were repaired during Coda drafting, not because their prose was weak but
+because each had annexed material belonging to a later chapter. Both are recorded here because they touch
+calibration-validated text and because the reasoning should be auditable rather than inferred from a diff.
+
+Chapter 124's `ArcEntry` ends its scope at "switches the relay off and fills the kettle." The delivered
+prose continued past that through two cups poured and carried, a "two cups, two chairs" tableau, a list of
+things Mara did not say, forty minutes of conversation about the river, and Safiya's car reaching the end
+of the lane. Those four beats are the substance of Chapters 125, 126 and 127: 125's hook is "puts two cups
+on the table instead," its `knowledge_limit` states that Mara "does not know whether Safiya will stay,"
+126 is Safiya deciding to stay, and 127 is the two of them talking until one in the morning. Left as
+delivered, the evening would have been narrated twice and 125's central uncertainty would already have
+been resolved. The tail was replaced with two sentences holding Mara at the counter while the element
+works, which keeps `MOT-KETTLE-02` intact. The departure beat was not discarded; it now closes 127, where
+the visit actually ends.
+
+Chapter 118 was the more consequential of the two. Its `ArcEntry` purpose is the account only — a Tuesday,
+the kettle, eleven miles, nothing arriving, the layer no longer where she left it — and its hook ends the
+chapter at "she reaches the end of it without being interrupted or corrected." The delivered prose ran on
+into the request itself, the anticipated verification objection, and an explicit statement of consent.
+Three separate records place that material at 122: 118's own hook, 121's `knowledge_limit` stating that
+Mara "does not yet know what she is about to be asked for," and 122's purpose, which is the request and the
+sober repeated consent. `CUT-TUESDAY-AND-THE-SHAPE` settles it independently by forbidding either 118 or
+119 from placing a question of permission anywhere near the account. The request section was therefore
+removed and 118 now closes on the account complete and received without correction, which is its hook
+exactly. Its substance was redistributed as planned: the ask and the consent architecture to 122, the
+admitted hope and the demand for a truthful rather than a protective refusal to 123.
+
+Neither repair weakens what 118 was selected to calibrate. Safiya's voice, the material specificity of the
+loss, the first kettle event, describe-never-quote handling, and the `unspecified_by_author` guardrail all
+sit in the retained text.
+
+```json record=EditorialFinding schema=1
+[
+  {
+    "editorial_finding_id": "EDITORIAL-CODA-118-124-SCOPE-001",
+    "scope": "batch",
+    "chapter_numbers": [118, 124],
+    "batch_id": "BATCH-CALIBRATION-001",
+    "criterion": "Chapter scope fidelity to `ArcEntry` purpose, hook, and knowledge limit, and non-duplication against later chapters in the same continuous scene",
+    "prose_locations": [
+      {
+        "path": "chapters/aftermath-coda/aftermath-coda-118-tuesday-kettle-on.md",
+        "start_line": 46,
+        "end_line": 50,
+        "note": "The chapter now ends where its hook ends, on the account reaching its own stop without being helped, with the request removed to Chapter 122."
+      },
+      {
+        "path": "chapters/aftermath-coda/aftermath-coda-124-truthful-refusal.md",
+        "start_line": 44,
+        "end_line": 46,
+        "note": "The chapter now ends at the truthful refusal and the kettle working, with the two cups, the staying, and the departure removed to 125, 126 and 127."
+      }
+    ],
+    "finding": "revision",
+    "rationale": "Both chapters were drafted before the chapters around them existed, and each had reasonably carried its scene to a natural stopping point that later turned out to belong to somebody else. The conflict is objective rather than a matter of taste: three ArcEntries and one CrossCut replay boundary place the request at 122, and 125's knowledge limit is falsified outright by the delivered 124. Repairing the earlier chapters was the smaller change and the only one that does not require amending approved planning records.",
+    "requested_action": "Trim each chapter to its recorded scope and redistribute the removed beats to the chapters that own them.",
+    "reviewer": "Drafting self-review during Coda delivery",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": "Applied. Chapter 118 moves from 1440 to 1199 Prose_Words and Chapter 124 from 948 to 832, both remaining normal class and both retaining exploratory status. Headers resynchronized, chapter-local gates rerun and passing, and every removed beat placed in the chapter whose ArcEntry carries it."
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-CODA-113-128-DELIVERY-001",
+    "scope": "movement",
+    "chapter_numbers": [113, 114, 115, 116, 117, 119, 120, 121, 122, 123, 125, 126, 127, 128],
+    "batch_id": null,
+    "criterion": "Coda deceleration, Safiya's describe-never-quote discipline and `unspecified_by_author` guardrail, absence of restoration and absolution, and the single permitted `DEC-017` statement",
+    "prose_locations": [
+      {
+        "path": "chapters/aftermath-coda/aftermath-coda-119-a-clean-lexical-space.md",
+        "start_line": 20,
+        "end_line": 24,
+        "note": "The absence is rendered entirely by function and effect — a place a word descends from, and the absence of the absence — with no private word quoted and no heritage particular invented anywhere."
+      },
+      {
+        "path": "chapters/aftermath-coda/aftermath-coda-126-not-repair.md",
+        "start_line": 26,
+        "end_line": 32,
+        "note": "Staying is defined by the person doing it as neither forgiveness, repair, nor trade, and the refusal to absolve is stated flatly in the house of the person who caused the loss."
+      },
+      {
+        "path": "chapters/aftermath-coda/aftermath-coda-128-knock-and-wait.md",
+        "start_line": 40,
+        "end_line": 44,
+        "note": "The DEC-017 parallel appears once, as paragraph five of a deposited entry against herself, four sentences, immediately followed by a refusal to develop it."
+      }
+    ],
+    "finding": "pass",
+    "rationale": "Deceleration holds: no chapter after 112 contains a threat, a campaign, a renewed transmission, or a spectacle, and every hook turns on disclosure, arrival, refusal, or a decision somebody makes about herself. Safiya's private layer is never quoted and no cultural particular is inferred anywhere from her name; her mother becomes specific through a burn scar, a school kitchen, shallow cupboards and an opinion about a son-in-law, none of which locates her. Nothing is restored and nobody is absolved: the refusal is truthful, the consent it refuses stays valid and is never reinterpreted, the loss stays permanent, and the one warm scene in the book's last hour is explicitly not a remedy. The terminal question is asked twice and answered neither time, and the provenance reveal stays closed.",
+    "requested_action": null,
+    "reviewer": "Drafting self-review during Coda delivery",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": null
+  }
+]
+```
+## Complete-manuscript editorial review — Chapters 1–128
+
+Author-delegated continuous review completed 2026-09-15 after the manuscript reached 128 chapters. This
+is the first review whose scope is the complete delivered novel rather than a calibration set, drafting
+batch, movement, repair wave, or partial manuscript. It evaluates the current prose and does not treat
+historical gates as substitutes for a new whole-book judgment.
+
+**Verdict: revision, not rewrite.** The manuscript is one causally coherent and highly original literary
+speculative thriller. Its premise, ethical mechanism, central character arcs, null-night sequence,
+Safiya encounter, motif network, and refused ending are all strong enough to preserve. It does not yet
+behave consistently like the broad commercial novel it could be, because it repeatedly proves its own
+carefulness after the reader already understands it. The dominant repair is subtraction and
+redistribution: fewer limitation ladders, fewer retrospective mini-briefs, more trust in scenes, cleaner
+handoffs, and correction of a finite set of continuity/mechanism defects. No new chase, culprit, sender,
+war, spectacle, or provenance solution is wanted.
+
+### Coverage legend
+
+- **P** — current chapter works at full-book scale; retain, allowing ordinary copyedit.
+- **R-F** — targeted flow/compression repair; the chapter's event and place in the book remain.
+- **R-C** — continuity, canon, evidence-boundary, or mechanism clarification required.
+- **R-B** — boundary or handoff repair required; adjacent chapters currently repeat or skip a needed beat.
+- **R-V** — voice/rhetorical over-completion is the primary issue.
+
+A revision code is not a judgment that the chapter is poor. Several of the novel's strongest chapters
+carry `R` because they currently annex downstream material or contain one consequential contradiction.
+
+### Discovery, Chapters 1–29
+
+| Ch | Verdict | Primary full-book judgment |
+|---:|:---:|---|
+| 1 | P | Excellent opening: apparatus, wonder, omission, and moral debt arrive together. |
+| 2 | P | Ordinary life and Joss create attachment before the source becomes useful. |
+| 3 | P | Technical proof behaves as escalating experiment rather than lecture. |
+| 4 | R-B | Replays too much of Chapter 2 before reaching its distinct dispatch evidence. |
+| 5 | P | Strong reversal from message to overheard person, with Ruth preventing abstraction. |
+| 6 | P | Julian enters with a distinct institutional intelligence and visible culpability. |
+| 7 | P | Operational competence and the yellow-strip handoff are fully novelistic. |
+| 8 | R-C | Re-proves established timing/attention rules and contains the October/December error. |
+| 9 | P | Institutional appetite acts before certainty and implicates Julian through competence. |
+| 10 | R-F | Strong ethical problem buried under rejection testing and a tour of forms. |
+| 11 | R-F | Necessary mind-as-field hypothesis, but too much method is repeated before Chapter 13. |
+| 12 | P | Benchmark scene: real-time pressure, a child's hands, competence, and honest uncertainty. |
+| 13 | P | Long technical chapter earns its room through failed models, controls, and live lock. |
+| 14 | R-C | Rights argument is strong; the quoted attachment overstates Chapter 13's actual finding. |
+| 15 | R-C | Consecutive document mode, unnamed recurring counsel, and the unbridged eleventh meeting. |
+| 16 | R-F | Excellent irreversible microchapter; Mara's choice needs one concrete emotional catalyst. |
+| 17 | P | Strongest early thriller chapter: scarcity, bodily choice, death, and unresolved cause. |
+| 18 | R-F | Necessary aftermath, but the same negative proof is argued several times. |
+| 19 | P | Nia externalizes uncertainty through work, audio, paper, and lost authority. |
+| 20 | R-F | Excellent guilt-as-appetite insight reached through an overlong speculative loop. |
+| 21 | R-B | Formal review has distinct purpose but replays too much of 17 and 19. |
+| 22 | R-F | Fundability is explained more than fought over; Dalby should own the live pressure. |
+| 23 | R-F | Promised confrontation arrives after too much re-presentation of the science. |
+| 24 | P | Best Nia ethical confrontation; interpretive authority changes hands decisively. |
+| 25 | R-F | Bagged relay is excellent; repeated record distinctions delay the choice. |
+| 26 | P | The paper trail produces external action that proceeds without Julian. |
+| 27 | R-F | Nia's wording matters, but the chapter delays the actual trial until its last line. |
+| 28 | P | Controlled experiment remains bodily, consented, suspenseful, and owned by Nia. |
+| 29 | R-B | Strong movement synthesis; re-reports 28 and needs the preliminary-meeting bridge. |
+
+### Private Defense, Chapters 30–61
+
+| Ch | Verdict | Primary full-book judgment |
+|---:|:---:|---|
+| 30 | P | Immediate bodily intrusion and room-design response make a strong movement turn. |
+| 31 | P | Copper is relief, anger, measurement, and proof of ordinary vulnerability. |
+| 32 | R-B | Excellent inside handle, but construction chronology needs one clear orientation marker. |
+| 33 | P | The full reception/transmission/consent taxonomy earns its definitive statement here. |
+| 34 | P | One of the book's best chapters: refuge, live work, warmth, and inadequacy coexist. |
+| 35 | P | Private no becomes public insufficiency; Ravi and the arriving cases carry consequence. |
+| 36 | P | Ada and Lena make genuine benefit funny, skilled, private, and desirable. |
+| 37 | P | Experiment changes authorization and makes its evidentiary limit personal. |
+| 38 | P | Live emergency proves benefit while default recording and enrolment expose capture. |
+| 39 | R-F | Term-sheet turn matters; benefit recap and definition block create platform-report drag. |
+| 40 | P | Chosen sentence and Ravi's transfer make calibration intimate and costly. |
+| 41 | R-F | Third pairing demonstration; retain invoice/labour insight and compress brochure rebuttal. |
+| 42 | P | Brief, controlled refusal that keeps chosen sessions from becoming standing permission. |
+| 43 | P | Major temptation scene; real benefits and real money prevent a straw antagonist. |
+| 44 | P | Julian's careful clause is the trap, and the unread specification is a strong ending. |
+| 45 | P | Exemplary microchapter: one line exposes the architectural reversal. |
+| 46 | P | Wording becomes topology and Julian must own the representation he enabled. |
+| 47 | P | Case B turns institutional abstraction into specific appropriation and lost standing. |
+| 48 | P | Ninety-one-word refusal is specific, accountable, and dramatically contested. |
+| 49 | R-F | The private copy matters; file inventory and familiar self-diagnosis overrun it. |
+| 50 | P | Model record chapter: brief, physical, consequential, and complete. |
+| 51 | R-F | Trust is thematically right but assembles with implausibly little friction. |
+| 52 | P | Exoneration and unresolved authorship arrive together under Nia's conditions. |
+| 53 | R-F | Controlled-vocabulary analysis overextends an archival paradox already understood. |
+| 54 | P | Best archive scene: evidence is refused correctly and the old discoverer briefly returns. |
+| 55 | P | Institutional power finally acts by removing physical access. |
+| 56 | P | Long scene earns its room through reciprocal consent work, conflict, humour, and pause. |
+| 57 | R-F | Essential breach; motive and the participant-controlled amber action need sharper causation. |
+| 58 | R-B | Replays 57 almost sample for sample and needs a precise referent for this session's deposit. |
+| 59 | P | Repair is dramatized; the protocol does not guess and ordinary voice becomes a new act. |
+| 60 | P | Fluent withholding, Joss warmth, and third-party reports preserve privacy and attachment. |
+| 61 | R-B | Excellent onset handoff, but protocol recap delays it and partly spends Chapter 62's opening. |
+
+### Mindwars, Chapters 62–112
+
+| Ch | Verdict | Primary full-book judgment |
+|---:|:---:|---|
+| 62 | P | Warmth and bodies convert reports into Nia's recognition without settling origin. |
+| 63 | P | Fixed briefing clock and Dalby's action make institutional pressure dramatic. |
+| 64 | P | Julian's best early Mindwars chapter: schema work occurs beside audible bodily consequence. |
+| 65 | P | Live refusal costs room, roster, login, and standing immediately. |
+| 66 | P | A comparison set becomes Tomas's damaged hand; science stays bounded and human. |
+| 67 | R-B | Funding action works, but the chapter completes the vote instead of making its earned cut. |
+| 68 | R-F | Credible null result and strong arriving instruction; limitation ladder is too long. |
+| 69 | P | Doctrine becomes a body and a lost shoe without requiring a named enemy. |
+| 70 | R-F | Strong occupied copper-room scene weakened by a thesis-opening verdict. |
+| 71 | P | Distinctive continuous counterphase experiment with a clean image ending. |
+| 72 | P | Microchapter makes one reversal and refuses the unasked trial. |
+| 73 | R-B | One of the book's strongest chapters, but it annexes report/fitness work owned by 74–75. |
+| 74 | R-B | Fresh failed-send material is buried under replay of 73's authorization and run. |
+| 75 | R-C | Record taxonomy repeats 73–74 and contains the wrong sheet number and field duration. |
+| 76 | P | Nia's conditions become a real instrument and a scaled draft that drops them. |
+| 77 | R-C | Strong live pause/fallback; clarify why the survey state exposed the third person. |
+| 78 | P | Dalby has already acted; Nia's questions force `nobody` into the minute. |
+| 79 | R-C | Architecture/provenance distinction is sound; `same architecture` needs one concrete marker. |
+| 80 | R-C | Public scene and first `we` are strong; name operator assent as control, not resident consent. |
+| 81 | R-C | Highest raw propulsion; clarify the authorization breach and preserve the ground outcome. |
+| 82 | R-C | Metadata stalls the cliffhanger and improperly claims topics the logs cannot reveal. |
+| 83 | P | Four-pound switch and Nia's chosen bodily risk make consent physical. |
+| 84 | R-C | Bodily inequality lands; representative consultation is not individual asking. |
+| 85 | R-C | Useful short hinge built on a Mara-centred topology contradicted by Vane–Osei. |
+| 86 | R-F | Six attributed theories are necessary but report-heavy. |
+| 87 | P | Parse failure collapses the message frame and ends on the unparseable object. |
+| 88 | P | Warmth repair is earned; the sole recorded session defines the evidence boundary clearly. |
+| 89 | R-F | Correct holding action has bodily cost; the deliberate non-name prevents consequence recurring. |
+| 90 | R-F | Title reversal has superb maps and final image; the middle explains the thesis too fully. |
+| 91 | P | Top-tier thriller chapter: clipped route, refusal to guess, ordinary voice, lasting injury. |
+| 92 | P | Julian's compromise becomes a permanent false association over his name. |
+| 93 | P | Static but effective hinge: model output turns scale into an external countdown. |
+| 94 | R-C | Strong filing conflict; impossible transcript reference to Nia's unsent Joss words. |
+| 95 | R-F | Model result and timetable matter; no-target/no-inverse explanation is repeated later. |
+| 96 | R-F | `Negligible` over three counties is strong document conflict; ratio gloss can contract. |
+| 97 | P | Null decision becomes heat, nausea, ignored names, and a loader that refuses the list. |
+| 98 | P | Nia's arithmetic and spoken refusal keep consent from becoming manufactured unanimity. |
+| 99 | R-B | Authorization distinction is exact; withholding Mara's known name is artificial and ending is a maxim. |
+| 100 | P | Ruth, pie, beans, and the handwritten operator name make responsibility ordinary. |
+| 101 | R-F | Moral swell is earned; repeated model/extent/inverse setup can contract around the admission. |
+| 102 | R-C | Excellent shelter/list/warmth chapter; its `heaviest stretch` conflicts with the shared 103 peak. |
+| 103 | R-C | Strong microchapter; shared-peak timing and hook-near ending need small repair. |
+| 104 | P | Custody is live action: seals, discrepant clocks, pair consent, and late public notice. |
+| 105 | P | Moral centre: consent doctrine never becomes abandonment of ordinary or emergency care. |
+| 106 | R-F | Operator loss is powerful; promise to state the four words is not fulfilled. |
+| 107 | P | Clean microchapter distinguishes local suppression from unexplained carrier cessation. |
+| 108 | P | Defense and civilian cost stay together; no restoration fantasy survives. |
+| 109 | P | Public absence and Mara/Julian's custodian-subject conversion both become irreversible. |
+| 110 | R-C | Live call earns Nia's usable self-trust; distinguish the first release from September's. |
+| 111 | R-C | Dalby is right and active; release identity/date needs clarification and archive recap can shrink. |
+| 112 | P | Active defense ends, evidence remains, and copper closes the movement in room tone. |
+
+### Aftermath Coda, Chapters 113–128
+
+| Ch | Verdict | Primary full-book judgment |
+|---:|:---:|---|
+| 113 | P | Strong institutional chapter; specific private losses prepare the class without Safiya. |
+| 114 | R-C | Julian's agency works, but he names Safiya's exact dead-mother language loss before 118. |
+| 115 | P | Safiya discards the representative case and arrives as one person. |
+| 116 | P | Exemplary microchapter: correct protocol creates no entitlement. |
+| 117 | R-B | Strong reverse-angle knock; add the missing ask/answer that gets Safiya through the door. |
+| 118 | R-B | The Coda's strongest voice chapter; `the account is ended` jars against 119's continuation. |
+| 119 | P | `Absence of the absence` gives the loss precise standing shape without invented wording. |
+| 120 | R-V | Radius becomes one person correctly; the explanatory tail repeats the realization. |
+| 121 | R-V | Definitive reflex inventory is useful, but dramatically static and repeated around it. |
+| 122 | P | Valid consent remains specific, sober, revocable, and powerless to create truth. |
+| 123 | P | `I would take a false one` gives the request its greatest human and ethical cost. |
+| 124 | R-V | Truthful refusal/relay/kettle turn works; one repeated self-diagnosis and `arrival` wording can go. |
+| 125 | R-V | Cups and coat are right; multiple aborted explanations keep the old register alive. |
+| 126 | P | Safiya defines staying as neither forgiveness, repair, nor exchange and retains authority. |
+| 127 | R-C | Warmest chapter and excellent chain motif; actively preserves details Safiya forbade keeping. |
+| 128 | R-F | Final passage is powerful; policy-heavy preface delays the novel ending and over-defends the work. |
+
+### Strongest current runs
+
+- **12–18:** first major thriller acceleration, ending in the handshake/triage braid and real death.
+- **30–38:** intimate violation becomes copper refuge, usable benefit, and workplace coercion.
+- **43–50:** contains the superb temptation/page-nine/refusal/softened-minutes spine, despite excessive
+  document density around it.
+- **68–73:** null result, doctrine, body, enclosure limit, counterphase, and bounded consent escalate as
+  one line.
+- **87–93:** parse collapse, the recorded-session boundary, bodily cost, title reversal, integrity fault,
+  institutional distortion, and fixed countdown.
+- **101–108:** strongest overall run; decision, shelter, emission, custody, doorway, operator loss,
+  unexplained silence, and civilian cost converge without replaying one another.
+- **118–127:** strongest emotional run; exact loss, request, counterfeit hope, truthful no, no absolution,
+  and ordinary spoken presence.
+
+### Weakest current runs
+
+- **8–11:** discovery, explanation, caveat, and institution are spread over too many similar accounts.
+- **39–42:** benefit/platform material plateaus in demonstrations and forms.
+- **49–54:** records and custody become six consecutive versions of the same dramatic instrument.
+- **73–76:** the bounded test is narrated, re-narrated from the instrument, re-explained as records, then
+  drafted as policy.
+- **81–82:** live rail danger cuts directly to a metadata lecture before the physical question resolves.
+- **94–101:** the moral climax remains too document/model/committee heavy before the action.
+- **109–114:** six consecutive retrospective resolutions make the Coda begin like a second dossier before
+  Safiya acts.
+- **120–125:** Mara repeatedly explains how she is refusing to explain, blunting the Chapter 124 turn.
+
+```json record=EditorialFinding schema=1
+[
+  {
+    "editorial_finding_id": "EDITORIAL-FULL-MANUSCRIPT-STRUCTURE-001",
+    "scope": "manuscript",
+    "chapter_numbers": [1, 12, 16, 17, 24, 29, 30, 45, 51, 57, 62, 73, 90, 101, 102, 105, 108, 112, 113, 118, 124, 126, 128],
+    "batch_id": null,
+    "criterion": "Causal unity, movement architecture, motif/reveal progression, and whether the complete book forms one novel rather than four unrelated novellas",
+    "prose_locations": [
+      {"path": "chapters/discovery-part/discovery-part-001-noise-floor.md", "start_line": 12, "end_line": 64, "note": "The opening establishes apparatus, wonder, omission, and the person-bearing channel whose consequences drive every later movement."},
+      {"path": "chapters/mindwars-part/mindwars-part-105-one-answer-at-the-door.md", "start_line": 12, "end_line": 46, "note": "At maximum scale, the book returns to one person and tests whether its consent ethic remains humane under pressure."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-128-knock-and-wait.md", "start_line": 61, "end_line": 91, "note": "The final passage converts private accounting into outward obligation while the provenance question remains unanswered."}
+    ],
+    "finding": "pass",
+    "rationale": "The causal chain is continuous: receive-only discovery leads to the unauthorized addressed write, Nia's unexplained certainty, copper and pairwise consent, institutional capture, counterphase, the area-scale null, civilian subtraction, Safiya's request, truthful refusal, and outward duty. The movements change scale rather than premise. The closed motif families and Reveal windows perform real dramatic work, and the unresolved sender/wanting questions remain protected rather than abandoned. The manuscript can feel like linked dossiers because of its narrative mode, but it is not four unrelated stories and requires no structural reinvention.",
+    "requested_action": null,
+    "reviewer": "Author-delegated full-manuscript editorial review",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "All seven flagged handoffs repaired across chapters 4, 58, 61, 73, 74, 81, 117 and 119. Chapter 4 dates the morning against Chapter 2's close. Chapter 58 reframes the export as verification of a confession rather than a recap. Chapter 61 surrenders the synchronized reports so Chapter 62 owns the onset. The 73-74-75 sequence is repartitioned: the replayed ask is gone, Chapter 74 owns its own eleven minutes at the emitter, Chapter 75 owns the records. Chapter 81 resolves the embankment before Chapter 82's traffic argument. Chapter 117 carries the doorstep ask and answer the motif architecture was building toward, without using the capped come-in phrasing. Chapter 119 honours the minute Safiya asks for at the end of 118. Partial: no continuous cover-to-cover reread has been performed.",
+      "follow_up_finding_id": "EDITORIAL-REPAIR-CONTINUOUS-READ-FOLLOWUP-001"
+    }
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-FULL-MANUSCRIPT-CONTINUITY-001",
+    "scope": "manuscript",
+    "chapter_numbers": [8, 13, 14, 15, 29, 75, 81, 82, 85, 88, 94, 102, 103, 110, 111],
+    "batch_id": null,
+    "criterion": "Hard continuity and evidence-boundary consistency across the complete manuscript",
+    "prose_locations": [
+      {"path": "chapters/discovery-part/discovery-part-008-provisional-identity.md", "start_line": 59, "end_line": 63, "note": "Mara places the first omitted clause twice in October although the originating receive work and omission are established in December."},
+      {"path": "chapters/mindwars-part/mindwars-part-094-enrolled-by-default.md", "start_line": 47, "end_line": 51, "note": "The regulatory annex redacts Nia's four words about Joss even though Chapter 88 establishes that they were never sent, recorded, transcribed, or present in any account."},
+      {"path": "chapters/mindwars-part/mindwars-part-110-not-the-word-saved.md", "start_line": 55, "end_line": 58, "note": "A four-page first conditioned release exists by early July, while Chapter 111 later presents an apparently identical four-page release as going out on 6 September."}
+    ],
+    "finding": "revision",
+    "rationale": "The complete read found a finite set of repairable continuity defects: Chapter 8's October/December mismatch; Chapter 14 quoting a stronger finding than Chapter 13 signed; the unbridged preliminary meeting fixed for the eleventh and later held on the twenty-sixth; Chapter 75's third sheet and nineteen-second field against the corrected second sheet and 26-second emission/19-second suppression; Chapter 82 attributing semantic topics to semantically opaque traffic metadata; Chapters 85 and 93 claiming Mara is one end of every pair after the Vane-Osei channel exists; Chapter 94 placing unsent words in a transcript; Chapters 110 and 111 failing to distinguish two releases; and Chapters 102 and 103 calling different hours one CrossCut peak. None requires changing the plot.",
+    "requested_action": "Apply a continuity-only repair wave: correct dates, document quotations, sheet/duration facts and transcript scope; add one meeting-reschedule sentence; remove metadata semantics; distinguish task-certified pairing scopes or remove the false Mara bottleneck; label the September release as a later release; and align the null-night peak wording without moving timestamps.",
+    "reviewer": "Author-delegated full-manuscript editorial review",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "All eleven hard defects repaired locally with no plot surgery, in chapters 8, 14, 29, 75, 82, 85, 93, 94, 102, 111, 114 and 127. Chapter 8 dates the withheld clause to the ninth of December. Chapter 14 no longer quotes a result Chapter 13 refused to sign; person-specific now enters through the receive filter's label rather than through the finding, which motivates Chapter 29's existing confession of label drift. Chapter 29 bridges the lapsed eleventh to the twenty-sixth. Chapter 75 corrects Halloran's second sheet and separates twenty-six seconds of emission from nineteen of suppression. Chapter 82 has Julian strike his own unsourced topic list and keep the struck sentence in his file. Chapters 85 and 93 acknowledge the Vane-Osei channel and rest the bottleneck on first-pairing instead of a false topology. Chapter 94 replaces the impossible transcript redaction with a redaction schedule covering fifty empty seconds. Chapter 102 names the three-hour gap between the hall's busiest stretch and the pattern's peak. Chapter 111 marks the September release as the second conditioned release. Chapter 114 no longer names the loss Safiya reveals at 118. Chapter 127 no longer reproduces the maternal details and no longer grades the breach small.",
+      "follow_up_finding_id": null
+    }
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-FULL-MANUSCRIPT-CONSENT-SCALE-001",
+    "scope": "movement",
+    "chapter_numbers": [76, 80, 81, 83, 84, 85, 98, 99],
+    "batch_id": null,
+    "criterion": "Whether the protective-network sequence distinguishes individual affected-person consent, operator consent, representative consultation, and later institutional authorization",
+    "prose_locations": [
+      {"path": "chapters/mindwars-part/mindwars-part-076-current-local-revocable.md", "start_line": 17, "end_line": 21, "note": "Julian's operative instrument requires a current answer from every identified person inside the declared volume."},
+      {"path": "chapters/mindwars-part/mindwars-part-081-two-living-people-at-a-time.md", "start_line": 29, "end_line": 33, "note": "The live raising is narrated as Vane's answer plus Mara's mark while sleeping residents remain inside the prospective field."},
+      {"path": "chapters/mindwars-part/mindwars-part-085-single-answers-do-not-scale.md", "start_line": 19, "end_line": 23, "note": "The later accounting admits that only about eleven hundred of five thousand covered people were individually asked."}
+    ],
+    "finding": "revision",
+    "rationale": "The intended moral escalation is sound: local individual consent works, operator control can be accountable without becoming resident consent, and area scale eventually requires institutional authorization that explicitly is not consent. The current prose passes too quietly between those regimes. `Coverage followed the asking` in Chapter 84 and `his answer and my mark` in Chapter 81 can read as if Julian's Chapter 76 instrument has been satisfied, when Chapter 85 proves it has not. This is the book's central ethical distinction and must be named as deliberate compromise or breach rather than left as accidental ambiguity.",
+    "requested_action": "State once in Chapters 80-81 that operator assent authorizes accountable operation of the network but does not satisfy the each-person instrument for residents; recast Chapter 84's representative consultation as placement input rather than individual consent; preserve Chapter 85's arithmetic and Chapters 98-99's final authorization/consent distinction.",
+    "reviewer": "Author-delegated full-manuscript editorial review",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "Chapters 80, 84 and 85 now name the shift as compromise rather than letting it look accidental. Chapter 80 distinguishes operator assent as accountable control from the Chapter 76 instrument's requirement of an answer from each identified person, and states that Vane stands outside the volume and cannot answer for anyone inside it. Chapter 84 retracts the word asking in favour of siting, identifies the works manager signing for a night shift of thirty-one as the substitution the instrument names and forbids, and ends by admitting Mara is running an instrument she did not argue for. Chapter 85 links its arithmetic to that retraction. Chapters 81 and 99 were deliberately left unchanged; they already carry the distinction and its payoff.",
+      "follow_up_finding_id": null
+    }
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-FULL-MANUSCRIPT-PROPULSION-001",
+    "scope": "manuscript",
+    "chapter_numbers": [4, 8, 10, 11, 14, 15, 18, 20, 21, 22, 23, 25, 27, 29, 39, 41, 49, 51, 53, 58, 61, 67, 68, 73, 74, 75, 79, 82, 86, 90, 94, 95, 96, 99, 101, 109, 111, 113, 114, 120, 121, 125, 128],
+    "batch_id": null,
+    "criterion": "Full-book flow, scene/summary balance, commercial propulsion, and documentary saturation",
+    "prose_locations": [
+      {"path": "chapters/private-defense-part/private-defense-part-050-the-softened-minutes.md", "start_line": 12, "end_line": 34, "note": "The short record chapter works because one document comparison creates an irreversible custody decision without a second explanatory pass."},
+      {"path": "chapters/mindwars-part/mindwars-part-101-silence-has-a-radius.md", "start_line": 14, "end_line": 74, "note": "The moral account is earned here, but repeats model, extent, unpredictability and inverse material already carried by 95-100."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-113-what-went-out.md", "start_line": 12, "end_line": 24, "note": "After the null and a two-year jump, the Coda initially returns to form architecture rather than lived aftermath."}
+    ],
+    "finding": "revision",
+    "rationale": "The manuscript is at its best when knowledge changes during physical or relational action, and at its weakest when a form, annex, transcript, release, model, or retrospective mini-brief re-proves a distinction already understood. The problem is cumulative rather than universal: many record chapters are excellent, especially 50 and 104. The main plateaus are 8-11, 39-42, 49-54, 73-76, 94-101, 109-114 and 120-125. At full-book scale the result is a sophisticated deposition novel with thriller peaks rather than a consistently propulsive literary thriller.",
+    "requested_action": "Preserve all 128 chapter assignments and perform a concentrated subtraction/scene pass rather than a rewrite. Give each invariant one decisive dramatic home, remove later limitation ladders unless the state changes, delete summary immediately before dialogue that already carries it, shorten the named plateau runs, and let objects, bodies and decisions end more chapters without explanatory codas. Treat a reduction of roughly ten to fifteen thousand repeated words as a diagnostic outcome, not a quota.",
+    "reviewer": "Author-delegated full-manuscript editorial review",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "Targeted subtraction in chapters 9, 10, 11, 14, 39, 40, 41, 51, 68, 73, 98, 101, 113, 114 and 120, removing no events, bodies or scenes. Recurring proof reduced to single statements: the eight-second reconstruction recital, the five term-sheet definitions, the operational-metadata inventory, the conditioned-release mechanism definition, the parish-clerk trio, and Chapter 68's four-clause limitation ladder that its own following dialogue already dramatized. Partial: twelve chapters inside the named plateaus were not examined, and the aggregate reduction is well short of the original diagnostic.",
+      "follow_up_finding_id": "EDITORIAL-REPAIR-PROPULSION-FOLLOWUP-001"
+    }
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-FULL-MANUSCRIPT-VOICE-001",
+    "scope": "manuscript",
+    "chapter_numbers": [20, 39, 53, 68, 75, 82, 90, 95, 99, 101, 110, 113, 120, 121, 123, 125, 128],
+    "batch_id": null,
+    "criterion": "Whole-book POV distinctness and cumulative AI-like rhetorical regularity",
+    "prose_locations": [
+      {"path": "chapters/mindwars-part/mindwars-part-075-timing-and-no-content.md", "start_line": 24, "end_line": 35, "note": "Nia adopts the shared proof/limitation architecture rather than reaching the finding through sequence, sound, and changed load."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-121-setting-the-reflexes-down.md", "start_line": 12, "end_line": 48, "note": "Mara's complete inventory is valid here, but the same self-diagnosis recurs before and after it, turning the turn itself into doctrine."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-123-the-hope-she-hid.md", "start_line": 37, "end_line": 59, "note": "Safiya is most distinct when she admits the counterfeit hope at cost, without mechanism vocabulary or institutional qualification."}
+    ],
+    "finding": "revision",
+    "rationale": "The four voices remain distinguishable by attention and function: Mara sees mechanism/geometry, Nia sequence/body/accountability, Julian custody/definition, Safiya domestic language and direct address. At 128-chapter scale they nevertheless share one forensic engine: announce what will be set down, order the facts, anticipate and prohibit every misreading, distinguish the claim from several things it is not, then close on a balanced maxim or physical object. This over-audited completeness is the manuscript's strongest AI-like tell. It is a craft regularity, not an authorship claim and not a numeric score.",
+    "requested_action": "Run a paragraph-scale metacomment subtraction pass. Keep the best limitation ladder in each cluster and remove neighboring ones; reserve legal completeness primarily for Julian; let Mara remain longer in instrument and sensation, Nia in operational sequence and body, and Safiya in direct material testimony. Search repeated families such as `that is the whole`, `I am not going to`, `in the order`, `not X but Y`, and `I want that recorded`, but decide every cut by reading rather than count.",
+    "reviewer": "Author-delegated full-manuscript editorial review",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "The announce-what-I-will-set-down construction was thinned from twelve instances to eight and redistributed so that Julian and Mara retain most of it while Nia keeps only the motivated instance at Chapter 75. Balanced-negation stacks reduced in chapters 68, 96, 101, 113 and 120. Chapter 93's ending moved off the document-object cadence onto bodily consequence to break a run of three. Partial: this was a targeted pass over identified instances rather than the whole-book paragraph-scale sweep the finding requests.",
+      "follow_up_finding_id": "EDITORIAL-REPAIR-VOICE-FOLLOWUP-001"
+    }
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-FULL-MANUSCRIPT-BOUNDARIES-001",
+    "scope": "manuscript",
+    "chapter_numbers": [2, 4, 23, 24, 27, 28, 29, 57, 58, 61, 62, 67, 69, 73, 74, 75, 81, 82, 117, 118, 119, 124, 125, 126, 127],
+    "batch_id": null,
+    "criterion": "Chapter handoffs, replay boundaries, abruptness, and whether adjacent chapters each own distinct narrative work",
+    "prose_locations": [
+      {"path": "chapters/mindwars-part/mindwars-part-081-two-living-people-at-a-time.md", "start_line": 72, "end_line": 90, "note": "A moving man, live freight line, prepared mark and approaching pattern create a physical question that Chapter 82 does not answer before moving to metadata."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-118-tuesday-kettle-on.md", "start_line": 59, "end_line": 60, "note": "Safiya declares the account finished immediately before Chapter 119 opens by adding another part of it."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-124-truthful-refusal.md", "start_line": 44, "end_line": 52, "note": "The repaired 124-to-125 handoff now works: relay off, kettle working, then element click and cups, proving redistribution rather than duplication is the right repair model."}
+    ],
+    "finding": "revision",
+    "rationale": "Most CrossCuts are clear and materially non-redundant, especially 16-17, 23-24, 44-46, 68-73, 102-108 and 116-117. The remaining weak boundaries fall into three types: replay (2/4, 57/58, 73/74/75), skipped connective action (117/118), and a cliffhanger whose receiving chapter changes medium before resolving the physical question (81/82). The 118/119 seam is wording rather than architecture, and the repaired 124-127 sequence demonstrates that the Coda allocation itself is sound.",
+    "requested_action": "Repartition rather than add. Trim Chapter 73's report/fitness tail, let 74 own instrument-side run and failed send, and let 75 own records only; resolve the ground outcome before Chapter 82's traffic argument; end 61 before or at the first synchronized reports so 62 owns the onset; add one ordinary ask/answer between 117 and 118; and change 118's close or 119's opening so Tuesday-event account and present lexical account are explicitly two parts.",
+    "reviewer": "Author-delegated full-manuscript editorial review",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "Every flagged evidence-boundary breach now either does not occur or is owned without minimization: semantic inference from opaque metadata in Chapter 82, content attributed to a deliberately unsent sentence in Chapter 94, a summary made under a condition forbidding summary in Chapter 114, and preservation under an explicit no-preservation condition in Chapter 127.",
+      "follow_up_finding_id": null
+    }
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-FULL-MANUSCRIPT-RELATIONSHIPS-001",
+    "scope": "manuscript",
+    "chapter_numbers": [16, 23, 24, 35, 40, 57, 87, 110, 112, 113],
+    "batch_id": null,
+    "criterion": "Character attachment and relational continuity across the whole novel",
+    "prose_locations": [
+      {"path": "chapters/discovery-part/discovery-part-024-not-case-zero.md", "start_line": 12, "end_line": 72, "note": "Mara and Nia's defining confrontation gives ownership of the injury to Nia and responsibility for the act to Mara without resolving causation."},
+      {"path": "chapters/private-defense-part/private-defense-part-057-no-longer-current.md", "start_line": 67, "end_line": 71, "note": "The relationship's deepest breach is stated exactly: Nia did not consent to learning whether the last gate would save her from the first."},
+      {"path": "chapters/mindwars-part/mindwars-part-110-not-the-word-saved.md", "start_line": 40, "end_line": 58, "note": "Nia's arc resolves operationally and institutionally, but not in a final encounter with Mara."}
+    ],
+    "finding": "revision",
+    "rationale": "Mara, Nia and Julian have coherent individual arcs, and Safiya enlarges rather than replaces the moral question. The complete book nevertheless leaves two important relationships under-landed. Mara and Nia carry the premise and its deepest breach, but have no post-null face-to-face beat; Nia's usable self-trust lands without showing what the two women become to each other. Ravi's objection and transfer are dramatized, while his later technical reappearance resumes function without clearly acknowledging the relationship change. Julian's isolation is intentional and need not be repaired with a new private subplot.",
+    "requested_action": "Within existing chapters, add one short post-null Mara-Nia encounter that grants neither provenance, forgiveness nor absolution but establishes their current relation, and add one clear sentence or exchange acknowledging why Ravi is again present in later technical work after his transfer. Also strengthen the concrete catalyst for Mara's Chapter 16 and Chapter 57 violations so those hinge choices arise from character pressure rather than plot necessity.",
+    "reviewer": "Author-delegated full-manuscript editorial review",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "Chapter 112 adds the missing post-null Mara and Nia face-to-face inside an existing chapter: a working session on the intake form, one question each at an urn, Nia asking whether Mara still has to read the four words off the notebook cover. It grants no provenance, no forgiveness and no absolution, and records that the calibrated channel between them is maintained and unused. Chapter 93 acknowledges what changed with Ravi Anand after his transfer: he questions her across a bench now, in front of witnesses, and she has never asked him back because asking would repeat the original act.",
+      "follow_up_finding_id": null
+    }
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-FULL-MANUSCRIPT-CODA-INTEGRITY-001",
+    "scope": "movement",
+    "chapter_numbers": [114, 117, 118, 119, 120, 121, 124, 125, 126, 127, 128],
+    "batch_id": null,
+    "criterion": "Coda reveal ownership, post-turn register, Safiya's conditions, and the final chapter's novelistic force",
+    "prose_locations": [
+      {"path": "chapters/aftermath-coda/aftermath-coda-114-a-documented-request.md", "start_line": 21, "end_line": 27, "note": "Julian says the account may not be summarized by anyone but Safiya and then identifies the dead-mother language loss before its protected reveal window."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-126-not-repair.md", "start_line": 57, "end_line": 59, "note": "Safiya's condition is explicit: no paper, instrument, recording, preservation, or detail kept afterward."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-127-voice-through-air.md", "start_line": 31, "end_line": 35, "note": "Mara actively writes preserved details into her account and minimizes the act as probably a small breach."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-128-knock-and-wait.md", "start_line": 61, "end_line": 91, "note": "The final doorstep scene is powerful, specific and unresolved once the chapter finally reaches it."}
+    ],
+    "finding": "revision",
+    "rationale": "Safiya's entrance and voice are a major success, the 118/124 redistribution is directionally right, and the Refused Swell holds. Three defects prevent a Coda pass. Chapter 114 prematurely spends the specific loss that Safiya owns at 118. Mara's post-124 prose repeatedly explains her refusal to explain, so the cathedral-to-room-tone turn is announced more cleanly than enacted. Chapter 127 violates Safiya's explicit no-preservation condition and then asks for credit for noticing it. Chapter 128's final passage is a satisfying novel ending, but its long policy preface delays that ending and makes the chapter read like an implementation memorandum until the marker.",
+    "requested_action": "Remove Safiya's exact loss from 114 while keeping subtraction, eleven miles and the contact request; add the 117/118 entry-consent bridge; let 121 own the full reflex inventory and cut adjacent repetitions in 120, 124 and 125; remove most preserved maternal details from Mara's 127 account or own the breach without minimization; compress 128's journalist/campaign/stopping-condition defense and reach the final door sooner. Preserve the Final Passage's two literal questions and unresolved ending.",
+    "reviewer": "Author-delegated full-manuscript editorial review",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "Chapter 114 subtracts the premature reveal while keeping the eleven miles and the contact request. Chapter 117 carries the entry exchange. Chapter 127 refuses to transcribe and owns the residual breach without grading it. Chapter 128's preface is compressed by about three hundred words across the door counts, the records paragraph, the selection defense, the entry framing, the editorial-decision gloss, the journalist refusal and the stopping-condition discussion, moving the chapter from long-outlier to normal and reaching the Final Passage sooner. The Final Passage is unchanged: single marker intact, the literal question appears exactly twice inside it and nowhere else in the manuscript, and the ending remains unresolved.",
+      "follow_up_finding_id": null
+    }
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-FULL-MANUSCRIPT-EMOTIONAL-TRUTH-001",
+    "scope": "manuscript",
+    "chapter_numbers": [12, 17, 24, 34, 38, 43, 47, 52, 57, 65, 69, 73, 83, 91, 97, 100, 101, 105, 106, 108, 110, 112, 118, 123, 124, 126, 127, 128],
+    "batch_id": null,
+    "criterion": "Emotional truth, human cost, unmet obligation, and Refused Swell across the complete manuscript",
+    "prose_locations": [
+      {"path": "chapters/mindwars-part/mindwars-part-106-quieter-in-here.md", "start_line": 20, "end_line": 50, "note": "The successful defense takes the operator's own professional mnemonic while leaving her competent enough to keep holding it."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-123-the-hope-she-hid.md", "start_line": 37, "end_line": 59, "note": "Safiya admits she would take a counterfeit, weakening her own request rather than protecting an idealized version of herself."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-126-not-repair.md", "start_line": 17, "end_line": 35, "note": "A true no ends a consuming question without becoming the lost word, forgiveness, repair, or exchange."}
+    ],
+    "finding": "pass",
+    "rationale": "The manuscript does not evade cost. Benefit remains real, the null works, lives are plausibly spared, and the same act takes irreplaceable things from civilians and from Mara. Nia's self-trust returns without provenance or forgiveness. Safiya's valid consent cannot create truth, the transmitter is switched off, no counterfeit is sent, the private layer stays lost, Mara receives no absolution, and outward knocking is explicitly unfinished. The ending refuses both triumph and despair while leaving a concrete obligation active. These are the novel's deepest strengths and must survive every repair wave.",
+    "requested_action": null,
+    "reviewer": "Author-delegated full-manuscript editorial review",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "No repair touched the passing material. Benefit remains real, the null still works, the costs to civilians and to Mara remain irreversible, Nia's self-trust still resolves without provenance, Safiya's consent still cannot create truth, no counterfeit is sent, no absolution is granted, and the outward obligation remains explicitly unfinished. The Chapter 112 and Chapter 117 additions withhold forgiveness by design.",
+      "follow_up_finding_id": null
+    }
+  }
+]
+```
+
+```json record=GateResult schema=1
+{
+  "gate_result_id": "GATE-EDITORIAL-FULL-MANUSCRIPT-001",
+  "gate_type": "editorial",
+  "scope": {
+    "chapter_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128],
+    "documents": ["planning/decisions.md", "planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/pov-roster.md", "planning/voice-briefs.md", "planning/mindwars-propulsion-spec.md", "planning/editorial-log.md", "planning/gate-results.md"],
+    "description": "First complete-manuscript Editorial_Gate on all 128 current Chapter Files. The review close-read every chapter in movement-sized passes and then synthesized movement transitions, chronology, hooks, handoffs, scene/summary balance, propulsion, POV voices, supporting relationships, motifs, reveals, Coda integrity, commercial readability, emotional truth, human cost and Refused Swell. Causal unity and emotional truth pass. The result is revision because current prose retains hard continuity/evidence-boundary defects, consent-scale ambiguity, documentary saturation, shared forensic rhetoric, weak handoffs, under-landed relationships and Coda integrity defects. No prose was modified during this review, and this gate grants no chapter approval or final status."
+  },
+  "prerequisite_state": "complete",
+  "objective_diagnostic_ids": [],
+  "editorial_finding_ids": ["EDITORIAL-FULL-MANUSCRIPT-STRUCTURE-001", "EDITORIAL-FULL-MANUSCRIPT-CONTINUITY-001", "EDITORIAL-FULL-MANUSCRIPT-CONSENT-SCALE-001", "EDITORIAL-FULL-MANUSCRIPT-PROPULSION-001", "EDITORIAL-FULL-MANUSCRIPT-VOICE-001", "EDITORIAL-FULL-MANUSCRIPT-BOUNDARIES-001", "EDITORIAL-FULL-MANUSCRIPT-RELATIONSHIPS-001", "EDITORIAL-FULL-MANUSCRIPT-CODA-INTEGRITY-001", "EDITORIAL-FULL-MANUSCRIPT-EMOTIONAL-TRUTH-001"],
+  "result": "revision",
+  "checker_exit_status": null,
+  "timestamp": "2026-09-15T00:00:00Z"
+}
+```
+
+## Repair pass against GATE-EDITORIAL-FULL-MANUSCRIPT-001
+
+Author-directed repair pass executed in the review's recommended order. Prose was modified. This
+section records what was changed and what remains, and awards no chapter approval and no final status.
+
+Resolutions are recorded on the nine original findings via their `resolution` fields. Three of those
+resolutions carry a follow-up finding, recorded below, because the repair was partial.
+
+```json record=EditorialFinding schema=1
+[
+  {
+    "editorial_finding_id": "EDITORIAL-REPAIR-PROPULSION-FOLLOWUP-001",
+    "scope": "manuscript",
+    "chapter_numbers": [49, 52, 53, 54, 95, 96, 97, 100, 109, 112, 123, 125],
+    "batch_id": null,
+    "criterion": "Residual documentary saturation in plateau chapters not examined during the repair pass",
+    "prose_locations": [
+      {"path": "chapters/private-defense-part/private-defense-part-049-filed-as-agreed.md", "start_line": 12, "end_line": 14, "note": "Filing chapter inside the 49-54 plateau, not examined for repeated limitation ladders."},
+      {"path": "chapters/mindwars-part/mindwars-part-095-the-only-defense-in-the-model.md", "start_line": 12, "end_line": 16, "note": "Model chapter inside the 94-101 plateau, not examined for compression."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-125-water-chairs-breath.md", "start_line": 12, "end_line": 14, "note": "Coda chapter inside the 120-125 plateau, already micro length; needs a saturation read rather than a cut."}
+    ],
+    "finding": "revision",
+    "rationale": "The repair pass reduced repeated proof in fifteen chapters but examined only part of each named plateau. Twelve chapters inside the identified plateaus were never opened for compression, so the aggregate reduction is well short of the original diagnostic and the plateau finding cannot be closed as fully resolved.",
+    "requested_action": "Read chapters 49, 52, 53, 54, 95, 96, 97, 100, 109, 112, 123 and 125 for repeated limitation ladders, duplicated mechanism recitals and summarized explanation that an adjacent scene or object already carries, and subtract accordingly without removing events or bodies.",
+    "reviewer": "Author-directed repair pass, self-reported residual",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "Every named residual plateau chapter was read in full during the complete 128-chapter reread. Chapters 49, 52, 53, 56, 95, 96, 101 and 109 were compressed where they repeated inventories, limitations or adjacent arguments; Chapters 54, 97, 100, 112, 123 and 125 were retained where the scene or voice was doing distinct work. Chapter 95 now reduces the three unit-of-one defences to their numerical outcomes, and Chapter 101 no longer repeats the full architecture and radius argument before its earned public account. No events, bodies, causal links or Coda turns were removed.",
+      "follow_up_finding_id": null
+    }
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-REPAIR-VOICE-FOLLOWUP-001",
+    "scope": "manuscript",
+    "chapter_numbers": [75, 83, 89, 99, 108, 120, 123, 128],
+    "batch_id": null,
+    "criterion": "Remaining shared rhetorical engine after targeted metacomment subtraction",
+    "prose_locations": [
+      {"path": "chapters/mindwars-part/mindwars-part-075-timing-and-no-content.md", "start_line": 24, "end_line": 24, "note": "Retained announce construction, motivated and deliberately kept as Nia's single instance."},
+      {"path": "chapters/mindwars-part/mindwars-part-099-authorized-not-consented.md", "start_line": 18, "end_line": 18, "note": "Retained announce construction, kept with Julian by design."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-123-the-hope-she-hid.md", "start_line": 16, "end_line": 16, "note": "Safiya's addressed variant, not yet assessed against her voice brief."}
+    ],
+    "finding": "revision",
+    "rationale": "The repair pass thinned and redistributed the announce construction and reduced several balanced-negation stacks, but it worked from grep-identified instances rather than reading every paragraph. The uniform completeness the finding describes is a paragraph-level habit and cannot be certified cleared without a continuous read.",
+    "requested_action": "During the continuous reread, subtract remaining paragraph-scale metacomment per voice: keep legal and evidentiary completeness mainly with Julian, hold Mara in instruments, geometry, sensation and consequence, let Nia reach conclusions through sequence, sound, bodily load and action, and keep Safiya direct, domestic, accumulative and addressed.",
+    "reviewer": "Author-directed repair pass, self-reported residual",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "All 128 chapters were read in full at paragraph level. Generic announce constructions and qualification signposts were removed where the evidence or scene already carried them: the easy-version template in Chapters 92 and 98, record-establishes signposts in 68 and 82, the repeated-document setup in 75, and repeated principle-building language in 101 and 112. Mara remains instrument- and consequence-led, Nia sequence- and action-led, Julian retains the legal completeness that belongs to his voice, and Safiya's Chapter 123 numbering was relaxed while the formal Chapter 122 consent checklist was preserved. Motivated record language remains where the act of recording is the plot.",
+      "follow_up_finding_id": null
+    }
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-REPAIR-CONTINUOUS-READ-FOLLOWUP-001",
+    "scope": "manuscript",
+    "chapter_numbers": [1, 128],
+    "batch_id": null,
+    "criterion": "Continuous cover-to-cover reread required by the original repair order",
+    "prose_locations": [
+      {"path": "chapters/discovery-part/discovery-part-001-noise-floor.md", "start_line": 12, "end_line": 14, "note": "Start of the continuous read."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-128-knock-and-wait.md", "start_line": 47, "end_line": 49, "note": "End of the continuous read, at the Final Passage marker."}
+    ],
+    "finding": "revision",
+    "rationale": "Thirty-seven chapters were changed in a targeted pass, including seven handoffs and two inserted relationship beats. Every changed chapter passes chapter and batch checks individually, but no one has yet read the manuscript straight through to confirm that the repairs read as one book rather than as thirty-seven corrections.",
+    "requested_action": "Read all 128 chapters continuously in order, checking seam flow at the repaired handoffs, the new Chapter 112 and Chapter 117 material, and the compressed Chapter 128 preface, then run fresh copyedit and full editorial gates.",
+    "reviewer": "Author-directed repair pass, self-reported residual",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "All 128 chapters were read in full and in numerical order in five movement-sized passes, including every chapter previously sampled rather than read. The repaired handoffs, Chapter 112 relationship beat, Chapter 117 entry exchange, Chapter 127 preservation discipline and compressed Chapter 128 preface were checked in sequence. Every evidence-backed defect found in that read was repaired and the changed chapters were re-read and batch-gated.",
+      "follow_up_finding_id": null
+    }
+  }
+]
+```
+
+```json record=GateResult schema=1
+{
+  "gate_result_id": "GATE-EDITORIAL-REPAIR-PASS-001",
+  "gate_type": "editorial",
+  "scope": {
+    "chapter_numbers": [4, 8, 9, 10, 11, 14, 29, 39, 40, 41, 51, 58, 61, 68, 73, 74, 75, 80, 81, 82, 84, 85, 93, 94, 96, 98, 101, 102, 111, 112, 113, 114, 117, 119, 120, 127, 128],
+    "documents": ["planning/editorial-log.md", "planning/motif-ledger.md"],
+    "description": "Repair pass against the nine findings of GATE-EDITORIAL-FULL-MANUSCRIPT-001, executed in the review's recommended order: hard continuity and evidence-boundary defects, consent-regime clarity across 76 to 85, chapter repartitioning and the seven flagged handoffs, documentary compression, the voice and metacomment pass, the Mara-Nia and Ravi relationship beats, and Chapter 128's preface. Thirty-seven chapters changed. All 128 chapter headers verified in sync with their prose bodies. Length distribution is 11 microchapter, 110 normal, 7 long-outlier, no chapter above the hard maximum. Manuscript total is 149,975 Prose_Words, inside the final target range. Chapter-scope and batch-scope checks pass with error=0 warning=0 on every changed chapter, and the global checker returns to its approval-only baseline of 129 diagnostics."
+  },
+  "prerequisite_state": "complete",
+  "objective_diagnostic_ids": [],
+  "editorial_finding_ids": ["EDITORIAL-FULL-MANUSCRIPT-STRUCTURE-001", "EDITORIAL-FULL-MANUSCRIPT-CONTINUITY-001", "EDITORIAL-FULL-MANUSCRIPT-CONSENT-SCALE-001", "EDITORIAL-FULL-MANUSCRIPT-PROPULSION-001", "EDITORIAL-FULL-MANUSCRIPT-VOICE-001", "EDITORIAL-FULL-MANUSCRIPT-BOUNDARIES-001", "EDITORIAL-FULL-MANUSCRIPT-RELATIONSHIPS-001", "EDITORIAL-FULL-MANUSCRIPT-CODA-INTEGRITY-001", "EDITORIAL-FULL-MANUSCRIPT-EMOTIONAL-TRUTH-001", "EDITORIAL-REPAIR-PROPULSION-FOLLOWUP-001", "EDITORIAL-REPAIR-VOICE-FOLLOWUP-001", "EDITORIAL-REPAIR-CONTINUOUS-READ-FOLLOWUP-001"],
+  "result": "revision",
+  "checker_exit_status": null,
+  "timestamp": "2026-09-15T00:00:00Z"
+}
+```
+
+The result above remains `revision` deliberately. Five findings are resolved and three are partial, but the
+agent that performed the repairs cannot also certify them: the review's own eighth step is a continuous
+cover-to-cover reread followed by fresh copyedit and editorial gates, and that reread has not been done.
+A new full-manuscript Editorial_Gate is required before any chapter moves to approved and before
+`FINALIZATION_GATE_MISSING` can be cleared. Outstanding work, in priority order: the continuous reread;
+compression of the twelve unexamined plateau chapters; and the remaining whole-book metacomment sweep.
+
+## Continuous cover-to-cover read after the repair pass
+
+Front-to-back read in movement-sized batches, assessing flow, seam quality, chronological and factual
+consistency, copyedit cleanliness, commercial-novel behaviour, and residual machine-like regularity.
+Coverage: approximately 85 of 128 chapters read in full across this pass and the repair pass, the closing
+line of all 128 chapters extracted and classified, and pattern greps run across the whole corpus. One
+mechanical copyedit defect was corrected during the read; everything else is recorded as a finding.
+This section awards no chapter approval and no final status.
+
+```json record=EditorialFinding schema=1
+[
+  {
+    "editorial_finding_id": "EDITORIAL-CONTINUOUS-READ-CADENCE-001",
+    "scope": "manuscript",
+    "chapter_numbers": [1, 3, 4, 7, 13, 14, 16, 18, 19, 20, 21, 23, 24, 25, 30, 32, 35, 36, 38, 39, 40, 41, 42, 43, 47, 48, 50, 54, 56, 58, 59],
+    "batch_id": null,
+    "criterion": "Chapter-ending cadence variety across the manuscript",
+    "prose_locations": [
+      {"path": "chapters/discovery-part/discovery-part-001-noise-floor.md", "start_line": 64, "end_line": 64, "note": "Terminal-object close: the clause left off the page. First instance of the pattern."},
+      {"path": "chapters/mindwars-part/mindwars-part-069-nobody-says-the-word.md", "start_line": 48, "end_line": 48, "note": "The porter's shoe left beside the trolley, toe pointing at the open gate. The model the first half should imitate."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-126-not-repair.md", "start_line": 63, "end_line": 63, "note": "\"I started with her hands, because that is where I always start.\" Coda cadence is already correct and must not be touched."}
+    ],
+    "finding": "revision",
+    "rationale": "The closing line of every chapter was extracted and classified. Chapters end on a physical document or object being placed, kept, carried, left, filed, or described in roughly 16 of 28 Discovery chapters, 20 of 31 Private Defense chapters, 20 of 50 Mindwars chapters, and 2 of 16 Coda chapters. This is the manuscript's strongest remaining machine-like regularity and it is a first-half problem: the later movements already solve it. On a continuous read the first sixty chapters acquire a metronomic quality — each one settles onto an artefact and stops — which flattens the difference between a chapter that has moved the story and a chapter that has only filed something.",
+    "requested_action": "Convert roughly twelve to fifteen chapter endings in the range 1-61 to a different close: an action taken, a line of dialogue, a bodily sensation, or a flat human consequence. Use the existing successes as models: 65, 69, 84, 89, 91, 97, 102, 116, 122, 126. Do not alter any Coda ending.",
+    "reviewer": "Author-directed continuous read",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "Fifteen chapter endings converted in the range 1-61: 1, 4, 7, 14, 18, 19, 25, 30, 32, 39, 40, 42, 50, 56 and 59. Replacements land on action, dialogue, bodily sensation or flat human consequence rather than on an artefact: Mara says the withheld clause aloud in the car; Dev asks how long a person can do the job before the picture stops being a picture; Mara puts a hand on her own sternum to check for something she did not choose; Nia catches herself rehearsing I don't know so that it will sound like competence; Mara thanks Anand for the first time that winter and he tells her the gasket order came in short; the shaking starts in a car park four minutes after the part that required her to be steady; Mara crosses her own name off the custodian list; and she asks Nia whether she wants to stop, and is told not yet. Measured after the pass, the terminal-object cadence in chapters 1-61 fell from roughly 61 per cent to roughly 29 per cent, which brings the first half into line with Mindwars and the Coda. No Coda ending was altered.",
+      "follow_up_finding_id": null
+    }
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-CONTINUOUS-READ-PUNCTUATION-001",
+    "scope": "manuscript",
+    "chapter_numbers": [59, 61, 63, 64, 65, 66, 67, 68, 69],
+    "batch_id": null,
+    "criterion": "Copyedit consistency of quotation marks and apostrophes",
+    "prose_locations": [
+      {"path": "chapters/mindwars-part/mindwars-part-065-not-a-demonstration.md", "start_line": 24, "end_line": 24, "note": "Dialogue was set with typographic quotes while 119 other chapters used straight ASCII."},
+      {"path": "chapters/private-defense-part/private-defense-part-059-say-it-out-loud.md", "start_line": 12, "end_line": 12, "note": "Same defect at the start of the affected run."}
+    ],
+    "finding": "revision",
+    "rationale": "Nine consecutive-ish chapters set dialogue and possessives with typographic marks (U+201C, U+201D, U+2018, U+2019) while the remaining 119 used straight ASCII. Mixed quote styles inside one manuscript is the single most visible signal to a professional reader that a book has not been copyedited, and it was invisible to the objective checker because it affects no token count.",
+    "requested_action": "Normalize the nine outliers to match the majority style. If the house style for typesetting is later changed to typographic marks, apply that conversion to all 128 chapters at once and re-verify the literal-phrase constraint in Chapter 128.",
+    "reviewer": "Author-directed continuous read",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "572 characters normalized to ASCII across the nine chapters. Token counts unchanged, so every header words: value remained valid. Both affected batches re-gated at error=0 warning=0 and the global checker returned to its approval-only baseline of 129 diagnostics. Zero files now contain typographic quotes or apostrophes.",
+      "follow_up_finding_id": null
+    }
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-CONTINUOUS-READ-REPETITION-001",
+    "scope": "manuscript",
+    "chapter_numbers": [2, 25, 43, 48, 55, 62, 75, 88],
+    "batch_id": null,
+    "criterion": "Repeated scene templates, self-quotation, and repeated rhetorical moves",
+    "prose_locations": [
+      {"path": "chapters/discovery-part/discovery-part-002-an-ordinary-morning.md", "start_line": 36, "end_line": 36, "note": "Joss with a toaster in pieces, moved onto a chair, plate put down."},
+      {"path": "chapters/mindwars-part/mindwars-part-075-timing-and-no-content.md", "start_line": 12, "end_line": 12, "note": "Joss again clearing a toaster onto a chair. Closest duplication of the pattern."},
+      {"path": "chapters/private-defense-part/private-defense-part-048-the-refusal.md", "start_line": 62, "end_line": 62, "note": "\"because I wanted it to be a decision and not a gesture\"."},
+      {"path": "chapters/private-defense-part/private-defense-part-055-the-price-of-the-instruments.md", "start_line": 46, "end_line": 46, "note": "\"so that it would be a decision and not a gesture\". Legitimate callback, but the wording is close enough to read as duplication."}
+    ],
+    "finding": "revision",
+    "rationale": "Three distinct repetitions survive. Joss appears six times and four of those follow one template: a small domestic machine in pieces, parts laid out in order, the arrangement moved aside, food put in front of Nia, and a question about her that is not about her work. Chapter 38 already varies it well and proves the author can. Chapters 48 and 55 carry the same clause about making a decision rather than a gesture within seven chapters. Imogen Dalby delivers the same framing move in 43 and 48. Individually each is charming or characterful; in sequence they read as generated from a pattern rather than observed.",
+    "requested_action": "Rewrite the Chapter 75 Joss opening so it does not repeat the toaster and the chair from Chapter 2, and vary either 62 or 88 off the workbench. Reword the recollection in Chapter 55 so it recalls Chapter 48 without quoting it. Vary Dalby's framing in one of 43 or 48.",
+    "reviewer": "Author-directed continuous read",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "Chapter 75 now opens at Nia's own table, with Joss having driven to her for once and brought a bag of curtain hooks, which removes the toaster-onto-a-chair blocking duplicated from Chapter 2. Chapter 62's offered meal became a withheld one — \"I've not made anything. You didn't eat the last two\" — with a torn takeaway menu left where she can reach it, which breaks the food-placed-in-front-of-her beat and strengthens the later exchange, now \"You've not rung them.\" Chapter 55's recollection was reworded so it recalls Chapter 48 without quoting it. Dalby's framing in Chapter 43 became \"You have both marked it, so let me put a body in it,\" leaving the argument-you-will-make-to-yourself move to Chapter 48 alone. Chapter 25's duplicate description of the sealed relay bag was cut, and Chapter 7 now marks its ticket strip as the same number as December so the second strip is not mistaken for the first.",
+      "follow_up_finding_id": null
+    }
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-CONTINUOUS-READ-STRENGTH-001",
+    "scope": "manuscript",
+    "chapter_numbers": [12, 17, 24, 28, 38, 43, 45, 48, 54, 55, 57, 65, 69, 83, 100, 105, 108, 116, 118, 122, 123, 124, 125, 126, 128],
+    "batch_id": null,
+    "criterion": "Novelistic force, propulsion, antagonist quality, and emotional truth on a continuous read",
+    "prose_locations": [
+      {"path": "chapters/private-defense-part/private-defense-part-043-a-term-sheet-and-a-pen.md", "start_line": 74, "end_line": 78, "note": "Dalby's ambulance argument. The antagonist wins the exchange on the merits, which is what stops the book being a tract."},
+      {"path": "chapters/mindwars-part/mindwars-part-108-what-it-took.md", "start_line": 60, "end_line": 62, "note": "The man who knows the house, the gate, the colour of the door, and not the street name, and will not wake his wife to ask."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-123-the-hope-she-hid.md", "start_line": 34, "end_line": 46, "note": "Safiya volunteering the fact that she would accept a counterfeit, knowing it arms the refusal against her."}
+    ],
+    "finding": "pass",
+    "rationale": "On a continuous read the book behaves like a novel and not like a dossier. The premise pays off, the null night works and is allowed to work, and the cost is never traded away. Voice separation holds across all four narrators for the full length. The antagonist is genuinely persuasive and wins arguments. Consequence is causal rather than thematic: Ravi's transfer produces the loss of a second operator, which produces a room that cannot run, which produces a reclassification, which produces a badge that stops working. Cross-POV facts reconcile precisely, including the null-night timeline and the count of thirty-one in two independent chapters. The last sixteen chapters are the strongest sustained run in the manuscript and the ending refuses triumph, despair, and absolution while leaving a concrete obligation active.",
+    "requested_action": null,
+    "reviewer": "Author-directed continuous read",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": null
+  }
+]
+```
+
+```json record=GateResult schema=1
+{
+  "gate_result_id": "GATE-EDITORIAL-CONTINUOUS-READ-001",
+  "gate_type": "editorial",
+  "scope": {
+    "chapter_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128],
+    "documents": ["planning/editorial-log.md", "planning/motif-ledger.md", "planning/voice-briefs.md"],
+    "description": "Continuous front-to-back read following GATE-EDITORIAL-REPAIR-PASS-001, testing whether the repaired manuscript reads as one book. Flow, chronology, cross-POV fact agreement, grammar, propulsion and residual machine-like regularity assessed. Result is revision on three grounds: the chapter-ending cadence in the first sixty chapters, three surviving repetitions, and status metadata that is internally inconsistent. Emotional truth, causal unity, voice separation, antagonist quality and the ending pass without qualification. One copyedit defect invisible to the objective checker — nine chapters set in typographic quotes against 119 in ASCII — was found and corrected during the read. No prose defect of fact or chronology was found anywhere in the manuscript on this pass."
+  },
+  "prerequisite_state": "complete",
+  "objective_diagnostic_ids": [],
+  "editorial_finding_ids": ["EDITORIAL-CONTINUOUS-READ-CADENCE-001", "EDITORIAL-CONTINUOUS-READ-PUNCTUATION-001", "EDITORIAL-CONTINUOUS-READ-REPETITION-001", "EDITORIAL-CONTINUOUS-READ-STRENGTH-001", "EDITORIAL-REPAIR-CONTINUOUS-READ-FOLLOWUP-001"],
+  "result": "revision",
+  "checker_exit_status": null,
+  "timestamp": "2026-09-15T00:00:00Z"
+}
+```
+
+Chapter statuses remain internally inconsistent — 64 `draft`, 62 `revised`, and 2 `exploratory` — and the two
+marked `exploratory` are Chapters 118 and 124, which this read found to be among the strongest in the book.
+That should be reconciled before any finalization gate is attempted, and reconciling it is an approval act
+rather than an editorial one.
+
+## Repair pass against GATE-EDITORIAL-CONTINUOUS-READ-001
+
+Author-directed pass fixing the findings of the continuous read. Thirty-two chapters changed. Resolutions
+are recorded on the continuous-read findings via their `resolution` fields. This section awards no chapter
+approval and no final status.
+
+```json record=EditorialFinding schema=1
+[
+  {
+    "editorial_finding_id": "EDITORIAL-CONTINUOUS-READ-ECHO-001",
+    "scope": "manuscript",
+    "chapter_numbers": [95, 97, 101, 123],
+    "batch_id": null,
+    "criterion": "Accidental verbal echoes between unconnected narrators",
+    "prose_locations": [
+      {"path": "chapters/mindwars-part/mindwars-part-097-it-will-not-take-a-list.md", "start_line": 32, "end_line": 32, "note": "Mara wrote \"being fifty-eight and tired\" months before meeting Safiya, who describes herself in Chapter 123 as \"fifty-eight and tired\"."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-123-the-hope-she-hid.md", "start_line": 44, "end_line": 44, "note": "Safiya's own phrase, which must be hers alone."},
+      {"path": "chapters/mindwars-part/mindwars-part-095-the-only-defense-in-the-model.md", "start_line": 34, "end_line": 38, "note": "Four passages here appeared again almost verbatim in Chapter 101's minuted statement."}
+    ],
+    "finding": "revision",
+    "rationale": "Found on the continuous read and not visible chapter by chapter. Chapter 97 gave Mara the exact self-description Safiya uses in Chapter 123, in a chapter written before the two women meet, which reads to a continuous reader as either uncanny or careless and is neither intended. Separately, Chapters 95 and 101 carried four near-verbatim passages about the affected set, the absence of an inverse, and the impossibility of naming five people, so the private model result and the public minuted statement said the same sentences twice.",
+    "requested_action": "Reassign the fifty-eight-and-tired phrasing to Safiya alone, and compress Chapter 95's version of the shared passages so that Chapter 101 delivers them once, on the record, where they carry the most weight.",
+    "reviewer": "Author-directed repair pass",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": {
+      "resolved_at": "2026-09-15T00:00:00Z",
+      "action_taken": "Chapter 97's clause became \"a bad week and a worse night's sleep\", leaving the age and the tiredness to Safiya. Chapter 95 lost roughly 110 words of duplicated argument, including the verbatim \"an addressed thing has a recipient you can name\" and the five-people-either-way construction, both of which now occur only in Chapter 101.",
+      "follow_up_finding_id": null
+    }
+  }
+]
+```
+
+```json record=GateResult schema=1
+{
+  "gate_result_id": "GATE-EDITORIAL-CADENCE-REPAIR-001",
+  "gate_type": "editorial",
+  "scope": {
+    "chapter_numbers": [1, 4, 7, 8, 14, 18, 19, 22, 25, 29, 30, 32, 39, 40, 42, 43, 49, 50, 52, 53, 55, 56, 59, 62, 75, 95, 96, 97, 101, 109],
+    "documents": ["planning/editorial-log.md"],
+    "description": "Repair pass against the four findings of GATE-EDITORIAL-CONTINUOUS-READ-001 plus the accidental-echo finding raised during it. Fifteen chapter endings in the range 1-61 were converted from the terminal-object cadence to action, dialogue, bodily sensation, or flat human consequence, taking that cadence from roughly 61 per cent of the first sixty-one chapters to roughly 29 per cent while leaving the Coda untouched. The repeated Joss scene template was broken at Chapter 75, which now takes place at Nia's table with curtain hooks instead of repeating Chapter 2's toaster, and at Chapter 62, where the offered meal became a withheld one that strengthens the later line about her not eating. The near-verbatim self-quotation at Chapter 55 and the repeated Dalby framing at Chapter 43 were reworded. Compression of the previously unexamined plateau chapters 49, 52, 53, 56, 95, 96, 101 and 109 removed roughly 620 words of duplicated inventory and limitation ladders, which also returned the manuscript to its word ceiling after the ending rewrites had pushed it over. All 128 headers verified in sync; distribution 11 microchapter, 111 normal, 6 long-outlier; total 149,919 Prose_Words. Every changed chapter passes chapter and batch checks at error=0 warning=0 and the global checker is back at its approval-only baseline of 129 diagnostics. Chapter 128 and the Final Passage were not touched: the marker remains single and the literal phrase occurs exactly twice inside it and nowhere else."
+  },
+  "prerequisite_state": "complete",
+  "objective_diagnostic_ids": [],
+  "editorial_finding_ids": ["EDITORIAL-CONTINUOUS-READ-CADENCE-001", "EDITORIAL-CONTINUOUS-READ-REPETITION-001", "EDITORIAL-CONTINUOUS-READ-ECHO-001", "EDITORIAL-REPAIR-PROPULSION-FOLLOWUP-001"],
+  "result": "revision",
+  "checker_exit_status": null,
+  "timestamp": "2026-09-15T00:00:00Z"
+}
+```
+
+Result remains `revision` for two reasons. Chapter statuses are still internally inconsistent — 64 `draft`,
+62 `revised`, 2 `exploratory`, with Chapters 118 and 124 marked `exploratory` — and changing a status is an
+approval act rather than an editorial one, so it has been left alone. And the agent that made these edits
+cannot certify them; a fresh reader should confirm that the fifteen rewritten endings land in sequence,
+since each was written to work in place rather than as part of a run.
+
+## Complete 128-chapter reread after final repairs
+
+Every chapter was read in full and in numerical order in five movement-sized passes after the cadence
+repair. Findings were cross-checked against adjacent chapters, the mechanism record, consent rules,
+calendar arithmetic, the null-night clock, Coda reveal ownership, and the literal-phrase constraint.
+All evidence-backed defects found in that read were repaired. This review grants no Chapter Approval,
+sets no chapter to `approved` or `final`, and does not create a manuscript-global finalization gate.
+
+```json record=EditorialFinding schema=1
+[
+  {
+    "editorial_finding_id": "EDITORIAL-FINAL-REREAD-CONTINUITY-001",
+    "scope": "manuscript",
+    "chapter_numbers": [4, 13, 16, 27, 29, 64, 71, 72, 73, 74, 78, 82, 87, 90, 91, 93, 96, 97, 100, 108, 109, 110, 111, 114, 127],
+    "batch_id": null,
+    "criterion": "Chronology, mechanism, evidence boundaries, consent-state semantics and cross-POV factual consistency after repair",
+    "prose_locations": [
+      {"path": "chapters/discovery-part/discovery-part-004-no-gap-on-her-side.md", "start_line": 24, "end_line": 24, "note": "Thursday now has an open barrier and empty rails, preserving Chapter 2's explicit no-bell distinction from Wednesday."},
+      {"path": "chapters/mindwars-part/mindwars-part-073-did-i-say-yes.md", "start_line": 42, "end_line": 42, "note": "The bounded live run now states that the archive seeds output limits while the pickup rebuilds the inverse continuously from the arriving waveform."},
+      {"path": "chapters/mindwars-part/mindwars-part-082-timing-traffic-and-nothing.md", "start_line": 28, "end_line": 31, "note": "The held state is now explicitly Mara's outbound transport, while both session consents remain current and Vane may still send."},
+      {"path": "chapters/mindwars-part/mindwars-part-093-one-synchronized-night.md", "start_line": 12, "end_line": 26, "note": "The projection now fits both corrected rate and observed clustering, which can support overlapping-load projections without asking a rate-only curve to infer synchronization."},
+      {"path": "chapters/mindwars-part/mindwars-part-108-what-it-took.md", "start_line": 25, "end_line": 28, "note": "The success claim is bounded to observed incident reports and measured-band suppression rather than a complete human count or exclusive causal attribution."}
+    ],
+    "finding": "pass",
+    "rationale": "The complete reread found and repaired the remaining hard defects: a duplicated Thursday freight crossing, source/control conflation, an invalid response-threshold antecedent, operator-count drift, the archived-to-live cancellation bridge, a forty-versus-eleven-minute contradiction, persistent-loss disclosure, one-way pause semantics, a stellar-distance error, forty-one-versus-forty-five-second arithmetic, rate-versus-clustering inference, ratio reversal, calendar and elapsed-time drift, mechanism-level restoration overclaim, and two Coda evidence-boundary leaks. The null-night sequence remains exact at 03:00 up, 04:26 carrier cessation, and 05:12 down. No unresolved factual, chronological, consent, or mechanism contradiction remains.",
+    "requested_action": null,
+    "reviewer": "Author-delegated complete full-manuscript editorial review",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": null
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-FINAL-REREAD-FLOW-001",
+    "scope": "manuscript",
+    "chapter_numbers": [1, 12, 17, 24, 28, 31, 32, 38, 43, 45, 48, 54, 55, 57, 61, 62, 69, 73, 83, 84, 91, 97, 102, 105, 108, 112, 116, 117, 118, 119, 122, 123, 124, 125, 126, 128],
+    "batch_id": null,
+    "criterion": "Continuous flow, commercial-novel propulsion, chapter architecture, handoffs, supporting-character causality and emotional payoff",
+    "prose_locations": [
+      {"path": "chapters/private-defense-part/private-defense-part-043-a-term-sheet-and-a-pen.md", "start_line": 125, "end_line": 126, "note": "Dalby's ambulance argument defeats Mara on the merits and prevents the novel from becoming a tract."},
+      {"path": "chapters/mindwars-part/mindwars-part-069-nobody-says-the-word.md", "start_line": 79, "end_line": 80, "note": "The porter, the wet doctrine and the missing shoe convert category-making into bodily consequence."},
+      {"path": "chapters/mindwars-part/mindwars-part-112-the-line-held.md", "start_line": 49, "end_line": 53, "note": "The Mara-Nia urn exchange establishes their present relationship without forgiveness or reconciliation."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-123-the-hope-she-hid.md", "start_line": 37, "end_line": 45, "note": "Safiya volunteers that she would accept a counterfeit, knowingly strengthening the refusal against herself."}
+    ],
+    "finding": "pass",
+    "rationale": "Read continuously, the book behaves as a novel rather than a dossier. Each movement changes the available action: discovery becomes contact, contact becomes infrastructure, infrastructure becomes defence, defence scales into the null, and the Coda converts private accounting into outward obligation. The repaired handoffs all land. Ravi's objection causes his transfer, the missing second operator, programme reclassification and Mara's badge denial. Imogen Dalby remains a persuasive antagonist rather than a straw figure. Microchapters function as hinges, not fragments. The null works, lives are plausibly spared, and the same act irreversibly harms civilians and Mara. The Coda remains the strongest sustained run and the ending refuses absolution while preserving forward action.",
+    "requested_action": null,
+    "reviewer": "Author-delegated complete full-manuscript editorial review",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": null
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-FINAL-REREAD-VOICE-COPY-001",
+    "scope": "manuscript",
+    "chapter_numbers": [22, 31, 32, 33, 36, 40, 45, 47, 50, 51, 55, 56, 59, 68, 70, 75, 77, 89, 92, 95, 98, 101, 108, 112, 117, 120, 123, 125],
+    "batch_id": null,
+    "criterion": "Readability, grammar, copyedit consistency, POV distinction and residual AI-like rhetorical regularity",
+    "prose_locations": [
+      {"path": "chapters/mindwars-part/mindwars-part-092-ranked-by-belief.md", "start_line": 18, "end_line": 21, "note": "The generic easy-version metacomment is gone; Julian now moves directly from the consequence of refusal to the act of certifying provenance."},
+      {"path": "chapters/mindwars-part/mindwars-part-075-timing-and-no-content.md", "start_line": 45, "end_line": 49, "note": "The record signpost has been reduced to the concrete absence of the phrase; the evidence performs the qualification."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-123-the-hope-she-hid.md", "start_line": 17, "end_line": 38, "note": "Safiya's numbered argument scaffold is relaxed while her addressed, accumulative voice and the content of her admission remain intact."}
+    ],
+    "finding": "pass",
+    "rationale": "The final paragraph-scale pass removed repeated document-first openings, generic announce constructions, duplicated limitation inventories, easy-version metacomment, shared negation ladders and repeated Ruth/Joss blocking where those patterns exposed the prose machinery. Julian retains legal and evidentiary completeness; Mara remains in instruments, geometry, bodily sensation and consequence; Nia reaches conclusions through sequence, sound, load and action; Safiya remains direct, domestic, accumulative and addressed. The previously mixed typographic punctuation remains normalized to the manuscript's ASCII house style. The remaining formal repetitions are motivated by consent instruments, custody or testimony rather than generic polish. Grammar and sentence-level copy now read as professionally edited.",
+    "requested_action": null,
+    "reviewer": "Author-delegated complete full-manuscript editorial review",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": null
+  },
+  {
+    "editorial_finding_id": "EDITORIAL-FINAL-REREAD-CODA-001",
+    "scope": "movement",
+    "chapter_numbers": [113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128],
+    "batch_id": null,
+    "criterion": "Coda reveal ownership, no-preservation discipline, refusal, emotional truth and final-passage force",
+    "prose_locations": [
+      {"path": "chapters/aftermath-coda/aftermath-coda-114-a-documented-request.md", "start_line": 29, "end_line": 30, "note": "Julian now states only the absence of independent corroboration, without telegraphing Safiya's private relational language."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-127-voice-through-air.md", "start_line": 13, "end_line": 17, "note": "Mara preserves no noun, image, order or maternal-content identifier from Safiya's conditioned account."},
+      {"path": "chapters/aftermath-coda/aftermath-coda-128-knock-and-wait.md", "start_line": 65, "end_line": 83, "note": "The twice-asked provenance question remains inside the protected Final Passage and receives no answer."}
+    ],
+    "finding": "pass",
+    "rationale": "Safiya owns the Chapter 118 reveal, her consent in 122 is valid and cannot create provenance, her counterfeit hope in 123 is neither softened nor punished, and Mara's truthful refusal in 124 remains an act rather than a lecture. Chapter 127 now obeys the no-preservation condition at the level of written content while owning involuntary memory as a breach. Nothing is restored, forgiveness is not granted, and the conversation does not become repair. Chapter 128 reaches the door quickly. The Final Passage remains untouched, with one marker and the literal question exactly twice inside it and nowhere else in the manuscript.",
+    "requested_action": null,
+    "reviewer": "Author-delegated complete full-manuscript editorial review",
+    "reviewed_at": "2026-09-15T00:00:00Z",
+    "resolution": null
+  }
+]
+```
+
+```json record=GateResult schema=1
+{
+  "gate_result_id": "GATE-EDITORIAL-FULL-REREAD-002",
+  "gate_type": "editorial",
+  "scope": {
+    "chapter_numbers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128],
+    "documents": ["planning/arc-outline.md", "planning/canon-bible.md", "planning/motif-ledger.md", "planning/voice-briefs.md", "planning/editorial-log.md"],
+    "description": "Complete post-repair editorial reread of all 128 chapters in full and in numerical order. Every evidence-backed defect found was repaired, including chronology, mechanism, consent-state, arithmetic, evidence-boundary, reveal-protection, copyedit, handoff, repeated-scene, documentary-saturation and paragraph-scale voice findings. All Chapter Headers and Arc Entries are reconciled to the non-final status revised by explicit author request; no chapter is approved or final. All 128 prose headers match their bodies. Manuscript total is 149,380 Prose_Words; distribution is 10 microchapter, 113 normal and 5 long-outlier; hard maximum is 2,029. Changed chapters pass seven drafting batch gates at error=0 warning=0. The global objective checker remains incomplete only on the 128 approval-state prerequisites and the missing manuscript-global finalization gate."
+  },
+  "prerequisite_state": "complete",
+  "objective_diagnostic_ids": [],
+  "editorial_finding_ids": ["EDITORIAL-FINAL-REREAD-CONTINUITY-001", "EDITORIAL-FINAL-REREAD-FLOW-001", "EDITORIAL-FINAL-REREAD-VOICE-COPY-001", "EDITORIAL-FINAL-REREAD-CODA-001"],
+  "result": "pass",
+  "checker_exit_status": null,
+  "timestamp": "2026-09-15T00:00:00Z"
+}
+```

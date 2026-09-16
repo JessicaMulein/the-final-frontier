@@ -19,9 +19,9 @@ Lena had a voice and no professional right to improvise her mother's interpretat
 
 Together, after repeated calibration unique to them, they could perform the assignment without pretending either woman possessed the other's skill.
 
-They consented to the session in the waiting room. Ada selected the named engagement and the named partner on her pad. Lena confirmed. Either could pause or revoke. Content recording remained off. The service kept the mandatory operational metadata and no semantic record.
+They consented in the waiting room, engagement and partner named on Ada's pad, Lena confirming separately on her own. Recording off, as it stays unless two people turn it on.
 
-While we waited, Lena told me her mother had interpreted for nineteen years and had never once been late, and Ada wrote *she has been late twice this month* on the pad and turned it towards me rather than towards her daughter. Lena read it upside down anyway and said that was different, because she has a child. Ada wrote *so did I*. They had plainly done this in front of strangers before and had stopped minding.
+While we waited, Lena told me her mother had interpreted for twenty-eight years and had never once been late, and Ada wrote *she has been late twice this month* on the pad and turned it towards me rather than towards her daughter. Lena read it upside down anyway and said that was different, because she has a child. Ada wrote *so did I*. They had plainly done this in front of strangers before and had stopped minding.
 
 The benefits officer began with the notice's shortest paragraph and made it longer by explaining it.
 
@@ -57,7 +57,7 @@ Afterward I asked Ada whether she wanted this engagement included in the pilot r
 
 **The result, yes. Not the sentences.**
 
-There were no recorded sentences to include. The operational log could establish session duration, consent state, pauses, sends, acknowledgments, latency, and one retry. It could not reconstruct the eligibility explanation or the claimant's answer.
+There were no recorded sentences to include. The log could establish how long they had worked, that both answers were current throughout, and that she had paused once. It could not reconstruct one sentence of the eligibility explanation or a word of what the claimant said back.
 
 The Consortium's draft report nevertheless described the engagement as evidence of seamless expert knowledge transfer.
 

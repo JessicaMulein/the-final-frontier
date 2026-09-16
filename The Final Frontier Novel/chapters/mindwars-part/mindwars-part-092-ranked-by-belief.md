@@ -5,9 +5,9 @@ pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-TERRITORY
 motif_events: []
 hook: "He writes believed by beside every line, and the summary that quotes him drops those two words."
-words: 1174
+words: 1144
 length_class: normal
-status: draft
+status: revised
 ---
 The page came to me already numbered.
 
@@ -15,9 +15,7 @@ Six lines, one to six, in an order somebody else had put them in, under a headin
 
 That is a considerably better-designed instrument than the pro forma in November. The pro forma asked me to do something I could refuse to do. This asked me to certify something true — that these are the six accounts, correctly attributed, faithfully summarized from the material I hold — on a page whose heading asserts something I have no basis for.
 
-I could have refused again, and the easy version of this account has me heroically declining twice.
-
-If I withhold certification, the ranking does not disappear. It goes forward uncertified, which means it goes forward with the summaries unchecked, and I had already found two errors in them: account four had been compressed in a way that made a scientist's stated unfalsifiability sound like confidence, and account five was attributed to a body rather than to the person who actually holds it, which would have taken nineteen years of one dispatcher's work and turned it into an institutional position. Refusing would have left both of those in the world. My signature was the only thing that could fix them.
+Refusing again would not have stopped the ranking. It would have sent it forward uncertified, with the summaries unchecked, and I had already found two errors in them: account four had been compressed in a way that made a scientist's stated unfalsifiability sound like confidence, and account five was attributed to a body rather than to the person who actually holds it, which would have taken nineteen years of one dispatcher's work and turned it into an institutional position. My signature was the only thing that could fix them.
 
 So I certified provenance, which is the only thing my signature has ever been able to warrant, and I did it in the form I could defend.
 
@@ -37,7 +35,7 @@ And the person that identification names has refused it, in her own account, in 
 
 I am not going to write that she was wronged by me and then move on to the next paragraph as though the sentence had discharged something. She has been clear with me, more than once, that she does not want the account of what happened to her arranged around my conscience.
 
-The summary was published on the eleventh of February.
+The summary was published on the ninth of February.
 
 It is nine pages, it was produced for a standing committee and released to the participating authorities and the two pilot counties, and it is competent work by people I have no complaint about. On page four it sets out the origin position in a single paragraph, and the paragraph carries a citation, and the citation is to my certified annex, and it names me.
 
@@ -47,7 +45,7 @@ The paragraph reads that the archive's provenance-certified assessment places de
 
 Nobody did this to me. That is the part I have had to sit with. There is no version of the drafting where somebody removed the two words in order to change the meaning. The two words were removed because a nine-page summary cannot carry the apparatus of a fifty-page annex, and a drafter compressing a paragraph keeps the load-bearing nouns and drops the qualifiers, and *believed by* looks exactly like a qualifier.
 
-I wrote to the chair on the twelfth. I have the reply. It is courteous and it is right. The summary has been released to eleven recipients and cited in two onward documents; an amendment would create two versions of a published paragraph in circulation, and a correction notice would be issued to the recipient list and would not follow the citations. He offered to attach my note to the file copy. I accepted, and it is attached to the file copy, and the file copy is in a cabinet eleven feet from where I am writing this.
+I wrote to the chair on the twelfth. I have the reply. It is courteous and it is right. The summary has been released to fourteen recipients and cited in two onward documents; an amendment would create two versions of a published paragraph in circulation, and a correction notice would be issued to the recipient list and would not follow the citations. He offered to attach my note to the file copy. I accepted, and it is attached to the file copy, and the file copy is in a cabinet six feet from where I am writing this.
 
 I have stopped saying *for the record* out loud. I used to say it several times a week.
 

@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-HANDSHAKE
 motif_events: []
 hook: "Nothing comes back, and she cannot tell whether that means nothing happened."
-words: 1134
+words: 1165
 length_class: normal
 status: revised
 ---
@@ -15,7 +15,7 @@ Forward power had stayed inside the written limit. Reflected energy had not rise
 
 I reopened the relay and removed the driver's enable lead. The load resistor was hot enough to smell, that flat mineral smell a wirewound part gives off before anything is wrong with it, and I stood there with the lead in my hand until it cooled, which is not a thing that needed doing by me.
 
-Ravi Anand came back in from the corridor and watched me coil the lead separately from the receiver cabling.
+Ravi came back in from the corridor and watched me coil the lead separately from the receiver cabling.
 
 "How long do we listen?"
 
@@ -69,4 +69,6 @@ The receiver continued. Its lock indicator disappeared, returned, and held. I co
 
 The clean trace gave me no answering signal, no damage signal, and no permission to treat those absences as equivalent.
 
-I filed the procedure in the controlled-document system at 20:40, where anybody who went looking would find it and where nothing in it explains why. The noise floor stayed up on the screen while I did it, flat and even, the same texture at the same amplitude it had been at six o'clock. I left it running. The relay was on the bench, the cabinet key was in my pocket, and the thing I had not decided was whether the next use of that path would be a second attempt or a disclosure.
+I filed the procedure in the controlled-document system at 20:40, where anybody who went looking would find it and where nothing in it explains why. The noise floor stayed up on the screen while I did it, flat and even, the same texture at the same amplitude it had been at six o'clock. I left it running.
+
+Then I sat down on the floor with my back against the rack, which is not a thing I do, and put my hand flat on my own sternum to find out whether I could feel anything going on in there that I had not chosen. I could not. That establishes nothing whatever, and I sat with my hand where it was until the plant noise changed over.

@@ -5,13 +5,15 @@ pov_id: POV-NIA
 timeline_id: TL-MINDWARS-ONSET
 motif_events: []
 hook: "She attaches her conditions to the deposit, and the reports have already proved the one thing she never wanted proved, that she was not the only one."
-words: 1336
+words: 1376
 length_class: normal
-status: draft
+status: revised
 ---
 Joss had the back off a bread machine when I let myself in, and he did not look up.
 
-"Soup's on the hob," he said. "Don't move the small screws."
+"I've not made anything," he said. "You didn't eat the last two. Don't move the small screws."
+
+The menu from the place on Fenn Street was on the bench with a corner torn off it, which is his way of leaving a decision where I can reach it.
 
 The screws were laid out on a strip of masking tape in the order they had come out. I sat at the end of the bench where he kept the vice and put my bag under the stool, because the stool had no back and I had learned years ago that leaning on the vice bruised.
 
@@ -21,9 +23,9 @@ The screws were laid out on a strip of masking tape in the order they had come o
 
 "That wasn't the observation."
 
-He turned the drum a quarter and listened to it. I ate the soup standing up first and then sat down with it, and for about four minutes the only sounds were the drum and a radio somewhere behind the paint tins, and I let myself have that.
+He turned the drum a quarter and listened to it. I did not ring the place on Fenn Street and he did not mention it again, and for about four minutes the only sounds were the drum and a radio somewhere behind the paint tins, and I let myself have that.
 
-Then I put the phone on the bench between the screws and the soup.
+Then I put the phone on the bench beside the screws.
 
 Research operations had released eleven documents in two days, direct to me, under the county's disclosure authority for affected persons.
 
@@ -41,7 +43,7 @@ And a man of fifty-one had walked out onto the eastbound carriageway at half pas
 
 That was the seventh document. I read the rest, and then I read that one again.
 
-"You've stopped eating," Joss said.
+"You've not rung them," Joss said.
 
 "I'm reading."
 
@@ -79,7 +81,7 @@ I had wanted, more than I had wanted almost anything, for it to have been only m
 
 The emergency programme's public briefing went out at nine the following morning. Julian had said that plainly and twice. After nine, anything I deposited would arrive after their account existed, and it would be read against their account, as corroboration or as noise, and either way it would be their sentence with my name attached to it. Before nine it was testimony. That was the whole difference, and the hour was not negotiable, and it would happen whether I wrote anything or not.
 
-So I wrote it at Joss's bench with the soup going cold, first person, signed, no summary, and I attached the conditions to it rather than trusting anybody to infer them.
+So I wrote it at Joss's bench with the torn menu under my elbow, first person, signed, no summary, and I attached the conditions to it rather than trusting anybody to infer them.
 
 That it was mine. That it was encrypted and embargoed and released only under the Trust's witness-controlled conditions, and that no release could be conditioned on my being available afterward to explain it.
 

@@ -5,9 +5,9 @@ pov_id: POV-MARA
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []
 hook: "Two streets apart, one block gets a protected night and the other gets the same night without it."
-words: 1176
+words: 1315
 length_class: normal
-status: draft
+status: revised
 ---
 The calibration with Osei took eleven days, and I had assumed it would take two.
 
@@ -29,7 +29,11 @@ The two counties contain a little over six hundred thousand.
 
 I am not going to dress that ratio up. It is eight people in a thousand.
 
-What the six pockets have in common is not geography and not risk. It is that somebody in each of them could be asked, and was. A parish clerk who called a meeting. A housing officer who put a note through four hundred doors and then stood in a community centre for two hours answering questions, most of which I could not answer better than she did. A works manager at a cold store who signed for his own site and his own night shift. Coverage followed the asking. It went exactly as far as the asking went and then it stopped, because there is nothing in this instrument that lets it go further, which is the whole design and is why I argued for it.
+What the six pockets have in common is not geography and not risk. It is that in each of them somebody local was willing to stand up and say yes to having one. A parish clerk who called a meeting. A housing officer who put a note through four hundred doors and then stood in a community centre for two hours answering questions, most of which I could not answer better than she did. A works manager at a cold store who signed for his own site and his own night shift.
+
+I have been calling that *the asking* for a month, in rooms, and I am going to stop. It is siting. Those three people told me where a pocket could go and made it possible to put one there, and not one of them was entitled to answer for anybody except themselves. The clerk's meeting was attended by about ninety people out of a parish of eleven hundred. Four hundred doors is a note, and a note is a notice, and Julian wrote two pages to establish that a notice is not an answer. The works manager signed for a night shift of thirty-one, which is the exact substitution the instrument names and forbids.
+
+Coverage followed the siting. It went as far as somebody local was prepared to carry it and then it stopped. What is on the ground is a network sited by consultation and raised on an operator's answer. That is not the instrument I argued for. It is the only version of it that exists, and I am running it.
 
 On the night of the twenty-fifth, volume two held from 22:40 to 01:20 against a pattern resolving in the third street back from the cutting.
 
@@ -41,7 +45,7 @@ A man who works nights loading a van became certain, at around eleven, that his 
 
 A motorcyclist came round the long bend at the speed everybody takes that bend.
 
-He is twenty-six. He was in theatre for six hours on the twenty-sixth and again on the twenty-ninth, and he will keep the leg and will not get the ankle back to what it was, and I have that from the same incident summary that gave me the times, which is a document that describes his injuries in eleven words and the van's position in thirty-four.
+He is twenty-six. He was in theatre for six hours on the twenty-sixth and again on the twenty-ninth, and he will keep the leg and will not get the ankle back to what it was, and I have that from the same incident summary that gave me the times, which is a document that describes his injuries in nine words and the van's position in thirty-four.
 
 The van driver was not hurt. He came back to himself standing on the carriageway holding a set of keys, in the way that people do, and understood immediately what he had done and could not account for having done it. He was interviewed twice. He has not been charged with anything and I do not think he should be.
 

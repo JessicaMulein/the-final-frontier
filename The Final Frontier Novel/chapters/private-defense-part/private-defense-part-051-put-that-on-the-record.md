@@ -5,21 +5,17 @@ pov_id: POV-MARA
 timeline_id: TL-TRUST-FORMATION
 motif_events: [MOT-RECORD-01]
 hook: "Her demand becomes an institution inside a week, and she is not certain that counts as winning."
-words: 1592
+words: 1528
 length_class: normal
 status: revised
 ---
-Julian squared two sheets of paper against each other on the bench before he said anything, which is what he does when he has decided the documents should go first.
+"Is any of that false?" I said.
 
-The left one was item six of the circulated minutes. The right one was the first page of his own account of the meeting, and he left the second page face down because item six did not need it.
-
-I read the left one twice.
+Julian had squared two sheets of paper against each other on the bench before he spoke. The left one was item six of the circulated minutes. The right one was the first page of his own account of the meeting, and he had left the second page face down because item six did not need it. I had read the left one twice.
 
 *Dr Venn raised general concerns regarding the proposed technical architecture and indicated that Northline was not presently able to support participation in the pilot.*
 
-"Is any of that false?" I said.
-
-"No."
+"No," he said.
 
 "Then say what is wrong with it out loud. Somebody is going to tell me I have imagined this, and I would like to have heard the accurate version from a lawyer first."
 
@@ -31,7 +27,7 @@ I put my finger under the word *general*. Four drafts on the back of a torque sh
 
 "No. That is the part I have not been able to get past. There is nothing you could have said that a summary of that length would have kept. It is not a document that failed. It is a document doing what it is for."
 
-He told me the routes, in order, the way he does. A correction could be requested. The request would go to the office that had produced the minutes, would be considered by the person who had approved them, and would be resolved by the insertion of a further sentence recording that Dr Venn considered the earlier sentence incomplete, which would sit in the file as a disagreement about wording between a scientist and a secretariat. Or the disagreement could be escalated, at which point it would acquire a category, and the category available was *stakeholder dissatisfaction with process*.
+He told me the routes. A correction could be requested; it would go to the office that had produced the minutes, be considered by the person who had approved them, and be resolved by inserting a further sentence recording that Dr Venn considered the earlier sentence incomplete. Or the disagreement could be escalated, at which point it would acquire a category, and the category available was *stakeholder dissatisfaction with process*.
 
 "So the correction is a worse document than the error."
 
@@ -49,13 +45,13 @@ He did not answer for a while. Then he asked me what the words were for, and I s
 
 It took him six days.
 
-I asked how, in a tone that suggested I thought he had done something improbable, and he was almost offended. He had not built anything. The institute has a dormant charitable company on its books from a teaching trust that wound up in 2016, with a registered number, a bank mandate and a constitution drafted to be amended. He drafted; the council passed the resolution that transferred its membership to the three custodians and surrendered its power to appoint. The archivist had run the county records office he had been sending referrals to for years and had retired in March with nothing to do. The strongroom is hers, two fitted rooms behind a solicitor's office on the same street, insured, already holding other people's papers. The encryption is a service that costs him forty pounds a month.
+I asked how, in a tone that suggested I thought he had done something improbable, and he was almost offended. He had not built anything. The institute has a dormant charitable company on its books from a teaching trust that wound up in 2016, with a registered number, a bank mandate and a constitution drafted to be amended. He drafted; the council passed the resolution that transferred its membership to the three custodians and surrendered its power to appoint. The archivist had run the county records office he had been sending referrals to for years and had retired in March with nothing to do. The strongroom is hers: two fitted rooms behind a solicitor's office on the same street, insured, already holding other people's papers. The encryption is a service that costs him forty pounds a month.
 
 "It is assembled," he said, "out of things that were lying about, by somebody who knew where they were. Which is why it exists. It is also how it could be taken apart."
 
-What he brought back was not a letter. It was a deed, eleven pages, and a schedule, and he made me read the schedule first because he said the pages were the easy part.
+What he brought back was not a letter. It was a deed, fourteen pages, and a schedule, and he made me read the schedule first because he said the pages were the easy part.
 
-The name at the top was Civic Record Trust. There were three custodians and he was one of them. The second was the archivist. The third was a clinician who had sat eleven years on a research ethics committee and resigned from it over a consent form, which sounds more principled than it was; she told me later it was mostly about a man she could not stand, and that the form had merely been the available ground.
+The name at the top was Civic Record Trust. There were three custodians and he was one of them. The second was the archivist. The third was a clinician who had sat nine years on a research ethics committee and resigned from it over a consent form, which sounds more principled than it was; she told me later it was mostly about a man she could not stand, and that the form had merely been the available ground.
 
 "Three," I said. "So you can be outvoted."
 
@@ -65,7 +61,7 @@ The mechanism was narrower than I expected and better for it. A deposit came in 
 
 Then I asked the questions I would have asked about a piece of apparatus, because it is the only way I know how to ask anything.
 
-Northline held no seat and no veto. The surrendered power to appoint had been in his draft before he approached the archivist. He had recused himself from every deposit in which he appears as a participant, which by his own count was already four. The clinician held the casting position on any dispute between custodians. The funding was forty pounds a month and one retired woman's goodwill, and he said both of those aloud as weaknesses rather than letting me find them myself.
+Northline held no seat and no veto. He had recused himself from every deposit in which he appears as a participant, which by his own count was already four. The funding was forty pounds a month and one retired woman's goodwill, and he said both of those aloud as weaknesses rather than letting me find them myself.
 
 "Court order," I said.
 

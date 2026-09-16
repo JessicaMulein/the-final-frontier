@@ -5,11 +5,11 @@ pov_id: POV-NIA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: [MOT-KNOCK-01, MOT-YES-01]
 hook: "She says yes to one bounded field, the pattern cancels, and forty minutes later a familiar phrase is inaccessible when the console asks for her back."
-words: 1443
+words: 1371
 length_class: normal
 status: revised
 ---
-The door was shut. Five of us stood between the whiteboard and the marked floor: Halloran, Venn, me, and the two people whose signatures sat beside Venn's on the authorization sheet.
+The door was shut. Five of us stood between the whiteboard and the marked floor: Halloran, Mara, me, and the two people whose signatures sat beside hers on the authorization sheet.
 
 The whiteboard held the four-metre boundary and the countdown. My name was typed in the participant box. Properly filed.
 
@@ -23,7 +23,7 @@ He waited with the clipboard against his leg.
 
 One of the two signers said the incoming pattern would not wait for a seminar. A digit changed on the whiteboard.
 
-Venn looked at it. "We have time for a question."
+Mara looked at it. "We have time for a question."
 
 The other signer pointed to the authorization sheet.
 
@@ -35,11 +35,11 @@ Did I say yes?
 
 The countdown changed again.
 
-"Before that," Venn said. "There are three things you have to have from me first, and I am going to say them in front of these two so that nobody can tell you afterwards that you were not told."
+"Before that," Mara said. "There are three things you have to have from me first, and I am going to say them in front of these two so that nobody can tell you afterwards that you were not told."
 
 She did not sit down to do it.
 
-The counterwave has to reach the same space my own field occupies, because that is the only place the pattern is; there is no arrangement she can currently draw where it cancels the thing without reaching me. She has measured what it does to saline and has no measurement of what it does to a person. And the version she can run tonight is built from a recording of an event that has already finished, which is not the same problem as one still arriving.
+The counterwave has to reach the same space my own field occupies, because that is the only place the pattern is; there is no arrangement she can currently draw where it cancels the thing without reaching me. She has measured what it does to saline and has no measurement of what it does to a person. And the version she can run tonight uses a finished recording only to seed the estimator and set the output limits. The pickup must rebuild the inverse continuously from the pattern still arriving. Whether it can converge fast enough and hold is unsolved.
 
 "That is all of it?" I said.
 
@@ -73,9 +73,9 @@ At eleven minutes past four I said yes aloud to Halloran. One run. The four-metr
 
 He read all four conditions back in order. He wrote the time beside my answer and asked me to confirm. I confirmed. The badge remained on its cord, the three signatures remained on their sheet, and the participant box now had one spoken answer attached to one run.
 
-The paired channel stayed separate from the field. Venn and I had calibrated together over two days, and that calibration belonged to us as a pair. We named the boundary check as a current-session coordination task, with content recording off and either of us able to pause or stop.
+The paired channel stayed separate from the field. Mara and I had calibrated together over two days, and that calibration belonged to us as a pair. We named the boundary check as a current-session coordination task, with content recording off and either of us able to pause or stop.
 
-"Nia Calder, do you consent to that pairing with me now?" Venn asked.
+"Nia Calder, do you consent to that pairing with me now?" Mara asked.
 
 "Yes. Mara Venn, do you consent to the same?"
 
@@ -91,9 +91,7 @@ My opinion of the authorization form stayed with me. So did my calculation about
 
 In the middle of the boundary check, I paused. Transport stopped at once. I counted four seconds against the display and reopened it. Nothing had queued behind the pause. Nothing arrived late.
 
-The channel record retained start, pause, resumption, consent state, timing, and volume. Content recording was off because neither of us had agreed to it. It held no withheld thought and no transcript for a committee to reinterpret.
-
-Halloran checked my spoken yes to the field one last time. I raised the stop in my left hand. Venn started the emission inside the marked square.
+Halloran checked my spoken yes to the field one last time. I raised the stop in my left hand. Mara started the emission inside the marked square.
 
 The first few seconds were not the thing. They were uneven, the way a room is uneven when somebody is adjusting something in it, and twice something came almost to a height and slipped off it again.
 
@@ -105,7 +103,7 @@ Nothing hurt. There was no tearing, pressure, static, or warning sensation. The 
 
 Then the field ended. I had not used the stop.
 
-Halloran asked for orientation: name, place, time, condition. I answered all four. Venn asked whether anything had arrived. Nothing had. She asked whether I could identify anything missing. I could not.
+Halloran asked for orientation: name, place, time, condition. I answered all four. Mara asked whether anything had arrived. Nothing had. She asked whether I could identify anything missing. I could not.
 
 Forty minutes later, in the corridor, I found the cost.
 
@@ -129,11 +127,9 @@ Halloran wrote *participant unable to recall familiar operational phrase after e
 
 He struck through the word and wrote: *participant unable to access familiar operational phrase after exposure.* Then he read the corrected line.
 
-Venn asked when I had last used it. I told her. She asked whether I wanted to attempt it again. I said no.
+Mara asked when I had last used it. I told her. She asked whether I wanted to attempt it again. I said no.
 
 Halloran asked what the run record could say beyond the corrected line. I gave him the sequence: four-metre volume, one consenting person, nineteen seconds, incoming pattern cancelled, access to one familiar phrase unavailable afterward. He read each item back before adding the next.
-
-Could the effect be aimed inside the boundary? They had no evidence that it could. Would a wider field behave the same way, or another procedure alter the loss? The run had not tested either question. Halloran stopped before the next room and the next machine entered the sentence.
 
 They asked whether to log the run as a success.
 

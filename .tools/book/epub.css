@@ -1,0 +1,79 @@
+/* Screen EPUB stylesheet for The Final Frontier. */
+
+@namespace epub "http://www.idpf.org/2007/ops";
+
+html,
+body {
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 1em;
+  line-height: 1.45;
+  orphans: 2;
+  widows: 2;
+}
+
+h1 {
+  font-size: 1.6em;
+  font-weight: 600;
+  margin: 1.6em 0 0.8em;
+  page-break-before: always;
+  page-break-after: avoid;
+  text-align: center;
+}
+
+h1:first-child {
+  page-break-before: avoid;
+}
+
+h2 {
+  font-size: 1.15em;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0 0 1.2em;
+  text-align: center;
+  page-break-after: avoid;
+}
+
+p {
+  margin: 0;
+  text-indent: 1.25em;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+/* First paragraph after a heading: no indent. */
+h1 + p,
+h2 + p,
+hr + p {
+  text-indent: 0;
+}
+
+blockquote {
+  margin: 1em 1.5em;
+  font-style: italic;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #888;
+  margin: 1.5em 35%;
+  width: 30%;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+nav#toc ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav#toc li {
+  margin: 0.25em 0;
+}

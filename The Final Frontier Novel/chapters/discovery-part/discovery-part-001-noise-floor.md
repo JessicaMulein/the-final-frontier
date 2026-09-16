@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []
 hook: "The feature she has spent years calling noise repeats on a schedule, and the schedule is not the array's."
-words: 1199
+words: 1239
 length_class: normal
 status: revised
 ---
@@ -61,4 +61,6 @@ So I stood over the page with the cap off the pen and composed the clause twice.
 
 The fear did not go in the log either. Being wrong is cheap: you write it down and the next person saves a week. What I could not write was the clean result — my chain exonerated, and fourteen entries left keeping somebody's hours, with no instrument in that building capable of asking whose.
 
-The clause is still not on that page. Everything that came after came with it exactly as I left it.
+The clause is still not on that page.
+
+I said it out loud instead, once, standing over the book with the cap back on the pen. There was nobody in the room, and nothing in that building capable of hearing me, and I have thought since that this is the only reason I was able to say it at all.

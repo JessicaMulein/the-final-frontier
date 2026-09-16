@@ -5,13 +5,13 @@ pov_id: POV-NIA
 timeline_id: TL-PRIVATE-COPPER
 motif_events: [MOT-COPPER-01]
 hook: "The relief is the best thing she has felt in months, and it is also a measurement of how open every other room has always been."
-words: 1098
+words: 1101
 length_class: normal
 status: revised
 ---
 The copper fingers along the edge of the door met the frame one row at a time, a soft ascending sequence that ended at the latch. Then the ventilation baffle above me wound down, because the first measurement needed the room on its own, and I could hear the fabric of my own sleeve.
 
-I sat in the chair. The clock beside the lamp said 9:41. It was a wind-up clock with no radio in it, which somebody had chosen on purpose, and it was four minutes slow.
+I sat in the chair. The clock beside the lamp said 9:41 that morning. It was a wind-up clock with no radio in it, which somebody had chosen on purpose, and it was four minutes slow.
 
 The walls were not solid copper. They were mesh held between pale panels, visible through narrow inspection strips at each seam, every crossing of wire making a small square. The floor carried the same mesh under a removable surface. At the corners, braided straps joined wall to wall and wall to ceiling. Nothing here depended on paint looking continuous. A lamp ran off a battery on the floor. The emergency release was a red handle on my side of the door.
 
@@ -81,4 +81,4 @@ She said it did not.
 
 She did it there, against the window ledge, and turned the notebook so I could see the line. It was a worse sentence than she usually writes. I did not ask her to improve it.
 
-Then I went out to the car and shut both doors. I sat there until the windows went opaque. I opened the driver's door, wiped one clear patch from the outside, and drove home with cold air coming through the bad seal. The county floor opened at six.
+Then I went out to the car and shut both doors. I sat there until the windows went opaque. I opened the driver's door, wiped one clear patch from the outside, and drove home with cold air coming through the bad seal. My next county shift opened at six.

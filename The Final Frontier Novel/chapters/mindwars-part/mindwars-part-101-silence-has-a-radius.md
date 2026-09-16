@@ -5,9 +5,9 @@ pov_id: POV-MARA
 timeline_id: TL-NULL-DECISION
 motif_events: [MOT-RADIUS-01]
 hook: "She admits on the record that the silence she is about to make has a reach, and that people she will never meet are inside it."
-words: 1934
-length_class: long-outlier
-status: draft
+words: 1572
+length_class: normal
+status: revised
 ---
 I asked for it to be minuted, and the clerk asked me twice whether I was sure, because nobody requests a minute of their own statement unless they are protecting themselves and I was very obviously doing the opposite.
 
@@ -23,31 +23,29 @@ So I read it out. I had written it on Sunday and rewritten it on Monday and I re
 
 I began with what the model says, because the benefit is real and I am not going to be the sort of witness who buries it.
 
-The emission works. Against a synchronized event of the size the fitted rate produces, a single broad unaddressed field reduces the number of people affected by that event to near zero across the modelled area. Every other defence we own is built out of units of one — a shielded room somebody walks into, a bounded volume an operator answers for, a channel two people calibrated together over eleven days — and units of one do not answer a simultaneous event, at any level of funding, effort, or courage. That is arithmetic and not defeatism, and I have set it out at length elsewhere with the residuals attached.
+The emission works. Against the projected clustered event, a single broad unaddressed field reduces the affected count to near zero across the modelled area. The other defences answer one person or one volume at a time and cannot meet that load. I had set out the arithmetic elsewhere with the residuals attached.
 
 Then the reach, which is the part I came to say.
 
 The affected area is three counties wide.
 
-I wrote that phrase myself, in a submission in March, and it has since been quoted back to me from an annex I did not know had been written, and I have been asked four times in the last fortnight to convert it into a figure. A radius. A boundary in kilometres. Something a committee can put on a map with a compass.
-
-I have refused every time and I refused again on the record, and the reason is not modesty about my own arithmetic. It is that the moment there is a figure, the conversation becomes an argument about the edge. Where exactly does it fall off. Is my village inside or outside. Would eleven per cent less power bring the line in past the school. Every one of those questions is reasonable and every one of them is a way of talking about a line instead of about the people the line is drawn through, and once a room has a number it will spend its whole time on the number. Three counties wide is what I am prepared to commit to and it is honest and it is deliberately not a geometry.
+I wrote *three counties wide* in March and have refused four requests to turn it into a figure. The moment there is a radius the room argues about the edge — my village, the school, nine per cent less power — and stops talking about the people the line crosses. The phrase is deliberately not a geometry.
 
 Then what it takes, which I gave them in the order I had established it.
 
 Inside the reach, for the duration, access to some mental content and faculties is degraded in some proportion of the people present. Afterwards some of it returns. Some of it does not. There is one case I know of, documented, where a specific thing did not come back and has not come back since, and that case is not mine to describe further than that.
 
-I cannot tell them which faculties. I cannot tell them which people. I cannot say whether it falls hardest on the old, the ill, the sleeping, the children, or on nobody in any pattern at all. Not predictable in advance, not enumerable while it runs, not fully mappable afterwards, and nothing that can be put back, and none of those four is a gap in my model that a better model would close. They are properties of an unaddressed field. An addressed thing has a recipient you can name; this has a reach.
+I cannot tell them which faculties or which people, or whether it falls hardest on the old, the ill, the sleeping, the children, or on nobody in any pattern at all. None of that is a gap in my model that a better model would close. An addressed thing has a recipient you can name; this has a reach.
 
 And I said the sentence I had been avoiding for a fortnight, which is that I cannot name one single person it will take something from. Not one. I could not write down five people it will certainly affect, and I could not write down five it will certainly spare, and I spent a night in April trying to hand the configuration a list of eleven names of people I know and there is no field in the file for a name.
 
 That is where I stopped reading and did the thing I had told myself I would not do.
 
-Because there is a version of this statement, and I had it in the draft on Sunday, in which I take the four properties and the reach and the extent and I build them into an argument about what this proves — about defence and occupation and what a shield becomes when it enters uninvited, about the whole shape of what we have all spent a year learning. I can do that. It is the thing I am actually good at, better than I am at instruments: I can take a room and a night and a set of measurements and turn them into a principle that sounds like it was always true, and people write it down, and it travels.
+I had a principle in Sunday's draft about what a shield becomes when it enters uninvited. I am better at making those than I am at instruments: give me a room, a night and a set of measurements and I can make the conclusion sound as though it was always true.
 
 I got about nine words into it and stopped, and there is a pause in the recording where I stopped.
 
-The reason I stopped is that a principle is a comfortable object. It can be agreed with. Somebody in that room would have written it in the margin and nodded, and the nodding would have been the end of the transaction, and everybody could have left with a doctrine instead of a debt. I have watched a qualifier vanish out of a paragraph over my own name and I have watched a working annex get scheduled for disposal at six months, and I know exactly what survives out of a room and what does not. What survives is the tidy sentence. So I am not giving anybody the tidy sentence, not on the record, not the morning before, and if the meaning of this needs saying then it can be said by somebody who is not the person who raised it, some time when it is not useful to me.
+A principle is a comfortable object. It can be agreed with. Somebody in that room would have written it in the margin and nodded, and the nodding would have been the end of the transaction, and everybody could have left with a doctrine instead of a debt. So I am not giving anybody the tidy sentence, not on the record, not the morning before. If the meaning of this needs saying it can be said by somebody who is not the woman who raised it.
 
 What I gave them instead was smaller and harder to file.
 
@@ -71,4 +69,4 @@ I said no, and I said it clearly because I did not want it minuted as an objecti
 
 He asked what it was, then.
 
-"It's an account," I said. "Before, not after. I am going to raise it. The model says it will work and I believe the model. It is three counties wide and I cannot name one person inside it and nothing in the mechanism gives anything back. I am asking you to write all of that down in the same minute, at the same weight, in the same paragraph as the part where I say I will do it — because in eighteen months somebody in this building is going to need to know that the person who raised it knew exactly what it cost on the morning she agreed to, and said so out loud, and did it anyway."
+"It's an account," I said. "Before, not after. I am going to raise it. The model says it will work and I believe the model. It is three counties wide and I cannot name one person inside it and nothing in the mechanism gives anything back. I am asking you to write all of that down in the same minute, at the same weight, in the same paragraph as the part where I say I will do it — because in eighteen months somebody in this building is going to need to know that the person who raised it knew exactly what it cost on the morning she agreed to it, and said so out loud, and did it anyway."

@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "She writes the hypothesis in her log and leaves the space beside it deliberately empty."
-words: 1322
+words: 1334
 length_class: normal
 status: revised
 ---
@@ -37,7 +37,7 @@ I listened to it once. Then I stopped, because listening is not a method and I c
 
 The spoken correction did not explain the field. It gave me an external marker. At the moment the unit confirmed its location, the field's high-dimensional structure reorganized across intervals too brief to belong to a mechanical duty cycle and too coordinated to be incidental modulation. Attention selected one account of the world and acted.
 
-I moved the marker twenty seconds in either direction. The alignment vanished, which is what a real coincidence in time does and a wishful one does not.
+I moved the marker twenty seconds in either direction. The alignment vanished. A real coincidence in time does that. A wishful one survives being moved.
 
 I inverted the audio, and nothing changed in the field, as nothing should have. I removed every radio frequency carrying the spoken exchange from the reconstruction input, and the attentional transition remained. The conventional transmission and the field shared an event. Neither had leaked into the other.
 
@@ -45,7 +45,7 @@ Then I ran the same tests against the archived December sample, where the crossi
 
 Which told me why my fourteen were all mornings. The field had been there the whole time; the bell was the only thing periodic enough to lift it over my noise floor. I had been finding her on the days a freight held her at a crossing, and missing her on every other day of her life.
 
-*Neural timing* was the dangerous phrase available to me. I used it provisionally and wrote the word *provisional* beside it, which is a habit rather than a defence.
+*Neural timing* was the dangerous phrase available to me. I used it provisionally and wrote the word *provisional* beside it, in the way you leave a note for a version of yourself you have decided not to trust yet.
 
 I was not reading neurons. The apparatus had no electrode, image, anatomical model, or permission to claim one. What I could say was narrower: the field changed on the timescales and in the sequence expected of perception and attention, remained coherent across unrelated sensory events, and did not behave like a machine sending frames to a receiver.
 
@@ -57,7 +57,7 @@ I could have asked the institute for access. I sat with that for a while, with t
 
 So I did not ask, and I wrote down that this was my first deliberate withholding, and that sentence was wrong before the ink dried.
 
-The first one was the clause I composed twice in October and never wrote, the one about agreements being kept by people at hours those people have agreed to keep. I told myself then that rigour justified leaving it out. What is different now is only the direction. In October I kept something out of my own log. Today I kept something from the institution that owns the apparatus, and there is a name for that which does not appear anywhere in my own account of it.
+The first one was the clause I composed twice on the ninth of December and never wrote, the one about agreements being kept by people at hours those people have agreed to keep. I told myself then that rigour justified leaving it out. What is different now is only the direction. That night I kept something out of my own log. Today I kept something from the institution that owns the apparatus, and there is a name for that which does not appear anywhere in my own account of it.
 
 So: not the first. The first of the kind that has somebody else's interests on the other side of it.
 

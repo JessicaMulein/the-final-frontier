@@ -23,7 +23,7 @@ Halfway down, under interface controls, there was one line.
 
 I read it again.
 
-The wire from the front end did not end at the processor. The same clocking path that held a received field in phase could drive modulation outward. The bone was no longer only where a signal arrived. The proposed network had been designed with a direction back into the person at its address.
+The wire from the front end did not end at the processor. The same clocking path that held a received field in phase could synchronize modulation outward. The bone was no longer only where a signal arrived. The proposed network had been designed with a direction back into the person at its address.
 
 Nothing on the page reached backward into December.
 

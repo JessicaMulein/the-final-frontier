@@ -5,19 +5,19 @@ pov_id: POV-NIA
 timeline_id: TL-NULL-DECISION
 motif_events: []
 hook: "They ask her to say the affected area agrees, and she tells them exactly how many people she is entitled to answer for."
-words: 1400
+words: 1322
 length_class: normal
-status: draft
+status: revised
 ---
 The session on the twenty-ninth of April was in a proper committee room with a working microphone in front of every chair, and mine was switched on by somebody else before I sat down.
 
 There were nineteen people in the room and I knew six of them. The papers had been circulated on the twenty-seventh and item four was headed *Consent framework: applicability at area scale*, and under it, in the covering note, was a sentence saying that the working group would be assisted by the operational adviser who developed the current consent instruments.
 
-That is me. I have never had a title in any of this. I am a dispatcher on restored duties with a permanent finding on my occupational file, and I write forms, and somewhere in the last eleven months the forms became a framework and I became an adviser and nobody ever told me on which day.
+That is me. I have never had a title in any of this. I am a dispatcher on restored duties with a permanent finding on my occupational file, and I write forms, and somewhere in the last eighteen months the forms became a framework and I became an adviser and nobody ever told me on which day.
 
 The chair was courteous and got to it inside four minutes, which I appreciated.
 
-What the working group wanted was a statement. Not a signature on the authorization — that was never asked of me, and the easy version of this has somebody trying to trick me. What they wanted was a paragraph from me saying that a measure covering the affected area would be consistent with the consent framework, and that the framework's requirements were satisfied at area scale by the arrangements proposed.
+There was no trick in the request. The working group wanted a paragraph from me saying that a measure covering the affected area would be consistent with the consent framework, and that the framework's requirements were satisfied at area scale by the arrangements proposed.
 
 The arrangements proposed were: public information in advance, a published boundary description, a written opt-out route, and the transcript from the eighteenth of November attached as evidence that consented operation is auditable.
 
@@ -29,19 +29,19 @@ The answer took a while and arrived in three parts, which is how you know it is 
 
 So: nobody.
 
-I want to set down what I did with the rest of that hour, because it is the only hour in all of this where anybody with a microphone in front of them asked me directly what my own work was worth, and I have thought since about whether I used it well.
+It was the only hour in all of this where anybody with a microphone in front of them asked me directly what my own work was worth, and I have thought since about whether I used it well.
 
-I did not make an argument about principle. I have made that argument in eleven rooms and it does not travel, because principle sounds like preference to a committee under a deadline. What I did instead was arithmetic, out loud, from my own records, which is the only thing I have that nobody in that room could contradict.
+I did not make an argument about principle. I have made that argument in nine rooms and it does not travel, because principle sounds like preference to a committee under a deadline. What I did instead was arithmetic, out loud, from my own records, which is the only thing I have that nobody in that room could contradict.
 
 I had checked the figures with Mara that morning on our own channel. Both answers at 08:40, closed at 09:03, recording off because neither of us raised it and it takes both of us to raise it.
 
 She had the pocket populations and I had the asking sheets, and we sent numbers across until the two sets agreed. Every figure I used in that committee room had come through a gate one of us opened deliberately, twenty-three minutes at a time, which is why I was prepared to say them in front of nineteen people and let them be written down.
 
-Six pockets covered about five thousand people last autumn. The number of people individually asked anything, across all six, was about eleven hundred, and that figure exists because I have the sheets. Eleven hundred individual askings took from August to November and required a parish clerk who called a meeting, a housing officer who put a note through four hundred doors and then stood in a community centre for two hours answering questions, and a works manager who signed for his own night shift. Three people doing that work, for four months, to reach eleven hundred.
+Six pockets covered about five thousand people last autumn. The number of people individually asked anything, across all six, was about eleven hundred, and that figure exists because I have the sheets in a drawer at home. It took from August to November, and it took three local people who were each prepared to stand in a room and be shouted at.
 
 The affected area under discussion is not five thousand people. It is not a number anybody in the room offered me and I did not press for one, because I could see from the shape of the discussion that the number was larger than any of the arrangements in front of us were built for.
 
-At eleven hundred askings in four months, with three people, the arithmetic for an area of any size at all comes out in years. That is not an objection to the framework. That is what real consent costs, measured with a real stopwatch, and it is why the framework was written for one room and one answer at a time and why I said so in every document I have ever put my name to.
+At eleven hundred askings in four months, with three people, the arithmetic for an area on the scale implied here comes out in years. That is not an objection to the framework. That is what real consent costs, measured with a real stopwatch, and it is why the framework was written for one room and one answer at a time and why I said so in every document I have ever put my name to.
 
 Then somebody asked the reasonable question, which was whether the transcript did not demonstrate that consent could be established at scale.
 
@@ -59,7 +59,7 @@ Two people said versions of the same thing, and I do not hold it against either 
 
 They are right that it is not available. I have never once said that we should wait years and then act. What I said, when the chair came back to me and asked whether I could give the working group its paragraph, is the answer I had been assembling since I read the covering note on the twenty-seventh, and I said it slowly because the microphone was on and because I wanted every clause of it in the minute.
 
-"I can answer for one person, which is myself, for one act, at the time of the act, and I can revoke it while it runs. In a pairing I can answer for myself as one of two, jointly, for one session, and my partner answers separately and neither of us can answer for the other. That is the whole of what I am entitled to. It is one, or two by agreement. It is not five thousand and it is not the area on your map.
+"I can answer for one person, which is myself, for one act, at the time of the act, and I can revoke it while it runs. In a pairing I can answer for myself as one of two, jointly, for one session, and my partner answers separately and neither of us can answer for the other. That is all I am entitled to. It is one, or two by agreement. It is not five thousand and it is not the area on your map.
 
 "The man on the crossing this morning was not asked anything by anybody, and neither was the woman who pulled him off it, and that is the same fact as the one in front of you, not the opposite of it. If you write your measure, write it as something you have authorized. Do not write that the area agreed, because it hasn't, and do not attach my transcript to a claim it cannot carry.
 

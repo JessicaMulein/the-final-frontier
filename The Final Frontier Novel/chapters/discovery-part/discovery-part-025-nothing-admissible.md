@@ -5,11 +5,11 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-NIA-AFTERMATH
 motif_events: []
 hook: "She goes back to the bench with nothing settled and one instruction she did not choose."
-words: 1067
+words: 1074
 length_class: normal
 status: revised
 ---
-The relay was in a clear evidence bag when I got back, with a strip of write-on tape along the seal and Anand's block capitals across it: date, time, and the word UNASKED. He had found the bag in stores. No authority had told us to preserve the component that way, and the bag made an ordinary passive part look adjudicated, which is the kind of error I would normally correct before anyone else saw it.
+The relay was in a clear evidence bag when I got back, with a strip of write-on tape along the seal and Ravi's block capitals across it: date, time, and the word UNASKED. He had found the bag in stores. No authority had told us to preserve the component that way, and the bag made an ordinary passive part look adjudicated, which is the kind of error I would normally correct before anyone else saw it.
 
 I left it where it was.
 
@@ -33,13 +33,13 @@ I opened the compliance response and stopped at the distribution list. Julian's 
 
 The act itself belonged somewhere less interpretive. I opened a hardware-safety deviation under the temporary driver's asset number. That form required equipment, operator, authorization, output, and corrective action. It did not require a source identity.
 
-I entered the facts. The temporary path had emitted a person-specific content-free envelope without authorization or consent. No instrument had measured detection or effect. The relay had been removed and sealed; the driver was locked out; no further person-specific output was authorized. I attached the signed bench procedure, Anand's written objection, the forward-power trace, the no-response analysis, and my original temporal-proximity note.
+I entered the facts. The temporary path had emitted a person-specific content-free envelope without authorization or consent. No instrument had measured detection or effect. The relay had been removed and sealed; the driver was locked out; no further person-specific output was authorized. I attached the signed bench procedure, Ravi's written objection, the forward-power trace, the no-response analysis, and my original temporal-proximity note.
 
-The access list held Anand, the instrument-safety lead, and the suspension chair. Julian was not on it. The legal matter would receive only a notice of a related technical record if the chair chose to link them. I selected *chair review required* and submitted the deviation. I did not amend the legal response.
+The access list held Ravi, the instrument-safety lead, and the suspension chair. Julian was not on it. The legal matter would receive only a notice of a related technical record if the chair chose to link them. I selected *chair review required* and submitted the deviation. I did not amend the legal response.
 
 That was admissible. My conviction was not.
 
-Anand's objection is four sentences long and he wrote it the week before the handshake, which is why it reads as an engineering position rather than a reaction. When I asked him once to let me summarize it in the procedure preamble he said no, and gave a reason: a summary of an objection is written by the person the objection is against.
+Ravi's objection is four sentences long and he wrote it the week before the handshake, which is why it reads as an engineering position rather than a reaction. When I asked him once to let me summarize it in the procedure preamble he said no, and gave a reason: a summary of an objection is written by the person the objection is against.
 
 He came in while the deviation was still uploading. He had come in on a day he was owed, and it was the second week he had missed the hall, and he read the whole thing from the top before he said anything.
 
@@ -65,6 +65,6 @@ I did not label her case zero. I did not turn her refusal into forgiveness, or m
 
 The deviation acknowledgment came back at 19:04 with a record number and a review date. Its classification was *asset safety—restricted*. Under related-matter routing the system showed *manual*. No alert had gone to the legal file.
 
-The relay was still on the bench when I locked up, in its bag, seal side up. Ravi had written the date and the time in block capitals and then the word UNASKED, and he had underlined it twice, which is not like him.
+The relay was still on the bench when I locked up, and I left it exactly where he had put it.
 
-I left it exactly where he had put it.
+Then I went and found him in the outer room and thanked him, which I do not believe I had done once that winter. He looked extremely uncomfortable and told me the gasket order had come in short again.

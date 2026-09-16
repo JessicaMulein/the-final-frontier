@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-DISCOVERY-HANDSHAKE
 motif_events: []
 hook: "Removed from live routing, she builds a page that keeps useful reasons from becoming remembered ones and carries it back to a desk that cannot assign."
-words: 812
+words: 839
 length_class: normal
 status: revised
 ---
@@ -95,4 +95,4 @@ She stopped the recordings before the unit assignment and said the formal review
 
 At home I laid the yellow strip from ticket 4716 beside the page. On that shift the system said east and the driver said west. The strip carried the contradiction through screenshot, corrected route, and ticket number. On the quarry shift, picture and practice had agreed. I had *Quarry* on the reverse of a page and no handoff into it.
 
-I wrote *Tuesday, 10:00* in the top right corner, slid the page into the notebook behind the yellow strip, and put the notebook under my keys. At six it went back with me to the training desk.
+I slept badly, got up at five, and stood in the kitchen with the radio off. At some point I noticed that I was rehearsing how to say *I don't know* in a way that would sound like competence, which is the exact opposite of the thing I had spent the day refusing to do. I stopped. It came back twice more before six.

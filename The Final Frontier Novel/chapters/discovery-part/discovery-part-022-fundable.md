@@ -5,11 +5,11 @@ pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-NIA-AFTERMATH
 motif_events: []
 hook: "The proposal is finished before the science is, and it is the proposal that has a schedule."
-words: 1126
+words: 1124
 length_class: normal
 status: revised
 ---
-Twelve pages, comb-bound, with a coffee ring on the cover nobody had thought worth a reprint: that is how the Open Channel Consortium's funding outline arrived on my desk, hand-carried by a woman from that group who then stood at the window while I read, and who asked, when I looked up, whether I thought it was fair. I said fairness was not the test I had been asked to apply, which is what I say while I work out what I think, and she wrote something in a margin I could not see.
+Twelve pages, comb-bound, with a coffee ring on the cover nobody had thought worth a reprint: that is how the Open Channel Consortium's funding outline arrived on my desk. The representative took the visitor's chair by the window, opened a notebook, and worked while I read. When I looked up, she asked whether I thought it was fair. I said fairness was not the test I had been asked to apply, which is what I say while I work out what I think, and she wrote something in a margin I could not see.
 
 The outline proposed independent oversight, public-interest licensing, accessibility commitments, emergency-response research, and a prohibition on exclusive control of any person-specific identifier. Each of those answered a concern I had raised, in the order I had raised them, which meant either that somebody read my memoranda closely or that the concerns were obvious and I had said them first. Several were better than the institute's own position, which consisted of a suspended filter, an unnamed subject, and a director who wanted review to produce permission on a useful schedule. The document was twelve pages long before Mara had agreed to a meeting.
 
@@ -21,7 +21,7 @@ The proposal stated the receive-only limitation and authorized no transmission w
 
 The Consortium's counsel accepted all three limitations and asked whether they might be treated as Phase One controls rather than conditions precedent. That revision is grammatical, and it is also the entire argument: a condition precedent stops the work until it is satisfied, while a Phase One control becomes work the funding exists to manage. I declined it in one sentence.
 
-She called within the hour, and she was pleasant about it, which is harder to refuse than pressure.
+She called within the hour and was pleasant about it. Pleasant is harder to refuse than pressure.
 
 "If the institute cannot use the funding to build the oversight," she said, "how does it satisfy the oversight condition?"
 
@@ -39,9 +39,9 @@ Her pause was brief. "You are drafting a project that cannot begin."
 
 "I am drafting the terms under which it may begin."
 
-Both statements would survive review, which is not the same as both being true, and I noticed that I had enjoyed saying mine.
+Both statements would survive review. Neither of us had claimed either was true, and I noticed that I had enjoyed saying mine.
 
-Then the budget, which is where a document stops describing intentions. Compute. Independent technical replication. Human-subject counsel. Data separation. Security review. A contact protocol for a person the project could distinguish mathematically and could not locate civilly. There was nothing for transmitter hardware, nothing for live person-specific output, and nothing for compensating the unknown subject, because the institution did not know whom to pay or how to ask. Every concern in the document had a cost attached except the first act of observation, and that cost had already been incurred.
+Then the budget. A budget is where a document stops describing intentions. Compute. Independent technical replication. Human-subject counsel. Data separation. Security review. A contact protocol for a person the project could distinguish mathematically and could not locate civilly. There was nothing for transmitter hardware, nothing for live person-specific output, and nothing for compensating the unknown subject, because the institution did not know whom to pay or how to ask. Every concern in the document had a cost attached except the first act of observation, and that cost had already been incurred.
 
 The director wanted a submission date before the Consortium's quarterly allocation meeting. The Consortium wanted enough specificity to reserve funds. Technology transfer wanted patent counsel over any definition of address, identity, or channel. Compliance wanted the title changed, because *human-associated field access* implied intervention, so I changed it to *Independent Validation of Structured Human-Field Observation*. Technology transfer then called *observation* too narrow, compliance called *access* too broad, the director called both objections premature, and I kept *observation*, which is the only word in the title I would still defend.
 
@@ -61,4 +61,4 @@ At 17:42 the Consortium accepted the draft for internal consideration. At 17:49 
 
 At 18:20 compliance asked me for a one-line answer by Friday to the question I have avoided in every draft: whether continuing to acquire her field, while nobody is permitted to look at the output, is continued collection of a person or merely continued operation of a machine. I have read the instruments that are supposed to govern it, and neither was written by anyone who had met this.
 
-The woman from the Consortium had waited by the window through all of it and let herself out while I was on the telephone. She had asked me one question in four hours, and it was whether I thought the thing was fair, and it is the only question anybody put to me that day that I did not answer.
+The Consortium representative had worked in the visitor's chair through all of it and let herself out while I was on the telephone. She had asked me one question in four hours, and it was whether I thought the thing was fair, and it is the only question anybody put to me that day that I did not answer.

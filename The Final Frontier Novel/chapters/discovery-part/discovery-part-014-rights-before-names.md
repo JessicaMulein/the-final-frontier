@@ -5,21 +5,23 @@ pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "He drafts the warning, reads it back, and understands that sending it makes him the one who knew."
-words: 1123
+words: 1273
 length_class: normal
 status: revised
 ---
 Mara's summary arrived at 07:36 as a two-page attachment with no covering note, and I read it standing at the window with my coat still on, which is a posture I adopt when I want to be able to say afterward that I had not settled in.
 
-The phrase that mattered was *person-specific channel demonstrated*, and the thing the page did not contain was a person's name.
+The phrase that mattered was the one she had declined to write. The result line said *discriminates the four I tried*, gave the tested set as four people, and stated plainly that nothing established the region was unique to the source. Three lines above it, the heading named the tool that had produced the result: *person-specific receive filter*. She had been exact in the sentence a reader weighs and loose in the label a reader repeats.
 
-I read it twice before opening a new matter, because a matter number is a small act of commitment and I have learned to make it deliberately. The receiver remained passive: no transmit stage, no contact, no semantic output, no geographical fix. Three consented controls had been separated from an unknown field, and the unknown field had then been identified live, lost, and reacquired by the same mathematical address. A name would have made the problem easier to enter, in the narrow institutional sense in which entering a problem is the beginning of handling it, because a named person can be approached, advised, asked, represented, or refused. An unnamed person-specific subject occupies the less convenient category: someone whose rights can be affected before the institution possesses the ordinary fact it uses to administer those rights.
+The other thing the page did not contain was a person's name.
 
-Mara had already walked the forms and found every one of them assuming a recruitment, a message, or a name. I did not need to repeat her work. What I had that she did not was the definition itself, and the definition nowhere said that a name had to be pronounceable. A repeatable way of telling one person from everybody else is an identifier whether or not it can be read aloud.
+I read it twice before opening a new matter, because a matter number is a small act of commitment and I have learned to make it deliberately. The receiver remained passive: no transmit stage, no contact, no semantic output, no geographical fix. Three consented controls had been separated from an unknown field, and the unknown field had then been identified live, lost, and reacquired by the same mathematical address. A name would have made the problem easier to enter, in the narrow institutional sense in which entering a problem is the beginning of handling it, because a named person can be approached, advised, asked, represented, or refused. An unnamed but separable subject occupies the less convenient category: someone whose rights can be affected before the institution possesses the ordinary fact it uses to administer those rights.
+
+Mara had already walked the forms and found every one of them assuming a recruitment, a message, or a name. I did not need to repeat her work. What I had that she did not was the definition itself, and the definition nowhere said that a name had to be pronounceable. It does not ask whether a person can be told apart from everybody alive, either. It asks whether she can be singled out. Her caution was good science and it was not a shield: a repeatable way of picking one person out of a group is an identifier whether or not it can be read aloud.
 
 I drafted a memorandum under three headings: present fact, immediate exposure, required restraint.
 
-Under present fact I wrote that the December apparatus was receive-only and that no outgoing act had occurred, and that the result supported a stable person-specific channel while supporting neither semantic reading, source location, source identity in civil records, nor any claim of consent. Under immediate exposure I wrote that passive apparatus does not make passive collection, that the system acquired and retained human-linked field data, that repeatable singling out can itself be identifying even where civil identity remains unknown, and that continued observation after the finding would therefore be deliberate observation of a persistent individual rather than continued characterization of an anomalous band.
+Under present fact I wrote that the December apparatus was receive-only and that no outgoing act had occurred, and that the result supported repeatable separation of one live source from three consented controls, while supporting neither uniqueness beyond that set, semantic reading, source location, source identity in civil records, nor any claim of consent. Under immediate exposure I wrote that passive apparatus does not make passive collection, that the system acquired and retained human-linked field data, that repeatable singling out can itself be identifying even where civil identity remains unknown, and that continued observation after the finding would therefore be deliberate observation of a persistent individual rather than continued characterization of an anomalous band.
 
 Under required restraint I asked for the live monitoring to stop, for raw acquisition to be kept away from the person-specific filter, and for nobody outside the building to be told anything until there was a lawful basis and a way of reaching her. I did not demand destruction of the underlying samples, since preservation might be necessary to establish what had already happened, and I did not authorize preservation either, because that decision belonged to a body constituted to make it rather than to the lawyer who had noticed the category failure.
 
@@ -69,4 +71,6 @@ The message left at 08:04.
 
 At 08:11 a delivery receipt came back from an address I had not typed, in the institute's development office, which meant that one of four recipients had decided within seven minutes that my memorandum was a document other people needed, had recorded no reason for thinking so, and that the first institutional response to a warning about an unnamed person's rights was to widen the set of people who knew she existed.
 
-I wrote the time on the corner of the printed copy in pencil and put it in the matter file. The director called back at 08:20 and asked me to keep the afternoon clear.
+The director called back at 08:20 and asked me to keep the afternoon clear.
+
+Seven minutes. I have drafted memoranda that took a committee fourteen weeks to acknowledge receiving. This one had reached an office it was not addressed to before I had finished my coffee, and I sat and drank the rest of it anyway, because there was nothing else in that moment I was capable of doing well.

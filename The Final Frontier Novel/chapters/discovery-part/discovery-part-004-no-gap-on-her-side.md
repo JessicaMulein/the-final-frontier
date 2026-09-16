@@ -5,11 +5,11 @@ pov_id: POV-NIA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []
 hook: "Every clock agrees on her morning, while the four seconds she trusted a voice over the board leave no second reader and a closed ticket above Dev's screen."
-words: 1023
+words: 1055
 length_class: normal
 status: revised
 ---
-The lights changed without me at the retail-park roundabout. Kev was in my ear correcting an address, the feeder lane went green and red again, and the wet edge of my collar touched the back of my neck when I turned too late to catch it.
+It was Thursday, and the lights changed without me at the retail-park roundabout. Kev was in my ear correcting an address, the feeder lane went green and red again, and the wet edge of my collar touched the back of my neck when I turned too late to catch it.
 
 I sat through the next cycle with both hands on top of the wheel, furious about a set of lights.
 
@@ -21,11 +21,11 @@ At six thirty-one by the depot log, I called hands-free from the road. Kev gave 
 
 The correction took my attention through the feeder light. When I finally moved, the cold crescent down my collar had reached between my shoulder blades.
 
-Then Ridge Road: barrier, bell, freight passing in its own time, man and wet dog on the far pavement. Barrier up. The rest of Ridge Road. The depot turn, the second row, and somebody's cage trolley left half over the line, so I reversed in on the second attempt rather than get out in that cold to move it. By the time I reached the side door, the wet at my collar had gone cold.
+Then Ridge Road: barrier up, rails empty, a woman in a red waterproof pulling a spaniel away from a puddle. The depot turn, the second row, and somebody's cage trolley left half over the line, so I reversed in on the second attempt rather than get out in that cold to move it. By the time I reached the side door, the wet at my collar had gone cold.
 
 Kev went through the fence again with his coat already over his arm, then corrected himself: not three calls, but two completed and one hang-up. I said a hang-up still enters the queue. He said *fair enough* and wrote it down. The handover note carries both counts with a time against each.
 
-I signed on at ten to seven, which gave me four minutes to hang up a coat, sit down, and become the person the county rings. The first item under my initials is the neighbour's alarm at six fifty-four.
+I signed on at ten to seven, which gave me four minutes to hang up a coat, sit down, and become the person the county rings. The first item under my initials is a burst pipe in a flat above a launderette at six fifty-eight.
 
 A collapse in a shop doorway came in at seven twenty. The caller gave me a street and a number, and the system put the number on the wrong side of a junction. That happens where a terrace was demolished and the numbering changed and the map never caught up.
 
@@ -35,7 +35,7 @@ She read the name over the shutter, then, when I asked for something with a numb
 
 The school run gave me two shunts on the ring road inside a quarter of an hour, neither serious. The screen wanted the near approach for the second one. That approach had been single file since Monday for resurfacing. It was not on the layer, and a vehicle that size does not thread it, so I sent them the long way. They arrived before the screen's estimate for the short one.
 
-Later the board showed an advanced unit available. I had heard that crew on another channel about two minutes earlier, still on scene and still talking to somebody. I said out loud, to nobody in particular, that the board was wrong. I sent the other unit. Eleven minutes afterward, the board caught up with the radio and changed the crew back to unavailable.
+Later the board showed an advanced unit available. I had heard that crew on another channel about two minutes earlier, still on scene and still talking to somebody. I said out loud, to nobody in particular, that the board was wrong. I sent the other unit. Fourteen minutes afterward, the board caught up with the radio and changed the crew back to unavailable.
 
 The assignment record keeps the unit I sent. The four seconds before it live only in the sound of a crew who had not finished and my hand moving past the unit the board offered.
 
@@ -47,8 +47,10 @@ Near eleven Dev showed me the routing display freezing on a depot layer. It had 
 
 Half nine had been a cereal bar standing up. One o'clock was ten minutes in the car, because the room was full. In the afternoon there was a bad call beyond the reservoir, and that one belongs to the people on that line. I finished at four.
 
-Afterward I put the morning back under its clocks. Bedside alarm at six fifteen. Depot log at six thirty-one. Kev's two counts at the door. Console sign-on at six fifty and the first alarm at six fifty-four. The road between them still gave me the missed light, the freight, the cage trolley, and the cold wet collar in that order. Nothing in those twenty minutes had seemed worth reporting while it happened.
+Afterward I put the morning back under its clocks. Bedside alarm at six fifteen. Depot log at six thirty-one. Kev's two counts at the door. Console sign-on at six fifty and the first item at six fifty-eight. The road between them still gave me the missed light, the empty crossing, the cage trolley, and the cold wet collar in that order. Nothing in those twenty minutes had seemed worth reporting while it happened.
 
 When I tried the same work on the four seconds at the console, my eyes went to the strip above Dev's monitor. That paper belonged to a display fault later in the morning. For the assignment I had the unit and the time, but no second person looking at the radio sound with me.
 
-Support closed 4716 on the Friday. On Monday the yellow strip was still above Dev's screen. I read the number and left the strip where both of us could see it. The fault had not returned in front of me. The ticket stayed closed; the paper stayed where either of us could reach it.
+Support closed 4716 on the Friday.
+
+I told Dev on the Monday. He said he had expected it and went back to his queue, and about an hour later he came round the end of the desks and asked me, with no preliminary at all, how long a person could do this job before the picture stopped being a picture. I said I did not know. He said that was the answer he had expected as well, and took a call.

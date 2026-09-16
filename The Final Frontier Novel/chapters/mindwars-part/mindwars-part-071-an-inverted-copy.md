@@ -5,11 +5,11 @@ pov_id: POV-MARA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: []
 hook: "The pattern goes to nothing inside the volume, and nothing is exactly what comes back out of it."
-words: 1504
+words: 1508
 length_class: normal
-status: draft
+status: revised
 ---
-The captured pattern had been sitting on the analysis volume for eleven days before I understood that I could invert it.
+The captured pattern had been sitting on the analysis volume for twelve days before I understood that I could invert it.
 
 It came from the medical monitor channel in the comparison set, the one where the event had resolved around a patient in a four-bed bay while the person in the next bed showed nothing. It was the only record with enough sampling depth to reconstruct a waveform rather than an envelope. I had used it to look for provenance and found none. Provenance was not the only question a waveform answers.
 
@@ -25,7 +25,7 @@ The phantom stands in for geometry and tissue loading. It does not stand in for 
 
 The first run was the pattern alone, played from the archive.
 
-The pickups resolved it at 18:41. Amplitude within four per cent of the original at the far sensor, less at the corners, which is what distance does. The shape was unmistakable on the display, which is not a scientific statement, and I wrote it down anyway because eleven days of looking at a thing teaches your eye something your statistics have not caught up with.
+The pickups resolved it at 18:41. Amplitude within four per cent of the original at the far sensor, less at the corners, which is what distance does. The shape was unmistakable on the display, which is not a scientific statement, and I wrote it down anyway because twelve days of looking at a thing teaches your eye something your statistics have not caught up with.
 
 Then I built the inverse.
 
@@ -45,7 +45,7 @@ At 19:38 it reached six per cent at the far pickup and between nine and twenty-t
 
 Then I stopped optimizing one sensor and started optimizing the set, which took until nine.
 
-At 21:07, with the delay held and the phase corrected for the second reflection off the room's own wall, the residual sat at or below eight per cent by energy at all eleven pickups, and below four at seven of them. The corner nearest the door stayed worst and never came under seven.
+At 21:07, with the delay held and the phase corrected for the second reflection off the room's own wall, the residual sat at or below eight per cent by energy at all eleven pickups, and below four per cent at seven of them. The corner nearest the door stayed worst and never came under seven.
 
 That is what I have. Not a flat room. Suppression across a mapped set of points enclosing the phantom, holding while the pattern played at full amplitude, with the space between those points unmeasured and assumed.
 
@@ -61,7 +61,7 @@ If the inverse carried structure of its own into the volume, the pickups would s
 
 What that licenses is narrow. No additional structure appears in the summed field at the points I can measure, inside the band I can measure. It does not mean nothing arrived. Two fields were present in that volume tonight and one of them was mine. A sum that reads as nothing at a sensor is not the same as nothing having crossed the space, and I am not entitled to the second sentence on tonight's evidence.
 
-So the log says what the log can say: within band, at eleven mapped points, the operation removes the pattern and adds no recoverable structure of its own. Whether the emission does anything to a system that is not saline is a question this bench cannot be asked.
+So the log says what the log can say: within band, at eleven mapped points, the operation suppresses the pattern below recoverability and adds no recoverable structure of its own. Whether the emission does anything to a system that is not saline is a question this bench cannot be asked.
 
 What I had was a defence that did not need a room.
 

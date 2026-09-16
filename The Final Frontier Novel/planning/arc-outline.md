@@ -6,6 +6,7 @@ Structural authority: Requirements 1.2–1.5, 1.7–1.9, 2.1, 2.7, 2.10–2.12, 
 Narrative authority: the design's *Detailed Sequence and Beat Architecture*, *POV Rotation, Cross-Cut Grammar, and Reveal Ownership*, and *Original Thriller Pacing Architecture*  
 Decision authority: binding, nonsuperseded decisions through `DEC-022`; `DEC-016` governs pacing architecture, `DEC-011` the title reversal, `DEC-017` the delayed consent parallel, `DEC-018` chapter shape, forward pressure, voice separation, human cost, and warmth, `DEC-019` intermittent frame presence and completion of the `DEC-018` frontier, amended `DEC-020` contextual anti-formula propulsion, `DEC-021` scene-earned chapter length under the complete-manuscript budget, and `DEC-022` the Oxford British house spelling standard and the open voice-separation obligation on `POV-NIA`
 Created by: task 5.1  
+Amended: **2026-09-15** — author-directed full-manuscript reread and repair. All 128 Chapter Headers and Arc Entries now carry the non-final status `revised`; this reconciles stale `draft` and `exploratory` workflow labels after the prose was reread in full. No chapter was promoted to `approved` or `final`, and no finalization gate was granted.
 Amended: **2026-09-18** — `DEC-021` length-governance repair. The historical 1,050–1,200 and 900–1,400 bands, their midpoints, and derived fixed mean windows are diagnostics rather than chapter quotas. Objective limits and Final_Targets are unchanged; no `ArcEntry`, `CrossCut`, or `Baseline` value changes, and the pending mass re-budget of `estimated_words` is superseded rather than performed. Chapter 118 retains its 1,400 planning estimate and `exploratory` status while receiving a separately authorized craft expansion.
 Amended: **2026-09-18** — `DEC-018` planning obligations. The Mindwars and Coda movement sections carry the new drafting obligation to make the class of uncounted private civilian loss vivid inside Chapters 109–114, and the historical `DEC-018` clause 10 target is recorded in the audit trail. No `ArcEntry`, `CrossCut`, or `Baseline` record value changed in that pass: still 128 entries, 65 cross-cuts, the same length classes, `estimated_words`, motifs, reveals, statuses, and calibration selections.
 Amended: **2026-09-13** — every `ArcEntry` gains the required `estimated_words` key under the amended `record-schemas.md`, and global invariant 6 gains the `DEC-016` same-POV run word limit of 3,600 Prose_Words.
@@ -2324,7 +2325,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2348,7 +2349,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2373,7 +2374,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2397,7 +2398,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2419,7 +2420,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2443,7 +2444,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2467,7 +2468,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2491,7 +2492,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1100,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2517,7 +2518,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2541,7 +2542,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2567,7 +2568,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "microchapter",
     "estimated_words": 480,
     "outlier_purpose": "Compression to the single result and its immediate ethical consequence, so the reversal lands in the time it takes her to finish the sentence.",
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2625,7 +2626,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2649,7 +2650,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2674,7 +2675,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2698,7 +2699,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2722,7 +2723,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2746,7 +2747,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2770,7 +2771,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2794,7 +2795,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1200,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2818,7 +2819,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2843,7 +2844,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2867,7 +2868,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2889,7 +2890,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1100,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2913,7 +2914,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2937,7 +2938,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2961,7 +2962,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -2985,7 +2986,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3009,7 +3010,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "long-outlier",
     "estimated_words": null,
     "outlier_purpose": "Expansion to earn the reversal in full: the inherited outward maps, the measurements that contradict them, and the position of being the crossed rather than the crosser, without letting it become a thesis about the war.",
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3033,7 +3034,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3057,7 +3058,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3081,7 +3082,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3105,7 +3106,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3129,7 +3130,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3156,7 +3157,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3182,7 +3183,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3206,7 +3207,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3230,7 +3231,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3252,7 +3253,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3278,7 +3279,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "long-outlier",
     "estimated_words": 2300,
     "outlier_purpose": "Expansion to spend the decision at full cost in one place: the modeled benefit, the admitted civilian reach of a defensive silence, and the refusal to convert the canonical extent into a comforting figure.",
-    "status": "draft",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3305,7 +3306,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3330,7 +3331,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "microchapter",
     "estimated_words": null,
     "outlier_purpose": "Compression to the single act of matching phase and starting the field, so the operation begins in about the time it takes to do it.",
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3355,7 +3356,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3380,7 +3381,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "microchapter",
     "estimated_words": null,
     "outlier_purpose": "Compression to a single interruption inside the night, so one person's unobtainable answer arrives at the pace it actually arrives.",
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3405,7 +3406,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3430,7 +3431,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "microchapter",
     "estimated_words": null,
     "outlier_purpose": "Compression to the instant the carrier stops, so the silence arrives without commentary and the custody entry is the only thing in the room.",
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3455,7 +3456,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "long-outlier",
     "estimated_words": null,
     "outlier_purpose": "Expansion to hold the operational end of the night and the beginning of its cost in one place, including the canonical extent and the absent inverse, without resolving what was lost.",
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3482,7 +3483,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3506,7 +3507,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3530,7 +3531,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3552,7 +3553,7 @@ Under `DEC-017` no `purpose`, `hook`, or `knowledge_limit` in this block has Mar
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3623,7 +3624,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3648,7 +3649,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3672,7 +3673,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "normal",
     "estimated_words": 950,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3698,7 +3699,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "microchapter",
     "estimated_words": 480,
     "outlier_purpose": "Compression to the single compliant arrival, so the knock and the waiting take about as long to read as they take to perform and no interior argument fills the gap.",
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3725,7 +3726,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3751,7 +3752,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "normal",
     "estimated_words": 1400,
     "outlier_purpose": null,
-    "status": "exploratory",
+    "status": "revised",
     "calibration_selected": true,
     "representative_purpose": "Tests Safiya's own voice, the material specificity of her loss, the first kettle event, describe-never-quote handling, and the `unspecified_by_author` guardrail.",
     "record_horizon": {
@@ -3778,7 +3779,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "normal",
     "estimated_words": 1100,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3806,7 +3807,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "normal",
     "estimated_words": 1150,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3830,7 +3831,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "normal",
     "estimated_words": 850,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3854,7 +3855,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "normal",
     "estimated_words": 1000,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3878,7 +3879,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "normal",
     "estimated_words": 1050,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3906,7 +3907,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "normal",
     "estimated_words": 1400,
     "outlier_purpose": null,
-    "status": "exploratory",
+    "status": "revised",
     "calibration_selected": true,
     "representative_purpose": "Tests Mara's response to Safiya, the truth-based refusal, the Coda_Turn, and the Refused_Swell.",
     "record_horizon": {
@@ -3930,7 +3931,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "microchapter",
     "estimated_words": 560,
     "outlier_purpose": "Compression to the first minutes after the refusal, so the narrowing from doctrine to room tone runs at the length of the act rather than the length of an argument.",
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3955,7 +3956,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "normal",
     "estimated_words": null,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -3981,7 +3982,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "normal",
     "estimated_words": 1060,
     "outlier_purpose": null,
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {
@@ -4009,7 +4010,7 @@ Two authoring notes belong with the entries. First, chapters 113, 114, 118, and 
     "estimated_length_class": "long-outlier",
     "estimated_words": 1650,
     "outlier_purpose": "Expansion to hold the terminal accounting in one place: the entry against herself, the single permitted dry statement of the one-room protocol against the three-county mechanism, the outward obligation, and the Final Passage that leaves provenance unresolved.",
-    "status": "planned",
+    "status": "revised",
     "calibration_selected": false,
     "representative_purpose": null,
     "record_horizon": {

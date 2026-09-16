@@ -7,7 +7,7 @@ motif_events: []
 hook: "His instrument requires a current answer from a named person, and the draft on the next desk requires neither."
 words: 1189
 length_class: normal
-status: draft
+status: revised
 ---
 Halloran's programme office commissioned the instrument on the Monday, in writing, because after the bounded run his own signature was no longer something he was willing to put under a second one. My Trust custody role does not reach doctrine and I did not pretend otherwise; I took the drafting as separate paid work and told both offices so in the same email.
 

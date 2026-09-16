@@ -5,9 +5,9 @@ pov_id: POV-NIA
 timeline_id: TL-MINDWARS-TERRITORY
 motif_events: []
 hook: "The transcript is four minutes long and completely true, and by evening two institutions have asked her for it."
-words: 1155
+words: 1449
 length_class: normal
-status: draft
+status: revised
 ---
 There are two forms and that is the whole design.
 
@@ -21,6 +21,20 @@ So: record one. On purpose, in a controlled sitting, with a written question in 
 
 Mara agreed within about four seconds of my finishing the sentence, which I had not expected, and then said that she should not be the one to propose the tests. That was correct and I told her so, and I wrote them myself that evening, and she read them the next morning and changed nothing.
 
+I wrote them at Joss's, which is where I write things.
+
+We have had the same standing Thursday for seven years, at his place, because his kitchen table is a bench with a vice bolted to one end and there is always something on it in pieces. That Thursday it was a food mixer from 1974 belonging to a woman four doors up who had been quoted more to repair it than a new one costs, which is the kind of arithmetic that makes my brother go quiet and get the small screwdrivers out.
+
+He does not know what I do beyond dispatch. He knows there is a thing on the news, and that his sister writes forms about it, and in three years he has asked me twice, and both times he took the first answer I gave him and passed me the salt.
+
+What he does instead is feed me. That night it was a chicken thing with too much lemon in it, which he knew and said before I could, and then defended for ten minutes on the grounds that the lemon was the entire point and that I had no palate and never had, not even as a child, when I would reportedly eat butter on its own.
+
+I worked at the clean end of the bench with the mixer's motor housing holding my papers down.
+
+At about eleven, while he was running it up through the speeds to find out whether the third one had come back, I chose the sentence I was going to hold and not send.
+
+It is four words. It is about him. It is not in the transcript, it is not in this account, and it is not going anywhere, and that is the whole of the property I was there to test.
+
 Halloran took both consents at 14:06 in the operations room at the array with Ravi standing where he could see both of us and the enable switch. Pairing consent, both. Recording consent, both, separately, each of us signing our own sheet and neither of us signing for the other. Halloran read the second one back twice, once for each of us, which was his own idea.
 
 The session ran from 14:11:20 to 14:15:44. Four minutes and twenty-four seconds. Eleven carried contributions.
@@ -29,7 +43,7 @@ Test one was transport. I prepared a string and sent it: the depot's meter seria
 
 Test two was the one the whole sitting existed for.
 
-I held something and did not send it. Not an abstraction. A specific sentence, four words long, about Joss, that I had chosen the night before precisely because it is the kind of thing an institution would most like to be able to reach. I held it deliberately, for fifty seconds, with the channel current and open and Mara's state showing current at her end, and I thought it hard enough that my jaw ached.
+I held something and did not send it. Not an abstraction. The sentence from Thursday night, chosen precisely because it is the kind of thing an institution would most like to be able to reach. I held it deliberately, for fifty seconds, with the channel current and open and Mara's state showing current at her end, and I thought it hard enough that my jaw ached.
 
 She sent, at 14:13:02: *nothing arriving, still nothing arriving, are you sending.*
 

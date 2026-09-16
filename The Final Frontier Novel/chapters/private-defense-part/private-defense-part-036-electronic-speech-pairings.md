@@ -15,11 +15,11 @@ Four entries stood above the line he wanted signed, all dated 19:40 the previous
 
 "Open Channel. They came out to set the room up."
 
-So the car that sat at the outer barrier while Mara Venn checked a wall calendar was three contractors and a clinical director come early to move furniture. I record the flatness because the flatness is the finding: booked by a group entitled to book it, in a ledger anyone could read, on a page where her group did not appear, because nobody needed her permission to take a room at the site she runs.
+So the car that sat at the outer barrier while Mara Venn checked a wall calendar was three contractors and a clinical director come early to move furniture. The flatness was the finding: booked by a group entitled to book it, in a ledger anyone could read, on a page where her group did not appear, because nobody needed her permission to take a room at the site she runs.
 
 They had arranged that room as if the answer were approved already — two upholstered chairs, a low table, identical glasses of water, a screen showing the words **Electronic Speech Pairings** before anyone explained what was paired or what counted as speech. Mara came in four minutes late, coat on, and stood at the back, having heard of the session from the technician who opened the gate.
 
-Ada Ferris sat on the left and her daughter Lena on the right, both alive, both adults, both signed the session authorization that morning. Ada lost expressive speech years before Northline found the field and still interprets where writing will serve, though by then somebody else has usually chosen the easier sentence.
+Ada Ferris sat on the left and her daughter Lena on the right, both alive, both adults, both signed the session authorization that morning. Ada lost expressive speech years before Northline found the field. She still interprets where writing will serve, though writing is slow enough that somebody else has usually settled for the easier sentence first.
 
 While the technician fitted the bands, Lena said something to her mother that was not a word in any language I have hired a translator for, and Ada answered with two taps on the chair arm, and both of them briefly looked like people in a much smaller room.
 

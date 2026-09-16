@@ -5,9 +5,9 @@ pov_id: POV-MARA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: [MOT-COME-03]
 hook: "The pattern is gone, the room is quiet, and Nia reports aloud that a familiar phrase she could use before the test is no longer there."
-words: 1230
+words: 1318
 length_class: normal
-status: draft
+status: revised
 ---
 The emitter was ready at four o'clock and I did not switch it on for eleven minutes.
 
@@ -15,19 +15,21 @@ Halloran had the authorization sheet. Two signers stood at the whiteboard. The t
 
 I had built the run so that it could not start without her answer, and then I had to stand in a room where the answer had not been given yet and the pattern was arriving anyway.
 
-I said my three sentences to her first, in front of the signers, because if I had said them to her alone somebody would later have decided what I had actually said. She made me repeat the second one, which is the one about having no measurement of what the emission does to a person. Then she gave Halloran her four conditions standing up, corrected the order he wrote them in, and answered aloud at eleven minutes past four.
+So I stood at the emitter for eleven minutes with my hands where the signers could see them.
 
-I did not help her write them. A condition I supplied would have been a condition I could later be said to have designed around.
+I have waited on a great many things in that building. A chiller, a clock, a bus, a director. I had never once waited on a sentence. The countdown was on the whiteboard behind me and somebody kept reading it out, and every digit was amplitude I was not going to get back, and none of that entitled me to a single word from her. I had built the run that way myself, in the afternoon, and it had cost me nothing at the time.
 
-Then she asked me for the pairing separately, and I answered separately, and our two states came up on the console opposite each other with the transport line waiting.
+I said my three sentences in front of the signers rather than to her alone, because said alone they become whatever somebody decides later that I said. She made me repeat the second one. That is the one where I tell a person I have no measurement of what my emission does to a person. Saying it twice does not improve it, and she was right to make me.
+
+I did not help her write her conditions. A condition I supplied would have been a condition I could later be said to have designed around.
+
+Then she asked me for the pairing separately, and I answered separately, because a person who has agreed to a field has not thereby agreed to a channel.
 
 That is the part I want in the record properly, because the doctrine will not hold it. Entry to the room was authorized by a badge. Entry to the space her own field occupies was authorized by a sentence she said out loud, at a time somebody wrote down, covering one run and expiring at its end. Those were not the same permission, and the equipment could not tell them apart. Only Halloran's second sheet could.
 
-She sent me the boundary confirmation. I sent it back.
-
 I brought the emitter up at 16:14:00.
 
-The pattern was resolving around her at seventy-one per cent of the amplitude the archive had recorded. I had the alignment estimated from the room geometry, a live correction running off the pickup behind her, and the same eleven-point map I had taped out for the phantom, with the phantom's place taken by a person.
+The pattern was resolving around her at seventy-one per cent of the amplitude the archive had recorded. That arrival had already found her; it was not an exposure my procedure could offer or withhold. Her answer covered the second field I was about to add. The archive supplied the estimator's starting basis and output limits; the live pickup behind her rebuilt the inverse continuously against the current waveform across the same eleven-point map I had taped out for the phantom.
 
 The first seven seconds were coarse. I want that number in the record and not rounded away, because those seven seconds were also emission, and the run does not begin when the trace gets tidy. At 16:14:07 the residual came inside eight per cent at all eleven points and stayed there.
 
@@ -41,13 +43,11 @@ The instruments gave me a result I can defend. Suppression at or below eight per
 
 The calibration room had done this with saline at the centre. This time the centre was a person, and the difference between those two runs is a difference I will be answering for the rest of my working life.
 
-Halloran asked her name, the place, the time and her condition. She answered all four.
+Halloran took her through orientation and she answered him. My own two questions were whether anything had arrived and whether she could identify anything missing. Nothing had, and she could not, and I wrote *no deficit identified at 16:15* rather than *no deficit*, because those are different claims and only one of them was ever mine to make.
 
-I asked whether anything had arrived. Nothing had. I asked whether she could identify anything missing. She could not, and I wrote *no deficit identified at 16:15* rather than *no deficit*, because those are different claims and only one of them was mine to make.
+Forty minutes later she came back in and told the room what was gone. She corrected Halloran's wording herself, standing up, the same way she had given him the conditions.
 
-Forty minutes later she came back into the room and said, in front of Halloran and both signers, that a phrase she uses on the console was not available to her.
-
-I was there for that, and the correction that went into the run record was hers and not ours. She gave it to Halloran standing up, the same way she had given him the conditions.
+I have the timestamp on my own note. It is forty minutes after I wrote *no deficit identified*.
 
 We opened a session two days afterward to agree the wording of the technical annex.
 

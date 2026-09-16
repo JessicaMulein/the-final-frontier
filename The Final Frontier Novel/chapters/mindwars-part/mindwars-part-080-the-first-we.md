@@ -5,9 +5,9 @@ pov_id: POV-MARA
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []
 hook: "She hears herself say we in a room full of strangers and does not correct it."
-words: 1257
+words: 1435
 length_class: normal
-status: draft
+status: revised
 ---
 The hall had been set out for something else earlier in the day. There were badminton lines under the chairs, a serving hatch with the shutter down, and a caretaker at the back who wanted the building empty by nine and made that clear by standing where the clock was.
 
@@ -31,7 +31,7 @@ A committee member asked me to put that more simply.
 
 I said it more simply. He asked whether, put simply, it worked. I said that within a bounded volume, against a resolving arrival, in the four instances tested, the pattern cancelled. He said thank you, and the clerk wrote down that it worked.
 
-What happened next took eleven minutes and I did not notice it happening.
+What happened next took nineteen minutes and I did not notice it happening.
 
 The questions came faster. They were good questions and they were the wrong size for my answers, and each time I compressed an answer to fit the question I lost a clause off the end of it. Not the mechanism. The mechanism survived. What went was the part about the affected set, which is the part that has no operational consequence for anybody in that room and every consequence for anybody inside a volume.
 
@@ -54,6 +54,14 @@ I have never used that word in a professional room in my life. I have said *the 
 I noticed it in my mouth. That is the honest account. Not afterwards, not reading the minute. I heard the shape of it while it was still in the air, and the room took it the way a room takes a plural, which is as reassurance, and I let it stand because taking it back would have cost me the ninety-day review.
 
 The counterweight is real and I put it in the same breath, and I want it recorded beside the other thing rather than instead of it. The network runs on two people who answer at the beginning of every shift and can stop answering. Vane has a form he initials. Osei will not work a second volume after eight hours and has told the committee so in writing. Nothing in the proposal permits a raising without one of them saying yes at the time, and I would rather have four blocks on those terms than a county on the other terms.
+
+The room heard that as the other thing, and I let the room hear it that way.
+
+An operator's answer is control. It puts a named person with a body and a signature between the capability and the ground, and it means that when a field goes up somebody can be asked why and has to answer for it. That is worth having and I fought for it.
+
+It is not consent. Julian's instrument requires an answer from each identified person inside the declared volume, given at commencement, withdrawable by her, the withdrawal ending the operation. Vane is not inside the volume. Vane is four hundred metres outside the boundary with a trailer and a cable run. Every person the field acts on is somebody he has never met and cannot answer for, and there is no clause anywhere in my proposal by which any of them says yes or no.
+
+*Operator-conditioned* went into the resolution and it is accurate and it is a different instrument from the one I have been quoting in rooms for six weeks.
 
 Afterwards the gallery went out past the hatch and the caretaker started stacking from the back row forwards, which is how you get people to leave without asking them to.
 

@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-NIA-AFTERMATH
 motif_events: []
 hook: "The match holds, the two accounts are one woman, and the first thing Mara does with that is talk about herself."
-words: 1277
+words: 1262
 length_class: normal
 status: revised
 ---
@@ -13,7 +13,7 @@ I laid a strip of masking tape down the middle of the passenger seat and set one
 
 The first folder held records created before I knew her name: the December acquisition timestamps, Ravi Anand's independent checks, the crossing-bell interval, the person-specific address procedure, and the signed log for the temporary bench path. The second folder held the county incident notice and my whiteboard chronology. Their separation was the only honest argument I had, so I made it physical.
 
-Anand had rerun the December timing and control set before I asked him to. He used my sample and my settings, then ran it again with a context budget I had not thought to vary, which is why the eight seconds are a result and not a habit of mine. He met me at the vehicle with the printout and did not hand it over.
+Ravi had rerun the December timing and control set before I asked him to. He used my sample and my settings, then ran it again with a context budget I had not thought to vary, which is why the eight seconds are a result and not a habit of mine. He met me at the vehicle with the printout and did not hand it over.
 
 "It holds at my hands too," he said. "And it moves when I change the budget. Write it that way or take my name off it."
 
@@ -85,7 +85,7 @@ Nia asked what the alternative account was. I gave her the only one available: t
 
 I had her reconstruction. I had no origin. "No."
 
-The match held. The woman whose continuous December morning I had received was the dispatcher named in the county notice. The source was Nia Calder, and Nia Calder is the dispatcher the notice names; the notice's casualties are other people, and she is not one of them. I had been sliding those two facts together in my own head for a week, and writing them apart cost me nothing and told me something: the thing I had been carrying was not a death. It was a living woman with a document around her. That identity no longer required inference. Causation still did.
+The match held. The woman whose continuous December morning I had received was Nia Calder, and Nia Calder is the dispatcher the county notice names, not one of the casualties inside it. I had been sliding those two facts together in my own head for a week, and writing them apart cost me nothing and told me something: the thing I had been carrying was not a death. It was a living woman with a document around her. That identity no longer required inference. Causation still did.
 
 She turned the incident notice face down, wrote a time in the corner in small even figures, and underlined it. It was the minute I had finished speaking.
 

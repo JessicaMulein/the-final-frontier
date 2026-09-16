@@ -5,15 +5,15 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "The band moves when the stranger's attention moves, which makes the field a place instead of a figure of speech."
-words: 1145
+words: 1113
 length_class: normal
 status: revised
 ---
-Ravi Anand told me the smoothing was the only reason anybody could read the display, which was true, and I took the smoothing out anyway.
+Ravi told me the smoothing was the only reason anybody could read the display, which was true, and I took the smoothing out anyway.
 
 The graph went ugly inside one refresh. Peaks split into shoulders, the shoulders carried ridges of their own, and every one of those ridges moved by less than the bandwidth we routinely threw away when we prepared a spectrum for human eyes. I had stopped looking for a source direction by then. Location had failed cleanly, which is the only useful kind of failure, and what remained were narrow relationships inside the received field.
 
-I moved the reconstruction through the latest live interval one acquisition block at a time. Under the same context, fidelity, information load, hardware, and confidence settings, the resolved output still arrived eight seconds after acquisition. That interval belonged to this reconstruction and to nothing else. The raw field went on without waiting for us.
+I moved the reconstruction through the latest live interval one acquisition block at a time, with every setting left where it had been, and the raw field went on without waiting for us.
 
 At first the ridges wandered without meaning. Then three of them moved together.
 
@@ -61,7 +61,7 @@ I opened the log and wrote the sentence I had been avoiding since the first week
 
 *Hypothesis: mind is not merely represented by activity in a body. For this receiver, a living mind is observable as a field whose internal frequency relationships change with attention while preserving continuity across the changes.*
 
-A hypothesis has to be allowed to fail, and it also has to say what would fail. The old use of *field* was metaphor. This one had frequencies, and it could be acquired, timestamped, and compared, and it still occupied no direction my aperture could recover.
+A hypothesis has to be allowed to fail, and it has to say what would fail it. The old use of *field* was metaphor. This one had frequencies, and it could be acquired, timestamped, and compared.
 
 On the final pass the lower family sharpened once more. The unit had already arrived. No carrier was active. Somewhere outside every coordinate I could produce, the stranger gave the call the last of her attention and let it go.
 

@@ -26,6 +26,7 @@ contract must be changed together or not at all.
 ```text
 The Final Frontier Novel/
 ├── front-matter.md                  (task 2.2)
+├── back-matter.md                   (`DEC-023`)
 ├── exclusion-contract.json          (task 3.1)
 ├── planning/
 │   ├── decisions.md                 author decisions, dated       (task 1)
@@ -55,6 +56,13 @@ Empty movement directories carry a `.gitkeep` placeholder so the tree survives a
 placeholders are deliberately **not** Markdown: a `README.md` inside a movement directory would be
 picked up by any chapter-file glob and then fail the naming rule below. Remove a `.gitkeep` once that
 directory holds its first chapter file.
+
+`back-matter.md` is the reader-facing document that follows the last chapter, added by `DEC-023`. Like
+`front-matter.md` it is a root file, uses `#` for the title and `##` per section, carries no
+Chapter_Header, and is never a Chapter_File. Root Markdown is outside every chapter glob and outside
+the Chapter File Prose Body literal scan, so no back-matter section satisfies or violates a
+Literal_Phrase_Constraint. The two root documents are the only Markdown permitted at this level;
+anything else belongs in `planning/` or in a movement directory under its chapter name.
 
 ## Chapter files
 

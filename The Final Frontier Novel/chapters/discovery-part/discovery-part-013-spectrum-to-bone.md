@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: [MOT-CHAIN-01]
 hook: "The spectrum resolves into something with a body, and the address is still there when she goes back for it."
-words: 2040
+words: 2157
 length_class: long-outlier
 status: revised
 ---
@@ -13,7 +13,7 @@ The threshold was written in pen on the inside cover of the notebook, a week bef
 
 For eleven minutes I believed I had done it.
 
-I had divided the stranger's recorded intervals into training and test sets, withheld the hard call entirely, and asked the model to find the stable frequency relationships underneath changes in attention. The crossing, the route correction, quiet carrier traffic, and ordinary dispatch work trained it; the call was the blind test. Then Ravi Anand replaced the call with a Northline recording of a transformer fire two years earlier. Different system, different operators, no possible overlap with the live field. The model matched the public recording almost as strongly as it had matched the stranger.
+I had divided the stranger's recorded intervals into training and test sets, withheld the hard call entirely, and asked the model to find the stable frequency relationships underneath changes in attention. The crossing, the route correction, quiet carrier traffic, and ordinary dispatch work trained it; the call was the blind test. Then Ravi replaced the call with a Northline recording of a transformer fire two years earlier. Different system, different operators, no possible overlap with the live field. The model matched the public recording almost as strongly as it had matched the stranger.
 
 "It learned urgency," he said.
 
@@ -69,13 +69,19 @@ The address was not the bell. It was the way one field changed around the bell a
 
 I reran the blind classification. Three controls correct. Stranger held out as unknown. No cross-matches. Then I reversed training and test, and it was correct again.
 
-I changed context length. Short context produced faster output and lower confidence, and the address region blurred before the broad attentional features did. Low fidelity preserved activity while losing identity. I moved processing to the spare hardware, where the acquisition timestamps did not change and the reconstruction time did, and with equivalent information retained the address returned. Eight seconds belonged to the early full reconstruction we had been using. Not to this identity. Not to the channel.
+I changed context length. Short context produced faster output and lower confidence, and the address region blurred before the broad attentional features did. Low fidelity preserved activity while losing identity. I moved processing to the spare hardware, where the acquisition timestamps did not change and the reconstruction time did. With equivalent information retained, the address returned. Eight seconds belonged to the early full reconstruction we had been using. Not to this identity. Not to the channel.
 
 Then I restarted the rack, because a computational state can preserve its own success if you let it stay warm. I powered down the reconstruction machines, saved only the procedure and the raw samples, and made Ravi choose the restart order. He wrote it in pencil on the parts envelope he keeps in his coat, in an order I would not have chosen, which was the point of asking him. When the system came back, its first pass through the held-out intervals produced the same four regions.
 
 That established repeatability in storage. It did not establish a live lock.
 
-The next morning I loaded the stranger's address region as a receive filter. The phrase *receive filter* mattered: it selected structure from incoming acquisition, and it sent nothing, asked nothing, and changed nothing at the far end. A lock meant the computation could go on recognizing one region as new data arrived. It did not mean the person was captured, contacted, or held still.
+The next morning I loaded the stranger's address region as a receive filter.
+
+My hand stopped on the return key. Not for long. Long enough to notice it, and long enough to produce the reason: that this was arithmetic, that nothing left the building, that a filter is a way of reading and not a way of touching. All of it was true and I have never had to revise it. What my hand had understood, half a second ahead of me, was that the region on that machine was cut to the shape of one living person, that I was about to switch it on and hold it against her while she worked, and that there was no arrangement of true sentences in which she had been asked.
+
+Then I pressed it, because I wanted to see whether it would hold.
+
+The phrase *receive filter* mattered: it selected structure from incoming acquisition, and it sent nothing, asked nothing, and changed nothing at the far end. A lock meant the computation could go on recognizing one region as new data arrived. It did not mean the person was captured, contacted, or held still.
 
 At 06:43 the filter found no candidate. At 06:51 it found two weak regions and rejected both. At 07:02 the confidence crossed the provisional threshold, fell below it, and crossed again. The field was present and diffuse, and I watched the same sparse phase relationships bend through changing attention and return.
 
@@ -91,7 +97,7 @@ The lock held for nine seconds, released, and reacquired. The display showed no 
 
 A public carrier opened and a unit requested an address repeat. The field tightened. Lock confidence rose without jumping, because urgency was no longer the key, and when the carrier closed the confidence remained. I changed the antenna pointing, and conventional emitters moved while the lock gave me no arrival angle. I switched subarrays, removed the licensed bands, and the address region stayed where it was.
 
-I let the live acquisition run for eleven minutes, then disabled the filter, cleared its state, and reloaded the region from the written procedure. The lock returned to the same field.
+I let the live acquisition run for nine minutes, then disabled the filter, cleared its state, and reloaded the region from the written procedure. The lock returned to the same field.
 
 The spectrum on the display was only the surface of it. Beneath the graph, the recurring currents of a living system held their relationships through sound, decision, effort, and release. I could not locate those currents anatomically. I could not claim I was measuring a neuron or reading a brain. But the mathematical spectrum had reached something that persisted as intimately as bone. One field went on being one field, and I could tell it from the three others I had.
 
@@ -101,7 +107,7 @@ I signed the result at 07:19.
 
 *Within the tested set, an address region discriminates the unknown source from three consented controls across stored and live intervals. It survives task variation and acoustic-edge rejection, reproduces after cold restart, and supports live receive-only identification and reacquisition. Tested set: n=4, all Northline-adjacent adults, one source and three controls, no demographic or physiological range. This does not establish that the region is unique to this person, that it would survive a fourth control, or that the discriminating features are person-specific rather than specific to what distinguishes these four. No geographic location, semantic content, transmit path, contact, or consent from the source is established.*
 
-I wanted to write *person-specific* and I had the sentence half formed before I stopped. Three controls is three controls. What I have is separation inside a set of four people, one of whom I have never met, chosen for me by the fact that they work in the same building at night. The word for that is not *person-specific*; the word for that is *discriminates the four I tried*. Ravi will ask me for the fourth control and I will not have a good answer, because the fourth control is a stranger who has not been asked.
+I wanted to write *person-specific* and I had the sentence half formed before I stopped. Three controls is three controls. What I have is separation among four people: three chosen because they work in the same building at night, and one source I have never met. The word for that is not *person-specific*; the word for that is *discriminates the four I tried*. Ravi will ask me for another control. The harder problem is that every control is being compared with a source who has not been asked.
 
 The distance between those two phrasings is the distance an appendix travels when somebody else copies it.
 

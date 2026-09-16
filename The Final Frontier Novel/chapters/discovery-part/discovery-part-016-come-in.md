@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-HANDSHAKE
 motif_events: [MOT-COME-01]
 hook: "She sends nothing but the fact of herself, and the difference between knocking and entering is one she decides alone."
-words: 679
+words: 687
 length_class: microchapter
 status: revised
 ---
@@ -15,13 +15,13 @@ Julian's memorandum had arrived the day before, addressed to compliance, the dir
 
 I did not alter the December rack. I took its address filter out through the diagnostic port, copied the person-specific region onto an isolated controller, and built the outgoing path beside it where every added part stayed visible: synthesizer, attenuator, driver, relay, load. Every connection was in view. With the relay open, the old apparatus could still do only what Julian's memorandum said it did. It received.
 
-Ravi Anand watched me terminate the driver into the load. "That isn't a test instrument."
+Ravi watched me terminate the driver into the load. "That isn't a test instrument."
 
 "It is if I leave the relay open."
 
 "And when you close it?"
 
-I set the output below the level at which our controls had shown any measurable response, which answered power and avoided purpose.
+I set the output at the lowest level the bench monitor could verify after attenuation, below the level that fed measurable energy back into the receiver chain during the dummy-load tests.
 
 The address was not a frequency I could type into a generator. It was a moving relation among frequencies, the sparse region that had stayed itself through the crossing bell, the route correction, and concentrated attention. To send through it, I made the controller follow that relation without reproducing any recorded structure from the person inside it.
 

@@ -65,6 +65,6 @@ Dalby stood up and put her coat over her arm and said one more thing at the door
 
 "Send me your ninety-one words. Directly. Not through the institute."
 
-I said I would. Then I did not, for eleven days, for reasons I have gone over since and cannot make creditable.
+I said I would. Then I did not, for nine days, for reasons I have gone over since and cannot make creditable.
 
 I wrote it out again in the car with the engine off, longhand, on the clean side of the torque sheet, and signed it and put the date on it. Then I sat in the car park with a piece of paper that was accurate, and dated, and in my own hand, and had no custodian anywhere in the world.

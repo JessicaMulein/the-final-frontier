@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []
 hook: "The first thing that crosses between them is a sentence Nia decides to hand over, and Mara has to sit still with how different that is."
-words: 1187
+words: 1097
 length_class: normal
 status: revised
 ---
@@ -15,7 +15,7 @@ status: revised
 
 "Yes."
 
-Nia made me ask that at the beginning of every session. Not once for the programme, not once for the week: each time, with the pair named and the act described, out loud, in a room with nobody else in it. The console showed two current permissions, our two addresses, a calibration identifier assigned to nobody else. It retained the state change and the operation of the channel and had no field for words, because the recorder was disabled and neither of us had asked for one.
+Nia made me ask that at the beginning of every session. Not once for the programme, not once for the week: each time, with the pair named and the act described, out loud, in a room with nobody else in it. The console showed two current permissions and a calibration identifier belonging to nobody else. It had no field for words, because the recorder was disabled and neither of us had asked for one.
 
 The first session produced nothing usable. I offered a circle and she reported pressure with no shape. She offered a direction and I received something between *left* and *before*. We stopped at six minutes, because approximation was turning into suggestion, and a guessed completion would have taught the mapping our expectations instead of each other.
 
@@ -49,7 +49,7 @@ I reached for the dimmer and stopped, because there were three questions I wante
 
 "Several things," she said, and did not list them.
 
-So I had one sentence because she decided to hand over one sentence, and none of her irritation before the send, none of her reason for choosing the lamp, no picture of the room as she saw it, no judgment of me. Effort on her side, and a gate she could have left shut. I lowered the light. The result was almost insultingly ordinary, which is what made it worth writing down: nobody had demonstrated union or access, one person chose a sentence, one person received it, and the sentence changed where the light fell.
+So I had one sentence, because she decided to hand over one sentence. Not her irritation before the send, not her reason for choosing the lamp, not the room as she saw it. Effort on her side, and a gate she could have left shut. I lowered the light. The result was almost insultingly ordinary, which is what made it worth writing down.
 
 My own first send took two attempts. I chose *The fan is off* and Nia received *The air is still*. The meanings overlap and are not identical, so we marked the integrity insufficient and did not call it a success. I offered the same intended sentence again, deliberately, as a second act rather than a repetition of the first.
 
@@ -79,8 +79,14 @@ He is the only person who has independently reproduced my December timing, rerun
 
 I drove the hour to Ruth's instead of the twenty minutes to my flat, and I did not call ahead, because in thirty years I have never once had to.
 
-She put a plate in front of me before my coat was off, moved it two inches closer when I did not start, and told me about a neighbour who has taught his dog to open the gate and cannot teach it not to. I ate everything. She refilled the water twice without mentioning it and asked nothing about the work, which is the arrangement, and at some point she took the plate away and I fell asleep in the chair by the window with the television on.
+She put a plate in front of me before my coat was off and moved it two inches closer when I did not start. I ate everything. When the plate was empty she gave me a folded sheet and said the spare bed was made.
 
-At half past ten she put a blanket over me and said, "You're too old to sleep in a chair," and I said, "You're older," and she said, "I have a bed. That's the difference between us," and turned the sound down.
+"I'm all right in the chair."
 
-The run sheet for Monday is in my case with two operator lines on it. Nia's session is at nine and the shielded room is booked from eleven, and I have not decided yet whether to run it with one signature and note the deficiency, or leave the room dark and ask the only people currently offering to pay for a second pair of hands.
+"You are not furniture."
+
+I went upstairs. At half past ten I heard her turn the television down through the wall.
+
+Nia's session is at nine on Monday and the shielded room is booked from eleven, and the run sheet has two operator lines on it and one name.
+
+I lay in the spare bed with the television murmuring through the wall and worked out that there were only two ways to spend Monday, and then I fell asleep before I reached the end of either of them, which is the most honest thing my body did all week.

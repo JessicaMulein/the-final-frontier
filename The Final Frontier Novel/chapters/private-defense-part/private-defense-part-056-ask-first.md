@@ -5,17 +5,15 @@ pov_id: POV-NIA
 timeline_id: TL-PRIVATE-PROTOCOL
 motif_events: []
 hook: "She pauses in the middle of a sentence she was sending, the channel stops where she stopped it, and the rest of the sentence stays hers."
-words: 1610
-length_class: long-outlier
+words: 1597
+length_class: normal
 status: revised
 ---
-Mara's card gave one red refusal at the array-room reader.
+The next time I was there, Mara's card gave one red refusal at the array-room reader.
 
 She held it still until the light cleared, put it away, and did not wipe it on her sleeve or try again. The same card opened Calibration Room C. Research operations still owned that room and the pairing console inside it.
 
-On the dull table I laid out the authority that had worked and the authority that had failed. The booking named Mara, me, Room C, the console, and two contact bands between nine and noon. It excluded the array room, test source, calibrated probe, and every instrument on the transfer schedule. A line at the bottom said the booking did not amend any access list.
-
-Beside it went the participant protocol signed by the independent review chair. It allowed named Mara–Nia calibration sessions and required a new answer from both of us each time. The signatures on the page were not today's answers.
+On the dull table I laid out the authority that had worked and the authority that had failed. The booking named Mara, me, Room C, the console, and two bands between nine and noon, and excluded the array room and every instrument on the transfer schedule. Beside it went the participant protocol signed by the independent review chair, which allowed named Mara-Nia sessions and required a new answer from both of us each time. The signatures on the page were not today's answers.
 
 Two contact bands lay beside the console. Between them I placed one blank sheet.
 
@@ -45,27 +43,19 @@ I entered *protocol development, current session only*. Mara entered the same wo
 
 Two state lights changed together. A start time appeared. The permission between us had begun.
 
-I moved my hand down the sheet and wrote:
+I moved my hand down the sheet and wrote the rest of it while the fan ran low enough to hear the pen cross the paper.
 
 *Every contribution is offered. Silence offers nothing.*
 
-The fan above us ran low enough to hear the pen cross the paper.
-
 *Acknowledgment is not agreement.*
 
-One band touched the side of my wrist when I reached the next line.
+*Pause stops transport from that endpoint. Stop closes the session. Neither queues a remainder.*
 
-*Pause stops transport. Stop closes the session. Neither queues a remainder.*
-
-Mara took the pen and added, in smaller writing:
-
-*Integrity failure requires confirmation, retry, or ordinary speech.*
+Mara took the pen and added, in smaller writing, *Integrity failure requires confirmation, retry, or ordinary speech.*
 
 "Recording," I said.
 
-She wrote:
-
-*Consent to pair is not consent to record.*
+She wrote: *Consent to pair is not consent to record.*
 
 We signed the bottom before testing any line. The paper could not make the console obey; it put the claims where either of us could point when the machinery changed state.
 
@@ -201,8 +191,8 @@ The rest remained in me: *you will have made one answer broad enough to own the 
 
 She waited without asking me to finish. The fan filled the wait.
 
-The export held both answers with the time each was given and the session they expired with, twenty-three minutes of operation, my pause, delivered volume, acknowledgments, latency, and no recording consent. It held no sentence or reason.
+The export held both answers, the times they were given, the twenty-three minutes, and my pause. It held no sentence and no reason.
 
 I took off the band. The booking and signed protocol remained at the far end of the table until noon. The console between us stayed closed.
 
-I folded the sheet we had written together and kept it. Mara took the operational export.
+Mara took the operational export. I did not ask what she intended to do with it and she did not offer, and we said goodbye in the corridor like two people who happen to work in the same building.

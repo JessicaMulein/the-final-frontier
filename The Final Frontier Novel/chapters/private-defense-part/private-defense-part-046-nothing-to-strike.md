@@ -67,7 +67,7 @@ The product director shook his head. "That would defeat the unified platform."
 
 There it was. Not impossibility. Product identity.
 
-I asked him to put that in writing. He said he would take it back to engineering. I have the message in which engineering agreed to consider a reception-only variant, dated eleven days later, by which time the first production run had a serial-number range.
+I asked him to put that in writing. He said he would take it back to engineering. I have the message in which engineering agreed to consider a reception-only variant, dated nine days later, by which time the first production run had a serial-number range.
 
 The component schedule changed the April matter. It gave me no new fact about the winter, and I wrote that limit once in the margin.
 

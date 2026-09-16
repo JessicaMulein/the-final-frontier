@@ -7,7 +7,7 @@ motif_events: []
 hook: "There is nothing to translate, which is worse than a code, because a code would mean somebody wanted to be understood."
 words: 1221
 length_class: normal
-status: draft
+status: revised
 ---
 There are two hundred and fourteen captures on the wall of the small analysis room, printed at the same scale, pinned in the order they were acquired, and the room is not big enough for them, so the last thirty go round the corner onto the door.
 
@@ -35,7 +35,7 @@ The method finds units because the method is a unit-finder. Give it anything wit
 
 I have gone through what this establishes twice, once at the bench and once at a kitchen table at two in the morning, because I did not trust the first pass and because the second box on every form I fill in for the rest of my life depends on getting this right.
 
-It establishes that the captured structure does not encode speech in any of the eleven families the pipeline tests, and that it does not encode any segmentable symbol stream those methods can find. That is a real result and it is mine and I will defend it.
+It establishes that this pipeline supplies no evidence that the captured structure encodes speech in any of the eleven families it tests, or any segmentable symbol stream these methods can distinguish from noise. That is a real result and it is mine and I will defend it.
 
 It establishes nothing at all about where the arrivals come from. A failure to translate is not a fact about a sender. It does not tell me that nobody sent them, because a party could send something that is not speech, and it does not tell me that somebody did. It does not narrow the field of parties, rank anybody's account above anybody else's, or supply one word to a file. If the material had parsed I would have had a language and still no sender. It did not parse, and I have neither, and those two positions are the same distance from a name.
 
@@ -47,7 +47,7 @@ The arrivals are not addressed to anybody's understanding. They are addressed. T
 
 A code would have been better. A code is a decision to be understood eventually. I have spent seven months hoping for a code.
 
-I wrote the result up on the seventeenth, eleven pages, and Ravi read it that evening without saying anything for a long time and then said that he had thought so since about May, which I already knew, and that he had not raised it because he had no control data and I had all the machines. Both of those things are true and only one of them is his fault, and neither is.
+I wrote the result up on the seventeenth, nine pages, and Ravi read it that evening without saying anything for a long time and then said that he had thought so since about May, which I already knew, and that he had not raised it because he had no control data and I had all the machines. Both of those things are true and only one of them is his fault, and neither is.
 
 Before the room was cleared I took the pencil off the hundred and six with a putty rubber. It took a whole evening. I am not sure it was rational and I did it anyway; the marks were mine, not the material's, and I did not want anybody finding that wall later and reading my handwriting as data.
 

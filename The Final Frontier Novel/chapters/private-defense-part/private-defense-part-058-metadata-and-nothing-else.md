@@ -5,10 +5,14 @@ pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-PROTOCOL
 motif_events: []
 hook: "He can prove exactly when the channel should have closed and that nothing crossed, cannot prove what Mara intended to offer, and writes the rule out of that gap."
-words: 1232
+words: 1305
 length_class: normal
 status: revised
 ---
+Dr Venn's covering line said that the gate had held and that she had tested the machine anyway. That is a confession, and a confession is the one class of evidence I am obliged to distrust, because a person who is accusing herself has already decided what the record means.
+
+So I read the export before I read her account of it. Then I read her account. Then I read the export again.
+
 At 10:02:11, the first two fields resolved to the participant addresses for Mara and Nia.
 
 The pair-calibration identifier matched their authorized pairing. Session consent began under a scope labelled *timing and acknowledgment*. Content recording was disabled at initialization and remained disabled. Those facts established a lawful channel at the start and no semantic record at any point.

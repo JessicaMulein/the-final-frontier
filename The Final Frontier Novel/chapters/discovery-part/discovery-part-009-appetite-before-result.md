@@ -5,7 +5,7 @@ pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "The institute's appetite arrives before the result does and already knows what it is worth."
-words: 1042
+words: 997
 length_class: normal
 status: revised
 ---
@@ -55,11 +55,9 @@ The director's office accepted the first sentence and moved the second to commen
 
 I moved it back.
 
-They asked whether source consent was a legal issue if the source had not been identified. I gave the review-facing answer. Identification was not the sole basis on which duties could arise; collection of human-linked data could create obligations before a name was known; the correct classification depended on facts the scientific group had not yet provided.
+They asked whether source consent was a legal issue if the source had not been identified. I gave them three clauses about the bases on which duties can arise, all of them accurate, and I did not give them the sentence underneath, which is that absence of a name does not produce absence of a person. I believed at the time that the long answer was more useful because it could survive circulation.
 
-The shorter answer was that absence of a name did not produce absence of a person. I did not write that one. At the time, I believed the longer answer was more useful because it could survive circulation.
-
-By four o'clock, the institute had opened a restricted project folder. Its title was *Signal Reconstruction Opportunity*. Mara had not approved the title. She had not supplied a result for the invention notice. The funding disclosure's material question remained blank.
+By five the institute had opened a restricted project folder. Its title was *Signal Reconstruction Opportunity*. Mara had not approved the title. She had not supplied a result for the invention notice. The funding disclosure's material question remained blank.
 
 Technology transfer nevertheless sent me a proposed recipient list for a confidential briefing. It included the institute director, finance, research security, two patent lawyers, and an outside adviser whose organization was identified only as a prospective funding participant. I asked twice for that organization's name and was twice assured it would be supplied in due course, which is a sentence with a shelf life. No Open Channel Consortium existed in the file before me. There was only the practised outline of one: money, counsel, technical promise, and an unnamed public benefit waiting to be written into the first paragraph.
 
@@ -67,7 +65,7 @@ I reduced the list. I added a statement that attendance conveyed no right to dat
 
 They were also the mechanism by which the briefing became possible.
 
-A badly drafted request might have failed from its own imprecision. Mine could move. It stated who could attend, what could be said, what remained withheld, and which approvals would convert a discussion into a disclosure. The institute's desire acquired definitions, conditions, and a route through the building.
+A badly drafted request might have failed from its own imprecision. Mine could move. The institute's desire acquired definitions, conditions, and a route through the building.
 
 At six seventeen the director's office accepted every restriction and asked for the earliest possible meeting.
 

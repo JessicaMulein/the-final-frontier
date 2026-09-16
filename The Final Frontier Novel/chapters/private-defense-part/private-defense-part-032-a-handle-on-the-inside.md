@@ -5,11 +5,11 @@ pov_id: POV-MARA
 timeline_id: TL-PRIVATE-COPPER
 motif_events: []
 hook: "She specifies a handle instead of a wall, and puts it on the inside where she cannot reach it."
-words: 1170
+words: 1199
 length_class: normal
 status: revised
 ---
-We stretched the mesh over a timber frame inside the old calibration room, overlapped each run by the width the screening handbooks specify, bonded the overlaps with conductive tape, and for two days I believed the tape.
+Before Nia's first trial, we stretched the mesh over a timber frame inside the old calibration room, overlapped each run by the width the screening handbooks specify, bonded the overlaps with conductive tape, and for two days I believed the tape.
 
 Then Ravi walked the source around the outside while I sat on the interior floor with the probe, and every seam came up on the map as a bright line.
 
@@ -87,4 +87,6 @@ Ravi was writing up the probe log when I came out. He had a question ready and d
 
 I wrote *objected* beside it, and the date, and showed him, and he handed the notebook back and said it was better than nothing in the tone people use when they mean it is nothing.
 
-The keyed maintenance release needed a keyholder, and the form wanted a name in a box. The manager wanted the key behind glass in the fire cabinet at the corridor end, where anybody with an elbow could have it. I wrote my own name in the box and put the key in my coat pocket, where it stayed for eleven weeks, and I will be asked about those eleven weeks by people entitled to ask.
+The keyed maintenance release needed a keyholder, and the form wanted a name in a box. The manager wanted the key behind glass in the fire cabinet at the corridor end, where anybody with an elbow could have it. I wrote my own name in the box, and I kept the key, and I kept it nine weeks longer than I should have.
+
+He asked me, reasonably, what would happen if I were unavailable. I said that was the correct question and that I did not have an answer to it. He wrote that down, and he was right to.

@@ -7,7 +7,7 @@ motif_events: []
 hook: "The operation waits while two people establish whether anybody had agreed to keep it, and the waiting costs something real."
 words: 1356
 length_class: normal
-status: draft
+status: revised
 ---
 The status line on the operations console reads, in the ordinary weight it uses for everything, *content recording: enabled*.
 
@@ -57,4 +57,4 @@ I would make the same ruling again. That is the part I have stopped saying out l
 
 On the sixth of December the county redrew the escalation route. Legal review now sits before and after an operation and not inside it. It was a sensible change, drafted well, and it was not framed as a criticism of anybody. I read it in the ordinary circulation the same way I read everything else now.
 
-The specialist unit is eleven miles from the school, and his wife does not drive, and on the days she visits she takes two buses.
+The specialist unit is nineteen miles from the school, and his wife does not drive, and on the days she visits she takes two buses.

@@ -5,7 +5,7 @@ pov_id: POV-MARA
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: []
 hook: "They tell her nobody on earth would be a stranger again, and the worst part of the afternoon is that she wants it to be true."
-words: 1886
+words: 1880
 length_class: long-outlier
 status: revised
 ---
@@ -97,7 +97,7 @@ The product director nodded through the list.
 
 I wanted those terms to be enough.
 
-Money mattered, and I want to be exact about how much. Northline had been rationing shield-mesh replacements since January. I had postponed four tests because each needed a second technician after six in the evening and there was nothing to pay one with. Anand had started doing those hours unpaid and being vague with me about it, which I knew because the sign-out sheet is in his own handwriting and he cannot tell a convincing lie in his own hand. The Consortium could fund rooms better than ours, hardware that did not overheat, and protection for people who could not abandon their work and go and live behind copper. I could tell myself the funding was why I stayed at the table.
+Money mattered, and I want to be exact about how much. Northline had been rationing shield-mesh replacements since January. I had postponed four tests because each needed a second technician after six in the evening and there was nothing to pay one with. Ravi had started doing those hours unpaid and being vague with me about it, which I knew because the sign-out sheet is in his own handwriting and he cannot tell a convincing lie in his own hand. The Consortium could fund rooms better than ours, hardware that did not overheat, and protection for people who could not abandon their work and go and live behind copper. I could tell myself the funding was why I stayed at the table.
 
 It was not the whole reason.
 
@@ -119,7 +119,7 @@ I marked it too.
 
 Dalby watched us both do it.
 
-"You are going to spend a year on that exception," she said. "I would like to save you some of it. The exception is there because the alternative is worse, and I can describe the alternative, and you are not going to enjoy that I can.
+"You have both marked it, so let me put a body in it," she said. "The exception is there because the alternative is worse, and I can describe the alternative, and you are not going to enjoy that I can.
 
 "A woman is in an ambulance. She is paired. She cannot speak. The crew needs to know whether she has taken anything in the last four hours. Under the rule Mr Adebayo wants, somebody has to obtain a current, specific authorization from her for an active query, in the back of a moving vehicle, on a form I drafted. Under our rule the query happens, it is logged, she can read the log afterwards, and so can a regulator.
 

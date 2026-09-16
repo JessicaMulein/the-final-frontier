@@ -5,9 +5,9 @@ pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []
 hook: "The same architecture, the same sentence, a different letterhead, and none of it says where the signal came from."
-words: 1104
+words: 1107
 length_class: normal
-status: draft
+status: revised
 ---
 The April specification came up from custody in a grey box with a release slip I had countersigned myself, which is the kind of detail that stops being ironic somewhere around the fourth occurrence and becomes simply the shape of the work.
 
@@ -27,7 +27,7 @@ Annex B, section 4, subsection 3. Under a heading reading *Emission Controls*, a
 
 The two documents describe the same architecture.
 
-Not a similar architecture, and not an architecture of the same family. The clocking path that holds a received field in phase is the path that can drive modulation outward; that is the whole of what page nine exposed, and it is the whole of what Annex B specifies, with the direction now stated as a feature and the enabling condition now automated rather than left to an authorized operator. April required somebody to switch it on. The annex requires a validated detection and a standing authorization held by a chief officer, which is to say that April's most objectionable element has been retained and its one remaining human step has been removed.
+Not a similar architecture, and not an architecture of the same family. The clocking path that holds a received field in phase is the path that can drive modulation outward; that is the whole of what page nine exposed, and it is precisely what Annex B specifies, with the direction now stated as a feature and the enabling condition now automated rather than left to an authorized operator. April required somebody to switch it on. The annex requires a validated detection and a standing authorization held by a chief officer, which is to say that April's most objectionable element has been retained and its one remaining human step has been removed.
 
 I wrote that sentence out in the reading room and then sat with what it does not establish, because the second half of this exercise is the half that matters and it is the half that will be dropped by everybody who quotes me.
 
@@ -49,9 +49,9 @@ He could have the comparison. He could not have the paragraph, which read, in it
 
 He took the comparison and left the paragraph with me, which I did not read as agreement, and I have since had no reason to revise that reading.
 
-The schedule is the part I keep returning to.
+It is not the resemblance that has stayed with me. It is the schedule.
 
-Annex C is a delivery and commissioning table, and it has dates in it, and the dates are not conditional on any hearing, any finding, any panel, or any note of mine. Emitter frames to the first volume on the twenty-sixth. Second volume on the twenty-eighth. Commissioning and boundary verification over the two days following. Commencement on the first of October. Three of those dates had already passed by the time the briefing lead closed the door, because the box had taken eleven days to come up from custody and the schedule had not waited in the box with it.
+Annex C is a delivery and commissioning table, and it has dates in it, and the dates are not conditional on any hearing, any finding, any panel, or any note of mine. Emitter frames to the first volume on the twenty-sixth. Second volume on the twenty-eighth. Commissioning and boundary verification over the two days following. Commencement on the first of October. Three of those dates had already passed by the time the briefing lead closed the door, because the box had taken nine days to come up from custody and the schedule had not waited in the box with it.
 
 I telephoned the county's monitoring officer to ask which of the two volumes contained the primary school, and was told, courteously, that the boundary maps were an operational matter and that I would receive them in the ordinary course.
 

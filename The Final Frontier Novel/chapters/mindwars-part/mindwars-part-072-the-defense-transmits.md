@@ -5,11 +5,11 @@ pov_id: POV-MARA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: []
 hook: "It works because it transmits, which means there is no version of it that stays outside anybody."
-words: 676
-length_class: microchapter
-status: draft
+words: 703
+length_class: normal
+status: revised
 ---
-I found it at twenty past two in the morning, working the question I had written down and not followed.
+I came back and unlocked the calibration room at twenty past two in the morning, working the question I had written down and not followed.
 
 Suppression happens where the inverse meets the pattern. The pattern is not in the room. In every event in the comparison set the pattern resolved around a person, inside the space a living field occupies. That is what selectivity has meant every time I have measured it. That is the only place any of these patterns has ever been.
 
@@ -21,7 +21,7 @@ I checked it the only way it can be checked at two in the morning, which is by t
 
 I could design no configuration in which the counterwave reaches the pattern and does not also reach the person the pattern is in. That is a statement about every arrangement I can currently draw, not a proof about all possible physics, and I have written it in the log in those words so that the next person who reads it knows which of the two I am entitled to.
 
-It carries no address, because it is not looking for anybody; it is aimed at a region. It adds no recoverable structure to the summed field at any point I can measure, within band. It cannot be run backward. It does not read. It removes.
+It carries no address, because it is not looking for anybody; it is aimed at a region. It adds no recoverable structure to the summed field at any point I can measure, within band. It cannot be run backward. It does not read. It suppresses.
 
 And it is emitted into the space a person's field occupies by a person who has decided to emit it.
 
@@ -43,7 +43,7 @@ At half past three Halloran called from the programme office to say he could hav
 
 He said the doctrine let him authorize a trial on his own signature.
 
-"Then here is what your signature would be buying," I said, and gave him the three sentences I had spent the night earning. That the emission has to reach the space a person's field occupies, because that is the only place the pattern is. That I have no measurement of what it does to anything that is not saline. That the run I can do tonight uses a recording of a finished event, and a pattern still arriving is a different and unsolved problem.
+"Then here is what your signature would be buying," I said, and gave him the three sentences I had spent the night earning. That the emission has to reach the space a person's field occupies, because that is the only place the pattern is. That I have no measurement of what it does to anything that is not saline. That the run I can do tonight uses a finished recording only to seed the estimator and set the output limits. The pickup must rebuild the inverse continuously from the pattern still arriving. Whether it can converge fast enough and hold is the different and unsolved problem.
 
 He was quiet for long enough that I knew he had written it down.
 

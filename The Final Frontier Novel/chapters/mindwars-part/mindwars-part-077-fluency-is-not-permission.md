@@ -5,9 +5,9 @@ pov_id: POV-NIA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: []
 hook: "The channel is easy and she stops it mid-sentence anyway, because easy is not the same as allowed."
-words: 1320
+words: 1341
 length_class: normal
-status: draft
+status: revised
 ---
 By the fourth exchange I had stopped noticing the send.
 
@@ -15,7 +15,7 @@ That is the thing nobody warns you about. The interval between deciding and send
 
 Occupational review had put me back on limited duty eight days after the run: survey and instrument work, no console, no live calls, reviewed again at the end of the month. The missing phrase is still missing. That is the sentence on the form, and the form is the reason I was allowed to be standing at the north site at all.
 
-We were coordinating a boundary survey there. Mara at the emitter end, me at the pickup with a hand terminal and a clipboard I did not need. Both answers given eleven minutes earlier for this task, this scope, this hour. Recording off. Four site staff on ordinary radio.
+We were coordinating a boundary survey there. Mara at the emitter end, me at the pickup with a hand terminal and a clipboard I did not need. Both answers given twenty minutes earlier for this task, this scope, this hour. Recording off. Four site staff on ordinary radio.
 
 A pattern had been resolving around a monitored volunteer in the far bay since 20:40 and was still resolving.
 
@@ -45,7 +45,7 @@ He stopped.
 
 He said afterwards that he had heard me and not understood why I was shouting, and I told him the truth, which is that shouting was slower and I had used it anyway.
 
-The reason is not complicated and it took me a long time to be able to say it in one breath. He had not been asked. My answer covered a coordination task between me and Mara. It did not cover him. We were marking out the region an emission would have to reach, he had just walked into the middle of it, and the fluent channel in front of me was a very fast way of moving information between two people who had agreed to it and no way at all of asking a third person anything. If I had kept sending, the survey would have gone on around him at four exchanges a minute and nobody would have stopped to find out whether the man with the bolt cutter wanted to be standing inside the thing we were describing.
+He needed no consent to be crossed by a field that night, because no field was on. I stopped because a person had entered a live survey whose boundary would govern a later emitting run, and the procedure had to fail now rather than around him later. My answer covered a coordination task between me and Mara. It did not cover him. We were marking out the region an emission would have to reach, he had just walked into the middle of it, and the fluent channel in front of me was a very fast way of moving information between two people who had agreed to it and no way at all of asking a third person anything. If I had kept sending, the survey would have gone on around him at four exchanges a minute and nobody would have stopped to find out whether the man with the bolt cutter wanted to be standing inside the thing we were describing.
 
 The channel does not know he is there. It is not a room. It is two addresses.
 

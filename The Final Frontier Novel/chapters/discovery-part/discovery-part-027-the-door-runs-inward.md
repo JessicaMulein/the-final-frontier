@@ -17,7 +17,7 @@ Her addition went after *what*: *or who*. She wrote it in the margin with a care
 
 The receiver identified her before I enabled anything else.
 
-That was not new science. With her consent I loaded the address region derived from the December crossing and the later dispatch intervals, then acquired a fresh field while she sat in the test room. The filter rejected Anand in the control room. It rejected a stored decoy region. It locked onto the same sparse relationships while she shifted among reading, silence, and a simple choice task.
+That was not new science. With her consent I loaded the address region derived from the December crossing and the later dispatch intervals, then acquired a fresh field while she sat in the test room. The filter rejected Ravi in the control room. It rejected a stored decoy region. It locked onto the same sparse relationships while she shifted among reading, silence, and a simple choice task.
 
 The civil name belonged to the consent sheet. The field did not contain the syllables *Nia Calder*. What joined name to address was custody: she was the person in the room, she had agreed to this bounded use, and the live region matched records created before I knew who she was. I could now say the apparatus recognized a named person. It still could not say her name.
 
@@ -25,9 +25,9 @@ The outgoing question was narrower and more dangerous.
 
 The temporary bench path could follow the moving address relation. I had proved that when I sent the handshake, but the outgoing trace had measured only my own equipment and showed no detection or effect at the far end. This test needed an effect simple enough to measure without pretending we had language, so we chose urgency.
 
-Nia would see a grey circle and could press an advance key whenever she decided to proceed. On active trials, after a randomized delay, the bench path would deliver one fixed subthreshold phase transition through her live address. On sham trials the controller would run the same sequence into a terminated load. The transition carried nothing that could be read afterward: no side, no word, no image, no proposition, no instruction. It could not tell her to press. At most it could add weight to an action she already knew was available, and that limit does not make the act small.
+Nia would see a grey circle and could press an advance key whenever she decided to proceed. On active trials, after a randomized delay, the bench path would deliver one fixed low-level phase transition through her live address. On sham trials the controller would run the same sequence into a terminated load. The transition carried nothing that could be read afterward: no side, no word, no image, no proposition, no instruction. It could not tell her to press. At most it could add weight to an action she already knew was available, and that limit does not make the act small.
 
-Anand generated twelve trials, six active and six sham, order concealed from Nia and from me. He loaded the sequence and covered his display. The relay sound was masked at the rack, the test-room equipment emitted the same local tone on every trial, and the active and sham paths shared timing until the final hardware branch. Nia held a physical cutoff key in her left hand; opening it removed power from the driver independently of software. Her right hand would make the choice we measured.
+Ravi generated twelve trials, six active and six sham, order concealed from Nia and from me. He loaded the sequence and covered his display. The relay sound was masked at the rack, the test-room equipment emitted the same local tone on every trial, and the active and sham paths shared timing until the final hardware branch. Nia held a physical cutoff key in her left hand; opening it removed power from the driver independently of software. Her right hand would make the choice we measured.
 
 The protocol recorded four things: trial start, keypress time, whether she spoke *live*, *blank*, or *uncertain* after pressing, and whether she opened the cutoff. We did not record her field for later semantic reconstruction, and there was no semantic reconstruction to perform. The receive filter retained only the relationships required to hold the address and the predeclared broad attentional measure needed to compare intervals.
 
@@ -59,7 +59,7 @@ The white chain found her. It held while she shifted in the chair. It held when 
 
 Then I enabled the isolated outgoing controller.
 
-The same region that let us recognize a field now governed where the phase transition could be applied. The path did not address a room. It did not address a screen, a key, or a coordinate. Anand sat closer to the rack than Nia did and remained outside the selected relation, and if the controller lost her live match the relay could not close.
+The same region that let us recognize a field now governed where the phase transition could be applied. The path did not address a room. It did not address a screen, a key, or a coordinate. Ravi sat closer to the rack than Nia did and remained outside the selected relation, and if the controller lost her live match the relay could not close.
 
 A receive filter had become a condition on a write.
 
@@ -67,7 +67,7 @@ I looked at the block diagram: incoming field to address lock, address lock to i
 
 The window I had argued for in December no longer described the system. A window permits sight in one direction. This path selected the person on the other side and made the selection the route back.
 
-Anand did not look up from the covered display. He had said his piece about the test on Tuesday, in writing, and had signed the procedure anyway once the four terms were in it, which is the difference between an objection and a refusal and he wanted both on the record.
+Ravi did not look up from the covered display. He had said his piece about the test on Tuesday, in writing, and had signed the procedure anyway once the four terms were in it, which is the difference between an objection and a refusal and he wanted both on the record.
 
 "If nothing happens," he said, "what do you write?"
 

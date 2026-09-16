@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []
 hook: "Nothing in the day asks to be remembered, and she remembers it anyway."
-words: 804
+words: 870
 length_class: normal
 status: revised
 ---
@@ -21,7 +21,7 @@ Rain was closing from the north. One caller waited at a locked pumping station f
 
 She acknowledged without commenting on it, which I was grateful for, because a driver who wants to discuss the software mid-approach costs you forty seconds you will need later. She had a windscreen. I had a picture of one.
 
-I switched the incident to manual location and entered *telemetry inconsistent with unit report*. Then I called the depot support desk and got the hold music, which is eleven seconds long and starts again in the middle of a phrase.
+I switched the incident to manual location and entered *telemetry inconsistent with unit report*. Then I called the depot support desk and got the hold music, which is nine seconds long and starts again in the middle of a phrase.
 
 Dev leaned across from the next console while I waited. "Same frozen layer."
 
@@ -31,7 +31,7 @@ Dev leaned across from the next console while I waited. "Same frozen layer."
 
 That was precise enough to be useful. I gave support his wording and made them reopen the old ticket instead of issuing a new one without its previous closures.
 
-Ticket 4716. I wrote the number on a yellow strip and put it under the monitor.
+Ticket 4716, the same number as December. I wrote it on a fresh yellow strip and put this one under my own monitor, where I would have to look at it.
 
 Fourteen reached the gate in three minutes. The caller had found the missing caretaker sitting against the pump-house wall, conscious and extremely embarrassed, holding one hand wrapped in a tea towel. A cut across the base of the thumb, from a padlock hasp, of the kind that bleeds impressively and needs almost nothing. The crew cleaned it, checked him over, established that he had been sitting down for twenty minutes because standing up had seemed like a lot, and drove him home.
 
@@ -65,4 +65,6 @@ I took the strip home by accident. It adhered to the cuff of my sleeve when I cl
 
 The review sat twenty-eight days away. I counted nineteen of those days with my name on that console and two reservoir runs a week for Fourteen. *Monitoring* did not put a person at the desk for the next time voice and picture separated.
 
-I slid the strip into the notebook beside the earlier account of the crossing bell. The ticket remained open in the system. The cover closed over the yellow edge.
+The ticket stayed open in the system, which nobody had promised would mean anybody read it.
+
+Then I drove home the long way, out past the reservoir, along the road Fourteen had been driving while her icon was on the wrong side of the water. It was dark and the water was flat and there was nothing whatever to see. I have done it most weeks since, and I would rather not work out what I think I am checking.

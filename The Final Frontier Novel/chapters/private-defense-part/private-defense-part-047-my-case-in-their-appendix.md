@@ -5,7 +5,7 @@ pov_id: POV-NIA
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: []
 hook: "She is an appendix, and the appendix is the reason the programme is considered urgent."
-words: 1038
+words: 1039
 length_class: normal
 status: revised
 ---
@@ -19,7 +19,7 @@ I read the binder at the kitchen table with my coat still on, which is how I rea
 
 Section one began with benefits. On page eleven I found the fire: structure fire, three reported addresses, paired coordination preserving both dispatchers' spoken channels. I underlined *three reported addresses*. The next line moved on to response efficiency.
 
-Tomas had gone first. Cora went on the next reading. I turned the page and lost the chained stair door, the firefighter who cut it, and the resident who went to hospital. The pause was missing too. Beside the response line I wrote *Cora stopped the channel mid-incident*. It was the only evidence in the binder that the thing could be stopped, and it had been left out of the benefits.
+On the first reading Tomas disappeared. On the next, Cora did. I turned the page and lost the chained stair door, the firefighter who cut it, and the resident who went to hospital. The pause was missing too. Beside the response line I wrote *Cora stopped the channel mid-incident*. It was the only evidence in the binder that the thing could be stopped, and it had been left out of the benefits.
 
 Section two was governance. I read all of it. It was better than I expected; somebody had been in there arguing. You can tell, the way you can tell a road has been resurfaced in patches.
 

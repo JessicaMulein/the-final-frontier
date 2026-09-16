@@ -5,31 +5,33 @@ pov_id: POV-NIA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: []
 hook: "Three records agree on when everything happened, and not one of them contains a single thing that was thought."
-words: 1070
+words: 1084
 length_class: normal
-status: draft
+status: revised
 ---
-Joss cleared the end of the kitchen table by moving a toaster and a bag of hinges onto a chair.
+Joss came to me, which he does about twice a year and never explains.
 
-"You want the good light or the plug?"
+He brought food in a lidded tin on the passenger seat and a carrier bag of somebody's curtain hooks he was sorting by size, and he set himself up at the far end of my table with the hooks and left me the end that has the plug in it.
 
-"The plug."
+"You've got no lamp in here."
 
-"Then you get the toaster's spot."
+"There's the big light."
 
-He had made too much food again, which is his method, and he put a plate at my elbow where it would be in the way of the printouts and therefore eaten. I had three records with me and a highlighter, and I laid them out left to right in the order they had been created.
+"That's not a lamp. That's an interrogation."
+
+He put a plate at my elbow where it would be in the way of the printouts and therefore eaten. I had three records with me and a highlighter, and I laid them out left to right in the order they had been created.
 
 The consent-state export. The transport metadata. The integrity log.
 
 I am going to set down what they say, because I have spent four days being told what they mean.
 
-The consent-state export holds two participant addresses, a named scope, and every transition between waiting and current, with times to the millisecond. It holds my four conditions as a reference number to Halloran's third sheet, not as text. It holds my spoken yes as a timestamp and a flag, because the sentence itself was air in a room and the console was never asked to hear it. It holds the expiry at the end of the run. It holds the two answers we gave separately for the pairing, and their close.
+The consent-state export holds two participant addresses, a named scope, and every transition between waiting and current, with times to the millisecond. It holds my four conditions as a reference number to Halloran's second sheet, not as text. It holds my spoken yes as a timestamp and a flag, because the sentence itself was air in a room and the console was never asked to hear it. It holds the expiry at the end of the run. It holds the two answers we gave separately for the pairing, and their close.
 
 The transport metadata holds the deliberate send prepared at 11:22:41 and released at 11:22:58. Pending volume zero. Transported volume zero. It holds the seventeen seconds between preparing and releasing.
 
 The integrity log holds nothing at all for that attempt. No fault, no clip, no latency event, no rejection. It is a clean page, and a clean page is a finding.
 
-Together they establish a sequence. Somebody was asked. Somebody answered. A field ran for nineteen seconds inside a marked boundary. Two days later somebody prepared something to send, held it seventeen seconds, released it, and nothing crossed, with no fault to explain the nothing.
+The three records agree on the run and the later zero-volume send. They say when each happened and contain no fault that explains the loss.
 
 That is all three records say. I read them twice to be sure, and then a third time looking for the sentence somebody could quote at me later.
 
@@ -41,7 +43,7 @@ That is all three records say. I read them twice to be sure, and then a third ti
 
 I told him it was the opposite. They did not owe me anything. That was the problem.
 
-Here is what the three records do not contain.
+The phrase is not in any of the three records.
 
 They do not contain the phrase. Not in the transport log, because zero volume means zero volume. Not in the consent export, because content recording was off and neither of us ever agreed to turn it on. Not in the integrity log, because the integrity log records the health of a channel and not its cargo. The phrase is not in Mara's annex either, at my instruction, and it is not in Halloran's run record, which says *unable to access* because I made him strike out *unable to recall*.
 
@@ -67,7 +69,7 @@ Joss took the empty plate away and put a cup where it had been.
 
 "No."
 
-"Right." He sat down on the arm of the chair with the hinges on it. "Is it the not-explaining kind of tired, or the other kind?"
+"Right." He put the hooks down and sat on the arm of my chair. "Is it the not-explaining kind of tired, or the other kind?"
 
 "The first one."
 

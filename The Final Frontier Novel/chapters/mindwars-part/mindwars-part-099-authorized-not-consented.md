@@ -7,7 +7,7 @@ motif_events: []
 hook: "He writes authorized in the box and refuses to let the word consented appear anywhere on the page."
 words: 1240
 length_class: normal
-status: draft
+status: revised
 ---
 The form came to me unfilled, which is the only reason any of this was possible.
 

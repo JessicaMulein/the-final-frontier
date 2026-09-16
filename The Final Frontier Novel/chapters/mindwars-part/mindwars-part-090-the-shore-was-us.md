@@ -5,15 +5,15 @@ pov_id: POV-MARA
 timeline_id: TL-MINDWARS-TERRITORY
 motif_events: []
 hook: "Every map she was raised on points away from the planet, and the only territory anyone has actually entered is the inside of a person's head."
-words: 1771
+words: 1807
 length_class: long-outlier
-status: draft
+status: revised
 ---
 I have made four maps of this event and thrown three of them away.
 
-The first was the obvious one and I drew it in July. An ordnance sheet of the two counties, one dot per confirmed arrival, dated. Two hundred and fourteen dots by the end of November. I expected a shape, because that is what a map is for: you put the cases down and the water pump appears in the middle of them.
+The first was the obvious one and I drew it in July. An ordnance sheet of the two counties, one dot per confirmed arrival, dated. Two hundred and fourteen dots by the end of November, which is the same two hundred and fourteen pinned to the wall of the small analysis room, because a dot needs a capture behind it and confirmation runs a long way behind the reports. I expected a shape, because that is what a map is for: you put the cases down and the water pump appears in the middle of them.
 
-There is no shape. I ran the nearest-neighbour statistics twice and they come out indistinguishable from a random scatter over the populated area, which is to say the dots are where the people are and nothing further. A dot in a village of four hundred, three dots in a town, none at all across eleven miles of farmland where there is nobody to have one. If you weight by population the map goes flat. Flat is a result and it is not a map.
+There is no shape. I ran the nearest-neighbour statistics twice and they come out indistinguishable from a random scatter over the populated area, which is to say the dots are where the people are and nothing further. A dot in a village of four hundred, three dots in a town, none at all across nine miles of farmland where there is nobody to have one. If you weight by population the map goes flat. Flat is a result and it is not a map.
 
 The second map was time. I put the same cases on a twenty-four-hour clock face expecting the night, because everything I had read of it happened at night, and everything I had read of it happened at night because that is when the network is staffed and when a person alone in a house is noticed missing. Corrected for who is awake and who is watching, the clock goes flat too. It is not a nocturnal phenomenon. It is a phenomenon we are nocturnally equipped to see.
 
@@ -37,7 +37,7 @@ So the fourth map has no coastline on it. It is a list of people down the left s
 
 That is the point at which I went and got the other maps.
 
-Ruth kept a planisphere in the back bedroom and I had it up on my own wall for eleven years, the kind you turn to the date and read off what is overhead. There was a frieze of the planets along the top of the classroom wall at school in a scale that made Neptune a full-stop. Later there was a poster of the deep field, the one that shows a patch of nothing the size of a grain of rice held at arm's length and finds ten thousand galaxies in it. And somewhere behind all of it there is a record bolted to a spacecraft, still going, addressed to whatever finds it.
+Ruth kept a planisphere in the back bedroom and I had it up on my own wall for twelve years, the kind you turn to the date and read off what is overhead. There was a frieze of the planets along the top of the classroom wall at school in a scale that made Neptune a full-stop. Later there was a poster of the deep field, the one that shows a patch of nothing the size of a grain of rice held at arm's length and finds ten thousand galaxies in it. And somewhere behind all of it there is a record bolted to a spacecraft, still going, addressed to whatever finds it.
 
 Every one of those maps points away from the planet. Every single one. That is not a coincidence of taste, it is the whole inherited orientation of the work I chose: the interesting distance is outward, the frontier is a place, and we are the ones who go. I did not adopt that as a hypothesis. It was the wallpaper.
 
@@ -55,13 +55,13 @@ I sat and did the ratio because I am the sort of person who does the ratio, and 
 
 So I did it as a drawing instead, which is what finally landed it.
 
-Take a sheet of paper. Draw the inward distance at any scale you can actually see — say the six centimetres as six centimetres, one to one, a line the length of your thumb. Now put the nearest star on the same sheet at the same scale. It is not on the sheet. It is not in the building. At that scale it is about four hundred thousand kilometres away, which is past the Moon, and the deep field is not anywhere you can write down.
+Take a sheet of paper. Draw the inward distance at any scale you can actually see — say the six centimetres as six centimetres, one to one, a line the length of your thumb. Now put the nearest star on the same sheet at the same scale. It is not on the sheet. It is not in the building. At that scale it is about forty trillion kilometres away, which is rather more than past the Moon, and the deep field is not anywhere you can write down.
 
 Now do it the other way. Shrink the sheet until the nearest star fits on it. The six centimetres is not visible. It is not a small mark, it is not a dot, it is nothing at all; there is no ink fine enough. You cannot get both distances onto one piece of paper in any orientation. The outward one will not fit. The inward one will not survive being drawn.
 
 And the outward one has never been crossed by anybody. Nothing has come back from it and nothing has arrived out of it that we can name. The inward one has been crossed two hundred and fourteen times that I have confirmed, in two counties, in under a year, and I have the times to the second.
 
-I have been calling that a war for four months because that is the word the rooms use, and the word is doing something to my thinking that I want to write down before I stop noticing it. Wars have fronts and territory and the territory is somewhere. I have a coverage map with volumes on it. I have boundaries I drew along a railway cutting because a cutting is easier to shield than a row of gardens. I have blocks I describe as covered and blocks I describe as uncovered, and I have used the word *pocket* in eleven documents.
+I have been calling that a war for four months because that is the word the rooms use, and the word is doing something to my thinking that I want to write down before I stop noticing it. Wars have fronts and territory and the territory is somewhere. I have a coverage map with volumes on it. I have boundaries I drew along a railway cutting because a cutting is easier to shield than a row of gardens. I have blocks I describe as covered and blocks I describe as uncovered, and I have used the word *pocket* in nine documents.
 
 That is the vocabulary of somebody administering ground. I have been using it fluently for months and the ground is people. Not people's houses, not their streets, not the air over their gardens: the six centimetres. Every boundary I have drawn is a line across the insides of a specific number of specific heads, and I drew the last one on a kitchen table on a Tuesday afternoon with an ordnance sheet and a pencil, and it went through four hundred of them.
 

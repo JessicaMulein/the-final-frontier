@@ -5,9 +5,9 @@ pov_id: POV-MARA
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []
 hook: "The channel hands her back her own mouth at the worst possible second, and the fallback is what saves the block."
-words: 1235
+words: 1477
 length_class: normal
-status: draft
+status: revised
 ---
 Volume two went live on the ninth of October and the first thing it cost was Osei's second shift.
 
@@ -39,7 +39,7 @@ What stopped me is that I did not know what it would take out of him.
 
 The field degrades access inside its volume. He was inside the volume. If the certainty driving him down that slope was inside the volume too, the field might have taken it and left him standing on ballast wondering why he was outside in his slippers, which is the outcome I would have paid almost anything for. Or it might have taken the part of him that knew where the fence was, or which way the van was, or that a rail is a rail, and left him on a live line with nothing to navigate by. I could not tell anybody in advance whose access, or how much. I had said so in a leisure centre hall nine days earlier and then let the sentence fall out of the resolution, and there it was at 01:42, standing in front of me wearing house shoes.
 
-The channel gave me my own mouth back. I mean that mechanically. The pause held, the state panel went from current to held, the prepared sentence stayed in my head where a thing stays when you decide not to send it, and my hand came off the switch and went to the radio.
+The channel gave me my own mouth back. I mean that mechanically. The pause held, my outbound state panel went from current to held, the prepared sentence stayed in my head where a thing stays when you decide not to send it, and my hand came off the switch and went to the radio.
 
 Ordinary voice is slower. It is four seconds of pressing and speaking and being asked to repeat instead of one of sending. It is also the only thing on that embankment that could put a living body next to his, and a field cannot do that. A field has no hands.
 
@@ -60,3 +60,13 @@ It came off the bearing it had held for half an hour and started resolving again
 Vane sent *still ready*.
 
 I had the mark prepared again. I had it prepared before I had finished reading the new depth, and my thumb was on the send area, and down the slope the torch beam was still moving.
+
+Then the beam stopped, and there were two shapes in it instead of one.
+
+The constable had him by the sleeve at 01:49 and off the ballast at 01:50, up the bank on his own legs with a hand on him, and the section stayed at stop until twenty past two. I read the new depth once more and it was already coming apart, the way they do when nobody has done anything to them. At 01:51 I let my state go back to current without ever having sent the mark.
+
+The field did not go up that night. Vane packed a trailer down in the rain at four and neither of us said anything about it, because there was nothing available to say that was not either an apology or a claim.
+
+Nothing that worked on that embankment was mine. A voice on a radio, a woman who went over a fence, a signaller two counties away who put a section at stop on a stranger's word. My apparatus held nine minutes of a man's readiness and produced nothing, and the reason the man in the house shoes went home is that four people with bodies reached him before I could decide anything.
+
+I still do not know what the field would have taken out of him. I am going to be asked, and I am going to have to say that, and it will be written down as caution.

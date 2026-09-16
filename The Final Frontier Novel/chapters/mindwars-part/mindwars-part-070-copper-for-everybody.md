@@ -5,11 +5,11 @@ pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: [MOT-COPPER-02]
 hook: "The shielding works, the waiting rooms are quiet, and the quiet is where everyone now has to live."
-words: 1032
+words: 1056
 length_class: normal
-status: draft
+status: revised
 ---
-The audit instruction said to verify that the enclosure programme delivered measurable attenuation against expenditure, and it did, and I have never written a compliant report I trusted less.
+By the time the audit reached unit fourteen, the enclosure programme had been running long enough for a two-hour rota to have fallen to ninety minutes. The instruction said to verify that the programme delivered measurable attenuation against expenditure, and it did, and I have never written a compliant report I trusted less.
 
 Unit fourteen stood on the tarmac behind a health centre in a town whose name the doctrine spells two ways. It was a shipping container with mesh bonded inside its walls, a fan unit on the roof, one door and no windows. The Consortium supplied nine of these before the order passed and eleven after. Across the band Northline declared for this class of event, worst-case attenuation was twenty-six decibels at the door seal and thirty-one at the centre of the floor, against a twenty-decibel specification. Outside that band the figures are not claimed and were not measured. The instruments agreed with the invoice.
 
@@ -37,7 +37,7 @@ He was perhaps forty and had come on a bus with a transfer, holding a referral f
 
 He said he could not do Thursday morning.
 
-He was not aggressive about it. He explained, twice, patiently, that he had walked into a road on the eleventh and had been discharged with a leaflet, and that he was not certain he would not do it again, and that Thursday was two days away. He asked whether he could stand. He said he did not need a chair. He said he would stand by the door and not speak to anybody.
+He was not aggressive about it. He explained, twice, patiently, that he had walked into a road on the ninth and had been discharged with a leaflet, and that he was not certain he would not do it again, and that Thursday was two days away. He asked whether he could stand. He said he did not need a chair. He said he would stand by the door and not speak to anybody.
 
 The site manager said the unit was at its licensed figure of eleven and that the licence was what allowed it to be on that tarmac at all.
 

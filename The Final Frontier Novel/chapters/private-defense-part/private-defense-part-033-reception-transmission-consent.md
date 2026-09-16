@@ -5,11 +5,11 @@ pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-COPPER
 motif_events: []
 hook: "His distinction is sound, and the enrollment form he is handed has already answered it on everyone's behalf."
-words: 1575
+words: 1571
 length_class: normal
 status: revised
 ---
-Imogen Dalby, counsel for the Open Channel Consortium, arrived eleven minutes early with a policy director and two identical folders, set the one marked *Participant Access Framework* face down on the table, and did not open it for fifty minutes.
+Imogen Dalby, counsel for the Open Channel Consortium, arrived twelve minutes early with a policy director and two identical folders, set the one marked *Participant Access Framework* face down on the table, and did not open it for fifty minutes.
 
 There was a second act in my file by then, and there had not been one in December. The suspension chair had exercised a discretion I drafted myself and linked a related technical record to the legal matter, which he was entitled to do and not obliged to do. The notice ran to one line. Behind it sat Venn's own deviation, submitted against herself, and with it her signed bench procedure, Anand's written objection, and a forward-power trace.
 
@@ -53,7 +53,7 @@ The policy director began to answer. Dalby let him reach four words and then too
 
 I wrote *lawful, undisclosed to counsel, not transferable* in the margin. Only the third was any comfort, and it is the one they will spend a year trying to design away.
 
-I was enjoying myself, which I mention because it bears on what followed.
+I was enjoying myself. That bears on what followed.
 
 "Mr Adebayo, I want to give you the version of this you will have to answer eventually, in a room with four people in it rather than in a hearing."
 

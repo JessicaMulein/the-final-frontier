@@ -7,7 +7,7 @@ motif_events: []
 hook: "The category passes with a line item attached, and the people it was built out of are cited in it without having been asked."
 words: 1262
 length_class: normal
-status: draft
+status: revised
 ---
 The funding letter was unconditional except for the condition in its first sentence.
 
@@ -17,13 +17,13 @@ Imogen Dalby had signed the letter herself.
 
 The emergency committee met at ten in the county records hall because its ordinary chamber did not have enough secure terminals. I sat at the end of the second row as a custody observer for the Trust, without speaking rights unless a deposited holding or its conditions were represented. Dalby sat at the committee table without a vote. The funding letter lay open in front of every member.
 
-There were two honest reasons to adopt the order. The receiving unit needed protected transport that day. The intake system needed staff who could obtain a person’s own account before a supervisor’s explanation replaced it. The temporary shield units had already filled their waiting lists. Money would change each of those facts before evening.
+There were two honest reasons to adopt the order. The receiving unit needed protected transport that day. The intake system needed staff who could obtain a person's own account before a supervisor's explanation replaced it. The temporary shield units had already filled their waiting lists. Money would change each of those facts before evening.
 
 The adversary field remained inside the order.
 
-Section two defined the category as effects “reasonably attributable to an unknown external adversary acting through person-specific signal pathways.” The phrase *reasonably attributable* had survived three drafts by moving from the findings section to the definition section, where nobody had to vote on whether the finding was true because adopting the term adopted the phrase beneath it.
+Section two defined the category as effects "reasonably attributable to an unknown external adversary acting through person-specific signal pathways." The phrase *reasonably attributable* had survived three drafts by moving from the findings section to the definition section, where nobody had to vote on whether the finding was true because adopting the term adopted the phrase beneath it.
 
-I sent the clerk a written objection before the chair opened discussion. The clerk marked it received and did not circulate it because observers’ submissions entered the record after the vote.
+I sent the clerk a written objection before the chair opened discussion. The clerk marked it received and did not circulate it because observers' submissions entered the record after the vote.
 
 Then I reached appendix four.
 
@@ -33,43 +33,43 @@ Her name was not in it, and that was not decency. Her conditions open her accoun
 
 So the trigger does not fire, and the holding stays shut, and the category gets its first case anyway.
 
-It did not quote her account. It could not; the Trust releases whole or not at all, and nobody had asked us for anything. What it cited was the public dispatch review, the accession date of a restricted holding, and the programme's classification of Case B as the earliest documented affected person. Then it said the depositor had supplied “corroborating first-person evidence under embargo.”
+It did not quote her account. It could not; the Trust releases whole or not at all, and nobody had asked us for anything. What it cited was the public dispatch review, the accession date of a restricted holding, and the programme's classification of Case B as the earliest documented affected person. Then it said the depositor had supplied "corroborating first-person evidence under embargo."
 
 That was false in a particularly durable way. Her account corroborates that she experienced certainty she could not source. It does not corroborate the external-adversary definition built around it, and her conditions say so in terms.
 
 I stood.
 
-The chair looked at the clerk, who looked at my observer credential, and then the chair said, “On custody only.”
+The chair looked at the clerk, who looked at my observer credential, and then the chair said, "On custody only."
 
-“The appendix misstates a Trust holding. The depositor’s conditions expressly reject use of the account to support either available origin theory. Corroborating evidence is not a permissible description.”
+"The appendix misstates a Trust holding. The depositor's conditions expressly reject use of the account to support either available origin theory. Corroborating evidence is not a permissible description."
 
 A committee member asked whether the holding contradicted the category.
 
-“It neither supports nor disproves it.”
+"It neither supports nor disproves it."
 
-“Then the category remains possible.”
+"Then the category remains possible."
 
-“Possible is not corroborated.”
+"Possible is not corroborated."
 
 Dalby had already found the sentence. She drew one line through *corroborating* and wrote *related* above it.
 
-“That correction is acceptable to the funding party,” she said.
+"That correction is acceptable to the funding party," she said.
 
-“It does not cure the citation.”
+"It does not cure the citation."
 
-“The accession date is public.”
+"The accession date is public."
 
-“The conditions are not decorative because the date is public.”
+"The conditions are not decorative because the date is public."
 
-“No one is opening the holding.”
+"No one is opening the holding."
 
-“No. You have written the appendix so that nobody has to.”
+"No. You have written the appendix so that nobody has to."
 
 She let that stand for a moment, which is what she does when a thing is true.
 
-“You are using the existence of an account as support for a definition the account refuses,” I said, “and you have de-identified it to precisely the depth that keeps her release condition asleep.”
+"You are using the existence of an account as support for a definition the account refuses," I said, "and you have de-identified it to precisely the depth that keeps her release condition asleep."
 
-Dalby put down the pen. “Mr Adebayo, if the Trust’s position is that no authority may acknowledge an embargoed deposit exists, then a public accession register cannot operate. If its position is that an authority may acknowledge the deposit but may not characterize its content, I agree with you and have removed the characterization.”
+Dalby put down the pen. "Mr Adebayo, if the Trust's position is that no authority may acknowledge an embargoed deposit exists, then a public accession register cannot operate. If its position is that an authority may acknowledge the deposit but may not characterize its content, I agree with you and have removed the characterization."
 
 She was right about the custody point and not about what the appendix did. The order needed a first case. The accession supplied one. Changing one adjective left the architecture intact.
 
@@ -77,27 +77,27 @@ I said that.
 
 The chair asked whether I was alleging breach of embargo.
 
-“No.”
+"No."
 
-“Misquotation?”
+"Misquotation?"
 
-“No quotation appears.”
+"No quotation appears."
 
-“Factual error in the date, identity or existence of the holding?”
+"Factual error in the date, identity or existence of the holding?"
 
-“No.”
+"No."
 
-“Then is the depositor identified in this document?”
+"Then is the depositor identified in this document?"
 
-“Not on the page.”
+"Not on the page."
 
-“Mr Adebayo, that is the question I am able to put to a vote.”
+"Mr Adebayo, that is the question I am able to put to a vote."
 
 What I alleged did not have a field. The record was being used accurately to create a conclusion it did not carry.
 
-The chair accepted Dalby’s amendment and closed observer intervention.
+The chair accepted Dalby's amendment and closed observer intervention.
 
-Discussion lasted eleven minutes. No one defended the external-adversary language as proven. They defended the need for one category across hospitals, transport operators and employers; the need for protected rooms; the need to pay people before asking them to collect better evidence. Each argument was good. None required the attribution in the definition. The attribution remained because the funding, powers and reporting scheme had been drafted around a category with an actor.
+Discussion lasted nine minutes. No one defended the external-adversary language as proven. They defended the need for one category across hospitals, transport operators and employers; the need for protected rooms; the need to pay people before asking them to collect better evidence. Each argument was good. None required the attribution in the definition. The attribution remained because the funding, powers and reporting scheme had been drafted around a category with an actor.
 
 Dalby did not argue again. She had acted before the room opened. Her letter made delay cost eight million at noon, and every member could name somebody the money would help before then.
 

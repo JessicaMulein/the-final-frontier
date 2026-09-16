@@ -5,15 +5,15 @@ pov_id: POV-SAFIYA
 timeline_id: TL-CODA-ACCOUNT
 motif_events: [MOT-KETTLE-01]
 hook: "She describes what the quiet did inside her own head while the kettle went on heating, and she reaches the end of it without being interrupted or corrected."
-words: 1440
+words: 1259
 length_class: normal
-status: exploratory
+status: revised
 ---
 Eleven miles, Mara. I checked on a paper map because I needed a distance that had not come out of a report. Eleven miles from my back door to the array fence. Closer to thirteen on foot because of the river.
 
 I am telling you in your front room. You gave me this chair. You have not interrupted.
 
-It was a Tuesday. The light was going but I had not drawn the curtains. A bus changed gear on the road behind the houses. The radiator clicked once and stopped. I had left a tea towel across the back of a chair, one end still damp, and the window over the sink held the room in a grey reflection.
+It was a Tuesday, and it was the small hours, and I want you to understand that there is nothing remarkable in that. I have not slept a whole night since I was fifty. I come down, I stand in my own kitchen in the dark, and I go back up when it has passed. I had not drawn the curtains because there was nobody awake to draw them against. A lorry went along the far road and changed gear at the hill. The pipes ticked once and stopped. I had left a tea towel across the back of a chair, one end still damp, and the window over the sink was black and held the room in it.
 
 I put the kettle on because my hands wanted an errand. It is old, with a whistle on the spout. Before it whistles, it makes a long low sound like a road beyond the houses. My mother and I had a word for the warm wet air above it in that last stretch. I said the real word wrong when I was four; she preferred my version and kept it. I am not going to say it to you. Not because I distrust you. Because the moment it is in your ear it is a sound two people can discuss, and it has never been that, and I have already lost one of these.
 
@@ -35,7 +35,7 @@ The kettle's road-sound continued. That is the detail that survived whole. Water
 
 Then the kettle whistled. I lifted it from the ring. My hand found the handle through the folded tea towel and I poured. Water struck the cup; steam touched my wrist; the tea darkened from the bottom. I did all of that in the right order. I stood with the kettle still tilted after the cup was full because the next thing my mind had always done was not there.
 
-At that hour I used to say one of our words to myself—the word for the particular way my mother said my name. Not a nickname. It named the difference between my name in any mouth and my name in hers. I had used it alone for nine years.
+Standing there like that, I used to say one of our words to myself—the word for the particular way my mother said my name. Not a nickname. It named the difference between my name in any mouth and my name in hers. I had used it alone for nine years.
 
 I began the familiar inward motion.
 
@@ -55,14 +55,6 @@ Two of us made those words over forty-five years. No recordings exist. We did no
 
 You did not reach for paper. You kept your hands in your lap. When I stopped, you waited long enough for the stop to be mine.
 
-Now I can ask for what I came to ask. You will answer the woman who knows exactly what is missing.
+The kettle in my house still makes the long low sound before it whistles. I still have the word for the air above it.
 
-I want you to put it back. One word. Her name for me. Use your machine and give me back the sound.
-
-I have thought about how to say that so it does not sound like a woman asking to have her mother returned to her, and there is no way, so let it sound like that. I am not asking for my mother. I am asking for four or five syllables that existed in one mouth and one ear and are now in neither.
-
-I know what you will say about verification. I have had nine months to arrive at it myself. You will say you have nothing to build it from and nothing to check it against, and that whatever came out would be yours wearing hers. I want you to say it anyway, out loud, with the equipment on and me in the chair, because I have been told no by people who were protecting themselves and I would like, once, to be told no by somebody who is telling me the truth.
-
-And if you can do it — if there is any version where the thing that arrives is hers and not yours — then yes. My yes is not confused. I have said it to myself at that counter every evening since February.
-
-That is the request. The kettle in my house still makes the long low sound before it whistles. I still have the word for the air above it. I would like the other one back, and I would like to hear you tell me whether that is possible before I decide what to do with the rest of this.
+That is the account. I have got to the end of it without being helped, which has not happened before, and I would like to sit for a minute before anything else is said.

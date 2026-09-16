@@ -7,7 +7,7 @@ motif_events: []
 hook: "Six accounts, six believers, no evidence, and a request to put one of them at the top of the page."
 words: 1223
 length_class: normal
-status: draft
+status: revised
 ---
 The request came on a pro forma with three boxes on it, and the third box was four lines deep and headed *Primary judgment, with confidence*.
 

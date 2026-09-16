@@ -1,0 +1,41 @@
+% PDF preamble for The Final Frontier (Pandoc + XeLaTeX).
+% Keep this mechanical: margins/widows/fonts only — no craft judgments.
+
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{emptypage}
+
+% Prefer fonts that ship with macOS / MacTeX; fall back silently via fontspec.
+\IfFontExistsTF{Palatino}{%
+  \setmainfont{Palatino}
+}{%
+  \IfFontExistsTF{TeX Gyre Pagella}{%
+    \setmainfont{TeX Gyre Pagella}
+  }{%
+    \setmainfont{Latin Modern Roman}
+  }%
+}
+
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0pt}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+% \coverimage is defined by book/build/cover-image.tex (empty = no cover page).
+\newcommand{\FrontierCoverPage}{%
+  \ifx\coverimage\empty
+  \else
+    \begin{titlepage}
+      \centering
+      \vspace*{0.5in}
+      \includegraphics[width=\textwidth,keepaspectratio]{\coverimage}
+      \vfill
+    \end{titlepage}
+    \clearpage
+  \fi
+}
+
+\AtBeginDocument{\FrontierCoverPage}

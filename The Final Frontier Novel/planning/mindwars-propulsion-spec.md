@@ -144,7 +144,7 @@ Dalby acts twice. Warmth once, at 62.
 |---:|---|:--:|:--:|---|
 | 86 | Julian | D | REF | Six believers, attributed. Permit one deliberation clock here; it is the cluster's only one. |
 | 87 | Mara | C | IMG | The intercepts do not parse. Resist the aphoristic coda under `DEC-020` clause 10; end on the unparseable thing itself. |
-| 88 | Nia | C | OBJ | The two institutional requests arrive by evening, unbidden, and are the ending. |
+| 88 | Nia | C | OBJ | ♥ Added 2026-09-15 to close the cluster's warmth gap, and derived from the chapter's own material rather than inserted: the Thursday standing meal at her brother's bench, the neighbour's 1974 mixer, the food defended on principle. The four-word sentence she will hold and not send is chosen there and is never disclosed to anyone, including the reader. The two institutional requests arrive by evening, unbidden, and are the ending. |
 | 89 | Julian | C | OTH | † The waiting costs a body. Name the person it costs. This is Julian's Mindwars cost as well as the operation's: he held the line correctly and somebody was hurt while he held it. $ |
 | 90 | Mara | C | IMG | Long-outlier. The title reversal. It must arrive as an image and a map, never as thesis; `DEC-017` and `DEC-020` clause 10 both bear on this chapter more than on any other. |
 | 91 | Nia | C | OTH | † An integrity fault clips a contribution, she refuses the half-sentence, and shouting works but not fast enough. The measurable loss of somebody's safety is the ending. ✂ |
@@ -202,16 +202,24 @@ Each obligation is satisfied in every cluster that holds chapters, per `DEC-018`
 | Body / jeopardy † | 64, 66, 69 | 70, 73, 77 | 81, 83, 84 | 89, 91 | 97, 98 | 105, 106, 108 | 110 |
 | Interrupted cut ✂ | 67 | — | 81 | 91 | — | 103 | — |
 | Dalby acts ◆ | 63, 67 | 76 | 78 | — | 94 | — | 111 |
-| Warmth ♥ | 62 | 75 | — | — | 100 | 102 | — |
+| Warmth ♥ | 62 | 75 | — | 88 | 100 | 102 | — |
 | Narrator cost $ | 65 | — | 80 | 89, 92 | — | — | — |
 | Non-institutional setting | 62, 64, 69 | 70, 75 | 81 | — | 97, 100 | 102, 105 | — |
 
-Two gaps are deliberate and must be closed during drafting rather than left: **86–93 has no warmth
-assignment** and **94–101 and 102–112 have no narrator-cost assignment**, because the null itself is the
-cost and assigning a second one there would compete with it. If a drafter finds warmth impossible in
-86–93, `DEC-018` clause 9 is a movement obligation rather than a cluster one and is already satisfied at
-62, 75, 100 and 102 — but a fifty-one-chapter movement with four warm scenes is thin, and one more
-somewhere in 86–93 is the better answer.
+Two gaps were recorded here as deliberate and requiring closure during drafting: **86–93 had no warmth
+assignment** and **94–101 and 102–112 have no narrator-cost assignment**, the second because the null
+itself is the cost and assigning a second one there would compete with it. The reasoning offered was that
+`DEC-018` clause 9 is a movement obligation rather than a cluster one and was already satisfied at 62, 75,
+100 and 102 — but that a fifty-one-chapter movement with four warm scenes is thin, and one more somewhere
+in 86–93 was the better answer.
+
+**Warmth gap closed 2026-09-15, at Chapter 88.** The movement was reviewed at completion and the gap was
+still open, so it was closed rather than left satisfied at movement level. The site was chosen because
+Chapter 88 already required it: the sentence Nia deliberately holds and does not send is four words long
+and about her brother, and the chapter as delivered had her choose it offstage. Putting that evening on
+the page supplies the cluster's warmth from the chapter's existing material and makes the withholding in
+test two cost something visible. Warmth now lands at 62, 75, 88, 100 and 102. The narrator-cost gap at
+94–112 stands, deliberately.
 
 ## Unassigned obligations that still need homes
 

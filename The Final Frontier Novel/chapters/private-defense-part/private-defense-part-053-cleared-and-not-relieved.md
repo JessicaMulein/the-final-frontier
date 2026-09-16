@@ -5,17 +5,17 @@ pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-RECORD-DEPOSITS
 motif_events: []
 hook: "The record clears her of the outcome, says nothing about whose certainty it was, and he watches the relief fail to arrive."
-words: 1411
+words: 1344
 length_class: normal
 status: revised
 ---
 The accession sheet has eight fields and I had filled in seven of them before I understood that the last one was going to take me the rest of the evening.
 
-Both items were in the safe and they are two accessions, not one. A sealed envelope from the witness, under conditions I read once at intake because I am required to and may not act on, quote, or take into account when describing the holding. Beside it, a certified copy of the county's dispatch review, issued to us by the records office under its own authority after eleven days and a form, deposited on the county's terms and not on hers. She wanted them under one reference and could not have it, for the reason that makes this office worth running: the review is not her document, and a man died in it.
+Both items were in the safe and they are two accessions, not one. A sealed envelope from the witness, under conditions I read once at intake because I am required to and may not act on, quote, or take into account when describing the holding. Beside it, a certified copy of the county's dispatch review, issued to us by the records office under its own authority after six weeks and a form, deposited on the county's terms and not on hers. She wanted them under one reference and could not have it, for the reason that makes this office worth running: the review is not her document, and a man died in it.
 
 What binds them is her condition and not our catalogue. Her account does not open unless the certified copy is released beside it. She cannot make the copy open. She can only refuse to be read alone, and she took that, having asked for more.
 
-Fields one to seven are the easy ones and they are the ones that make the archive worth having. Depositor, which for this pair is two. Date of deposit. Date of composition of each item. How the composition date is established independently of the depositor's word — for the review, the county's own closure date and internal file reference, both verifiable without her. Physical description. Custody chain since intake. Conditions summary, which for the sealed item reads *withheld; see conditions folder*, because the conditions are a document she wrote and not a fact about her that I get to compress.
+Fields one to seven are the easy ones and they are the ones that make the archive worth having: who deposited it, when, when each item was made, and how each of those dates is established without taking her word for it. For the sealed item the conditions summary reads *withheld; see conditions folder*, because the conditions are a document she wrote and not a fact about her that I get to compress.
 
 Field eight is *Subject*.
 
@@ -37,7 +37,7 @@ I went through its permitted headings for four hours.
 
 There is a heading for *emergency response — resource allocation*, which describes the routing and not the record. There is *clinical outcome review*, which describes the dead man and not the deposit. There is no heading in that vocabulary, and I have since checked two others, for a person who cannot locate the origin of a judgment she made. The nearest available term, added to the scheme in a supplementary list circulated in March, is *unauthorized signal effects*.
 
-The alternative was a local heading of my own drafting, and a local heading stays local. Only the scheme's authority terms go out in the quarterly accessions return that the county and national listings harvest; local headings and scope notes remain inside our own catalogue. A researcher who already knows this office exists, and writes to us, will find the accurate description. A researcher searching the listings for what happened to people like her will not, because the listings will not contain her.
+The alternative was a local heading of my own drafting, and a local heading stays local. Only the scheme's authority terms go out in the quarterly return that the county and national listings harvest. A researcher who already knows this office exists will find the accurate description. A researcher looking for what happened to people like her will not.
 
 Which makes the honest heading functionally the blank I had spent the spring learning to be afraid of. A blank in a record is not an absence. It is a space the next person to handle the file fills in, with the best available term, without ever knowing somebody before them left it empty on purpose.
 
@@ -51,7 +51,7 @@ A stranger reads a heading. A stranger reads a subject line, and a date, and mov
 
 The exoneration is what makes the attribution durable. A dispatcher who made a fatal error is a dispatcher who made an error. A dispatcher whose decision provably changed nothing, and who still cannot say why she made it, is a shape with a hole in the middle, and the hole is the part somebody will want to fill. The term they will reach for is now in my hand, in field eight, on the sheet.
 
-I could have left it out. I have written down, honestly, what leaving it out would have cost and I still think the answer is that it would have cost more. That is a professional judgment and it may be the right one and it is also, I notice, the same judgment I made about the funder's review path, and the county's information governance office, and the regulator's informal channel, and the December memorandum: the available action was outside what I could deliver, so I recorded the problem accurately and delivered the available thing.
+I could have left it out. I have written down, honestly, what leaving it out would have cost and I still think the answer is that it would have cost more. That is a professional judgment and it may be the right one, and it is also the fourth time this year I have made it: the action I wanted was outside what I could deliver, so I recorded the problem accurately and delivered the available thing instead.
 
 I built a place where a record cannot be softened. The first thing I put into it, in the only field that will ever be read, is a sentence I do not believe.
 
