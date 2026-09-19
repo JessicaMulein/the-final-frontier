@@ -105,6 +105,61 @@ manuscript **is** a collectible source. The design requires declaring what is no
 source root instead, which is why `audiobook-studio` now carries its own exclusion.
 Fixing the count means changing that design, not patching the collector.
 
+### I-11 — The series name is undecided, and deliberately so
+
+Not a defect. Recorded because the reasoning cost real research and would otherwise be
+rediscovered.
+
+The novel's own title is settled by `DEC-001` and is not in question. What is open is
+what a *series* would be called, if a sequel is ever published commercially.
+
+**"Mindwars" should not be the series brand.** It stays as in-world vocabulary for the
+war — that use is safe, it is not on the cover, and it is load-bearing in the songs that
+`DEC-014` makes binding canon, so renaming it would cascade for no benefit. But as a
+series title the ground is packed, and series titles are the category that can actually
+be registered as trademarks:
+
+| work | author | note |
+| --- | --- | --- |
+| *The MindWar Trilogy* | Andrew Klavan | 2014, YA cyber-thriller, an actual series |
+| *MindWar* | Douglas E. Richards | 2016, Nick Hall; the series is active and likely to continue |
+| *The Mind Wars* trilogy | Eldon Cene / Carl Nelson | |
+| *Mind Wars* | Peter Thompson | |
+
+Adjacent but not a collision: Alex Hughes writes *Mindspace Investigations*, and her
+in-world conflict is the Tech Wars, not Mindwars. Same neighbourhood thematically —
+telepaths, an institution policing them — no shared name.
+
+**The five song titles are all unavailable for a different reason.** *The Synaptic
+Frontier*, *Faraday*, *The Final Frontier*, *The Radius* and *Case Zero* are a
+progression, and this one novel compresses all five. Naming the series after any of
+them names a part for the whole, and after the first one it names ground already
+covered.
+
+**A register constraint most series names would violate.** The book is built on the
+`Refused_Swell` principle and resolves through restraint rather than triumph. A
+hard-hitting series name would misrepresent it and draw readers expecting a thriller.
+What fits is quiet on the surface and brutal underneath. `Clean Silence` is the
+strongest candidate on that test: concrete, ironic, already a refrain in the book at
+chapters 18 and 107, and it names an ongoing condition rather than a finished event,
+which is what a series occupies.
+
+**No decision is needed yet.** A registered series mark is franchise armour, not a
+prerequisite for publishing or selling a sequel: copyright in a sequel is automatic,
+nothing in this repository's licence constrains its sale, and NonCommercial already
+reserves the commercial lane. A sequel can also reference the world descriptively —
+"a novel of the Mindwars" — which carries far less exposure than branding a series on
+it. Decide when book two's subject is known, and search properly then: USPTO plus
+Books in Print, not a web search.
+
+On the novel's own title: a title carries no copyright, so there is nothing for anyone
+to assert on that basis. Any exposure from "Space: the final frontier" would be a
+trademark question about likelihood of confusion, and this novel shares no characters,
+setting or universe with that work. The larger practical cost is discoverability, not
+law: the phrase is buried under decades of Star Trek, which is a headwind for a book
+that is free and needs to be found. That is an argument for a distinctive series name
+doing that work later, not for renaming the book.
+
 ### I-10 — The narrator's timbre steps at every chapter boundary (accepted)
 
 A chapter ends measurably duller than it begins — spectral centroid falls 84.8 Hz on
