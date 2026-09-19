@@ -211,7 +211,21 @@ def match_levels(segments: list[np.ndarray], rate: int, limit_db: float = 2.0):
 
 
 def verify(audio: np.ndarray, rate: int, expected: str, model: str) -> dict:
-    """Whole-chapter ASR check, reusing the existing scoring."""
+    """Whole-chapter ASR check, reusing the existing scoring.
+
+    Also returns the transcriber's timestamped segments under `asr_segments`.
+
+    Those timings were being computed and thrown away on every chapter. They are the
+    raw material for synchronised read-along, and recomputing them later would mean
+    re-transcribing roughly fourteen hours of audio for data this pass already has.
+    They are recorded as *evidence*, not as authority: the renderer knows where each
+    paragraph sits to the sample, so assembly arithmetic remains the source of truth
+    for structure and these bound any later sentence-level alignment inside a
+    paragraph window.
+
+    They describe the waveform handed to this function, which is the delivered file
+    including the announcement and every inter-paragraph gap.
+    """
     import tempfile
 
     import mlx_whisper
@@ -231,7 +245,16 @@ def verify(audio: np.ndarray, rate: int, expected: str, model: str) -> dict:
         )
     finally:
         temp.unlink(missing_ok=True)
-    return assess_transcript(expected, (result.get("text") or "").strip())
+    assessment = assess_transcript(expected, (result.get("text") or "").strip())
+    assessment["asr_segments"] = [
+        {
+            "start": round(float(segment.get("start", 0.0)), 3),
+            "end": round(float(segment.get("end", 0.0)), 3),
+            "text": str(segment.get("text", "")).strip(),
+        }
+        for segment in (result.get("segments") or [])
+    ]
+    return assessment
 
 
 def main() -> None:
@@ -292,6 +315,23 @@ def main() -> None:
         action="store_true",
         help="also write the discarded anchor waveform, for checking that it is "
         "byte-identical across chapters",
+    )
+    p.add_argument(
+        "--announcement",
+        type=Path,
+        default=None,
+        help="spoken chapter announcement to place at the head of this chapter's "
+        "audio. For a listener who cannot see a player's chapter list, this is the "
+        "navigation: it states where they are without them touching the device. It "
+        "goes inside the chapter rather than becoming its own track, so a player's "
+        "chapter list stays one meaningful entry per chapter instead of 256 "
+        "alternating ones, which is slower to move through with a screen reader.",
+    )
+    p.add_argument(
+        "--announcement-gap-ms",
+        type=float,
+        default=900.0,
+        help="silence between the announcement and the first paragraph",
     )
     args = p.parse_args()
 
@@ -425,7 +465,41 @@ def main() -> None:
     levelled, gains, target = match_levels(segments, rate)
 
     gap_samples = int(rate * args.paragraph_gap_ms / 1000)
-    pieces: list[np.ndarray] = []
+
+    # The announcement is level-matched to the prose and followed by the same shaped
+    # room tone, so the signpost neither arrives louder nor sits against digital
+    # silence. Its duration is recorded because it displaces every paragraph offset,
+    # and read-along must begin after it: it is navigation, not manuscript text.
+    lead: list[np.ndarray] = []
+    announcement_seconds = 0.0
+    if args.announcement is not None:
+        intro, intro_rate = sf.read(str(args.announcement), always_2d=False)
+        intro = np.asarray(intro, dtype=np.float32)
+        if intro.ndim > 1:
+            intro = intro.mean(axis=1)
+        if int(intro_rate) != rate:
+            raise SystemExit(
+                f"announcement is {intro_rate} Hz but the chapter is {rate} Hz; "
+                "resampling the narrator's own voice is not acceptable here"
+            )
+        intro_level = active_rms(intro, rate)
+        if intro_level > 0 and target > 0:
+            intro = intro * (target / intro_level)
+            intro_peak = float(np.abs(intro).max())
+            if intro_peak > 0.99:
+                intro = intro * (0.99 / intro_peak)
+        lead.append(intro.astype(np.float32))
+        intro_gap = int(rate * args.announcement_gap_ms / 1000)
+        if intro_gap > 0:
+            lead.append(comfort_gap(levelled, intro_gap, rate, seed=999))
+        announcement_seconds = sum(piece.size for piece in lead) / rate
+        print(
+            f"  announcement {intro.size / rate:.2f}s + "
+            f"{args.announcement_gap_ms:.0f}ms gap; prose starts at "
+            f"{announcement_seconds:.2f}s"
+        )
+
+    pieces: list[np.ndarray] = list(lead)
     for index, segment in enumerate(levelled):
         pieces.append(segment)
         if index < len(levelled) - 1 and gap_samples > 0:
@@ -457,7 +531,7 @@ def main() -> None:
     # They come from assembly arithmetic rather than recognition, so they carry no
     # ASR error and bound any later sentence-level alignment inside a known window.
     gap_seconds = gap_samples / rate
-    cursor = 0.0
+    cursor = announcement_seconds
     for index, segment in enumerate(levelled):
         measured = pace.measure(segment if rate == 24000 else _to24k(segment, rate))
         records[index].update(
@@ -510,6 +584,13 @@ def main() -> None:
             "render_seconds": round(render_seconds, 1),
             "paragraph_gap_seconds": round(gap_seconds, 6),
             "segment_offsets_include_gaps": True,
+            "announcement_path": (
+                str(args.announcement) if args.announcement is not None else None
+            ),
+            # Where the manuscript actually begins. Read-along alignment must start
+            # here: everything before it is navigation, not prose, and syncing it
+            # against chapter text would put the highlight a sentence ahead.
+            "prose_starts_at_seconds": round(announcement_seconds, 6),
         },
     }
     if live:
@@ -528,7 +609,17 @@ def main() -> None:
 
     if not args.no_verify:
         print("\nverifying whole chapter against the manuscript", flush=True)
-        quality = verify(joined, rate, spoken, args.verify_model)
+        # Verify the prose region only. The announcement speaks words that are not in
+        # the manuscript, so transcribing it would charge the chapter WER for a
+        # signpost and report an added span that is working as intended. Segment
+        # timings are shifted back afterwards so they stay relative to the delivered
+        # file rather than to the slice that was transcribed.
+        prose_offset_samples = int(round(announcement_seconds * rate))
+        quality = verify(joined[prose_offset_samples:], rate, spoken, args.verify_model)
+        if announcement_seconds > 0:
+            for segment in quality.get("asr_segments", []):
+                segment["start"] = round(segment["start"] + announcement_seconds, 3)
+                segment["end"] = round(segment["end"] + announcement_seconds, 3)
         manifest["assembly"]["chapter_quality"] = {
             k: v for k, v in quality.items() if k != "transcript"
         }

@@ -195,7 +195,39 @@ def build_epub(
         ]
     )
     subprocess.run(args, check=True, cwd=str(REPO_ROOT))
+    _add_accessibility_metadata(output)
     return output
+
+
+def _add_accessibility_metadata(epub_path: Path) -> None:
+    """Inject EPUB Accessibility 1.1 metadata, in place of the pandoc output.
+
+    Runs as part of every EPUB build rather than as a separate step someone has to
+    remember. Reading systems, libraries and stores use this metadata to tell a reader
+    whether a book is usable before they acquire it, and screen-reader users filter on
+    it, so an EPUB without it is indistinguishable from an unusable one.
+
+    Pandoc cannot emit these properties: they are package-document `<meta>` entries and
+    `--epub-metadata` takes Dublin Core. Hence a post-processing pass.
+    """
+    script = STYLE_DIR / "epub_accessibility.py"
+    if not script.is_file():
+        raise SystemExit(f"missing accessibility post-processor: {script}")
+    staged = epub_path.with_name(epub_path.stem + ".a11y-staging.epub")
+    subprocess.run(
+        [
+            sys.executable,
+            str(script),
+            str(epub_path),
+            "--output",
+            str(staged),
+            "--certified-by",
+            "Jessica Mulein (self-assessed)",
+        ],
+        check=True,
+        cwd=str(REPO_ROOT),
+    )
+    staged.replace(epub_path)
 
 
 def build_pdf(

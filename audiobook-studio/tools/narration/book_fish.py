@@ -83,6 +83,35 @@ def main() -> None:
     p.add_argument("--first", type=int, default=1)
     p.add_argument("--last", type=int, default=128)
     p.add_argument("--reference", default="hifitts-clean-92")
+    # The settled production spec. Defaults are the decided values rather than
+    # opt-ins, so a full run cannot quietly omit them: a book rendered without the
+    # anchor, without a fixed seed, or without spoken announcements is a different
+    # book, and the last of those removes a blind listener's only way to know where
+    # they are without touching the device.
+    p.add_argument(
+        "--seed",
+        type=int,
+        default=70,
+        help="MLX RNG seed reset before each chapter; Fish exposes no seed argument",
+    )
+    p.add_argument(
+        "--no-anchor",
+        action="store_true",
+        help="skip the deterministic discarded lead-in. Off by default: anchoring was "
+        "chosen blind and measurably narrows chapter-to-chapter pitch drift",
+    )
+    p.add_argument(
+        "--announce-dir",
+        type=Path,
+        default=HERE / "out/announcements",
+        help="rendered chapter announcements, one per chapter",
+    )
+    p.add_argument(
+        "--no-announcements",
+        action="store_true",
+        help="render without spoken chapter announcements. Off by default: they are "
+        "primary navigation for a listener who cannot see a chapter list",
+    )
     p.add_argument(
         "--retries",
         type=int,
@@ -95,6 +124,35 @@ def main() -> None:
     chapters = [(n, path) for n, path in inventory() if args.first <= n <= args.last]
     print(f"{len(chapters)} chapters in range {args.first}-{args.last}")
     args.out_dir.mkdir(parents=True, exist_ok=True)
+
+    # Resolve every announcement before rendering anything. Discovering a missing one
+    # nineteen hours into a twenty-one hour run, having already written chapters that
+    # silently lack navigation, is the failure this prevents.
+    announcements: dict[int, Path] = {}
+    if not args.no_announcements:
+        missing = []
+        for number, _ in chapters:
+            found = sorted(args.announce_dir.glob(f"chapter-{number:03d}-*.wav"))
+            if found:
+                announcements[number] = found[0]
+            else:
+                missing.append(number)
+        if missing:
+            raise SystemExit(
+                f"no announcement for chapter(s) {_ranges(missing)} in "
+                f"{args.announce_dir}\n"
+                f"render them first:  python render_announcement.py "
+                f"{args.first} .. {args.last} --style number-title\n"
+                f"or pass --no-announcements to render prose only."
+            )
+        print(f"  {len(announcements)} announcements resolved")
+    else:
+        print("  announcements DISABLED; chapters will carry no spoken navigation")
+
+    print(
+        f"  seed {args.seed}, anchor {'off' if args.no_anchor else 'on'}, "
+        f"reference {args.reference}"
+    )
 
     pending, skipped = [], []
     for number, path in chapters:
@@ -129,18 +187,26 @@ def main() -> None:
             flush=True,
         )
 
+        command = [
+            sys.executable,
+            str(HERE / "render_chapter_fish.py"),
+            str(path),
+            "--output",
+            str(wav),
+            "--reference",
+            args.reference,
+            "--seed",
+            str(args.seed),
+        ]
+        if not args.no_anchor:
+            command.append("--anchor")
+        if number in announcements:
+            command += ["--announcement", str(announcements[number])]
+
         outcome = None
         for attempt in range(args.retries + 1):
             result = subprocess.run(
-                [
-                    sys.executable,
-                    str(HERE / "render_chapter_fish.py"),
-                    str(path),
-                    "--output",
-                    str(wav),
-                    "--reference",
-                    args.reference,
-                ],
+                command,
                 cwd=HERE,
                 capture_output=True,
                 text=True,
