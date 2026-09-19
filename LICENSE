@@ -101,8 +101,14 @@ Permission for any of the above can be requested. Ask.
 Covers:
 
     .tools/                     build and manuscript verification
-    audiobook-studio/                 narration pipeline, excluding tools/vendor/
+    audiobook-studio/           narration pipeline, excluding tools/vendor/
+                                and excluding the third-party speech corpora
+                                under assets/ listed in section 4
     any other build or verification scripts in this repository
+
+The MIT grant covers the software and its documentation. It does not reach the
+speech-corpus audio stored under audiobook-studio/assets/, which is third-party
+material that is not the copyright holder's to relicense. See section 4.
 
 MIT License
 
@@ -134,10 +140,76 @@ the songs, the cover art, or the recordings.
 4. THIRD-PARTY MATERIAL
 -------------------------------------------------------------------------------
 
-Code vendored under audiobook-studio/tools/vendor/ is not covered by any section
-above. Each vendored project carries its own license and copyright holders; see
-the LICENSE file within each directory. Nothing in this file grants, restricts,
-or alters any right in that material.
+Nothing in sections 1 through 3 grants, restricts, or alters any right in the
+material below. It is included here under its own terms, and those terms travel
+with it.
+
+4.1 VENDORED CODE
+
+    audiobook-studio/tools/vendor/
+
+    Each vendored project carries its own license and copyright holders; see the
+    LICENSE file within each directory.
+
+4.2 SPEECH CORPORA
+
+Reference audio used to clone the narrator's voice, and legacy audition material
+retained so earlier results stay reproducible. This is recorded audio of real
+people from public research corpora. It is not the copyright holder's work and is
+not offered under section 3.
+
+Every item below is MODIFIED from its source: clips were selected and
+concatenated, silences trimmed or compacted, levels normalised, and in some cases
+excerpts spliced. Both licenses involved require that modification be stated, so
+it is stated here and the per-file processing steps are recorded alongside the
+audio in the accompanying .json and PROVENANCE.md files.
+
+    audiobook-studio/assets/voice-refs/hifitts/
+
+    Hi-Fi Multi-Speaker English TTS Dataset (Hi-Fi TTS), OpenSLR SLR109.
+    https://openslr.org/109/
+    Licensed CC BY 4.0 -- https://creativecommons.org/licenses/by/4.0/
+    Built from public-domain LibriVox audiobooks and Project Gutenberg texts.
+
+        Bakhturina, E., Lavrukhin, V., Ginsburg, B. and Zhang, Y.
+        "Hi-Fi Multi-Speaker English TTS Dataset", 2021. arXiv:2104.01497
+
+    This is the voice of the audiobook. Speaker 92, `clean` subset. Modified:
+    selected clips concatenated to about 25 seconds and peak-normalised. See
+    voice-refs/hifitts/PROVENANCE.md for the sha256, the exact selection, and an
+    open question about speaker consent that the dataset's authors raise.
+
+    audiobook-studio/assets/voice-refs/emns-refs/
+    audiobook-studio/assets/provenance/qvoice-legacy/qvoice/frontier-british-female-*.wav
+
+    Emotive Narrative Storytelling (EMNS) corpus, OpenSLR SLR136.
+    https://openslr.org/136/
+    Licensed Apache 2.0 -- https://www.apache.org/licenses/LICENSE-2.0
+
+        Kari, N., Xiaosong, Y. and Jian, Z. "EMNS /Imz/ Corpus: An emotive
+        single-speaker dataset for narrative storytelling in games, television
+        and graphic novels", 2023.
+
+    Rejected as the narrator's voice after the listener identified audible hiss.
+    Retained as audition evidence. Modified: excerpts spliced with compacted
+    gaps, edge-trimmed and RMS-normalised; the qvoice-legacy copies are further
+    denoised. Steps recorded in the adjacent .json files.
+
+    audiobook-studio/assets/voice-refs/common-voice-refs/
+
+    Mozilla Common Voice, released under CC0 1.0 Universal.
+    https://commonvoice.mozilla.org/
+
+    Rejected as the narrator's voice for being too narrow in pitch range.
+    Retained as audition evidence. Modified: trimmed and tightened. CC0 asks for
+    no attribution; it is given for traceability rather than obligation. The
+    specific corpus release and clip identifiers were not recorded at the time,
+    which is a gap in this project's provenance rather than in the source.
+
+A note on why these are kept at all: a voice reference is the one input that
+cannot be regenerated from a seed. Deleting the rejected candidates would make
+the audition record unverifiable, and deleting the chosen one would make the
+audiobook's narrator irreproducible.
 
 
 -------------------------------------------------------------------------------
