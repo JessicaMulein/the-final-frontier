@@ -1,0 +1,180 @@
+{
+  "corpus": "EMNS (Emotive Narrative Storytelling), OpenSLR SLR136",
+  "corpus_url": "https://openslr.org/136/",
+  "license": "Apache 2.0",
+  "attribution": "Kari Noriy, Xiaosong Yang, Jian Zhang \u2014 EMNS /Imz/ Corpus: An emotive single-speaker dataset for narrative storytelling in games, television and graphic novels (2023)",
+  "speaker": "single female British English speaker, 20s",
+  "source_format": "Opus in WebM, 48 kHz mono (lossy)",
+  "processing": "ffmpeg decode to 24 kHz mono f32 -> RMS edge trim -> internal pauses >380 ms compacted to 280 ms -> RMS normalize to -20 dBFS -> splice with 320 ms gap -> raised-cosine fades -> PCM_16",
+  "duration_note": "Durations are exact decoded sample counts. The source WebM containers over-report duration and must not be trusted.",
+  "refs": [
+    {
+      "ref": "emns-neutral-l0-599.wav",
+      "seconds": 7.997,
+      "speech_seconds": 6.16,
+      "dead_air_removed_seconds": 1.01,
+      "sample_rate": 24000,
+      "emotion": "Neutral",
+      "levels": [
+        0
+      ],
+      "splice_gap_ms": 0,
+      "members": [
+        {
+          "id": "599",
+          "source": "recorded_audio_koy6aUI.webm",
+          "seconds": 9.007,
+          "level": 0,
+          "text": "The band enjoyed much regional and some national success, and released three albums.",
+          "created": "2022-07-21 11:42:56.490339"
+        }
+      ]
+    },
+    {
+      "ref": "emns-disgust-l4-570.wav",
+      "seconds": 7.978,
+      "speech_seconds": 6.85,
+      "dead_air_removed_seconds": 0.55,
+      "sample_rate": 24000,
+      "emotion": "Disgust",
+      "levels": [
+        4
+      ],
+      "splice_gap_ms": 0,
+      "members": [
+        {
+          "id": "570",
+          "source": "recorded_audio_DXUtVqD.webm",
+          "seconds": 8.527,
+          "level": 4,
+          "text": "Computer desks are typically mass-produced and require some self-assembly.",
+          "created": "2022-07-21 11:17:13.583777"
+        }
+      ]
+    },
+    {
+      "ref": "emns-neutral-splice-599-524.wav",
+      "seconds": 14.794,
+      "speech_seconds": 12.52,
+      "dead_air_removed_seconds": 1.01,
+      "sample_rate": 24000,
+      "emotion": "Neutral",
+      "levels": [
+        0,
+        0
+      ],
+      "splice_gap_ms": 320.0,
+      "members": [
+        {
+          "id": "599",
+          "source": "recorded_audio_koy6aUI.webm",
+          "seconds": 9.007,
+          "level": 0,
+          "text": "The band enjoyed much regional and some national success, and released three albums.",
+          "created": "2022-07-21 11:42:56.490339"
+        },
+        {
+          "id": "524",
+          "source": "recorded_audio_4lFriPj.webm",
+          "seconds": 6.478,
+          "level": 0,
+          "text": "The explosion raises a large amount of moisture-laden air from lower altitudes.",
+          "created": "2022-07-19 15:04:19.093442"
+        }
+      ]
+    },
+    {
+      "ref": "emns-sarcastic-splice-387-344.wav",
+      "seconds": 16.297,
+      "speech_seconds": 12.71,
+      "dead_air_removed_seconds": 1.72,
+      "sample_rate": 24000,
+      "emotion": "Sarcastic",
+      "levels": [
+        2,
+        3
+      ],
+      "splice_gap_ms": 320.0,
+      "members": [
+        {
+          "id": "387",
+          "source": "recorded_audio_1l2mrE9.webm",
+          "seconds": 7.857,
+          "level": 2,
+          "text": "Saint Thomas also has many factories for food processing and electrical equipment.",
+          "created": "2022-07-16 15:36:59.649796"
+        },
+        {
+          "id": "344",
+          "source": "recorded_audio_lLVQxcz.webm",
+          "seconds": 9.848,
+          "level": 3,
+          "text": "Young trees display upright oval growth, but the plants spread and mound with age.",
+          "created": "2022-07-14 12:54:26.146642"
+        }
+      ]
+    },
+    {
+      "ref": "emns-disgust-splice-570-410.wav",
+      "seconds": 17.262,
+      "speech_seconds": 12.88,
+      "dead_air_removed_seconds": 0.55,
+      "sample_rate": 24000,
+      "emotion": "Disgust",
+      "levels": [
+        4,
+        4
+      ],
+      "splice_gap_ms": 320.0,
+      "members": [
+        {
+          "id": "570",
+          "source": "recorded_audio_DXUtVqD.webm",
+          "seconds": 8.527,
+          "level": 4,
+          "text": "Computer desks are typically mass-produced and require some self-assembly.",
+          "created": "2022-07-21 11:17:13.583777"
+        },
+        {
+          "id": "410",
+          "source": "recorded_audio_d9lKR5z.webm",
+          "seconds": 8.965,
+          "level": 4,
+          "text": "It was named for Jefferson County pioneer, Joseph Barnett.",
+          "created": "2022-07-18 14:11:49.348270"
+        }
+      ]
+    },
+    {
+      "ref": "emns-mixed-splice-599-387.wav",
+      "seconds": 15.624,
+      "speech_seconds": 12.1,
+      "dead_air_removed_seconds": 1.56,
+      "sample_rate": 24000,
+      "emotion": "Neutral",
+      "levels": [
+        0,
+        2
+      ],
+      "splice_gap_ms": 320.0,
+      "members": [
+        {
+          "id": "599",
+          "source": "recorded_audio_koy6aUI.webm",
+          "seconds": 9.007,
+          "level": 0,
+          "text": "The band enjoyed much regional and some national success, and released three albums.",
+          "created": "2022-07-21 11:42:56.490339"
+        },
+        {
+          "id": "387",
+          "source": "recorded_audio_1l2mrE9.webm",
+          "seconds": 7.857,
+          "level": 2,
+          "text": "Saint Thomas also has many factories for food processing and electrical equipment.",
+          "created": "2022-07-16 15:36:59.649796"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "frontier-qvoice-uks03-v1",
+  "status": "locked-after-human-chapter1-approval",
+  "approval_note": "Excellent overall; slightly less emotive than ideal, but do not change the recipe.",
+  "approved_pilot": {
+    "path": "chapter1-pilot/005-chapter-001-qvoice-uks03.wav",
+    "sha256": "37997905acf8f78a717e7247eb82848882048d6a98103381b2a1d6e6dfeef311",
+    "duration_seconds": 486.086,
+    "note": "Approved by ear before the fourteen-overuse editorial pass; production chapter 1 must be regenerated from revised text."
+  },
+  "runtime": {
+    "repository": "https://github.com/gabriele-mastrapasqua/qwen3-tts",
+    "source_revision": "e391ec5",
+    "local_patch": "Makefile Apple GNU Make 3.81 # parsing fix",
+    "binary_sha256": "909eb124d500290b9045f21a79d3eac22e30edad155b0b15d30ea3b6c4d88463",
+    "backend": "metal-single-stream",
+    "forbidden_modes": ["server batching", "QWEN_METAL_BATCH_MMA"]
+  },
+  "model": {
+    "repo": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+    "revision": "0c0e3051f131929182e2c023b9537f8b1c68adfe",
+    "license": "Apache-2.0"
+  },
+  "voice": {
+    "profile": "frontier-uk-s03-17b.qvoice",
+    "sha256": "118e260a32255c7b9ecdc3029fdaf59200d67122197bf1cd56051a0aef584a6f",
+    "source": "uk-southern-female-03-tight.wav",
+    "source_seconds": 4.812,
+    "language": "English"
+  },
+  "generation": {
+    "instruction": "Read slowly, clearly, and naturally. Maintain a measured literary pace without sounding like an announcer.",
+    "temperature": 0.5,
+    "top_k": 50,
+    "top_p": 1.0,
+    "repetition_penalty": 1.05,
+    "rate": 0.92,
+    "primary_seed": 70,
+    "fallback_attempts": 6,
+    "max_tokens_per_chunk": 1800,
+    "max_chunk_chars": 1000,
+    "pause_ms": 650
+  },
+  "qa": {
+    "model": "mlx-community/whisper-large-v3-turbo",
+    "condition_on_previous_text": false,
+    "max_wer": 0.12,
+    "coverage_range": [0.94, 1.06],
+    "max_contiguous_expected_gap_exclusive": 8,
+    "max_contiguous_added_span_exclusive": 8,
+    "require_chapter_wide_pass": true
+  },
+  "assembly": {
+    "gain_matching": "active RMS median, capped +/-2 dB",
+    "declick": "conservative only",
+    "inter_chunk_gap": "650ms spectrally shaped from accepted low-energy frames",
+    "record_chunk_boundaries": true
+  }
+}

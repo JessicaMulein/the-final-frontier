@@ -1,0 +1,134 @@
+[
+  {
+    "label": "dedication",
+    "chunks": 2,
+    "seconds": 16.25,
+    "worst_chunk_wer": 0.0,
+    "rerolls": 0,
+    "clicks_repaired": 0,
+    "loudness_spread_db": 1.26,
+    "unresolved_chunks": [],
+    "render_seconds": 5.8,
+    "realtime_factor": 2.82
+  },
+  {
+    "label": "chapter 1",
+    "chunks": 28,
+    "seconds": 458.68,
+    "worst_chunk_wer": 0.1429,
+    "rerolls": 1,
+    "clicks_repaired": 11,
+    "loudness_spread_db": 6.36,
+    "unresolved_chunks": [],
+    "render_seconds": 123.0,
+    "realtime_factor": 3.73
+  },
+  {
+    "label": "chapter 2",
+    "chunks": 23,
+    "seconds": 372.12,
+    "worst_chunk_wer": 0.1923,
+    "rerolls": 0,
+    "clicks_repaired": 1,
+    "loudness_spread_db": 7.54,
+    "unresolved_chunks": [],
+    "render_seconds": 93.8,
+    "realtime_factor": 3.97
+  },
+  {
+    "label": "chapter 3",
+    "chunks": 29,
+    "seconds": 452.86,
+    "worst_chunk_wer": 0.4286,
+    "rerolls": 3,
+    "clicks_repaired": 5,
+    "loudness_spread_db": 5.91,
+    "unresolved_chunks": [
+      {
+        "chunk": 11,
+        "wer": 0.4286,
+        "text": "Not seven point nine. Not eight point two. Eight seconds, inside the clock's tolerance."
+      }
+    ],
+    "render_seconds": 119.9,
+    "realtime_factor": 3.78
+  },
+  {
+    "label": "chapter 4",
+    "chunks": 23,
+    "seconds": 366.39,
+    "worst_chunk_wer": 0.1579,
+    "rerolls": 0,
+    "clicks_repaired": 12,
+    "loudness_spread_db": 6.29,
+    "unresolved_chunks": [],
+    "render_seconds": 89.7,
+    "realtime_factor": 4.08
+  },
+  {
+    "label": "chapter 5",
+    "chunks": 34,
+    "seconds": 452.46,
+    "worst_chunk_wer": 0.1481,
+    "rerolls": 0,
+    "clicks_repaired": 19,
+    "loudness_spread_db": 7.23,
+    "unresolved_chunks": [],
+    "render_seconds": 107.8,
+    "realtime_factor": 4.2
+  },
+  {
+    "label": "chapter 6",
+    "chunks": 35,
+    "seconds": 482.62,
+    "worst_chunk_wer": 0.0625,
+    "rerolls": 0,
+    "clicks_repaired": 14,
+    "loudness_spread_db": 5.36,
+    "unresolved_chunks": [],
+    "render_seconds": 114.3,
+    "realtime_factor": 4.22
+  },
+  {
+    "label": "chapter 7",
+    "chunks": 30,
+    "seconds": 343.81,
+    "worst_chunk_wer": 0.2727,
+    "rerolls": 4,
+    "clicks_repaired": 2,
+    "loudness_spread_db": 6.45,
+    "unresolved_chunks": [
+      {
+        "chunk": 19,
+        "wer": 0.2727,
+        "text": "At eleven thirty-seven, support closed 4716 as *unable to reproduce*."
+      }
+    ],
+    "render_seconds": 86.3,
+    "realtime_factor": 3.98
+  },
+  {
+    "label": "chapter 8",
+    "chunks": 38,
+    "seconds": 540.35,
+    "worst_chunk_wer": 0.0732,
+    "rerolls": 0,
+    "clicks_repaired": 4,
+    "loudness_spread_db": 11.53,
+    "unresolved_chunks": [],
+    "render_seconds": 129.0,
+    "realtime_factor": 4.19
+  },
+  {
+    "label": "chapter 9",
+    "chunks": 34,
+    "seconds": 414.56,
+    "worst_chunk_wer": 0.1667,
+    "rerolls": 0,
+    "clicks_repaired": 4,
+    "loudness_spread_db": 11.45,
+    "unresolved_chunks": [],
+    "render_seconds": 98.8,
+    "realtime_factor": 4.19
+  }
+]

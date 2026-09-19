@@ -1,0 +1,159 @@
+{
+  "note": "Each entry is a defect a listener confirmed that every automated gate of the time passed. A new gate must flag the defect and must not flag its clean sibling.",
+  "fixtures": [
+    {
+      "id": "intra_word_stutter",
+      "source": "chapter2-v2/006-chapter-002-v2.wav",
+      "start": 205.0,
+      "end": 211.5,
+      "heard": "audible doubling on the 'four' of 'six fifty-four'",
+      "reported_at": "3:29-3:30",
+      "passed_gates": [
+        "chapter WER 0.019",
+        "coverage 0.9964",
+        "unit boundary residue_peak 0.0",
+        "loop/stall gate",
+        "pace scoring preferred this take over its rerolls"
+      ],
+      "why_invisible": "Whisper normalises the stutter into a single correct '.54' token, so no text metric can see it",
+      "file": "intra_word_stutter.wav",
+      "seconds": 6.5,
+      "sample_rate": 24000,
+      "clean_sibling": {
+        "file": "intra_word_stutter__clean.wav",
+        "seconds": 6.5,
+        "note": "seed 71 reroll of the same words",
+        "source": "chapter2-v4/006-chapter-002-v4.wav"
+      }
+    },
+    {
+      "id": "truncated_opening_numeric",
+      "source": "chapter1-v2/005-chapter-001-v2.wav",
+      "start": 201.0,
+      "end": 214.0,
+      "heard": "unit begins at 'per second'; 'Two point one' is missing",
+      "reported_at": "3:25-3:28",
+      "passed_gates": [
+        "chapter WER 0.023",
+        "coverage 0.994",
+        "residue_peak 0.0"
+      ],
+      "why_invisible": "the boundary search took the next exact ASR word match; expected 'two point one' was heard as '2 1', a replace opcode the aligner skipped over",
+      "file": "truncated_opening_numeric.wav",
+      "seconds": 13.0,
+      "sample_rate": 24000,
+      "clean_sibling": {
+        "file": "truncated_opening_numeric__clean.wav",
+        "seconds": 13.0,
+        "note": "after the align_new_text_boundary fix",
+        "source": "chapter1-v3/005-chapter-001-v3.wav"
+      }
+    },
+    {
+      "id": "truncated_opening_name",
+      "source": "chapter1-v2/005-chapter-001-v2.wav",
+      "start": 322.0,
+      "end": 334.0,
+      "heard": "unit begins at 'wanted'; the name 'Ravi' is missing",
+      "reported_at": "found by manifest scan, not by ear",
+      "passed_gates": [
+        "chapter WER 0.023",
+        "unit WER 0.027",
+        "coverage 0.9865"
+      ],
+      "why_invisible": "ASR heard 'Ravi' as 'Revy', so the aligner anchored on the following exact word",
+      "file": "truncated_opening_name.wav",
+      "seconds": 12.0,
+      "sample_rate": 24000,
+      "clean_sibling": {
+        "file": "truncated_opening_name__clean.wav",
+        "seconds": 12.0,
+        "note": "seed 73 after the fix",
+        "source": "chapter1-v3/005-chapter-001-v3.wav"
+      }
+    },
+    {
+      "id": "cold_start_burst",
+      "source": "chapter3-short/007-chapter-003-short.wav",
+      "start": 0.0,
+      "end": 3.0,
+      "heard": "digital glitch on the first two words, 'the matched load'",
+      "reported_at": "0:00",
+      "passed_gates": [
+        "declick reported 0 clicks",
+        "chapter WER 0.024"
+      ],
+      "why_invisible": "it is not a click but a spectrally degenerate onset: digital silence to 5.8x the chapter median level inside one 20 ms frame, peaking at 8.2x, with sample steps to 0.11",
+      "file": "cold_start_burst.wav",
+      "seconds": 3.0,
+      "sample_rate": 24000,
+      "clean_sibling": {
+        "file": "cold_start_burst__clean.wav",
+        "seconds": 3.0,
+        "note": "after adding the disposable lead-in",
+        "source": "chapter3-v2/007-chapter-003-v2.wav"
+      }
+    },
+    {
+      "id": "warmup_residue_stutter",
+      "source": "chapter3-short/007-chapter-003-short.wav",
+      "start": 330.5,
+      "end": 337.0,
+      "heard": "stutter just after the seam, on words the previous unit had just spoken ('...had not tested them')",
+      "reported_at": "5:33",
+      "passed_gates": [
+        "chapter WER 0.019",
+        "residue below every threshold then in place"
+      ],
+      "why_invisible": "a flat 60 ms back-off was carved out of the warm-up when Whisper reported the two words as contiguous, leaving voiced audio at 1.3x the median level",
+      "file": "warmup_residue_stutter.wav",
+      "seconds": 6.5,
+      "sample_rate": 24000,
+      "clean_sibling": {
+        "file": "warmup_residue_stutter__clean.wav",
+        "seconds": 6.5,
+        "note": "after the forward-biased quiet_cut",
+        "source": "chapter3-v2/007-chapter-003-v2.wav"
+      }
+    },
+    {
+      "id": "within_unit_level_fade",
+      "source": "chapter3-short/007-chapter-003-short.wav",
+      "start": 298.4,
+      "end": 333.3,
+      "heard": "narrator trailing off toward the end of the unit",
+      "reported_at": "end of unit 1 and end of chapter",
+      "passed_gates": [
+        "per-unit gain matching",
+        "chapter WER 0.019"
+      ],
+      "why_invisible": "gain matching applies one gain per unit, so it cannot see a slope inside a unit; this unit fell 6.46 dB start to end",
+      "file": "within_unit_level_fade.wav",
+      "seconds": 34.9,
+      "sample_rate": 24000,
+      "clean_sibling": {
+        "file": "within_unit_level_fade__clean.wav",
+        "seconds": 35.0,
+        "note": "after flatten_level; same unit measured -0.27 dB",
+        "source": "chapter3-v2/007-chapter-003-v2.wav"
+      }
+    },
+    {
+      "id": "articulation_outlier",
+      "source": "chapter3-v2/007-chapter-003-v2.wav",
+      "start": 453.5,
+      "end": 477.7,
+      "heard": "still drifting at the end of the chapter",
+      "reported_at": "end of chapter 3",
+      "passed_gates": [
+        "chapter WER 0.0185",
+        "drift profile (relative to the unit's own median, so a uniformly slow unit reads as flat)"
+      ],
+      "why_invisible": "articulation 7.196 against a chapter median of 8.059, and the highest pause load of any unit, but normalising to the unit's own median hides it",
+      "file": "articulation_outlier.wav",
+      "seconds": 17.93,
+      "sample_rate": 24000
+    }
+  ],
+  "missing_sources": []
+}

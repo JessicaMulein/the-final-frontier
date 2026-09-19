@@ -1,0 +1,48 @@
+{
+  "corpus": "EMNS, OpenSLR SLR136",
+  "url": "https://openslr.org/136/",
+  "license": "Apache-2.0",
+  "speaker": "single British English woman, 20s",
+  "sample_rate": 24000,
+  "seconds": 28.529,
+  "splice_gap_ms": 300,
+  "members": [
+    {
+      "id": "599",
+      "source": "recorded_audio_koy6aUI.webm",
+      "text": "The band enjoyed much regional and some national success, and released three albums.",
+      "seconds": 7.997,
+      "emotion": "Neutral",
+      "level": 0,
+      "dead_air_removed_seconds": 1.01
+    },
+    {
+      "id": "695",
+      "source": "recorded_audio_ly77r84.webm",
+      "text": "This was seen as an early sign that Scotland would vote against independence.",
+      "seconds": 6.258,
+      "emotion": "Neutral",
+      "level": 0,
+      "dead_air_removed_seconds": 0.0
+    },
+    {
+      "id": "967",
+      "source": "recorded_audio_pxbIeP7.webm",
+      "text": "During the French intervention in Mexico, French food became popular with the upper classes.",
+      "seconds": 6.897,
+      "emotion": "Neutral",
+      "level": 0,
+      "dead_air_removed_seconds": 0.0
+    },
+    {
+      "id": "524",
+      "source": "recorded_audio_4lFriPj.webm",
+      "text": "The explosion raises a large amount of moisture-laden air from lower altitudes.",
+      "seconds": 6.478,
+      "emotion": "Neutral",
+      "level": 0,
+      "dead_air_removed_seconds": 0.0
+    }
+  ],
+  "processing": "ffmpeg decode to 24k mono; RMS edge trim; internal gaps >380ms compacted to 280ms; RMS -20dBFS; 300ms joins; PCM16"
+}

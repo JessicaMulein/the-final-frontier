@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.py[cod]
+# Generated audio, candidate caches, and audition packages. Source, config and
+# fixtures stay tracked; renders are reproducible from a manifest and a seed.
+out/
+candidates/
