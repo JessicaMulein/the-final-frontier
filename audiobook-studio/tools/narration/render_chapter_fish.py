@@ -40,7 +40,11 @@ from audio_io import load_reference
 from manuscript import spoken_text
 
 REPO = Path(__file__).resolve().parents[3]
-HIFI = Path("out/hifitts-refs")
+# The narrator's identity is committed, not regenerated. `out/` is ignored, so reading
+# the reference from there made the book's voice depend on an untracked file that a
+# clean checkout would not have and a cache clear could not rebuild. See
+# assets/voice-refs/hifitts/PROVENANCE.md, which also carries its sha256.
+HIFI = REPO / "audiobook-studio/assets/voice-refs/hifitts"
 
 INTERIOR = (
     "Read as a first-person memoir: dry, precise, quietly unsettled. Let meaning "

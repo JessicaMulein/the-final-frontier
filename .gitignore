@@ -46,6 +46,19 @@ audiobook-studio/tools/vendor/qwen3-tts-c/
 # until the new render replaces it. 1.2 GB of derived output.
 audiobook-studio/superseded/
 
+# Delivered audiobook. This is the output directory: 128 chapter WAVs, their MP3s
+# and the M4B, roughly 1.5 GB per render.
+#
+# This directory being tracked is how 1.46 GB of chapter WAVs entered the history
+# that had to be rewritten to remove them. Derived audio is reproducible from a
+# manifest, the committed voice reference and a seed, so it does not belong in git.
+# The deliverable is published as a release artifact, not committed.
+#
+# The voice reference itself is deliberately NOT here: it lives in
+# audiobook-studio/assets/voice-refs/hifitts/ and is tracked, because it is the
+# book's narrator rather than derived output.
+audiobook/
+
 # Built CustomVoice profiles: 24 MB each, and rebuildable from the reference WAV
 # via the recipe, which records the expected sha256.
 *.qvoice

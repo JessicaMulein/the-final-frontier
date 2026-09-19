@@ -36,8 +36,10 @@ from audio_io import load_reference
 from manuscript import chapter_title
 from render_chapter_fish import ANCHOR, active_rms
 
-HIFI = Path("out/hifitts-refs")
 REPO = Path(__file__).resolve().parents[3]
+# Announcements must be the same narrator as the prose, so they read the same
+# committed reference. See assets/voice-refs/hifitts/PROVENANCE.md.
+HIFI = REPO / "audiobook-studio/assets/voice-refs/hifitts"
 CHAPTER_ROOT = REPO / "The Final Frontier Novel/chapters"
 
 ONES = [
