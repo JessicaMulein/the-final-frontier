@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 26
+title: "Already Outside"
 pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-DOOR-INWARD
 motif_events: []

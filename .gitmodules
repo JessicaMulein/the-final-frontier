@@ -1,0 +1,3 @@
+[submodule "audiobook-studio/tools/vendor/mlx-audio"]
+	path = audiobook-studio/tools/vendor/mlx-audio
+	url = https://github.com/Blaizzy/mlx-audio.git

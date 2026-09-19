@@ -290,7 +290,7 @@ The lyric text in the five Canon_Sources and explicit author decisions provide b
 3. WHEN the Site_Build exclusion test runs, THE Manuscript SHALL contribute zero entries to the generated song index.
 4. THE Manuscript SHALL store each chapter in its own Chapter_File.
 5. THE Chapter_File SHALL use a filename that encodes the Story_Movement, zero-padded sequence number, and descriptive slug in that order under one fixed convention selected during design.
-6. THE Chapter_Header SHALL contain exactly one instance of each key: `movement`, `chapter`, `pov_id`, `timeline_id`, `motif_events`, `hook`, `words`, `length_class`, and `status`.
+6. THE Chapter_Header SHALL contain exactly one instance of each key: `movement`, `chapter`, `title`, `pov_id`, `timeline_id`, `motif_events`, `hook`, `words`, `length_class`, and `status`; `title` SHALL be the canonical reader-facing chapter title and SHALL NOT be inferred from the filename slug.
 7. THE Chapter_Header SHALL report a `words` value equal to the Prose_Word count of the Chapter_File’s Prose_Body.
 8. THE Manuscript SHALL store the Arc_Outline, Canon_Bible, POV_Roster, and Motif_Ledger as distinct reference documents.
 9. WHERE Voice_Briefs are stored outside the POV_Roster, THE POV_Roster SHALL link to the Voice_Briefs document.

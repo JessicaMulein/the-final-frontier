@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 41
+title: "Two Interpreters"
 pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []

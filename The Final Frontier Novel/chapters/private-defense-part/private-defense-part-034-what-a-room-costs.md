@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 34
+title: "What a Room Costs"
 pov_id: POV-NIA
 timeline_id: TL-PRIVATE-COPPER
 motif_events: []

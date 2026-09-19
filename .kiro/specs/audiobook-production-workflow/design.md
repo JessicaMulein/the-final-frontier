@@ -140,7 +140,7 @@ This index identifies the reusable interfaces already specified in detail below;
 ### Tracked reusable implementation
 
 ```text
-.audiobook/
+audiobook-studio/
 ├── config/
 │   └── production.toml                 # one book production configuration
 ├── src/frontier_audiobook/
@@ -159,7 +159,7 @@ The exact module split may be adjusted during implementation to keep cohesive co
 ### Generated run data
 
 ```text
-.audiobook/build/production/<book-id>/
+audiobook-studio/build/production/<book-id>/
 ├── plans/<plan-id>/
 │   ├── plan.json                        # immutable, prose-free frozen plan
 │   ├── preflight.json                   # immutable nonbillable evidence
@@ -182,10 +182,10 @@ Runtime transcripts and raw Nova event journals are confined to `runtime/` becau
 Delivery roots and file templates are configuration values. The default production naming contract is collision-safe and sequence-aware:
 
 ```text
-.audiobook/dist/audiobook/<book-id>/<sequence>-<track-slug>-<voice>.wav
+audiobook-studio/dist/audiobook/<book-id>/<sequence>-<track-slug>-<voice>.wav
 ```
 
-Opening credits, front-matter tracks, chapters, and closing credits share one ordered catalog. Existing `voice-samples/chapter-1-*`, `voice-samples/chapter-2-*`, and `.audiobook/build/narration/chapter-001-*` / `chapter-002-*` paths remain read-only legacy inputs.
+Opening credits, front-matter tracks, chapters, and closing credits share one ordered catalog. Existing `voice-samples/chapter-1-*`, `voice-samples/chapter-2-*`, and `audiobook-studio/build/narration/chapter-001-*` / `chapter-002-*` paths remain read-only legacy inputs.
 
 ## Stable CLI Contract
 
@@ -247,8 +247,8 @@ Later layers replace only explicitly present keys. The resolver records every va
 schema_version = 1
 book_id = "the-final-frontier"
 manuscript_root = "The Final Frontier Novel"
-build_root = ".audiobook/build/production"
-delivery_root = ".audiobook/dist/audiobook"
+build_root = "audiobook-studio/build/production"
+delivery_root = "audiobook-studio/dist/audiobook"
 max_tracks_per_plan = 16
 
 [defaults]
@@ -282,7 +282,7 @@ output_text_tokens_per_call = 8192
 id = "opening-credits"
 kind = "opening_credits"
 sequence = 1
-source_path = ".audiobook/config/tracks/opening-credits.md"
+source_path = "audiobook-studio/config/tracks/opening-credits.md"
 render_once = true
 
 [[tracks]]
@@ -305,7 +305,7 @@ render_once = true
 id = "closing-credits"
 kind = "closing_credits"
 sequence = 132
-source_path = ".audiobook/config/tracks/closing-credits.md"
+source_path = "audiobook-studio/config/tracks/closing-credits.md"
 render_once = true
 ```
 
@@ -1020,7 +1020,7 @@ These estimates concern planning/agent overhead, not narration model calls, huma
 
 1. Final approved spoken text and exact ordering for opening credits, dedication, epigraph, any other narratable front matter, and closing credits.
 2. Final default maximum tracks per plan and authorization lifetime; this design proposes 16 tracks and 24 hours.
-3. Final production delivery root/naming expected by the later mastering workflow; this design proposes `.audiobook/dist/audiobook/<book-id>/` and sequence-prefixed WAV names.
+3. Final production delivery root/naming expected by the later mastering workflow; this design proposes `audiobook-studio/dist/audiobook/<book-id>/` and sequence-prefixed WAV names.
 4. Whether Chapter 1 legacy artifacts contain sufficient event/usage evidence for reuse or should remain recognition-only; the adapter must decide from bytes, not assumptions.
 5. Whether a future operator-signature mechanism is desired beyond local SHA-256 scope binding and filesystem controls.
 

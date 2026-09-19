@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 77
+title: "Fluency Is Not Permission"
 pov_id: POV-NIA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: []

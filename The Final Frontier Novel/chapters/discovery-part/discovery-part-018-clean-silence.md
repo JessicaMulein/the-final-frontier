@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 18
+title: "Clean Silence"
 pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-HANDSHAKE
 motif_events: []

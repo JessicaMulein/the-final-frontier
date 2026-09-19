@@ -22,7 +22,7 @@ Scope and honesty boundaries
   `tmp_path` (or any scratch directory) as the workspace base.
 
 Authority: `The Final Frontier Novel/planning/record-schemas.md` for the
-restricted nine-key Chapter_Header and the typed JSON fence contract,
+restricted ten-key Chapter_Header and the typed JSON fence contract,
 `planning/file-conventions.md` for directory and filename shape, and
 `The Final Frontier Novel/exclusion-contract.json` for the exclusion document.
 """
@@ -60,11 +60,12 @@ MOVEMENTS: Tuple[str, ...] = (
     "aftermath_coda",
 )
 
-# The nine restricted Chapter_Header keys, in the order `record-schemas.md`
-# defines them. The key set is closed: no schema key, title, or discriminator.
+# The ten restricted Chapter_Header keys, in the canonical order
+# `record-schemas.md` defines. The key set is closed: no schema key or discriminator.
 CHAPTER_HEADER_KEYS: Tuple[str, ...] = (
     "movement",
     "chapter",
+    "title",
     "pov_id",
     "timeline_id",
     "motif_events",
@@ -221,6 +222,7 @@ def chapter_header(
     *,
     movement: str = "discovery_part",
     chapter: int = 1,
+    title: str = "A Synthetic Chapter",
     pov_id: str = "POV-MARA",
     timeline_id: str = "TL-FIXTURE-001",
     motif_events: Optional[Sequence[str]] = None,
@@ -232,7 +234,7 @@ def chapter_header(
     overrides: Optional[Mapping[str, Any]] = None,
     drop_keys: Sequence[str] = (),
 ) -> Dict[str, Any]:
-    """Build the logical nine-key Chapter_Header object.
+    """Build the logical ten-key Chapter_Header object.
 
     `words` and `length_class` default to values consistent with `prose`, so a
     conforming header needs no bookkeeping from the caller. `overrides` sets any
@@ -248,6 +250,7 @@ def chapter_header(
     header: Dict[str, Any] = {
         "movement": movement,
         "chapter": chapter,
+        "title": title,
         "pov_id": pov_id,
         "timeline_id": timeline_id,
         "motif_events": list(motif_events or []),
@@ -264,7 +267,7 @@ def chapter_header(
 
 
 def _render_header_value(key: str, value: Any) -> str:
-    if key == "hook":
+    if key in ("hook", "title"):
         return json.dumps(value, ensure_ascii=False)
     if isinstance(value, list):
         return "[" + ", ".join(str(item) for item in value) + "]"
@@ -1046,7 +1049,22 @@ def contract_document(
 
     document = committed_contract_document()
     document["declared_at"] = "{0}/{1}".format(manuscript_root_name, contract_filename)
-    for exclusion in document.get("exclusions", []):
+    # Synthetic workspaces declare the manuscript exclusion only.
+    #
+    # The committed contract also excludes the audiobook subproject root, which
+    # exists in this repository but not in a temporary fixture tree. Every
+    # exclusion carries `must_exist: true`, so keeping that second entry would
+    # make each synthetic workspace fail as a stale contract unless it also
+    # created that directory and its required children. Dropping it keeps these
+    # fixtures aimed at the rule under test -- manuscript isolation -- while the
+    # committed contract is verified separately against the real workspace.
+    document["exclusions"] = [
+        exclusion
+        for exclusion in document.get("exclusions", [])
+        if not isinstance(exclusion, dict)
+        or exclusion.get("id") == "EXCL-MANUSCRIPT-ROOT"
+    ]
+    for exclusion in document["exclusions"]:
         if isinstance(exclusion, dict) and exclusion.get("kind") == "source-root":
             exclusion["path"] = manuscript_root_name
     if overrides:

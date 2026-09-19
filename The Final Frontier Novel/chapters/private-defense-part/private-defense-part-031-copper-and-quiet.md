@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 31
+title: "Copper and Quiet"
 pov_id: POV-NIA
 timeline_id: TL-PRIVATE-COPPER
 motif_events: [MOT-COPPER-01]

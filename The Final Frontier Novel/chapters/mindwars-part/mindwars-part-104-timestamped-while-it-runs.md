@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 104
+title: "Timestamped While It Runs"
 pov_id: POV-JULIAN
 timeline_id: TL-NULL-NIGHT
 motif_events: []

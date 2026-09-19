@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 78
+title: "Protection Nobody Asked For"
 pov_id: POV-NIA
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []

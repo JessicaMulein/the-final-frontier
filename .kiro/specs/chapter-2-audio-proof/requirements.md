@@ -7,7 +7,7 @@ This specification defines a guarded, one-chapter operational workflow for produ
 ## Glossary
 
 - **Audio_Proof_Workflow**: The complete Chapter 2 preflight, paid-render, validation, accounting, and delivery process.
-- **Existing_Narration_CLI**: The installed Python entry point `.venv/bin/python -m frontier_audiobook` executed from `.audiobook/`.
+- **Existing_Narration_CLI**: The installed Python entry point `.venv/bin/python -m frontier_audiobook` executed from `audiobook-studio/`.
 - **Chapter_2_Source**: `The Final Frontier Novel/chapters/discovery-part/discovery-part-002-an-ordinary-morning.md`.
 - **Named_AWS_Profile**: The exact profile label `frontier-audiobook`, user-approved as a valid static-credential profile rather than an SSO profile. The workflow does not inspect or accept/reject the profile based on credential type, source, age, expiration, or lifetime; successful resolution through a non-model identity call is sufficient.
 - **Preflight**: Read-only local checks, one non-model identity call using `AWS_PROFILE=frontier-audiobook`, and `narrate --dry-run`; Preflight makes no Bedrock model call.
@@ -17,7 +17,7 @@ This specification defines a guarded, one-chapter operational workflow for produ
 - **Event_Journal**: The JSONL Nova output-event file bound by filename stem to one Active_Segment audio file.
 - **Exact_Fidelity**: Equality of expected and FINAL transcript word sequences under the configured normalization, with matching replayed audio and zero mid-sentence partial turns.
 - **Postflight_Validator**: The read-only checks over the final manifest, source hashes, segment artifacts, Event_Journals, and Chapter_WAV.
-- **Chapter_WAV**: `.audiobook/build/narration/chapter-002-tiffany/chapter-002-tiffany.wav`.
+- **Chapter_WAV**: `audiobook-studio/build/narration/chapter-002-tiffany/chapter-002-tiffany.wav`.
 - **Proof_Copy**: `voice-samples/chapter-2-tiffany-proof.wav`.
 - **Proof_Deliverer**: The delivery step that copies a validated Chapter_WAV to the Proof_Copy path.
 - **Active_Artifact_Totals**: Four-modality token totals from exactly one validated Event_Journal per Active_Segment, including Reused_Segments.
@@ -27,7 +27,7 @@ This specification defines a guarded, one-chapter operational workflow for produ
 - **Cost_Calculator**: The decimal calculation that multiplies each Four_Modality_Tokens count by the corresponding Official_Rate per 1,000 tokens and sums the subtotals.
 - **Computed_Pre_Tax_Service_Cost**: A token-derived Bedrock service estimate before tax, credits, discounts, rounding on an invoice, or other account adjustments.
 - **Billing_Confirmation**: A separately obtained Cost Explorer or invoice amount and confirmation date.
-- **Proof_Report**: `.audiobook/build/narration/chapter-002-tiffany/chapter-002-tiffany-proof-report.md`.
+- **Proof_Report**: `audiobook-studio/build/narration/chapter-002-tiffany/chapter-002-tiffany-proof-report.md`.
 - **Delivery_Gate**: The condition in which all required source, manifest, fidelity, journal, WAV, accounting, and cost checks have passed.
 - **Protected_Artifacts**: Chapter prose, `.kiro/specs/The-Final-Frontier-novel/`, narration source/dependency files, Chapter 1 build outputs, and Chapter 1 proof copies.
 

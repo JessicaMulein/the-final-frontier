@@ -202,7 +202,7 @@ def conforming_headers(
     movement: Optional[str] = None,
     length_class: Optional[str] = None,
 ) -> Dict[str, Any]:
-    """A Chapter_Header whose nine keys agree with each other.
+    """A Chapter_Header whose ten keys agree with each other.
 
     The declared `words` and `length_class` match the body the header is built
     for, so any disagreement a property test observes was injected on purpose.
@@ -245,7 +245,7 @@ HEADER_MALFORMATIONS: Tuple[str, ...] = (
 def header_variants(draw: Any) -> Variant:
     """A rendered Chapter_File header, conforming or malformed one way.
 
-    Requirement 9.6 fixes the nine keys and the delimiters; Requirement 9.7 fixes
+    Requirement 9.6 fixes the ten keys and the delimiters; Requirement 9.7 fixes
     the agreement between declared and observed counts. Exactly one fault is
     injected per draw so a counterexample names a single cause.
     """
@@ -254,7 +254,7 @@ def header_variants(draw: Any) -> Variant:
     body = nf.prose_of_length(words)
     if draw(st.booleans()):
         return Variant(
-            label="conforming nine-key header",
+            label="conforming ten-key header",
             valid=True,
             payload=nf.render_chapter_file(nf.chapter_header(prose=body), body),
             requirement="9.6",

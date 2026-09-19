@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 67
+title: "A Category with a Budget"
 pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-ONSET
 motif_events: []

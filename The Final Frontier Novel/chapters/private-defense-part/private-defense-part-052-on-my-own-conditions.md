@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 52
+title: "On My Own Conditions"
 pov_id: POV-NIA
 timeline_id: TL-PRIVATE-RECORD-DEPOSITS
 motif_events: []

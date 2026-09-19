@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 58
+title: "Metadata and Nothing Else"
 pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-PROTOCOL
 motif_events: []

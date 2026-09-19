@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 95
+title: "The Only Defense in the Model"
 pov_id: POV-MARA
 timeline_id: TL-NULL-DECISION
 motif_events: []

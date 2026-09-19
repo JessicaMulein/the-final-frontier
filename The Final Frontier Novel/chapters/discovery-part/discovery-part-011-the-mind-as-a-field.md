@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 11
+title: "The Mind as a Field"
 pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []

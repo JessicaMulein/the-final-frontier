@@ -2,8 +2,8 @@
   "schema": "manuscript-exclusion-contract/v1",
   "contract": "Manuscript_Exclusion_Contract",
   "declared_at": "The Final Frontier Novel/exclusion-contract.json",
-  "updated": "2026-09-09",
-  "purpose": "Declare the novel manuscript root as an excluded source root so that no manuscript markdown can be mistaken for a song source, collected as a Song, or emitted into lyrics, search, or song-index artifacts. This file is the portable declaration; the consuming build is the external lyrics repository.",
+  "updated": "2026-09-16",
+  "purpose": "Declare source roots that are not song sources -- the novel manuscript, and the audiobook subproject that narrates it -- so that none of their markdown can be mistaken for a song source, collected as a Song, or emitted into lyrics, search, or song-index artifacts. This file is the portable declaration; the consuming build is the external lyrics repository.",
   "authority": {
     "spec": ".kiro/specs/The-Final-Frontier-novel",
     "requirements": [
@@ -54,6 +54,28 @@
         "generated-song-index"
       ],
       "reason": "The manuscript is prose, not a song source. Its root markdown (front-matter.md, back-matter.md), its planning documents, and its 128 chapter files must never enter the lyrics catalog."
+    },
+    {
+      "id": "EXCL-AUDIOBOOK-STUDIO-ROOT",
+      "path": "audiobook-studio",
+      "kind": "source-root",
+      "resolution": "direct-workspace-child",
+      "scope": "The declared root and every path at or below it, at any depth, regardless of file extension.",
+      "must_exist": true,
+      "root_evidence": {
+        "required_children": [
+          "src",
+          "tools"
+        ],
+        "note": "A consumer verifies these children to confirm the declaration still names the audiobook subproject rather than an unrelated directory that happens to share the name."
+      },
+      "excluded_from": [
+        "song-source-discovery",
+        "lyrics-page-generation",
+        "search-index-generation",
+        "generated-song-index"
+      ],
+      "reason": "The audiobook subproject narrates the novel; it is tooling and engineering documentation, not a song source. Its README files, specs, pipeline notes, and narratable front-matter track sources must never enter the lyrics catalog. This root was formerly `.audiobook` and was skipped only because a dot prefix made it an ineligible source root. It was renamed to be visible to the operating system, so its exclusion is now declared rather than incidental, as the matching rule requires."
     }
   ],
   "matching_rule": {

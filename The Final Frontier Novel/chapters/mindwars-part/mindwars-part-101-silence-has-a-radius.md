@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 101
+title: "Silence Has a Radius"
 pov_id: POV-MARA
 timeline_id: TL-NULL-DECISION
 motif_events: [MOT-RADIUS-01]

@@ -1,6 +1,7 @@
 ---
 movement: aftermath_coda
 chapter: 113
+title: "What Went Out"
 pov_id: POV-NIA
 timeline_id: TL-CODA-PUBLIC-ACCOUNTING
 motif_events: []

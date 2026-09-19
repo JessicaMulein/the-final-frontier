@@ -47,9 +47,9 @@ The Prose Body count is `len(body.split())` after strict UTF-8 decoding, LF norm
 | Item | Contract |
 |---|---|
 | Workspace | `/Users/jessica/Documents/frontier-book` |
-| Command working directory | `/Users/jessica/Documents/frontier-book/.audiobook` |
-| Runtime | existing `.audiobook/.venv/bin/python -m frontier_audiobook` |
-| Configuration | `.audiobook/config/audition.toml` |
+| Command working directory | `/Users/jessica/Documents/frontier-book/audiobook-studio` |
+| Runtime | existing `audiobook-studio/.venv/bin/python -m frontier_audiobook` |
+| Configuration | `audiobook-studio/config/audition.toml` |
 | Inspected configuration SHA-256 | `640e8c29b18b92af28c861b54f51f587fb1f618a59605eb740fc532f9ce3e69f` |
 | Model | `amazon.nova-2-sonic-v1:0` |
 | Region | `us-east-1` |
@@ -64,13 +64,13 @@ The Prose Body count is `len(body.split())` after strict UTF-8 decoding, LF norm
 
 | Artifact | Path |
 |---|---|
-| Build root | `.audiobook/build/narration/chapter-003-tiffany/` |
-| Evidence root | `.audiobook/build/narration/chapter-003-tiffany/evidence/` |
-| Manifest | `.audiobook/build/narration/chapter-003-tiffany/manifest.json` |
-| Assembled WAV | `.audiobook/build/narration/chapter-003-tiffany/chapter-003-tiffany.wav` |
+| Build root | `audiobook-studio/build/narration/chapter-003-tiffany/` |
+| Evidence root | `audiobook-studio/build/narration/chapter-003-tiffany/evidence/` |
+| Manifest | `audiobook-studio/build/narration/chapter-003-tiffany/manifest.json` |
+| Assembled WAV | `audiobook-studio/build/narration/chapter-003-tiffany/chapter-003-tiffany.wav` |
 | Proof copy | `voice-samples/chapter-3-tiffany-proof.wav` |
-| Proof report | `.audiobook/build/narration/chapter-003-tiffany/chapter-003-tiffany-proof-report.md` |
-| Paid-attempt bundle | `.audiobook/build/narration/chapter-003-tiffany/evidence/paid-attempt-001/` |
+| Proof report | `audiobook-studio/build/narration/chapter-003-tiffany/chapter-003-tiffany-proof-report.md` |
+| Paid-attempt bundle | `audiobook-studio/build/narration/chapter-003-tiffany/evidence/paid-attempt-001/` |
 
 The workflow write allowlist contains only the Chapter 3 build root and, after the Delivery Gate passes, the Chapter 3 proof-copy path. The specification directory is written only during planning, before execution begins. Chapter 1 and Chapter 2 build trees and proof files are immutable inputs to the isolation check.
 
@@ -181,7 +181,7 @@ class FileInventoryRecord:
 Hard immutability applies to:
 
 - the exact Chapter 3 source after preflight;
-- `.audiobook/src/frontier_audiobook/`, configuration, dependency locks, and relevant tests/tools;
+- `audiobook-studio/src/frontier_audiobook/`, configuration, dependency locks, and relevant tests/tools;
 - `.kiro/specs/The-Final-Frontier-novel/` and `.kiro/specs/chapter-2-audio-proof/`;
 - all Chapter 1 and Chapter 2 narration build trees and proof audio files.
 
@@ -191,7 +191,7 @@ Other manuscript files are inventoried per file. A changed non-Chapter-3 manuscr
 
 **Purpose:** Verify the local plan without a model call.
 
-Run from `.audiobook/`:
+Run from `audiobook-studio/`:
 
 ```bash
 .venv/bin/python -m frontier_audiobook audition narrate \
@@ -284,7 +284,7 @@ EXPECTED = {
     "segment_count": 91,
     "narration_only_punctuation_segments": 10,
     "target_segment_words": 5,
-    "chapter_audio_path": ".audiobook/build/narration/chapter-003-tiffany/chapter-003-tiffany.wav",
+    "chapter_audio_path": "audiobook-studio/build/narration/chapter-003-tiffany/chapter-003-tiffany.wav",
 }
 ```
 
@@ -309,7 +309,7 @@ For the final active set:
   "attempt_id": "paid-attempt-001",
   "started_at_utc": "<timestamp>",
   "ended_at_utc": "<timestamp>",
-  "working_directory": "/Users/jessica/Documents/frontier-book/.audiobook",
+  "working_directory": "/Users/jessica/Documents/frontier-book/audiobook-studio",
   "argv": [".venv/bin/python", "-m", "frontier_audiobook", "audition", "narrate", "--chapter", "3", "--voice", "tiffany", "--max-words", "5", "--confirm-paid-render"],
   "profile_label": "frontier-audiobook",
   "native_return_code": 0,

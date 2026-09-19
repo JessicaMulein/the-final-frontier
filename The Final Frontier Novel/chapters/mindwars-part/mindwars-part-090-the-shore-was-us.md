@@ -1,17 +1,18 @@
 ---
 movement: mindwars_part
 chapter: 90
+title: "The Shore Was Us"
 pov_id: POV-MARA
 timeline_id: TL-MINDWARS-TERRITORY
 motif_events: []
 hook: "Every map she was raised on points away from the planet, and the only territory anyone has actually entered is the inside of a person's head."
-words: 1807
+words: 1802
 length_class: long-outlier
 status: revised
 ---
 I have made four maps of this event and thrown three of them away.
 
-The first was the obvious one and I drew it in July. An ordnance sheet of the two counties, one dot per confirmed arrival, dated. Two hundred and fourteen dots by the end of November, which is the same two hundred and fourteen pinned to the wall of the small analysis room, because a dot needs a capture behind it and confirmation runs a long way behind the reports. I expected a shape, because that is what a map is for: you put the cases down and the water pump appears in the middle of them.
+The first was the obvious one and I drew it in July. An ordnance sheet of the two counties, one dot per confirmed arrival, dated. Two hundred and fourteen dots by the end of November, matching the captures pinned to the wall of the small analysis room, because a dot needs a capture behind it and confirmation runs a long way behind the reports. I expected a shape, because that is what a map is for: you put the cases down and the water pump appears in the middle of them.
 
 There is no shape. I ran the nearest-neighbour statistics twice and they come out indistinguishable from a random scatter over the populated area, which is to say the dots are where the people are and nothing further. A dot in a village of four hundred, three dots in a town, none at all across nine miles of farmland where there is nobody to have one. If you weight by population the map goes flat. Flat is a result and it is not a map.
 

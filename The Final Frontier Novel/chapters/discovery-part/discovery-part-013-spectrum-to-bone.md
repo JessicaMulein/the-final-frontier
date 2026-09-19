@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 13
+title: "Spectrum to Bone"
 pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: [MOT-CHAIN-01]

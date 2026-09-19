@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 53
+title: "Cleared and Not Relieved"
 pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-RECORD-DEPOSITS
 motif_events: []

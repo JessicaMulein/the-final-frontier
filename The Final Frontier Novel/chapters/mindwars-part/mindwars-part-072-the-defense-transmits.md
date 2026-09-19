@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 72
+title: "The Defense Transmits"
 pov_id: POV-MARA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: []

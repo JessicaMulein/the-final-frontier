@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 62
+title: "Not Only Me"
 pov_id: POV-NIA
 timeline_id: TL-MINDWARS-ONSET
 motif_events: []

@@ -232,16 +232,26 @@ def test_the_committed_repository_fails_closed_at_global_scope(
 ) -> None:
     """The real manuscript exits 2, and the record says so rather than hiding it.
 
-    128 ArcEntries are planned and no Chapter_File exists. A checker that reported
-    a pass here would be treating an unwritten book as a finished one, so exit 2 is
-    the correct answer and this gate's claim is scoped to the synthetic run.
+    A checker that reported a pass here would be treating unfinished work as a
+    finished book, so exit 2 is the correct answer and this gate's claim is scoped
+    to the synthetic run.
+
+    The reason it fails closed has moved. This once asserted
+    `OUTLINE_ENTRY_WITHOUT_FILE`, because 128 ArcEntries were planned and no
+    Chapter_File existed yet. All 128 now exist, so that code no longer appears and
+    pinning it would only assert that the book is unwritten. What must stay true is
+    the disposition: the global gate reports incomplete input rather than a pass.
     """
 
     run = checker.run_scope(
         (), scope=checker.SCOPE_GLOBAL, manuscript_root=manuscript_root
     )
     assert _exit_status(checker, run.diagnostics) == 2
-    assert "OUTLINE_ENTRY_WITHOUT_FILE" in _codes(run.diagnostics)
+    assert run.result == checker.RESULT_INCOMPLETE
+    assert any(
+        diagnostic.disposition == checker.DISPOSITION_INCOMPLETE
+        for diagnostic in run.diagnostics
+    )
 
 
 def test_the_planning_reference_checks_are_reachable_from_global_scope(

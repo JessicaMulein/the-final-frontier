@@ -368,7 +368,7 @@ The historical Chapter 2 and Chapter 3 audio-proof specifications remain unchang
 7. IF a Broader_Suite_Result failure does not overlap a Targeted_Check contract, THEN THE Production_Workflow SHALL retain the failure as a non-gating diagnostic.
 8. THE Generic_Production_Subsystem SHALL use existing pinned dependencies and Python standard library without a new dependency.
 9. IF a new dependency becomes demonstrably necessary, THEN THE Generic_Production_Subsystem SHALL require a separate reviewed exact-version pin and justification before use.
-10. THE Production_Workflow SHALL document stable CLI operations, safety boundaries, state/recovery semantics, configuration, and normal single/batch examples in `.audiobook/README.md`.
+10. THE Production_Workflow SHALL document stable CLI operations, safety boundaries, state/recovery semantics, configuration, and normal single/batch examples in `audiobook-studio/README.md`.
 
 ### Requirement 17: Accept the reusable workflow through a separately authorized Chapter 3 pilot
 

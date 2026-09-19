@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 55
+title: "The Price of the Instruments"
 pov_id: POV-MARA
 timeline_id: TL-PRIVATE-RECORD-DEPOSITS
 motif_events: []

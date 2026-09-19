@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 57
+title: "No Longer Current"
 pov_id: POV-MARA
 timeline_id: TL-PRIVATE-PROTOCOL
 motif_events: []

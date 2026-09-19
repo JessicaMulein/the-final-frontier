@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 25
+title: "Nothing Admissible"
 pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-NIA-AFTERMATH
 motif_events: []

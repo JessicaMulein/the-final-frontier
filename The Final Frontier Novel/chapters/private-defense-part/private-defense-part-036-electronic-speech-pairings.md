@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 36
+title: "Electronic Speech Pairings"
 pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []

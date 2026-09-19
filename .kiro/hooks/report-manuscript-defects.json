@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Report manuscript defects",
+      "trigger": "UserPromptSubmit",
+      "description": "Surfaces objective manuscript defects and stale editions at the top of a turn. Filters out the 128 expected CHAPTER_STATUS_NOT_FINAL reports and the missing finalisation gate, so only real defects show. This is the one trigger whose stdout reaches the session.",
+      "action": {
+        "type": "command",
+        "command": "python3 .tools/hooks/report_pending.py",
+        "timeout": 120
+      }
+    }
+  ]
+}

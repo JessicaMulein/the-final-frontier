@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 60
+title: "Fluent Is Not Open"
 pov_id: POV-NIA
 timeline_id: TL-PRIVATE-PROTOCOL
 motif_events: []

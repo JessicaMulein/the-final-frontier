@@ -10,13 +10,13 @@ All implementation and automated tests are nonbillable and must run with AWS/mod
 
 - [x] 1. Build strict production models, configuration, catalog, and planning
   - [x] 1.1 Implement typed record models and strict codecs
-    - Create cohesive generic models for Track kinds, effective configuration, source/segment snapshots, frozen plans, preflight, authorization, ledger events, attempt results, validation evidence, and reports under `.audiobook/src/frontier_audiobook/`.
+    - Create cohesive generic models for Track kinds, effective configuration, source/segment snapshots, frozen plans, preflight, authorization, ledger events, attempt results, validation evidence, and reports under `audiobook-studio/src/frontier_audiobook/`.
     - Implement strict canonical JSON parsing/serialization with duplicate-key, unknown-field, nonfinite-number, enum, and schema-version rejection; implement deterministic production-TOML parsing/printing and parser-printer round trips.
     - Reuse current no-follow/path/hash/atomic utilities and keep records prose-free where required.
     - _Requirements: 2.1, 2.2, 2.3, 2.4, 3.10, 3.11, 5.3, 15.6_
 
   - [x] 1.2 Implement `production.toml`, override resolution, and the ordered Track catalog
-    - Add one tracked `.audiobook/config/production.toml` with current defaults: Tiffany, `amazon.nova-2-sonic-v1:0`, `us-east-1`, `frontier-audiobook`, target `5`, exact fidelity, `frontier-word-sequence-v1`, and 24 kHz/16-bit/mono PCM.
+    - Add one tracked `audiobook-studio/config/production.toml` with current defaults: Tiffany, `amazon.nova-2-sonic-v1:0`, `us-east-1`, `frontier-audiobook`, target `5`, exact fidelity, `frontier-word-sequence-v1`, and 24 kHz/16-bit/mono PCM.
     - Implement deterministic precedence `global defaults < Track-kind override < exact-Track override`, provenance, confined naming templates, unique IDs/sequences, bounded plan size, and exact-fidelity enum validation.
     - Add generic catalog support for opening credits, dedication, epigraph, approved narratable front matter, chapters, and closing credits. Implement the approved-source path/section/hash handoff and `Render_Once` semantics without taking ownership of written-edition layout.
     - Do not insert unapproved special-track prose; use explicit disabled/pending catalog entries until publishing supplies approved text.
@@ -224,7 +224,7 @@ All implementation and automated tests are nonbillable and must run with AWS/mod
     - _Requirements: 4.2, 4.3, 16.1, 16.2, 16.3, 16.4, 16.5, 16.6, 16.7_
 
   - [x] 8.3 Document the reusable operator workflow and enforce dependency/protected-path constraints
-    - Update `.audiobook/README.md` with config/track handoff, all stable commands, single/batch examples, authorization boundaries, state machine, failure/manual-resolution semantics, cost labels, privacy, and Chapter 3 pilot instructions.
+    - Update `audiobook-studio/README.md` with config/track handoff, all stable commands, single/batch examples, authorization boundaries, state machine, failure/manual-resolution semantics, cost labels, privacy, and Chapter 3 pilot instructions.
     - Confirm `pyproject.toml`, lockfile, and requirements add no dependency. If a future dependency is proposed, require a separate exact-version review rather than adding it in this task.
     - Add structural checks that historical Chapter 2/3 specs, the governing novel spec, and Chapter 1/2 artifacts remain unchanged; state that future normal tracks use this reusable workflow.
     - _Requirements: 1.1, 1.6, 1.7, 16.8, 16.9, 16.10_

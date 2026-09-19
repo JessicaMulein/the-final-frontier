@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 70
+title: "Copper for Everybody"
 pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: [MOT-COPPER-02]
@@ -11,7 +12,7 @@ status: revised
 ---
 By the time the audit reached unit fourteen, the enclosure programme had been running long enough for a two-hour rota to have fallen to ninety minutes. The instruction said to verify that the programme delivered measurable attenuation against expenditure, and it did, and I have never written a compliant report I trusted less.
 
-Unit fourteen stood on the tarmac behind a health centre in a town whose name the doctrine spells two ways. It was a shipping container with mesh bonded inside its walls, a fan unit on the roof, one door and no windows. The Consortium supplied nine of these before the order passed and eleven after. Across the band Northline declared for this class of event, worst-case attenuation was twenty-six decibels at the door seal and thirty-one at the centre of the floor, against a twenty-decibel specification. Outside that band the figures are not claimed and were not measured. The instruments agreed with the invoice.
+The enclosure stood on the tarmac behind a health centre in a town whose name the doctrine spells two ways. It was a shipping container with mesh bonded inside its walls, a fan unit on the roof, one door and no windows. The Consortium supplied nine of these before the order passed and eleven after. Across the band Northline declared for this class of event, worst-case attenuation was twenty-six decibels at the door seal and thirty-one at the centre of the floor, against a twenty-decibel specification. Outside that band the figures are not claimed and were not measured. The instruments agreed with the invoice.
 
 I was inside it for four hours because the audit required occupancy conditions, and because I have learned that a room performs differently when it contains people who need it.
 

@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 82
+title: "Timing Traffic and Nothing"
 pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []

@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 64
+title: "An Infrastructure Problem"
 pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-ONSET
 motif_events: []

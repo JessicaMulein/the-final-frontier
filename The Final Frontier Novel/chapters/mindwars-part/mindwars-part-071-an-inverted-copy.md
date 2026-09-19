@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 71
+title: "An Inverted Copy"
 pov_id: POV-MARA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: []

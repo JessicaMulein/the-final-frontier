@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 4
+title: "No Gap on Her Side"
 pov_id: POV-NIA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []

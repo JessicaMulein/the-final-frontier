@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 98
+title: "Nobody Can Be Asked"
 pov_id: POV-NIA
 timeline_id: TL-NULL-DECISION
 motif_events: []

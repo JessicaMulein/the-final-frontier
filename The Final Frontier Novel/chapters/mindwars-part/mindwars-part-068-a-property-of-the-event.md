@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 68
+title: "A Property of the Event"
 pov_id: POV-MARA
 timeline_id: TL-MINDWARS-ONSET
 motif_events: []

@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 1
+title: "Noise Floor"
 pov_id: POV-MARA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []
@@ -19,9 +20,9 @@ I came out of the cabinet slowly, because it has a lip that has taken skin off b
 
 I had gone down there on the ninth of December to find a bad connector, which is honest work and which I like. The cabinet had been throwing a broadband step every few days, and a step like that is almost always a strand of shield gone green inside a crimp. Thumb each barrel, rock it a quarter turn, watch the trace. I reseated two that had gone slack, and neither was it.
 
-Ravi had been pulling the archive while I did that, and what he came back with was worse than a connector. Fourteen entries I had personally dismissed, each one annotated in my own shorthand. *plant. plant? chiller step. nothing.* Four of them said *nothing*, and *nothing* is not an annotation. It is a shrug with a timestamp on it.
+Ravi had been pulling the archive while I did that, and what he came back with was worse than a connector. The entries I had personally dismissed were each annotated in my own shorthand. *plant. plant? chiller step. nothing.* Four of them said *nothing*, and *nothing* is not an annotation. It is a shrug with a timestamp on it.
 
-Northline's noise floor was characterized before I arrived, and the list of it is pinned above the bench in the order I learned it. Thermal from the amplifiers, a diurnal term that tracks the cooling plant, a sidereal ripple belonging to the sky and not to us, and underneath all of it the hiss that is simply what matter at a temperature does. When something surfaces you walk down that list until one of our own machines confesses. I tabulated the fourteen while Ravi read them out, because tabulating is what I do when I am annoyed: date, start, duration, peak excess, and the small confident lie I had written at the time.
+Northline's noise floor was characterized before I arrived, and the list of it is pinned above the bench in the order I learned it. Thermal from the amplifiers, a diurnal term that tracks the cooling plant, a sidereal ripple belonging to the sky and not to us, and underneath all of it the hiss that is simply what matter at a temperature does. When something surfaces you walk down that list until one of our own machines confesses. I tabulated them while Ravi read them out, because tabulating is what I do when I am annoyed: date, start, duration, peak excess, and the small confident lie I had written at the time.
 
 Then we tested them properly. The plant's duty cycle first, because the plant is the loudest liar on site. No fit. The sidereal drift next, which would have made the events sky, and sky I could have published. Nothing there either.
 
@@ -35,7 +36,7 @@ Two point one per second, near enough, and a duty cycle nothing like the archive
 
 By early afternoon I had been down the wall twice, in order and then out of order. In twenty-two months that procedure had never once failed me. That is the sentence I would take back if I were allowed one.
 
-I went and stood at the window at the end of the hall with my hands flat on the sill, and the sill was cold through the paint. A line of poplars out there was going over in the wind. Nothing in the array knows what a Saturday is. Not the plant, whose week is a temperature. Not the sky, which has never heard of Sunday. A weekday is not a physical quantity; it is an agreement, and an agreement had put itself into my data fourteen times.
+I went and stood at the window at the end of the hall with my hands flat on the sill, and the sill was cold through the paint. A line of poplars out there was going over in the wind. Nothing in the array knows what a Saturday is. Not the plant, whose week is a temperature. Not the sky, which has never heard of Sunday. A weekday is not a physical quantity; it is an agreement, and an agreement had put itself into my data on every occasion.
 
 Then I went back to the bench, because the alternative was to keep standing there.
 
@@ -59,7 +60,7 @@ He held that a moment longer than the answer deserved, said goodnight, and went.
 
 So I stood over the page with the cap off the pen and composed the clause twice. Agreements are kept by people, at hours those people have agreed to keep. That is all it needed to say, and both times I put the cap back on. Rigour justified the omission and I let it, because the other reason was that a sentence with somebody in it turns an equipment log into a duty, and I was not ready to owe anything to a person I could not name.
 
-The fear did not go in the log either. Being wrong is cheap: you write it down and the next person saves a week. What I could not write was the clean result — my chain exonerated, and fourteen entries left keeping somebody's hours, with no instrument in that building capable of asking whose.
+The fear did not go in the log either. Being wrong is cheap: you write it down and the next person saves a week. What I could not write was the clean result — my chain exonerated, and those entries left keeping somebody's hours, with no instrument in that building capable of asking whose.
 
 The clause is still not on that page.
 

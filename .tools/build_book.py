@@ -33,12 +33,16 @@ sys.path.insert(0, str(TOOLS_DIR))
 from check_novel import (  # noqa: E402
     DEFAULT_MANUSCRIPT_ROOT,
     discover_chapter_files,
+    parse_chapter_document,
     parse_chapter_filename,
-    split_chapter_header,
 )
 
 BOOK_DIR = REPO_ROOT / "book"
-BUILD_DIR = BOOK_DIR / "build"
+# Intermediates live in a dot-prefixed top-level directory so the compiled
+# manuscript is never a discoverable Markdown source. The song-source collector
+# skips hidden direct children of the workspace root, which keeps a full copy of
+# the novel out of discovery without depending on what the file is named.
+BUILD_DIR = REPO_ROOT / ".build"
 DIST_DIR = BOOK_DIR / "dist"
 STYLE_DIR = TOOLS_DIR / "book"
 DEFAULT_COVER = REPO_ROOT / "cover.jpg"
@@ -50,10 +54,6 @@ MOVEMENT_TITLES = {
     "mindwars_part": ("Part Three", "Mindwars"),
     "aftermath_coda": ("Coda", "Aftermath"),
 }
-
-
-def _slug_to_title(slug: str) -> str:
-    return " ".join(part.capitalize() for part in slug.split("-") if part)
 
 
 def _read_text(path: Path) -> str:
@@ -90,17 +90,21 @@ def compile_manuscript(
         parsed = parse_chapter_filename(path.name)
         if parsed is None:
             raise SystemExit(f"Unexpected chapter filename: {path.name}")
-        try:
-            _header_lines, body = split_chapter_header(
-                path.read_text(encoding="utf-8"),
-                item=str(path.relative_to(REPO_ROOT)),
-            )
-        except Exception as exc:  # check_novel raises typed errors
-            raise SystemExit(f"Failed to split header for {path.name}: {exc}") from exc
-
-        body = body.strip()
+        relative_path = path.relative_to(REPO_ROOT).as_posix()
+        document = parse_chapter_document(
+            path.read_text(encoding="utf-8"), relative_path=relative_path
+        )
+        if document.diagnostics:
+            rendered = "; ".join(diagnostic.format_text() for diagnostic in document.diagnostics)
+            raise SystemExit(f"Invalid chapter header for {path.name}: {rendered}")
+        if document.prose_body is None:
+            raise SystemExit(f"Unresolved prose boundary: {path.name}")
+        body = document.prose_body.strip()
         if not body:
             raise SystemExit(f"Empty prose body: {path.name}")
+        title = document.header.get("title")
+        if not isinstance(title, str) or not title.strip():
+            raise SystemExit(f"Missing canonical title: {path.name}")
 
         if include_part_breaks and parsed.movement != previous_movement:
             label, subtitle = MOVEMENT_TITLES.get(
@@ -115,7 +119,6 @@ def compile_manuscript(
             blocks.append("")
             previous_movement = parsed.movement
 
-        title = _slug_to_title(parsed.slug)
         blocks.append(f"# Chapter {parsed.sequence}")
         blocks.append("")
         blocks.append(f"## {title}")

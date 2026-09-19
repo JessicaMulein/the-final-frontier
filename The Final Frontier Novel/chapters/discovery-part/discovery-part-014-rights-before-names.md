@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 14
+title: "Rights Before Names"
 pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []

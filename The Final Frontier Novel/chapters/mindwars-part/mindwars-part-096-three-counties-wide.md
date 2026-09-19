@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 96
+title: "Three Counties Wide"
 pov_id: POV-JULIAN
 timeline_id: TL-NULL-DECISION
 motif_events: []

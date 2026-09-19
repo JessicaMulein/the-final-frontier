@@ -1,6 +1,7 @@
 ---
 movement: aftermath_coda
 chapter: 123
+title: "The Hope She Hid"
 pov_id: POV-SAFIYA
 timeline_id: TL-CODA-CONSENT
 motif_events: []

@@ -68,6 +68,22 @@ class SiteExclusionFixtureTests(unittest.TestCase):
             ),
             "---\nchapter: 1\n---\n\nManuscript prose.\n",
         )
+        # This fixture copies the committed contract verbatim so contract drift is
+        # caught here. The contract also excludes the audiobook subproject root,
+        # and every exclusion is `must_exist: true`, so that root and its declared
+        # root_evidence children have to exist here too. Giving it markdown of its
+        # own turns the exclusion into something the assertions actually prove:
+        # a visible, non-manuscript source root whose files must not be collected.
+        (self.workspace / "audiobook-studio" / "src").mkdir(parents=True)
+        (self.workspace / "audiobook-studio" / "tools").mkdir(parents=True)
+        self.write_text(
+            "audiobook-studio/README.md",
+            "# Audiobook subproject\n\nTooling documentation, never a song.\n",
+        )
+        self.write_text(
+            "audiobook-studio/tools/narration/notes.md",
+            "# Narration notes\n\nNested tooling markdown, never a song.\n",
+        )
         self.write_text(
             "songs/control-song.md",
             "[Verse]\nA valid control song remains collectible.\n",
@@ -173,15 +189,30 @@ class SiteExclusionFixtureTests(unittest.TestCase):
         contract = CHECKER.load_exclusion_contract(REPOSITORY_ROOT)
 
         self.assertEqual(contract.contract_path, COMMITTED_CONTRACT.resolve())
-        self.assertEqual(len(contract.excluded_roots), 1)
-        excluded_root = contract.excluded_roots[0]
-        self.assertEqual(excluded_root.relative_path, "The Final Frontier Novel")
+        by_path = {root.relative_path: root for root in contract.excluded_roots}
         self.assertEqual(
-            excluded_root.resolved_path,
+            sorted(by_path), ["The Final Frontier Novel", "audiobook-studio"]
+        )
+
+        manuscript_root = by_path["The Final Frontier Novel"]
+        self.assertEqual(
+            manuscript_root.resolved_path,
             (REPOSITORY_ROOT / "The Final Frontier Novel").resolve(),
         )
-        self.assertTrue((excluded_root.resolved_path / "planning").is_dir())
-        self.assertTrue((excluded_root.resolved_path / "chapters").is_dir())
+        self.assertTrue((manuscript_root.resolved_path / "planning").is_dir())
+        self.assertTrue((manuscript_root.resolved_path / "chapters").is_dir())
+
+        # The audiobook subproject was `.audiobook` and was skipped only because a
+        # dot prefix made it an ineligible source root. It is now visible to the
+        # operating system, so its exclusion has to be declared rather than
+        # incidental, and its root evidence has to keep resolving.
+        studio_root = by_path["audiobook-studio"]
+        self.assertEqual(
+            studio_root.resolved_path,
+            (REPOSITORY_ROOT / "audiobook-studio").resolve(),
+        )
+        self.assertTrue((studio_root.resolved_path / "src").is_dir())
+        self.assertTrue((studio_root.resolved_path / "tools").is_dir())
 
     def test_missing_contract_fails_closed(self) -> None:
         with self.assertRaises(CHECKER.SiteExclusionError) as raised:

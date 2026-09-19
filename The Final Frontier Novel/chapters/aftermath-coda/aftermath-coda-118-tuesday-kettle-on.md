@@ -1,6 +1,7 @@
 ---
 movement: aftermath_coda
 chapter: 118
+title: "Tuesday Kettle On"
 pov_id: POV-SAFIYA
 timeline_id: TL-CODA-ACCOUNT
 motif_events: [MOT-KETTLE-01]

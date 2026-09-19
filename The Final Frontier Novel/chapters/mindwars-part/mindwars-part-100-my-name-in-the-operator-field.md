@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 100
+title: "My Name in the Operator Field"
 pov_id: POV-MARA
 timeline_id: TL-NULL-DECISION
 motif_events: []

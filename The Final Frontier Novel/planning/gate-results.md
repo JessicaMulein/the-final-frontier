@@ -59,7 +59,7 @@ Evidence behind this record, all reproducible from the repository:
 |---|---|
 | Site isolation | `check_novel.py --site-exclusion` exits `0` with `manuscript_entries=0`, and `test_site_exclusion.py` asserts the committed contract names the real manuscript root. |
 | Complete provisional planning | All five allowlisted record sources load with zero diagnostics: 128 `ArcEntry`, 44 `TimelineEntry`, 4 `POVProfile`, 4 `VoiceBrief`, 22 `MotifEvent`, 2 `LiteralPhraseConstraint`, and 65 `CrossCut` records, every stable ID resolving uniquely. |
-| Headers and filenames | `test_chapter_header_and_length.py` covers the nine required keys, missing and duplicate keys, malformed delimiters, and four-way filename/directory/header/ArcEntry agreement. |
+| Headers and filenames | `test_chapter_header_and_length.py` covers the ten required keys, including the canonical quoted title, missing and duplicate keys, malformed delimiters, and four-way filename/directory/header/ArcEntry agreement. |
 | Counts and Length_Classes | The same module covers empty, Unicode, CRLF, and tab counting and the 0/699/700/1,600/1,601/2,500/2,501 boundaries. |
 | Direct reference IDs | `test_direct_references_and_scope.py` covers valid, dangling, duplicate, many-to-one, and disagreeing references, and the closed four-mode `technical_state` table. |
 | Mechanism chronology | `test_mechanism_chronology.py` proves the December `RECEIVE` record, the receive-only apparatus with no transmit stage, the eight-second offset carried only on the receiving side, the distinct later bench `INTRUDE`, page nine as capability rather than December evidence, separated Trust composition and deposit, and the `DEC-015` pairing cases. |

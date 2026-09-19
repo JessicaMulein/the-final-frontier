@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 75
+title: "Timing and No Content"
 pov_id: POV-NIA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: []

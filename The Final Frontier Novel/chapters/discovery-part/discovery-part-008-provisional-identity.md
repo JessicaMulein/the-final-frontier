@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 8
+title: "Provisional Identity"
 pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []

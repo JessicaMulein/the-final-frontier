@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 39
+title: "A Benefit Becomes a Platform"
 pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []

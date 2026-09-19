@@ -17,7 +17,7 @@ Specification creation is planning only. Specification creation does not authori
 - **Source_Inspector**: The read-only component that resolves Chapter_3_Source and derives header, count, hash, and local segmentation evidence.
 - **Source_Snapshot**: The approved preflight record of Chapter_3_Source metadata, counts, hashes, and local plan.
 - **Runtime_Verifier**: The read-only component that validates the installed configuration, Python runtime, voice, model, region, audio format, and fidelity policy.
-- **Existing_Narration_CLI**: `.venv/bin/python -m frontier_audiobook` executed from `/Users/jessica/Documents/frontier-book/.audiobook`.
+- **Existing_Narration_CLI**: `.venv/bin/python -m frontier_audiobook` executed from `/Users/jessica/Documents/frontier-book/audiobook-studio`.
 - **Targeted_Checks**: Nonbillable checks for the paid guard, source transformation, segmentation, reuse, source-drift protection, complete event replay, and atomic paid wrapper.
 - **Broader_Suite_Result**: A result from a test scope wider than Targeted_Checks, when such a scope is run independently.
 - **Dry_Run**: The Existing_Narration_CLI Chapter 3 narration plan invoked with `--dry-run` and without paid confirmation.
@@ -31,13 +31,13 @@ Specification creation is planning only. Specification creation does not authori
 - **Paid_Attempt_Bundle**: The atomically committed directory containing `render-console.log` and `attempt.json` for Paid_Attempt.
 - **Charge_Uncertain**: A state in which a launched Paid_Attempt lacks complete, hash-consistent, committed evidence with an integer native return code.
 - **Exact_Fidelity**: Equality of expected and FINAL transcript Spoken_Token sequences, matching replayed LPCM, and zero mid-sentence partial turns.
-- **Chapter_3_Build_Root**: `.audiobook/build/narration/chapter-003-tiffany/`.
+- **Chapter_3_Build_Root**: `audiobook-studio/build/narration/chapter-003-tiffany/`.
 - **Chapter_3_Manifest**: `Chapter_3_Build_Root/manifest.json`.
 - **Active_Segment**: A record in the final Chapter_3_Manifest `segments` collection used in the delivered assembly.
 - **Reused_Segment**: An Active_Segment accepted from an intact matching Chapter 3 artifact without a new model call in Paid_Attempt.
 - **Event_Journal**: The JSONL Nova output-event file bound by active audio filename stem to one Active_Segment.
 - **Postflight_Validator**: The read-only validator for source, attempt, manifest, segment, journal, WAV, usage, cost, and isolation evidence.
-- **Chapter_WAV**: `.audiobook/build/narration/chapter-003-tiffany/chapter-003-tiffany.wav`.
+- **Chapter_WAV**: `audiobook-studio/build/narration/chapter-003-tiffany/chapter-003-tiffany.wav`.
 - **Proof_Copy**: `voice-samples/chapter-3-tiffany-proof.wav`.
 - **Proof_Deliverer**: The collision-safe component that creates or retains a byte-identical Proof_Copy after deterministic validation.
 - **Active_Artifact_Totals**: Four_Modality_Tokens aggregated from exactly one validated Event_Journal per Active_Segment, including Reused_Segments.
@@ -45,11 +45,11 @@ Specification creation is planning only. Specification creation does not authori
 - **Cost_Calculator**: The Decimal-based component that applies each Official_Rate to the corresponding token modality.
 - **Computed_Pre_Tax_Service_Cost**: A token-derived service cost before taxes, credits, discounts, invoice rounding, or account adjustments.
 - **Billing_Confirmation**: A separately obtained Cost Explorer or invoice amount and confirmation date.
-- **Proof_Report**: `.audiobook/build/narration/chapter-003-tiffany/chapter-003-tiffany-proof-report.md`.
+- **Proof_Report**: `audiobook-studio/build/narration/chapter-003-tiffany/chapter-003-tiffany-proof-report.md`.
 - **Evidence_Artifact**: A generated file under `Chapter_3_Build_Root/evidence/` or Proof_Report; existing runtime manifest, transcript, Event_Journal, segment-audio, and Chapter_WAV files retain their required runtime schemas and are not Evidence_Artifacts.
 - **Listening_Acceptance**: Optional human proof-listening feedback recorded only after deterministic validation.
 - **Workflow_Write_Allowlist**: Chapter_3_Build_Root and, after delivery approval, Proof_Copy.
-- **Protected_Artifact**: Chapter_3_Source; `.audiobook/src/frontier_audiobook/`; `.audiobook/config/audition.toml`; `.audiobook/README.md`; `.audiobook/pyproject.toml`; `.audiobook/requirements/`; `.audiobook/uv.lock`; `.audiobook/tests/test_audition.py`; `.audiobook/tests/test_narrate.py`; `.audiobook/tools/`; every Chapter 1 and Chapter 2 narration build and proof-audio file; `.kiro/specs/chapter-2-audio-proof/`; `.kiro/specs/The-Final-Frontier-novel/`; and existing written/audiobook front-matter or title-page files.
+- **Protected_Artifact**: Chapter_3_Source; `audiobook-studio/src/frontier_audiobook/`; `audiobook-studio/config/audition.toml`; `audiobook-studio/README.md`; `audiobook-studio/pyproject.toml`; `audiobook-studio/requirements/`; `audiobook-studio/uv.lock`; `audiobook-studio/tests/test_audition.py`; `audiobook-studio/tests/test_narrate.py`; `audiobook-studio/tools/`; every Chapter 1 and Chapter 2 narration build and proof-audio file; `.kiro/specs/chapter-2-audio-proof/`; `.kiro/specs/The-Final-Frontier-novel/`; and existing written/audiobook front-matter or title-page files.
 - **Per_File_Inventory**: Path, existence, byte count, SHA-256, Git status, and attribution recorded for each relevant file.
 - **Concurrent_Manuscript_Change**: A changed manuscript path other than Chapter_3_Source that is not attributed to an Audio_Proof_Workflow write.
 - **Delivery_Gate**: The all-pass condition for source, paid-attempt, manifest, fidelity, assembly, usage, cost, isolation, and proof-copy prerequisites.

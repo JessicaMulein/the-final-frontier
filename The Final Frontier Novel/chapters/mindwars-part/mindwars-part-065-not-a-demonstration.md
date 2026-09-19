@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 65
+title: "Not a Demonstration"
 pov_id: POV-NIA
 timeline_id: TL-MINDWARS-ONSET
 motif_events: []

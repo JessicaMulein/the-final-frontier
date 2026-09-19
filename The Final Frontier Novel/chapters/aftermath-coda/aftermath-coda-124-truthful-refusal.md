@@ -1,6 +1,7 @@
 ---
 movement: aftermath_coda
 chapter: 124
+title: "Truthful Refusal"
 pov_id: POV-MARA
 timeline_id: TL-CODA-REFUSAL
 motif_events: [MOT-COME-04, MOT-COPPER-03, MOT-KETTLE-02]

@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 93
+title: "One Synchronized Night"
 pov_id: POV-MARA
 timeline_id: TL-MINDWARS-TERRITORY
 motif_events: []

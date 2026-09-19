@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 92
+title: "Ranked by Belief"
 pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-TERRITORY
 motif_events: []

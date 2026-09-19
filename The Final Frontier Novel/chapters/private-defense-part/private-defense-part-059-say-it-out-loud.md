@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 59
+title: "Say It Out Loud"
 pov_id: POV-MARA
 timeline_id: TL-PRIVATE-PROTOCOL
 motif_events: []

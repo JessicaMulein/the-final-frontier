@@ -1,11 +1,12 @@
 ---
 movement: aftermath_coda
 chapter: 128
+title: "Knock and Wait"
 pov_id: POV-MARA
 timeline_id: TL-CODA-OUTWARD
 motif_events: [MOT-RECORD-03, MOT-KNOCK-03, MOT-WHOSE-01]
 hook: "She stands at a stranger's door inside the affected area, knocks, waits, and is left holding a question about provenance that nobody is going to answer for her."
-words: 1540
+words: 1539
 length_class: normal
 status: revised
 ---
@@ -13,7 +14,7 @@ The first door was on a terrace behind a garage, in February, and nobody came.
 
 Three knocks, unhurried, hands down at my sides. I waited about two minutes. There was a television on in the front room and a shape moved behind the glass at one point and did not come to the door, and if no answer comes that is an answer, which I wrote myself, so I went back to the car.
 
-I have been to thirty-one doors since February. Fourteen opened. Four of the fourteen asked me to leave, and one of those four was extremely calm about it and thanked me for coming, which was worse than shouting. Five let me stand in a hall or a kitchen and told me something.
+I have been to thirty-one doors since February. Fourteen opened. Four of those asked me to leave, and one of those four was extremely calm about it and thanked me for coming, which was worse than shouting. Five let me stand in a hall or a kitchen and told me something.
 
 The script I use at doors took me a fortnight to write and it is four sentences.
 

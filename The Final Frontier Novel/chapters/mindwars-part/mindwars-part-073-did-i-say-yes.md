@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 73
+title: "Did I Say Yes"
 pov_id: POV-NIA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: [MOT-KNOCK-01, MOT-YES-01]

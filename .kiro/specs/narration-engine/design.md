@@ -2,7 +2,7 @@
 
 ## What already exists
 
-Verified in `.audiobook/tools/kokoro-local/.venv` (the venv the current pipeline
+Verified in `audiobook-studio/tools/kokoro-local/.venv` (the venv the current pipeline
 uses), `mlx_audio/tts/models/` contains `fish_qwen3_omni`, `indextts`, `higgs_audio`,
 `higgs_audio_v3`, `qwen3_tts`, `chatterbox`, `longcat_audiodit`, `voxcpm` and others.
 Apple Silicon support for the candidate engines is therefore already installed, not
@@ -144,8 +144,8 @@ exactly rather than approximately.
 ## Repository layout
 
 ```
-.audiobook/tools/vendor/mlx-audio/        submodule, pinned upstream revision
-.audiobook/tools/narration/               this subproject
+audiobook-studio/tools/vendor/mlx-audio/        submodule, pinned upstream revision
+audiobook-studio/tools/narration/               this subproject
     engines/         fish_s2.py, qvoice.py, indextts2.py
     judges/          structural.py, acoustic.py, delivery.py, consensus.py
     plan.py  select.py  assemble.py  book.py

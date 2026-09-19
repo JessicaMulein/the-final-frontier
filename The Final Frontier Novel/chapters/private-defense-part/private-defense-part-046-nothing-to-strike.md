@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 46
+title: "Nothing to Strike"
 pov_id: POV-JULIAN
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: []

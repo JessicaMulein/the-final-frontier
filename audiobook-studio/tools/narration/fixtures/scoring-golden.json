@@ -1,0 +1,151 @@
+{
+  "|": {
+    "passed": true,
+    "wer": 0.0,
+    "coverage": 0.0,
+    "max_expected_gap": 0,
+    "max_added_span": 0,
+    "suspicious_spans": []
+  },
+  "The matched load was a brass slug.|The matched load was a brass slug.": {
+    "passed": true,
+    "wer": 0.0,
+    "coverage": 1.0,
+    "max_expected_gap": 0,
+    "max_added_span": 0,
+    "suspicious_spans": []
+  },
+  "Wednesday gave me the road call at six t|Wednesday gave me the road call at 6.31": {
+    "passed": false,
+    "wer": 0.3,
+    "coverage": 0.9,
+    "max_expected_gap": 3,
+    "max_added_span": 2,
+    "suspicious_spans": [
+      {
+        "expected": [
+          "six",
+          "thirty",
+          "one"
+        ],
+        "heard": [
+          "6",
+          "31"
+        ],
+        "expected_len": 3,
+        "heard_len": 2
+      }
+    ]
+  },
+  "Two point one per second, near enough|2 .1 per second near enough": {
+    "passed": false,
+    "wer": 0.4286,
+    "coverage": 0.8571,
+    "max_expected_gap": 3,
+    "max_added_span": 2,
+    "suspicious_spans": []
+  },
+  "Ravi wanted the control|Revy wanted the control": {
+    "passed": false,
+    "wer": 0.25,
+    "coverage": 1.0,
+    "max_expected_gap": 1,
+    "max_added_span": 1,
+    "suspicious_spans": [
+      {
+        "expected": [
+          "ravi"
+        ],
+        "heard": [
+          "revy"
+        ],
+        "expected_len": 1,
+        "heard_len": 1
+      }
+    ]
+  },
+  "the first alarm at six fifty-four|the first alarm at 6.54": {
+    "passed": false,
+    "wer": 0.4286,
+    "coverage": 0.8571,
+    "max_expected_gap": 3,
+    "max_added_span": 2,
+    "suspicious_spans": [
+      {
+        "expected": [
+          "six",
+          "fifty",
+          "four"
+        ],
+        "heard": [
+          "6",
+          "54"
+        ],
+        "expected_len": 3,
+        "heard_len": 2
+      }
+    ]
+  },
+  "it was her morning|it was her mourning": {
+    "passed": false,
+    "wer": 0.25,
+    "coverage": 1.0,
+    "max_expected_gap": 1,
+    "max_added_span": 1,
+    "suspicious_spans": [
+      {
+        "expected": [
+          "morning"
+        ],
+        "heard": [
+          "mourning"
+        ],
+        "expected_len": 1,
+        "heard_len": 1
+      }
+    ]
+  },
+  "summarizing the dates|summarising the dates": {
+    "passed": false,
+    "wer": 0.3333,
+    "coverage": 1.0,
+    "max_expected_gap": 1,
+    "max_added_span": 1,
+    "suspicious_spans": [
+      {
+        "expected": [
+          "summarizing"
+        ],
+        "heard": [
+          "summarising"
+        ],
+        "expected_len": 1,
+        "heard_len": 1
+      }
+    ]
+  },
+  "I cleared the state and processed the sa|I cleared the state again": {
+    "passed": false,
+    "wer": 0.5455,
+    "coverage": 0.4545,
+    "max_expected_gap": 6,
+    "max_added_span": 0,
+    "suspicious_spans": []
+  },
+  "The matched load was a brass slug the si|The matched load was a brass slug": {
+    "passed": false,
+    "wer": 0.7667,
+    "coverage": 0.2333,
+    "max_expected_gap": 23,
+    "max_added_span": 0,
+    "suspicious_spans": []
+  },
+  "no hidden buffer|no hidden hidden buffer": {
+    "passed": false,
+    "wer": 0.3333,
+    "coverage": 1.3333,
+    "max_expected_gap": 0,
+    "max_added_span": 1,
+    "suspicious_spans": []
+  }
+}

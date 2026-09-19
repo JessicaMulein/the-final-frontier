@@ -4,19 +4,19 @@
 
 Execute the existing Chapter 3 narration workflow through small, auditable Python/evidence steps. Nonbillable inspection, targeted checks, dry-run planning, fixed-profile identity verification, and current official pricing all precede the only paid leaf. The paid leaf must obtain a fresh, attempt-specific confirmation immediately before launch; opening this plan or starting earlier tasks is not paid authorization.
 
-All implementation and evidence helpers remain under `.audiobook/build/narration/chapter-003-tiffany/`. Do not modify Chapter 3 prose, narration source/dependencies, Chapter 1 or Chapter 2 audio, the Chapter 2 proof spec, the governing novel spec, or publishing front matter/title pages. Stop on any hard-gate failure or charge uncertainty and never retry the paid attempt automatically.
+All implementation and evidence helpers remain under `audiobook-studio/build/narration/chapter-003-tiffany/`. Do not modify Chapter 3 prose, narration source/dependencies, Chapter 1 or Chapter 2 audio, the Chapter 2 proof spec, the governing novel spec, or publishing front matter/title pages. Stop on any hard-gate failure or charge uncertainty and never retry the paid attempt automatically.
 
 ## Tasks
 
 - [ ] 1. Build and complete the nonbillable preflight
   - [ ] 1.1 Implement the Chapter 3 evidence and validation helper
-    - Create `.audiobook/build/narration/chapter-003-tiffany/evidence/tools/chapter3_proof.py` with Python-standard-library subcommands for source snapshots, per-file inventories, prior-state classification, dry-run sanitization, paid-attempt wrapping, manifest/replay/WAV/journal/cost validation, collision-safe copying, report generation, and final format checks.
+    - Create `audiobook-studio/build/narration/chapter-003-tiffany/evidence/tools/chapter3_proof.py` with Python-standard-library subcommands for source snapshots, per-file inventories, prior-state classification, dry-run sanitization, paid-attempt wrapping, manifest/replay/WAV/journal/cost validation, collision-safe copying, report generation, and final format checks.
     - Make the paid wrapper spawn a direct child, tee combined stdout/stderr, capture `Popen.wait()` native return code, write log/result in a same-filesystem staging directory, `fsync` files and directory, and atomically rename the complete bundle. Refuse a second attempt ID or any pre-existing staging/ambiguity marker.
-    - Keep generated evidence schema-versioned and transcript/prose-free; never persist an environment dump, credentials, or raw identity response. Use only existing dependencies and do not edit `.audiobook/src/` or repository test files.
+    - Keep generated evidence schema-versioned and transcript/prose-free; never persist an environment dump, credentials, or raw identity response. Use only existing dependencies and do not edit `audiobook-studio/src/` or repository test files.
     - _Requirements: 2.2, 2.3, 2.4, 3.2, 4.3, 4.4, 5.8, 5.9, 5.10, 5.11, 5.12, 5.13, 10.10_
 
   - [ ] 1.2 Run targeted nonbillable checks and record broader-suite status separately
-    - From `.audiobook/`, run only these existing node IDs: `tests/test_audition.py::test_paid_boundaries_fail_closed`, `tests/test_audition.py::test_event_replay_requires_complete_correlated_output`, `tests/test_narrate.py::test_frontmatter_is_excluded_and_segmentation_preserves_word_order`, `tests/test_narrate.py::test_carried_over_candidate_reclassifies_mismatch_without_render`, `tests/test_narrate.py::test_source_change_stops_before_next_paid_call`, `tests/test_narrate.py::test_source_change_after_last_render_stops_before_stitch`, `tests/test_narrate.py::test_soft_word_target_never_splits_a_sentence_or_paragraph`, and `tests/test_narrate.py::test_safe_turn_preflight_rejects_before_paid_render`.
+    - From `audiobook-studio/`, run only these existing node IDs: `tests/test_audition.py::test_paid_boundaries_fail_closed`, `tests/test_audition.py::test_event_replay_requires_complete_correlated_output`, `tests/test_narrate.py::test_frontmatter_is_excluded_and_segmentation_preserves_word_order`, `tests/test_narrate.py::test_carried_over_candidate_reclassifies_mismatch_without_render`, `tests/test_narrate.py::test_source_change_stops_before_next_paid_call`, `tests/test_narrate.py::test_source_change_after_last_render_stops_before_stitch`, `tests/test_narrate.py::test_soft_word_target_never_splits_a_sentence_or_paragraph`, and `tests/test_narrate.py::test_safe_turn_preflight_rejects_before_paid_render`.
     - Run the helper's synthetic wrapper checks for native exit `0`, representative nonzero exit, stdout/stderr teeing, interrupted staging, hash inconsistency, and refusal to reuse `paid-attempt-001`; the synthetic commands must not import or invoke AWS.
     - Write node-level and wrapper-check results to `evidence/targeted-checks.json`. Write `evidence/broader-suite-status.json` as `not_run` unless a separately obtained broader result exists; if one exists, record it as non-gating unless a failure maps to a targeted contract.
     - Stop before every later task if a targeted check fails. Do not run the full suite as a hidden delivery gate.
@@ -31,7 +31,7 @@ All implementation and evidence helpers remain under `.audiobook/build/narration
     - **Validates: Requirements 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 2.1, 2.2, 2.3, 3.6, 3.7, 6.4**
 
   - [ ] 1.4 Run and sanitize the exact Chapter 3 dry run
-    - From `.audiobook/`, run `.venv/bin/python -m frontier_audiobook audition narrate --chapter 3 --voice tiffany --max-words 5 --dry-run` without `AWS_PROFILE`, `--confirm-paid-render`, or `--accept-verbatim-prefix`.
+    - From `audiobook-studio/`, run `.venv/bin/python -m frontier_audiobook audition narrate --chapter 3 --voice tiffany --max-words 5 --dry-run` without `AWS_PROFILE`, `--confirm-paid-render`, or `--accept-verbatim-prefix`.
     - Parse stdout in memory; verify chapter `3`, voice `tiffany`, word count `1193`, planned calls `91`, and billable calls `0` against Property 1 evidence.
     - Write only sanitized fields, segment IDs/counts, and hashes to `evidence/preflight-dry-run.json`; do not persist `first_segments[].text` or raw dry-run output.
     - Stop before external preflight if any assertion fails.
@@ -48,7 +48,7 @@ All implementation and evidence helpers remain under `.audiobook/build/narration
   - [ ] 2.1 Obtain fresh confirmation, then run `paid-attempt-001` exactly once
     - **Paid hard gate:** immediately before process launch, call `user_input` with reason `general-question` and ask: **Authorize exactly one paid Chapter 3 Tiffany/Nova Sonic 2 invocation (`paid-attempt-001`) now?** Offer `Authorize one paid attempt now` and `Do not authorize`. Specification creation, task selection, and all preflight work are not authorization.
     - If the response is absent, skipped, declined, stale, or does not identify `paid-attempt-001`, stop before launching the child process. On explicit authorization, record only attempt ID, confirmation boolean, exact-command hash, and UTC timestamp in the attempt metadata.
-    - Through the tested wrapper, run from `.audiobook/` exactly once with `AWS_PROFILE=frontier-audiobook`: `.venv/bin/python -m frontier_audiobook audition narrate --chapter 3 --voice tiffany --max-words 5 --confirm-paid-render`. Do not add `--accept-verbatim-prefix`.
+    - Through the tested wrapper, run from `audiobook-studio/` exactly once with `AWS_PROFILE=frontier-audiobook`: `.venv/bin/python -m frontier_audiobook audition narrate --chapter 3 --voice tiffany --max-words 5 --confirm-paid-render`. Do not add `--accept-verbatim-prefix`.
     - Require the wrapper to commit `evidence/paid-attempt-001/render-console.log` and `attempt.json` atomically with an integer native return code and matching console SHA-256. The CLI may resume only by reusing intact matching Chapter 3 segments within this invocation.
     - If the native return code is nonzero, the wrapper is interrupted, staging remains, evidence is incomplete/inconsistent, fidelity fails, a partial turn occurs, or charge state is uncertain, preserve all evidence and stop. Do not retry, reconcile, reset, copy, or report success under this specification.
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7, 5.8, 5.9, 5.10, 5.11, 5.12, 5.13, 5.14, 5.15_
@@ -131,7 +131,7 @@ All implementation and evidence helpers remain under `.audiobook/build/narration
     - **Validates: Requirements 7.5, 7.6, 7.7, 7.8**
 
   - [ ] 4.3 Create the sanitized Chapter 3 proof report
-    - Generate `.audiobook/build/narration/chapter-003-tiffany/chapter-003-tiffany-proof-report.md` only from validated evidence after Task 4.2 succeeds.
+    - Generate `audiobook-studio/build/narration/chapter-003-tiffany/chapter-003-tiffany-proof-report.md` only from validated evidence after Task 4.2 succeeds.
     - Include source/header/count/hash contracts; minimal identity fields; exact paid argv/native return code/log hash; segment/fidelity/replay/assembly/reuse summaries; both four-modality token scopes; current official rate provenance; Decimal formulas/subtotals and both computed pre-tax costs; separate billing confirmation; per-file attribution; targeted and separately labeled broader-suite status; and matching WAV/proof hashes.
     - Record Listening Acceptance as `not performed` unless independently supplied after deterministic checks; if supplied, label it supplemental and never alter the deterministic result.
     - State that Chapter 1/2 audio, Chapter 2 spec, governing novel spec, narration source/dependencies, and publishing files were preserved. State that written/audiobook front matter and title-page implementation is a separate requested Publishing Workstream and was not implemented here.

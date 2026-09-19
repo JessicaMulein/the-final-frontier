@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 81
+title: "Two Living People at a Time"
 pov_id: POV-MARA
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []

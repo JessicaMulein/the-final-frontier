@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 32
+title: "A Handle on the Inside"
 pov_id: POV-MARA
 timeline_id: TL-PRIVATE-COPPER
 motif_events: []

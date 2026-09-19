@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 50
+title: "The Softened Minutes"
 pov_id: POV-JULIAN
 timeline_id: TL-APRIL-RECORD-ALTERATION
 motif_events: []

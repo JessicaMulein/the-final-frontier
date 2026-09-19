@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 76
+title: "Current Local Revocable"
 pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: []

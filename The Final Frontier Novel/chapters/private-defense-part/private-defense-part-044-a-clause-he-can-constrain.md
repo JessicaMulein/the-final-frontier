@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 44
+title: "A Clause He Can Constrain"
 pov_id: POV-JULIAN
 timeline_id: TL-APRIL-TERM-SHEET
 motif_events: []

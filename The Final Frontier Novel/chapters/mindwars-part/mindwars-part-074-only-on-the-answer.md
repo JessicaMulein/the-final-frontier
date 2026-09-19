@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 74
+title: "Only on the Answer"
 pov_id: POV-MARA
 timeline_id: TL-MINDWARS-COUNTERPHASE
 motif_events: [MOT-COME-03]

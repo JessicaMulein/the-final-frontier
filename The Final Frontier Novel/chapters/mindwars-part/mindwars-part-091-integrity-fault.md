@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 91
+title: "Integrity Fault"
 pov_id: POV-NIA
 timeline_id: TL-MINDWARS-TERRITORY
 motif_events: []

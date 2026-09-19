@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 79
+title: "The Capability We Condemned"
 pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []

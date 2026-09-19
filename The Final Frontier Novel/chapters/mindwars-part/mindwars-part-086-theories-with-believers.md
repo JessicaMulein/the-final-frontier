@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 86
+title: "Theories with Believers"
 pov_id: POV-JULIAN
 timeline_id: TL-MINDWARS-TERRITORY
 motif_events: []

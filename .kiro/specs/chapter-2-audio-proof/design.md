@@ -11,17 +11,17 @@ The workflow is fail-closed: nonbillable inspection and dry-run planning precede
 | Item | Contract |
 |---|---|
 | Workspace | `/Users/jessica/Documents/frontier-book` |
-| Command working directory | `/Users/jessica/Documents/frontier-book/.audiobook` |
+| Command working directory | `/Users/jessica/Documents/frontier-book/audiobook-studio` |
 | Chapter source | `The Final Frontier Novel/chapters/discovery-part/discovery-part-002-an-ordinary-morning.md` |
 | Verified source header | `chapter: 2`, `pov_id: POV-NIA`, `words: 1137`, `status: revised` |
-| Runtime | existing `.audiobook/.venv/bin/python -m frontier_audiobook` |
+| Runtime | existing `audiobook-studio/.venv/bin/python -m frontier_audiobook` |
 | Model and region | `amazon.nova-2-sonic-v1:0`, `us-east-1` |
 | Voice/profile/segmentation | `tiffany`, `frontier-audiobook`, target `5` words |
-| Build root | `.audiobook/build/narration/chapter-002-tiffany/` |
-| Manifest | `.audiobook/build/narration/chapter-002-tiffany/manifest.json` |
-| Assembled WAV | `.audiobook/build/narration/chapter-002-tiffany/chapter-002-tiffany.wav` |
+| Build root | `audiobook-studio/build/narration/chapter-002-tiffany/` |
+| Manifest | `audiobook-studio/build/narration/chapter-002-tiffany/manifest.json` |
+| Assembled WAV | `audiobook-studio/build/narration/chapter-002-tiffany/chapter-002-tiffany.wav` |
 | Proof copy | `voice-samples/chapter-2-tiffany-proof.wav` |
-| Evidence report | `.audiobook/build/narration/chapter-002-tiffany/chapter-002-tiffany-proof-report.md` |
+| Evidence report | `audiobook-studio/build/narration/chapter-002-tiffany/chapter-002-tiffany-proof-report.md` |
 
 The proof copy must be byte-identical to the assembled WAV. The report is local build evidence and may contain only the fixed profile label, identity-resolution pass/fail value, and timestamp from the non-model identity call; it must contain no account ID, ARN, role identifier, access key, credential value, other returned identity detail, or transcript body.
 
@@ -51,7 +51,7 @@ The workflow coordinates existing runtime and operational components; it introdu
 
 #### Nonbillable preflight interface
 
-Run from `.audiobook/`:
+Run from `audiobook-studio/`:
 
 ```bash
 .venv/bin/python -m frontier_audiobook audition narrate \
@@ -146,7 +146,7 @@ EXPECTED = {
     "voice_id": "tiffany",
     "chapter_path": "The Final Frontier Novel/chapters/discovery-part/discovery-part-002-an-ordinary-morning.md",
     "target_segment_words": 5,
-    "chapter_audio_path": ".audiobook/build/narration/chapter-002-tiffany/chapter-002-tiffany.wav",
+    "chapter_audio_path": "audiobook-studio/build/narration/chapter-002-tiffany/chapter-002-tiffany.wav",
 }
 ```
 
@@ -287,8 +287,8 @@ No property-based test suite or narration-code change is introduced: this is a o
 
 - Use only the exact named profile `AWS_PROFILE=frontier-audiobook`, which is user-approved as a valid static-credential profile and is not SSO. Require only that the profile resolve successfully through a non-model identity call and that the same exact profile be used for the paid command; credential type, age, expiration, and lifetime are not acceptance criteria. In every evidence artifact, persist only the profile label, identity-resolution pass/fail value, and timestamp from the identity call—never an account ID, ARN, role identifier, access key, credential value, or other returned identity detail.
 - The paid command is singular and explicit. A failed or uncertain invocation is inspected before any possible retry.
-- Build artifacts remain under ignored `.audiobook/build/`; only the requested proof WAV is copied to `voice-samples/`.
-- Do not modify `The Final Frontier Novel/`, `.kiro/specs/The-Final-Frontier-novel/`, `.audiobook/src/`, dependency files, `voice-samples/chapter-1-*`, or `.audiobook/build/narration/chapter-001-*`.
+- Build artifacts remain under ignored `audiobook-studio/build/`; only the requested proof WAV is copied to `voice-samples/`.
+- Do not modify `The Final Frontier Novel/`, `.kiro/specs/The-Final-Frontier-novel/`, `audiobook-studio/src/`, dependency files, `voice-samples/chapter-1-*`, or `audiobook-studio/build/narration/chapter-001-*`.
 
 ## Dependencies
 

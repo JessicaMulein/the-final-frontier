@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 84
+title: "Inside the Pocket"
 pov_id: POV-MARA
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []

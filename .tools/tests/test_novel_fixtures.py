@@ -23,6 +23,7 @@ import novel_fixtures as nf
 EXPECTED_HEADER_KEY_ORDER = (
     "movement",
     "chapter",
+    "title",
     "pov_id",
     "timeline_id",
     "motif_events",
@@ -33,7 +34,7 @@ EXPECTED_HEADER_KEY_ORDER = (
 )
 
 
-def test_chapter_header_has_exactly_the_nine_restricted_keys_in_order():
+def test_chapter_header_has_exactly_the_ten_restricted_keys_in_order():
     header = nf.chapter_header()
 
     assert tuple(header) == EXPECTED_HEADER_KEY_ORDER
@@ -54,11 +55,12 @@ def test_rendered_header_is_one_key_per_line_between_bare_delimiters():
     lines = text.split("\n")
 
     assert lines[0] == "---"
-    assert lines[10] == "---"
-    assert [line.split(":", 1)[0] for line in lines[1:10]] == list(
+    assert lines[11] == "---"
+    assert [line.split(":", 1)[0] for line in lines[1:11]] == list(
         EXPECTED_HEADER_KEY_ORDER
     )
     assert "motif_events: [MOT-COME-04, MOT-KETTLE-02]" in lines
+    assert 'title: "A Synthetic Chapter"' in lines
     assert 'hook: "A synthetic fixture hook line."' in lines
     # Prose Body begins after the closing delimiter and is unmodified.
     assert text.split("---\n", 2)[2].lstrip("\n") == prose
@@ -127,11 +129,11 @@ def test_json_fence_uses_the_required_information_string_and_round_trips():
 
 
 def test_overrides_and_drop_keys_can_inject_a_single_violation():
-    unknown = nf.chapter_header(overrides={"title": "not a permitted key"})
+    unknown = nf.chapter_header(overrides={"unexpected": "not a permitted key"})
     missing = nf.chapter_header(drop_keys=["words"])
     duplicated = nf.render_chapter_header(nf.chapter_header(), duplicate_key="status")
 
-    assert "title" in unknown and len(unknown) == len(nf.CHAPTER_HEADER_KEYS) + 1
+    assert "unexpected" in unknown and len(unknown) == len(nf.CHAPTER_HEADER_KEYS) + 1
     assert "words" not in missing
     assert duplicated.count("status:") == 2
 

@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Rebuild editions if prose moved",
+      "trigger": "Stop",
+      "description": "Rebuilds the EPUB and PDF at the end of a turn, but only when a chapter, front matter or back matter is newer than the built EPUB. About 13s when it runs, 0.03s when it does not. Planning documents are excluded since they do not appear in the editions.",
+      "action": {
+        "type": "command",
+        "command": "python3 .tools/hooks/rebuild_editions.py",
+        "timeout": 900
+      }
+    }
+  ]
+}

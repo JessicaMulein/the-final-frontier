@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 88
+title: "Recorded Once on Purpose"
 pov_id: POV-NIA
 timeline_id: TL-MINDWARS-TERRITORY
 motif_events: []

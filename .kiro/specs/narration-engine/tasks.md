@@ -11,7 +11,7 @@ an engine, and so the existing QVoice path keeps working throughout.
   - _Requirements: 6.2_
 
 - [ ] 2. Add `Blaizzy/mlx-audio` as a pinned submodule
-  - Place at `.audiobook/tools/vendor/mlx-audio`, record the commit.
+  - Place at `audiobook-studio/tools/vendor/mlx-audio`, record the commit.
   - Leave the existing `kokoro-local` venv and QVoice path untouched.
   - _Requirements: 7.1, 6.7_
 

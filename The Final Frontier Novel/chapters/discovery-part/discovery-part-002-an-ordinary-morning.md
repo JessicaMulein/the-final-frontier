@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 2
+title: "An Ordinary Morning"
 pov_id: POV-NIA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []

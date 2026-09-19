@@ -278,11 +278,11 @@ def test_a_scene_break_in_the_prose_body_is_not_a_second_header(checker):
 
 
 # ---------------------------------------------------------------------------
-# The restricted nine-key header block
+# The restricted ten-key header block
 # ---------------------------------------------------------------------------
 
 
-def test_a_conforming_header_parses_into_the_nine_logical_keys(checker):
+def test_a_conforming_header_parses_into_the_ten_logical_keys(checker):
     fixture = _chapter(900)
     document = _parse(checker, fixture)
 
@@ -291,6 +291,7 @@ def test_a_conforming_header_parses_into_the_nine_logical_keys(checker):
     assert sorted(document.header) == sorted(checker.CHAPTER_HEADER_KEYS)
     assert document.header["movement"] == "discovery_part"
     assert document.header["chapter"] == 1
+    assert document.header["title"] == "A Synthetic Chapter"
     assert document.header["words"] == 900
     assert document.header["length_class"] == "normal"
     assert document.header["motif_events"] == []
@@ -310,7 +311,7 @@ def test_duplicate_unknown_missing_and_null_keys_are_incomplete_input(checker):
         ),
         (
             "unknown key",
-            _chapter(900, overrides={"title": "Not a header key"}).text(),
+            _chapter(900, overrides={"unexpected": "Not a header key"}).text(),
             "CHAPTER_HEADER_KEY_UNKNOWN",
         ),
         (
@@ -364,6 +365,7 @@ def test_a_duplicated_key_keeps_no_trusted_value(checker):
         {"pov_id": "pov-mara"},
         {"timeline_id": "TLFIXTURE001"},
         {"hook": "   "},
+        {"title": "   "},
         {"motif_events": "MOT-A"},
     ],
     ids=[
@@ -376,6 +378,7 @@ def test_a_duplicated_key_keeps_no_trusted_value(checker):
         "lowercase pov id",
         "pov id without a hyphen",
         "blank hook",
+        "blank title",
         "unbracketed motif list",
     ],
 )

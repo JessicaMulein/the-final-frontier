@@ -1,11 +1,12 @@
 ---
 movement: discovery_part
 chapter: 3
+title: "The Failed Check"
 pov_id: POV-MARA
 timeline_id: TL-DECEMBER-RECEIVE
 motif_events: []
 hook: "The check she built to kill the result kills the wrong thing, and the eight seconds survive it as hers."
-words: 1191
+words: 1186
 length_class: normal
 status: revised
 ---
@@ -19,7 +20,7 @@ I was pleased for about ninety seconds. Then I worked out that a clean control t
 
 The acquisition clock had to hold as well, because a clock is where I would have hidden the fault. Ravi injected a timestamped pulse ahead of the digitiser while I watched the clock distribution and the archive writer. The sample landed where the pulse said it should. We repeated it with the reconstruction disabled and then with it restored, and acquisition never moved. The apparatus was taking the field continuously and dating what it took, so any delay I was about to find had to occur after acquisition.
 
-Ravi had cycled in, fourteen miles in the dark, and still had his trouser leg tucked into his sock two hours later. He is the only person at Northline who reruns my checks without being asked, because he does not believe a number produced by one pair of hands, including his own. He also writes everything down. Paper notebook, one page a day, the time in the margin and the initials of whoever was standing there.
+Ravi had come in before it was light and still had his coat on two hours later. He is the only person at Northline who reruns my checks without being asked, because he does not believe a number produced by one pair of hands, including his own. He also writes everything down. Paper notebook, one page a day, the time in the margin and the initials of whoever was standing there.
 
 "Yours or mine?" he said, holding the pen over the margin.
 

@@ -1075,11 +1075,12 @@ CHAPTER_STATUSES: Tuple[str, ...] = (
     "final",
 )
 
-# The restricted Chapter_Header key set is closed and ordered by
-# `record-schemas.md` section 1. No discriminator, schema key, or title.
+# The restricted Chapter_Header key set is closed and canonically ordered by
+# `record-schemas.md` section 1. No discriminator or schema key.
 CHAPTER_HEADER_KEYS: Tuple[str, ...] = (
     "movement",
     "chapter",
+    "title",
     "pov_id",
     "timeline_id",
     "motif_events",
@@ -2048,7 +2049,9 @@ def _parse_header_scalar(
             ),
         )
 
-    if key == "hook":
+    if key in ("hook", "title"):
+        # Titles are canonical reader-facing data and therefore always quoted;
+        # hooks retain their historical bare-value compatibility.
         if raw.startswith('"'):
             try:
                 value = json.loads(raw)
@@ -2063,14 +2066,25 @@ def _parse_header_scalar(
                 return None, _malformed_value(
                     key, item=item, observed=raw, expected="a quoted string"
                 )
-        else:
-            value = raw
-        if not value.strip():
+        elif key == "title":
             return None, _malformed_value(
                 key,
                 item=item,
                 observed=raw,
-                expected="a nonblank single-line Hook description",
+                expected="one complete double-quoted single-line plain-text title",
+            )
+        else:
+            value = raw
+        if not value.strip() or "\r" in value or "\n" in value or "\x00" in value:
+            return None, _malformed_value(
+                key,
+                item=item,
+                observed=raw,
+                expected=(
+                    "a nonblank single-line plain-text title"
+                    if key == "title"
+                    else "a nonblank single-line Hook description"
+                ),
             )
         return value, None
 
@@ -2161,7 +2175,7 @@ def _parse_header_scalar(
 def parse_chapter_header_lines(
     header_lines: Sequence[str], *, item: str
 ) -> Tuple[Dict[str, Any], Tuple[CheckerDiagnostic, ...]]:
-    """Validate the restricted header block into the logical nine-key object.
+    """Validate the restricted header block into its logical closed-key object.
 
     Only keys that parse cleanly appear in the returned mapping, so a caller
     can tell which declared values are trustworthy enough to compare. Every
@@ -2213,7 +2227,9 @@ def parse_chapter_header_lines(
                     scope=SCOPE_CHAPTER,
                     item=item,
                     observed=key,
-                    expected="exactly the nine keys " + ", ".join(CHAPTER_HEADER_KEYS),
+                    expected="exactly the {0} keys {1}".format(
+                        len(CHAPTER_HEADER_KEYS), ", ".join(CHAPTER_HEADER_KEYS)
+                    ),
                     disposition=DISPOSITION_INCOMPLETE,
                     related=(key,),
                 )

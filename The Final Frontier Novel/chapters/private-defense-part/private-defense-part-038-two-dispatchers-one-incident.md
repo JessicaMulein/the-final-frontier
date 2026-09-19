@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 38
+title: "Two Dispatchers One Incident"
 pov_id: POV-NIA
 timeline_id: TL-PRIVATE-OFFER
 motif_events: []

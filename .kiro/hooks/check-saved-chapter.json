@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Check saved chapter",
+      "trigger": "PostFileSave",
+      "description": "Runs the 0.1s chapter-scope objective check on a saved chapter file and records any defect for the next prompt. Catches header metadata drifting behind a prose edit, which is how chapter 3 ended up declaring 1191 words against an observed 1186.",
+      "matcher": "chapters/.*\\.md$",
+      "action": {
+        "type": "command",
+        "command": "python3 .tools/hooks/check_saved_chapter.py",
+        "timeout": 60
+      }
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 51
+title: "Put That on the Record"
 pov_id: POV-MARA
 timeline_id: TL-TRUST-FORMATION
 motif_events: [MOT-RECORD-01]

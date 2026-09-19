@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 35
+title: "A Private No"
 pov_id: POV-MARA
 timeline_id: TL-PRIVATE-COPPER
 motif_events: []

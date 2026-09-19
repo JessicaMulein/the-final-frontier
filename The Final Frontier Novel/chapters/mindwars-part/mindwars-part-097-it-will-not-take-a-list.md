@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 97
+title: "It Will Not Take a List"
 pov_id: POV-MARA
 timeline_id: TL-NULL-DECISION
 motif_events: []

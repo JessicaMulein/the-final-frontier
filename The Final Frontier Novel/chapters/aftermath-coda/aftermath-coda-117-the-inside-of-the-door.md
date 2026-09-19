@@ -1,6 +1,7 @@
 ---
 movement: aftermath_coda
 chapter: 117
+title: "The Inside of the Door"
 pov_id: POV-MARA
 timeline_id: TL-CODA-THRESHOLD
 motif_events: [MOT-KNOCK-02]

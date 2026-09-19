@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 6
+title: "No Transmit Stage"
 pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []

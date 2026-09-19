@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 108
+title: "What It Took"
 pov_id: POV-MARA
 timeline_id: TL-NULL-NIGHT
 motif_events: []

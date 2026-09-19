@@ -1,0 +1,54 @@
+Model dir: /Users/jessica/Documents/frontier-book/audiobook-studio/tools/vendor/qwen3-tts-c/models/qwen3-tts-1.7b-base
+Output: output.wav
+[CONFIG] After talker parse: num_layers=28
+[CONFIG] After CP parse: cp_num_layers=5, talker num_layers=28
+Config: hidden=2048 text_hidden=2048 layers=28 heads=16/8 head_dim=128 inter=6144
+  Code Predictor: hidden=1024 layers=5 heads=16 head_dim=128
+  Codec: vocab=3072 codebooks=16 entries=2048
+Threads: 4
+Loading Talker weights (hidden=2048, head_dim=128, layers=28)...
+  Talker: 28 layers loaded, KV cache 2048 slots
+  q_dim=2048 kv_dim=1024 (head_dim=128), NeoX RoPE theta=1000000
+Loading Code Predictor weights (hidden=1024, layers=5)...
+  MTP projection: 2048 -> 1024
+  Code Predictor: 5 layers loaded, q_dim=2048 kv_dim=1024
+Loading Speech Decoder weights...
+  [LOAD] pre_conv_w[:5]: [0.000016, 0.000021, -0.000115, 0.000046, 0.000027] bias[:3]: [-0.001906, 0.000104, -0.000244]
+  ConvTranspose weights: repacked once (106.9 MB, shared after fork)
+  Codebooks: 16/16 (dequantized from EMA)
+  Pre-transformer: 8 layers, input_proj=ok
+  ConvNeXt upsample: ok
+  Conv decoder: initial=ok, final=ok
+  Upsample blocks: [ok ok ok ok]
+  Final snake: ok
+  Speaker encoder: ECAPA-TDNN (enc_dim=2048)
+  tts_pad_embed[:3]=[-0.005340,0.008744,-0.004225]
+Model loaded in 215 ms
+
+MODEL SOURCES
+  talker linear:      safetensors BF16
+  talker embedding:   safetensors BF16
+  CP linear:          safetensors BF16
+  CP lm_head x15:     safetensors BF16
+  CP mtp_proj:        safetensors BF16
+  CP embedding x15:   safetensors BF16
+  speech decoder:     safetensors F32 (/Users/jessica/Documents/frontier-book/audiobook-studio/tools/vendor/qwen3-tts-c/models/qwen3-tts-1.7b-base/speech_tokenizer)
+  kleidiai packed:    int8 0 mat / 0 MB · bf16 170 mat / 2710 MB · q4 0 mat / 0 MB
+  ---
+GPU offload: bf16 matvec via 'metal' backend (EXPERIMENTAL; CPU stays default elsewhere)
+Metal talker: resident fused step ready (28 layers, hidden=2048, kv_max=2048)
+Metal CP: resident fused step ready (5 layers, hidden=1024)
+Metal CP device-frame ready (proj=yes, lm=bf16, 1 sync/frame)
+GPU fused Talker+CP ENABLED (Metal, resident, CP device-frame)
+seed: 1789675952 (auto/time-based)
+Reference audio: /Users/jessica/Documents/frontier-book/audiobook/qwen3-audition/qvoice/frontier-british-female-reference.wav (684705 samples, 24000 Hz, 28.53s)
+Mel spectrogram: 2674 frames x 128 mels
+Voice clone: extracted speaker embedding from /Users/jessica/Documents/frontier-book/audiobook/qwen3-audition/qvoice/frontier-british-female-reference.wav
+  Speech encoder: 21/15 components loaded
+  Speech encoder: 684705 samples → 356 frames (16 codebooks)
+Encoded ref audio: 356 ICL frames
+  Saved source model weights (24.0 MB) for cross-model fidelity
+Saved .qvoice v3 to /Users/jessica/Documents/frontier-book/audiobook/qwen3-audition/qvoice/frontier-british-female-17b.qvoice (embedding + 356 ICL frames + metadata + weights)
+  Language: English, Voice: Frontier British Female, Model: 1.7B
+Mode: ICL with 356 cached ref frames
+Voice profile created. Use --load-voice to generate speech.

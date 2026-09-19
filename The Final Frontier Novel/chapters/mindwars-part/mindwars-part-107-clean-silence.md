@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 107
+title: "Clean Silence"
 pov_id: POV-JULIAN
 timeline_id: TL-NULL-NIGHT
 motif_events: []

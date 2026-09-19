@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 94
+title: "Enrolled by Default"
 pov_id: POV-NIA
 timeline_id: TL-NULL-DECISION
 motif_events: []

@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 27
+title: "The Door Runs Inward"
 pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DOOR-INWARD
 motif_events: []

@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 22
+title: "Fundable"
 pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-NIA-AFTERMATH
 motif_events: []

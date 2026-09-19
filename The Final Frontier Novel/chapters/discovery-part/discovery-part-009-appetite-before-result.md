@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 9
+title: "Appetite Before Result"
 pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []

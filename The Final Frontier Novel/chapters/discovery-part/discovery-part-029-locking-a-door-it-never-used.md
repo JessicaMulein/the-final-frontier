@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 29
+title: "Locking a Door It Never Used"
 pov_id: POV-MARA
 timeline_id: TL-DISCOVERY-DOOR-INWARD
 motif_events: []

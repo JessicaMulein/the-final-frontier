@@ -1,0 +1,154 @@
+THE FINAL FRONTIER — LICENSING
+==============================
+
+This repository contains several kinds of work, and they are not offered under
+the same terms. Find the section that covers what you want to use.
+
+Only the novel prose and its planning documents are openly licensed. The songs,
+the cover art, and the audio recordings are fully reserved. The build tooling is
+MIT.
+
+The plain-language summaries in this file are for orientation. Where a full
+license text is linked or reproduced, that text is the operative one.
+
+
+-------------------------------------------------------------------------------
+1. THE NOVEL PROSE AND PLANNING DOCUMENTS  —  CC BY-NC-SA 4.0
+-------------------------------------------------------------------------------
+
+Novel prose and planning documents © 2026 Jessica Mulein.
+
+Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International License (CC BY-NC-SA 4.0).
+
+Covers:
+
+    The Final Frontier Novel/chapters/        the manuscript
+    The Final Frontier Novel/front-matter.md
+    The Final Frontier Novel/back-matter.md   including the Afterword
+    The Final Frontier Novel/planning/        arc, canon, decisions, ledgers
+
+You are free to share this material and to adapt it — translate it, excerpt it,
+record it, remix it, build on it — provided that you:
+
+  * give appropriate credit to Jessica Mulein, link to the license, and indicate
+    whether you made changes;
+  * do not use the material for commercial purposes; and
+  * distribute anything you build from it under these same terms.
+
+License deed:     https://creativecommons.org/licenses/by-nc-sa/4.0/
+Full legal code:  https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+SPDX identifier:  CC-BY-NC-SA-4.0
+
+Suggested attribution:
+
+    "The Final Frontier" by Jessica Mulein, licensed CC BY-NC-SA 4.0.
+    https://github.com/JessicaMulein/the-final-frontier
+
+Commercial rights are reserved. Print or digital publication, sale, audio or
+screen adaptation, and any other commercial use require separate permission.
+Ask; the answer is often yes.
+
+Note on the built editions: the EPUB and PDF produced into book/dist/ contain
+the licensed prose, but they also embed the cover art, which is reserved under
+section 2. Section 1 does not grant any right in the cover.
+
+
+-------------------------------------------------------------------------------
+2. WHAT IS NOT LICENSED HERE  —  ALL RIGHTS RESERVED
+-------------------------------------------------------------------------------
+
+Nothing in this file grants any right in the material below. Section 1 does not
+reach it. No right to reproduce, distribute, adapt, publicly perform, or
+commercially exploit it is given, and none should be inferred from its presence
+in a public repository.
+
+THE SONGS
+    songs/                      lyrics and production notes
+
+    Lyrics © 2026 Jessica Mulein. Fully copyright Jessica Mulein and Mulein
+    Studios LLC. The lyrics are not open-licensed, and neither are the
+    production notes, style prompts, or trilogy notes stored alongside them.
+
+    Where the novel reproduces a passage of lyric verbatim and as lyric, that
+    passage stays reserved. This carve-out is narrow on purpose: the recurring
+    phrases and motifs the novel shares with the songs — "come in," "did I say
+    yes," "copper and quiet," and the like — are prose under section 1, and you
+    do not need separate permission to reproduce the prose that contains them.
+
+THE COVER ART
+    cover.jpg
+
+    © 2026 Jessica Mulein. All rights reserved. Not licensed for reuse,
+    including in adaptations otherwise permitted under section 1.
+
+THE AUDIO RECORDINGS
+    audiobook/                  narrated renders, auditions, assembled M4B files
+    songs/auditions/
+
+    Sound recordings ℗ 2026 Mulein Studios LLC. All rights reserved.
+
+    Section 1 does permit you to produce your own non-commercial narration from
+    the licensed prose. It does not permit any use of these recordings.
+
+Permission for any of the above can be requested. Ask.
+
+
+-------------------------------------------------------------------------------
+3. THE TOOLING  —  MIT
+-------------------------------------------------------------------------------
+
+Covers:
+
+    .tools/                     build and manuscript verification
+    audiobook-studio/                 narration pipeline, excluding tools/vendor/
+    any other build or verification scripts in this repository
+
+MIT License
+
+Copyright (c) 2026 Digital Defiance, Jessica Mulein
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+The MIT grant applies to the software only. It conveys no right in the novel,
+the songs, the cover art, or the recordings.
+
+
+-------------------------------------------------------------------------------
+4. THIRD-PARTY MATERIAL
+-------------------------------------------------------------------------------
+
+Code vendored under audiobook-studio/tools/vendor/ is not covered by any section
+above. Each vendored project carries its own license and copyright holders; see
+the LICENSE file within each directory. Nothing in this file grants, restricts,
+or alters any right in that material.
+
+
+-------------------------------------------------------------------------------
+5. A NOTE ON AI CONTRIBUTION
+-------------------------------------------------------------------------------
+
+The prose in this novel was drafted by AI systems against specifications,
+outlines, and editorial decisions written by Jessica Mulein, then revised under
+her direction. The song lyrics are written by Jessica Mulein; their composition
+and performance are AI-produced. Copyright is claimed in the human authorship:
+the selection, arrangement, direction, and revision that produced these works.
+
+This note is disclosure, not a term of license. It does not enlarge or reduce
+any permission granted above.

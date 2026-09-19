@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 28
+title: "Named Second"
 pov_id: POV-NIA
 timeline_id: TL-DISCOVERY-DOOR-INWARD
 motif_events: []

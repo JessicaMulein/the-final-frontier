@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 66
+title: "No Border No Demand"
 pov_id: POV-MARA
 timeline_id: TL-MINDWARS-ONSET
 motif_events: []

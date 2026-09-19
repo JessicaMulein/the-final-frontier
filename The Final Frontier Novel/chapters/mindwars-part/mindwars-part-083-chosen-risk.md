@@ -1,6 +1,7 @@
 ---
 movement: mindwars_part
 chapter: 83
+title: "Chosen Risk"
 pov_id: POV-NIA
 timeline_id: TL-MINDWARS-SHIELD
 motif_events: []

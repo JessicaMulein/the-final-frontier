@@ -2,8 +2,8 @@
 __pycache__/
 *.py[cod]
 
-.audiobook/tools/kokoro-local/.venv/
-.audiobook/tools/kokoro-local/__pycache__/
+audiobook-studio/tools/kokoro-local/.venv/
+audiobook-studio/tools/kokoro-local/__pycache__/
 
 # `.pytest_cache/` needs no entry: pytest writes its own `.gitignore` containing
 # `*` inside that directory, so it already excludes itself.
@@ -15,15 +15,38 @@ __pycache__/
 
 # Local audiobook environments, generated manifests/audio, transcripts, and
 # deployment command outputs. Source, configuration, tests, and IaC stay tracked.
-.audiobook/.venv/
-.audiobook/.pytest_cache/
-.audiobook/.env
-.audiobook/build/
-.audiobook/dist/
-.audiobook/src/*.egg-info/
-.audiobook/infrastructure/packaged.*
-.audiobook/infrastructure/*-outputs.json
+audiobook-studio/.venv/
+audiobook-studio/.pytest_cache/
+audiobook-studio/.env
+audiobook-studio/build/
+audiobook-studio/dist/
+audiobook-studio/src/*.egg-info/
+audiobook-studio/infrastructure/packaged.*
+audiobook-studio/infrastructure/*-outputs.json
 
 # Written-edition compile outputs (sources under .tools/book/ stay tracked).
-book/build/
+# Intermediates are dot-prefixed to stay out of song-source discovery.
+.build/
 book/dist/
+
+# Narration engine subproject (audiobook-studio/tools/narration). Source, fixtures and
+# the spec are tracked; the environment and generated audio are not. Renders are
+# reproducible from a manifest, a reference and a seed.
+audiobook-studio/tools/narration/.venv/
+audiobook-studio/tools/narration/out/
+audiobook-studio/tools/narration/__pycache__/
+
+# Vendored third-party runtimes. `mlx-audio` is a pinned submodule and tracked as
+# such; the Qwen3 pure-C runtime and its model weights are large downloads with
+# their revision and binary hash recorded in
+# assets/provenance/qvoice-legacy/qvoice/production-recipe.json.
+audiobook-studio/tools/vendor/qwen3-tts-c/
+
+# Superseded complete audiobook (Chatterbox EMNS M4B plus its 128 MP3s), parked
+# until the new render replaces it. 1.2 GB of derived output.
+audiobook-studio/superseded/
+
+# Built CustomVoice profiles: 24 MB each, and rebuildable from the reference WAV
+# via the recipe, which records the expected sha256.
+*.qvoice
+*.bin

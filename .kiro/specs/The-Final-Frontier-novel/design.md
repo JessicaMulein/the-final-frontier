@@ -761,6 +761,7 @@ Pairing evidence within `technical_state` records pair addresses, consent start,
 |---|---|---|
 | `movement` | `discovery_part`, `private_defense_part`, `mindwars_part`, `aftermath_coda` | Exactly one; agrees with directory, filename, and ArcEntry |
 | `chapter` | integer 1–128 provisionally | Exactly one; global sequence |
+| `title` | quoted nonblank single-line plain text | Exactly one; canonical reader-facing title for written and spoken editions; independent of filename slug |
 | `pov_id` | stable POV_ID | Exactly one; resolves in POV_Roster |
 | `timeline_id` | stable Timeline_ID | Exactly one; resolves in Canon_Bible |
 | `motif_events` | list of Motif_Event IDs or `[]` | Exactly one key; every ID resolves and agrees with ledger |
@@ -775,6 +776,7 @@ Metadata-only example:
 ---
 movement: aftermath_coda
 chapter: 124
+title: "Truthful Refusal"
 pov_id: POV-MARA
 timeline_id: TL-CODA-VISIT-01
 motif_events: [MOT-COME-04, MOT-KETTLE-02]

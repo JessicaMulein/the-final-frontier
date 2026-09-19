@@ -1,6 +1,7 @@
 ---
 movement: discovery_part
 chapter: 15
+title: "Who Will Be Holding It"
 pov_id: POV-JULIAN
 timeline_id: TL-DISCOVERY-DUE-DILIGENCE
 motif_events: []

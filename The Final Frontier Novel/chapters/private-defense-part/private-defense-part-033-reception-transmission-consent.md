@@ -1,6 +1,7 @@
 ---
 movement: private_defense_part
 chapter: 33
+title: "Reception Transmission Consent"
 pov_id: POV-JULIAN
 timeline_id: TL-PRIVATE-COPPER
 motif_events: []

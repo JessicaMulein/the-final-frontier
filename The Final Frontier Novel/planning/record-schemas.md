@@ -4,6 +4,7 @@ Schema version: **1**
 Amended: **2026-09-11** — `TimelineEntry.technical_state` extended with the four-mode enum, `CancelState`, `PairState`, and `PairingEvidence` under the amended `DEC-015`. No record type was added; mechanism and pairing state live inside the existing chronology record.  
 Amended: **2026-09-13** — `ArcEntry` gains the required `estimated_words` key, integer or `null`, so the `DEC-016` same-POV run word limit of 3,600 Prose_Words is checkable at planning time. No record type was added. Existing `ArcEntry` records written before this amendment must gain the key; a conformance note is warranted because the record is closed to unknown fields and permits no omitted key.  
 Amended: **2026-09-15** — the [Character ID registry](#character-id-registry) states where a Character ID is authoritatively declared, so a `TimelineEntry.participants` or `PairState.participants` reference to a non-viewpoint supporting character resolves instead of dangling. No record type, field, or enum value was added, and no existing record changes: the registry is the union of `POVProfile.character_id` values and approved `character-name` `NovelExtension` records, all four of which already lead their `fact` with the declared Character ID. The `POVProfile` bijection rule is unchanged and is now explicitly scoped to `POVProfile` records, which is the only place it ever applied.  
+Amended: **2026-09-16** — `ChapterHeader` gains the required quoted `title` key as the canonical reader-facing title for written and audio editions. Filename slugs remain stable mechanical handles and do not define or constrain title text. This is a metadata-only migration: Prose Bodies and their word counts do not change, but consumers that hash complete chapter files must regenerate those snapshots.
 Applies to: planning records and the logical representation of Chapter Headers for *The Final Frontier*  
 Authority: Requirements 9.6, 12.1, 12.4, 12.5, 12.6, and 14.1 through 14.14; the design data models; and binding author decisions through `DEC-016`
 
@@ -43,13 +44,13 @@ A parser SHALL retain the document path, fence ordinal, array index when applica
 A real Chapter Header is not stored in a planning-document JSON fence. It is the restricted delimited block at the very beginning of a Chapter File:
 
 - the first physical line MUST be `---`;
-- the next lines contain exactly the nine keys defined by `ChapterHeader`, one key per line;
+- the next lines contain exactly the ten keys defined by `ChapterHeader`, one key per line;
 - the next line containing only `---` closes the header;
 - no second header block, duplicate key, unknown key, multiline value, YAML anchor/tag, or value inferred from prose is permitted;
 - everything after the closing delimiter is the Prose Body;
 - if either delimiter is missing or ambiguous, word counting and semantic validation for that file MUST stop with an incomplete-input diagnostic.
 
-The checker parses this restricted header into the logical nine-key JSON object shown in the `ChapterHeader` section. The fenced JSON example exists for fixtures and schema verification only.
+The checker parses this restricted header into the logical ten-key JSON object shown in the `ChapterHeader` section. The fenced JSON example exists for fixtures and schema verification only.
 
 ### Common types
 
@@ -152,6 +153,7 @@ Every `LiteralPhraseConstraint` has `scan_scope: "chapter-prose-body-only"`. Lit
 |---|---|---:|---|
 | `movement` | `Movement` | yes | Agrees with directory, filename, and `ArcEntry`. |
 | `chapter` | `ChapterNumber` | yes | Global sequence; does not reset by movement. |
+| `title` | `SingleLineString` | yes | Canonical reader-facing chapter title for written, tagged-audio, and spoken-announcement output. It is plain text, is not inferred from the filename slug, and does not need to match that slug. |
 | `pov_id` | `StableID` | yes | Resolves to exactly one `POVProfile.pov_id`. |
 | `timeline_id` | `StableID` | yes | Resolves to exactly one `TimelineEntry.timeline_id`. |
 | `motif_events` | array of `StableID` | yes | Unique items; every item resolves to a `MotifEvent` assigned to this chapter. Empty is `[]`. |
@@ -162,12 +164,13 @@ Every `LiteralPhraseConstraint` has `scan_scope: "chapter-prose-body-only"`. Lit
 
 ### Invariants
 
-The key set is **exactly** the nine keys above: no discriminator, schema key, title, Cross Cut key, record note, or unknown extension may appear. Each key occurs exactly once. No value may be `null`. Counts above 2,500 are invalid regardless of the declared class.
+The key set is **exactly** the ten keys above: no discriminator, schema key, Cross Cut key, record note, or unknown extension may appear. Each key occurs exactly once. No value may be `null`. `title` is a double-quoted, nonblank, single-line plain-text string; title choice and capitalization remain editorial rather than checker-scored. Counts above 2,500 are invalid regardless of the declared class.
 
 ```json record=ChapterHeader schema=1
 {
   "movement": "aftermath_coda",
   "chapter": 124,
+  "title": "Truthful Refusal",
   "pov_id": "POV-MARA",
   "timeline_id": "TL-EXAMPLE-CODA-VISIT",
   "motif_events": [
@@ -1255,7 +1258,7 @@ An `error` with `exit_class: "violation"` contributes to exit 1. An `error` with
 
 A later checker implementation SHALL enforce at least these schema-level relationships:
 
-- every Chapter Header has exactly the nine declared keys and agrees with filename, directory, and `ArcEntry`;
+- every Chapter Header has exactly the ten declared keys and agrees with filename, directory, and `ArcEntry`; each title is a quoted, nonblank, single-line plain-text string and is not inferred from or required to match the filename slug;
 - every declared POV, Timeline, Motif Event, Reveal, Cross Cut, and other direct reference resolves uniquely;
 - every `TimelineEntry.technical_state` declares exactly one `mode` and satisfies that mode's closed invariants, with `cancel_state`, `pair_state`, and `pairing_evidence` present only for their own mode;
 - every `CANCEL` entry is unaddressed, subtractive only, confined to Mindwars chapters, untargetable, without additive inverse, authorized institutionally at area scale or by one individual's current specific revocable consent when bounded, and yields no provenance;
