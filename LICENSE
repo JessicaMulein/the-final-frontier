@@ -6,7 +6,13 @@ the same terms. Find the section that covers what you want to use.
 
 Only the novel prose and its planning documents are openly licensed. The songs,
 the cover art, and the audio recordings are fully reserved. The build tooling is
-MIT.
+MIT. The speech corpora used to clone the narrator's voice are third-party
+material under their own licences.
+
+Two things readers ask about are answered in section 5: the author retains
+copyright and remains free to write further works that overlap with this one, and
+the ideas themselves are not licensed here because copyright does not reach them.
+Contributions are welcome on the terms in CONTRIBUTING.md.
 
 The plain-language summaries in this file are for orientation. Where a full
 license text is linked or reproduced, that text is the operative one.
@@ -213,7 +219,67 @@ audiobook's narrator irreproducible.
 
 
 -------------------------------------------------------------------------------
-5. A NOTE ON AI CONTRIBUTION
+5. RESERVATION OF RIGHTS, AND FUTURE WORKS
+-------------------------------------------------------------------------------
+
+This section states the author's position. It does not enlarge or reduce any
+permission granted above, and it is not legal advice.
+
+NON-EXCLUSIVE, AND NOTHING IS TRANSFERRED
+
+    The grants in sections 1 and 3 are non-exclusive licenses, not assignments.
+    Copyright in the novel prose, the planning documents, the lyrics, the cover,
+    and the recordings remains with Jessica Mulein, and with Mulein Studios LLC
+    where named. All rights not expressly granted are reserved.
+
+THE AUTHOR'S OWN USE IS NOT LIMITED
+
+    Nothing above restricts the author. She may write sequels, prequels,
+    adaptations, retellings, and further works in this world; may reuse any
+    character, name, setting, structure, phrase, or passage; may produce works
+    that overlap with or are substantially similar to this corpus; and may license
+    any of it to anyone else on any terms, including terms that differ from those
+    offered here. ShareAlike in section 1 binds those who receive the work, not
+    the person who wrote it.
+
+CONCEPTS AND IDEAS ARE NOT LICENSED, BECAUSE THEY ARE NOT OWNED
+
+    Copyright protects expression, not ideas. The premise, the world, the
+    technical conceits, the ethical argument, the four communication modes, and
+    the questions this book asks are not licensed by section 1, and no one
+    acquires any exclusive right in them by reading, adapting, or building on this
+    corpus -- nor does the author claim one. What section 1 licenses is this
+    particular expression of them.
+
+    That cuts both ways, and it is stated so neither side is surprised: others
+    remain free to write about addressable thought and consent, and the author
+    remains free to return to it.
+
+NO TRADEMARK LICENSE
+
+    No section grants any right in a name, title, or mark, including "The Final
+    Frontier", "Mulein Studios", or "Digital Defiance". Any such rights, if they
+    exist, are separate from copyright and are not licensed here.
+
+WHAT THE AUTHOR CANNOT TAKE BACK
+
+    Stated plainly because it is the one real limit. A Creative Commons 4.0
+    license is irrevocable for material already distributed under it. Later
+    versions of this work may carry different terms, and distribution here may
+    stop at any time, but anyone who has already received this corpus under
+    CC BY-NC-SA 4.0 keeps those permissions permanently. Relicensing changes the
+    future, not the past.
+
+CONTRIBUTIONS
+
+    Because a contributor holds copyright in what they write, accepted
+    contributions could otherwise constrain the author's ability to relicense or
+    to reuse this material in later works. CONTRIBUTING.md states the terms on
+    which contributions are accepted so that does not happen.
+
+
+-------------------------------------------------------------------------------
+6. A NOTE ON AI CONTRIBUTION
 -------------------------------------------------------------------------------
 
 The prose in this novel was drafted by AI systems against specifications,
