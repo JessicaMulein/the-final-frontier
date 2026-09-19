@@ -47,6 +47,19 @@ If you would rather not grant that, say so in the pull request. Small correction
 typos, factual errors, broken links, build fixes — can usually be taken as a report and
 reimplemented independently, which costs you nothing and keeps the provenance clean.
 
+## Building in the Mindwars world
+
+You may. Section 1 of the LICENSE licenses adaptation, so new stories using Mara Venn,
+Nia Calder, Safiya Mir, the null, the Trust or the Radius are permitted — with credit,
+non-commercially, and shared under the same terms.
+
+Those are your works, not contributions to this one, and they do not belong in a pull
+request. Publish them yourself. A link in an issue is welcome and the author would
+rather read it than not.
+
+The commercial lane is reserved: nothing built on this corpus may be sold. That is what
+NonCommercial means, and it is the boundary that lets the rest be open.
+
 ## What is especially welcome
 
 - **Accessibility findings.** This book is meant to be usable by blind and low-vision
