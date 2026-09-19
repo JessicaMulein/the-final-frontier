@@ -1,3 +1,0 @@
-voice-samples/Logic/Frontier-001.wav filter=lfs diff=lfs merge=lfs -text
-voice-samples/Logic/Frontier-001.m4a filter=lfs diff=lfs merge=lfs -text
-voice-samples/Logic/Frontier-002.wav filter=lfs diff=lfs merge=lfs -text
