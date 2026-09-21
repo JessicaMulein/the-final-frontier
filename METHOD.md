@@ -73,6 +73,18 @@ above. The first full draft cost about $600 in model spend. The songs are my
 lyrics with Suno composition and performance. The audiobook is synthesised
 narration. The cover is generated.
 
+The audiobook cost no cloud spend at all: it was rendered locally with Fish
+S2 Pro on an Apple M4 Max with 64 GB of unified memory, using the Mac's
+own GPU. That is the whole hardware bill — no rented accelerators, no per-minute
+inference fees. It is not fast. Generation ran at roughly 1.3–1.5× real time per
+chapter (a six-minute chapter takes eight or nine minutes to render), with peak
+memory around 21–30 GB, and the full 128-chapter book is about 13.4 hours of
+audio. Counting the whole-book render, the chapter announcements, the handful of
+re-renders and verified repairs, and the MP3 and M4B encoding, building the
+finished audiobook took roughly a day of machine time on that one laptop. A
+reproducer should budget about that, and expect the memory ceiling to matter more
+than clock speed.
+
 What the models did not do: choose the premise, set the four-mode mechanism,
 decide that the origin of Nia Calder's wanting is never resolved, hold the
 consent line through 128 chapters, pick what the book refuses to do, or write a

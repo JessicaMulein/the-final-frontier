@@ -116,6 +116,13 @@ cost about $600 in model spend, on top of a great deal of human effort. The song
 are my lyrics with Suno composition and performance. The narration is synthesised.
 The cover is generated.
 
+The audiobook was rendered locally on one laptop — an Apple M4 Max with
+64 GB of unified memory — using Fish S2 Pro on the Mac's own GPU, with no cloud
+spend. It runs at roughly 1.3–1.5× real time per chapter and peaks around
+21–30 GB of memory; building the finished ~13.4-hour book (render, announcements,
+repairs, and MP3/M4B encoding) took about a day of machine time. See
+[METHOD.md](METHOD.md) for detail.
+
 I wrote the requirements, the design, the arc, the POV roster, the motif ledger,
 the canon, and all 23 recorded decisions. No model chose the premise, set the
 mechanism, decided what the book refuses to resolve, or held the consent line
