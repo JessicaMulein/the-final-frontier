@@ -24,18 +24,27 @@
 \widowpenalty=10000
 \displaywidowpenalty=10000
 
-% \coverimage is defined by book/build/cover-image.tex (empty = no cover page).
-\newcommand{\FrontierCoverPage}{%
+% Cover page handling.
+%
+% Pandoc emits `\maketitle`, and in the book class that produced a title page
+% that, together with `\frontmatter`'s page breaks, left a blank leading page:
+% readers opened the PDF to an empty page and had to scroll to find the cover.
+% The manuscript already carries its own title, byline and rights as its opening
+% section, so the automatic title page is redundant. We redefine `\maketitle` to
+% emit exactly one thing — the full-page cover image as page 1 — and nothing when
+% no cover is supplied. `\coverimage` is defined by book/build/cover-image.tex.
+\renewcommand{\maketitle}{%
   \ifx\coverimage\empty
   \else
-    \begin{titlepage}
-      \centering
-      \vspace*{0.5in}
-      \includegraphics[width=\textwidth,keepaspectratio]{\coverimage}
-      \vfill
-    \end{titlepage}
+    \thispagestyle{empty}%
+    % Place the cover on the CURRENT page (page 1). No \newgeometry here: it
+    % ejects a blank page when invoked at the top of the document, which is the
+    % blank-first-page bug. Center a text-width image vertically instead.
+    \vspace*{\fill}%
+    \begin{center}%
+      \includegraphics[width=\textwidth,keepaspectratio]{\coverimage}%
+    \end{center}%
+    \vspace*{\fill}%
     \clearpage
   \fi
 }
-
-\AtBeginDocument{\FrontierCoverPage}

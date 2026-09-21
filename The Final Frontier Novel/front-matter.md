@@ -2,7 +2,7 @@
 
 A novel by Jessica Mulein
 
-Novel prose © 2026 Jessica Mulein. All rights reserved.
+Novel prose © 2026 Jessica Mulein. Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). You are free to share and adapt this text non-commercially, with attribution, under the same terms. The audiobook narration is licensed on the same terms; the song lyrics and cover art are reserved. Full terms: https://github.com/JessicaMulein/the-final-frontier/blob/main/LICENSE
 
 ## Dedication
 
