@@ -22,12 +22,17 @@ The listen list it emits is therefore a triage aid, not a guarantee.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import subprocess
 import sys
 import time
 from pathlib import Path
+
+import soundfile as sf
+
+from render_chapter_fish import MANIFEST_SCHEMA, production_identity
 
 REPO = Path(__file__).resolve().parents[3]
 CHAPTERS = REPO / "The Final Frontier Novel/chapters"
@@ -36,6 +41,118 @@ HERE = Path(__file__).resolve().parent
 # Delivery naming already established in audiobook/: sequence = 4 + chapter.
 SEQUENCE_OFFSET = 4
 VOICE_TAG = "fish-clean92"
+
+# Narrow, evidence-backed exceptions. Every value is part of production identity, so
+# resume cannot confuse an exceptional render with the default pipeline.
+CHAPTER_OVERRIDES: dict[int, dict] = {
+    13: {
+        # 2,166 words exceed this Fish conversation's reliable stamina. One call
+        # deterministically fails near the end; two calls re-anchored to the same
+        # byte-identical state pass whole-chapter ASR.
+        "max_words_per_call": 1100,
+    },
+    15: {
+        # Fish treats the Markdown-emphasized phrase beginning "Open Channel" like an
+        # instruction and produces unintelligible audio. Punctuation-only generation
+        # spelling preserves the verifier's token sequence; the bad region is then
+        # replaced by a separately verified phrase at identical duration.
+        "spoken_replacements": (
+            "*Open Channel working group*, lower case, in a footnote="
+            "Open-Channel working group, lower-case, in a footnote",
+        ),
+        "patch": {
+            "phrase": REPO
+            / "audiobook-studio/assets/production-patches/ch015-open-channel-working-group.wav",
+            "start": 25.32,
+            "end": 28.88,
+            "announcement_text": "Chapter Fifteen. Who Will Be Holding It.",
+        },
+    },
+    26: {
+        # Eleven words collapse into 1.11 seconds of unintelligible speech. Replace
+        # that exact sample-map-bounded region with a normally paced verified phrase;
+        # the patcher shifts every later assembly/read-along offset by the delta.
+        "patch": {
+            "phrase": REPO
+            / "audiobook-studio/assets/production-patches/ch026-confidentiality-terms.wav",
+            "start": 161.40,
+            "end": 162.511497,
+            "announcement_text": "Chapter Twenty-Six. Already Outside.",
+            "allow_duration_change": True,
+        },
+    },
+    39: {
+        # Two tail-of-sentence omissions: (1) "moved one deliberate correction in
+        # front of an ordinary delay" dropped from the end of the page-three sentence,
+        # and (2) "disabled unless both participants expressly enable it for one
+        # identified session" dropped from the end of the definitions paragraph.
+        # Re-rendering at seed 70 reproduces both deterministically.
+        "patches": [
+            {
+                "phrase": REPO
+                / "audiobook-studio/assets/production-patches/ch039-deliberate-correction.wav",
+                "start": 70.64,
+                "end": 71.22,
+                "announcement_text": "Chapter Thirty-Nine. A Benefit Becomes a Platform.",
+                "allow_duration_change": True,
+            },
+            {
+                "phrase": REPO
+                / "audiobook-studio/assets/production-patches/ch039-content-recording-session.wav",
+                "start": 218.17,
+                "end": 218.666,
+                "announcement_text": "Chapter Thirty-Nine. A Benefit Becomes a Platform.",
+                "allow_duration_change": True,
+            },
+        ],
+    },
+    113: {
+        # A 10-word clause ("and that nobody had yet written down what it took") is
+        # dropped from the end of the chapter's final long sentence: the audio jumps
+        # from "give somebody," straight to "I read it back". The verified phrase
+        # re-supplies "give somebody, and that nobody ..." from just before "give",
+        # inside the speech segment that ends at the paragraph gap.
+        "patch": {
+            "phrase": REPO
+            / "audiobook-studio/assets/production-patches/ch113-nobody-wrote-it-down.wav",
+            "start": 274.64,
+            "end": 275.584,
+            "announcement_text": "Chapter One Hundred Thirteen. What Went Out.",
+            "allow_duration_change": True,
+        },
+    },
+    109: {
+        # The 14-word tail of subhead five ("external actor remains an inference ...
+        # has not been established") is dropped: the audio truncates "actor" to "act"
+        # and jumps to the next paragraph. The corrupt "act" is the last word of one
+        # speech segment, so the region stays inside that segment (end at the segment
+        # boundary) and the phrase re-supplies "external actor ...".
+        "patch": {
+            "phrase": REPO
+            / "audiobook-studio/assets/production-patches/ch109-external-actor-inference.wav",
+            "start": 208.10,
+            "end": 208.74,
+            "announcement_text": "Chapter One Hundred Nine. Into the History.",
+            "allow_duration_change": True,
+        },
+    },
+    49: {
+        # An 83-word span ("...becomes action on a configuration change ... a lawyer
+        # can deliver") collapses into the single fused utterance "becomes actionable".
+        # "becomes" and the corrupted syllable share one continuous waveform, so no cut
+        # at that boundary preserves "becomes" without leaving an "actionable" stutter.
+        # The region is instead opened back to the deep pause after "reception work,"
+        # and the verified phrase re-supplies "and it becomes action on a ...".
+        "patch": {
+            "phrase": REPO
+            / "audiobook-studio/assets/production-patches/ch049-position-of-record.wav",
+            "start": 132.70,
+            "end": 134.14,
+            "announcement_text": "Chapter Forty-Nine. Filed as Agreed.",
+            "allow_duration_change": True,
+        },
+    },
+}
 
 
 def inventory() -> list[tuple[int, Path]]:
@@ -57,18 +174,111 @@ def output_for(out_dir: Path, number: int) -> Path:
     return out_dir / f"{SEQUENCE_OFFSET + number:03d}-chapter-{number:03d}-{VOICE_TAG}.wav"
 
 
-def already_done(wav: Path) -> dict | None:
-    """Manifest of a previous successful render, or None if it must be redone."""
+def _sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def already_done(
+    wav: Path,
+    *,
+    chapter: Path,
+    announcement: Path | None,
+    reference: str,
+    seed: int,
+    anchored: bool,
+    overrides: dict | None = None,
+) -> dict | None:
+    """Return a current, byte-bound production manifest or require a rerender.
+
+    A large WAV beside a passing JSON file is not a resume contract. The previous
+    implementation accepted exactly that, so changing prose, title, announcement,
+    narrator reference, seed, anchor, gap algorithm, renderer settings, or the WAV
+    bytes themselves could silently keep stale audio.
+    """
     manifest = wav.with_suffix(".manifest.json")
     if not wav.is_file() or not manifest.is_file():
         return None
     try:
         data = json.loads(manifest.read_text())
-    except json.JSONDecodeError:
+        override = overrides or {}
+        expected = production_identity(
+            chapter,
+            announcement=announcement,
+            reference_name=reference,
+            seed=seed,
+            anchored=anchored,
+            max_words_per_call=int(override.get("max_words_per_call", 0)),
+            spoken_replacements=tuple(override.get("spoken_replacements", ())),
+        )
+    except (json.JSONDecodeError, OSError, RuntimeError):
         return None
-    quality = data.get("assembly", {}).get("chapter_quality")
-    if not quality or not quality.get("passed"):
+
+    if data.get("schema_version") != MANIFEST_SCHEMA:
         return None
+    recorded_identity = data.get("production_identity") or {}
+    if recorded_identity.get("identity_sha256") != expected["identity_sha256"]:
+        return None
+    if data.get("output") != str(wav.resolve()):
+        return None
+    if data.get("output_sha256") != _sha256_file(wav):
+        return None
+
+    assembly = data.get("assembly") or {}
+    quality = assembly.get("chapter_quality") or {}
+    if not quality.get("passed"):
+        return None
+    if assembly.get("gap_algorithm") != "spectral-v6":
+        return None
+    if assembly.get("gap_fft_size") != 2048:
+        return None
+    if not assembly.get("segment_offsets_include_gaps"):
+        return None
+    try:
+        info = sf.info(str(wav))
+    except (RuntimeError, OSError):
+        return None
+    if info.samplerate != assembly.get("sample_rate"):
+        return None
+    if info.frames != assembly.get("sample_count"):
+        return None
+    if abs(info.duration - float(assembly.get("seconds", 0.0))) > 0.01:
+        return None
+    assembly_map = assembly.get("assembly_map")
+    if not isinstance(assembly_map, list) or not assembly_map:
+        return None
+    if assembly_map[0].get("start_sample") != 0:
+        return None
+    if assembly_map[-1].get("end_sample") != info.frames:
+        return None
+    for left, right in zip(assembly_map, assembly_map[1:]):
+        if left.get("end_sample") != right.get("start_sample"):
+            return None
+    speech_entries = [e for e in assembly_map if e.get("kind") == "speech_segment"]
+    segments = data.get("segments") or []
+    if len(speech_entries) != len(segments):
+        return None
+    if any(
+        entry.get("start_sample") != segment.get("start_sample")
+        or entry.get("end_sample") != segment.get("end_sample")
+        for entry, segment in zip(speech_entries, segments)
+    ):
+        return None
+    gaps = [e for e in assembly_map if str(e.get("kind", "")).endswith("_gap")]
+    if not gaps or any(e.get("algorithm") != "spectral-v6" for e in gaps):
+        return None
+    if not quality.get("asr_segments"):
+        return None
+    override_patches = override.get("patches") or ([override["patch"]] if override.get("patch") else [])
+    if override_patches:
+        patches = assembly.get("production_patches") or []
+        if len(patches) != len(override_patches):
+            return None
+        if any(p.get("kind") != "verified_unintelligible_replacement" for p in patches):
+            return None
     if wav.stat().st_size < 1_000_000:
         return None
     return data
@@ -132,9 +342,9 @@ def main() -> None:
     if not args.no_announcements:
         missing = []
         for number, _ in chapters:
-            found = sorted(args.announce_dir.glob(f"chapter-{number:03d}-*.wav"))
-            if found:
-                announcements[number] = found[0]
+            expected = args.announce_dir / f"chapter-{number:03d}-number-title.wav"
+            if expected.is_file():
+                announcements[number] = expected
             else:
                 missing.append(number)
         if missing:
@@ -156,7 +366,15 @@ def main() -> None:
 
     pending, skipped = [], []
     for number, path in chapters:
-        if already_done(output_for(args.out_dir, number)):
+        if already_done(
+            output_for(args.out_dir, number),
+            chapter=path,
+            announcement=announcements.get(number),
+            reference=args.reference,
+            seed=args.seed,
+            anchored=not args.no_anchor,
+            overrides=CHAPTER_OVERRIDES.get(number),
+        ):
             skipped.append(number)
         else:
             pending.append((number, path))
@@ -202,6 +420,11 @@ def main() -> None:
             command.append("--anchor")
         if number in announcements:
             command += ["--announcement", str(announcements[number])]
+        override = CHAPTER_OVERRIDES.get(number, {})
+        if override.get("max_words_per_call"):
+            command += ["--max-words-per-call", str(override["max_words_per_call"])]
+        for replacement in override.get("spoken_replacements", ()):
+            command += ["--spoken-replace", replacement]
 
         outcome = None
         for attempt in range(args.retries + 1):
@@ -224,7 +447,57 @@ def main() -> None:
                 for line in snippet:
                     print(f"    {line}", flush=True)
 
-            outcome = already_done(wav)
+            override_patches = override.get("patches") or (
+                [override["patch"]] if override.get("patch") else []
+            )
+            # Apply later-in-file patches first so earlier region times stay valid.
+            for patch in sorted(override_patches, key=lambda p: -p["start"]):
+                if result.returncode != 0 or not wav.is_file():
+                    break
+                patch_command = [
+                    sys.executable,
+                    str(HERE / "patch_verified_omission.py"),
+                    str(wav),
+                    str(patch["phrase"]),
+                    "--output",
+                    str(wav),
+                    "--manifest",
+                    str(wav.with_suffix(".manifest.json")),
+                    "--chapter",
+                    str(path),
+                    "--announcement-text",
+                    str(patch["announcement_text"]),
+                    "--start",
+                    str(patch["start"]),
+                    "--end",
+                    str(patch["end"]),
+                    "--replace-unintelligible",
+                ]
+                if patch.get("allow_duration_change"):
+                    patch_command.append("--allow-duration-change")
+                patch_result = subprocess.run(
+                    patch_command,
+                    cwd=HERE,
+                    capture_output=True,
+                    text=True,
+                )
+                for line in patch_result.stdout.splitlines():
+                    if line.startswith(("patched", "  samples", "  wrote")):
+                        print(f"    {line.strip()}", flush=True)
+                if patch_result.returncode != 0:
+                    print(f"    patch exit {patch_result.returncode}", flush=True)
+                    for line in (patch_result.stderr or "").strip().splitlines()[-3:]:
+                        print(f"    {line}", flush=True)
+
+            outcome = already_done(
+                wav,
+                chapter=path,
+                announcement=announcements.get(number),
+                reference=args.reference,
+                seed=args.seed,
+                anchored=not args.no_anchor,
+                overrides=override,
+            )
             if outcome:
                 break
             if attempt < args.retries:

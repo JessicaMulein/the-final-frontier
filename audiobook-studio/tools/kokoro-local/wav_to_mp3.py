@@ -156,6 +156,13 @@ def main() -> None:
     parser.add_argument("--manuscript-root", type=Path, required=True)
     parser.add_argument("--voice-tag", required=True)
     parser.add_argument("--out-dir", type=Path, required=True)
+    parser.add_argument("--first", type=int, default=1, help="first chapter to encode")
+    parser.add_argument(
+        "--last",
+        type=int,
+        default=None,
+        help="last chapter to encode, inclusive; defaults to every completed chapter",
+    )
     parser.add_argument("--album", default="The Final Frontier")
     # Matches build_m4b.py's --author so MP3 and M4B metadata agree.
     parser.add_argument("--artist", default="Jessica Mulein")
@@ -194,7 +201,10 @@ def main() -> None:
         m = WAV_CHAPTER_RE.match(wav.name)
         if not m or m.group("voice").lower() != args.voice_tag.lower():
             continue
-        candidates.append((int(m.group("num")), int(m.group("seq")), wav))
+        chapter = int(m.group("num"))
+        if chapter < args.first or (args.last is not None and chapter > args.last):
+            continue
+        candidates.append((chapter, int(m.group("seq")), wav))
 
     if not candidates:
         raise SystemExit(f"no chapter WAVs found for voice tag {args.voice_tag!r}")

@@ -26,7 +26,9 @@ tracked the listener's drift reports.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
+import re
 import sys
 import time
 from pathlib import Path
@@ -37,7 +39,8 @@ import soundfile as sf
 
 import pace
 from audio_io import load_reference
-from manuscript import spoken_text
+from manuscript import chapter_title, spoken_text
+from repair_gaps import HF_SUSPECT, QUIET_DB, frame_stats, harvest_floor, spectral_fill
 
 REPO = Path(__file__).resolve().parents[3]
 # The narrator's identity is committed, not regenerated. `out/` is ignored, so reading
@@ -50,6 +53,13 @@ INTERIOR = (
     "Read as a first-person memoir: dry, precise, quietly unsettled. Let meaning "
     "land through timing and emphasis rather than volume. Never announce."
 )
+
+MANIFEST_SCHEMA = 2
+GAP_ALGORITHM = "spectral-v6"
+GAP_FFT_SIZE = 2048
+GAP_CUTOFF_HZ = 3500.0
+REFERENCE_WAV_SHA256 = "2718268846e7b02b15b130c499711ae4730f8041307f49d39e1e08678a8ec762"
+REFERENCE_TEXT_SHA256 = "9fb56fcb1bd465b15398174da692c8b18fc468bcac9764a09b21580f6245d4aa"
 
 # A deterministic lead-in turn, generated and then discarded, used to pin the voice
 # state before a chapter begins. Measured across 21 rendered chapters, each chapter's
@@ -72,6 +82,110 @@ ANCHOR = (
     "each sentence finish, leave the silence where it belongs, and begin the next "
     "one only when it is ready."
 )
+
+
+def _sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for block in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def _sha256_text(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def production_identity(
+    chapter: Path,
+    *,
+    announcement: Path | None,
+    reference_name: str,
+    seed: int | None,
+    anchored: bool,
+    model: str = "mlx-community/fish-audio-s2-pro",
+    instruct: str = INTERIOR,
+    chunk_length: int = 300,
+    max_tokens: int = 1024,
+    temperature: float = 0.7,
+    top_p: float = 0.7,
+    top_k: int = 30,
+    sentence_pause: str = "short",
+    sentence_turns: bool = False,
+    segment_gap_ms: float = 650.0,
+    announcement_gap_ms: float = 900.0,
+    spoken_replacements: tuple[str, ...] = (),
+    max_words_per_call: int = 0,
+) -> dict:
+    """Every input and fixed setting that determines a production chapter.
+
+    `book_fish.already_done` recomputes this object before skipping. This is the
+    difference between resumable and stale: a passing manifest beside a large WAV is
+    not evidence that the WAV speaks the current prose with the current narrator.
+    """
+    ref_wav = HIFI / f"{reference_name}.wav"
+    ref_txt = HIFI / f"{reference_name}.txt"
+    if not ref_wav.is_file() or not ref_txt.is_file():
+        raise RuntimeError(f"reference not found: {ref_wav}")
+    ref_wav_sha = _sha256_file(ref_wav)
+    ref_txt_sha = _sha256_file(ref_txt)
+    if reference_name == "hifitts-clean-92":
+        if ref_wav_sha != REFERENCE_WAV_SHA256 or ref_txt_sha != REFERENCE_TEXT_SHA256:
+            raise RuntimeError(
+                "committed narrator reference does not match PROVENANCE.md; refusing "
+                "to render a different voice under the same name"
+            )
+
+    spoken = spoken_text(chapter)
+    generated_spoken = spoken
+    for replacement in spoken_replacements:
+        if "=" not in replacement:
+            raise RuntimeError(f"spoken replacement expects OLD=NEW: {replacement!r}")
+        old, new = replacement.split("=", 1)
+        count = generated_spoken.count(old)
+        if not old or count != 1:
+            raise RuntimeError(
+                f"spoken replacement OLD must occur exactly once; {old!r} occurs {count} times"
+            )
+        generated_spoken = generated_spoken.replace(old, new, 1)
+    title = chapter_title(chapter)
+    payload = {
+        "schema": "frontier-fish-production/v2",
+        "chapter_source_sha256": _sha256_file(chapter),
+        "spoken_sha256": _sha256_text(spoken),
+        "generation_spoken_sha256": _sha256_text(generated_spoken),
+        "canonical_title": title,
+        "announcement_sha256": (
+            _sha256_file(announcement) if announcement is not None else None
+        ),
+        "announcement_name": announcement.name if announcement is not None else None,
+        "reference_name": reference_name,
+        "reference_wav_sha256": ref_wav_sha,
+        "reference_text_sha256": ref_txt_sha,
+        "model": model,
+        "instruct": instruct,
+        "seed": seed,
+        "anchored": anchored,
+        "anchor_text": ANCHOR if anchored else None,
+        "chunk_length": chunk_length,
+        "max_tokens": max_tokens,
+        "temperature": temperature,
+        "top_p": top_p,
+        "top_k": top_k,
+        "sentence_pause": sentence_pause,
+        "sentence_turns": sentence_turns,
+        "segment_gap_ms": segment_gap_ms,
+        "announcement_gap_ms": announcement_gap_ms,
+        "spoken_replacements": list(spoken_replacements),
+        "max_words_per_call": max_words_per_call,
+        "gap_algorithm": GAP_ALGORITHM,
+        "gap_fft_size": GAP_FFT_SIZE,
+        "gap_cutoff_hz": GAP_CUTOFF_HZ,
+    }
+    payload["identity_sha256"] = _sha256_text(
+        json.dumps(payload, sort_keys=True, separators=(",", ":"))
+    )
+    return payload
 
 
 def active_rms(audio: np.ndarray, rate: int) -> float:
@@ -127,63 +241,74 @@ def flatten_slope(audio: np.ndarray, rate: int, max_db: float = 6.0) -> tuple[np
 def comfort_gap(
     segments: list[np.ndarray], samples: int, rate: int, seed: int
 ) -> np.ndarray:
-    """Room tone for the gap between paragraphs, shaped from this render's own floor.
+    """V6 stationary room tone shaped only from confirmed natural dark pauses.
 
-    Two lessons from the QVoice path are folded in here. Digital silence between
-    paragraphs is itself audible -- the noise floor dropping to true zero reads as a
-    dropout, and it makes any imperfect edge land harder. And the tone has to be
-    shaped from the voice's own quiet frames, not white noise, or it reads as hiss.
+    The original gap synthesizer used mean magnitude over percentile-selected quiet
+    frames. Sparse high-frequency events dominated after normalization, manufacturing
+    audible hiss: 29–39% of gap energy above 4 kHz against effectively zero in Fish's
+    natural pauses. This is the chapter-5 "background opens up" defect.
 
-    The first Fish render had no gap at all: paragraphs were concatenated directly,
-    which the listener described as rambling even though the reading was clear.
+    V6, chosen by ear over donor-waveform repair, low-pass filtering, and FFT sizes
+    4096/8192, uses the same implementation as `repair_gaps.py`: confirmed dark pause
+    donors, median power spectrum, random complex coefficients, IFFT and Hann
+    overlap-add, FFT 2048, and a soft 3.5 kHz cutoff. At render time `segments` contain
+    only model output -- no previously synthesized gaps -- so the donor population
+    cannot be contaminated by the defect it is replacing.
     """
     if samples <= 0:
         return np.zeros(0, dtype=np.float32)
-    nfft = 1024
-    window = np.hanning(nfft)
-    spectra, quiet = [], []
-    for audio in segments:
-        levels, frames = [], []
-        for start in range(0, max(0, audio.size - nfft), nfft // 2):
-            frame = audio[start : start + nfft].astype(np.float64)
-            levels.append(float(np.sqrt(np.mean(frame**2) + 1e-12)))
-            frames.append(frame)
-        if not frames:
-            continue
-        values = np.array(levels)
-        lo, hi = np.percentile(values, [5, 18])
-        for level, frame in zip(levels, frames):
-            if lo <= level <= hi and level > 1e-5:
-                spectra.append(np.abs(np.fft.rfft(frame * window)))
-                quiet.append(level)
-    if not spectra:
+    if not segments:
         return np.zeros(samples, dtype=np.float32)
 
-    shape = np.mean(spectra, axis=0)
-    target = float(np.median(quiet)) * 0.75
-    rng = np.random.default_rng(seed)
-    hop = nfft // 2
-    blocks = int(np.ceil((samples + nfft) / hop))
-    out = np.zeros(blocks * hop + nfft, dtype=np.float64)
-    weight = np.zeros_like(out)
-    for index in range(blocks):
-        phase = rng.uniform(0, 2 * np.pi, shape.size)
-        phase[0] = phase[-1] = 0
-        frame = np.fft.irfft(shape * np.exp(1j * phase), n=nfft) * window
-        start = index * hop
-        out[start : start + nfft] += frame
-        weight[start : start + nfft] += window**2
-    valid = weight > 1e-8
-    out[valid] /= np.sqrt(weight[valid])
-    out = out[:samples]
-    level = float(np.sqrt(np.mean(out**2) + 1e-12))
-    if level > 0:
-        out *= target / level
+    source = np.concatenate(segments)
+    level, hf, size = frame_stats(source, rate)
+    speech = float(np.percentile(level, 90)) if level.size else 0.0
+    donor = harvest_floor(source, level, hf, size, speech)
+    if donor.size < GAP_FFT_SIZE:
+        raise RuntimeError(
+            f"not enough natural dark pause audio for {GAP_ALGORITHM}: "
+            f"{donor.size} samples"
+        )
+
+    quiet = level < speech * 10 ** (QUIET_DB / 20)
+    natural_runs = [
+        float(np.median(level[a:b]))
+        for a, b in _runs(quiet & (hf < HF_SUSPECT * 0.5))
+        if b - a >= 4
+    ]
+    if not natural_runs:
+        raise RuntimeError(f"no natural floor level available for {GAP_ALGORITHM}")
+    target = float(np.median(natural_runs))
+
+    gap = spectral_fill(
+        samples,
+        donor,
+        rate,
+        target,
+        np.random.default_rng(seed),
+        GAP_CUTOFF_HZ,
+        GAP_FFT_SIZE,
+    )
     fade = min(int(rate * 0.040), samples // 4)
     if fade > 0:
-        out[:fade] *= np.linspace(0, 1, fade)
-        out[-fade:] *= np.linspace(1, 0, fade)
-    return out.astype(np.float32)
+        gap[:fade] *= np.linspace(0, 1, fade, dtype=np.float32)
+        gap[-fade:] *= np.linspace(1, 0, fade, dtype=np.float32)
+    return gap.astype(np.float32)
+
+
+def _runs(mask: np.ndarray) -> list[tuple[int, int]]:
+    """Contiguous true ranges, kept local so gap generation has no CLI coupling."""
+    runs: list[tuple[int, int]] = []
+    start: int | None = None
+    for index, flag in enumerate(mask):
+        if flag and start is None:
+            start = index
+        elif not flag and start is not None:
+            runs.append((start, index))
+            start = None
+    if start is not None:
+        runs.append((start, len(mask)))
+    return runs
 
 
 def match_levels(segments: list[np.ndarray], rate: int, limit_db: float = 2.0):
@@ -333,12 +458,55 @@ def main() -> None:
         default=900.0,
         help="silence between the announcement and the first paragraph",
     )
+    p.add_argument(
+        "--spoken-replace",
+        action="append",
+        default=[],
+        metavar="OLD=NEW",
+        help="replace one exact string in generation input without changing the "
+        "manuscript or expected ASR text. For non-spoken markup that Fish treats as "
+        "an instruction; repeatable and recorded in production identity",
+    )
+    p.add_argument(
+        "--max-words-per-call",
+        type=int,
+        default=0,
+        help="split an unusually long chapter into separate deterministic generate() "
+        "calls at paragraph boundaries, each re-anchored with the same seed; 0 keeps "
+        "the approved one-call behavior",
+    )
     args = p.parse_args()
 
     ref_wav = HIFI / f"{args.reference}.wav"
     ref_txt = HIFI / f"{args.reference}.txt"
     if not ref_wav.is_file() or not ref_txt.is_file():
         raise SystemExit(f"reference not found: {ref_wav}")
+    if args.announcement is not None and not args.announcement.is_file():
+        raise SystemExit(f"announcement not found: {args.announcement}")
+
+    try:
+        identity = production_identity(
+            args.chapter,
+            announcement=args.announcement,
+            reference_name=args.reference,
+            seed=args.seed,
+            anchored=args.anchor,
+            model=args.model,
+            instruct=args.instruct,
+            chunk_length=args.chunk_length,
+            max_tokens=args.max_tokens,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            top_k=args.top_k,
+            sentence_pause=args.sentence_pause,
+            sentence_turns=args.sentence_turns,
+            segment_gap_ms=args.paragraph_gap_ms,
+            announcement_gap_ms=args.announcement_gap_ms,
+            spoken_replacements=tuple(args.spoken_replace),
+            max_words_per_call=args.max_words_per_call,
+        )
+    except RuntimeError as exc:
+        raise SystemExit(str(exc)) from exc
 
     spoken = spoken_text(args.chapter)
     words = len(spoken.split())
@@ -366,7 +534,19 @@ def main() -> None:
     # Tagging each paragraph as one speaker turn engages the existing batching and,
     # more importantly, keeps the running Conversation across batches, which is the
     # continuity the QVoice path had to fake with warm-up and trimming.
-    paragraphs = [p.strip() for p in spoken.split("\n\n") if p.strip()]
+    generation_spoken = spoken
+    for replacement in args.spoken_replace:
+        if "=" not in replacement:
+            raise SystemExit(f"--spoken-replace expects OLD=NEW, got {replacement!r}")
+        old, new = replacement.split("=", 1)
+        count = generation_spoken.count(old)
+        if not old or count != 1:
+            raise SystemExit(
+                f"--spoken-replace OLD must occur exactly once; {old!r} occurs {count} times"
+            )
+        generation_spoken = generation_spoken.replace(old, new, 1)
+        print(f"  generation-only replacement: {old!r} -> {new!r}")
+    paragraphs = [p.strip() for p in generation_spoken.split("\n\n") if p.strip()]
 
     if args.sentence_pause != "none":
         tag = "[short pause]" if args.sentence_pause == "short" else "[pause]"
@@ -377,14 +557,31 @@ def main() -> None:
         if args.sentence_turns
         else paragraphs
     )
-    tagged = "\n".join(f"<|speaker:0|>{u}" for u in units)
+    if args.max_words_per_call > 0 and args.sentence_turns:
+        raise SystemExit("--max-words-per-call is supported only with paragraph turns")
+    unit_parts: list[list[str]] = [[]]
+    part_words = 0
+    for unit in units:
+        unit_words = len(re.sub(r"\[[^]]+\]", "", unit).split())
+        if (
+            args.max_words_per_call > 0
+            and unit_parts[-1]
+            and part_words + unit_words > args.max_words_per_call
+        ):
+            unit_parts.append([])
+            part_words = 0
+        unit_parts[-1].append(unit)
+        part_words += unit_words
+    tagged_parts = [
+        "\n".join(f"<|speaker:0|>{unit}" for unit in part) for part in unit_parts
+    ]
     print(
-        f"  {len(paragraphs)} paragraphs -> {len(units)} turns"
+        f"  {len(paragraphs)} paragraphs -> {len(units)} turns -> "
+        f"{len(tagged_parts)} generate call(s)"
         f"{' (sentence-level)' if args.sentence_turns else ''}, "
         f"pause tags: {args.sentence_pause}, gap {args.paragraph_gap_ms:.0f}ms"
     )
 
-    payload = f"<|speaker:0|>{ANCHOR}\n{tagged}" if args.anchor else tagged
     if args.anchor:
         if len(ANCHOR.encode("utf-8")) <= args.chunk_length:
             raise SystemExit(
@@ -392,65 +589,86 @@ def main() -> None:
                 f"{args.chunk_length}: it would be batched together with the "
                 f"chapter's first paragraph and could not be discarded cleanly"
             )
-        print(f"  anchor: {len(ANCHOR.split())} words, discarded after generation")
+        print(f"  anchor: {len(ANCHOR.split())} words, discarded from every call")
     if args.seed is not None:
-        mx.random.seed(args.seed)
-        print(f"  seed: {args.seed}")
+        print(f"  seed: {args.seed}, reset before every generate call")
 
     print(f"\nrendering (chunk_length={args.chunk_length})", flush=True)
     started = time.perf_counter()
     segments: list[np.ndarray] = []
     records = []
-    anchor_audio: np.ndarray | None = None
-    for segment in model.generate(
-        text=payload,
-        ref_audio=reference,
-        ref_text=ref_text,
-        instruct=args.instruct,
-        chunk_length=args.chunk_length,
-        max_tokens=args.max_tokens,
-        temperature=args.temperature,
-        top_p=args.top_p,
-        top_k=args.top_k,
-        verbose=False,
-    ):
-        audio = np.asarray(segment.audio, dtype=np.float32)
-        # Drop the anchor here, before any post-processing, so it cannot influence
-        # slope removal, the level target, the room-tone spectrum or the pace profile.
-        if args.anchor and anchor_audio is None and not segments:
-            anchor_audio = audio
+    anchor_audios: list[np.ndarray] = []
+    for part_index, tagged in enumerate(tagged_parts):
+        if args.seed is not None:
+            mx.random.seed(args.seed)
+        payload = f"<|speaker:0|>{ANCHOR}\n{tagged}" if args.anchor else tagged
+        first_yield = True
+        speech_before = len(segments)
+        for segment in model.generate(
+            text=payload,
+            ref_audio=reference,
+            ref_text=ref_text,
+            instruct=args.instruct,
+            chunk_length=args.chunk_length,
+            max_tokens=args.max_tokens,
+            temperature=args.temperature,
+            top_p=args.top_p,
+            top_k=args.top_k,
+            verbose=False,
+        ):
+            audio = np.asarray(segment.audio, dtype=np.float32)
+            if args.anchor and first_yield:
+                anchor_audios.append(audio)
+                print(
+                    f"  part {part_index + 1} anchor: {audio.size / rate:6.2f}s "
+                    f"discarded ({time.perf_counter() - started:6.1f}s wall)",
+                    flush=True,
+                )
+                first_yield = False
+                continue
+            first_yield = False
+            global_index = len(segments)
+            segments.append(audio)
+            records.append(
+                {
+                    "index": global_index,
+                    "generation_part": part_index,
+                    "part_segment_index": int(
+                        getattr(segment, "segment_idx", global_index)
+                    ),
+                    "seconds": round(audio.size / rate, 3),
+                    "tokens": int(getattr(segment, "token_count", 0)),
+                }
+            )
             print(
-                f"  anchor  : {audio.size / rate:6.2f}s discarded "
-                f"({time.perf_counter() - started:6.1f}s wall)",
+                f"  segment {len(segments):2d} [part {part_index + 1}]: "
+                f"{audio.size / rate:6.2f}s "
+                f"(total {sum(s.size for s in segments) / rate / 60:5.2f} min, "
+                f"{time.perf_counter() - started:6.1f}s wall)",
                 flush=True,
             )
-            continue
-        segments.append(audio)
-        records.append(
-            {
-                "index": int(getattr(segment, "segment_idx", len(segments) - 1)),
-                "seconds": round(audio.size / rate, 3),
-                "tokens": int(getattr(segment, "token_count", 0)),
-            }
-        )
-        print(
-            f"  segment {len(segments):2d}: {audio.size / rate:6.2f}s "
-            f"(total {sum(s.size for s in segments) / rate / 60:5.2f} min, "
-            f"{time.perf_counter() - started:6.1f}s wall)",
-            flush=True,
-        )
+        if len(segments) == speech_before:
+            raise RuntimeError(f"generate call {part_index + 1} yielded no speech")
     render_seconds = time.perf_counter() - started
 
     if not segments:
         raise SystemExit("no audio generated")
     anchor_sha256 = None
+    anchor_audio: np.ndarray | None = None
     if args.anchor:
-        if anchor_audio is None:
-            raise SystemExit("anchor requested but no segment was yielded for it")
-        import hashlib
-
-        anchor_sha256 = hashlib.sha256(anchor_audio.tobytes()).hexdigest()
-        print(f"  anchor sha256 {anchor_sha256[:16]} ({anchor_audio.size / rate:.2f}s)")
+        if len(anchor_audios) != len(tagged_parts):
+            raise SystemExit(
+                f"expected {len(tagged_parts)} anchor segments, got {len(anchor_audios)}"
+            )
+        anchor_hashes = [hashlib.sha256(audio.tobytes()).hexdigest() for audio in anchor_audios]
+        if len(set(anchor_hashes)) != 1:
+            raise SystemExit("deterministic anchor changed between generation parts")
+        anchor_audio = anchor_audios[0]
+        anchor_sha256 = anchor_hashes[0]
+        print(
+            f"  anchor sha256 {anchor_sha256[:16]} ({anchor_audio.size / rate:.2f}s, "
+            f"identical across {len(anchor_audios)} call(s))"
+        )
         if args.keep_anchor_audio:
             anchor_path = args.output.with_name(args.output.stem + ".anchor.wav")
             args.output.parent.mkdir(parents=True, exist_ok=True)
@@ -466,12 +684,30 @@ def main() -> None:
 
     gap_samples = int(rate * args.paragraph_gap_ms / 1000)
 
-    # The announcement is level-matched to the prose and followed by the same shaped
-    # room tone, so the signpost neither arrives louder nor sits against digital
-    # silence. Its duration is recorded because it displaces every paragraph offset,
-    # and read-along must begin after it: it is navigation, not manuscript text.
-    lead: list[np.ndarray] = []
-    announcement_seconds = 0.0
+    # Build the delivered waveform and its exact sample-domain map together. The map
+    # is the read-along source of truth; seconds are derived presentation values.
+    pieces: list[np.ndarray] = []
+    assembly_map: list[dict] = []
+    assembly_cursor = 0
+
+    def append_piece(kind: str, audio: np.ndarray, **metadata) -> None:
+        nonlocal assembly_cursor
+        start = assembly_cursor
+        end = start + int(audio.size)
+        pieces.append(audio)
+        assembly_map.append(
+            {
+                "kind": kind,
+                "start_sample": start,
+                "end_sample": end,
+                "start_seconds": round(start / rate, 6),
+                "end_seconds": round(end / rate, 6),
+                **metadata,
+            }
+        )
+        assembly_cursor = end
+
+    announcement_samples = 0
     if args.announcement is not None:
         intro, intro_rate = sf.read(str(args.announcement), always_2d=False)
         intro = np.asarray(intro, dtype=np.float32)
@@ -488,23 +724,36 @@ def main() -> None:
             intro_peak = float(np.abs(intro).max())
             if intro_peak > 0.99:
                 intro = intro * (0.99 / intro_peak)
-        lead.append(intro.astype(np.float32))
+        append_piece("announcement", intro.astype(np.float32))
         intro_gap = int(rate * args.announcement_gap_ms / 1000)
         if intro_gap > 0:
-            lead.append(comfort_gap(levelled, intro_gap, rate, seed=999))
-        announcement_seconds = sum(piece.size for piece in lead) / rate
+            append_piece(
+                "announcement_gap",
+                comfort_gap(levelled, intro_gap, rate, seed=999),
+                algorithm=GAP_ALGORITHM,
+            )
+        announcement_samples = assembly_cursor
         print(
             f"  announcement {intro.size / rate:.2f}s + "
             f"{args.announcement_gap_ms:.0f}ms gap; prose starts at "
-            f"{announcement_seconds:.2f}s"
+            f"{announcement_samples / rate:.2f}s"
         )
 
-    pieces: list[np.ndarray] = list(lead)
     for index, segment in enumerate(levelled):
-        pieces.append(segment)
+        append_piece("speech_segment", segment, segment_index=index)
         if index < len(levelled) - 1 and gap_samples > 0:
-            pieces.append(comfort_gap(levelled, gap_samples, rate, seed=1000 + index))
+            append_piece(
+                "segment_gap",
+                comfort_gap(levelled, gap_samples, rate, seed=1000 + index),
+                after_segment=index,
+                algorithm=GAP_ALGORITHM,
+            )
     joined = np.concatenate(pieces)
+    if assembly_cursor != joined.size:
+        raise SystemExit(
+            f"assembly map ends at sample {assembly_cursor} but waveform has "
+            f"{joined.size} samples"
+        )
     peak = float(np.abs(joined).max())
     if peak > 0.99:
         joined *= 0.99 / peak
@@ -527,25 +776,30 @@ def main() -> None:
     # time -- 650 ms per preceding gap, about 21 s by the end of a 33-paragraph
     # chapter -- so the recorded spans did not point at the audio they named.
     #
-    # These offsets are the exact paragraph boundaries for read-along alignment.
-    # They come from assembly arithmetic rather than recognition, so they carry no
-    # ASR error and bound any later sentence-level alignment inside a known window.
+    # These offsets are exact yielded-speech-segment boundaries for read-along
+    # alignment. Fish may group multiple paragraph turns into one yielded segment, so
+    # they are not claimed as paragraph boundaries. They come from assembly arithmetic
+    # rather than recognition and bound later sentence alignment inside a known window.
     gap_seconds = gap_samples / rate
-    cursor = announcement_seconds
+    speech_spans = {
+        entry["segment_index"]: entry
+        for entry in assembly_map
+        if entry["kind"] == "speech_segment"
+    }
     for index, segment in enumerate(levelled):
         measured = pace.measure(segment if rate == 24000 else _to24k(segment, rate))
+        span = speech_spans[index]
         records[index].update(
             {
                 "gain_db": gains[index],
                 "slope_correction_db": corrections[index],
-                "start_seconds": round(cursor, 3),
-                "end_seconds": round(cursor + segment.size / rate, 3),
+                "start_sample": span["start_sample"],
+                "end_sample": span["end_sample"],
+                "start_seconds": span["start_seconds"],
+                "end_seconds": span["end_seconds"],
                 "pace": measured,
             }
         )
-        cursor += segment.size / rate
-        if index < len(levelled) - 1:
-            cursor += gap_seconds
         if measured:
             print(
                 f"  {index:3d} {measured['seconds']:5.1f}   "
@@ -556,8 +810,12 @@ def main() -> None:
 
     live = [r["pace"] for r in records if r.get("pace")]
     manifest = {
+        "schema_version": MANIFEST_SCHEMA,
+        "production_identity": identity,
         "chapter": str(args.chapter),
+        "canonical_title": identity["canonical_title"],
         "output": str(args.output.resolve()),
+        "output_sha256": _sha256_file(args.output),
         "engine": "fish_s2_pro",
         "model": args.model,
         "reference": {"name": args.reference, "text": ref_text},
@@ -568,6 +826,9 @@ def main() -> None:
             "temperature": args.temperature,
             "top_p": args.top_p,
             "top_k": args.top_k,
+            "max_words_per_call": args.max_words_per_call,
+            "generation_calls": len(tagged_parts),
+            "spoken_replacements": list(args.spoken_replace),
             "seed": args.seed,
             "anchored": bool(args.anchor),
             "anchor_text": ANCHOR if args.anchor else None,
@@ -580,9 +841,13 @@ def main() -> None:
         "assembly": {
             "seconds": round(joined.size / rate, 3),
             "sample_rate": rate,
+            "sample_count": int(joined.size),
             "level_target_active_rms": round(target, 6),
             "render_seconds": round(render_seconds, 1),
             "paragraph_gap_seconds": round(gap_seconds, 6),
+            "gap_algorithm": GAP_ALGORITHM,
+            "gap_fft_size": GAP_FFT_SIZE,
+            "gap_cutoff_hz": GAP_CUTOFF_HZ,
             "segment_offsets_include_gaps": True,
             "announcement_path": (
                 str(args.announcement) if args.announcement is not None else None
@@ -590,7 +855,9 @@ def main() -> None:
             # Where the manuscript actually begins. Read-along alignment must start
             # here: everything before it is navigation, not prose, and syncing it
             # against chapter text would put the highlight a sentence ahead.
-            "prose_starts_at_seconds": round(announcement_seconds, 6),
+            "prose_start_sample": int(announcement_samples),
+            "prose_starts_at_seconds": round(announcement_samples / rate, 6),
+            "assembly_map": assembly_map,
         },
     }
     if live:
@@ -614,9 +881,10 @@ def main() -> None:
         # signpost and report an added span that is working as intended. Segment
         # timings are shifted back afterwards so they stay relative to the delivered
         # file rather than to the slice that was transcribed.
-        prose_offset_samples = int(round(announcement_seconds * rate))
+        prose_offset_samples = int(announcement_samples)
         quality = verify(joined[prose_offset_samples:], rate, spoken, args.verify_model)
-        if announcement_seconds > 0:
+        announcement_seconds = announcement_samples / rate
+        if announcement_samples > 0:
             for segment in quality.get("asr_segments", []):
                 segment["start"] = round(segment["start"] + announcement_seconds, 3)
                 segment["end"] = round(segment["end"] + announcement_seconds, 3)
@@ -633,16 +901,18 @@ def main() -> None:
 
     # Fail loudly if the recorded spans stop describing the delivered file. Read-along
     # alignment trusts these offsets, and a silent drift is exactly the defect above.
-    expected_seconds = round(joined.size / rate, 3)
-    final_end = records[-1]["end_seconds"] if records else 0.0
-    if abs(final_end - expected_seconds) > 0.05:
+    expected_samples = int(joined.size)
+    final_end_sample = records[-1]["end_sample"] if records else 0
+    if final_end_sample != expected_samples:
         raise SystemExit(
             f"segment offsets do not describe the written audio: last segment ends at "
-            f"{final_end:.3f}s but the file is {expected_seconds:.3f}s long"
+            f"sample {final_end_sample} but the file has {expected_samples} samples"
         )
 
     manifest_path = args.output.with_suffix(".manifest.json")
-    manifest_path.write_text(json.dumps(manifest, indent=2))
+    staged_manifest = manifest_path.with_suffix(manifest_path.suffix + ".tmp")
+    staged_manifest.write_text(json.dumps(manifest, indent=2))
+    staged_manifest.replace(manifest_path)
     print(f"wrote {manifest_path}")
 
 
