@@ -16,9 +16,10 @@ commands so you can check every claim in it yourself.
 
 ## Start here
 
-- **Read it** — [chapter by chapter](The%20Final%20Frontier%20Novel/chapters/), or build an EPUB and PDF (below)
-- **Or start with the music** — [`songs/`](songs/), lyrics and production notes. Four minutes instead of 150,000 words, and the songs came first
-- **Listen** — [`audiobook/`](audiobook/), all 128 chapters narrated
+- **Project site** — [jessicamulein.github.io/the-final-frontier](https://jessicamulein.github.io/the-final-frontier/), with downloads and the music
+- **Read it** — download the [EPUB](https://jessicamulein.github.io/the-final-frontier/downloads/the-final-frontier.epub) or [PDF](https://jessicamulein.github.io/the-final-frontier/downloads/the-final-frontier.pdf), read it [chapter by chapter](The%20Final%20Frontier%20Novel/chapters/), or build it yourself (below)
+- **Listen** — the AI-narrated audiobook (M4B and MP3s) is in the [latest release](https://github.com/JessicaMulein/the-final-frontier/releases/latest); all 128 chapters, licensed the same as the prose
+- **Or start with the music** — [`songs/`](songs/), lyrics and production notes, and *The Synaptic Frontier* [on SoundCloud](https://soundcloud.com/jessicamulein/sets/the-synaptic-frontier). Four minutes instead of 150,000 words, and the songs came first
 - **How it was built** — [METHOD.md](METHOD.md), and the [specs](.kiro/specs/The-Final-Frontier-novel/) and [planning records](The%20Final%20Frontier%20Novel/planning/) behind it
 - **What's wrong with it** — [KNOWN-ISSUES.md](KNOWN-ISSUES.md)
 
@@ -59,18 +60,22 @@ book. If you find something broken that isn't on the list, open an issue.
 | [`The Final Frontier Novel/`](The%20Final%20Frontier%20Novel/) | The manuscript. `chapters/` in four parts, plus front matter, back matter, and `planning/` |
 | [`.kiro/specs/`](.kiro/specs/) | Requirements, design, and task breakdown |
 | [`songs/`](songs/) | Lyrics and production notes |
-| [`audiobook/`](audiobook/) | Narrated chapter renders. The full MP3 set and assembled M4B are too large for git and aren't committed |
-| `.tools/` | Manuscript checker and EPUB/PDF build |
-| `audiobook-studio/` | Narration pipeline |
+| `audiobook/` | Where narrated renders land locally. Derived audio isn't committed; the finished M4B and MP3s ship in the [release](https://github.com/JessicaMulein/the-final-frontier/releases/latest) |
+| [`docs/`](docs/) | The project [site](https://jessicamulein.github.io/the-final-frontier/), including direct EPUB/PDF downloads |
+| `.tools/` | Manuscript checker, EPUB/PDF build, and release packaging |
+| `audiobook-studio/` | Narration pipeline, patch assets, and the committed voice reference |
 | `book/` | Build output, untracked |
 | [`cover.jpg`](cover.jpg) | Cover art |
 
 The novel runs in four parts: **Discovery** (29 chapters), **Private Defense**
 (32), **Mindwars** (51), and an **Aftermath** coda (16).
 
-The five source songs are *The Synaptic Frontier*, *Faraday*, *The Final
-Frontier*, *The Radius*, and *Case Zero*. Lyrics are mine; composition and
-performance are Suno.
+The source songs are *The Synaptic Frontier*, *Faraday*, *The Final Frontier*,
+*The Radius*, *Case Zero*, and *The Final Frontier (Is Up Here)*, a retelling.
+Most exist twice — an orchestral version and an electronic remix — and the album
+[*The Synaptic Frontier*](https://soundcloud.com/jessicamulein/sets/the-synaptic-frontier)
+runs the orchestral set, then the remixes, then *Writable*, the lead-in to the
+sequel. Lyrics are mine; composition and performance are Suno.
 
 ## Where the idea came from
 
