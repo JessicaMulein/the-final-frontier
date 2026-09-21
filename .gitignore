@@ -63,3 +63,9 @@ audiobook/
 # via the recipe, which records the expected sha256.
 *.qvoice
 *.bin
+
+# Release staging assembled by .tools/package_release.sh. Everything here is a
+# copy of derived output (ebook editions, M4B, MP3 zip, manifest zip) staged for
+# upload as GitHub release assets. The release itself is the durable copy; this
+# local staging directory is disposable.
+release/

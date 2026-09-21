@@ -1,0 +1,33 @@
+THE SONGS — ALL RIGHTS RESERVED
+===============================
+
+This directory contains song lyrics and written production, style, and audition
+notes for The Final Frontier and its wider world.
+
+Lyrics and notes © 2026 Jessica Mulein. Fully copyright Jessica Mulein and
+Mulein Studios LLC.
+
+These works are NOT open-licensed. No right to reproduce, distribute, adapt,
+publicly perform, set to music, or commercially exploit them is granted, and
+none should be inferred from their presence in a public repository.
+
+This is deliberately different from the rest of the repository:
+
+  * The novel prose, planning documents, and the audiobook narration are
+    licensed CC BY-NC-SA 4.0 (see /LICENSE, section 1).
+  * The build tooling is MIT (see /LICENSE, section 3).
+  * These songs are reserved.
+
+Carve-out for the novel: where the novel reproduces a passage of lyric verbatim
+and as lyric, that passage stays reserved under this file. But the recurring
+phrases and motifs the novel shares with the songs — "come in," "did I say yes,"
+"copper and quiet," and the like — are prose under section 1 of the repository
+LICENSE, and reproducing the prose that contains them needs no separate
+permission.
+
+The song RECORDINGS are not in this repository. They are published separately
+under their own reserved terms. This file covers only the text stored here.
+
+Permission for any use of these works can be requested. Ask.
+
+SPDX identifier: LicenseRef-MuleinStudios-AllRightsReserved

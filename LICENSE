@@ -4,10 +4,12 @@ THE FINAL FRONTIER — LICENSING
 This repository contains several kinds of work, and they are not offered under
 the same terms. Find the section that covers what you want to use.
 
-Only the novel prose and its planning documents are openly licensed. The songs,
-the cover art, and the audio recordings are fully reserved. The build tooling is
-MIT. The speech corpora used to clone the narrator's voice are third-party
-material under their own licences.
+The novel prose, its planning documents, and the audiobook narration are openly
+licensed under CC BY-NC-SA 4.0. The song lyrics and the cover art are fully
+reserved. The build tooling is MIT. The speech corpora used to clone the
+narrator's voice are third-party material under their own licences, and the
+narrator's voice in particular carries a CC BY 4.0 attribution obligation that
+travels with the audiobook.
 
 Two things readers ask about are answered in section 5: the author retains
 copyright and remains free to write further works that overlap with this one, and
@@ -19,10 +21,11 @@ license text is linked or reproduced, that text is the operative one.
 
 
 -------------------------------------------------------------------------------
-1. THE NOVEL PROSE AND PLANNING DOCUMENTS  —  CC BY-NC-SA 4.0
+1. THE NOVEL PROSE, PLANNING DOCUMENTS, AND AUDIOBOOK  —  CC BY-NC-SA 4.0
 -------------------------------------------------------------------------------
 
 Novel prose and planning documents © 2026 Jessica Mulein.
+Audiobook narration recordings ℗ 2026 Jessica Mulein.
 
 Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0
 International License (CC BY-NC-SA 4.0).
@@ -33,6 +36,27 @@ Covers:
     The Final Frontier Novel/front-matter.md
     The Final Frontier Novel/back-matter.md   including the Afterword
     The Final Frontier Novel/planning/        arc, canon, decisions, ledgers
+    the audiobook                             the narrated chapter recordings,
+                                              their MP3s, and the assembled M4B,
+                                              distributed as release artifacts
+                                              rather than committed to the repo
+
+The audiobook is a recording of the licensed prose and is offered under the same
+terms as the prose it speaks. This is deliberate: the message of this book —
+that thought and consent belong to the person, not to whoever can reach them —
+should be free to anyone, including and especially readers who cannot use print.
+The narration is offered so that a blind or print-disabled listener has the whole
+book, not a summary, at no cost.
+
+One attribution rides along with the audiobook and cannot be dropped. The
+narrator's voice is cloned from the Hi-Fi TTS dataset, which is licensed CC BY
+4.0 and requires credit; see section 4.2. Anyone who redistributes or adapts the
+audiobook must carry that credit as well as the CC BY-NC-SA attribution to the
+author. A suggested combined credit:
+
+    Audiobook of "The Final Frontier" by Jessica Mulein, licensed
+    CC BY-NC-SA 4.0. Narrator voice cloned from the Hi-Fi TTS dataset
+    (SLR109), Bakhturina et al. 2021, licensed CC BY 4.0.
 
 You are free to share this material and to adapt it — translate it, excerpt it,
 record it, remix it, build on it — provided that you:
@@ -88,14 +112,16 @@ THE COVER ART
     © 2026 Jessica Mulein. All rights reserved. Not licensed for reuse,
     including in adaptations otherwise permitted under section 1.
 
-THE AUDIO RECORDINGS
-    audiobook/                  narrated renders, auditions, assembled M4B files
-    songs/auditions/
+THE SONG AUDIO
 
-    Sound recordings ℗ 2026 Mulein Studios LLC. All rights reserved.
+    The song recordings are not in this repository. Only the lyrics and the
+    written audition notes under songs/ are here, and those are reserved above.
+    The recorded songs are published elsewhere under their own reserved terms and
+    are not licensed by this file.
 
-    Section 1 does permit you to produce your own non-commercial narration from
-    the licensed prose. It does not permit any use of these recordings.
+Note: the audiobook narration is NOT reserved. It is openly licensed under
+section 1, together with the prose it reads. Only the song recordings, the
+lyrics, and the cover art are reserved here.
 
 Permission for any of the above can be requested. Ask.
 
@@ -228,9 +254,11 @@ permission granted above, and it is not legal advice.
 NON-EXCLUSIVE, AND NOTHING IS TRANSFERRED
 
     The grants in sections 1 and 3 are non-exclusive licenses, not assignments.
-    Copyright in the novel prose, the planning documents, the lyrics, the cover,
-    and the recordings remains with Jessica Mulein, and with Mulein Studios LLC
-    where named. All rights not expressly granted are reserved.
+    Copyright in the novel prose, the planning documents, and the audiobook
+    narration remains with Jessica Mulein; copyright in the lyrics and the cover
+    remains with Jessica Mulein, and with Mulein Studios LLC where named. The
+    open license on the audiobook (section 1) does not transfer its copyright.
+    All rights not expressly granted are reserved.
 
 THE AUTHOR'S OWN USE IS NOT LIMITED
 
