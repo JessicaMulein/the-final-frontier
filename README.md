@@ -6,7 +6,7 @@ A novel by Jessica Mulein. **v0.9.0** — all 128 chapters delivered, none final
 > and one small question standing in the door.
 
 About 150,000 words in 128 chapters. This repository holds the manuscript, the
-songs its world grew out of, an AI-narrated audiobook, the specification the book
+songs its world grew out of, a fully narrated audiobook, the specification the book
 was built from, and the complete audit trail of every decision that produced them.
 
 I treated the novel like a software project: specification, verification harness,
