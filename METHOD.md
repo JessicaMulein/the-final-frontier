@@ -85,6 +85,15 @@ finished audiobook took roughly a day of machine time on that one laptop. A
 reproducer should budget about that, and expect the memory ceiling to matter more
 than clock speed.
 
+The narration code did not stay here. This book was not produced with a general
+pipeline — the tooling grew chapter by chapter alongside the render — but the
+parts worth keeping, the omission diagnostics, the verified-phrase repair, the
+byte-bound resume contract, have been lifted into a standalone project,
+[Digital-Defiance/ebook-tts](https://github.com/Digital-Defiance/ebook-tts),
+where they are being generalised and used to narrate the sequel, *Writable*. So
+the audiobook you can download here is the last one built with the code in this
+repository; the next one is built with its descendant.
+
 What the models did not do: choose the premise, set the four-mode mechanism,
 decide that the origin of Nia Calder's wanting is never resolved, hold the
 consent line through 128 chapters, pick what the book refuses to do, or write a

@@ -123,6 +123,11 @@ spend. It runs at roughly 1.3–1.5× real time per chapter and peaks around
 repairs, and MP3/M4B encoding) took about a day of machine time. See
 [METHOD.md](METHOD.md) for detail.
 
+This book was not built with a general TTS pipeline, but the narration code
+written for it — omission diagnostics, verified-phrase repair, byte-bound resume —
+has since been adopted into [Digital-Defiance/ebook-tts](https://github.com/Digital-Defiance/ebook-tts)
+and is being used to narrate the sequel, *Writable*.
+
 I wrote the requirements, the design, the arc, the POV roster, the motif ledger,
 the canon, and all 23 recorded decisions. No model chose the premise, set the
 mechanism, decided what the book refuses to resolve, or held the consent line
