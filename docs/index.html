@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Final Frontier — a novel by Jessica Mulein</title>
+<meta name="description" content="The Final Frontier: a novel about neural privacy and consent. Free to read, free to listen. 128 chapters, an AI-narrated audiobook, and the songs its world grew from. Licensed CC BY-NC-SA 4.0.">
+<meta name="theme-color" content="#11121b">
+<!-- Open Graph / social -->
+<meta property="og:title" content="The Final Frontier — a novel by Jessica Mulein">
+<meta property="og:description" content="A novel about neural privacy and consent. Free to read, free to listen — including a full AI-narrated audiobook made so blind and print-disabled readers get the whole book, not a summary.">
+<meta property="og:type" content="book">
+<meta property="og:image" content="assets/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/cover.jpg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="wrap">
+
+  <header class="hero">
+    <div>
+      <span class="pill">Free to read · free to listen</span>
+      <h1>The Final Frontier</h1>
+      <p class="byline">A novel by Jessica Mulein · v0.9.0 — 128 chapters</p>
+      <blockquote>Somewhere behind the eyes there's a country with no army,<br>and one small question standing in the door.</blockquote>
+      <p>A story about neural privacy and consent — about who gets to reach a
+        thought, and who gets to say no. Around 150,000 words in 128 chapters,
+        with a full AI-narrated audiobook produced so that blind and
+        print-disabled readers get the <em>whole</em> book, not a summary.</p>
+      <div class="actions">
+        <a class="btn primary" href="#get">Get the book</a>
+        <a class="btn" href="#listen">Listen</a>
+        <a class="btn" href="#music">The songs</a>
+        <a class="btn" href="https://github.com/JessicaMulein/the-final-frontier">Source &amp; method</a>
+      </div>
+    </div>
+    <div class="cover">
+      <img src="assets/cover.jpg" alt="Cover of The Final Frontier: a dark field of glowing neurons behind the title in silver.">
+    </div>
+  </header>
+
+  <section id="get">
+    <h2>Get the book</h2>
+    <p class="muted">Every edition is a release asset. Downloads are free and
+      unmetered.</p>
+    <div class="grid">
+      <div class="panel">
+        <h3>Read</h3>
+        <p>EPUB, PDF, and a single Markdown file.</p>
+        <p><a href="https://github.com/JessicaMulein/the-final-frontier/releases/latest">Latest release &rarr;</a></p>
+      </div>
+      <div class="panel">
+        <h3>Listen</h3>
+        <p>A chaptered M4B audiobook, and all 128 chapters as MP3s.</p>
+        <p><a href="https://github.com/JessicaMulein/the-final-frontier/releases/latest">Latest release &rarr;</a></p>
+      </div>
+      <div class="panel">
+        <h3>Build it yourself</h3>
+        <p>The manuscript and the whole pipeline are in the repo.</p>
+        <p><a href="https://github.com/JessicaMulein/the-final-frontier">On GitHub &rarr;</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="listen">
+    <h2>The audiobook</h2>
+    <p>Narrated end to end by a cloned voice, then checked against the manuscript
+      word by word so nothing the author wrote goes unspoken. The narration is
+      licensed under the same terms as the prose, on purpose: the book's argument
+      — that thought and consent belong to the person — should reach anyone,
+      including readers who cannot use print.</p>
+    <p class="muted">Voice cloned from the Hi-Fi TTS dataset (SLR109), licensed
+      CC BY 4.0. See the repository LICENSE for the full attribution.</p>
+  </section>
+
+  <section id="music">
+    <h2>The songs</h2>
+    <p>The songs came first; the world grew out of them. Four minutes instead of
+      150,000 words.</p>
+
+    <!-- FULL ALBUM / PLAYLIST -----------------------------------------------
+         Replace the src URL below with the SoundCloud PLAYLIST embed URL.
+         On SoundCloud: open the playlist → Share → Embed → copy the src="..."
+         from the iframe it gives you, and paste it as the src here. -->
+    <div class="embed" id="album-embed">
+      <div class="embed-placeholder" data-embed="soundcloud-playlist">
+        SoundCloud album embed goes here — paste the playlist iframe src into
+        <code>docs/index.html</code> (marked <code>#album-embed</code>).
+      </div>
+      <!--
+      <iframe height="450" scrolling="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=PLAYLIST_URL&color=%23373c57&auto_play=false&show_artwork=true&visual=true">
+      </iframe>
+      -->
+    </div>
+
+    <h3 style="margin-top:2rem;">&ldquo;Writable&rdquo; — the lead-in to the sequel</h3>
+    <p>&ldquo;Writable&rdquo; is already out. It's the lead-in to
+      <em>Writable</em>, the sequel to <em>The Final Frontier</em>.</p>
+
+    <!-- WRITABLE SINGLE -------------------------------------------------------
+         Replace with the SoundCloud TRACK embed URL for "Writable". -->
+    <div class="embed" id="writable-embed">
+      <div class="embed-placeholder" data-embed="soundcloud-track">
+        SoundCloud &ldquo;Writable&rdquo; track embed goes here — paste the track
+        iframe src into <code>docs/index.html</code> (marked
+        <code>#writable-embed</code>).
+      </div>
+      <!--
+      <iframe height="166" scrolling="no" allow="autoplay"
+        src="https://w.soundcloud.com/player/?url=TRACK_URL&color=%23373c57&auto_play=false">
+      </iframe>
+      -->
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>How it was built</h2>
+    <p>The novel was treated like a software project: a written specification, a
+      verification harness, reviewed increments, and a recorded decision for every
+      step. The prose was drafted by large language models against that
+      specification and revised under the author's direction. The full account,
+      with commands to check every claim, is in the repository.</p>
+    <p><a href="https://github.com/JessicaMulein/the-final-frontier/blob/main/METHOD.md">METHOD.md &rarr;</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/JessicaMulein/the-final-frontier/blob/main/KNOWN-ISSUES.md">Known issues &rarr;</a></p>
+  </section>
+
+  <footer>
+    <p><strong>The Final Frontier</strong> © 2026 Jessica Mulein. The novel prose,
+      planning documents, and audiobook narration are licensed
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+      The song lyrics and cover art are reserved. See the
+      <a href="https://github.com/JessicaMulein/the-final-frontier/blob/main/LICENSE">LICENSE</a>
+      for full terms.</p>
+    <p class="muted">Free to share and adapt non-commercially, with credit.</p>
+  </footer>
+
+</main>
+</body>
+</html>
