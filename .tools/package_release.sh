@@ -65,8 +65,10 @@ fi
 # --- 2. Audiobook M4B + sidecar ----------------------------------------------
 echo "==> Checking audiobook M4B"
 [[ -f "$M4B" ]] || { echo "ERROR: missing $M4B — build it with build_m4b.py first" >&2; exit 1; }
-cp "$M4B" "$STAGE/"
-[[ -f "$M4B_SIDECAR" ]] && cp "$M4B_SIDECAR" "$STAGE/"
+# Release asset names drop the internal voice-tag suffix: a reader downloads
+# "the-final-frontier.m4b", not the pipeline's provenance filename.
+cp "$M4B" "$STAGE/the-final-frontier.m4b"
+[[ -f "$M4B_SIDECAR" ]] && cp "$M4B_SIDECAR" "$STAGE/the-final-frontier.m4b.json"
 
 # --- 3. Verify the full chapter set before packaging audio -------------------
 echo "==> Verifying 128 chapters present (WAV + MP3)"
@@ -101,14 +103,17 @@ cat <<EOF
   gh release create $TAG \\
     --repo JessicaMulein/the-final-frontier \\
     --title "The Final Frontier — $TAG" \\
-    --notes-file release/$TAG/RELEASE_NOTES.md \\
+    --notes-file release/RELEASE_NOTES-$TAG.md \\
+    --latest \\
     "$STAGE"/the-final-frontier.epub \\
     "$STAGE"/the-final-frontier.pdf \\
     "$STAGE"/the-final-frontier.md \\
-    "$STAGE"/the-final-frontier-${VOICE_TAG}.m4b \\
+    "$STAGE"/the-final-frontier.m4b \\
+    "$STAGE"/the-final-frontier.m4b.json \\
     "$STAGE"/the-final-frontier-mp3.zip \\
     "$STAGE"/the-final-frontier-manifests.zip \\
     "$STAGE"/SHA256SUMS
 
-Write release/$TAG/RELEASE_NOTES.md first (or drop --notes-file for an editor).
+Note: write the notes at release/RELEASE_NOTES-$TAG.md — NOT inside $STAGE,
+which this script wipes and rebuilds on every run.
 EOF
