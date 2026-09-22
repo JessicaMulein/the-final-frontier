@@ -18,6 +18,9 @@ import soundfile as sf
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+# audiobook-studio/tools/kokoro-local/build_m4b.py -> repo root is four up.
+REPO_ROOT = Path(__file__).resolve().parents[3]
+
 from audio_state import ACCEPTED, resolve_all, utc_now  # noqa: E402
 from spoken_text import discover_chapters, text_version  # noqa: E402
 from wav_to_mp3 import chapter_titles  # noqa: E402
@@ -230,16 +233,12 @@ def build_m4b(
     album: str,
     aac_bitrate: str,
     comment: str | None = None,
+    chapter_gap_ms: int = 2500,
+    pad_python: str | None = None,
+    pad_script: Path | None = None,
 ) -> int:
     if not cover.is_file():
         raise SystemExit(f"Cover not found: {cover}")
-
-    chapters: list[tuple[str, int, int]] = []
-    cursor = 0
-    for _, _, name, path in wavs:
-        length = duration_ms(path)
-        chapters.append((name, cursor, cursor + length))
-        cursor += length
 
     output.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix="frontier-m4b-") as tmp:
@@ -248,10 +247,56 @@ def build_m4b(
         meta_path = tmp_dir / "ffmetadata.txt"
         concat_audio = tmp_dir / "audio.m4a"
 
-        list_path.write_text(
-            "".join(f"file '{path.resolve().as_posix()}'\n" for _, _, _, path in wavs),
-            encoding="utf-8",
+        # A V6 comfort-tone pad between chapters, so the last sentence of one
+        # chapter does not run straight into the next chapter's announcement.
+        # Pure silence would drop the room tone out at every seam (the "background
+        # opens up" defect), so each pad is synthesised by make_comfort_pad.py from
+        # the PRECEDING chapter's own tone. The pad belongs to the preceding
+        # chapter's running time, so the next chapter's marker lands on its
+        # announcement rather than inside dead-sounding tone.
+        can_pad = (
+            chapter_gap_ms > 0
+            and pad_python is not None
+            and pad_script is not None
+            and pad_script.is_file()
         )
+        if chapter_gap_ms > 0 and not can_pad:
+            raise SystemExit(
+                "chapter gap requested but the V6 pad generator is unavailable; "
+                "pass --pad-python and ensure make_comfort_pad.py exists, or set "
+                "--chapter-gap-ms 0 to concatenate with no pause (not recommended)."
+            )
+
+        concat_lines: list[str] = []
+        chapters: list[tuple[str, int, int]] = []
+        cursor = 0
+        last_index = len(wavs) - 1
+        for i, (_, _, name, path) in enumerate(wavs):
+            length = duration_ms(path)
+            concat_lines.append(f"file '{path.resolve().as_posix()}'")
+            chapter_end = cursor + length
+            # Append a pad after every chapter except the last, and fold its
+            # duration into this chapter's end so markers stay exact.
+            if can_pad and i != last_index:
+                pad_path = tmp_dir / f"pad-{i:03d}.wav"
+                subprocess.run(
+                    [
+                        pad_python,
+                        str(pad_script),
+                        "--donor", str(path.resolve()),
+                        "--seconds", f"{chapter_gap_ms / 1000:.3f}",
+                        "--output", str(pad_path),
+                        "--seed", str(9021 + i),
+                    ],
+                    check=True,
+                )
+                pad_ms = duration_ms(pad_path)
+                concat_lines.append(f"file '{pad_path.resolve().as_posix()}'")
+                chapter_end += pad_ms
+            chapters.append((name, cursor, chapter_end))
+            cursor = chapter_end
+
+        list_path.write_text("\n".join(concat_lines) + "\n", encoding="utf-8")
         write_ffmetadata(
             meta_path,
             title=title,
@@ -347,6 +392,22 @@ def main() -> None:
     parser.add_argument("--author", default="Jessica Mulein")
     parser.add_argument("--album", default="The Final Frontier")
     parser.add_argument("--aac-bitrate", default="64k")
+    parser.add_argument(
+        "--chapter-gap-ms",
+        type=int,
+        default=2500,
+        help="V6 comfort-tone pause inserted between chapters so one does not run "
+        "into the next announcement. 2.5s was chosen by ear as a clear chapter "
+        "break for a listener who cannot see one. 0 concatenates with no pause "
+        "(not recommended).",
+    )
+    parser.add_argument(
+        "--pad-python",
+        default=None,
+        help="Python interpreter that can run make_comfort_pad.py (the narration "
+        "venv, which has the V6 synthesis deps). Defaults to the narration venv "
+        "beside this repo if present, else the current interpreter.",
+    )
     parser.add_argument(
         "--require-chapters",
         type=int,
@@ -450,6 +511,22 @@ def main() -> None:
     print(f"Packaging {len(wavs)} tracks ({chapter_count} chapters) → {output}")
     for _, _, title, path in wavs:
         print(f"  {path.name} · {title}")
+
+    # Resolve the interpreter and script for the V6 inter-chapter pad. The pad
+    # synthesis lives in the narration subproject (it imports the renderer's
+    # comfort_gap so the seam tone and the in-chapter gaps can never drift), which
+    # has its own venv with the numeric deps.
+    pad_script = (
+        REPO_ROOT / "audiobook-studio/tools/narration/make_comfort_pad.py"
+    )
+    if args.pad_python:
+        pad_python = args.pad_python
+    else:
+        venv_python = (
+            REPO_ROOT / "audiobook-studio/tools/narration/.venv/bin/python"
+        )
+        pad_python = str(venv_python) if venv_python.exists() else sys.executable
+
     total_ms = build_m4b(
         wavs,
         cover=args.cover,
@@ -459,6 +536,9 @@ def main() -> None:
         album=args.album,
         aac_bitrate=args.aac_bitrate,
         comment=comment,
+        chapter_gap_ms=args.chapter_gap_ms,
+        pad_python=pad_python,
+        pad_script=pad_script,
     )
 
     sidecar = output.with_suffix(".json")
